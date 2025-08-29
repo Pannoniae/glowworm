@@ -1,0 +1,17 @@
+in these blocks:
+{color_shading
+	{shade_tone 0xff431300}
+	{intensity 0.05}
+}
+
+colour is multiplied by shade_tone
+intensity controls the lerp factor (0 -> source colour, 1 -> only shade_tone, between -> interpolated)
+
+
+{color_correction
+	{tone 0xff000032}
+	{tone_strength 0.1}
+	
+	
+tone is added additively to the colour, clamped to 255
+not sure about tone_strength, probably a factor for the tone
