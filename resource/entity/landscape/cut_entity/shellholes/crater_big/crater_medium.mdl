@@ -1,0 +1,40 @@
+;Exported by:	 Carlos
+;Date:			 06.02.2021 20:09:44
+;File:			 T:\GoH_3D_environment_export\3d_landscape\cut_entity\craters\new\crater_medium.max
+{skeleton
+	{bone "crater"
+		{parameters "commonmesh;land;align;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{VolumeView "crater.ply"
+			{Layer entity_opaque_biased}
+			;{DecalTargetDynamic}
+		}
+		{bone "trench_alpha"
+			{parameters "commonmesh;land;align;"}
+			{VolumeView "trench_alpha.ply"
+			}
+		}
+	}
+}
+{area "cut"
+	{polygon2
+		{radius 0}
+		{vertex -50.8851 19.6083}
+		{vertex -50.0817 -10.2879}
+		{vertex -34.2579 -36.8745}
+		{vertex -11.0081 -45.7991}
+		{vertex 15.5961 -44.7199}
+		{vertex 31.3486 -35.4147}
+		{vertex 42.0656 -18.0292}
+		{vertex 44.7662 4.6011}
+		{vertex 36.5179 31.5798}
+		{vertex 17.6984 46.9895}
+		{vertex -9.39523 49.6085}
+		{vertex -32.3647 38.7381}
+	}
+	{rotate}
+}

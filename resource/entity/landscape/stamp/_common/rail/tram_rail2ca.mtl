@@ -1,0 +1,19 @@
+;{material bump
+;	{diffuse "tram_rail2ca#1"
+;		{Axis 256 128}
+;		{AlphaChannel 1}
+;	}
+;	{specular "tram_rail2ca_s"}
+;	{color "138 166 200 240"}
+;	{Blend blend}
+;}
+
+{material envmap
+	{diffuse "tram_rail2ca#1"
+		{Axis 256 128}
+		{AlphaChannel 1}
+	}
+	{envmap "$/environment/env02c_clouds"}
+	{mask "tram_rail2ca_mask"}
+	{Blend blend}
+}

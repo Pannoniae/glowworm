@@ -1,0 +1,85 @@
+;Exported by:	 Alexey
+;Date:			 26.10.2018 18:18:12
+;File:			 K:\VTV_models\Models_For_WiW\Railway\rails_new_wide_5\wide_railway1_v32.max
+{skeleton
+	{bone "rail"
+		{parameters "align;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{VolumeView "rail.ply"}
+		{bone "land"
+			{parameters "Land;Ground;Align"}
+			{Position -0.7533 	 -5.6867 	 4.835}
+			{visibility 0}
+			{VolumeView "land.ply" {Ground}}
+		}
+	}
+}
+{##volume "body"
+	{box 150.514 63.9993 4.70924}
+	{bone "rail"}
+	{Position -0.9874 	 -4.3622 	 3.8732}
+}
+{##volume "rail1"
+	{box 47.5014 2.09239 3.95669}
+	{bone "rail"}
+	{matrix34
+		0.9846 	 0.175 	 0
+		-0.175 	 0.9846 	 0
+		0 	 0 	 1
+		-46.8886 	 10.3696 	 4.5168
+	}
+}
+{##volume "rail2"
+	{box 44.2656 2.09239 3.95669}
+	{bone "rail"}
+	{matrix34
+		0.9846 	 0.175 	 0
+		-0.175 	 0.9846 	 0
+		0 	 0 	 1
+		-39.2111 	 -20.0254 	 4.5168
+	}
+}
+{##volume "rail3"
+	{box 49.4499 2.09239 3.95669}
+	{bone "rail"}
+	{matrix34
+		1 	 0.0014 	 0
+		-0.0014 	 1 	 0
+		0 	 0 	 1
+		0 	 14.5306 	 4.5168
+	}
+}
+{##volume "rail4"
+	{box 37.6903 2.09239 3.95669}
+	{bone "rail"}
+	{matrix34
+		1 	 0.0014 	 0
+		-0.0014 	 1 	 0
+		0 	 0 	 1
+		-0.0007 	 -16.2271 	 4.5168
+	}
+}
+{##volume "rail5"
+	{box 42.9594 2.09239 3.95669}
+	{bone "rail"}
+	{matrix34
+		0.9865 	 -0.1637 	 0
+		0.1637 	 0.9865 	 0
+		0 	 0 	 1
+		45.2039 	 11.4045 	 4.5168
+	}
+}
+{##volume "rail6"
+	{box 41.2626 2.09239 3.95669}
+	{bone "rail"}
+	{matrix34
+		0.9865 	 -0.1637 	 0
+		0.1637 	 0.9865 	 0
+		0 	 0 	 1
+		38.5525 	 -19.1821 	 4.5168
+	}
+}

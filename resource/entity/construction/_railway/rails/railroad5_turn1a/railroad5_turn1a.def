@@ -1,0 +1,63 @@
+{game_entity
+	{Extension "railroad5_switch10.mdl"}
+	{props "steel" "railway_switch" "railway_part"}
+	{obstacleID "unbreakable"}
+	{NoCastShadows}
+
+;	("armor_disable_damage_acc")
+
+	{volume "body"
+		{able clear {blast} {touch}}
+	}
+	{volume "body1"
+		{able clear {blast} {touch}}
+	}
+	{##volume "body2"
+		{able clear {blast}{obstacle 0}}
+	}
+	{volume "body3"
+		{thickness 10}
+	}
+	{volume "body4"
+		{thickness 10}
+	}
+	{##volume "rail1"
+		{thickness 30}
+	}
+	{##volume "rail2"
+		{thickness 30}
+	}
+	{##volume "rail3"
+		{thickness 30}
+	}
+	{##volume "rail4"
+		{thickness 30}
+	}
+	{##volume "rail5"
+		{thickness 30}
+	}
+	{##volume "rail6"
+		{thickness 30}
+	}
+	{##volume "rail7"
+		{thickness 30}
+	}
+	{##volume "rail8"
+		{thickness 30}
+	}
+
+	{Extender "land_patch"
+		{TerrainType "ground" "bridge_wood"}
+		{AlignEnabled 1}
+		{AlignStacked 0}
+		{AlignVolumes 1}
+	}
+	{extender "railway"
+		{LinkPoint -137.721 0}
+		{LinkPoint 18.44 -17.929}
+		{LinkPoint 123.582 -55.811}
+		{LinkPoint 137.466 0}
+		{path 0 1 2}
+		{path 0 3}
+	}
+}

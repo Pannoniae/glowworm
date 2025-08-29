@@ -1,0 +1,29 @@
+{construction
+	(include "/properties/post.inc")
+	{Extension "post_euro7.mdl"}
+
+	{props "construction" "steel"}
+	("armor_post")
+	("armor_use_volume_thickness")
+
+
+	{volume	"body"
+		{thickness 10}
+		{able {visible 0}}
+	}
+	{volume	"lamp1"
+		{thickness 1}
+		{able{obstacle 0}}
+	}
+        {extender "light"
+                {lamp "lamp1"			
+		     {preset "lamp_spot"
+		              {light_fx  "light_post_dir"}
+		              {light_bone "lamp_light_spot1"}
+		              {break_fx 	"lamp_hit"}
+		              {break_bone "lamp_glass1"}
+                     }
+	        }
+	}
+	{lodclass "decor_medium"}
+}

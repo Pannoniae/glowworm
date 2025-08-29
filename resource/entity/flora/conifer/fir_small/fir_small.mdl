@@ -1,0 +1,31 @@
+;Exported by:	 Carlos
+;Date:			 30.11.2021 20:34:34
+;File:			 T:\GoH_3d_environment_fin\3d flora\fir\fir_small.max
+{skeleton
+	{bone "fir"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "stem"
+			{parameters "commonmesh;"}
+			{LODView
+				{VolumeView "fir.ply"}
+				{VolumeView "fir_lod1.ply"}
+				{VolumeView "fir_lod2.ply"}
+				{VolumeView "fir_lod3.ply"}
+			}
+		}
+	}
+}
+{volume "base"
+	{cylinder 3.08542 115}
+	{bone "fir"}
+	{Position 0.2612 	 -0.5322 	 53}
+}
+{volume "crown"
+	{polyhedron "crown.vol"}
+	{bone "fir"}
+	{Position -0.458 	 -1.0874 	 4.0509}
+}

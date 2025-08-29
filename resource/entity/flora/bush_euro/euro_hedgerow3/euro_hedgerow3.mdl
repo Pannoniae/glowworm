@@ -1,0 +1,62 @@
+;Exported by:	 guita
+;Date:			 19.11.2023 18:35:27
+;File:			 D:\Git\3D_Scenes\GoH_3D_environment_west3\3d_flora\hedgerow\hedgerow_manualunwrap.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "hedgerow"
+			{parameters "commonmesh;land;ground;align;"}
+			{Position 0 	 0 	 2.4991}
+			{VolumeView "hedgerow.ply" {Ground}}
+		}
+		{bone "attach1"
+			{matrix34
+				0.8661 	 -0.4999 	 0
+				0.4999 	 0.8661 	 0
+				0 	 0 	 1
+				20.1681 	 -0.0222 	 26.9743
+			}
+		}
+		{bone "attach2"
+			{matrix34
+				0.164 	 0.9865 	 0
+				-0.9865 	 0.164 	 0
+				0 	 0 	 1
+				-14.2609 	 0.6024 	 26.9743
+			}
+		}
+		{bone "attach3"
+			{matrix34
+				-0.7915 	 0.6111 	 0
+				-0.6111 	 -0.7915 	 0
+				0 	 0 	 1
+				-47.4598 	 -0.0063 	 26.9743
+			}
+		}
+		{bone "attach4"
+			{matrix34
+				0.0604 	 0.9982 	 0
+				-0.9982 	 0.0604 	 0
+				0 	 0 	 1
+				53.3419 	 0.7934 	 26.9743
+			}
+		}
+	}
+}
+{obstacle "obstacle"
+	{obb2
+		{center 2.054 0}
+		{extent 73.4954 27.5905}
+		{axis 1 0}
+	}
+	{rotate}
+}
+{volume "body"
+	{polyhedron "body.vol"}
+	{bone "hedgerow"}
+	{Position 3.9969 	 0.0012 	 26.4086}
+}

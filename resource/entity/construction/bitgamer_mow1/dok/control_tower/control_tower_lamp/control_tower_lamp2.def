@@ -1,0 +1,22 @@
+{game_entity
+	(include "/properties/post.inc")
+	{props "cornered" "concrete" "parts" "construction" "wall"}
+	("armor_medium" args 0.7)
+	{Extension "control_tower_lamp.mdl"}
+	{extender "structure_bone"	
+		{hold "29"}
+	}
+
+	{volume	"lamp1"
+		{thickness 1}
+	}
+	{extender "light"
+		{lamp "lamp1"
+			{preset "lamp_point"
+				{light_bone "lamp_light_point1"}
+				{break_bone "lamp_glass1"}
+			}
+		}
+                {light_fx "light_marine"}		
+	}
+}

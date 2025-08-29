@@ -1,0 +1,42 @@
+;Exported by:	 Carlos
+;Date:			 06.02.2021 20:13:13
+;File:			 T:\GoH_3D_environment_export\3d_landscape\cut_entity\craters\new\crater_tiny.max
+{skeleton
+	{bone "crater_tiny"
+		{parameters "commonmesh;land;align;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{VolumeView "crater_tiny.ply"
+			{Layer entity_opaque_biased}
+			;{DecalTargetDynamic}
+		}
+		{bone "trench_alpha"
+			{parameters "commonmesh;land;align;"}
+			{VolumeView "trench_alpha.ply"
+			}
+		}
+	}
+}
+{area "cut"
+	{polygon2
+		{radius 0}
+		{vertex 15.6129 19.7758}
+		{vertex 5.62158 24.6433}
+		{vertex -5.13824 24.6433}
+		{vertex -15.8981 20.0319}
+		{vertex -22.3027 11.3216}
+		{vertex -25.1208 0.0494045}
+		{vertex -22.8151 -10.7104}
+		{vertex -15.8981 -19.4208}
+		{vertex -6.16299 -24.8007}
+		{vertex 5.36539 -24.8007}
+		{vertex 15.3567 -19.677}
+		{vertex 22.7861 -11.2228}
+		{vertex 25.3479 -0.206777}
+		{vertex 23.2985 10.8092}
+	}
+	{rotate}
+}
