@@ -1,0 +1,130 @@
+{game_entity
+	(include "/properties/armoredcar.ext")
+	(include "/properties/selection/vehicle.inc" scale(1.2))
+	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "explosion_throw_crew" "vision_vehicle_medium" "muzzle_large"}
+
+	{Extension "crew.ext"}
+	
+	{extender "enumerator"
+		{digit_folder "ger"}
+	}
+
+	{volume "body1"
+		{thickness 15}
+		{component "body"}
+		{tags "body"}
+	}
+	{volume "body2"
+		{thickness 15}
+		{component "body"}
+		{tags "body"}
+	}
+	{volume "body3"
+		{thickness 15}
+		{component "body"}
+		{tags "body"}
+	}
+	{volume "body4"
+		{thickness 15}
+		{component "body"}
+		{tags "body"}
+	}
+	{volume "engine"
+		{thickness 10}
+		{component "engine"}
+		{tags "engine"}
+	}
+	{volume "inventory"
+		{thickness 2}
+	}
+	{Volume "Gun"
+		{thickness 10}
+		{tags "no_target"}
+		{able {Visible 0} {Obstacle 0} {Contact 0}}
+	}
+	{component "Gun"
+		{RepairTime 20}
+	}
+
+	{extender "shield"
+		{on}
+	}
+
+	{volume "shield"
+		{component "gun"}
+		{tags "gun"}
+		{thickness 25}
+	}
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+	("tracks")
+	
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	{component "sticky_body"}
+
+	("armor_medium" args 1.0)
+
+	{extender "inventory"
+		{box
+			{item "bullet88 ap" 50}
+			{item "bullet88 fg" 50}
+			{item "bullet88 apcr" 5}
+		}
+	}
+
+	{Weaponry
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "88mm_flak37" filled}
+			("abm_low")
+		}
+	}
+
+	{mass 14700}
+	{Chassis
+		{Locomotion ("locomotion")
+			{MaxSpeed			21}
+			{maxSpeedAtMaxTurn	16}
+			{StartTime			10}
+			{BrakeTime			1.5}
+			{StopTime			2.5}
+			{TurnRadius			8}
+		}
+		{FuelBag
+			{volume 250}
+			{rate	60}
+			{remain 250}
+			{fuel "fuel"}
+		}
+		{speed
+			{Normal  12}
+			{Slow  20}
+		}
+		; left track must be first
+		("tank_trace" fx("tracks_mid") step(0.5) len(0.86) boneleft("FXtraceL2") boneright("FXtraceR2"))
+		("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+	}
+
+	{Extension "sdkfz8.mdl"}
+
+	(mod "mp"
+		{brain
+			{properties
+				{fire_mode hold}
+			}
+		}
+	)
+	
+	{bone "gun_rot1"		;horizontal gun
+		{limits -120 120}	;gun min right to max left
+		{speed 0.01}
+	}
+	{bone "gun_rot"			;vertical gun
+		{speed 0.01}
+	}
+}

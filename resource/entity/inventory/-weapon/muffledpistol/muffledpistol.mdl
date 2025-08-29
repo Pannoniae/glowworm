@@ -1,0 +1,97 @@
+;Exported by: Mauzer
+;Date:        Fri Dec 09 12:06:47 2011
+;File:        E:\Autodesk\Low poly\freelance\DMS\Weapons\Welrod\welrod+.max
+{Skeleton
+	{bone "welrod"
+		{parameters "ID=mgun;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{LODView
+			{VolumeView "welrod.ply"}
+			{VolumeView "welrod_lod1.ply"}
+		}
+		{bone "foresight3"
+			{Position 4.99234	1.1178	-0.0178097}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				0.666409	1.36814	-0.0301796
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0.999962	0.00872696
+				-1	0	0
+				0	-0.00872696	0.999962
+				-0.199069	1.55016	0.265575
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 5.92924 2.32829 1.18138}
+	{Bone "welrod"}
+	{Matrix34
+		0.999962	0.00872651	0
+		-0.00872651	0.999962	0
+		0	0	1
+		1.93446	0.398317	0.0437012
+	}
+}
+{Volume "select"
+	{Box 11.7009 5.76715 2.39379}
+	{Bone "welrod"}
+	{Position 2.71085	0.406957	-0.13759}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 1.90926	-0.0968071	12.2015}
+			{lookat 1.92558	-0.46527	-0.276656}
+			{fov 33.3985}
+			{horizon -2.52809}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 4.89357	-28.49	-5.44604}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0132211	0.359872	-0.346868}
+			}
+			{"2"
+				{type point}
+				{position 4.89357	18.3722	17.0167}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 1.90842	-0.0747038	11.9125}
+			{lookat 1.92436	-0.434649	-0.277577}
+			{fov 33.3985}
+			{horizon -2.52817}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 4.89357	-28.49	-5.44604}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0132211	0.359872	-0.346868}
+			}
+			{"2"
+				{type point}
+				{position 4.89357	18.3722	17.0167}
+			}
+		}
+	}
+}
