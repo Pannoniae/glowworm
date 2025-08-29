@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "vision_vehicle_low"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "vision_vehicle_low" "switch_mgun"}
 	{PatherId "vehicle.small"}
 	
 	{extender "enumerator"
@@ -48,8 +48,8 @@
 			{mask "weapon mgun"}
 		}
 		{box
-			{item "mg42" filled {user "mgun"}}
-			{item "ammo mgun" 1350}
+			{item "mg34" filled {user "mgun"}}
+			{item "ammo mg_mauser belt" 1350}
 		}
 	}
 	{Weaponry
@@ -75,15 +75,17 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed	41}
-	  		{maxSpeedAtMaxTurn 15}	
-			{StartTime	11}
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	25}
 			{BrakeTime	1.5}	
 			{StopTime	3}
 			{TurnRadius	5}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears  0.25}
 		}
 		{FuelBag
 			{volume 110}
-			{rate	25} 
+			{rate	10} 
 			{remain 110 }
 			{fuel "fuel"}
 		}
@@ -96,4 +98,7 @@
 	}
 	{Extension "sdkfz223.mdl"}
 
+	{bone "turret"
+		{speed 0.01}
+	}
 }

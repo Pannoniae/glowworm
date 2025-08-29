@@ -11,7 +11,7 @@
 		{reverse 	{end	"emit_body"}}
 	}
 	{anm "commander"
-		{forward	{begin	"board_sd222_gunner_2"} {end "seat_sd222_gunner_2"}}
+		{forward	{begin	"board_sd222_gunner_2"} {end "pose_flak38_charger_right"}}
 		{reverse 	{end	"emit_body"}}
 	}
 }
@@ -31,7 +31,7 @@
 	{link "emit1" "driver" {anm "driver"} {forward putoff} {reverse puton}}
 }
 ("crew_human" place(gunner) door(emit2) visor(main))
-;("crew_human" place(commander) door(emit2) visor(main))
+("crew_human" place(commander) door(emit2) visor(main))
 {placer
 	{place "driver"	{visor "main"}}
 }

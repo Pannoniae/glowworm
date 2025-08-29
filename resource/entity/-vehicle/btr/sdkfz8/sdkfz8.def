@@ -1,13 +1,26 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc" scale(1.2))
-	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "explosion_throw_crew" "vision_vehicle_medium" "muzzle_large"}
+	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled_8" "explosion_throw_crew" "vision_vehicle_medium" "muzzle_large_nodust" "gun_mode_change"}
 
 	{Extension "crew.ext"}
 	
+(define "abm_howitzer"
+    ("accuracy_by_motion"
+        max_linear(10) accuracy_by_linear(0.9)
+        max_angular(4) accuracy_by_angular(0.9)
+        disorder_time(1.2) order_time(1.0)
+    )
+)
 	{extender "enumerator"
 		{digit_folder "ger"}
 	}
+    	{sensor
+    		{visor "main"
+        		{vision "tank_main_ger_5x8"}
+        		{bone "turret"}
+   		}
+    	}
 
 	{volume "body1"
 		{thickness 15}
@@ -71,33 +84,43 @@
 
 	{extender "inventory"
 		{box
-			{item "bullet88 ap" 50}
-			{item "bullet88 fg" 50}
-			{item "bullet88 apcr" 5}
+			{item "bullet88 ger apcbc" 16}
+			{item "bullet88 ger fg" 15}
+			{item "bullet88 ger apcr" 4}
+			{item "bullet88 ger heat" 5}
 		}
 	}
 
 	{Weaponry
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "88mm_flak37" filled}
+			{weapon "88mm_flak37" filling "bullet88 ger apcbc" 1}
 			("abm_low")
+		}
+		{place "gun1_2"
+			{type "gun_change_arty"}
+			{weapon "88mm_flak37_2"}
+			{basic}
+			{StationaryFiring}
+			("abm_howitzer")
 		}
 	}
 
 	{mass 14700}
 	{Chassis
 		{Locomotion ("locomotion")
-			{MaxSpeed			21}
-			{maxSpeedAtMaxTurn	16}
-			{StartTime			10}
-			{BrakeTime			1.5}
-			{StopTime			2.5}
-			{TurnRadius			8}
+			{MaxSpeed	28}
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	20}
+			{BrakeTime	1.5}
+			{StopTime	2.5}
+			{TurnRadius	8}
+     			{Gears  0.1 0.2 0.35 1}
+			{RearGears  0.25}
 		}
 		{FuelBag
 			{volume 250}
-			{rate	60}
+			{rate	14}
 			{remain 250}
 			{fuel "fuel"}
 		}
@@ -122,9 +145,9 @@
 	
 	{bone "gun_rot1"		;horizontal gun
 		{limits -120 120}	;gun min right to max left
-		{speed 0.01}
+		{speed 0.002}
 	}
 	{bone "gun_rot"			;vertical gun
-		{speed 0.01}
+		{speed 0.0005}
 	}
 }

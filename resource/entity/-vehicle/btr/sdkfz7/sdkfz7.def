@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc" scale(1.2))
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "vision_vehicle_medium"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_8" "explosion_throw_crew" "vision_vehicle_medium"}
 
 	{Extension "crew.ext"}
 
@@ -38,15 +38,17 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed			33}
-			{maxSpeedAtMaxTurn	16}
-			{StartTime			10}
+			{maxSpeedAtMaxTurn		7}
+			{StartTime			15}
 			{BrakeTime			1.5}
 			{StopTime			2.5}
 			{TurnRadius			8}
+     			{Gears  0.2 0.3 0.4 1}
+			{RearGears  0.25}
 		}
 		{FuelBag
 			{volume 215}
-			{rate	50}
+			{rate	14}
 			{remain 215}
 			{fuel "fuel"}
 		}

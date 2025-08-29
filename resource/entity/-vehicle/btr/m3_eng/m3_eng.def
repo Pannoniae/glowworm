@@ -3,10 +3,11 @@
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
 	{Extension "m3_eng.mdl"}
 	{extension "crew.ext"}
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "vision_vehicle_medium"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_6" "explosion_throw_crew" "vision_vehicle_medium" "switch_mgun"}
 	
 	{extender "enumerator"}
-	
+	(include "/properties/resupply_generic.inc")
+	("halftrack_ammo_eng_inf")
 	{volume "sticky"
 		{tags "grenade_fg_target"}
 		{able clear {contact} {touch}}
@@ -77,7 +78,7 @@
 			{item "dynamite"}
 			{item "browning" filled {user "mgun"}}	
 			{item "ammo hmgun" 1000}
-			{item "mgun" "ammo" 2500}
+			{item "british303_belt ammo" 2500}
 		}
 	}
 
@@ -101,11 +102,14 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed 35}
-	  		{maxSpeedAtMaxTurn 12}
+	  		{maxSpeedAtMaxTurn 6}
+			{StartTime	30}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 230 }	
-			{rate	60 }   
+			{rate	11 }   
 			{remain 230 }
 			{fuel "fuel"}
 		}
@@ -119,5 +123,7 @@
 	}
 	{mass 7000}
 	{texmod "2"}
-
+	{bone "mgun_rot"
+		{speed 0.005}
+	}
 }

@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "with_gun" "explosion_throw_crew" "vision_vehicle_medium" "muzzle_minimum"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_8" "with_gun" "explosion_throw_crew" "vision_vehicle_medium" "muzzle_minimum"}
 	{targetClass "armoredcar" "ap fg"}
 	{targetSelector "tank"}
 
@@ -83,7 +83,7 @@
 
 	{extender "inventory"
 		{box
-			{item "bullet28 ap" 83}
+			{item "bullet28 apcr" 83}
 			{item "bullet28 fg" 84}
 		}
 	}
@@ -91,7 +91,7 @@
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon			"28mm_spzb41" filling "bullet28 ap" 1}
+			{weapon			"28mm_spzb41" filling "bullet28 apcr" 1}
 			{charger		"gunner"}
 			("abm_low")
 		}
@@ -104,16 +104,18 @@
 	{mass 5800}
 	{Chassis
 		{Locomotion ("locomotion")
-			{MaxSpeed			41}
-			{maxSpeedAtMaxTurn	16}
-			{StartTime			10}
-			{BrakeTime			1.5}
-			{StopTime			2.5}
-			{TurnRadius			8}
+               	 	{MaxSpeed	38}	
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	20}
+			{BrakeTime	1.5}	
+			{StopTime	2.5}
+			{TurnRadius	8}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears  0.25}
 		}
 		{FuelBag
 			{volume 140}
-			{rate	35}
+			{rate	20}
 			{remain 140}
 			{fuel "fuel"}
 		}

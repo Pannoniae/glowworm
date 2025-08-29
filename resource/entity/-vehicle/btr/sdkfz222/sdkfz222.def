@@ -1,7 +1,7 @@
 {game_enitity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "zenite" "turret" "wheeled" "with_gun" "vision_vehicle_low" "muzzle_zenite"}
+	{props "vehicle" "armored_car" "tank" "zenite" "turret" "wheeled" "with_gun" "vision_vehicle_low" "muzzle_zenite" "switch_mgun"}
 	{targetClass "armoredcar" "ap bullet"}
 	{targetSelector "tank"}
 	{PatherId "vehicle.small"}
@@ -38,26 +38,33 @@
 			{front	8}
 		}
 	}
-		
+	{Volume "doorturret1"
+		{thickness 3}
+	}
+	{Volume "doorturret"
+		{thickness 3}
+	}
 	("armor_medium" args 1.2)
 
 	{extender "inventory"
 		{box
-			{item "ammo mgun" 700}
-			{item "ammo bullet20 zenite" 400}
+			{item "ammo mg_mauser belt" 700}
+            		{item "ammo bullet20 ger zenite ap" 80}
+            		{item "ammo bullet20 ger zenite apcr" 40}
+	    		{item "ammo bullet20 ger zenite fg" 80}
 		}
 	}
 	{Weaponry
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "20mm_kwk30" filling "ammo bullet20 zenite" 10}
+			{weapon "20mm_kwk30" filling "ammo bullet20 ger zenite" 10}
 			{charger "gunner"}
 			("abm_zenite")
 		}
 		{place "mgun"
 			{type "mgun_coaxial"}
-			{weapon "mg34" filled}
+			{weapon "mg34_optic" filled}
 			{LinkBone "mgun"}
 			{charger "gunner"}
 			("abm_mgun")
@@ -78,15 +85,17 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed	41}
-	  		{maxSpeedAtMaxTurn 15}		
-			{StartTime	11}
+	  		{maxSpeedAtMaxTurn 6}		
+			{StartTime	25}
 			{BrakeTime	1.5}	
 			{StopTime	3}
 			{TurnRadius	5}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears  0.25}
 		}
 		{FuelBag
 			{volume 110}
-			{rate	30} 
+			{rate	10} 
 			{remain 110 }
 			{fuel "fuel"}
 		}
@@ -99,6 +108,9 @@
 	}
 	{Extension "sdkfz222.mdl"}
 	{bone "turret"
-		{speed 0.025}
+		{speed 0.005}
+	}
+	{bone "gun_rot"
+		{speed 0.003}
 	}
 }

@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "nebelwerfer" "vision_vehicle_high"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_8" "explosion_throw_crew" "nebelwerfer" "vision_vehicle_high"}
 	{targetClass "armoredcar" "ap fg"}
 	{targetSelector "cannon_rocket"}
 
@@ -113,9 +113,10 @@
 			{mask "weapon mgun"}
 		}
 		{box
-			{item "ammo swg41" 6}
 			{item "mg34" filled {user "mgun"}}
-			{item "mgun" "ammo" 2500}
+			{item "ammo nebel" 12}
+			{item "ammo nebel incendiary" 12}
+			{item "ammo mg_mauser drum" 1200}
 		}
 	}
 	{Weaponry
@@ -145,17 +146,19 @@
 	{mass 14580}		;7800kg "sdkfz 251/1" + 6x 1130kg "28/32 Nebelwerfer 41"
 	{Chassis
 		{Locomotion ("locomotion")
-			{MaxSpeed			33}
-			{maxSpeedAtMaxTurn	16}
-			{StartTime			10}
-			{BrakeTime			1.5}
-			{StopTime			2.5}
-			{TurnRadius			8}
+			{MaxSpeed	33}
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	30}
+			{BrakeTime	1.5}	
+			{StopTime	2.5}
+			{TurnRadius	8}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears  0.25}
 		}
 		{FuelBag
 			{volume 160}
-			{rate	40}
-			{remain 160}
+			{rate	10} 
+			{remain 160 }
 			{fuel "fuel"}
 		}
 		{speed
@@ -176,7 +179,11 @@
 
 	{Extension "sdkfz251_Stukazufus.mdl"}
 
+	{bone "turret"
+		{speed 0.001}
+	}
 	{bone "gun1"
 		{limits -42 12}		;gun min up to max down
+		{speed 0.001}
 	}
 }

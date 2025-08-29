@@ -2,7 +2,7 @@
 	(include "/properties/armoredcar.ext")
 	(include "/properties/tank_crew.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "with_gun" "vision_vehicle_low"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_6" "with_gun" "vision_vehicle_low" "switch_mgun"}
 
 	{targetclass "armoredcar" "ap bullet"}
 	(include "/properties/tank_crew.ext")
@@ -89,8 +89,8 @@
 			{mask "weapon mgun"}
 		}
 		{box
-			{item "browning" filled {user "mgun"}}
-			{item "ammo hmgun" 1500}
+			{item "browning" filling "ammo hmgun ap" 100 {user "mgun"}}
+			{item "ammo hmgun ap" 1500}
 			{item "weapon bazooka" 1}			
 			{item "ammo bazooka" 8}
 		}
@@ -121,15 +121,17 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed	42}
-	  		{maxSpeedAtMaxTurn 15}	
-			{StartTime	7}
+	  		{maxSpeedAtMaxTurn 8}	
+			{StartTime	25}
 			{BrakeTime	1.5}	
 			{StopTime	2}
 			{TurnRadius	6}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 215 }	
-			{rate	30 }   
+			{rate	11 }   
 			{remain 215 }
 			{fuel "fuel"}
 		}
@@ -142,5 +144,7 @@
 	}
 
 	{Extension "m20.mdl"}
-
+	{bone "turret_mgun"
+		{speed 0.005}
+	}
 }

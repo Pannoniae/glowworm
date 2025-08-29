@@ -3,10 +3,11 @@
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
 	{Extension "m3.mdl"}
 	{extension "crew.ext"}
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "vision_vehicle_medium"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_6" "explosion_throw_crew" "vision_vehicle_medium" "switch_mgun"}
 	
 	{extender "enumerator"}
-	
+	(include "/properties/resupply_generic.inc")
+	("halftrack_ammo_us_inf")
 	{volume "sticky"
 		{tags "grenade_fg_target"}
 		{able clear {contact} {touch}}
@@ -75,9 +76,12 @@
 			{item "smoke" "grenade" 10}
 			{item "bandage" 10}
 			{item "dynamite"}
-			{item "browning" filled {user "mgun"}}
-			{item "mgun" "ammo" 2500}		
-			{item "ammo hmgun" 1000}
+			{item "browning" filling "ammo hmgun ap" 100 {user "mgun"}}
+			{item "springfield_belt ammo" 2500}		
+			{item "ammo hmgun ap" 1000}
+			{item "weapon bazooka"}
+			{item "ammo bazooka" 4}
+
 		}
 	}
 
@@ -101,11 +105,14 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed 35}
-	  		{maxSpeedAtMaxTurn 12}
+	  		{maxSpeedAtMaxTurn 6}
+			{StartTime	30}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 230 }	
-			{rate	60 }   
+			{rate	11 }   
 			{remain 230 }
 			{fuel "fuel"}
 		}
@@ -118,5 +125,8 @@
 		("car_trace" fx("tracewheel01") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
 	}
 	{mass 7000}
+	{bone "mgun_rot"
+		{speed 0.005}
+	}
 
 }

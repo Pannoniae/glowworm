@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "with_gun" "vision_vehicle_low" "muzzle_minimum"}
+	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled_6" "with_gun" "vision_vehicle_low" "muzzle_minimum"}
 	{targetClass "armoredcar" "ap bullet"}
 	{targetSelector "tank"}
 	(include "/properties/tank_crew.ext")
@@ -55,6 +55,7 @@
 	}
 
 	("armor_medium" args 1.0)
+	("us_3x_sight")
 	
 	{extender "enumerator"}
 
@@ -94,12 +95,12 @@
 			{mask "weapon mgun"}
 		}
 		{box
-			{item "ammo bullet37 ap" 40}
-			{item "ammo bullet37 fg" 40}
-			{item "ammo bullet37 apcr" 5}
-			{item "browning" filled {user "mgun"}}
-			{item "ammo hmgun" 400}
-			{item "ammo mgun" 1500}
+			{item "ammo bullet37 us ap" 40}
+			{item "ammo bullet37 us fg" 40}
+			;{item "ammo bullet37 apcr" 2}
+			{item "browning" filling "ammo hmgun ap" 100 {user "mgun"}}
+			{item "ammo hmgun ap" 400}
+			{item "ammo springfield_belt" 1500}
 		}
 	}
 
@@ -107,7 +108,7 @@
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "37mm_m6" filled}
+			{weapon "37mm_m6" filling "ammo bullet37 us ap" 1}
 			{charger "gunner"}
 			("abm_low")
 		}
@@ -119,10 +120,10 @@
 			{charger "gunner2"}
 			("abm_mgun_heavy")
 		}
-		{place "mgun1"
+		{place "mgun2"
 			{type "mgun_coaxial"}
 			{LinkBone "mgun2"}
-			{weapon "browning_m19" filled}
+			{weapon "browning_m19_optic" filled}
 			{foresight "foresight4"}
 			{charger "gunner"}
 			("abm_mgun")
@@ -142,14 +143,15 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed  42}
-	  		{maxSpeedAtMaxTurn 15}
-			{StartTime 7}
+	  		{maxSpeedAtMaxTurn 8}
+			{StartTime 30}
 			{TurnRadius 6}
-			{RearGears 0.3}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 210 }	
-			{rate	30 }   
+			{rate	11 }   
 			{remain 210 }
 			{fuel "fuel"}
 		}
@@ -162,4 +164,10 @@
 	}
 	{Extension "m8grayhound.mdl"}
 
+	{bone "turret"
+		{speed 0.004}
+	}
+	{bone "gun_rot"
+		{speed 0.001}
+	}
 }

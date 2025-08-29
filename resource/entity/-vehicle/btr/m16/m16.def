@@ -2,7 +2,7 @@
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
 	(include "/properties/car_crew.ext")
-	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "flak" "vision_vehicle_medium"}
+	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled_6" "flak" "vision_vehicle_medium" "switch_mgun"}
 
 	{extender "enumerator"}
 
@@ -93,14 +93,14 @@
 
 	{extender "inventory"
 		{Box
-			{item "ammo hmgun" 2500}
+			{item "ammo hmgun inc" 2500}
 		}
 	}
 	{Weaponry
 		{place "gun"
 			{type "mgun_aa"}
 			{RestoreIKAfterAim}
-			{weapon "browning_x4" filled}
+			{weapon "browning_x4" filling "ammo hmgun inc" 400}
 			{Barrels 4}
 			{LinkAnimation "off"}
 			{charger "gunner"}
@@ -129,16 +129,15 @@
 
 	{Chassis
 		{Locomotion ("locomotion")
-			{MaxSpeed	30}
-	  		{maxSpeedAtMaxTurn 12}		
-			{StartTime	8}
-			{BrakeTime	1.5}	
-			{StopTime	3}
-			{TurnRadius	5}
+			{MaxSpeed 35}
+	  		{maxSpeedAtMaxTurn 6}
+			{StartTime	30}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 230 }	
-			{rate	40 }   
+			{rate	11 }   
 			{remain 230 }
 			{fuel "fuel"}
 		}
@@ -152,7 +151,7 @@
 	}
 	{Extension "m16.mdl"}
 	{bone "turret"
-		{speed 0.02}
+		{speed 0.005}
 	}
 	{bone "gun_rot"
 		{limits -7 10}

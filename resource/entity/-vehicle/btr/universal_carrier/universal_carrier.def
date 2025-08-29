@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/tank.ext")
 	(include "/properties/selection/vehicle.inc" scale(1.2))
-	{props "vehicle" "armored_car" "tractor" "tank" "opened" "vision_vehicle_low"}
+	{props "vehicle" "armored_car" "tractor" "tank" "opened" "vision_vehicle_low" "switch_mgun"}
 
 	{extender "enumerator"}
 	
@@ -134,7 +134,7 @@
 
 	{extender "inventory"
 		{box
-			{item "ammo mgun" 2700}
+			{item "ammo bren_mag" 2520}
 		}
 	}
 	{Weaponry
@@ -152,17 +152,17 @@
 	{Chassis
 		("tank_trace" fx("tracks_mid") step(0.56) len(0.4))
 		{Locomotion ("locomotion")
-			{maxspeed   18}
-			{maxSpeedAtMaxTurn 10}
-			{StartTime  10}
-			{TurnTime   6}
+			{maxspeed   28}
+			{maxSpeedAtMaxTurn 5}
+			{StartTime  15}
+			{TurnTime   10}
 			{TurnStart  0.6}			
 			{TurnRadius 6} 
     		{TurnStop   0.5}
 			{BrakeTime  1}
 			{StopTime   1.5}
-   			{Gears  0.2 0.5 1}
-			{RearGears  0.43} 
+   			{Gears  0.15 0.25 0.35 1}
+			{RearGears  0.30} 
 		}
 		{speed
         	{Normal  12}

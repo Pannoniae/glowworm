@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "with_gun" "vision_vehicle_low" "muzzle_minimum"}
+	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "with_gun" "vision_vehicle_low" "muzzle_small" "switch_mgun_coax"}
 	{targetClass "armoredcar" "ap bullet"}
 	{targetSelector "tank"}
 	{PatherId "vehicle.small"}
@@ -48,25 +48,26 @@
 	}
 	
 	("armor_medium" args 1.0)
+	("eng_1-9x_sight")
 
 	{extender "inventory"
 		{box
-			{item "bullet40 ap" 30}
-			{item "bullet40 fg" 27}
-			{item "bullet40 apcr" 5}
-			{item "ammo mgun" 2700}
+			{item "bullet40 eng ap" 52}
+			;{item "bullet40 fg" 27}
+			;{item "bullet40 apcr" 2}
+			{item "ammo mg_mauser belt red" 2700}
 		}
 	}
 	{Weaponry
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "40mm_oqf2pdr" filling "bullet40 ap" 1}
+			{weapon "40mm_oqf2pdr" filling "bullet40 eng ap" 1}
 			("abm_low")
 		}
 		{place "mgun"
 			{type "mgun_coaxial"}
-			{weapon "besa" filled}
+			{weapon "besa_optic" filling "mg_mauser belt red" 225}
 			{charger "gunner"}
 			("abm_mgun")
 			{basic}
@@ -84,12 +85,13 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed	38}
-	  		{maxSpeedAtMaxTurn 15}	
-			{StartTime	7}
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	30}
 			{BrakeTime	1.5}	
 			{StopTime	2.5}
 			{TurnRadius	6}
-			{RearGears 0.32}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 45 }	
@@ -107,7 +109,10 @@
 	{Extension "mk2daimler.mdl"}
 
 	{bone "turret"
-		{speed 0.02}
+		{speed 0.004}
+	}
+	{bone "gun_rot"
+		{speed 0.001}
 	}
 	{bone "coaxial_mgun"
 		{limits 6}

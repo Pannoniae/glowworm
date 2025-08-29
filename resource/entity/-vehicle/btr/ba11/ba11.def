@@ -1,7 +1,7 @@
 {game_entity
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
-	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled" "with_gun" "vision_vehicle_low" "muzzle_minimum"}
+	{props "vehicle" "armored_car" "tank" "turret" "turret_rotator" "wheeled_6" "with_gun" "vision_vehicle_low" "muzzle_minimum"}
 	{targetClass "armoredcar" "ap fg bullet"}
 	{targetSelector "tank"}
 	
@@ -83,6 +83,7 @@
 	}
 	
 	("armor_medium" args 1.0)
+	("rus_2-5x_sight")
 	
 	("shield" args 8)
 	{extender "shield"
@@ -93,17 +94,16 @@
 	
 	{extender "inventory"
 		{box
-			{item "ammo bullet45 ap" 27}
-			{item "ammo bullet45 fg" 50}
-			{item "ammo bullet45 apcr" 5}
-			{item "ammo mgun" 1500}
+			{item "ammo bullet45 rus aphebc" 27}
+			{item "ammo bullet45 rus fg" 50}
+			{item "ammo dt29_mag" 1500}
 		}
 	}
 	{Weaponry
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "45mm_20k" filling "ammo bullet45 ap" 1}
+			{weapon "45mm_20k" filling "ammo bullet45 rus aphebc" 1}
 			("abm_low")
 		}
 		{place "mgun1"
@@ -116,7 +116,7 @@
 		}
 		{place "mgun2"
 			{type "mgun_coaxial"}
-			{weapon "dt" filled}
+			{weapon "dt_optic" filled}
 			{foresight "foresight5"}
 			{gunner "commander"}
 			{charger "commander"}
@@ -142,16 +142,17 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed	38}
-	  		{maxSpeedAtMaxTurn 15}	
-			{StartTime	10}	
+	  		{maxSpeedAtMaxTurn 7}	
+			{StartTime	30}	
 			{BrakeTime	1.5}	
 			{StopTime	3}	
 			{TurnRadius	5}
+     			{Gears  0.1 0.2 0.3 1}
 			{RearGears 0.25}
 		}
 		{FuelBag
 			{volume 180 }	
-			{rate	35 }   
+			{rate	11 }   
 			{remain 180 }
 			{fuel "fuel"}
 		}
@@ -165,16 +166,16 @@
 	}
 	{Extension "ba11.mdl"}
 
-;	{bone "turret"
-;		{speed 0.02}
-;	}
+	{bone "turret"
+		{speed 0.004}
+	}
 ;    {bone "foresight5"
 ;		{limits 0 0}
 ;    }
-;	{bone "gun_rot"
-;		{limits -15 12}
-;		{speed 0.01}
-;    }
+	{bone "gun_rot"
+		;{limits -15 12}
+		{speed 0.001}
+     }
 ;    {bone "mgun"
 ;		{limits 15}
 ;    }

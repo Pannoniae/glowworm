@@ -3,11 +3,12 @@
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
 	{Extension "ho-ha3mgun.mdl"}
 	{extension "crew.ext"}
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "explosion_throw_crew" "vision_vehicle_medium"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled_6" "explosion_throw_crew" "vision_vehicle_medium" "switch_mgun"}
 	{targetSelector "tank"}
 
 	{extender "enumerator"}
-
+	(include "/properties/resupply_generic.inc")
+	("halftrack_ammo_jap_inf")
 	{volume "body"
 		{tags "body"}
 		{component "body"}
@@ -88,8 +89,8 @@
 			{item "smoke" "grenade" 10}
 			{item "bandage" 10}
 			{item "dynamite"}
-			{item "type99lmg" filled {user "mgun1"}}
-			{item "mgun" "ammo" 2500}
+			{item "type99_mg" filled {user "mgun1"}}
+			{item "type99_mag" "ammo" 2400}
 		}
 	}
 	{Weaponry
@@ -107,7 +108,7 @@
 			{type "mgun_right"}
 			{LinkBone "mgun2"}
 			{LinkAnimation "off"}
-			{weapon "type99lmg" filled}
+			{weapon "type99_mg" filled}
 			{gunner "gunner2"}
 			{charger "gunner2"}
 			{foresight "foresight5"}
@@ -118,7 +119,7 @@
 			{type "mgun_left"}
 			{LinkBone "mgun3"}
 			{LinkAnimation "off"}
-			{weapon "type99lmg" filled}
+			{weapon "type99_mg" filled}
 			{gunner "gunner3"}
 			{charger "gunner3"}
 			{foresight "foresight6"}
@@ -159,11 +160,13 @@
 	("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
 		{Locomotion ("locomotion")
 			{MaxSpeed	35}
-	  		{maxSpeedAtMaxTurn 16}	
-			{StartTime	10}
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	30}
 			{BrakeTime	1.5}	
 			{StopTime	2.5}
 			{TurnRadius	8}
+     			{Gears  0.1 0.2 0.3 1}
+			{RearGears  0.25}
 
 		}	
 		{speed
@@ -172,7 +175,7 @@
     	}
 		{FuelBag
 			{volume 200 }	
-			{rate	40 }   
+			{rate	10 }   
 			{remain 200 }
 			{fuel "fuel"}
 		} 

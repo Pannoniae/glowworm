@@ -2,7 +2,7 @@
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.1))
 	{Extension "ba64.mdl"}
-	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "vision_vehicle_low"}
+	{props "vehicle" "armored_car" "tank" "turret" "wheeled" "vision_vehicle_low" "switch_mgun_coax"}
 	{PatherId "vehicle.small"}
 
 	{extender "enumerator"}
@@ -31,7 +31,6 @@
 	}
 
 	("armor_medium" args 0.9)
-	
 	{component "turret"
 		{RepairTime 20}
 	}
@@ -42,7 +41,7 @@
 		}
 		{Box
 			{item "dt" filled {user "mgun"}}
-			{item "ammo mgun" 2350}
+			{item "ammo dt29_mag" 2400}
 		}
 	}
 	{Weaponry
@@ -64,17 +63,18 @@
 	{Chassis
 		{Locomotion ("locomotion")
 			{MaxSpeed	40}
-	  		{maxSpeedAtMaxTurn 15}	
-			{StartTime	8}
+	  		{maxSpeedAtMaxTurn 6}	
+			{StartTime	20}
 			{BrakeTime	1.5}	
 			{StopTime	3}
 			{TurnRadius	4}
+     			{Gears  0.1 0.2 0.3 1}
 			{RearGears 0.25}
 
 		}
 		{FuelBag
 			{volume 110 }	
-			{rate	25 }   
+			{rate	10 }   
 			{remain 110 }
 			{fuel "fuel"}
 		}
@@ -90,6 +90,6 @@
 		{limits -10 15}
 	}
 	{bone "turret"
-		{speed 0.03}
+		{speed 0.01}
 	}
 }
