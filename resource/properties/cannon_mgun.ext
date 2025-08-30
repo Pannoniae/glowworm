@@ -2,23 +2,28 @@
 actor
 
 (include "vehicle.ext")
+(include "armor.ext")
 (include "cannon_crew.ext")
 (include "cannon_armor.ext")
+(include "abm.inc")
+(include "mobility.inc")
 ;(include "shadow/tank.inc"  scale(0.7))
-(include "selection/vehicle.inc"  scale(0.7))
+(include "selection/vehicle_small.inc" scale(0.8))
+
+("brain_vehicle")
 {PatherID "cannon.carried"}
-{simulation {able 1} {disableLinked 1}}
-{obstacleID "tank"}
-{collider "cannon"}
-{constrain ground}
-{props "mg_stan" "vehicle" "steel" "cannon" "emit_on_sink"}
-{able "emit_crew_on_injure"}
-{targetClass "cannon" "bullet"}
+{collider "cannon_small"}
+
+{targetClass "cannon_bullet"}
 {targetSelector "cannon_bullet"}
 
-{brain "vehicle" 
-	{state "vehicle"}
-}
+{simulation {able 1} {disableLinked 1}}
+{obstacleID "tank"}
+{constrain ground}
+{props "mg_stan" "vehicle" "steel" "cannon" "emit_on_sink" "cannon_small" "no_exp_blast"}
+{lodclass "cannon"}
+{able "emit_crew_on_injure"}
+{simulation {able 1} {disableLinked 1}}
 
 {placer
 	{crew}
@@ -41,6 +46,7 @@ actor
 	{Box
 		{Size 6 10}
 		{weight 1000}
+		{item "repair_kit" 1}
 	}
 }
 
@@ -50,7 +56,20 @@ actor
 		{LinkBone "mgun"}
 		{LinkAnimation "off"}
 	}
-}  	
+}
+
+(define "restore_ik_time"
+	{RestoreIKTime 10}
+)
+
+("armor_carried_cannon")
+("crew_carried_cannon")
+
+("body" repair(20))
+
+{perks
+	{blastwave_modifier 20.0}
+}
 
 
 ("crew_2_human")
@@ -81,6 +100,7 @@ actor
 		{fire  "" ""}
 		{reload  "mgun_stan_charger" ""}
 	}
+	{move {workers "driver1" "driver2" minWorkers 2} {obstacle "close"}}
 	{attack {workers "gunner" "commander"}}
 }
 
