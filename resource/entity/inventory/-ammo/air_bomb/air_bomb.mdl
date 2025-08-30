@@ -1,0 +1,30 @@
+;Exported by: gals
+;Date:        Wed Aug 24 15:41:54 2005
+;File:        D:\-Projects1_5-\-3DWork-\_ammo\air_bomb\IL-2_Bomb_R.max
+{Skeleton
+	{animation
+		{sequence "start" {speed 1}}
+	}
+	{bone "bomb"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{LODView
+			{VolumeView "bomb.ply"}
+			{VolumeView "bomb_lod1.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 1.9685 19.685}
+	{Bone "bomb"}
+	{Matrix34
+		0	-1	0
+		0	0	1
+		-1	0	0
+		-9.30613	0	0
+	}
+}

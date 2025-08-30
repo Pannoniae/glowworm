@@ -170,6 +170,29 @@
 ("fortification_draggable"	name(barricade_sq)		entity(barricade_sq)		animation(squat_construct_sandbag)	time(10)	rotation(0.0)	spacing(1.8)	cost(5))
 ;("fortification_draggable"	name(barricade)			entity(barricade)			animation(squat_construct_sandbag)	time(10)	rotation(0.0)	spacing(2.1)	cost(5))
 
+{action "barricade"
+	{cursor "barricade"}
+	{fx "flashred"}
+	{item "sandbag_kit"}
+	{item_in_box}
+	{entity "sandbag3"}
+	{Cost 0}
+	{button}
+	{ShowCount}
+	{abledrag}
+	{instructions
+		{bind range 1}
+		{disable_action_restart}
+		{take_item}
+		{reserve_hands}
+		{animations "squat_repair_1 squat_repair_2" random loop totaltime 30}
+		{unreserve_hands}
+		{install "sandbag3" 0.0}
+		{fsm_request nocheck "hold-nothing"}
+	}
+}
+
+
 ;hedgehog
 ("fortification_draggable"	name(hedgehog)			entity(hedgehog_service)	animation(squat_repair_1)			time(20)	rotation(0.0)	spacing(3.15)	cost(5))
 

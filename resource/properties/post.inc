@@ -1,18 +1,26 @@
 game_entity
 	{volume "post"
 		{thickness 3}
+		{able {visible 0}}
+	}
+	{volume "body"
+		{Tags "body"}
+		{thickness 4}
+		{able {visible 0}}
+	}
+	{volume "lamp1"
+		{thickness 1}
+		{able {visible 0}{Obstacle 0}}
+		{tags "lamp"}
 	}
 	{simulatorId "pillar"}
 	{collider "tree"}
-	{obstacleID "tree"}
+	{obstacleID "post"}
 	{mass 200}
 	{props "post"}
 ;	(include "/properties/shadow/construction.inc" sx(1) sy(0.18))
 	(include "seasons.inc")
 	(include "construction_generic.inc")
-	{extender "light"
-		{lightfx "light_post"}
-		{breakfx "lamp_hit"}
-	}
-
+	(include "light.inc")
+	("armor_post")
 	{lodclass "decor_big"}

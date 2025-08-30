@@ -45,5 +45,8 @@
 		{"poster3"  "poster3" }
 		{"poster4"  "poster4" }
 		{"poster5"  "poster5" }
+		{"desert"  "d" }
+		{"snow"  "1" }
+		{"summer"  "2" }
 	}
 }

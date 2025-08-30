@@ -38,6 +38,11 @@
 			{threshold {pierce {calibre %calibre}}}
 			{ray_cast_thickness}
 			{volumes "body*"}
+			{volumes "box*"}
+			{volumes "wire*"}
+			{volumes "wires*"}
+			{volumes "floor*"}
+			{volumes "wood*"}
 		}
 		{setting "roof"
 			{threshold {pierce {calibre %calibre}}}
@@ -61,7 +66,21 @@
 (define "frag_grenade_protection"
 	("blast_protection" dmg(6))
 )
-
+(define "armor_fragile" ; Grenade can blow them up
+	("armor_construction" calibre(1))
+	{armor
+		{setting "body"
+			{threshold
+				{blast {value 2}}
+			}
+		}
+		{setting "roof"
+			{threshold
+				{blast {value 2}}
+			}
+		}
+	}
+)
 (define "armor_light"
 	("armor_construction" calibre(5))   ; rifles+
 )
@@ -88,6 +107,21 @@
 		}	
 	}
 )
+(define "armor_75mm" ; 75mm HE will break
+	("armor_construction" calibre(30))
+	{armor
+		{setting "body"
+			{threshold
+				{blast {value 15}}
+			}
+		}
+		{setting "roof"
+			{threshold
+				{blast {value 15}}
+			}
+		}
+	}
+)
 (define "armor_heavy"
 	("armor_construction" calibre(30))	; guns only
 	{armor
@@ -112,7 +146,7 @@
 	}
 )
 (define "armor_bunker_medium" ; 105mm HE will break
-	("armor_construction")
+	("armor_construction" calibre(30))
 	{armor
 		{setting "body"
 			{threshold
@@ -127,7 +161,7 @@
 	}
 )
 (define "armor_sandbag_woodbeam"
-	("armor_construction")
+	("armor_construction" calibre(5))
 	{armor
 		{setting "body"
 			{threshold
@@ -276,4 +310,4 @@
 
 (include "texmod.inc")
 
-("armor_medium" args(1.0))
+("armor_medium")

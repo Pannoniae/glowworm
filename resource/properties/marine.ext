@@ -2,6 +2,9 @@
 actor
 
 (include "vehicle.ext")
+(include "armor.ext")
+(include "abm.inc")
+(include "mobility.inc")
 
 {able "-emit_passangers_on_enemy"}
 
@@ -15,6 +18,9 @@ actor
 {collider "marine"}
 {obstacleID "marine"}
 
+{targetClass "tank_medium" "ap fg bullet"}
+{targetSelector "cannon_zenite"}
+
 {extender "inventory"
 	{box
 		{Size 6 10}
@@ -26,6 +32,15 @@ actor
 	{Visor "main"
 		{vision "marine_main"}
 		{bone "visor"}
+	}
+	{visor "none"
+		{vision "none"}
+	}
+}
+
+{Skeleton
+	{bone "hearing_bone"
+		{Position 0 0 40}
 	}
 }
 
@@ -52,6 +67,14 @@ actor
 	}
 )
 
+(define "ballast"
+	{volume "ballast%0"
+		{tags "float"}
+		{Able clear {float}}
+	}
+)
+
+
 (define "armor_light"
 	("armor_marine" b(15) k(%0))
 )
@@ -62,7 +85,33 @@ actor
 	("armor_marine" b(85) k(%0))
 )
 
-("armor_medium" args 1)
 
-{targetClass "tank" "ap fg bullet"}
-{targetSelector "tank"}
+("ballast" args 0)
+("ballast" args 1)
+("ballast" args 2)
+("ballast" args 3)
+("ballast" args 4)
+("ballast" args 5)
+("ballast" args 6)
+("ballast" args 7)
+("ballast" args 8)
+("ballast" args 9)
+("ballast" args 10)
+
+(define "component"
+	{volume %volume
+		{tags %component "hull"}
+		{component %component}
+	}
+	{component %component
+		{RepairTime %repair}
+		{tags %component "hull"}
+		{RepairOrder 0}
+	}
+)
+
+("basic_armor" args 10) ;//-0.298
+
+{perks {blastwave_modifier 6.0}}
+
+("marine_durability" body(400) engine(60) gun(100))

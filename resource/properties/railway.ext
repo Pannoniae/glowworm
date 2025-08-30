@@ -2,11 +2,17 @@
 actor
 
 (include "vehicle.ext")
-
+(include "armor.ext")
+(include "abm.inc")
 ("brain_vehicle")
 
 {collider "train"}
 {PatherID  "railway"}
+
+(define "restore_ik_time"
+	{RestoreIKTime 10}
+)
+
 {Chassis "railway"
 	{ignorePatherBounds}
 	{speed
@@ -33,3 +39,13 @@ actor
 )
 
 {autooperatable 0}
+
+("body" repair(45))
+("engine" repair(30))
+
+("train_durability" body(300) engine(200) turret(200) mantlet(175) gun(200))
+("basic_armor" args 15)
+
+{perks
+	{blastwave_modifier 5.0}
+}

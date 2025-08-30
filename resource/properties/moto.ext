@@ -2,19 +2,20 @@
 actor
 
 (include "vehicle.ext")
+(include "car_crew.ext")
+(include "armor.ext")
+(include "abm.inc")
+(include "mobility.inc")
 
 ("brain_vehicle")
 
-(define "accuracy_by_motion" ; 	spreading depending on the speed of "body", "gun" volumes
-	{AccuracyByMotion
-		{MaxLinearSpeed %max_linear}               ;km/h
-		{ByLinearSpeed %accuracy_by_linear}
-		{MaxAngularSpeed %max_angular}             ;deg/s
-		{ByAngularSpeed %accuracy_by_angular}
-		{DisorderTime %disorder_time}              ;s
-		{OrderTime %order_time}                    ;s
-	}
-)
+{collider "moto"}
+{props "moto" "engine" "wheeled" "vision_lev01" "explosion_throw_crew" "turn_over" "no_recrew_logic"}
+{targetClass "car"}
+{targetSelector "car_bullet"}
+
+{able "talk"}
+
 (define "abm_mgun"
 	("accuracy_by_motion"
 		max_linear(18) accuracy_by_linear(0.5)
@@ -33,8 +34,14 @@ actor
 	{box
 		{Size 6 10}
 		{weight 1000}
+		{item "can" 1}
+		{item "repair_kit" 5}
 	}
 }
+
+(define "restore_ik_time"
+	{RestoreIKTime 10}
+)
 
 {volume "wheel1"
 	{thickness 1}
@@ -169,3 +176,61 @@ actor
 		{volumes "body*" "engine*"}
 	}
 }
+
+(define "moto_thickness"
+	{volume "body"			; Main Body
+		{thickness %body}
+	}
+	{volume "body1"			; Main Body
+		{thickness %body}
+	}
+	{volume "body2"			; Main Body
+		{thickness %body}
+	}
+	{volume "body3"			; Main Body
+		{thickness %body}
+	}
+	{volume "body4"			; Main Body
+		{thickness %body}
+	}
+	{volume "body5"			; Main Body
+		{thickness %body}
+	}
+	{volume "body6"			; Main Body
+		{thickness %body}
+	}
+	{volume "body7"			; Main Body
+		{thickness %body}
+	}
+	{volume "body8"			; Main Body
+		{thickness %body}
+	}
+	{volume "body9"			; Main Body
+		{thickness %body}
+	}
+	{volume "engine"		; Engine
+		{thickness %engine}
+	}
+	{volume "engine1"		; Engine
+		{thickness %engine}
+	}
+	{volume "engine2"		; Engine
+		{thickness %engine}
+	}
+	{volume "fuel"
+		{tags "explosive"}
+		{thickness 1}
+	}
+)
+
+("moto_thickness" body(1.5) engine(1.5))
+
+("basic_armor" args 10)
+
+("body" repair(35))
+("engine" repair(20))
+
+("moto_durability" body(110) engine(60))
+
+{perks {blastwave_modifier 9.0}}
+

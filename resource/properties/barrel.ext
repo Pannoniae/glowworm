@@ -9,10 +9,10 @@ game_entity
 	{able clear {select}}
 	{density 0}
 }
-{props "explosive_barrel" "steel" "capacity" "stuff"}
+{props "explosive_barrel" "steel" "capacity" "stuff" "break_on_burn" "shed"}
 
 {obstacleID "construction"}
-{collider "particle.small"}
+{collider "construction"}
 
 {simulation {able 1}}
 {constrain ground}
@@ -21,4 +21,7 @@ game_entity
 	{item "barrel"}
 }
 
-{lodclass "decor_small"}
+
+{lodclass "decor_medium"}
+
+{mass 20}

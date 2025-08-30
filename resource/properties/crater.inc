@@ -1,6 +1,7 @@
 ;SDL
 game_entity
 	{props "crater"}
+	{DynCmpPersistent}
 	{extender "land_patch"
 		{randomrotate 1}
 		{alignenabled 1}
@@ -8,3 +9,4 @@ game_entity
 	}
  	{NoCastShadows}
 	{obstacleID "nothing"}
+	{lodclass "decor_shellhole"}
