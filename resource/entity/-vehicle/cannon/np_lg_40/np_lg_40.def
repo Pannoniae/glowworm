@@ -1,0 +1,101 @@
+{entity
+	(include "/properties/cannon.ext")
+	{props "vehicle" "cannon" "wheeled" "medium" "vision_cannon_medium" "round_sandbag2" "muzzle_medium"}
+	{able "emit_on_attack"}
+	
+	("armor_light")
+
+	{Extension "lg_40.mdl"}
+	{Volume "body1"
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "body2"
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "body3"
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "body"
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "gun1"
+		{tags "body"}
+		{component "gun"}
+	}
+	{Volume "gun2"
+		{tags "body"}
+		{component "gun"}
+	}
+	{Volume "gun"
+		{tags "body"}
+		{component "gun"}
+	}
+	{volume "turret"
+		{thickness 3}
+	}
+	{component "turret"
+		{RepairTime 15}
+	}
+
+	("wheel" args "wheelright")
+	("wheel" args "wheelleft")
+
+	("crew_wheeled_gun")
+	{boarder
+		{anm "gunner"
+			{forward	{end "pose_lg40_gunner" 10}}
+		}
+		{anm "commander"
+			{forward	{end "pose_lg40_commander" 10}}
+		}
+		{anm "driver1"
+			{forward {end "Cannon_lg40_driver1" 10}}
+		}
+		{anm "driver2"
+			{forward {end "Cannon_lg40_driver2" 10}}
+		}
+		{anm "seat1"
+			{forward {end "pose_seat_cannon_left" 10}}
+		}
+		{anm "seat2"
+			{forward {end "pose_seat_cannon_right" 10}}
+		}
+	}
+
+	{extender "inventory"
+		{box
+			{item "np_bullet75 fg" 35}
+			(mod "mp"
+				{item "sandbag_kit2"}
+			)
+		}
+	}
+	{Weaponry
+		{place "gun"
+			{weapon "np_75mm_lg40" filled}
+			("abm_howitzer")
+		}
+	}
+
+	{mass 100}
+	(include "/properties/selection/cannon.inc"  scale(0.7))
+
+	{extender "cannon"
+		{animation
+			{switch "close"}
+			{move "Cannon_lg40_driver1" "Cannon_lg40_driver2"}
+			{aim "Cannon_lg40_gunlayer" ""}
+			{fire  "" ""}
+			{reload  "" "Cannon_lg40_charger"}
+		}
+		{move {obstacle "close"}}
+		{attack {obstacle "open"}}
+	}
+	{Chassis "track"
+		("loco_small")
+	}
+}

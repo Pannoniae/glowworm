@@ -1,0 +1,1 @@
+Get-ChildItem -File -Recurse | Where-Object { $_.Name -ne ".presets" -and $_.Extension -ne ".fsm" } | Rename-Item -NewName { "np_" + $_.Name }

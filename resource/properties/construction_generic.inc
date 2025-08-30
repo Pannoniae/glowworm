@@ -145,6 +145,21 @@
 		}
 	}
 )
+(define "armor_pillbox"
+	("armor_construction" calibre(30))
+	{armor
+		{setting "body"
+			{threshold
+				{blast {value 35}}
+			}
+		}
+		{setting "roof"
+			{threshold 
+				{blast {value 34}}
+			}
+		}
+	}
+)
 (define "armor_bunker_medium" ; 105mm HE will break
 	("armor_construction" calibre(30))
 	{armor
@@ -304,6 +319,17 @@
 			{disable_damage_acc}
 		}
 	}
+)
+
+(define "windows_attach_place"		
+            {boarder			
+                    {link "%1" "attach%1"}			
+                    {door "attach%1"}		
+            }	
+)
+	
+(define "bitgamer"		
+         ("windows_attach_place" args(0))		("windows_attach_place" args(1))		("windows_attach_place" args(2))		              ("windows_attach_place" args(3))		("windows_attach_place" args(4))		("windows_attach_place" args(5))		              ("windows_attach_place" args(6))		("windows_attach_place" args(7))		("windows_attach_place" args(8))		              ("windows_attach_place" args(9))		("windows_attach_place" args(10))		("windows_attach_place" args(11))		              ("windows_attach_place" args(12))		("windows_attach_place" args(13))		("windows_attach_place" args(14))		              ("windows_attach_place" args(15))		("windows_attach_place" args(16))		("windows_attach_place" args(17))		              ("windows_attach_place" args(18))		("windows_attach_place" args(19))		("windows_attach_place" args(20))	
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
