@@ -1,0 +1,65 @@
+{construction
+	(include "/properties/post.inc")
+	{Extension "post_euro3.mdl"}
+
+	{props "construction" "steel"}	
+	("armor_post")
+	("armor_use_volume_thickness")
+
+
+	{volume	"body"
+		{thickness 10}
+		{able {visible 0}}
+	}
+	{volume	"lamp1"
+		{thickness 1}
+		{able{obstacle 0}}
+	}
+	{volume	"lamp2"
+		{thickness 1}
+		{able{obstacle 0}}
+	}
+	{volume	"lamp3"
+		{thickness 1}
+		{able{obstacle 0}}
+	}
+	{volume	"lamp4"
+		{thickness 1}
+		{able{obstacle 0}}
+	}
+        {extender "light"
+                {lamp "lamp1"			
+		     {preset "lamp_point"
+		              {light_fx 	"light_post_plafond"}
+		              {light_bone "lamp_light_point1"}
+		              {break_fx 	"lamp_hit"}
+		              {break_bone "lamp_glass1"}
+                     }
+	        }
+		{lamp "lamp2"			
+		     {preset "lamp_point"
+		              {light_fx 	"light_post_plafond"}
+		              {light_bone "lamp_light_point2"}
+		              {break_fx 	"lamp_hit"}
+		              {break_bone "lamp_glass2"}
+                     }
+	        }
+                {lamp "lamp3"			
+		     {preset "lamp_point"
+		              {light_fx 	"light_post_plafond"}
+		              {light_bone "lamp_light_point3"}
+		              {break_fx 	"lamp_hit"}
+		              {break_bone "lamp_glass3"}
+                     }
+	        }
+		{lamp "lamp4"			
+		     {preset "lamp_point"
+		              {light_fx 	"light_post_plafond"}
+		              {light_bone "lamp_light_point4"}
+		              {break_fx 	"lamp_hit"}
+		              {break_bone "lamp_glass4"}
+                     }
+	        }
+	}
+	{lodclass "decor_medium"}
+}

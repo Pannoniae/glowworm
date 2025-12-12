@@ -1,0 +1,25 @@
+{game_entity
+	
+	{extension "railroad5_bridge12.mdl"}
+	{props "big" "steel" "shed" "construction" "no_destroyed_stamp" "railway_part"}
+	{extender "structure_bone"	
+		{hold "01"}		
+	}	
+	{volume "body"
+		{able clear {blast}{obstacle 0}}
+	}
+	{##volume "rail1"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail2"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{extender "railway"
+		{LinkPoint -137.7 0}
+		{LinkPoint 134.9 0}
+		{path 0 1}
+	}
+	{obstacleID "stuff"}
+}

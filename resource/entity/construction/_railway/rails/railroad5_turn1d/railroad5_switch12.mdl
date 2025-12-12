@@ -1,0 +1,196 @@
+;Exported by: Alexey
+;Date:        Sat Apr 24 08:54:13 2021
+;File:        L:\VTV_models_BACKUP\Models_For_WiW\Railway\rails_new_wide_5\wide_railway1_switch3_v02.max
+{Skeleton
+	{animation
+		{sequence "switch" {speed 0.2}}
+	}
+	{bone "rail"
+		{parameters "Align;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "rail.ply"}
+		{bone "emit1"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-107.319	-75.8431	0
+			}
+		}
+		{bone "emit2"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-107.469	-49.1362	0
+			}
+		}
+		{bone "ostr"
+			{parameters "Align;"}
+			{VolumeView "ostr.ply"}
+		}
+		{bone "switch_base"
+			{Position -123.009	-62.4016	13.895}
+			{VolumeView "switch_base.ply"}
+			{bone "switch_flag"
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					-8.63781	-0.00483704	-7.53281
+				}
+				{VolumeView "switch_flag.ply"}
+				{bone "sflag_lever"
+					{Matrix34
+						0.00698085	-0.999976	0
+						0.999976	0.00698085	0
+						0	0	1
+						2.23584	-0.849945	0.559627
+					}
+					{VolumeView "sflag_lever.ply"}
+				}
+			}
+			{bone "switch_lever1"
+				{Position -0.356651	-0.0119247	-5.66859}
+				{VolumeView "switch_lever1.ply"}
+				{bone "switch_lever2"
+					{Matrix34
+						1	0	0
+						0	0.906308	0.422618
+						0	-0.422618	0.906308
+						0.391296	-1.89804	4.09466
+					}
+					{VolumeView "switch_lever2.ply"}
+				}
+			}
+			{bone "s_traction"
+				{Position -2.4162	63.5	-9.44013}
+				{VolumeView "s_traction.ply"}
+				{bone "contr"
+					{Position 4.68658	-1.09839	3.06316}
+				}
+			}
+		}
+		{bone "land"
+			{parameters "Land;Ground;Align"}
+			{Position 0	0	4.83503}
+			{visibility 0}
+			{VolumeView "land.ply" {Ground}}
+		}
+	}
+}
+{Obstacle "body3"
+	{Obb2
+		{Center -123.216 62.4093}
+		{Extent 4.7626 5.78099}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body4"
+	{Obb2
+		{Center -128.947 62.4684}
+		{Extent 3.67263 2.22732}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{volume "body1"
+	{Box 8.70046 20.1968 22.1728}
+	{Bone "rail"}
+	{Position -123.286	-73.9581	9.5116}
+}
+{##volume "body2"
+	{Polyhedron "body2.vol"}
+	{Bone "rail"}
+	{Position 0	0	3.48707}
+}
+{volume "body3"
+	{Polyhedron "body3.vol"}
+	{Bone "switch_base"}
+	{Position -0.207657	-0.00775909	-9.04473}
+}
+{volume "body4"
+	{Box 7.34526 4.45464 25.833}
+	{Bone "switch_base"}
+	{Position -5.93841	-0.0668106	-2.4747}
+}
+{volume "body"
+	{Box 8.70133 20.1968 22.1728}
+	{Bone "rail"}
+	{Position -123.308	-53.7856	9.51159}
+}
+{##volume "rail1"
+	{Box 277.795 2.09239 3.95669}
+	{Bone "rail"}
+	{Position 0	15.6299	4.51681}
+}
+{##volume "rail2"
+	{Box 277.795 2.09239 3.95669}
+	{Bone "rail"}
+	{Position 0	-15.6299	4.51681}
+}
+{##volume "rail3"
+	{Box 85.7122 2.09239 3.95669}
+	{Bone "rail"}
+	{Matrix34
+		0.93358	-0.358368	0
+		0.358368	0.93358	0
+		0	0	1
+		77.9726	-55.1542	4.51681
+	}
+}
+{##volume "rail4"
+	{Box 88.3359 2.09239 3.95669}
+	{Bone "rail"}
+	{Matrix34
+		0.93358	-0.358368	0
+		0.358368	0.93358	0
+		0	0	1
+		88.6641	-25.4516	4.51681
+	}
+}
+{##volume "rail5"
+	{Box 85.7122 2.09239 3.95669}
+	{Bone "rail"}
+	{Matrix34
+		0.97437	-0.224951	0
+		0.224951	0.97437	0
+		0	0	1
+		0.118107	-30.8755	4.51681
+	}
+}
+{##volume "rail6"
+	{Box 88.3359 2.09239 3.95669}
+	{Bone "rail"}
+	{Matrix34
+		0.970296	-0.241922	0
+		0.241922	0.970296	0
+		0	0	1
+		8.20875	-0.561105	4.51681
+	}
+}
+{##volume "rail7"
+	{Box 72.2441 2.09239 3.95669}
+	{Bone "rail"}
+	{Matrix34
+		0.996195	-0.0871557	0
+		0.0871557	0.996195	0
+		0	0	1
+		-74.4145	-18.5837	4.51681
+	}
+}
+{##volume "rail8"
+	{Box 72.2441 2.09239 3.95669}
+	{Bone "rail"}
+	{Matrix34
+		0.997564	-0.0697565	0
+		0.0697565	0.997564	0
+		0	0	1
+		-69.1014	12.135	4.51681
+	}
+}

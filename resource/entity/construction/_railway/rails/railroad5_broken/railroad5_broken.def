@@ -1,0 +1,38 @@
+{game_entity
+	
+	{extension "railroad_broken10.mdl"}
+	{props "big" "steel" "parts" "construction" "no_destroyed_stamp" "railway_part"}
+	{extender "structure_bone"	
+		{hold "01"}		
+	}	
+	{##volume "body"
+		{able clear {blast}{obstacle 0}}
+	}
+	{##volume "rail1"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail2"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail3"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail4"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{Extender "land_patch"
+		{AlignEnabled 0}
+		{AlignStacked 0}
+		{AlignVolumes 1}
+	}
+	{extender "railway"
+		{LinkPoint -137.113 0}
+		{LinkPoint 137.113 0}
+		{path 0 1}
+	}
+	{obstacleID "stuff"}
+}

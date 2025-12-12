@@ -1,0 +1,58 @@
+{game_entity
+    (include "/properties/post.inc")
+	{props "small" "steel" "construction" "parts" "disable_area" "no_destroyed_stamp"}
+	{Extension "searchlight_round.mdl"}
+	("armor_use_volume_thickness")
+
+	{Volume "body1"
+		{Tags  "body"}
+		{Thickness 10}
+		{able {visible 0}{bullet 1}}
+	}
+	{Volume "lamp1"
+		{Thickness 1}
+	}
+	{Volume "lamp2"
+		{Thickness 1}
+	}
+	{Volume "lamp3"
+		{Thickness 1}
+	}
+	{Volume "lamp4"
+		{Thickness 1}
+	}
+	{extender "light"
+             {lamp "lamp1"		
+		{preset "lamp_spot"
+                         {light_fx 	"light_post_dir"}			
+                         {light_bone "lamp_light_spot1"}     	                 		
+                         {break_fx 	"lamp_hit"}			
+                         {break_bone "lamp_glass1"}		
+                }
+             }
+             {lamp "lamp2"		
+                {preset "lamp_spot"			
+                         {light_fx 	"light_post_dir"}			
+                         {light_bone "lamp_light_spot2"}			
+                         {break_fx 	"lamp_hit"}			
+                         {break_bone "lamp_glass2"}		
+                }
+             }
+             {lamp "lamp3"		
+                {preset "lamp_spot"
+                         {light_fx 	"light_post_dir"}			
+                         {light_bone "lamp_light_spot3"}
+                         {break_fx 	"lamp_hit"}			
+                         {break_bone "lamp_glass3"}		
+                }
+             }
+             {lamp "lamp4"		
+                {preset "lamp_spot"
+                         {light_fx 	"light_post_dir"}			
+                         {light_bone "lamp_light_spot4"}
+                         {break_fx 	"lamp_hit"}			
+                         {break_bone "lamp_glass4"}		
+                }
+             }              
+	}
+}

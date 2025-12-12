@@ -1,0 +1,37 @@
+{game_entity
+	
+	{Extension "railroad5_turn20.mdl"}
+	{props "steel" "railway_part"}
+	{##volume "body"
+		{able clear {blast}{obstacle 0}}
+	}
+	{##volume "rail1"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail2"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail3"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{##volume "rail4"
+		{thickness 30}
+		{able {obstacle 0}}
+	}
+	{Extender "land_patch"
+		{TerrainType "ground" "bridge_wood"}	
+		{AlignEnabled 1}
+		{AlignStacked 0}
+		{AlignVolumes 1}
+	}
+	{extender "railway"
+		{LinkPoint -137.721 1.492}
+		{LinkPoint 0 0}
+		{LinkPoint 137.721 1.492}
+		{path 0 1 2}
+	}
+	{obstacleID "stuff"}
+}

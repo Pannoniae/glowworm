@@ -1,0 +1,35 @@
+;Exported by:	 Alexey
+;Date:			 26.10.2018 18:18:11
+;File:			 K:\VTV_models\Models_For_WiW\Railway\rails_new_wide_5\wide_railway1_v32.max
+{skeleton
+	{bone "rail"
+		{parameters "align;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{VolumeView "rail.ply"}
+		{bone "land"
+			{parameters "Land;Ground;Align"}
+			{Position -0.2246 	 0 	 4.835}
+			{visibility 0}
+			{VolumeView "land.ply" {Ground}}
+		}
+	}
+}
+{##volume "body"
+	{box 143.237 62.2228 4.70924}
+	{bone "rail"}
+	{Position 0 	 0 	 3.8732}
+}
+{##volume "rail1"
+	{box 141.673 2.09239 3.95669}
+	{bone "rail"}
+	{Position -0.2246 	 15.6299 	 4.5168}
+}
+{##volume "rail2"
+	{box 141.673 2.09239 3.95669}
+	{bone "rail"}
+	{Position -0.2246 	 -15.6299 	 4.5168}
+}
