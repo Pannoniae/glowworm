@@ -1,0 +1,249 @@
+{mission
+	{Entity "map_point" 0x8000
+		{Position 2623.52 3440.97 115.98}
+		{xform zl -126.7}
+		{Extender "map_point"
+			{name a1}
+			{team a}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 0}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 1}
+	}
+	{Entity "map_point" 0x8001
+		{Position -2265.11 -3283.9}
+		{xform zl 46.19}
+		{Extender "map_point"
+			{name b1}
+			{team b}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 0}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 2}
+	}
+	{Entity "map_point" 0x800b
+		{Position 2962.77 3132.96 119.53}
+		{xform zl -134.98}
+		{Extender "map_point"
+			{name a2}
+			{team a}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 0}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 6}
+	}
+	{Entity "map_point" 0x800c
+		{Position -2508.18 -3067.96 125.46}
+		{xform zl 46.19}
+		{Extender "map_point"
+			{name b2}
+			{team b}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 0}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 7}
+	}
+	{Entity "flag_point_1" 0xc000
+		{Position 77.7 -16.86}
+		{xform zl 37.52}
+		{Extender "map_point"
+			{name m1}
+			{zone
+				{radius 0}
+				{zoneId "f1"}
+			}
+			{phase 0}
+			{order 1}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 2}
+				{radius 5}
+				{azimuth "+2"}
+				{buildTime 60}
+				{entity "sandbag_structured_curved"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 3}
+	}
+	{Entity "flagpoint_ammo" 0xc002
+		{Extender "supply_zone"
+			{enabled}
+			{current 0}
+		}
+	}
+	{Entity "flag_point_3" 0xc006
+		{Position -1918.44 2323.85 169.78}
+		{Extender "map_point"
+			{name m2}
+			{zone
+				{radius 0}
+				{zoneId "f2"}
+			}
+			{phase 0}
+			{order 2}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 2}
+				{radius 5}
+				{azimuth "+2"}
+				{buildTime 60}
+				{entity "sandbag_structured_curved"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 5}
+	}
+	{Entity "flagpoint_ammo" 0xc008
+		{Extender "supply_zone"
+			{enabled}
+			{current 0}
+		}
+	}
+	{Entity "flag_point_2" 0xa000
+		{Position 2170.8 -2282.67 231}
+		{xform zl 17.27}
+		{Extender "map_point"
+			{zone
+				{radius 0}
+				{zoneId "f3"}
+			}
+			{phase 0}
+			{order 3}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 2}
+				{radius 5}
+				{azimuth "+2"}
+				{buildTime 60}
+				{entity "sandbag_structured_curved"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 4}
+	}
+	{Entity "flagpoint_ammo" 0xa002
+		{Extender "supply_zone"
+			{enabled}
+			{current 0}
+		}
+	}
+	{Link 0xc002 {0xc000 "ammo"}}
+	{Link 0xc008 {0xc006 "ammo"}}
+	{Link 0xa002 {0xa000 "ammo"}}
+	{Environment "goh/multi/2v2_fall/var2"}
+	{Helpers
+		{zone "poly"
+			{position 80.9916 -13.2085 157}
+			{Name "f1"}
+			{Point -554.541 -458.956}
+			{Point -513.416 748.494}
+			{Point 683.037 332.396}
+			{Point 384.92 -621.934}
+		}
+		{zone "poly"
+			{position -1925.11 2310.69 170}
+			{Name "f2"}
+			{Point -637.518 -696.374}
+			{Point -288.779 700.527}
+			{Point 479.041 447.805}
+			{Point 447.256 -451.959}
+		}
+		{zone "poly"
+			{position 2185.6 -2300.2 234}
+			{Name "f3"}
+			{Point -788.338 -672.333}
+			{Point -624.987 519.538}
+			{Point 673.972 624.173}
+			{Point 739.353 -471.377}
+		}
+		{zone "poly"
+			{position 19.3883 -16.1242 157}
+			{Name "global"}
+			{Point -3552.34 -3585.97}
+			{Point -3474.78 3567.75}
+			{Point 3492.35 3574.7}
+			{Point 3534.77 -3556.48}
+		}
+		{reinforcements
+			{scoreTotal 0}
+			{scoreCurrent 0}
+		}
+	}
+	{Fog 0}
+}

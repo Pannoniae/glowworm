@@ -1,0 +1,4457 @@
+{mission
+	{Entity "flag_point_1" 0x802f
+		{Position 72.83 -25.19}
+		{xform zl 177.93}
+		{Extender "map_point"
+			{name f1}
+			{zone
+				{radius 0}
+				{zoneId "f1"}
+			}
+			{phase 0}
+			{order 1}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{built}
+				{steps 3}
+				{radius 10}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "sandbag_structured_straight"}
+			}
+			{level
+				{built}
+				{steps 2}
+				{radius 5}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 48}
+	}
+	{Entity "flag_point_2" 0x8013
+		{Position -2804.56 -21.36}
+		{xform zl -89.81}
+		{Extender "map_point"
+			{name f2}
+			{zone
+				{radius 0}
+				{zoneId "f5"}
+			}
+			{phase 0}
+			{order 2}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{built}
+				{steps 3}
+				{radius 10}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "sandbag_structured_straight"}
+			}
+			{level
+				{built}
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 18}
+	}
+	{Entity "flag_point_5" 0x8003
+		{Position -5001.47 -1319.95}
+		{xform zl 162.45}
+		{Placer
+			{State "ammo" {Unlinked}}
+		}
+		{Extender "map_point"
+			{name f5}
+			{zone
+				{radius 0}
+				{zoneId "f2"}
+			}
+			{phase 0}
+			{order 5}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 0}
+				{radius 14}
+				{angle "300"}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "210mm_morser18"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 2}
+	}
+	{Entity "map_point" 0xc000
+		{Position -8168.27 163.25}
+		{xform zl -3.91}
+		{Extender "map_point"
+			{name b4}
+			{team b}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 4}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 1}
+	}
+	{Entity "map_point" 0xc007
+		{Position 8259.83 178.38}
+		{xform zl -179.74 scale 1.223}
+		{Extender "map_point"
+			{name a1}
+			{team a}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 1}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 9}
+	}
+	{Entity "map_point" 0x8005
+		{Position -8056.91 360.66}
+		{xform zl -0.85}
+		{Extender "map_point"
+			{name b1}
+			{team b}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 1}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 4}
+	}
+	{Entity "map_point" 0x8006
+		{Position 8255.7 -222.39}
+		{xform zl 179.7 scale 1.223}
+		{Extender "map_point"
+			{name a4}
+			{team a}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 4}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 5}
+	}
+	{Entity "map_point" 0xf500
+		{Position 8194.29 -520.48}
+		{xform zl 175.07}
+		{Extender "map_point"
+			{name a3}
+			{team a}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 3}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 6}
+	}
+	{Entity "map_point" 0xc001
+		{Position -8165.95 -245.07}
+		{xform zl -2.5}
+		{Extender "map_point"
+			{name b3}
+			{team b}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 3}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 7}
+	}
+	{Entity "map_point" 0xc002
+		{Position -8036.55 -467.57}
+		{xform zl -3.91}
+		{Extender "map_point"
+			{name b2}
+			{team b}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 2}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 11}
+	}
+	{Entity "map_point" 0xc003
+		{Position 8195.67 478}
+		{xform zl 179.7 scale 1.223}
+		{Extender "map_point"
+			{name a2}
+			{team a}
+			{zone
+				{radius 0}
+				{zoneId ""}
+			}
+			{phase 0}
+			{order 2}
+			{visor SpawnPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Player 0}
+		{MID 12}
+	}
+	{Entity "flag_point_3" 0xc004
+		{Position 3037.85 -28.7}
+		{xform zl 88.17}
+		{Extender "map_point"
+			{name f3}
+			{zone
+				{radius 0}
+				{zoneId "f4"}
+			}
+			{phase 0}
+			{order 3}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{built}
+				{steps 3}
+				{radius 10}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "sandbag_structured_curved"}
+			}
+			{level
+				{built}
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 13}
+	}
+	{Entity "flag_point_4" 0xe000
+		{Position 5002.9 1280.24}
+		{xform scale 1.006}
+		{Placer
+			{State "ammo" {Unlinked}}
+		}
+		{Extender "map_point"
+			{name f4}
+			{zone
+				{radius 0}
+				{zoneId "f3"}
+			}
+			{phase 0}
+			{order 4}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 0}
+				{radius 15}
+				{angle "110"}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "210mm_morser18"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 3}
+	}
+	{Entity "flag_point_6" 0xd000
+		{Position -4995.89 1272.75}
+		{Placer
+			{State "ammo" {Unlinked}}
+		}
+		{Extender "map_point"
+			{name f6}
+			{zone
+				{radius 0}
+				{zoneId "f6"}
+			}
+			{phase 0}
+			{order 6}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 2}
+				{radius 5}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "sandbag_structured_curved"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 14}
+	}
+	{Entity "flag_point_7" 0xd003
+		{Position 5008.59 -1317.18}
+		{xform zl -86.14}
+		{Placer
+			{State "ammo" {Unlinked}}
+		}
+		{Extender "map_point"
+			{name f7}
+			{zone
+				{radius 0}
+				{zoneId "f7"}
+			}
+			{phase 0}
+			{order 7}
+			{show All}
+			{visor MapPoint}
+			{allow
+				{enableCapture}
+				{enableRelease}
+			}
+		}
+		{Extender "fortification"
+			{level
+				{steps 2}
+				{radius 5}
+				{azimuth "+2"}
+				{buildTime 30}
+				{entity "sandbag_structured_curved"}
+			}
+			{level
+				{steps 1}
+				{radius 3}
+				{buildTime 60}
+				{entity "sandbag_framed_straight"}
+			}
+		}
+		{Player 0}
+		{MID 15}
+	}
+	{Entity "battle_scape_01" 0xc005
+		{Position 10816.5 -14.14 519.94}
+	}
+	{Entity "distant explosion" 0xc006
+		{Position 10728.2 -26.18 499.95}
+	}
+	{Entity "battle_scape_01" 0xc008
+		{Position -10599.2 -40.81}
+	}
+	{Entity "distant explosion" 0xc009
+		{Position -10509.7 -37.74}
+	}
+	{Entity "flagpoint_ammo" 0x9000
+		{Extender "supply_zone"
+			{enabled}
+			{current 0}
+		}
+	}
+	{Entity "flagpoint_ammo" 0x928c
+		{Extender "supply_zone"
+			{enabled}
+			{current 0}
+		}
+	}
+	{Entity "flagpoint_ammo" 0xef80
+		{Extender "supply_zone"
+			{enabled}
+			{current 0}
+		}
+	}
+	{Entity "210mm_morser18" 0x8001
+		{Position 6456.3 -2280.05 875.58}
+		{xform zl -6.7 y 3.09 zw 175.14}
+		{Volume "wheelleft2"
+			{able {visible 0}{bullet 0}{throwing 0}{obstacle 0}{contact 0}{contact_ground 0}{blast 0}{select 0}{touch 0}{nowounddecal 0}{blockcamera 0}}
+		}
+		{Volume "wheelright2"
+			{able {visible 0}{bullet 0}{throwing 0}{obstacle 0}{contact 0}{contact_ground 0}{blast 0}{select 0}{touch 0}{nowounddecal 0}{blockcamera 0}}
+		}
+		{Placer
+			{State "driver1" {Disable}}
+			{State "driver2" {Disable}}
+			{State "driver3" {Disable}}
+			{State "driver4" {Disable}}
+			{State "driver5" {Disable}}
+			{State "driver6" {Disable}}
+			{State "seat1" {Disable}}
+			{State "seat2" {Disable}}
+			{State "seat3" {Disable}}
+			{State "seat4" {Disable}}
+			{State "seat5" {Disable}}
+			{State "seat6" {Disable}}
+		}
+		{Extender "cannon"
+			{animation
+				{switch close}
+			}
+		}
+		{AreaDisable "close"}
+		{Player 0}
+		{MID 19}
+		{Weaponry
+			{State
+				{AccuracyByMotion
+					{value 0.974355}
+					{prevposition 6374.66 -2263.82 945.026}
+					{prevdirection -0.937709 0.189683 0.291079}
+				}
+			}
+		}
+	}
+	{Entity "210mm_morser18" 0x8002
+		{Position -6447.11 2193.87 852.38}
+		{xform zl 23.35 y 11.9 zw -29.5}
+		{Volume "wheelleft2"
+			{able {visible 0}{bullet 0}{throwing 0}{obstacle 0}{contact 0}{contact_ground 0}{blast 0}{select 0}{touch 0}{nowounddecal 0}{blockcamera 0}}
+		}
+		{Volume "wheelright2"
+			{able {visible 0}{bullet 0}{throwing 0}{obstacle 0}{contact 0}{contact_ground 0}{blast 0}{select 0}{touch 0}{nowounddecal 0}{blockcamera 0}}
+		}
+		{Placer
+			{State "driver1" {Disable}}
+			{State "driver2" {Disable}}
+			{State "driver3" {Disable}}
+			{State "driver4" {Disable}}
+			{State "driver5" {Disable}}
+			{State "driver6" {Disable}}
+			{State "seat1" {Disable}}
+			{State "seat2" {Disable}}
+			{State "seat3" {Disable}}
+			{State "seat4" {Disable}}
+			{State "seat5" {Disable}}
+			{State "seat6" {Disable}}
+		}
+		{Extender "cannon"
+			{animation
+				{switch close}
+			}
+		}
+		{AreaDisable "close"}
+		{Player 0}
+		{MID 20}
+		{Weaponry
+			{State
+				{AccuracyByMotion
+					{value 0.923507}
+					{prevposition -6356.28 2178.65 909.576}
+					{prevdirection 0.979554 -0.126176 0.156689}
+				}
+			}
+		}
+	}
+	{Link 0x928c {0x802f "ammo"}}
+	{Link 0xef80 {0x8013 "ammo"}}
+	{Link 0x9000 {0xc004 "ammo"}}
+	{Tags "flag" 0x802f}
+	{Tags "flag" 0x8013}
+	{Tags "flag" 0x8003}
+	{Tags "flag" 0xc004}
+	{Tags "flag" 0xe000}
+	{Tags "flag" 0xd000}
+	{Tags "flag" 0xd003}
+	{Environment "goh/multi/3v3_trenches/var1"}
+	{Helpers
+		{event "action"}
+		{event "ambient"}
+		{event "gamestart"}
+		{event "init"}
+		{zone "poly"
+			{position 50.6395 -21.9543 374}
+			{Name "f1"}
+			{Point -677.474 -453.207}
+			{Point -1209.06 1.28634}
+			{Point -716.57 444.587}
+			{Point 5.24223 573.114}
+			{Point 690.257 443.033}
+			{Point 1212.86 1.66398}
+			{Point 690.555 -460.787}
+			{Point 4.18951 -549.69}
+		}
+		{zone "poly"
+			{position -5023.47 -1331.98 500}
+			{Name "f2"}
+			{Point 0.117546 387.119}
+			{Point 261.42 266.29}
+			{Point 378.582 11.4239}
+			{Point 304.975 -247.828}
+			{Point 27.9492 -380.825}
+			{Point -252.541 -297.994}
+			{Point -427.985 -21.5137}
+			{Point -292.519 283.328}
+		}
+		{zone "poly"
+			{position 4999.53 1291.9 500}
+			{Name "f3"}
+			{Point -279.305 245.944}
+			{Point -14.9962 366.171}
+			{Point 232.377 298.524}
+			{Point 389.382 27.8286}
+			{Point 276.741 -251.211}
+			{Point 16.5226 -375.224}
+			{Point -237.27 -299.252}
+			{Point -383.451 -12.7807}
+		}
+		{zone "poly"
+			{position 3048.48 -24.4081 463}
+			{Name "f4"}
+			{Point 513.914 10.3974}
+			{Point 364.298 -360.349}
+			{Point 6.39606 -478.744}
+			{Point -324.106 -379.143}
+			{Point -524.561 1.88358}
+			{Point -384.847 347.378}
+			{Point -17.1576 491.357}
+			{Point 366.063 367.221}
+		}
+		{zone "poly"
+			{position -2792.11 -38.5097 427}
+			{Name "f5"}
+			{Point -391.814 340.548}
+			{Point 0.834351 492.574}
+			{Point 380.45 334.028}
+			{Point 524.14 25.2749}
+			{Point 397.254 -335.072}
+			{Point -12.3452 -507.237}
+			{Point -347.891 -350.427}
+			{Point -550.629 0.310671}
+		}
+		{zone "poly"
+			{position -5011.99 1265.65 500}
+			{Name "f6"}
+			{Point 290.028 -274.847}
+			{Point 1.07428 -401.672}
+			{Point -264.836 -268.757}
+			{Point -409.167 -8.21131}
+			{Point -313.268 237.714}
+			{Point 0.238216 402.176}
+			{Point 288.058 280.196}
+			{Point 407.873 33.4008}
+		}
+		{zone "poly"
+			{position 5014.75 -1296.28 500}
+			{Name "f7"}
+			{Point 242.747 298.44}
+			{Point 363.487 6.04375}
+			{Point 299.597 -244.621}
+			{Point 2.64643 -382.705}
+			{Point -257.046 -308.415}
+			{Point -360.398 -10.1491}
+			{Point -273.205 258.795}
+			{Point -17.8278 382.611}
+		}
+		{zone "poly"
+			{position 481.381 385.829 389}
+			{Name "global"}
+			{Point -10458.1 -4715}
+			{Point -11409.6 4995.19}
+			{Point 10935.7 5087.84}
+			{Point 10932 -5368.02}
+		}
+		{reinforcements
+			{scoreTotal 0}
+			{scoreCurrent 0}
+		}
+		{vars
+			{"ambient"}
+			{"error"}
+			{"ai_on"}
+			{"user_nation"}
+			{"user_team"}
+			{"mp"}
+		}
+		{mission_options
+			{"any_weather"}
+			{"day_weather"}
+			{"night_weather"}
+		}
+		{triggers
+			{"players_units"
+				{condition
+					{expression "(1 & 3) | (2 & 3)"}
+					{terms
+						{"1.entities"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{prop
+											{prop human}
+										}
+										{state
+											{state user_control}
+										}
+									}
+									{exclude
+										{tag
+											{tag player}
+										}
+										{tag
+											{tag hidden}
+										}
+										{state
+											{state dead}
+										}
+									}
+								}
+							}
+						}
+						{"2.entities"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{prop
+											{prop vehicle}
+										}
+										{state
+											{state "inhabited user_control"}
+										}
+									}
+									{exclude
+										{tag
+											{tag hidden}
+										}
+										{tag
+											{tag player_armor}
+										}
+										{tag
+											{tag player_car}
+										}
+										{tag
+											{tag player_veh}
+										}
+									}
+								}
+							}
+						}
+						{"3.cmp_i"
+							{var "ai_on$"}
+							{op "=="}
+							{value 1}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop human}
+									}
+									{state
+										{state user_control}
+									}
+								}
+								{exclude
+									{tag
+										{tag hidden}
+									}
+									{tag
+										{tag player}
+									}
+									{state
+										{state dead}
+									}
+								}
+							}
+						}
+						{tag_add player}
+					}
+					{"delay"
+						{time 0.2}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop tank}
+									}
+									{state
+										{state "inhabited user_control"}
+									}
+								}
+								{exclude
+									{tag
+										{tag player_armor}
+									}
+								}
+							}
+						}
+						{tag_add player_armor}
+					}
+					{"delay"
+						{time 0.2}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop car}
+									}
+									{state
+										{state "inhabited user_control"}
+									}
+								}
+								{exclude
+									{tag
+										{tag player_car}
+									}
+								}
+							}
+						}
+						{tag_add player_car}
+					}
+					{"delay"
+						{time 0.5}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop vehicle}
+									}
+									{state
+										{state "inhabited user_control"}
+									}
+								}
+								{exclude
+									{tag
+										{tag player_veh}
+									}
+									{tag
+										{tag player_armor}
+									}
+									{tag
+										{tag player_car}
+									}
+									{tag
+										{tag engine_count_1}
+									}
+									{tag
+										{tag engine_count_2}
+									}
+								}
+							}
+						}
+						{tag_add player_veh}
+					}
+					{"delay"
+						{time 10}
+					}
+					{"trigger"
+						{name "players_units"}
+					}
+				}
+			}
+			{"ai/ai_unhold"
+				{condition
+					{type 1}
+					{terms
+						{"1.see_actors"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{tag
+											{tag bot}
+										}
+									}
+									{include
+										{prop
+											{prop human}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{tag
+											{tag repairing}
+										}
+										{tag
+											{tag ecrew}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state inactive}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{state
+											{state operatable}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{tag
+											{tag hidden}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state "inactive linked"}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 45}
+							}
+							{detection located}
+							{tag
+								{"tag pair"}
+								{"for selector" unhold_iq}
+								{"for enemy" enemy_near_iq}
+							}
+						}
+						{"2.see_actors"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{tag
+											{tag bot}
+										}
+									}
+									{include
+										{prop
+											{prop human}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{tag
+											{tag repairing}
+										}
+										{tag
+											{tag ecrew}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state inactive}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{state
+											{state operatable}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{tag
+											{tag hidden}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state "inactive linked"}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 45}
+							}
+							{detection located}
+							{tag
+								{"tag pair"}
+								{"for selector" unhold_iq}
+								{"for enemy" enemy_near_iq}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type rand}
+								{value 0.5}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"actor_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag unhold_iq}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{fire_mode open}
+								{move_mode free}
+								{weapon_prepare on}
+								{movement
+									{speed assault}
+								}
+								{ai
+									{advance_ratio "0.1"}
+								}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"actor_state"
+								{selector
+									{tag unhold_iq}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{fire_mode open}
+								{move_mode free}
+								{weapon_prepare on}
+								{movement
+									{speed sneak}
+									{type crawl}
+								}
+								{ai
+									{advance_ratio "0.1"}
+								}
+							}
+						}
+					}
+					{"delay"
+						{time 5}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type rand}
+								{value 0.4}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"actor_to_cover"
+								{selector
+									{tag unhold_iq}
+									{type human}
+									{state "not dead"}
+								}
+								{mode random}
+							}
+							{"delay"
+								{time 2}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.4}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"action"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag unhold_iq}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{action move}
+								{target
+									{ignore_captured_by_user 0}
+									{tag enemy_near_iq}
+								}
+							}
+							{"delay"
+								{time 2.5}
+							}
+							{"actor_to_cover"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag unhold_iq}
+									{type human}
+									{state "not dead"}
+								}
+								{mode random}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"action"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag unhold_iq}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{action attack}
+								{target
+									{ignore_captured_by_user 0}
+									{tag enemy_near_iq}
+								}
+							}
+							{"delay"
+								{time 7}
+							}
+						}
+					}
+					{"delay"
+						{time 0.5}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type entities}
+								{selector
+									{source advanced}
+									{ignore_captured_by_user 0}
+									{group
+										{select
+											{tag
+												{tag unhold_iq}
+											}
+										}
+										{include
+											{team
+												{team a}
+											}
+										}
+									}
+								}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"actor_state"
+								{selector
+									{source advanced}
+									{ignore_captured_by_user 0}
+									{group
+										{select
+											{tag
+												{tag bot}
+											}
+										}
+										{include
+											{prop
+												{prop human}
+											}
+											{team
+												{team a}
+											}
+										}
+										{exclude
+											{tag
+												{tag ecrew}
+											}
+											{tag
+												{tag repairing}
+											}
+											{tag
+												{tag unhold_iq}
+											}
+											{state
+												{state dead}
+											}
+											{state
+												{state "inactive linked"}
+											}
+										}
+									}
+									{amount 5
+									}
+									{sort
+										{type entity}
+										{entity
+											{tag unhold_iq}
+										}
+									}
+								}
+								{drop "orders sensor senseless"}
+								{move_mode free}
+								{ai_move
+									{mode enable}
+								}
+								{ai
+									{advance_ratio "0.1"}
+								}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"actor_state"
+								{selector
+									{source advanced}
+									{ignore_captured_by_user 0}
+									{group
+										{select
+											{tag
+												{tag bot}
+											}
+										}
+										{include
+											{prop
+												{prop human}
+											}
+											{team
+												{team b}
+											}
+										}
+										{exclude
+											{tag
+												{tag ecrew}
+											}
+											{tag
+												{tag repairing}
+											}
+											{tag
+												{tag unhold_iq}
+											}
+											{state
+												{state dead}
+											}
+											{state
+												{state "inactive linked"}
+											}
+										}
+									}
+									{amount 5
+									}
+									{sort
+										{type entity}
+										{entity
+											{tag unhold_iq}
+										}
+									}
+								}
+								{drop "orders sensor senseless"}
+								{move_mode free}
+								{ai_move
+									{mode enable}
+								}
+								{ai
+									{advance_ratio "0.1"}
+								}
+							}
+						}
+					}
+					{"delay"
+						{time 1}
+					}
+					{"entity_state"
+						{selector
+							{ignore_captured_by_user 0}
+							{tag unhold_iq}
+						}
+						{tag_remove unhold_iq}
+					}
+					{"entity_state"
+						{selector
+							{ignore_captured_by_user 0}
+							{tag enemy_near_iq}
+						}
+						{tag_remove enemy_near_iq}
+					}
+					{"delay"
+						{time 50}
+					}
+					{"trigger"
+						{name "ai/ai_unhold"}
+					}
+				}
+			}
+			{"ai/tank_alt_fight"
+				{condition
+					{type 1}
+					{terms
+						{"1.see_actors"
+							{selector
+								{source advanced}
+								{group
+									{select
+										{tag
+											{tag bot_tank}
+										}
+									}
+									{include
+										{prop
+											{prop vehicle}
+										}
+										{state
+											{state "moveable inhabited"}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{state
+											{state inactive}
+										}
+										{state
+											{state user_control}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{state
+											{state "operatable user_control"}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{tag
+											{tag engine_count_1}
+										}
+										{tag
+											{tag engine_count_2}
+										}
+										{state
+											{state "inhabited linked"}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 180}
+							}
+							{tag
+								{"tag pair"}
+								{"for selector" e_tank_alt_a}
+								{"for enemy" p_tank_target}
+							}
+						}
+						{"2.see_actors"
+							{selector
+								{source advanced}
+								{group
+									{select
+										{tag
+											{tag bot_tank}
+										}
+									}
+									{include
+										{prop
+											{prop vehicle}
+										}
+										{state
+											{state "moveable inhabited"}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{state
+											{state inactive}
+										}
+										{state
+											{state user_control}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{state
+											{state "operatable user_control"}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{tag
+											{tag engine_count_1}
+										}
+										{tag
+											{tag engine_count_2}
+										}
+										{state
+											{state "inactive linked"}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 180}
+							}
+							{tag
+								{"tag pair"}
+								{"for selector" e_tank_alt_b}
+								{"for enemy" p_tank_target}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.2}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "ai_on$"}
+								{op "!="}
+								{value 1}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt_a}
+								}
+								{tag_remove e_tank_alt_a}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt_b}
+								}
+								{tag_remove e_tank_alt_b}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag p_tank_target}
+								}
+								{tag_remove p_tank_target}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"switch"
+								{"case"
+									{condition
+										{type entities}
+										{selector
+											{ignore_captured_by_user 0}
+											{tag e_tank_alt_a}
+											{zone "global"}
+										}
+									}
+									{"delay"
+										{time 0.1}
+									}
+									{"entity_state"
+										{selector
+											{ignore_captured_by_user 0}
+											{tag e_tank_alt_a}
+										}
+										{tag_add e_tank_alt}
+										{tag_remove e_tank_alt_a}
+									}
+									{"delay"
+										{time 0.4}
+									}
+									{"entity_state"
+										{selector
+											{source advanced}
+											{group
+												{select
+													{tag
+														{tag bot_tank}
+													}
+													{tag
+														{tag bot_car}
+													}
+												}
+												{include
+													{prop
+														{prop vehicle}
+													}
+													{state
+														{state "moveable inhabited"}
+													}
+													{team
+														{team a}
+													}
+												}
+												{exclude
+													{tag
+														{tag e_tank_alt}
+													}
+													{state
+														{state inactive}
+													}
+													{state
+														{state "inactive user_control"}
+													}
+												}
+											}
+											{amount 2
+											}
+											{sort
+												{type entity}
+												{entity
+													{ignore_captured_by_user 0}
+													{tag e_tank_alt}
+												}
+											}
+										}
+										{tag_add temp2}
+									}
+									{"delay"
+										{time 0.1}
+									}
+								}
+								{"default"
+									{"delay"
+										{time 0.1}
+									}
+									{"entity_state"
+										{selector
+											{ignore_captured_by_user 0}
+											{tag e_tank_alt_b}
+										}
+										{tag_add e_tank_alt}
+										{tag_remove e_tank_alt_b}
+									}
+									{"delay"
+										{time 0.4}
+									}
+									{"entity_state"
+										{selector
+											{source advanced}
+											{group
+												{select
+													{tag
+														{tag bot_tank}
+													}
+													{tag
+														{tag bot_car}
+													}
+												}
+												{include
+													{prop
+														{prop vehicle}
+													}
+													{state
+														{state "moveable inhabited"}
+													}
+													{team
+														{team b}
+													}
+												}
+												{exclude
+													{tag
+														{tag e_tank_alt}
+													}
+													{state
+														{state inactive}
+													}
+													{state
+														{state "inactive user_control"}
+													}
+												}
+											}
+											{amount 2
+											}
+											{sort
+												{type entity}
+												{entity
+													{ignore_captured_by_user 0}
+													{tag e_tank_alt}
+												}
+											}
+										}
+										{tag_add temp2}
+									}
+									{"delay"
+										{time 0.1}
+									}
+								}
+							}
+							{"delay"
+								{time 0.3}
+							}
+							{"while"
+								{condition
+									{type near}
+									{units
+										{source advanced}
+										{ignore_captured_by_user 0}
+										{group
+											{select
+												{tag
+													{tag temp2}
+												}
+											}
+											{include
+												{prop
+													{prop vehicle}
+												}
+												{state
+													{state inhabited}
+												}
+											}
+											{exclude
+												{tag
+													{tag e_tank_alt}
+												}
+											}
+										}
+									}
+									{near_to
+										{ignore_captured_by_user 0}
+										{tag e_tank_alt}
+									}
+									{distance 100}
+								}
+								{"delay"
+									{time 0.1}
+								}
+								{"entity_state"
+									{selector
+										{source advanced}
+										{ignore_captured_by_user 0}
+										{group
+											{select
+												{tag
+													{tag temp2}
+												}
+											}
+											{include
+												{prop
+													{prop vehicle}
+												}
+												{state
+													{state inhabited}
+												}
+											}
+											{exclude
+												{tag
+													{tag e_tank_alt}
+												}
+												{state
+													{state user_control}
+												}
+											}
+										}
+										{sort
+											{type entity}
+											{entity
+												{ignore_captured_by_user 0}
+												{tag e_tank_alt}
+											}
+										}
+										{amount 1
+										}
+									}
+									{tag_add e_tank_alt}
+									{tag_remove temp2}
+								}
+								{"delay"
+									{time 0.1}
+								}
+							}
+							{"delay"
+								{time 0.3}
+							}
+							{## "actor_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{fire_mode open}
+								{move_mode free}
+								{ai_move
+									{mode enable}
+								}
+								{movement
+									{speed assault}
+								}
+								{ai
+									{advance_ratio "0.01"}
+								}
+							}
+							{## "delay"
+								{time 0.1}
+							}
+							{"actor_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt}
+									{type vehicle}
+									{state inhabited}
+								}
+								{drop orders}
+								{fire_mode open}
+								{move_mode free}
+								{ai_move
+									{mode enable}
+								}
+								{movement
+									{speed normal}
+								}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{## "squad_create"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt}
+									{zone "global"}
+									{state operatable}
+								}
+								{name e_tank_squad}
+							}
+							{"delay"
+								{time 0.3}
+							}
+							{"switch"
+								{"case"
+									{condition
+										{type rand}
+										{value 0.5}
+									}
+									{"delay"
+										{time 0.1}
+									}
+									{"action"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{drop "orders sensor senseless"}
+										{action rotate}
+										{target
+											{ignore_captured_by_user 0}
+											{tag p_tank_target}
+											{zone "global"}
+										}
+									}
+									{"delay"
+										{time 5}
+									}
+									{"actor_state"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{fire_mode open}
+										{ai_move
+											{mode enable}
+										}
+										{movement
+											{forward on}
+											{backward on}
+										}
+									}
+									{"delay"
+										{time 0.25}
+									}
+									{"action"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{drop "orders sensor senseless"}
+										{action attack}
+										{target
+											{ignore_captured_by_user 0}
+											{tag p_tank_target}
+											{zone "global"}
+										}
+									}
+								}
+								{"default"
+									{"delay"
+										{time 0.25}
+									}
+									{"action"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{drop "orders sensor senseless"}
+										{action rotate}
+										{target
+											{ignore_captured_by_user 0}
+											{tag p_tank_target}
+											{zone "global"}
+										}
+									}
+									{"delay"
+										{time 5}
+									}
+									{"actor_state"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{fire_mode open}
+										{weapon_prepare on}
+										{ai_move
+											{mode enable}
+										}
+										{movement
+											{speed fast}
+											{forward on}
+											{backward off}
+										}
+									}
+									{"delay"
+										{time 0.25}
+									}
+									{"action"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{drop "orders sensor senseless"}
+										{action move}
+										{target
+											{ignore_captured_by_user 0}
+											{tag p_tank_target}
+											{zone "global"}
+										}
+									}
+									{"delay"
+										{time 8}
+									}
+									{"actor_state"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{drop orders}
+										{fire_mode open}
+										{move_mode free}
+										{weapon_prepare on}
+										{ai_move
+											{mode enable}
+										}
+										{movement
+											{speed normal}
+											{forward on}
+											{backward on}
+										}
+									}
+									{"delay"
+										{time 1}
+									}
+									{"action"
+										{selector
+											{tag e_tank_alt}
+											{zone "global"}
+											{type vehicle}
+											{state inhabited}
+										}
+										{drop orders}
+										{action attack}
+										{target
+											{ignore_captured_by_user 0}
+											{tag p_tank_target}
+											{zone "global"}
+										}
+									}
+								}
+							}
+							{"delay"
+								{time 30}
+							}
+							{## "squad_dismiss"
+								{squad e_tank_squad}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"actor_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt}
+									{zone "global"}
+									{type vehicle}
+								}
+								{movement
+									{speed normal}
+									{forward on}
+									{backward on}
+								}
+							}
+							{"delay"
+								{time 0.5}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag e_tank_alt}
+								}
+								{tag_remove e_tank_alt}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag p_tank_target}
+								}
+								{tag_remove p_tank_target}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag temp2}
+								}
+								{tag_remove temp2}
+							}
+							{"delay"
+								{time 60}
+							}
+							{"trigger"
+								{name "ai/tank_alt_fight"}
+							}
+						}
+					}
+				}
+			}
+			{"ai/recrew_portables"
+				{condition
+					{type 1}
+					{terms
+						{"1.see_actors"
+							{selector
+								{source advanced}
+								{group
+									{select
+										{tag
+											{tag bot}
+										}
+									}
+									{include
+										{prop
+											{prop human}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{tag
+											{tag unhold_iq}
+										}
+										{tag
+											{tag repairing}
+										}
+										{tag
+											{tag ai_smoke}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state inactive}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{tag
+											{tag bot_portable}
+										}
+									}
+									{include
+										{prop
+											{prop vehicle}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{tag
+											{tag destroyed}
+										}
+										{tag
+											{tag hidden}
+										}
+										{state
+											{state inhabited}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 48}
+							}
+							{tag
+								{"tag pair"}
+								{"for selector" ecrew_a}
+								{"for enemy" ecannon_enter}
+							}
+						}
+						{"2.see_actors"
+							{selector
+								{source advanced}
+								{group
+									{select
+										{tag
+											{tag bot}
+										}
+									}
+									{include
+										{prop
+											{prop human}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{tag
+											{tag unhold_iq}
+										}
+										{tag
+											{tag repairing}
+										}
+										{tag
+											{tag ai_smoke}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state inactive}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{tag
+											{tag bot_portable}
+										}
+									}
+									{include
+										{prop
+											{prop vehicle}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{tag
+											{tag destroyed}
+										}
+										{tag
+											{tag hidden}
+										}
+										{state
+											{state inhabited}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 48}
+							}
+							{tag
+								{"tag pair"}
+								{"for selector" ecrew_b}
+								{"for enemy" ecannon_enter}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type see_actors}
+								{selector
+									{tag ecrew_a}
+									{zone "global"}
+									{type human}
+									{state "not dead"}
+								}
+								{enemy
+									{source advanced}
+									{ignore_captured_by_user 0}
+									{group
+										{select
+											{zone
+												{zone "global"}
+											}
+										}
+										{include
+											{state
+												{state operatable}
+											}
+											{team
+												{team b}
+											}
+										}
+										{exclude
+											{state
+												{state "inactive linked"}
+											}
+										}
+									}
+								}
+								{distance
+									{mode near_than}
+									{meters 40}
+								}
+								{detection visible}
+							}
+							{"delay"
+								{time 5}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecrew_a}
+								}
+								{tag_remove ecrew_a}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecrew_b}
+								}
+								{tag_remove ecrew_b}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecannon_enter}
+								}
+								{tag_remove ecannon_enter}
+							}
+							{"delay"
+								{time 20}
+							}
+						}
+						{"case"
+							{condition
+								{type see_actors}
+								{selector
+									{tag ecrew_b}
+									{zone "global"}
+									{type human}
+									{state "not dead"}
+								}
+								{enemy
+									{source advanced}
+									{ignore_captured_by_user 0}
+									{group
+										{select
+											{zone
+												{zone "global"}
+											}
+										}
+										{include
+											{state
+												{state operatable}
+											}
+											{team
+												{team a}
+											}
+										}
+										{exclude
+											{state
+												{state "inactive linked"}
+											}
+										}
+									}
+								}
+								{distance
+									{mode near_than}
+									{meters 40}
+								}
+								{detection visible}
+							}
+							{"delay"
+								{time 5}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecrew_a}
+								}
+								{tag_remove ecrew_a}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecrew_b}
+								}
+								{tag_remove ecrew_b}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecannon_enter}
+								}
+								{tag_remove ecannon_enter}
+							}
+							{"delay"
+								{time 20}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"switch"
+								{"case"
+									{condition
+										{type entities}
+										{selector
+											{ignore_captured_by_user 0}
+											{tag ecrew_a}
+											{zone "global"}
+										}
+									}
+									{"delay"
+										{time 0.1}
+									}
+									{"entity_state"
+										{selector
+											{ignore_captured_by_user 0}
+											{tag ecrew_a}
+										}
+										{tag_add ecrew}
+										{tag_remove ecrew_a}
+									}
+									{"delay"
+										{time 0.4}
+									}
+									{"entity_state"
+										{selector
+											{source advanced}
+											{ignore_captured_by_user 0}
+											{group
+												{select
+													{tag
+														{tag bot}
+													}
+												}
+												{include
+													{prop
+														{prop human}
+													}
+													{team
+														{team a}
+													}
+												}
+												{exclude
+													{tag
+														{tag ecrew}
+													}
+													{tag
+														{tag repairing}
+													}
+													{tag
+														{tag unhold_iq}
+													}
+													{state
+														{state dead}
+													}
+													{state
+														{state "inactive linked"}
+													}
+												}
+											}
+											{amount 3
+											}
+											{sort
+												{type entity}
+												{entity
+													{tag ecrew}
+												}
+											}
+										}
+										{tag_add temp1}
+									}
+									{"delay"
+										{time 0.1}
+									}
+								}
+								{"default"
+									{"delay"
+										{time 0.1}
+									}
+									{"entity_state"
+										{selector
+											{ignore_captured_by_user 0}
+											{tag ecrew_b}
+										}
+										{tag_add ecrew}
+										{tag_remove ecrew_b}
+									}
+									{"delay"
+										{time 0.4}
+									}
+									{"entity_state"
+										{selector
+											{source advanced}
+											{ignore_captured_by_user 0}
+											{group
+												{select
+													{tag
+														{tag bot}
+													}
+												}
+												{include
+													{prop
+														{prop human}
+													}
+													{team
+														{team b}
+													}
+												}
+												{exclude
+													{tag
+														{tag ecrew}
+													}
+													{tag
+														{tag repairing}
+													}
+													{tag
+														{tag unhold_iq}
+													}
+													{state
+														{state dead}
+													}
+													{state
+														{state "inactive linked"}
+													}
+												}
+											}
+											{amount 3
+											}
+											{sort
+												{type entity}
+												{entity
+													{tag ecrew}
+												}
+											}
+										}
+										{tag_add temp1}
+									}
+									{"delay"
+										{time 0.1}
+									}
+								}
+							}
+							{"delay"
+								{time 0.3}
+							}
+							{"while"
+								{condition
+									{type near}
+									{units
+										{source advanced}
+										{ignore_captured_by_user 0}
+										{group
+											{select
+												{tag
+													{tag temp1}
+												}
+											}
+											{include
+												{prop
+													{prop human}
+												}
+											}
+											{exclude
+												{tag
+													{tag ecrew}
+												}
+												{state
+													{state dead}
+												}
+												{state
+													{state inactive}
+												}
+												{state
+													{state linked}
+												}
+											}
+										}
+									}
+									{near_to
+										{ignore_captured_by_user 0}
+										{tag ecannon_enter}
+									}
+									{distance 130}
+								}
+								{"delay"
+									{time 0.1}
+								}
+								{"entity_state"
+									{selector
+										{source advanced}
+										{ignore_captured_by_user 0}
+										{group
+											{select
+												{tag
+													{tag temp1}
+												}
+											}
+											{include
+												{prop
+													{prop human}
+												}
+											}
+											{exclude
+												{tag
+													{tag ecrew}
+												}
+												{state
+													{state dead}
+												}
+												{state
+													{state inactive}
+												}
+												{state
+													{state linked}
+												}
+											}
+										}
+										{sort
+											{type entity}
+											{entity
+												{ignore_captured_by_user 0}
+												{tag ecannon_enter}
+											}
+										}
+										{amount 1
+										}
+									}
+									{tag_add ecrew}
+									{tag_remove temp1}
+								}
+								{"delay"
+									{time 0.1}
+								}
+							}
+							{"delay"
+								{time 0.2}
+							}
+							{"actor_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecrew}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{fire_mode open}
+								{move_mode free}
+								{movement
+									{speed assault}
+								}
+							}
+							{"delay"
+								{time 0.3}
+							}
+							{"action"
+								{selector
+									{tag ecrew}
+									{type human}
+									{state "not dead"}
+								}
+								{drop orders}
+								{action move}
+								{target
+									{ignore_captured_by_user 0}
+									{tag ecannon_enter}
+								}
+							}
+							{"delay"
+								{time 5}
+							}
+							{"switch"
+								{"case"
+									{condition
+										{type entities}
+										{selector
+											{source advanced}
+											{group
+												{select
+													{tag
+														{tag ecannon_enter}
+													}
+												}
+												{include
+													{prop
+														{prop vehicle}
+													}
+												}
+												{exclude
+													{tag
+														{tag destroyed}
+													}
+												}
+											}
+										}
+									}
+									{"delay"
+										{time 0.1}
+									}
+									{"board"
+										{selector
+											{tag ecrew}
+											{type human}
+											{state "not dead"}
+										}
+										{vehicle
+											{source advanced}
+											{ignore_captured_by_user 0}
+											{group
+												{select
+													{tag
+														{tag ecannon_enter}
+													}
+												}
+												{include
+													{prop
+														{prop vehicle}
+													}
+												}
+												{exclude
+													{tag
+														{tag destroyed}
+													}
+												}
+											}
+										}
+									}
+								}
+								{"default"}
+							}
+							{"delay"
+								{time 20}
+							}
+							{"entity_state"
+								{selector
+									{tag ecrew}
+								}
+								{tag_remove ecrew}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ecannon_enter}
+								}
+								{tag_remove ecannon_enter}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag temp1}
+								}
+								{tag_remove temp1}
+							}
+							{"delay"
+								{time 20}
+							}
+						}
+					}
+					{"delay"
+						{time 20}
+					}
+					{"trigger"
+						{name "ai/recrew_portables"}
+					}
+				}
+			}
+			{"ai/ai_flag_smoke"
+				{condition
+					{type 1}
+					{terms
+						{"1.see_actors"
+							{selector
+								{source advanced}
+								{group
+									{select
+										{tag
+											{tag smk_}
+										}
+									}
+									{include
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{state
+											{state dead}
+										}
+										{state
+											{state inactive}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{state
+											{state "operatable user_control"}
+										}
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{state
+											{state "inactive linked"}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 95}
+							}
+							{tag
+								{"tag pair"}
+								{"for selector" ai_smoke}
+								{"for enemy" smk_target}
+							}
+						}
+						{"2.see_actors"
+							{selector
+								{source advanced}
+								{group
+									{select
+										{tag
+											{tag smk_}
+										}
+									}
+									{include
+										{team
+											{team b}
+										}
+									}
+									{exclude
+										{state
+											{state dead}
+										}
+										{state
+											{state inactive}
+										}
+										{state
+											{state linked}
+										}
+									}
+								}
+							}
+							{enemy
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{state
+											{state "operatable user_control"}
+										}
+										{team
+											{team a}
+										}
+									}
+									{exclude
+										{state
+											{state "inactive linked"}
+										}
+									}
+								}
+							}
+							{distance
+								{mode near_than}
+								{meters 95}
+							}
+							{tag
+								{"tag pair"}
+								{"for selector" ai_smoke}
+								{"for enemy" smk_target}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.2}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "ai_on$"}
+								{op "!="}
+								{value 1}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag ai_smoke}
+								}
+								{tag_remove ai_smoke}
+							}
+							{"entity_state"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag smk_target}
+								}
+								{tag_remove smk_target}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"switch"
+								{"case"
+									{condition
+										{type near}
+										{units
+											{source advanced}
+											{ignore_captured_by_user 0}
+											{group
+												{select
+													{tag
+														{tag ai_smoke}
+													}
+												}
+												{exclude
+													{state
+														{state dead}
+													}
+												}
+											}
+										}
+										{near_to
+											{source advanced}
+											{ignore_captured_by_user 0}
+											{group
+												{select
+													{tag
+														{tag flag}
+													}
+												}
+												{exclude
+													{state
+														{state inactive}
+													}
+												}
+											}
+										}
+										{distance 140}
+									}
+									{"delay"
+										{time 0.1}
+									}
+									{"switch"
+										{"case"
+											{condition
+												{type entities}
+												{selector
+													{source advanced}
+													{ignore_captured_by_user 0}
+													{group
+														{select
+															{tag
+																{tag ai_smoke}
+															}
+														}
+														{include
+															{with_item
+																{type amount}
+																{item "nbk39" "grenade"}
+																{min 1}
+															}
+														}
+													}
+												}
+											}
+											{"delay"
+												{time 0.1}
+											}
+											{"entity_state"
+												{selector
+													{source advanced}
+													{group
+														{select
+															{tag
+																{tag smk_}
+															}
+														}
+														{include
+															{prop
+																{prop human}
+															}
+															{with_item
+																{type amount}
+																{item "nbk39" "grenade"}
+																{min 1}
+															}
+														}
+														{exclude
+															{tag
+																{tag ecrew}
+															}
+															{state
+																{state dead}
+															}
+															{state
+																{state inactive}
+															}
+															{state
+																{state linked}
+															}
+														}
+													}
+													{sort
+														{type entity}
+														{entity
+															{tag ai_smoke}
+														}
+													}
+													{amount 3
+													}
+												}
+												{tag_add ai_smoke}
+											}
+											{"delay"
+												{time 0.5}
+											}
+											{"inventory"
+												{selector
+													{tag ai_smoke}
+													{type human}
+													{state "not dead"}
+												}
+												{action take}
+												{item "nbk39" "grenade"}
+											}
+											{"delay"
+												{time 0.5}
+											}
+											{"action"
+												{selector
+													{tag ai_smoke}
+													{type human}
+													{state "not dead"}
+												}
+												{drop "orders sensor senseless"}
+												{action attack_ground}
+												{target
+													{ignore_captured_by_user 0}
+													{tag null}
+												}
+											}
+											{"delay"
+												{time 4}
+											}
+											{"action"
+												{selector
+													{tag ai_smoke}
+													{type human}
+													{state "not dead"}
+												}
+												{drop orders}
+												{action advance}
+												{target
+													{ignore_captured_by_user 0}
+													{tag smk_target}
+												}
+											}
+											{"delay"
+												{time 1}
+											}
+											{"entity_state"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag ai_smoke}
+												}
+												{tag_remove ai_smoke}
+											}
+											{"entity_state"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag smk_target}
+												}
+												{tag_remove smk_target}
+											}
+										}
+										{"case"
+											{condition
+												{type entities}
+												{selector
+													{source advanced}
+													{ignore_captured_by_user 0}
+													{group
+														{select
+															{tag
+																{tag ai_smoke}
+															}
+														}
+														{include
+															{with_item
+																{type amount}
+																{item "rdg1_smoke" "grenade"}
+																{min 1}
+															}
+														}
+													}
+												}
+											}
+											{"delay"
+												{time 0.1}
+											}
+											{"entity_state"
+												{selector
+													{source advanced}
+													{group
+														{select
+															{tag
+																{tag smk_}
+															}
+														}
+														{include
+															{prop
+																{prop human}
+															}
+															{with_item
+																{type amount}
+																{item "rdg1_smoke" "grenade"}
+																{min 1}
+															}
+														}
+														{exclude
+															{tag
+																{tag ecrew}
+															}
+															{state
+																{state dead}
+															}
+															{state
+																{state inactive}
+															}
+															{state
+																{state linked}
+															}
+														}
+													}
+													{sort
+														{type entity}
+														{entity
+															{tag ai_smoke}
+														}
+													}
+													{amount 3
+													}
+												}
+												{tag_add ai_smoke}
+											}
+											{"delay"
+												{time 0.5}
+											}
+											{"inventory"
+												{selector
+													{tag ai_smoke}
+													{type human}
+													{state "not dead"}
+												}
+												{action take}
+												{item "rdg1_smoke" "grenade"}
+											}
+											{"delay"
+												{time 0.5}
+											}
+											{"action"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag ai_smoke}
+													{type human}
+													{state "not dead"}
+												}
+												{drop "orders sensor senseless"}
+												{action attack_ground}
+												{target
+													{ignore_captured_by_user 0}
+													{tag null}
+												}
+											}
+											{"delay"
+												{time 4}
+											}
+											{"action"
+												{selector
+													{tag ai_smoke}
+													{type human}
+													{state "not dead"}
+												}
+												{drop orders}
+												{action advance}
+												{target
+													{ignore_captured_by_user 0}
+													{tag smk_target}
+												}
+											}
+											{"delay"
+												{time 1}
+											}
+											{"entity_state"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag ai_smoke}
+												}
+												{tag_remove ai_smoke}
+											}
+											{"entity_state"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag smk_target}
+												}
+												{tag_remove smk_target}
+											}
+										}
+										{"default"
+											{"delay"
+												{time 0.1}
+											}
+											{"entity_state"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag ai_smoke}
+												}
+												{tag_remove ai_smoke}
+											}
+											{"entity_state"
+												{selector
+													{ignore_captured_by_user 0}
+													{tag smk_target}
+												}
+												{tag_remove smk_target}
+											}
+										}
+									}
+								}
+							}
+							{"delay"
+								{time 120}
+							}
+							{"trigger"
+								{name "ai/ai_flag_smoke"}
+							}
+						}
+					}
+				}
+			}
+			{"bots_units"
+				{condition
+					{expression "(1 & 3) | (2 & 3)"}
+					{terms
+						{"1.entities"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{prop
+											{prop human}
+										}
+									}
+									{exclude
+										{tag
+											{tag bot}
+										}
+										{tag
+											{tag hidden}
+										}
+										{state
+											{state dead}
+										}
+										{state
+											{state user_control}
+										}
+									}
+								}
+							}
+						}
+						{"2.entities"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{zone
+											{zone "global"}
+										}
+									}
+									{include
+										{prop
+											{prop vehicle}
+										}
+										{state
+											{state inhabited}
+										}
+									}
+									{exclude
+										{tag
+											{tag bot_tank}
+										}
+										{tag
+											{tag bot_car}
+										}
+										{tag
+											{tag bot_portable}
+										}
+										{state
+											{state user_control}
+										}
+									}
+								}
+							}
+						}
+						{"3.cmp_i"
+							{var "ai_on$"}
+							{op ">"}
+							{value 0}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop human}
+									}
+								}
+								{exclude
+									{tag
+										{tag bot}
+									}
+									{tag
+										{tag hidden}
+									}
+									{state
+										{state dead}
+									}
+									{state
+										{state user_control}
+									}
+								}
+							}
+						}
+						{tag_add bot}
+					}
+					{"delay"
+						{time 0.2}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop tank}
+									}
+									{state
+										{state inhabited}
+									}
+								}
+								{exclude
+									{tag
+										{tag bot_tank}
+									}
+									{state
+										{state user_control}
+									}
+								}
+							}
+						}
+						{tag_add bot_tank}
+					}
+					{"delay"
+						{time 0.2}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop car}
+									}
+									{state
+										{state inhabited}
+									}
+								}
+								{exclude
+									{tag
+										{tag bot_car}
+									}
+									{state
+										{state user_control}
+									}
+								}
+							}
+						}
+						{tag_add bot_car}
+					}
+					{"delay"
+						{time 0.5}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{zone
+										{zone "global"}
+									}
+								}
+								{include
+									{prop
+										{prop vehicle}
+									}
+									{state
+										{state inhabited}
+									}
+								}
+								{exclude
+									{tag
+										{tag bot_tank}
+									}
+									{tag
+										{tag bot_car}
+									}
+									{tag
+										{tag bot_portable}
+									}
+									{tag
+										{tag engine_count_1}
+									}
+									{tag
+										{tag engine_count_2}
+									}
+									{state
+										{state user_control}
+									}
+								}
+							}
+						}
+						{tag_add bot_portable}
+					}
+					{"delay"
+						{time 2}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "ai_on$"}
+								{op "=="}
+								{value 1}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"entity_state"
+								{selector
+									{source advanced}
+									{ignore_captured_by_user 0}
+									{group
+										{select
+											{tag
+												{tag bot}
+											}
+										}
+										{include
+											{with_item
+												{type amount}
+												{item "nbk39" "grenade"}
+												{min 1}
+											}
+										}
+										{exclude
+											{tag
+												{tag smk_}
+											}
+											{state
+												{state dead}
+											}
+										}
+									}
+									{group
+										{select
+											{tag
+												{tag bot}
+											}
+										}
+										{include
+											{with_item
+												{type amount}
+												{item "rdg1_smoke" "grenade"}
+												{min 1}
+											}
+										}
+										{exclude
+											{tag
+												{tag smk_}
+											}
+											{state
+												{state dead}
+											}
+										}
+									}
+								}
+								{tag_add smk_}
+							}
+						}
+						{"default"}
+					}
+					{"entity_state"
+						{selector
+							{source advanced}
+							{ignore_captured_by_user 0}
+							{group
+								{select
+									{tag
+										{tag bot}
+									}
+								}
+								{include
+									{with_item
+										{type amount}
+										{item "nbk39" "grenade"}
+										{min 1}
+									}
+								}
+								{exclude
+									{tag
+										{tag smk_}
+									}
+									{state
+										{state dead}
+									}
+								}
+							}
+							{group
+								{select
+									{tag
+										{tag bot}
+									}
+								}
+								{include
+									{with_item
+										{type amount}
+										{item "rdg1_smoke" "grenade"}
+										{min 1}
+									}
+								}
+								{exclude
+									{tag
+										{tag smk_}
+									}
+									{state
+										{state dead}
+									}
+								}
+							}
+						}
+						{tag_add smk_}
+					}
+					{"delay"
+						{time 8}
+					}
+					{"trigger"
+						{name "bots_units"}
+					}
+				}
+			}
+			{"ai/user_a_detect"
+				{condition
+					{terms
+						{"1.cmp_i"
+							{var "ai_on$"}
+							{op ">"}
+							{value 0}
+						}
+						{"2.entities"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{tag
+											{tag player}
+										}
+									}
+									{include
+										{team
+											{team a}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"set_i"
+						{var "user_team$"}
+						{op "+"}
+						{value 1}
+					}
+				}
+			}
+			{"ai/user_b_detect"
+				{condition
+					{terms
+						{"1.cmp_i"
+							{var "ai_on$"}
+							{op ">"}
+							{value 0}
+						}
+						{"2.entities"
+							{selector
+								{source advanced}
+								{ignore_captured_by_user 0}
+								{group
+									{select
+										{tag
+											{tag player}
+										}
+									}
+									{include
+										{team
+											{team b}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"set_i"
+						{var "user_team$"}
+						{op "+"}
+						{value 2}
+					}
+				}
+			}
+			{"ai/init"
+				{condition
+				}
+				{actions
+					{"delay"
+						{time 1}
+					}
+					{"set_i"
+						{var "error$"}
+						{op "="}
+						{value 0}
+					}
+					{"set_i"
+						{var "mp$"}
+						{op "="}
+						{value 0}
+					}
+					{"set_i"
+						{var "user_team$"}
+						{op "="}
+						{value 0}
+					}
+					{"delay"
+						{time 4}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "players:composition@"}
+								{op "=="}
+								{value 2}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"set_i"
+								{var "ai_on$"}
+								{op "="}
+								{value 1}
+							}
+							{"set_i"
+								{var "mp$"}
+								{op "="}
+								{value 2}
+							}
+						}
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "players:composition@"}
+								{op "=="}
+								{value 3}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"set_i"
+								{var "ai_on$"}
+								{op "="}
+								{value 1}
+							}
+							{"set_i"
+								{var "mp$"}
+								{op "="}
+								{value 3}
+							}
+						}
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "players:composition@"}
+								{op "=="}
+								{value 5}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"set_i"
+								{var "ai_on$"}
+								{op "="}
+								{value 2}
+							}
+							{"set_i"
+								{var "mp$"}
+								{op "="}
+								{value 5}
+							}
+						}
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "players:composition@"}
+								{op "=="}
+								{value 6}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"set_i"
+								{var "ai_on$"}
+								{op "="}
+								{value 1}
+							}
+							{"set_i"
+								{var "mp$"}
+								{op "="}
+								{value 6}
+							}
+						}
+						{"case"
+							{condition
+								{type cmp_i}
+								{var "players:composition@"}
+								{op "=="}
+								{value 8}
+							}
+							{"delay"
+								{time 0.1}
+							}
+							{"set_i"
+								{var "ai_on$"}
+								{op "="}
+								{value 1}
+							}
+							{"set_i"
+								{var "mp$"}
+								{op "="}
+								{value 8}
+							}
+						}
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+						}
+					}
+				}
+			}
+			{"start"
+				{condition
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"event"
+						{event "gamestart"}
+						{mode set}
+						{delay 0}
+					}
+					{"event"
+						{event "ambient"}
+						{mode set}
+						{delay 0}
+					}
+				}
+			}
+			{"music/action"
+				{condition
+					{expression "1 & (2|3)"}
+					{terms
+						{"1.event"
+							{id "gamestart"}
+						}
+						{"2.event"
+							{id "action"}
+						}
+						{"3.signal"
+							{zone "global"}
+							{signals "shot hit injure explosion mandie"}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"event"
+						{event "action"}
+						{mode set}
+						{delay 0}
+					}
+					{"event"
+						{event "ambient"}
+						{mode reset}
+						{delay 0}
+					}
+					{"set_i"
+						{var "ambient$"}
+						{op "="}
+						{value 0}
+					}
+					{"trigger"
+						{name "music/ambient"}
+					}
+					{"delay"
+						{time 0.1}
+					}
+					{"music"
+						{stop "/music/ger_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_ambient_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_3.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"delay"
+						{time 0}
+					}
+					{"music"
+						{stop "/music/action_theme_2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_ambient_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ger_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ger_battle_lvl2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl3.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/main_theme.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"delay"
+						{time 0}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/action_theme_2.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/rus_battle_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/rus_ambient_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/rus_battle_lvl2.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/ger_battle_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/ger_battle_lvl2.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/rus_battle_lvl3.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"default"
+							{"music"
+								{start "/music/main_theme.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+					}
+					{"delay"
+						{time 300}
+					}
+					{"trigger"
+						{name "music/action"}
+					}
+				}
+			}
+			{"music/ambient_count_minus"
+				{condition
+					{expression "1 & 2 & !3"}
+					{terms
+						{"1.event"
+							{id "gamestart"}
+						}
+						{"2.signal"
+							{zone "global"}
+							{signals "shot hit injure explosion mandie"}
+						}
+						{"3.event"
+							{id "ambient"}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"set_i"
+						{var "ambient$"}
+						{op "="}
+						{value 0}
+					}
+					{"delay"
+						{time 1}
+					}
+					{"trigger"
+						{name "music/ambient_count_minus"}
+					}
+				}
+			}
+			{"music/ambient_count_plus"
+				{condition
+					{expression "1 & 2 & !3"}
+					{terms
+						{"1.event"
+							{id "gamestart"}
+						}
+						{"2.event"
+							{id "action"}
+						}
+						{"3.event"
+							{id "ambient"}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"set_i"
+						{var "ambient$"}
+						{op "+"}
+						{value 1}
+					}
+					{"delay"
+						{time 1}
+					}
+					{"trigger"
+						{name "music/ambient_count_plus"}
+					}
+				}
+			}
+			{"music/ambient"
+				{condition
+					{expression "1 & (2|3)"}
+					{terms
+						{"1.event"
+							{id "gamestart"}
+						}
+						{"2.event"
+							{id "ambient"}
+						}
+						{"3.cmp_i"
+							{var "ambient$"}
+							{op ">"}
+							{value 12}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"event"
+						{event "ambient"}
+						{mode set}
+						{delay 0}
+					}
+					{"event"
+						{event "action"}
+						{mode reset}
+						{delay 0}
+					}
+					{"trigger"
+						{name "music/action"}
+					}
+					{"delay"
+						{time 0.1}
+					}
+					{"music"
+						{stop "/music/ger_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_ambient_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_3.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ambient_2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"delay"
+						{time 0}
+					}
+					{"music"
+						{stop "/music/action_theme_2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_ambient_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ger_battle_lvl1.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/ger_battle_lvl2.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/rus_battle_lvl3.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"music"
+						{stop "/music/main_theme.wav"}
+						{volume game}
+						{fade 3}
+					}
+					{"delay"
+						{time 0}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type rand}
+								{value 0.1}
+							}
+							{"music"
+								{start "/music/ger_battle_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/rus_ambient_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/ambient_1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/ambient_2.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/ambient_3.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.2}
+							}
+							{"music"
+								{start "/music/rus_ambient_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+						{"default"
+							{"music"
+								{start "/music/rus_battle_lvl1.wav"}
+								{volume game}
+								{fade 3}
+								{loop}
+							}
+						}
+					}
+					{"delay"
+						{time 300}
+					}
+					{"trigger"
+						{name "music/action"}
+					}
+				}
+			}
+			{"ambient_sounds"
+				{condition
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type rand}
+								{value 0.33}
+							}
+							{"delay"
+								{time 30}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.5}
+							}
+							{"delay"
+								{time 45}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 1}
+							}
+							{"delay"
+								{time 60}
+							}
+						}
+					}
+					{"delay"
+						{time 0.1}
+					}
+					{"switch"
+						{"case"
+							{condition
+								{type rand}
+								{value 0.33}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 0.5}
+							}
+						}
+						{"case"
+							{condition
+								{type rand}
+								{value 1}
+							}
+						}
+					}
+				}
+			}
+			{"drumsound"
+				{condition
+					{terms
+						{"1.event"
+							{id "gamestart"}
+						}
+					}
+				}
+				{actions
+					{"sound"
+						{name "interface/gui/matchmaking"}
+					}
+				}
+			}
+			{"notifications"
+				{condition
+					{terms
+						{"1.event"
+							{id "gamestart"}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 300}
+					}
+					{"sound"
+						{name "gui/level_up"}
+					}
+					{"delay"
+						{time 600}
+					}
+					{"sound"
+						{name "gui/level_up"}
+					}
+					{"delay"
+						{time 600}
+					}
+					{"sound"
+						{name "gui/level_up"}
+					}
+				}
+			}
+		}
+	}
+	{Players
+		{count 17}
+		{diplomacy
+			1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+			0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+		}
+	}
+	{Fog 0}
+	{EntityManager {Enabled}
+		{CountScale "x0.5"}
+	}
+}
