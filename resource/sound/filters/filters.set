@@ -1,0 +1,38 @@
+; Nyquist = one-half the driver's output sample rate in Hz. In our case: 44100hz / 2 = 22050hz
+
+
+; bandpass: use only frequencies around center +- width
+;{bandpass
+;	{strength}	; % [0.0; 1.0]
+;	{center}	; Hz [20.0; Nyquist]
+;	{width}		; Hz [20.0; Nyquist]
+;}
+; paramEq: increase or decrease frequencies around center +- q octaves by the gain
+;{paramEq
+;	{strength}	; % [0.0; 1.0]
+;	{center} 	; Hz [20.0; Nyquist]
+;	{q}			; Octaves [0.01; 1.0]
+;	{gain}		; Decibel [-18.0; 18.0]
+;}
+; lowpass: use only frequencies below cutoff
+;{lowpass
+;	{strength}	; % [0.0; 1.0]
+;	{cutoff} 	; % [20.0; Nyquist]
+;}
+
+; note: the strength param is 1.0 by default
+
+{enclosed_vehicle
+	{lowpass
+		{cutoff		1000.0}
+	}
+}
+
+{opentop_vehicle
+}
+
+{woundedEffect
+	{lowpass
+		{cutoff		500.0}
+	}
+}
