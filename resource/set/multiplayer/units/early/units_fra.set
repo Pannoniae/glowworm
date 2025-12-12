@@ -1,0 +1,366 @@
+;SDL
+
+;////////////////// INSTRUCTIONS //////////////////
+;Buttons go as follows, displayed in-game in this order:
+
+; inf1       - infantry squads
+; inf2       - infantry single units
+; empl       - Emplacements, AA, AT, Mortars, Howitzers
+; vehicles   - vehicles, armoured cars, supplies
+; tanks      - main battle tanks, TDs, SPGs
+; doctrine   - specific doctrine setups
+
+; TEMP: Note all levels have been brought down to 1 to remove unit locks.
+; Squads currently have an MP cost of 0 - their cost is currently calculated as the sum of their soldiers cost, see inf_ger.set
+; Check ../settings.set for syntax instructions!!
+; unit limits per game are not defined here but in gamemode presets
+
+;user defined set tags that should be featured on units:
+;all artillery heavyart cannon mediumcan heavycan light medium heavy infantry supply
+;these tags allow player to disable certain sets for custom setups like "no heavy artillery" 
+;//////////////////////////////////////////////////
+
+
+
+
+;_________________________________________________
+;|            Doctrine                            |
+;|________________________________________________|
+
+; delays on doctrine levels
+; Lvl cd   ci
+;1-   120  120
+;2-   240  240
+;3-   360  280
+;4-   480  320
+;5-   600  360
+;6-   720  420
+;7-   840  480
+;8-   960  540
+;9-   1080  600
+;10-  1200  660
+;11-  1320  720
+;12-  1440  840
+
+
+;===================================
+;       ALL-ROUND DOCTRINE
+;         Support unit 
+;===================================
+;
+;; ======Tier1======
+;; // 5DP 
+;
+;; // 10DP panhard
+;{"doctrine_panhard"
+;	("squad_vehicle2_doctrine" side(fra) t( vehicle ) period(early) year(early) vehicle(panhard) crew1(tankman:3) crew2(tankman2:1) cw(2) cp(10))
+;	("doctrine_t1" cool(90) d(early_fra_allround) cost(20))
+;}
+;
+;; // 10DP FT17
+;{"doctrine_ft17"
+;	("squad_vehicle2_doctrine" side(fra) t( vehicle ) period(early) year(early) vehicle(ft17) crew1(tankman:1) crew2(tankman2:1) cw(2) cp(10))
+;	("doctrine_t1" cool(90) d(early_fra_allround) cost(25))
+;}
+;		
+;; // 15DP Chasseur
+;{"doctrine_squad_chasseur(fra)"
+;	("squad_with7types_doctrine" side(fra) t( infsquad ) period(early) year(early)  c1(sturmovik4:3) c2(sturmovik3:1) c3(sturmovik3_assist:1) c4(sturmovik4b:2) c5(sturmovik3:1) c6(sturmovik3_assist:1) c7(sturmovik6:1))
+;	("doctrine_t1" cool(90) d(early_fra_allround) cost(30))
+;}
+;
+;; ======Tier2======
+;
+;; // 20DP 
+;{"doctrine_autocanon_75mm"
+;	("squad_vehicle2_doctrine" side(fra) t( vehicle ) period(early) year(early) vehicle(autocanon_75mm) crew1(tankman:1) crew2(vehicle_supporter:2) cw(2) cp(10))
+;	("doctrine_t2" cool(360) d(early_fra_allround) cost(40))
+;}
+;
+;; // 30DP Artillery Signaller
+;{"doctrine_squad_radioman_early(fra)"
+;	("squad_with1types_doctrine" side(fra) t( radioman ) period(early) year(early) c1(radioman:1) b(doctrine))
+;	("doctrine_t2" cool(360) d(early_fra_allround) cost(60))
+;}
+;
+;; ======Tier3======
+;
+;; // 25DP potez631
+;{"doctrine_potez631"
+;	("squad_vehicle_doctrine" side(fra) t( vehicle ) period(early) year(early) vehicle(potez631) crew(pilot:2) cw(0) cp(15))
+;	("doctrine_t3" cool(480) d(early_fra_allround) cost(50))
+;}
+;
+;; // 35DP b1bis
+;{"doctrine_b1bis"
+;	("squad_vehicle2_doctrine" side(fra) t( heavy ) period(early) year(early) vehicle(b1bis) crew1(tankman:3) crew2(tankman2:1) cw(8) cp(30))
+;	("doctrine_t3" cool(480) d(early_fra_allround) cost(70))
+;}
+;
+;; // 40DP 155mm_m1917a4
+;{"doctrine_155mm_m1917a4_early"
+;	("towed_gun_doctrine" side(fra) t(heavyart artillery) period(early) year(early) vehicle(renault_agk) crew_v(vehicle_supporter:4) cannon(155mm_m1917a4) crew_c(vehicle_supporter:2)) 
+;	("doctrine_t3" cool(480) d(early_fra_allround) cost(80))
+;}
+;
+;;===================================
+;;       DEFENSIVE DOCTRINE
+;;		Heavy firepower
+;;===================================
+;
+;; // 10DP Chasseur
+;{"doctrine_squad_hussar(fra)"
+;	("squad_with4types_doctrine" side(fra) t( infsquad ) period(early) year(early)  c1(rifle4:7) c2(mgun3:1) c3(mgun3_assist:1) c4(squadleader3:1))
+;	("doctrine_t1" cool(90) d(early_fra_defensive) cost(20))
+;}
+;
+;; // 10DP FT17 MG
+;{"doctrine_ft17m31"
+;	("squad_vehicle2_doctrine" side(fra) t( vehicle ) period(early) year(early) vehicle(ft17m31) crew1(tankman:1) crew2(tankman2:1) cw(2) cp(10))
+;	("doctrine_t1" cool(90) d(early_fra_defensive) cost(20))
+;}
+;
+;; // 15DP 
+;{"doctrine_amc_p16"
+;	("squad_vehicle2_doctrine" side(fra) t( vehicle ) period(early) year(early) vehicle(amc_p16) crew1(tankman:2) crew2(tankman2:1) cw(2) cp(10))
+;	("doctrine_t1" cool(90) d(early_fra_defensive) cost(30))
+;}
+;
+;; ======Tier2======
+;
+;; // 20DP r39
+;{"doctrine_r39"
+;	("squad_vehicle2_doctrine" side(fra) t( light ) period(early) year(early) vehicle(r39) crew1(tankman:1) crew2(tankman2:1) cw(4) cp(15))
+;	("doctrine_t2" cool(360) d(early_fra_defensive) cost(40))
+;}
+;
+;; // 30DP sau40
+;{"doctrine_sau40"
+;	("squad_vehicle2_doctrine" side(fra) t( light ) period(early) year(early) vehicle(sau40) crew1(tankman:3) crew2(tankman2:1) cw(6) cp(20))
+;	("doctrine_t2" cool(360) d(early_fra_defensive) cost(60))
+;}
+;
+;; ======Tier3======
+;
+;; // 40DP 155mm GPF
+;{"doctrine_155mm_gpf"
+;	("towed_gun_doctrine" side(fra) t(heavyart artillery) period(early) year(early) vehicle(renault_agk) crew_v(vehicle_supporter:4) cannon(155mm_gpf) crew_c(vehicle_supporter:2)) 
+;	("doctrine_t3" cool(480) d(early_fra_defensive) cost(90))
+;}
+;
+;; // 65DP 22cm Mortier
+;{"doctrine_22cm_mortier"
+;	("towed_gun_doctrine" side(fra) t(heavyart artillery) period(early) year(early) vehicle(renault_agk) crew_v(vehicle_supporter:4) cannon(22cm_mortier) crew_c(vehicle_supporter:2)) 
+;	("doctrine_t3" cool(480) d(early_fra_defensive) cost(120))
+;}
+
+;_________________________________________________
+;|             inf1                               |
+;|________________________________________________|
+
+("squad_with5types" side(fra) name(squad_light)				period(early) year(early) cd(0) ci(30)  g(squad_1) c1(rifle:6) c2(rifle2:1) c3(rifle3:1) c4(smg2:1) c5(squadleader:1) b(squad) cd2(0) ci2(30) t(infsquad ) level(1) research_stage(1))
+("squad_with6types" side(fra) name(squad_regular)			period(early) year(early) cd(0) ci(0)  g(squad_2) c1(rifle3:1) c2(rifle:5) c3(mgun:1) c4(mgun_assist:1) c5(smg3:1) c6(squadleader:1)       b(squad) cd2(0) ci2(0) t(infsquad ) level(1) research_stage(1))
+("squad_with6types" side(fra) name(squad_pionier)			period(early) year(early) cd(120) ci(120) g(squad_3) c1(elite_sl:1) c2(elite:3) c3(elite2:3) c4(elite3:1) c5(elite3_assist:1) c6(elite4:1)          b(squad) cd2(120) ci2(120) t(infsquad ) level(1) research_stage(2))
+("squad_with6types" side(fra) name(squad_fallschirmjaeger)  period(early) year(early) cd(240) ci(240) g(squad_4) c1(sturmovik_sl:1) c2(sturmovik:1) c3(sturmovik2:4) c4(sturmovik3:1) c5(sturmovik3_assist:1) c6(sturmovik2b:2)          b(squad) cd2(240) ci2(240) t(infsquad ) level(1) research_stage(4))
+
+{"fra-mechanized_infantry"
+	("squad_vehicle5" period(early) year(early) cd(90) ci(180) t(vehicle) side(fra) vehicle(lorraine39) crew1(rifle:5) crew2(rifle_grenade:2) crew3(mgun_assist:1) crew4(mgun:1) crew5(squadleader:1) g(lightc) b(squad) cd2(90) ci2(180))
+}
+
+;_________________________________________________
+;|             inf2                               |
+;|________________________________________________|
+
+("squad_with2types" side(fra) name(single_auxiliary)    period(early) year(early) cd(0)   ci(5)   g(single_rifle)   c1(rifle:1) c2(smg:1)    b(single) cd2(0) ci2(5) t(infsquad )           level(1) research_stage(1))
+("squad_with2types" side(fra) name(single_mg)           period(early) year(early) cd(0)   ci(60)  g(single_mg)  c1(mgun:1) c2(mgun_assist:1)           b(single) cd2(0) ci2(60) t(infsquad )           level(1) research_stage(1))
+("squad_with2types" side(fra) name(single_at)           period(early) year(early) cd(0)   ci(0)  g(single_at)   c1(at_rifle:1) c2(at_rifle2:1)  b(single) cd2(0) ci2(0) t(at_squad )           level(1) research_stage(1))
+("squad_with2types" side(fra) name(single_riflegrenade) period(early) year(early) cd(0)   ci(20)  g(single_at)   c1(rifle_grenade:1) c2(at_rifle2:1)  b(single) cd2(0) ci2(20) t(infsquad )           level(1) research_stage(1))
+("squad_with2types" side(fra) name(single_tankman)      period(early) year(early) cd(0)   ci(20)  g(single_crew) c1(tankman2:1) c2(tankman:3) b(single) cd2(0) ci2(20) t(tankcrew )           level(1) research_stage(1))
+("squad_with1types" side(fra) name(single_ap_miner)     period(early) year(early) cd(60)  ci(60)  g(single_apmine)   c1(ap_miner:3)                 b(single) cd2(60) ci2(60) t( engineer miner)  level(1) research_stage(2))
+("squad_with1types" side(fra) name(single_at_miner)     period(early) year(early) cd(60)  ci(60)  g(single_atmine)   c1(at_miner:3)                 b(single) cd2(60) ci2(60) t( engineer miner)  level(1) research_stage(2))
+("squad_with2types" side(fra) name(single_engineer)     period(early) year(early) cd(60)  ci(60)  g(single_eng)   c1(saper:1) c2(saper2:1) b(single) cd2(60) ci2(60) t( engineer builder)  level(1) research_stage(2))
+("squad_with1types" side(fra) name(single_medic)        period(early) year(early) cd(0)   ci(20) g(single_medic)   c1(medic:1)                      b(single) cd2(0) ci2(20) t( medic )     level(1) research_stage(1))
+("squad_with1types" side(fra) name(single_flamer)       period(early) year(early) cd(60) ci(120) g(single_flamer)  c1(flamer:1)                    b(single) cd2(60) ci2(120) t( flamer )    level(1) research_stage(3))
+("squad_with1types" side(fra) name(single_sniper)       period(early) year(early) cd(120) ci(180) g(single_sniper) c1(sniper:1)                     b(single) cd2(120) ci2(180) t( sniper )    level(1) research_stage(3))
+("squad_with1types" side(fra) name(single_officer)      period(early) year(early) cd(120) ci(180) g(single_officer)  c1(officer:1)                  b(single) cd2(120) ci2(180) t( officer )   level(1) research_stage(2))
+{"inf_crate_fra"
+	("vehicle" period(early) year(early) cd(0) ci(30)   t(supply) side(fra) crew(rifle:2)             g(supplybox) b(supply) cd2(0) ci2(30)  cw(0)  cp(0) 
+	cost(50))
+	{doctrine "early_fra_allround"}
+}  
+;_________________________________________________
+;|                  Emplacements                  |
+;|________________________________________________|
+
+;AUTOMATIC WEAPONRY
+{"hotchkiss_mle1914"
+	("vehicle" period(early) year(early) cd(0) ci(30) t( cannon ) side(fra) crew(vehicle_supporter:2) g(empl1) b(support) cd2(0) ci2(30)  cw(2)  cp(5) 
+	cost(110))
+}
+{"13mm_hotchkiss"
+	("vehicle" period(early) year(early) cd(0) ci(60) t( cannon ) side(fra) crew(vehicle_supporter:2) g(empl2) b(support) cd2(0) ci2(60)  cw(1) cp(5) 
+	cost(210))
+}
+{"25mm_hotchkiss_mle38"
+	("vehicle" period(early) year(early) cd(0) ci(60)  t( cannon ) side(fra) crew(vehicle_supporter:2)   g(empl3) b(support) cd2(0) ci2(60)  cw(1) cp(8) 
+	cost(240))
+}
+
+
+; AT WEAPONRY
+{"25mm_hotchkiss_mle34"
+	("vehicle" period(early) year(early) cd(0) ci(60)  t( cannon ) side(fra) crew(vehicle_supporter:2)   g(empl4) b(support) cd2(0) ci2(60)  cw(1) cp(8) 
+	cost(200))
+}
+{"47mm_puteaux_mle37"
+	("vehicle" period(early) year(early) cd(0) ci(60) t( cannon ) side(fra) crew(vehicle_supporter:2)   g(empl5) b(support) cd2(0) ci2(60)  cw(1) cp(10) 
+	cost(290))
+}
+
+;HOWITZERS
+{"75mm_mle1897"
+	("vehicle" period(early) year(early) cd(240) ci(60)  t( cannon mediumcan ) side(fra) crew(vehicle_supporter:4)   g(empl6) b(support) cd2(240) ci2(60)  cw(1) cp(15)
+	cost(300))
+}
+{"81mm_brandt_fra"
+	("vehicle"  period(early) year(early) cd(0)  ci(60) t( mortar ) side(fra) crew(vehicle_supporter:2)  g(empl7) b(art) cd2(0) ci2(60)  cw(1) cp(12) 
+	cost(250))
+}
+{"105mm_mle1913"
+	("vehicle"  period(early) year(early) cd(900) ci(180) t(artillery) side(fra) crew(vehicle_supporter:4) g(empl8) b(art) cd2(900) ci2(180)  cw(1) cp(30) 
+	cost(730))
+}
+{"155mm_m1917a4"
+	("vehicle"  period(early) year(early) cd(900) ci(180) t(heavyart artillery) side(fra) crew(vehicle_supporter:4) g(empl8) b(art) cd2(900) ci2(180)  cw(1) cp(30) 
+	cost(900))
+}
+{"155mm_gpf"
+	("vehicle"  period(early) year(early) cd(900) ci(180) t(heavyart artillery) side(fra) crew(vehicle_supporter:4) g(empl9) b(art) cd2(900) ci2(180)  cw(1) cp(30) 
+	cost(1000))
+}
+{"22cm_mortier"
+	("vehicle"  period(early) year(early) cd(900) ci(180) t(heavyart artillery) side(fra) crew(vehicle_supporter:2) g(empl10) b(art) cd2(900) ci2(180)  cw(1) cp(35) 
+	cost(1500))
+}
+;_________________________________________________
+;|               Wheeled vehicles                 |
+;|________________________________________________|
+
+{"renault_agk"
+	("vehicle"  period(early) year(early) cd(0)   ci(30)  g(wheel0) side(fra) t(vehicle)   crew(vehicle_supporter:1)       b(supply) cd2(0) ci2(30) cw(1) cp(5) 
+	cost(20))
+}
+{"lorraine39"
+	("vehicle"  period(early) year(early) cd(0)   ci(30)  g(vehicle1) side(fra) t(vehicle)   crew(vehicle_supporter:1)       b(supply) cd2(0) ci2(30) cw(1) cp(5) 
+	cost(70))
+}
+{"renault_fuel"
+	("vehicle"  period(early) year(early) cd(0)   ci(30)  g(supply0) side(fra) t(vehicle supply)   crew(vehicle_supporter:1)       b(supply) cd2(0) ci2(30) cw(1) cp(5) 
+	cost(90))
+}
+{"citroen_23r_eng"
+	("vehicle2"  period(early) year(early) cd(0)  ci(30)  g(supply3) side(fra) t(vehicle supply engtruck) crew1(vehicle_supporter:1) crew2(saper:1)  b(supply) cd2(0) ci2(30) cw(1) cp(5) 
+	cost(100))
+}
+{"citroen_23r_art"
+	("vehicle"  period(early) year(early) cd(0)  ci(30)  g(supply1) side(fra) t(vehicle supply)  crew(vehicle_supporter:2)      b(supply) cd2(0) ci2(30) cw(1) cp(5) 
+	cost(185))
+}
+{"laffly_v15t_mg"
+	("vehicle"  period(early) year(early) cd(0)   ci(30)  g(wheel1) side(fra) t(vehicle)    crew(vehicle_supporter:3)     b(supply) cd2(0) ci2(30) cw(1) cp(2)  
+	cost(110))
+}
+{"laffly_s15_toe"
+	("vehicle"  period(early) year(early) cd(0)   ci(30)  g(wheel2) side(fra) t(vehicle)   crew(vehicle_supporter:3)       b(lt) cd2(0) ci2(30) cw(1) cp(5) 
+	cost(120))
+}
+{"laffly15tcc"
+	("vehicle" period(early) year(early) cd(240)  ci(60)  t(vehicle) side(fra) crew(vehicle_supporter:4) g(spg1)     b(lt) cd2(240) ci2(60) cw(2)  cp(10) 
+	cost(200))
+}
+{"panhard"
+	("vehicle2" period(early) year(early) cd(90) ci(90) t(vehicle) side(fra)  crew1(tankman:3) crew2(tankman2:1) g(wheel1) b(lt) cd2(90) ci2(90) cw(2) cp(10)
+	cost(270))
+}
+{"amc_p16"
+	("vehicle2" period(early) year(early) cd(90) ci(90) t(vehicle) side(fra)  crew1(tankman:2) crew2(tankman2:1) g(wheel1) b(lt) cd2(90) ci2(90) cw(2) cp(10)
+	cost(280))
+}
+{"autocanon_75mm"
+	("vehicle2"  period(early) year(early) cd(90)  ci(30)  g(wheel3) side(fra) t(vehicle )  crew1(tankman:1) crew2(vehicle_supporter:2)  b(lt) cd2(90) ci2(30) cw(2) cp(5) 
+	cost(380))
+}
+
+;_________________________________________________
+;|        Main Battle Tanks and SPGs              |
+;|________________________________________________|
+
+;LIGHT
+{"ft17m31"
+	("vehicle2" period(early) year(early) cd(0) ci(0) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light1) b(lt) cd2(90) ci2(60)  cw(4) cp(10) 
+	cost(90))
+}
+{"amr35-13mm"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light1) b(lt) cd2(0) ci2(60)  cw(4) cp(10) 
+	cost(140))
+}
+{"ft17"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light2) b(lt) cd2(0) ci2(60)  cw(4) cp(12) 
+	cost(130))
+}
+{"amr35-25mm"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light2) b(lt) cd2(0) ci2(60)  cw(4) cp(10) 
+	cost(170))
+}
+{"fcm36"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light5) b(lt) cd2(0) ci2(60)  cw(4) cp(11) 
+	cost(270))
+}
+{"r35"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light5) b(lt) cd2(0) ci2(60)  cw(4) cp(11) 
+	cost(280))
+}
+{"r39"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light6) b(lt) cd2(0) ci2(60)  cw(4) cp(13) 
+	cost(290))
+}
+{"h39"
+	("vehicle2" period(early) year(early) cd(0)  ci(60) t( light )  side(fra) crew1(tankman:1) crew2(tankman2:1) g(light7) b(lt) cd2(0) ci2(60)  cw(4) cp(13) 
+	cost(290))
+}
+
+;MEDIUM
+
+{"char_d2"
+	("vehicle2" period(early) year(early) cd(480)  ci(60) t( medium ) side(fra) crew1(tankman:2) crew2(tankman2:1) g(medium2) b(mt) cd2(480) ci2(60) cw(6) cp(18) 
+	cost(320))
+}
+{"s35"
+	("vehicle2" period(early) year(early) cd(480)  ci(60) t( medium ) side(fra) crew1(tankman:2) crew2(tankman2:1) g(medium5) b(mt) cd2(480) ci2(60) cw(6) cp(18) 
+	cost(350))
+}
+
+
+;HEAVY
+
+{"b1bis"
+	("vehicle2" period(early) year(early) cd(600) ci(60) t( heavy ) side(fra) crew1(tankman:3) crew2(tankman2:1) g(heavy1) b(ht) cd2(600) ci2(60) cw(8) cp(25) 
+	cost(550))
+}
+
+;SPG
+
+{"bs-75"
+	("vehicle2" period(early) year(early) cd(300)  ci(60)  t( light) side(fra) crew1(tankman:2) crew2(tankman2:1) g(spg1)  b(art) cd2(300) ci2(60) cw(4)  cp(15) 
+	cost(400))
+}
+
+{"sau40"
+	("vehicle2" period(early) year(early)  cd(600) ci(60) t( medium ) side(fra) crew1(tankman:3) crew2(tankman2:1) g(spg2) 	b(td) cd2(600) ci2(60) cw(6) cp(20) 
+	cost(500))
+}
+
+{"potez631"
+	("vehicle"  period(early) year(early) cd(600) ci(60) t(doctrineonly doc_only) side(fra) crew(pilot:2) g(spg3) b(lt) cd2(600) ci2(60) cw(0) cp(15)
+	cost(400))
+}

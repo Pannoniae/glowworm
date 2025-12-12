@@ -1,0 +1,498 @@
+;SDL
+
+;////////////////// INSTRUCTIONS //////////////////
+;Buttons go as follows, displayed in-game in this order:
+
+; inf1       - infantry squads
+; inf2       - infantry single units
+; empl       - Emplacements, AA, AT, Mortars, Howitzers
+; vehicles   - vehicles, armoured cars, supplies
+; tanks      - main battle tanks, TDs, SPGs
+; doctrine   - specific doctrine setups
+
+; TEMP: Note all levels have been brought down to 1 to remove unit locks.
+; Squads currently have an MP cost of 0 - their cost is currently calculated as the sum of their soldiers cost, see inf_ger.set
+; Check ../settings.set for syntax instructions!!
+; unit limits per game are not defined here but in gamemode presets
+
+;user defined set tags that should be featured on units:
+;all artillery heavyart cannon mediumcan heavycan light medium heavy infantry supply
+;these tags allow player to disable certain sets for custom setups like "no heavy artillery" 
+;//////////////////////////////////////////////////
+
+;_________________________________________________
+;|             inf1                               |
+;|________________________________________________|
+
+("squad_with3types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) name(squad_light_late) c1(rifle:6) c2(smg:3) c3(squadleader:1))
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) name(single_atrifle)  c1(at_rifle:1) c2(at_rifle2:1))
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(5) max_stage(99) name(single_at_late)  c1(bazooker:1) c2(bazooker2:1)) 
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) name(single_mg_late)  c1(mgun:1) c2(mgun_assist:1)) 
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) name(single_medic)    c1(medic:2))
+("squad_with5types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) name(squad_regular_late) c1(rifle2:5) c2(mgun:1) c3(mgun_assist:1) c4(smg2:2) c5(squadleader2:1))
+("squad_with5types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_scott_late) c1(rifle4:5) c2(mgun3:1) c3(mgun3_assist:1) c4(smg4:2) c5(squadleader3:1))
+("squad_with4types_conquest" side(eng) coalition(allies usuk frabri) period(early) min_stage(1) max_stage(99) name(squad_bef) c1(rifle4:7) c2(mgun3:1) c3(mgun3_assist:1) c4(squadleader3:1))
+("squad_with5types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_canadians) c1(rifle_can:5) c2(mgun_can:1) c3(mgun_assist_can:1) c4(smg_can:2) c5(squadleader_can:1))
+("squad_with5types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_pionier_late) c1(elite4:3) c2(elite5:4) c3(elite6:1) c4(elite6_assist:1) c5(elite4_sl:1))
+("squad_with5types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_sas_late) c1(sas_rfl:3) c2(sas_smg:4) c3(sas_mgun:1) c4(sas_assist:1) c5(sas_at:1))
+("squad_with5types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_scout_late) c1(elite:2) c2(elite2:5) c3(elite3:1) c4(elite3_assist:1) c5(elite_sl:1))
+("squad_with3types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_recon) c1(reco:1) c2(reco2:2) c3(reco3:1))
+("squad_with6types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(squad_stormtrooper_late) c1(sturmovik:2) c2(sturmovik3:2) c3(sturmovik2:1) c4(sturmovik2_assist:1) c5(sturmovik4b:3) c6(sturmovik_sl:1))
+
+
+{"np_mechanized_infantry"
+	("squad_vehicle6"		 side(eng) coalition(allies usuk frabri) period(mid) min_stage(5) max_stage(99) cw(3) cp(5) vehicle(np_m3halftrack) crew1(elite:4) crew2(elite2:2) crew3(elite3:1) crew4(elite3_assist:1) crew5(elite_at:1) crew6(elite_sl:1)) 
+}
+{"np_kangaroo_pioneers"
+	("squad_vehicle5"		 side(eng) coalition(allies usuk frabri) period(late) min_stage(8) max_stage(99) cw(3) cp(5) vehicle(np_m30kangaroo) crew1(pioneer_rifle:6) crew2(pioneer_at:1) crew3(pioneer_flamer:1) crew4(pioneer_grenadier:1) crew5(pioneer_sl:1))
+}
+
+;_________________________________________________
+;|             inf2                               |
+;|________________________________________________|
+
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) name(single_auxiliary_late)  	c1(rifle:2) c2(smg:1))
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) name(single_mortar_late)		c1(gr_launcher:1) c2(smg2:1))
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) name(single_riflegrenade_late)	c1(rifle_grenade:1) c2(smg2:1))
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) name(single_ap_miner)		c1(ap_miner:2))
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(single_at_miner)		c1(at_miner:2))
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(single_engineer)		c1(saper:2))
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(single_flamer_late)		c1(flamer:1))
+("squad_with2types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(0) max_stage(0)  name(single_tankman_late)		c1(tank_commander:1) c2(tankman:3))
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(single_sniper)		c1(sniper:1))
+("squad_with1types_conquest" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) name(single_officer)		c1(officer:1))
+
+
+{"inf_crate_eng"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(0) crew(rifle:2))
+	{cost 50}
+}  
+;_________________________________________________
+;|                  Emplacements                  |
+;|________________________________________________|
+
+;AUTOMATIC WEAPONRY
+{"heavy_mg_vickers_mkiv"
+	("emplacement" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(0) crew(vehicle_supporter:0) condition(barricade) action(heavy_mg_vickers_mkiv))
+	{cost 85}{not_for_player_sale 1}
+}
+{"heavy_mg_oerlikon_mk2"
+	("emplacement" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) cw(0) cp(6) cd(5) crew(vehicle_supporter:0) condition(barricade) action(np_oerlikon_mk2)) 
+	{cost 210}{not_for_player_sale 1}
+}
+{"heavy_mg_qf40mm"
+	("emplacement" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(9) cd(5) crew(vehicle_supporter:0) condition(barricade) action(np_qf40mm))
+	{cost 270}{not_for_player_sale 1}
+}
+{"np_303_bren"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(2) cp(0) crew(vehicle_supporter:2))
+	{cost 75}
+}
+{"np_303_vickers_mkiv_aa"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(2) cp(0) crew(vehicle_supporter:2))
+	{cost 80}
+}
+
+;AA WEAPONRY
+{"np_oerlikon_mk2"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(9) cw(0) cp(6) crew(vehicle_supporter:1)) 
+	{cost 210}
+}
+{"np_qf40mm"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(9) crew(vehicle_supporter:2))
+	{cost 270}
+}
+{"np_qf3,7inch"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(20) crew(vehicle_supporter:4))
+	{cost 600} 
+}			
+
+; AT WEAPONRY
+{"np_qf2pdr"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(6) crew(vehicle_supporter:2))
+	{cost 180}
+}
+{"np_qf6pdr"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(10) crew(vehicle_supporter:4))
+	{cost 300}
+}
+{"np_qf17pdr"	
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(6) max_stage(99) cw(0) cp(20) crew(vehicle_supporter:4))
+	{cost 520}
+}
+
+;HOWITZERS
+
+{"np_76mm_mk_ii"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(8) crew(vehicle_supporter:2))
+	{cost 250}
+}
+{"np_qf18pdr"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(10) crew(vehicle_supporter:4))
+	{cost 425}
+}
+{"np_107mm_mk_ii"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(99) cw(0) cp(16) crew(vehicle_supporter:2))
+	{cost 450}
+}
+{"np_qf25pdr"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(20) crew(vehicle_supporter:4))
+	{cost 650}
+}
+{"np_bl45"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(0) cp(25) crew(vehicle_supporter:4))
+	{cost 750}
+}
+{"np_land_mattress"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(0) cp(20) crew(vehicle_supporter:2))
+	{cost 800}
+}
+{"np_bl6-inch"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(9) cw(0) cp(30) crew(vehicle_supporter:4))
+	{cost 850}
+}
+{"np_bl7_2-inch"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(5) max_stage(9) cw(0) cp(30) crew(vehicle_supporter:4))
+	{cost 900}
+}
+{"np_bl72"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(99) cw(0) cp(30) crew(vehicle_supporter:6))
+	{cost 950}
+}
+
+;_________________________________________________
+;|               Wheeled vehicles                 |
+;|________________________________________________|
+
+{"np_morris_cs8"
+	("vehicle"  side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(1) cp(2) crew(vehicle_supporter:1))
+	{cost 20}
+}
+{"np_matador_tr"
+	("vehicle"  side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(1) cp(2) crew(vehicle_supporter:2))
+	{cost 50}
+}
+{"np_matador_fuel"
+	("vehicle"  side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) cw(1) cp(5) crew(vehicle_supporter:1))
+	{cost 90}
+}
+{"np_matador_art"
+	("vehicle"  side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) cw(1) cp(5) crew(vehicle_supporter:2))
+	{cost 190}
+}
+{"np_matador_eng"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) cw(1) cp(5) crew1(vehicle_supporter:1) crew2(saper:1))
+	{cost 80}
+}
+{"np_dingo"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(5) cw(2) cp(3) crew(rifle:2))
+	{cost 120}
+}
+{"np_universal_carrier"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(2) cp(3) crew(vehicle_supporter:4))
+	{cost 130}
+}
+{"np_m3a1_scout"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(2) cp(6) crew1(tankman:1) crew2(rifle:4))
+	{cost 140}
+}
+{"np_m3halftrack"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(5) max_stage(99) cw(2) cp(6) crew(rifle:3))
+	{cost 150}
+}
+{"np_universal_boyes_carrier"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(10) cw(2) cp(5) crew(vehicle_supporter:4))
+	{cost 155}
+}
+{"np_universal_mortar_carrier"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(12) cw(2) cp(8) crew(vehicle_supporter:4))
+	{cost 230}
+}
+{"np_humber"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(99) cw(2) cp(8) crew(tankman:3))
+	{cost 250}  
+}
+{"np_humber_com"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(99) cw(2) cp(-12) crew1(tankman:2) crew2(officer:1))  
+	{cost 250}  
+}
+{"np_mk2daimler"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(99) cw(2) cp(10) crew(tankman:3))
+	{cost 270}  
+}
+{"np_staghound"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(2) cp(10) crew1(tankman:3) crew2(tankman2:1))
+	{cost 275}
+}
+{"np_aec_mk2"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(6) max_stage(99) cw(2) cp(10) crew1(tankman:3) crew2(tankman2:1))
+	{cost 280}
+}
+{"np_aec_aa"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(2) cp(8) crew1(tankman:3) crew2(tankman2:1))
+	{cost 270}  
+}
+{"np_staghound_mk3"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(2) cp(10) crew1(tankman:3) crew2(tankman2:1))
+	{cost 295}
+}
+{"np_aec_mk3"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(99) cw(2) cp(15) crew1(tankman:3) crew2(tankman2:1))
+	{cost 300}
+}	
+
+;_________________________________________________
+;|        Main Battle Tanks and SPGs              |
+;|________________________________________________|
+
+;ARMOURED RECOVERY VEHICLE
+
+{"np_m30kangaroo"
+	("vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(99) cw(2) cp(4) crew(vehicle_supporter:2))
+	{cost 120}
+}
+
+;LIGHT
+{"np_mkvic"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(9) cw(4) cp(10) crew1(tankman:2) crew2(tankman2:1))
+	{cost 200}
+}
+{"np_tetrarch_mk7"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(14) cw(4) cp(12) crew1(tankman:2) crew2(tankman2:1))
+	{cost 220}
+}
+{"np_a10_mk2"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(2) max_stage(4) cw(4) cp(12) crew1(tankman:3) crew2(tankman2:1))
+	{cost 230}
+}
+{"np_a13_mk1"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(9) cw(4) cp(12) crew1(tankman:3) crew2(tankman2:1))
+	{cost 230}
+}
+{"np_a13_mk2a"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(9) cw(4) cp(12) crew1(tankman:3) crew2(tankman2:1))
+	{cost 240}
+}
+{"np_crusader_aa2"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(99) cw(4) cp(15) crew1(tankman:3) crew2(tankman2:1))
+	{cost 240}
+}
+{"np_crusader_aa1"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(9) cw(4) cp(15) crew1(tankman:3) crew2(tankman2:1))
+	{cost 270}
+}
+{"np_crusader_mki"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(9) cw(4) cp(15) crew1(tankman:4) crew2(tankman2:1))
+	{cost 280}
+}
+{"np_a10_mk2_cs"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(9) cw(4) cp(20) crew1(tankman:3) crew2(tankman2:1))
+	{cost 320}
+}
+{"np_crusader_mki_cs"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(10) cw(4) cp(20) crew1(tankman:4) crew2(tankman2:1))
+	{cost 330}
+}
+{"np_crusader_mk6"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(14) cw(4) cp(18) crew1(tankman:3) crew2(tankman2:1))
+	{cost 340}
+}
+
+
+;MEDIUM
+{"np_valentine_mkiii"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(12) cw(6) cp(20) crew1(tankman:3) crew2(tankman2:1))
+	{cost 360}
+}
+{"np_matilda_mkii"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(3) max_stage(12) cw(6) cp(20) crew1(tankman:3) crew2(tankman2:1))
+	{cost 400}
+}
+{"np_valentine_mkix"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(12) cw(6) cp(25) crew1(tankman:3) crew2(tankman2:1))
+	{cost 460}
+}
+{"np_valentine_mkxi"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(12) cw(6) cp(25) crew1(tankman:3) crew2(tankman2:1))
+	{cost 480}
+}
+{"np_m3grant"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(9) cw(6) cp(23) crew1(tankman:3) crew2(tankman2:1))
+	{cost 420}
+}
+{"np_matilda_mkii_cs"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(9) cw(6) cp(25) crew1(tankman:3) crew2(tankman2:1))
+	{cost 525}
+}
+{"np_cromwell_mk_iv"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(8) max_stage(99) cw(6) cp(25) crew1(tankman:4) crew2(tankman2:1))
+	{cost 450}
+}
+{"np_m4a4"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(5) max_stage(99) cw(6) cp(30) crew1(tankman:4) crew2(tankman2:1))
+	{cost 540}
+}
+{"np_cromwell_mk_iv_rl"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(30) crew1(tankman:4) crew2(tankman2:1))
+	{cost 580}
+}
+{"np_cromwell_mk_vi"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(8) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 650}
+}
+{"np_cromwell_75hv"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(10) max_stage(99) cw(6) cp(25) crew1(tankman:4) crew2(tankman2:1))
+	{cost 660}
+}
+{"np_m4a4_tulip"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 680}
+}
+{"np_comet_a34"
+	("vehicle2"  side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 750} 
+}
+{"np_challenger_a30"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 750}
+}
+{"np_m4a1_76"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 760}
+}
+{"np_m4a4_firefly"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 780}
+}
+{"np_m4a4_firefly_tulip"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(10) max_stage(99) cw(6) cp(40) crew1(tankman:4) crew2(tankman2:1))
+	{cost 900}
+}
+
+;HEAVY
+{"np_churchill_mk_ii"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(4) max_stage(9) cw(8) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 600} 
+}
+{"np_churchill_avre"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(8) max_stage(99) cw(8) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 600} 
+}
+{"np_churchill_mk_iv"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(14) cw(8) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 780} 
+}
+{"np_churchill_mk_ix"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(8) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 820} 
+}
+{"np_churchill_gun_carrier"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(14) cw(8) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 850} 
+}
+{"np_churchill_mk_vii"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(8) max_stage(99) cw(8) cp(40) crew1(tankman:4) crew2(tankman2:1))
+	{cost 900} 
+}
+{"np_churchill_mk_viii"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(8) cp(40) crew1(tankman:4) crew2(tankman2:1))
+	{cost 950} 
+}
+{"np_churchill_crocodile"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(8) cp(40) crew1(tankman:4) crew2(tankman2:1))
+	{cost 1000} 
+}
+{"np_black_prince"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(10) max_stage(99) cw(8) cp(50) crew1(tankman:4) crew2(tankman2:1))
+	{cost 1200} 
+}
+{"np_tog2"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(8) cp(55) crew1(tankman:4) crew2(tankman2:1))
+	{cost 1400} 
+}
+
+;SPG
+{"np_archer"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(30) crew1(tankman:3) crew2(tankman2:1))
+	{cost 700}
+}
+{"np_achilles"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 750}
+}
+{"np_m4a3_105"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(8) max_stage(99) cw(6) cp(35) crew1(tankman:4) crew2(tankman2:1))
+	{cost 800}
+}
+{"np_bishop"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(5) max_stage(10) cw(6) cp(35) crew1(tankman:3) crew2(tankman2:1))
+	{cost 650}
+}
+{"np_sexton"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(7) max_stage(99) cw(6) cp(35) crew1(tankman:3) crew2(tankman2:1))
+	{cost 750}
+}
+{"np_m7"
+	("vehicle2" side(eng) coalition(allies usuk frabri) period(mid) min_stage(9) max_stage(99) cw(6) cp(40) crew1(tankman:3) crew2(tankman2:1))
+	{cost 800}
+}
+{"conquest_blank"
+	("vehicle" 	side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) crew(tankman:0) cw(0) cp(0))
+	{cost 0} {not_for_player_sale 1}
+}
+
+;_______________________________________________
+;|	Aircraft				|
+;|______________________________________________|
+
+{"np_conquest_flitfire"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(0) crew(pilot:2) vehicle(np_flitfire))
+	{cost 1}
+	{round_multiple 1.0}
+	{action "airstrike:reconnaissance_50"}
+}
+{"np_conquest_beaufighter_50"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(0) crew(pilot:2) vehicle(np_beaufighter))
+	{cost 2}
+	{round_multiple 1.0}
+	{action "airstrike:sc_50"}
+}
+{"np_conquest_beaufighter"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid) min_stage(1) max_stage(99) cw(0) cp(0) crew(pilot:2) vehicle(np_beaufighter))
+	{cost 3}
+	{round_multiple 1.0}
+	{action "airstrike:sc_250_mp"}
+}
+{"np_beaufighter" {tags "conquest conquestonly"} {score 0} {cw 0} {cp 10} {cost 0} {not_for_sale 1}}
+{"np_flitfire" {tags "conquest conquestonly"} {score 0} {cw 0} {cp 8} {cost 0} {not_for_sale 1}}
+
+{"np_76mm_mk_ii_mortar_barrage"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid)  min_stage(1) max_stage(99) cw(0) cp(0) crew(vehicle_supporter:0) vehicle(np_76mm_mk_ii))
+	{cost -248} ;76mm_mk_ii cost 250 - 248 = 2
+	{round_multiple 1.0}
+	{action "airstrike:conquest_mortar_barrage_80"}
+}
+{"np_107mm_mk_ii_mortar_barrage"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid)  min_stage(4) max_stage(99) cw(0) cp(0) crew(vehicle_supporter:0) vehicle(np_107mm_mk_ii))
+	{cost -447} ;107mm_mk_ii cost 450 - 447 = 3
+	{round_multiple 1.0}
+	{action "airstrike:conquest_mortar_barrage_120"}
+}
+{"np_bl45_smoke_barrage"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid)  min_stage(3) max_stage(99) cw(0) cp(0) crew(vehicle_supporter:0) vehicle(np_bl45))
+	{cost -748} ;bl45 cost 750 - 748 = 2
+	{round_multiple 1.0}
+	{action "airstrike:conquest_smoke_barrage_122_rus"}
+}
+{"np_bl45_artillery_barrage"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid)  min_stage(3) max_stage(99) cw(0) cp(0) crew(vehicle_supporter:0) vehicle(np_bl45))
+	{cost -747} ;bl45 cost 750 - 747 = 3
+	{round_multiple 1.0}
+	{action "airstrike:conquest_artillery_barrage_122_rus"}
+}
+{"np_bl7_2-inch_artillery_barrage"
+	("squad_vehicle" side(eng) coalition(allies usuk frabri) period(mid)  min_stage(3) max_stage(99) cw(0) cp(0) crew(vehicle_supporter:0) vehicle(np_bl7_2-inch))
+	{cost -896} ;bl7_2-inch cost 900 - 896 = 4
+	{round_multiple 1.0}
+	{action "airstrike:conquest_artillery_barrage_152_rus"}
+}

@@ -1,0 +1,47 @@
+;sdl
+
+;	╔════════════════════════════════════════╗
+;	║      EARLY WAR 1937- May  1941         ║
+;	╠═══════╦═══════╦═══════╦═══════╦════════╣
+;	║ AXIS  ║ Ger   ║ Ita   ║ Jap   ║  Fin   ║     
+;	╠═══════╬═══════╬═══════╬═══════╬════════╣    
+;	║ ALLIES║ Rus   ║ Eng   ║ Fra   ║ Pol    ║
+;	╚═══════╩═══════╩═══════╩═══════╩════════╝
+;_________________________________________________________
+;|              GLOBAL  SETTINGS                         |
+;| this loads setting architecture for declaring units   |
+;|_______________________________________________________|
+(include "settings.set")
+(include "settings_inf.set")
+
+;_________________________________________________________
+;|              INF SETTINGS                             |
+;| this configures the CP, flag capture power and kill   |
+;| points of the different breeds that make inf squads   |
+;|_______________________________________________________|
+(include "early/inf_ger.set") 
+(include "early/inf_jap.set")
+(include "early/inf_ita.set")
+(include "early/inf_hun.set") 
+(include "early/inf_fin.set")  
+(include "early/inf_rus.set")
+(include "early/inf_fra.set")
+(include "early/inf_pol.set")
+(include "early/inf_eng.set")
+;(include "early/inf_usaf.set")
+
+;_________________________________________________________
+;|            UNIT ROSTERS                               |
+;| this defines the different squads and units available |
+;| and configs their cost, buy menu, cooldowns, etc      |
+;|_______________________________________________________|
+(include "early/units_rus.set")
+(include "early/units_fra.set")
+(include "early/units_pol.set")
+(include "early/units_eng.set")
+;(include "early/units_usaf.set")
+(include "early/units_ger.set")
+(include "early/units_jap.set")
+(include "early/units_ita.set")
+(include "early/units_hun.set")
+(include "early/units_fin.set")
