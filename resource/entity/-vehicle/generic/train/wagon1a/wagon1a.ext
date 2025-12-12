@@ -1,0 +1,48 @@
+
+;//////////////////////////////////////////////////////////////////////////////
+(define "seat_human1"
+	{placer
+		{place "%place" {group "passenger"} {LinkBone "%bone"}}
+	}
+	{boarder
+		{anm "armor1"
+			{forward {begin "board_lowArmor"} {end "pose_seat_armor_1"}}
+			{reverse {end "emit_tank_2"}}
+
+			{door "%door"}
+			{door "%door2"}
+			{link "%door" "%place" {anm "%animation"} {forward putoff} {reverse puton}}
+			{link "%door2" "%place"{anm "%animation"} {forward putoff} {reverse puton}}
+		}
+	}
+)
+
+	(define "define_place"
+	{placer
+		{place "%place" {visor "%visor"}{LinkBone "%bone"}{openForCrush} {turnoff {shadow}}{attach squat_lie}}
+	}
+	{boarder
+		{door "%door"}
+		{link "%door" "%place" {anm "%animation"} }
+	}
+	{Volume "%place"
+		{tags "attach" "attach_%place"}
+		{able clear {bullet 0} {touch 1}}
+	}
+	)
+
+	("seat_human1" place(seat3) bone(seat3) door(emit2) door2(emit3)   animation(armor1))
+	("seat_human1" place(seat4) bone(seat4) door(emit2) door2(emit3) animation(armor1))
+	("seat_human1" place(seat5) bone(seat5) door(emit2) door2(emit3)  animation(armor1))
+	("seat_human1" place(seat6) bone(seat6) door(emit2) door2(emit3) animation(armor1))
+	("seat_human1" place(seat8) bone(seat8) door(emit4) door2(emit1) animation(armor1))
+	("seat_human1" place(seat9) bone(seat9) door(emit4) door2(emit1)  animation(armor1))
+	("seat_human1" place(seat11) bone(seat11) door(emit4) door2(emit1)   animation(armor1))
+	("seat_human1" place(seat12) bone(seat12) door(emit4) door2(emit1) animation(armor1))
+	
+	("define_place" place(seat7) bone(seat7) door(emit4)   animation(armor1))
+	("define_place" place(seat10) bone(seat10) door(emit4)  animation(armor1))
+	("define_place" place(seat1) bone(seat1) door(emit2)   animation(armor1))
+	("define_place" place(seat2) bone(seat2) door(emit2)   animation(armor))
+;//////////////////////////////////////////////////////////////////////////////
+

@@ -1,0 +1,27 @@
+{game_entity
+	(include "m3.inc")
+
+	("shield_cover")
+
+	{extender "shield" {on}}
+
+	{extender "inventory"
+		{weapon "np_mgun" {mask "mountable"}}
+		{Box
+			{item "ammo hmgun_rus" 1000}		
+			{item "dshk" filling "ammo hmgun_rus" 63 {user "mgun"}}
+		}
+	}
+        
+        {Weaponry
+	        {place "mgun"
+		    {type "mgun_main"}
+		    {LinkBone "mgun"}
+		    {LinkAnimation "off"}
+		    {charger "gunner"}
+		    ("abm_mgun")
+                    {ai_in_manual}
+		    {basic}
+	        }
+        }
+}

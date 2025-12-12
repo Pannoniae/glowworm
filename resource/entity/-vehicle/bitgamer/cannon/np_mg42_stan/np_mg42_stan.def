@@ -1,0 +1,39 @@
+{game_entity
+	(include "/properties/cannon_mgun.ext")
+        (include "cannon_crew.ext")
+        (include "/properties/shadow/tank.inc" scale(0.3))	
+	{props "vision_lev00_can" "cannon_sandbag_standard" "detect_cannon_aa"}
+
+
+        {extender "inventory"
+		{weapon "np_mgun" {mask "mountable"}}
+		{Box
+			{item "ammo mgun_ger belt" 1000}
+			{item "sandbag_vehicle" 2}			; 12 drums (50 rounds each)
+			{item "mg42_tank" filling "ammo mgun_ger" 150 {user "mgun"}}
+		}
+	}
+
+	{Weaponry
+		{place "mgun"
+			{type "main"}
+			{charger "gunner"}
+			{LinkBone "mgun"}
+			{LinkAnimation "off"}
+			("abm_mgun")
+			{basic}
+		}
+	}
+	
+        {Chassis
+		("mobility_cannon"
+			speed(12) ;----------------------------------Max speed.
+			weight(32) ;---------------------------------Weight in Kilograms.
+		)
+	}
+
+	{Extension "mg42_stan.mdl"}
+	{bone "turret" 
+		{limits -60 60}
+	}	
+}
