@@ -565,7 +565,7 @@
 	cost(90))
 }
 {"blitz3_6_engineering"
-	("vehicle2" period(early) year(early) cd(90) ci(0) g(supply3) side(ger) t(vehicle supply) crew1(engineer_1:1) crew2(engineer_2:1)  b(supply) cw(1) cp(2)
+	("vehicle2" period(early) year(early) cd(90) ci(0) g(supply3) side(ger) t(vehicle supply engtruck) crew1(engineer_1:1) crew2(engineer_2:1)  b(supply) cw(1) cp(2)
 	cost(80))
 }
 {"sdkfz6_ammo"
@@ -580,20 +580,16 @@
 	("vehicle2" period(early) year(early) cd(0) ci(0) g(wheel12) side(ger) t(vehicle) crew1(recon_rifle:2) crew2(recon_sl:1) b(supply) cw(2) cp(-12)
 	cost(200))
 }
-
 {"fi156_recon_late"
 	("vehicle_ss" side(ger) period(early) year(early) cd(450) ci(10) vehicle(fi156) crew(pilot:1) g(airstrike) b(supply) cost(150))
 	{action "airstrike:reconnaissance_50"} 
 	{tags "limit3"}
 }
-
-
 {"bf109_250_late"
 	("vehicle_ss" side(ger) period(early) year(early) cd(600) ci(10) vehicle(bf109_f4) crew(pilot:1) g(airstrike) b(supply) cost(300))
 	{action "airstrike:sc_50"}
 	{tags "limit3"}
 }
-
 {"bf110_500_late"
 	("vehicle_ss" side(ger) period(early) year(early) cd(900) ci(10) vehicle(bf110_e2) crew(pilot:1) g(airstrike) b(supply) cost(650))
 	{action "airstrike:sc_250_mp"}
@@ -830,6 +826,10 @@
 {"panzerjager1"
 	("vehicle2" period(early) year(early) cd(540) ci(10) t(light) side(ger) crew1(tankman:2) crew2(tank_commander:1) g(spg1) b(td) cw(4) cp(12)
 	cost(280))
+}
+{"stug3a"
+	("vehicle2" period(early) year(early) cd(840) ci(60) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander:1) g(spg2) b(td) cw(6) cp(16)
+	cost(420))
 }
 {"stug3b"
 	("vehicle2" period(early) year(early) cd(540) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander:1) g(spg2) b(td) cw(6) cp(16)
