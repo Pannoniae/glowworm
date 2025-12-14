@@ -720,9 +720,9 @@
 ("squad_with2types" side(ger) name(single_mg_elite2)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_vet_mg:1) c2(fallsch_vet_mg_asst:1) b(single) t())
 ("squad_with2types" side(ger) name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_at) c1(antitank_1:1) c2(antitank_2:1)		b(single) t())
 ("squad_with2types" side(ger) name(single_riflegrenade)	period(late) year(44 45 46) cd(0)   ci(0)  g(single_rifleg) c1(antitank_4:1) c2(antitank_5:1)	b(single) t())
-("squad_with1types" side(ger) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine) c1(miner-ap:2)					b(single) t(engineer))
-("squad_with1types" side(ger) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine) c1(miner-at:2)					b(single) t(engineer))
-("squad_with2types" side(ger) name(single_engineer)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng) c1(engineer_1:1) c2(engineer_2:1)	b(single) t(engineer))
+("squad_with1types" side(ger) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine) c1(miner-ap:2)					b(single) t(engineer miner))
+("squad_with1types" side(ger) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine) c1(miner-at:2)					b(single) t(engineer miner))
+("squad_with2types" side(ger) name(single_engineer)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng) c1(engineer_1:1) c2(engineer_2:1)	b(single) t(engineer builder))
 ("squad_with1types" side(ger) name(single_flamer)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer) c1(flamer:1) 						b(single) t(flamer))
 ("squad_with1types_man" side(ger) name(single_support)		period(late) year(44 45 46) cd(90) ci(0) g(single_crew)		c1(artilleryman:5)					b(single) t() cost(45))
 ("squad_with2types" side(ger) name(single_tankman)		period(late) year(44 45 46) cd(150) ci(0) g(single_crew) c1(tank_commander:1) c2(tankman:4)	b(single) t())
@@ -799,7 +799,7 @@
 	cost(100))
 }
 {"blitz3_6_engineering"
-	("vehicle2" period(late) year(44 45 46) cd(30) ci(0) g(supply3) side(ger) t(vehicle supply) crew1(engineer_1:1) crew2(engineer_2:1) b(supply) cw(1) cp(2)
+	("vehicle2" period(late) year(44 45 46) cd(30) ci(0) g(supply3) side(ger) t(vehicle supply engtruck) crew1(engineer_1:1) crew2(engineer_2:1) b(supply) cw(1) cp(2)
 	cost(100))
 }
 {"kettenkrad_eng"
