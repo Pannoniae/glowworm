@@ -1,0 +1,18 @@
+;_________________________________________
+; German Tank Flamethrower
+;=========================================
+
+{from "pattern flame_thrower"
+	{tag "gun"}
+	{entity "fmw_35_pz1"}
+
+	("filling" fuel(120))	;// Panzer3 had 2 Fuel tanks and could hold 1020 Liters. Other 520 liters is in vehicle inventory.
+	{mass 35}
+
+	{foresight "foresight1"}
+
+	{range 35 30}
+	{speed 40}
+
+	{rechargeTime 2}
+}

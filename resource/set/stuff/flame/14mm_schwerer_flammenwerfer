@@ -1,0 +1,18 @@
+;_________________________________________
+; German Tank Flamethrower
+;=========================================
+
+{from "pattern flame_thrower"		; flammjagdtiger
+	{tag "gun"}
+	{entity "14mm_flammenwerfer_pz3"}
+
+	("filling_tank" fuel(880))	;// 1760 litres as 2x880l on each side, easily fit in the jagdtiger hull. 880 here, 880 in vehicle inventory
+	{mass 150}
+
+	{foresight "foresight1"}
+
+	{range 120 120}
+	{speed 40}
+
+	{rechargeTime 2}
+}

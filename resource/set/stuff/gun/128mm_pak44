@@ -1,0 +1,43 @@
+;_________________________________________
+; German late-war long-barreled Heavy AT gun
+;=========================================
+
+
+{from "pattern gun"			; L/55 "pak44"
+	{filling "bulletger_128"}
+	{fireSound "cannon/s4/d1/Shared/Cannon_105to130mm/"}
+	{fireSoundclose "cannon/s4/3p/Shared/Cannon_105to130mm/"}
+	{reloadSound "utility/"}
+	("range_250")
+	{calibre 128}
+
+	("reload time" seconds(14))
+
+	("velocity m/s lowarc" ap(920) apcr(1) he(750) heat(1))
+	("armor health" damage(440))
+	("armor health custom" shell(apcbche) damage(440) velocity(920) filler(567))
+	("128_slope_multipliers")
+
+	; Pzgr.43
+	("penetration_long" shell(apcbche) range(250) a(281) b(270) c(254) d(238) e(224))
+
+	{parameters "he"
+		{range 240 240}
+	}
+	{parameters "heat"
+		{range 240 240}
+	}
+	
+	("he_lowarc")
+	
+	;("accuracy_direct" r1(0.48) range_ap(250) range_he(240) range_heat(240))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(0.48) 				; // Accuracy radius for direct-fire munitions
+		r1i(9) 					; // Accuracy radius for indirect fire
+		rmax(35) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(250) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(240) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(240)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(520)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
+}

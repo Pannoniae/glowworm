@@ -1,0 +1,25 @@
+;_________________________________________
+; USSR long-barreled medium AT Gun, mounted version (Su76,..)
+;=========================================
+
+
+{from "76mm_f34"			; L/51.6 , "SU76"
+	{fireSound "cannon/s3/d1/Shared/Cannon_75to76mm/"}
+	{fireSoundclose "cannon/s3/3p/Shared/Cannon_75to76mm/"}
+	{reloadSound "utility/"}
+	
+	("he_lowarc")
+	("velocity m/s lowarc" ap(662) apcr(955) he(680) heat(325))
+
+	("reload time" seconds(5.0))
+	;("accuracy_direct_arrowhead" r1(0.85) range_ap(190) range_he(190) range_heat(170))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(0.85) 				; // Accuracy radius for direct-fire munitions
+		r1i(8) 					; // Accuracy radius for indirect fire
+		rmax(27) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(190) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(170) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(190)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(410)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
+}

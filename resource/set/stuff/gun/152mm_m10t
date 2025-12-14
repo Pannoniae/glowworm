@@ -1,0 +1,26 @@
+;_________________________________________
+; ARTY - Russian heavy SPG gun
+;=========================================
+
+
+{from "pattern gun"			; L/20 "kv2"
+	{filling "bulletrus_152"}
+	{fireSound "cannon/s5/d1/Shared/Cannon_150to210mm/"}
+	{fireSoundClose "cannon/s3/1p/Shared/"}
+	{reloadSound "tank/1p/large/"}
+	("range_200_howitzer_lowarc")
+	{calibre 152}
+
+	("reload time" seconds(20))
+
+	;("velocity m/s lowarc" ap(530) apcr(1) he(530) heat(1))
+	("velocity m/s" ap(530) apcr(1) he(280) heat(1))
+	("armor health" damage(450))
+	("armor health custom" shell(aphe) damage(450) velocity(530) filler(5100))
+	("152_rus_slope_multipliers")
+
+	; G-530 (Anti-Concrete)? Some sources say, shell was too powerful for KV2 and was not supplied to units
+	("penetration_medium" shell(aphe) range(200) a(160) b(150) c(136) d(123) e(112))
+
+	("accuracy_spg" r1(1.00) range_ap(200) range_he(200) range_heat(190))
+}

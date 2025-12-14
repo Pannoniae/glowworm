@@ -1,0 +1,33 @@
+;_________________________________________
+; US light howitzer
+;=========================================
+
+
+{from "pattern gun"			; L/15.9 "M1 howitzer"
+	{filling "bulletusa_75x272"}
+	{fireSound "cannon/s3/d1/Shared/Cannon_75to76mm_LV/"}
+	{fireSoundclose "cannon/s3/d1/Shared/Cannon_75to76mm_LV/"}
+	{reloadSound "utility/"}
+	("range_180_howitzer")
+	{calibre 75}
+	("reload time" seconds(6))
+
+	("velocity m/s" ap(381) apcr(1) he(381) heat(305))
+	("armor health" damage(200))
+	("75_slope_multipliers")
+
+	; HEAT M66 shell
+	("penetration_medium" shell(heat) range(180) a(91) b(91) c(91) d(91) e(91))
+
+	;("accuracy_spg" r1(2.25) range_ap(180) range_he(180) range_heat(180))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(2.25) 				; // Accuracy radius for direct-fire munitions
+		r1i(6) 					; // Accuracy radius for indirect fire
+		rmax(26) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(180) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(180) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(180)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(305)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
+    {unlimitedRangeTPC 0}   ;// restrict range in TPC/FPC
+}

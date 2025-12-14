@@ -1,0 +1,35 @@
+;_________________________________________
+; USSR Heavy Infantry Support Gun
+;=========================================
+
+
+{from "pattern gun"			; L/22 "su-122"
+	{filling "bulletrus_122_l22"}
+	{fireSound "cannon/s4/d1/Shared/Cannon_105to130mm_LV/"}
+	{fireSoundclose "cannon/s3/1p/Shared/"}
+	{reloadSound "tank/1p/large/"}
+	("range_200_howitzer")
+	{calibre 122}
+
+	("reload time" seconds(16))
+
+	("velocity m/s lowarc" ap(1) apcr(1) he(515) heat(335))
+	("armor health" damage(320))
+	("122_rus_slope_multipliers")
+
+	; BP-460A
+	("penetration_medium" shell(heat) range(200) a(120) b(120) c(120) d(120) e(120))
+	
+	; further than ISU-152 - gun is smaller so it can elevate higher!
+	
+	;("accuracy_spg" r1(1.00) range_ap(200) range_he(200) range_heat(200))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(1.00) 				; // Accuracy radius for direct-fire munitions
+		r1i(9) 					; // Accuracy radius for indirect fire
+		rmax(32) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(200) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(200) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(200)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(320)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
+}

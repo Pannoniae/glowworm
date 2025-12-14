@@ -1,0 +1,20 @@
+;_________________________________________
+; US medium tank gun
+;=========================================
+
+
+{from "76mm_m1a1"			; L/52 "M4 sherman late"
+	("penetration_medium" shell(ap) range(200) a(154) b(132) c(110) d(91) e(75))		; M79 AP
+	("penetration_medium" shell(apcbche) range(200) a(125) b(117) c(107) d(98) e(90))	; M62 APC
+
+	;("accuracy_direct" r1(0.78) range_ap(200) range_he(200) range_heat(200))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(0.80) 				; // Accuracy radius for direct-fire munitions
+		r1i(6) 					; // Accuracy radius for indirect fire
+		rmax(26) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(200) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(200) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(200)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(340)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
+}

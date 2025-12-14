@@ -1,0 +1,33 @@
+;_________________________________________
+; US medium tank howitzer
+;=========================================
+
+
+{from "pattern gun"			; L/22.5 "sherman 105"
+	{filling "bulletusa_105"}
+	{fireSound "cannon/s4/d1/Shared/Cannon_105to130mm_LV/"}
+	{fireSoundclose "cannon/s3/1p/Shared/"}
+	{reloadSound "tank/1p/medium_long/"}
+	("range_190_howitzer")
+	{calibre 105}
+
+	("reload time" seconds(12))
+
+	("velocity m/s" ap(381) apcr(1) he(472) heat(381))
+	("armor health" damage(310))
+	("105_slope_multipliers")
+
+	; HEAT M67
+	("penetration_medium" shell(heat) range(190) a(128) b(128) c(128) d(128) e(128))
+
+	;("accuracy_spg" r1(1.05) range_ap(190) range_he(190) range_heat(190))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(1.05) 				; // Accuracy radius for direct-fire munitions
+		r1i(8) 					; // Accuracy radius for indirect fire
+		rmax(34) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(190) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(190) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(190)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(360)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
+}
