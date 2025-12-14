@@ -511,9 +511,9 @@
 ("squad_with2types" side(ger) name(single_mg)			period(early) year(early) cd(0)   ci(60)  g(single_mg)		c1(mgun_1:1) c2(mgun_2:1)			b(single) t())
 ("squad_with2types" side(ger) name(single_at)			period(early) year(early) cd(0)   ci(0)   g(single_at)		c1(antitank_1:1) c2(antitank_2:1)	b(single) t())
 ("squad_with2types" side(ger) name(single_riflegrenade)	period(early) year(early) cd(0)   ci(30)  g(single_rifleg)	c1(antitank_3:1) c2(antitank_4:1)	b(single) t())
-("squad_with1types" side(ger) name(single_ap_miner)		period(early) year(early) cd(0)   ci(60)  g(single_apmine)	c1(miner-ap:2)						b(single) t(engineer))
-("squad_with1types" side(ger) name(single_at_miner)		period(early) year(early) cd(0)   ci(60)  g(single_atmine)	c1(miner-at:2)						b(single) t(engineer))
-("squad_with2types" side(ger) name(single_engineer)		period(early) year(early) cd(0)   ci(60)  g(single_eng)		c1(engineer_1:1) c2(engineer_2:1)	b(single) t(engineer))
+("squad_with1types" side(ger) name(single_ap_miner)		period(early) year(early) cd(0)   ci(60)  g(single_apmine)	c1(miner-ap:2)						b(single) t(engineer miner))
+("squad_with1types" side(ger) name(single_at_miner)		period(early) year(early) cd(0)   ci(60)  g(single_atmine)	c1(miner-at:2)						b(single) t(engineer miner))
+("squad_with2types" side(ger) name(single_engineer)		period(early) year(early) cd(0)   ci(60)  g(single_eng)		c1(engineer_1:1) c2(engineer_2:1)	b(single) t(engineer builder))
 ("squad_with1types" side(ger) name(single_flamer)		period(early) year(early) cd(0)   ci(60)  g(single_flamer)	c1(flamer:1)						b(single) t(flamer))
 ("squad_with2types" side(ger) name(single_tankman)		period(early) year(early) cd(150) ci(150) g(single_crew)	c1(tank_commander:1) c2(tankman:4)	b(single) t())
 ("squad_with1types" side(ger) name(single_medic)		period(early) year(early) cd(0)   ci(0)   g(single_medic)	c1(medic:2)							b(single) t(medic))
@@ -561,7 +561,7 @@
 	cost(190))
 }
 {"blitz3_6_fuel"
-	("vehicle"  period(early) year(early) cd(90) ci(0) g(supply2) side(ger) t(vehicle supply) crew(rifleman_1:1) b(supply) cw(1) cp(2)
+	("vehicle"  period(early) year(early) cd(90) ci(0) g(supply2) side(ger) t(vehicle supply engtruck) crew(rifleman_1:1) b(supply) cw(1) cp(2)
 	cost(90))
 }
 {"blitz3_6_engineering"
@@ -830,6 +830,10 @@
 {"panzerjager1"
 	("vehicle2" period(early) year(early) cd(540) ci(10) t(light) side(ger) crew1(tankman:2) crew2(tank_commander:1) g(spg1) b(td) cw(4) cp(12)
 	cost(280))
+}
+{"stug3a"
+	("vehicle2" period(early) year(early) cd(840) ci(60) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander:1) g(spg2) b(td) cw(6) cp(16)
+	cost(420))
 }
 {"stug3b"
 	("vehicle2" period(early) year(early) cd(540) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander:1) g(spg2) b(td) cw(6) cp(16)
