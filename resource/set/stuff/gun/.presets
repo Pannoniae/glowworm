@@ -921,6 +921,10 @@
 	{parameters "he2" {spreading {SpreadXYRatio 1.5}}}
 	{parameters "apds" {spreading {SpreadXYRatio 1}}}
 )
+(define "direct_settings_low"
+	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
+	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+)
 (define "indirect_settings"
 	{SpreadTolerance 0.75}		;// Zeroing up to 75% needed before fire
 	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
@@ -1095,6 +1099,98 @@
 (define "range_210_howitzer"
 	("curved_firing_arc")
 	{range 210 210}
+	("indirect_settings")
+)
+(define "range_220_howitzer"
+	("curved_firing_arc")
+	{range 220 220}
+	("indirect_settings")
+)
+(define "range_230_howitzer"
+	("curved_firing_arc")
+	{range 230 230}
+	("indirect_settings")
+)
+(define "range_240_howitzer"
+	("curved_firing_arc")
+	{range 240 240}
+	("indirect_settings")
+)
+(define "range_250_howitzer"
+	("curved_firing_arc")
+	{range 250 250}
+	("indirect_settings")
+)
+(define "range_260_howitzer"
+	("curved_firing_arc")
+	{range 260 260}
+	("indirect_settings")
+)
+(define "range_270_howitzer"
+	("curved_firing_arc")
+	{range 270 270}
+	("indirect_settings")
+)
+
+;ITF same shit just more gravity -> can actually fire over buildings etc.
+(define "range_160_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 160 160}
+	("indirect_settings")
+)
+(define "range_170_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 170 170}
+	("indirect_settings")
+)
+(define "range_180_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 180 180}
+	("indirect_settings")
+)
+(define "range_190_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 190 190}
+	("indirect_settings")
+)
+(define "range_200_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 200 200}
+	("indirect_settings")
+)
+(define "range_210_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 210 210}
+	("indirect_settings")
+)
+(define "range_220_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 220 220}
+	("indirect_settings")
+)
+(define "range_230_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 230 230}
+	("indirect_settings")
+)
+(define "range_240_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 240 240}
+	("indirect_settings")
+)
+(define "range_250_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 250 250}
+	("indirect_settings")
+)
+(define "range_260_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 260 260}
+	("indirect_settings")
+)
+(define "range_270_howitzer_lowarc"
+	("curved_firing_lowarc")
+	{range 270 270}
 	("indirect_settings")
 )
 
