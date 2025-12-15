@@ -1,0 +1,119 @@
+{game_entity
+	(include "/properties/armoredcar.ext")
+	(include "/properties/shadow/tank.inc" scale(1.0))
+	(include "/properties/selection/vehicle.inc" scale(1.0))
+	{props "sdkfz251c" "tank" "wheeled" "multi_board" "explosion_throw_crew" "vision_lev02" "tractor" "tractor_heavy" "detect_tank_mg"}
+	{able "emit_passengers_on_enemy"}
+	{patherId "sdkfz251"}
+	{targetclass "armoredcar"}
+	{targetSelector "tank_bullet"}
+
+	{Extension "m3.mdl"}
+	{extension "crew.ext"}
+
+	{extender "enumerator"
+		{digit_folder "ru1"}
+	}
+	
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	{component "sticky_body"}
+
+	{volume "body1"
+		{tags "body"}
+		{component "body"}
+		{thickness 10}
+	}
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 10}
+	}
+	{volume "body3"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body4"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body5"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body6"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "roll"
+		{thickness 15}
+	}
+	{volume "body7"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "engine"
+		{thickness 10}
+	}
+	{Volume "fuel"
+		{thickness 1}
+	}
+
+	("armoredcar_tier1")
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+
+	("tracks" repair(30) thickness(15))
+	
+	{extender "inventory"
+		{Box
+			{item "ammo hmgun_usa" 750}
+		}
+	}
+
+	{Weaponry
+		{place "mgun"
+			{weapon "browning_m2_hb" filled}
+			{type "aa"}
+			{LinkBone "mgun"}
+			{LinkAnimation "off"}
+			{charger "gunner"}
+			("abm_mgun")
+			{ai_in_manual}
+			{basic}
+		}
+	}
+  	
+	{sensor
+		{visor "main"
+			{bone "mgun"}
+		}
+	}
+
+	{mass 8600}
+	{Chassis "wheel"
+		("tank_trace_ex" fx("tracks_sm2") step(0.2) len(0.46) boneleft("FXtraceL3") boneright("FXtraceR3"))
+		("car_trace" fx("tracewheel03a") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+
+		("mobility_car"
+			speed(73) ;----------------------------------Max speed.
+			speedatmaxturn(14) ;-------------------------Max speed at max turn.
+			reverse(10) ;---------------------------------Max speed in Reverse.
+			weight(8.6) ;--------------------------------Weight in Tonnes.
+			power(148) ;---------------------------------Horse Power.
+			fuel(227) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(280) ;---------------------------------Range in Kilometers.
+		)
+	}
+
+}

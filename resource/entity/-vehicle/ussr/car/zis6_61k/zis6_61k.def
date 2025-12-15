@@ -1,0 +1,123 @@
+{game_entity
+	(include "/properties/car.ext")
+	(include "/properties/selection/vehicle_elongated.inc" scale(1.15))
+	{props "turret" "with_gun" "open_top" "automatic" "truck" "vision_lev02" "muzzle_37mm_40mm_auto" "tractor" "tractor_heavy"}
+	{able "emit_on_attack"}
+	{extension "zis6_61k.mdl"}
+	{collider "truck"}
+	{patherId "gazaaa"}
+
+	{extender "enumerator"
+		{digit_folder "ru1"}
+	}
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+	("wheel" args "wheelright2")
+	("wheel" args "wheelleft2")
+	("wheel" args "wheelright3")
+	("wheel" args "wheelleft3")
+
+	("glass" args "window1")
+	("glass" args "window2")
+	("glass" args "window3")
+	("glass" args "window4")
+	("glass" args "window5")
+	("glass" args "window6")
+	("fuel" args "fuel")
+	("transmission" args "transmission")
+
+	("bodyback" repair(30))
+
+	{volume "body8" {able {holed}}}
+	{volume "bodyback1" {material "wood"} {tags "wood"} {able {holed}}}
+	{volume "bodyback2" {material "wood"} {tags "wood"}}
+
+	{volume "shield_cover" {able {holed}}}
+	{sensor
+		{visor "gun"
+			{vision "cannon_main"}
+			{bone "visor1"}
+		}
+	}
+	{boarder
+		{anm "driver"
+			{forward	{begin "board_big-midcar_driver"} {end "seat_driver_car"} {base "doorleft"}}
+			{reverse	{end "emit_body" 1} {base "doorleft" 1}}
+		}
+		{anm "passenger"
+			{forward	{begin "board_big-midcar"} {end "seat_passenger"} {base "doorright"}}
+			{reverse	{end "emit_body" 1} {base "doorright" 1}}
+		}
+		{anm "gunner"
+			{forward {begin "board_body"} {end "AAgun_61k_gunner" 10}{base "board"}}
+			{reverse {end "emit_body" 1} {base "board"}}
+		}
+		{anm "charger"
+			{forward {begin "board_body"} {end "AAgun_61k_charger" 10}{base "board"}}
+			{reverse {end "emit_body" 1} {base "board"}}
+		}
+		{anm "commander"
+			{forward {begin "board_body"} {end "AAgun_61k_commander" 10}{base "board"}}
+			{reverse {end "emit_body" 1} {base "board"}}
+		}
+	}
+	(define "crew_human"
+		{placer
+			{place "%place" {group "%group"} {linkbone "%bone"} {turnoff %off {shadow}}}
+		}
+		{boarder
+			{door "%door"}
+			{link "%door" "%place" {anm "%animation"} {forward putoff} {reverse puton}}
+		}
+	)
+
+	{placer
+		{place "driver"		{visor "main"}}
+		{place "gunner"		{visor "gun"}}
+		{place "charger"	{visor "none"}}
+		{place "commander"	{visor "none"}}
+	}
+
+	("crew_human" place(driver)		door(emit1) bone(driver)  animation(driver)	 group(crew) off({sensor}))
+	("crew_human" place(gunner)		door(emit3) bone(gunner)  animation(gunner)	 group(crew) off({targetable 0}))
+	("crew_human" place(charger)	door(emit4) bone(charger) animation(charger) group(crew) off())
+	("crew_human" place(commander)	door(emit3) bone(commander) animation(commander) group(crew) off())
+	("crew_human" place(seat1)		door(emit2)	bone(seat01) animation(passenger) group(passenger) off())
+
+	
+	{extender "inventory"
+		{box
+			{item "bulletrus_37_auto ap" 150}		; 60 clips (5 rounds each)
+			{item "bulletrus_37_auto he" 150}
+		}
+	}
+
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "37mm_61k" filling "bulletrus_37_auto he" 5}
+			("abm_dymamic_aaa"
+				zeroing(1.95)
+				dispersion(0.24)
+			)
+		}
+	}
+
+	{mass 3100}
+	{Chassis
+		("car_trace" fx("tracewheel03") step(0.08) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("car_trace" fx("tracewheel03d") step(0.08) wheell("wlr") wheelr("wrr") bonel("FXtraceL2") boner("FXtraceR2"))
+		("mobility_car"
+			speed(60) ;----------------------------------Max speed.
+			speedatmaxturn(15) ;-------------------------Max speed at max turn.
+			reverse(20) ;--------------------------------Max speed in Reverse.
+			weight(3.1) ;--------------------------------Weight in Tonnes.
+			power(73) ;----------------------------------Horse Power.
+			fuel(100) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(145) ;---------------------------------Range in Kilometers.
+		)
+	}
+}

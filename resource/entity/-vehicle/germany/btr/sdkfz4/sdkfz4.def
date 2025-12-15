@@ -1,0 +1,142 @@
+{game_entity
+	(include "/properties/halftrack.ext")
+	(include "/properties/shadow/tank.inc" scale(1.0))
+	(include "/properties/selection/vehicle.inc" scale(1.4))
+	{props "tank" "turret" "vision_lev02" "tractor" "tractor_heavy"}
+	{targetSelector "cannon_rocket"}
+	{targetclass "armoredcar"}
+	{patherId "sdkfz8"}
+
+	{extender "enumerator"
+		{digit_folder "ger"}
+	}
+
+	("armoredcar_tier2")
+
+	("turret" repair(50))
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(20))
+
+	{volume "gun"
+		{thickness 6}
+	}
+	{volume "turret"
+		{thickness 6}
+	}
+	{volume "body1"
+		{tags "body"}
+		{component "body"}
+		{thickness 8
+			{top	6}
+			{bottom 6}
+		}
+	}
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 8
+			{top	6}
+			{bottom 6}
+		}
+	}
+	{volume "engine"
+		{thickness 8
+			{top	6}
+			{bottom 6}
+		}
+	}
+
+
+	{Placer
+	          {place "attach01"
+	             {entity "can"}
+	             {Linkbone "attach01"}
+	             {handlebone "basis"}
+	             {obstacle disable}
+	          }
+	          {place "attach02"
+	                  {entity "can"}
+	                   {Linkbone "attach02"}
+	                   {handlebone "basis"}
+	                   {obstacle disable}
+	          }
+	}
+	(define "define_place"
+		{placer
+			{place "%place"
+			{linkbone "%place"}
+			{attach squat_lie}
+			{turnoff {shadow}}
+			{obstacle disable}
+			}
+		}
+		{Volume "%place"
+			{tags "attach" "attach_%place"}
+			{able clear {bullet 0} {touch 1}}
+		}
+	)
+
+	{boarder
+		{anm "driver"
+			{forward	{begin	"board_SdKfz251-1"} {base "close"}}
+			{reverse 	{end	"emit_body"} {base "close" -1}}
+		}
+
+		{anm "commander"
+			{forward	{begin	"board_SdKfz251-1"} {base "close"}}
+			{reverse 	{end	"emit_tank_1"} {base "close" -1}}
+		}
+	}
+	{sensor
+		{Visor "driver"
+			{vision "tank_driver"}
+			{bone "visor2"}
+		}
+	}
+
+	("crew" place(driver)		bone()	door(emit1)		animation(driver)	visor(driver) 	off({sensor}))
+	("crew" place(commander)	bone()	door(emit1)		animation(commander)	visor(around) 	off())
+
+	{extender "inventory"
+		{box
+			{item "ammo 150mm_nebelwerfer" 10}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "150mm_panzerwerfer" filling "ammo 150mm_nebelwerfer" 10}
+			{gunner "commander"}
+			{charger "commander"}
+			{Barrels 10}
+			{StationaryFiring}
+		}
+	}
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+
+	{extension "sdkfz4.mdl"}
+	{mass 7100}
+	{Chassis "wheel"
+		("tank_trace" fx("tracks_mid") step(0.5) len(0.59) boneleft("FXtraceL2") boneright("FXtraceR2"))
+		("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("mobility_car"
+			speed(47) ;----------------------------------Max speed.
+			speedatmaxturn(12) ;-------------------------Max speed at max turn.
+			reverse(9) ;--------------------------------Max speed in Reverse.
+			weight(7.1) ;-------------------------------Weight in Tonnes.
+			power(68) ;---------------------------------Horse Power.
+			fuel(250) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(110) ;---------------------------------Range in Kilometers.
+		)
+	}
+	(mod "mp"
+		{brain
+			{properties
+				{fire_mode hold}
+			}
+		}
+	)
+}

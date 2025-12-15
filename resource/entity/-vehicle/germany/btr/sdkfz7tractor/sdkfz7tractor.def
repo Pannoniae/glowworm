@@ -1,0 +1,85 @@
+{game_entity
+	(include "/properties/halftrack.ext")
+	(include "/properties/shadow/tank.inc" scale(1.0))
+	(include "/properties/selection/vehicle.inc" scale(1.4))
+	{props "-turret" "tank" "open_top" "vision_lev02" "tractor" "tractor_heavy"}
+	{extension "crew.ext"}
+	{targetclass "armoredcar"}
+	{targetSelector "cannon_aa"}
+	{patherId "sdkfz8"}
+
+	{extender "enumerator"
+		{digit_folder "ger"}
+	}
+
+	("armoredcar_tier1")
+	("tracks" repair(30) thickness(20))
+
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	{component "sticky_body"}
+
+	{volume "body1"
+		{tags "body"}
+		{component "body"}
+		{thickness 8}
+	}
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 8}
+	}
+	{volume "engine"
+		{tags "engine"}
+		{component "engine"}
+		{thickness 10}
+	}
+	{volume "inventory"
+        	{thickness 2}
+	}
+	
+
+	{extender "shield"
+			{on}
+	}
+
+	{component "shieldl1" {tags "shield"}}
+	{component "shieldr1" {tags "shield"}}
+	("shield" args "shieldl1" 10 "shield")
+	("shield" args "shieldr1" 10 "shield")
+	
+
+	{extender "inventory"
+		{box
+			{item "dynamite"}
+			(mod "mp"
+				{item "tow_rope" 1}
+			)	
+		}
+	}
+
+	
+
+	("wheel" args "wheelleft1")
+	("wheel" args "wheelright1")
+
+	{mass 11250}
+	{Chassis "wheel"
+		("tank_trace" fx("tracks_mid") step(0.5) len(0.59) boneleft("FXtraceL2") boneright("FXtraceR2"))
+		("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("mobility_car"
+			speed(45) ;----------------------------------Max speed.
+			speedatmaxturn(15) ;-------------------------Max speed at max turn.
+			reverse(9) ;--------------------------------Max speed in Reverse.
+			weight(11.25) ;-------------------------------Weight in Tonnes.
+			power(135) ;---------------------------------Horse Power.
+			fuel(250) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(110) ;---------------------------------Range in Kilometers.
+		)
+	}
+	{Extension "sdkfz7tractor.mdl"}
+}

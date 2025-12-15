@@ -1,0 +1,54 @@
+;SDL
+{boarder
+	{anm "left"
+		{forward	{begin	"board_kv"}}
+		{reverse 	{end	"emit_tank_1_hold"}}
+	}
+	{anm "right"
+		{forward	{begin	"board_kv"} {end "pose_gunner_isu"}}
+		{reverse 	{end	"emit_tank_2_hold"}}
+	}
+		{anm "armor"
+			{forward	{begin	"board_LowArmor"} 	{end "seat_armor"}}
+			{reverse 	{end	"emit_tank_1"}}
+		}
+		{anm "driver"
+			{forward	{begin	"board_t34_driver"} {end "seat_gunner_stand"}}
+			{reverse 	{end	"emit_t34_hold"}}
+		}
+}
+
+{placer
+	{place "driver" {group "crew"} {visor "driver"}}
+}
+{boarder
+	{door "emit1"}
+	{link "emit1" "driver" {anm "driver"} {forward putoff} {reverse puton}}
+}
+
+{placer
+	{place "commander" {group "crew"} {visor "main"}}
+}
+{boarder
+	{door "emit2"}
+        {door "emit3"}
+	{link "emit2" "commander" {anm "left"} {forward putoff} {reverse puton}}
+        {link "emit3" "commander" {anm "right"} {forward putoff} {reverse puton}}
+}
+
+{placer
+	{place "gunner" {group "crew"} {visor "main"}}
+}
+{boarder
+	{door "emit2"}
+        {door "emit3"}
+	{link "emit2" "gunner" {anm "right"} {forward putoff} {reverse puton}}
+        {link "emit3" "gunner" {anm "left"} {forward putoff} {reverse puton}}
+}
+
+
+
+  
+
+
+

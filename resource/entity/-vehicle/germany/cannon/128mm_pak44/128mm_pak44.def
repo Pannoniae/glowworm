@@ -1,0 +1,191 @@
+{game_entity
+	(include "/properties/cannon.ext")
+	
+	{extension "128mm_pak44.mdl"}	
+	(include "/properties/selection/cannon_big.inc" scale(1.2))
+	{props "wheeled" "vision_lev04_can" "muzzle_122mm_128mm" "cannon_sandbag_standard" "trailer" "trailer_heavy" "detect_atgun" "c_at_hvy"}
+	{PatherID "cannon.large"}
+	{targetclass "cannon_big"}
+	{targetSelector "cannon_big"}	
+	
+	{sensor
+		{visor "main"
+			{vision "cannon_range_220"}
+		}
+	}
+	
+	("wheel" args "wheelright1")
+	("wheel" args "wheelright2")
+	("wheel" args "wheelleft1")
+	("wheel" args "wheelleft2")
+	
+	("gun" repair(30) thickness(30))
+	
+	("armor_heavy_cannon")
+	("crew_wheeled_cannon_5")
+	
+	{Volume "body"
+		{thickness 10}
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "body2"
+		{thickness 10}
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "turret1"
+		{thickness 15}
+		{tags "turret"}
+		{component "turret"}
+	}
+	{Volume "turret2"
+		{thickness 10}
+		{tags "turret"}
+		{component "turret"}
+	}
+	{Volume "gun"
+		{thickness 10}
+	}
+	{Volume "gun_rot"
+		{thickness 10}
+		{tags "turret"}
+		{component "turret"}
+	}
+	{Volume "pivot_back"
+		{thickness 10}
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "pivot_front"
+		{thickness 10}
+		{tags "body"}
+		{component "body"}
+	}
+	{Volume "standl"
+		{thickness 10}
+		{tags "standl"}
+		{component "standl"}
+	}
+	{Volume "standr"
+		{thickness 10}
+		{tags "standr"}
+		{component "standr"}
+	}
+
+	{boarder
+		{anm "gunner"
+			{forward	{end "AAgun_61k_charger" 10}} 
+		}
+		{anm "gunner2"
+			{forward	{end "pose_flak_charger" 10}} 
+		}
+		{anm "charger"
+			{forward {end "pose_flak_charger" 10}} 
+		}
+		{anm "charger2"
+			{forward {end "pose_flak_gunner2" 10}}
+		}
+		{anm "commander"
+			{forward {end "pose_flak_commander" 10}}
+		}		
+		{anm "driver1"	;// gunner
+			{forward {end "cannon_pak40_pusher_left" 10}}	
+		}
+		{anm "driver2"	;// gunner2
+			{forward {end "cannon_pak40_pusher_right" 10}}	
+		}
+		{anm "driver3"	;// charger
+			{forward {end "cannon_pak40_pusher_right" 10}}		
+		}
+		{anm "driver4"	;// charger2
+			{forward {end "cannon_pak40_pusher_left" 10}}
+		}
+		{anm "driver5"	;// commander
+			{forward {end "cannon_pak40_pusher_left" 10}}	
+		}
+		{anm "seat1"	;// gunner
+			{forward {end "pose_seat_cannon_right" 10}}
+		}
+		{anm "seat2"	;// gunner2
+			{forward {end "pose_seat_cannon_right" 10}}
+		}
+		{anm "seat3"	;// charger
+			{forward {end "pose_seat_cannon_right" 10}}
+		}
+		{anm "seat4"	;// charger2
+			{forward {end "pose_seat_cannon_left" 10}} 
+		}
+		{anm "seat5"	;// commander
+			{forward {end "pose_seat_cannon_left" 10}}
+		}
+	}
+
+	{extender "cannon"
+		{animation
+			{switch "close"}
+			;// "gunner" "gunner2" "charger" "charger2" "commander"
+			{move "cannon_pak40_pusher_left" "cannon_pak40_pusher_right" "cannon_pak40_pusher_right" "cannon_pak40_pusher_left" "cannon_pak40_pusher_left"}
+			{aim "AAgun_61k_charger_aim" "flak_gunner2_aim" "flak_charger_aim" "flak_gunner_aim" "flak_commander_aim"}
+			{fire "AAgun_61k_charger_fire" "flak_gunner2_fire" "flak_charger_fire" "flak_gunner_fire" "flak_commander_fire"}
+			{reload "AAgun_61k_charger_reload" "flak_gunner2_reload" "flak_charger_reload" "flak_gunner_reload" "flak_commander_reload"}
+			
+		}
+		{move {workers "driver1" "driver2" "driver3" "driver4" "driver5" minWorkers 2} {obstacle "close"}}		;// move state: cannon being pushed and which positions play animations
+		{attack {workers "gunner" "gunner2" "charger" "charger2" "commander"} {obstacle "open"}}				;// fire/attack state: cannon aim, fire, and reload events
+		{trailing {workers "seat1" "seat2" "seat3" "seat4" "seat5"}}											;// trailing state: cannon is being towed {obstacle} not needed. Uses "close"
+		{rotate_ik_Limit 0}
+	}
+
+	{extender "inventory"
+		{box	
+           	{item "bulletger_128 apcbche" 19}	; 40 rounds
+			{item "bulletger_128 he" 20}
+			{item "sandbag_vehicle" 1}
+		}
+	}
+	
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "128mm_pak44_3" filling "bulletger_128 apcbche" 1}
+			{gunner "gunner"}
+			{charger "charger"}
+			("abm_dymamic_stabilised"
+				zeroing(3.0)
+				dispersion(0.20)
+				)
+		}
+	}  	
+	
+	{mass 12000}
+	{Chassis "track"
+		("car_trace" fx("tracewheel03") step(0.06) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("car_trace" fx("tracewheel03") step(0.06) wheell("wlr") wheelr("wrr") bonel("FXtraceL2") boner("FXtraceR2"))
+		("mobility_cannon"
+			speed(4.0) ;-----------------------------------Max speed.
+			weight(10000) ;--------------------------------Weight in Kilograms.
+		)
+	}
+
+	{bone "gun_rot"
+		{limits -3 85}
+		{speed 0.001}
+	}
+	{bone "turret"
+		{speed 0.002}
+	}
+	
+	;{texmod "camo"}
+}
+
+
+
+
+
+
+
+
+
+

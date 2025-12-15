@@ -1,0 +1,174 @@
+{game_entity
+	(include "/properties/tank_assaultgun.ext")
+	(include "/properties/shadow/tank.inc" scale(1.2))
+	(include "/properties/selection/vehicle.inc" scale(1.1))
+	{props "td" "light" "-turret" "mantlet" "vision_lev03" "muzzle_75mm_76mm_sides" "shell_eject" "shield" "open_top" "detect_td_medium"}
+	
+	{targetclass "tank_medium"}
+	{targetSelector "tank_medium"}
+	{patherId "panzer38"}
+
+	{extender "enumerator"
+			{digit_folder "ger"}
+	}
+
+	("tank_light_tier2")
+
+	("tracks" repair(30) thickness(15))
+	("gun" repair(30) thickness(15))
+
+	("transmission" args "transmission")
+
+	{Volume "body1"
+		{component "body"}
+		{tags "body"}
+		{thickness 15
+			{front 50}
+			{top 15}		
+			{rear 10}
+			{bottom 8}
+		}
+	}
+	{Volume "body2"
+		{component "body"}
+		{tags "body"}
+		{thickness 15
+			{front 50}
+			{top 15}
+			{rear 10}
+			{bottom 8}
+		}
+	}
+	{Volume "body3"
+		{component "body"}
+		{tags "body"}
+		{thickness 15
+			{front 50}
+			{top 6}
+			{rear 10}
+			{bottom 8}
+		}
+	}
+
+	{volume "gun_shield"
+		{thickness 15}
+		{able {holed}}
+	}
+
+	{volume "engine"		
+		{thickness 15}
+	}
+
+	{component "sticky_body"}
+	
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	("ammo" args "ammo1")
+
+	("crew_4_human")
+
+	{boarder
+		{anm "driver"
+			{forward	{begin	"board_t34_driver"} {end "seat_gunner_stand"} {base "open_driver"}}
+			{reverse 	{end	"emit_t34_hold"} {base "close_driver"}}
+		}
+		{anm "charger"
+			{forward	{begin	"board_su76"}}
+			{reverse 	{end	"board_su76" -1}}
+		}
+		{anm "gunner"
+			{forward	{begin	"board_su76"} {end "seat_armor"}}
+			{reverse 	{end	"board_su76" -1}}
+		}
+		{anm "commander"
+			{forward	{begin	"board_hummel"} {end "pose_seat_armor_2"} {base "open_back_door"}}
+			{reverse 	{end	"emit_body" 1} {base "open_back_door" -1}}
+		}
+	}
+
+	(define "crew_human"
+		{placer
+			{place "%place" {group "crew"} {linkbone "%place"} {turnoff {sensor} {shadow}}}
+		}
+		{boarder
+			{door "%door1"}
+			{door "%door2"}
+			{link "%door1" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+			{link "%door2" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+		}
+	)
+
+	{placer
+		{place "driver" {group "crew"} {visor "driver"}}
+	}
+	{placer
+		{place "gunner" {visor "main"}}
+	}
+	{boarder
+		{door "emit0"}
+		{door "emit1"}
+		{link "emit0" "driver" {anm "driver"} {forward putoff} {reverse puton}}
+	}
+	("crew_human" place(commander)	door1(emit1))
+	("crew_human" place(gunner)	    door1(emit1))
+
+
+	{sensor
+		{visor "around"
+			{vision "vehicle_around"}		;// better vision than a in-closed turret 
+		}
+	}
+
+
+	{extender "inventory"
+		{box
+			{item "bulletger_75_l43 apcbche" 23} 	; 38 rounds
+			{item "bulletger_75_l43 he" 10}
+			{item "bulletger_75_l43 apcr" 4}
+			{item "geballteladung_3kg" 1}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "75mm_pak40_2" filling "bulletger_75_l43 apcbche" 1}
+			{gunner "gunner"}
+			{charger "charger"}
+			("abm_dymamic_td"
+				zeroing(2.5)
+				dispersion(0.25)
+			)
+			{rotate}
+		}
+	}
+
+	{mass 10800}
+	{Chassis
+		("tank_trace" fx("tracks_sm2") step(0.2) len(0.55))
+		("mobility_tank"
+			speed(45) ;----------Max speed when fully accelerated on road, km/h.
+			reverse(7) ;---------Max speed in reverse on road, km/h.
+			traverse(35) ;-------Track traverse, per second, in degrees.
+			weight(11.0) ;-------Weight in Tonnes.
+			power(150) ;---------Engine Power, in hp.
+			track(4.5) ;---------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			fuel(218) ;----------Fuel capacity in Litres.
+			type(fuel) ;---------Fuel type. (diesel OR fuel)
+			range(140) ;---------Range in km, off-road.
+		)
+	}
+
+	{Extension "marder_3h.mdl"}
+
+	{bone "gun_rot"
+		{speed2 10}
+	}
+	{bone "mantlet"
+		{speed2 8}
+	}
+
+}

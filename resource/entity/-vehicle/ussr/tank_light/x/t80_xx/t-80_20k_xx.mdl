@@ -1,0 +1,280 @@
+;Exported by: Dmitry
+;Date:        Sun Oct 19 19:52:55 2014
+;File:        C:\Users\Dmitry\Documents\3dsMax\scenes\T-80_crash.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "wheelsl"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-0.0646124	-0.395616	0.130411
+			}
+			{VolumeView "wheelsl.ply"}
+			{bone "trackl"
+				{Position -20.7679	-0.133115	-0.214039}
+				{VolumeView "trackl.ply"}
+			}
+		}
+		{bone "wheelsr"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-0.0646124	-0.395616	0.130411
+			}
+			{VolumeView "wheelsr.ply"}
+			{bone "trackr"
+				{Position 20.3146	-0.133122	-0.214039}
+				{VolumeView "trackr.ply"}
+			}
+		}
+		{bone "body"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0	0	5.76772
+			}
+			{VolumeView "body.ply"}
+			{bone "turret"
+						{Position 6.29921	-9.42914	6.06299}
+				{VolumeView "turret.ply"}
+				{bone "mantlet"
+					{Matrix34
+						0	0	-1
+						0	1	0
+						1	0	0
+						-0.123634	-9.42587	6.05437
+					}
+					{VolumeView "mantlet.ply"}
+					{bone "gun"
+						{Matrix34
+							0	0	1
+							0	1	0
+							-1	0	0
+							-0.973969	-11.4914	-0.0136585
+						}
+						{VolumeView "gun.ply"}
+					}
+				}
+			}
+			{bone "shields"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					-0.390319	3.11356	14.8357
+				}
+			}
+			{bone "ekran"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					-13.9864	3.11359	19.2593
+				}
+			}
+		}
+	}
+}
+{Volume "body1"
+	{Polyhedron "body1.vol"}
+	{Bone "body"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		2.29594	-1.39581	5.47534
+	}
+}
+{Volume "body2"
+	{Polyhedron "body2.vol"}
+	{Bone "body"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		2.29616	-1.39581	5.4753
+	}
+}
+{Volume "body3"
+	{Polyhedron "body3.vol"}
+	{Bone "body"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		6.55003	1.20449	20.3857
+	}
+}
+{Volume "body_vol1"
+	{Polyhedron "body_vol1.vol"}
+	{Bone "body"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		2.45923	-1.22374	5.47164
+	}
+}
+{Volume "ekran"
+	{Polyhedron "ekran.vol"}
+	{Bone "ekran"}
+	{Position 8.77889	1.73841	-2.92702}
+}
+{Volume "mantlet2"
+	{Polyhedron "mantlet2.vol"}
+	{Bone "mantlet"}
+	{Matrix34
+		0	0	-1
+		0.999997	-0.00252716	0
+		-0.00252716	-0.999997	0
+		-1.03515	0.126857	-0.0431633
+	}
+}
+{Volume "gun"
+	{Polyhedron "gun.vol"}
+	{Bone "gun"}
+	{Matrix34
+		-0.999997	0.00252732	0
+		0	0	-1
+		-0.00252732	-0.999997	0
+		-0.0275416	6.97581	0.0595093
+	}
+}
+{Volume "mantlet1"
+	{Cylinder 5.17056 11.8391}
+	{Bone "mantlet"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0.26962	0.126853	0.289283
+	}
+}
+{Volume "shieldl1"
+	{Polyhedron "shieldl1.vol"}
+	{Bone "shields"}
+	{Matrix34
+		0.779192	0	-0.626785
+		0	1	0
+		0.626785	0	0.779192
+		45.7678	22.3624	-3.59543
+	}
+}
+{Volume "shieldl2"
+	{Polyhedron "shieldl2.vol"}
+	{Bone "shields"}
+	{Matrix34
+		0.779192	0	-0.626785
+		0	1	0
+		0.626785	0	0.779192
+		6.24423	22.3624	-0.219524
+	}
+}
+{Volume "shieldl3"
+	{Polyhedron "shieldl3.vol"}
+	{Bone "shields"}
+	{Matrix34
+		0.779192	0	-0.626785
+		0	1	0
+		0.626785	0	0.779192
+		-35.5919	22.3624	-1.4997
+	}
+}
+{Volume "shieldr1"
+	{Polyhedron "shieldr1.vol"}
+	{Bone "shields"}
+	{Matrix34
+		0.779192	0	-0.626785
+		0	1	0
+		0.626785	0	0.779192
+		45.7678	-19.2213	-3.59543
+	}
+}
+{Volume "shieldr2"
+	{Polyhedron "shieldr2.vol"}
+	{Bone "shields"}
+	{Matrix34
+		0.779192	0	-0.626785
+		0	1	0
+		0.626785	0	0.779192
+		6.24423	-19.2213	-0.219524
+	}
+}
+{Volume "shieldr3"
+	{Polyhedron "shieldr3.vol"}
+	{Bone "shields"}
+	{Matrix34
+		0.779192	0	-0.626785
+		0	1	0
+		0.626785	0	0.779192
+		-35.5919	-19.2213	-1.4997
+	}
+}
+{Volume "trackleft"
+	{Polyhedron "trackleft.vol"}
+	{Bone "wheelsl"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		20.2327	-6.18056	-0.130411
+	}
+}
+{Volume "trackright"
+	{Polyhedron "trackright.vol"}
+	{Bone "wheelsr"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-21.4522	-6.18056	-0.130413
+	}
+}
+{Volume "turret1"
+	{Polyhedron "turret1.vol"}
+	{Bone "turret"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-0.376987	5.45731	2.29812
+	}
+}
+{Volume "turret2"
+	{Cylinder 14.3894 2.47197}
+	{Bone "turret"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0.127883	-0.117836	1.18632
+	}
+}
+{Volume "turret3"
+	{Cylinder 5.55974 2.32365}
+	{Bone "turret"}
+	{Matrix34
+		0	-1	0
+		0	0	-1
+		1	0	0
+		-6.63929	-9.29902	5.78475
+	}
+}
+{Volume "turret4"
+	{Cylinder 5.55974 3.06722}
+	{Bone "turret"}
+	{Matrix34
+		0	-1	0
+		0	0	-1
+		1	0	0
+		7.46209	-9.29911	5.78475
+	}
+}

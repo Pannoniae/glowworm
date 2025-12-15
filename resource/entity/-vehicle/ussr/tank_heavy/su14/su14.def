@@ -1,0 +1,275 @@
+{Entity
+	(include "/properties/tank_assaultgun.ext")
+	(include "/properties/shadow/tank.inc" scale(1.2))
+	(include "/properties/selection/vehicle.inc" scale(1.2))
+	{props "heavy" "-turret" "vision_lev05" "muzzle_170mm_210mm"}
+	{collider "tank.heavy"}
+	{targetclass "tank_heavy"}
+	{targetSelector "tank_spg"}
+	{PatherId "su100y"}
+ 	
+	("tank_heavy_tier1")
+
+	("tracks" repair(30) thickness(30))
+	("gun" repair(30) thickness(30))
+
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 20
+			{top 10}
+			{bottom 10}
+		}
+	}
+	{volume "body3"
+		{tags "body"}
+		{component "body"}
+		{thickness 20
+			{top 10}
+			{bottom 10}
+		}
+	}
+	{volume "body4"
+		{tags "body"}
+		{component "body"}
+		{thickness 20
+			{top 10}
+			{bottom 10}
+		}  
+	}
+	{volume "body5"
+		{tags "body"}
+		{component "body"}
+		{thickness 20
+			{top 10}
+			{bottom 10}
+		}
+	}
+	{volume "body"
+		{tags "body"}
+		{component "body"}
+		{thickness 20
+			{top 10}
+			{bottom 10}
+		}  
+	}
+	{volume "gun"
+		{thickness 10}   
+	}
+	{volume "turret"
+		{thickness 10}   
+	}
+	{volume "engine"
+		{thickness 10}   
+	}
+	{Volume "trackl"
+		{component "trackleft"}
+	}
+	{Volume "trackr"
+		{component "trackright"}	
+	}
+	
+	{extender "shield"
+		{on}
+	}	
+	
+	{component "shieldl1" {tags "shield"}}
+	{component "shieldl2" {tags "shield"}}
+	{component "shieldl3" {tags "shield"}}
+	{component "shieldl4" {tags "shield"}}
+	{component "shieldl5" {tags "shield"}}
+	{component "shieldl6" {tags "shield"}}
+	{component "shieldl7" {tags "shield"}}
+
+	{component "shieldr1" {tags "shield"}}
+	{component "shieldr2" {tags "shield"}}
+	{component "shieldr3" {tags "shield"}}
+	{component "shieldr4" {tags "shield"}}
+	{component "shieldr5" {tags "shield"}}
+	{component "shieldr6" {tags "shield"}}
+	{component "shieldr7" {tags "shield"}}
+
+
+	("shield" args "shieldl1" 10)
+	("shield" args "shieldl2" 10)
+	("shield" args "shieldl3" 10)
+	("shield" args "shieldl4" 10)
+	("shield" args "shieldl5" 10)
+	("shield" args "shieldl6" 10)
+	("shield" args "shieldl7" 10)
+
+	("shield" args "shieldr1" 10)
+	("shield" args "shieldr2" 10)
+	("shield" args "shieldr3" 10)
+	("shield" args "shieldr4" 10)
+	("shield" args "shieldr5" 10)
+	("shield" args "shieldr6" 10)
+	("shield" args "shieldr7" 10)
+
+
+	{boarder
+		{anm "driver"
+			{forward	{begin	"board_tank_right"} {base "close_driver"}}
+			{reverse 	{end	"emit_body" 1} {base "close_driver" -1}}
+		}
+		{anm "gunner"
+			{forward	{begin	"board_tank_right"} {end "pose_pak40_gunlayer"} {base "close_driver"}}
+			{reverse 	{end	"emit_body" 1} {base "close_driver" -1}}
+		}
+		{anm "charger"
+			{forward	{begin	"board_tank_right"} {end "pose_pak40_charger"} {base "close_driver"}}
+			{reverse 	{end	"emit_body" 1} {base "close_driver" -1}}
+		}
+		{anm "commander"
+			{forward	{begin	"board_tank_right"} {end "pose_pak40_charger"} {base "close_driver"}}
+			{reverse 	{end	"emit_body" 1} {base "close_driver" -1}}
+		}
+		{anm "gunner1"
+			{forward	{begin	"board_tank_right"} {end "seat_gunner_stand"}}
+			{reverse 	{end	"emit_body" 1} }
+		}
+	}
+    	
+	{sensor
+		{Visor "driver"
+			{vision "vehicle_main"}
+			{bone "driver"}
+		}
+		{visor "gunner1"
+			{bone "foresight4"}
+			{vision "vehicle_top_mgun"}
+		}
+		{visor "gunner2"
+			{bone "foresight5"}
+			{vision "vehicle_top_mgun"}
+		}	
+	}
+	
+	(define "crew_human"
+		{placer
+			{place "%place" {group "crew"} {linkbone "%place"} {turnoff {sensor} {shadow}}}
+		}
+		{boarder
+			{door "%door1"}
+			{door "%door2"}
+			{link "%door1" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+			{link "%door2" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+		}
+	)
+	(define "crew_human_2"
+		{placer
+			{place "%place" {group "crew"} }
+		}
+		{boarder
+			{door "%door1"}
+			{door "%door2"}
+			{link "%door1" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+			{link "%door2" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+		}
+	)
+	{placer
+		{place "driver" {group "crew"} {visor "driver"}}
+		{place "charger" {group "crew"} {visor "main"}}
+	}
+	{boarder
+		{door "emit0"}
+		{door "emit1"}
+		{link "emit0" "driver" {anm "driver"} {forward putoff} {reverse puton}}
+		{link "emit1" "gunner" {anm "gunner"} {forward putoff} {reverse puton}}
+		{link "emit1" "charger" {anm "charger"} {forward putoff} {reverse puton}}
+		{link "emit3" "gunner1" {anm "gunner1"} {forward putoff} {reverse puton}}
+		{link "emit2" "gunner2" {anm "gunner1"} {forward putoff} {reverse puton}}
+		{link "emit1" "commander" {anm "commander"} {forward putoff} {reverse puton}}
+		
+	}
+
+	("crew_human" place(gunner)		door2(emit1))
+	("crew_human_2" place(driver)		door1(emit0) )
+	("crew_human" place(charger)		door2(emit1))
+	("crew_human" place(gunner1)		door2(emit3))
+	("crew_human" place(gunner2)		door2(emit2))
+	("crew_human" place(commander)		door2(emit1))
+	
+	{Placer
+	          {place "attach02"
+	             {entity "box1"}
+	             {Linkbone "attach02"}
+	             {handlebone "basis"}
+	             {obstacle disable}
+	          }
+	          {place "attach03"
+	             {entity "box1"}
+	             {Linkbone "attach03"}
+	             {handlebone "basis"}
+	             {obstacle disable}
+	          }
+	}
+	 
+
+	{extender "inventory"
+		{weapon "mgun" {mask "mountable"}}
+		{weapon "mgun1" {mask "mountable"}}
+		{box
+			{item "bulletrus_203 he" 10}	;10 rounds
+			{item "ammo mgun_rus dt" 2008}		;34 drums
+			{item "dt" filling "ammo mgun_rus dt" 63 {user "mgun"}}
+			{item "dt" filling "ammo mgun_rus dt" 62 {user "mgun1"}}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{weapon "203mm_b4" filling "bulletrus_203 he" 1}
+
+		}
+		{place "mgun"
+			{type "main"}
+			{LinkBone "mgun"}
+			{LinkAnimation "off"}
+			{gunner "gunner1"}
+			{charger "gunner1"}
+			("abm_mgun")
+			{basic}
+		}
+		{place "mgun1"
+			{LinkBone "mgun1"}
+			{LinkAnimation "off"}
+			{gunner "gunner2"}
+			{charger "gunner2"}
+			("abm_mgun")
+			{basic}
+		}
+	}
+
+	{mass 65000}
+	{Chassis
+		("tank_trace" fx("tracks_big") step(0.47) len(1.07))
+		("mobility_tank"
+			speed(22) ;----------Max speed when fully accelerated on road, km/h.
+			reverse(4) ;---------Max speed in reverse on road, km/h.
+			traverse(13) ;-------Track traverse, per second, in degrees.
+			weight(65.0) ;-------Weight in Tonnes.
+			power(500) ;---------Engine Power, in hp.
+			track(3.5) ;---------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			fuel(1270) ;---------Fuel capacity in Litres.
+			type(fuel) ;---------Fuel type. (diesel OR fuel)
+			range(120) ;---------Range in km, off-road.
+		)
+	}
+
+	{Extension "su14.mdl"}
+
+	{bone "gun_rot"
+		{speed2 2}
+	}
+	{bone "turret"
+		{speed2 2}
+	}
+	(mod "mp"
+		{brain
+			{properties
+				{fire_mode hold}
+			}
+		}
+	)
+}

@@ -1,0 +1,166 @@
+{game_entity
+	(include "/properties/armoredcar.ext")
+	(include "/properties/shadow/tank.inc" scale(1.0))
+	(include "/properties/selection/vehicle.inc" scale(1.0))
+	{props "tank" "turret" "wheeled" "explosion_throw_crew" "vision_lev02" "tractor" "tractor_heavy" "detect_tank_mg" "open_death_fx_low"}
+	{Extension "sdkfz251_2.mdl"}
+	{extension "crew_2.ext"}
+	{patherId "sdkfz251"}
+	{targetclass "armoredcar"}
+	{targetSelector "cannon_howitzer"}
+
+	{extender "enumerator"
+		{digit_folder "ger"}
+	}
+
+	("armoredcar_tier1")
+
+	("tracks" repair(30) thickness(15))
+
+	{extender "shield"
+		{on}
+	}
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	{component "sticky_body"}
+
+	{volume "body1"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body3"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body4"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body5"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "body6"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "engine1"
+		{tags "engine"}
+		{component "engine"}
+		{thickness 20}
+	}
+	{volume "engine2"
+		{tags "engine"}
+		{component "engine"}
+		{thickness 20}
+	}
+	{Volume "fuel"
+		{thickness 1}
+	}
+	{Volume "mgun_shield"
+		{thickness 10}
+	}
+	{volume "gun1"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gun2"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gun3"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gun4"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gun5"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gun6"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+
+	{component "gun"
+		{RepairTime 15}
+	}
+	("ammo" args "ammo1")
+	{extender "inventory"
+		{weapon "mgun" {mask "mountable"}}
+		{Box
+			{item "mg34_belt" filled {user "mgun"}} ;// doesn't work if same mg34_belt weapon is in both MG places
+			{item "ammo mgun_ger belt" 2010}
+			{item "mortarger_80 he" 50}
+			{item "mortarger_80 sm" 15}
+		}
+	}
+
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{Barrels 1}
+			{weapon "weapon 80mm_sgrw34" filling "mortarger_80 he" 1}
+			{gunner "gunner"}
+			{charger "commander"}
+			{foresight "foresight"}
+			("abm_dymamic_mortar"
+				zeroing(3.0)	; // time it takes to aim until the reticle shrinks. Bigger values, more control.
+				dispersion(1)   ; // time it takes to distort the reticle when you move the gun (how abrupt it loses zeroing). Bigger values, more control.
+			)
+		}
+		{place "mgun"
+			{type "rear"}
+			{gunner "gunner1"}
+			{charger "gunner1"}
+			{LinkBone "mgun"}
+			{LinkAnimation "off"}
+			("abm_mgun")
+			{ai_in_manual}
+			{basic}
+		}
+	}
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+
+	{mass 14500}
+	{Chassis "wheel"
+		("tank_trace_ex" fx("tracks_sm2") step(0.2) len(0.46) boneleft("FXtraceL3") boneright("FXtraceR3"))
+		("car_trace" fx("tracewheel03a") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+
+		("mobility_car"
+			speed(43) ;----------------------------------Max speed.
+			speedatmaxturn(14) ;-------------------------Max speed at max turn.
+			reverse(9) ;---------------------------------Max speed in Reverse.
+			weight(14.5) ;--------------------------------Weight in Tonnes.
+			power(100) ;---------------------------------Horse Power.
+			fuel(160) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(150) ;---------------------------------Range in Kilometers.
+		)
+	}
+}

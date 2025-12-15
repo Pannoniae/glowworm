@@ -1,0 +1,142 @@
+;Exported by:	 ftiger
+;Date:			 09.12.2017 16:02:57
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\Early WW2 tanks\germany\stug3\stug3_b\stug3b_xx.max
+{skeleton
+	{bone revolute "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{matrix34
+				0.9993 	 0 	 -0.0361
+				-0.002 	 0.9984 	 -0.0565
+				0.0361 	 0.0566 	 0.9977
+				-0.7391 	 -12.1831 	 36.2593
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "part1"
+				{parameters "id=part1;"}
+				{Position 44.3142 	 -12.6094 	 -24.4193}
+				{VolumeView "part1.ply"}
+			}
+			{bone revolute "part2"
+				{parameters "id=part2;"}
+				{matrix34
+					0.9993 	 -0.002 	 0.0361
+					0 	 0.9984 	 0.0566
+					-0.0361 	 -0.0565 	 0.9977
+					-40.6143 	 37.2795 	 -23.1902
+				}
+				{VolumeView "part2.ply"}
+			}
+		}
+	}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{Position 17.7415 	 12.1646 	 -22.0458}
+}
+{volume "body3"
+	{polyhedron "body3.vol"}
+	{bone "body"}
+	{Position 2.7899 	 12.1644 	 -3.0232}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position 2.7992 	 12.1646 	 -10.1995}
+}
+{volume "body4"
+	{polyhedron "body4.vol"}
+	{bone "body"}
+	{Position 26.5581 	 -1.5323 	 -10.3547}
+}
+{volume "body5"
+	{polyhedron "body5.vol"}
+	{bone "body"}
+	{Position 26.5599 	 23.3007 	 -10.3484}
+}
+{volume "body6"
+	{polyhedron "body6.vol"}
+	{bone "body"}
+	{Position 24.8123 	 27.016 	 -3.4772}
+}
+{volume "body7"
+	{polyhedron "body7.vol"}
+	{bone "body"}
+	{Position 24.8008 	 -1.7308 	 -3.5472}
+}
+{volume "engine"
+	{polyhedron "engine.vol"}
+	{bone "body"}
+	{matrix34
+		0.9993 	 -0.002 	 0.0361
+		0 	 0.9984 	 0.0566
+		-0.0361 	 -0.0565 	 0.9977
+		-32.7757 	 13.2216 	 -18.3116
+	}
+}
+{volume "gun"
+	{cylinder 2.03154 18.7252}
+	{bone "body"}
+	{matrix34
+		-0.1593 	 0.9848 	 0.0696
+		0.0859 	 -0.0564 	 0.9947
+		0.9835 	 0.1644 	 -0.0757
+		32.6845 	 11.2569 	 -7.7091
+	}
+}
+{volume "mantlet"
+	{box 0.941441 11.8857 16.4429}
+	{bone "body"}
+	{matrix34
+		0.9752 	 0.1536 	 0.1595
+		-0.1544 	 -0.0443 	 0.987
+		0.1587 	 -0.9871 	 -0.0195
+		23.8749 	 10.2502 	 -6.2445
+	}
+}
+{volume "part1"
+	{cylinder 8.73233 5.0592}
+	{bone "part1"}
+	{matrix34
+		0.9976 	 -0.0698 	 0
+		-0.0109 	 -0.1561 	 0.9877
+		-0.0689 	 -0.9853 	 -0.1564
+		0.1688 	 0.2549 	 -0.2803
+	}
+}
+{volume "part2"
+	{cylinder 8.18721 4.73627}
+	{bone "part2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0.0804 	 0.9968
+		0 	 -0.9968 	 0.0804
+		0 	 -0.4019 	 0.1903
+	}
+}
+{volume "trackleft"
+	{box 8.41696 23.5008 102.339}
+	{bone "body"}
+	{matrix34
+		0 	 0.9984 	 0.0566
+		-0.0361 	 -0.0565 	 0.9977
+		0.9993 	 -0.002 	 0.0361
+		3.2544 	 36.7406 	 -22.3989
+	}
+}
+{volume "trackright"
+	{box 8.41696 23.5008 102.339}
+	{bone "body"}
+	{matrix34
+		0 	 0.9984 	 0.0566
+		-0.0361 	 -0.0565 	 0.9977
+		0.9993 	 -0.002 	 0.0361
+		3.253 	 -10.9179 	 -25.0607
+	}
+}

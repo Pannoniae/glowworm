@@ -1,0 +1,134 @@
+{game_entity
+	(include "/properties/tank_assaultgun.ext")
+	(include "/properties/shadow/tank.inc" scale(1.2))
+	(include "/properties/selection/vehicle.inc" scale(1.1))
+	{props "td" "light" "-turret" "mantlet" "vision_lev03" "muzzle_75mm_76mm_sides" "shell_eject" "open_top" "detect_td_medium"}
+	{Extension "marder139.mdl"}
+	{PatherId "panzer3"}
+	{targetclass "tank_medium"}
+	{targetSelector "tank_medium"}
+	{volume "body1"
+		{tags "body"}
+		{component "body"}
+		{thickness 16
+			{front 50}
+		}
+	}
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 15
+			{front 50}
+		}
+	}
+	{volume "body3"
+		{tags "body"}
+		{component "body"}
+		{thickness 15}
+	}
+	{volume "engine"	
+		{thickness 11}
+	}
+	{volume "gun"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gunrot"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "gun2"
+		{tags "gun"}
+		{component "gun"}
+		{thickness 15}
+	}
+	{volume "turret"
+		{tags "turret"}
+		{component "turret"}
+		{thickness 15}
+	}
+	("ammo" args "ammo1")
+	{sensor
+		{visor "around"
+			{vision "vehicle_around"}		;// better vision than a in-closed turret 
+		}
+	}
+
+	{boarder
+		{anm "left"
+			{forward {begin "board_tank_left"} {end "seat_armor"}}
+			{reverse {end "emit_tank_1"}}
+		}
+		{anm "right"
+			{forward {begin "board_tank_right"} {end "seat_armor"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "driver"
+			{forward {begin "board_tank_left"} {end "pose_flak38-1_charger"}}
+			{reverse {end "emit_tank_1"}}
+		}
+	}
+
+	("crew_human"	place(driver) 	 door(emit1) door2(emit1) visor(driver) anm_left(driver)  anm_right(driver))
+	("crew_human"	place(commander) door(emit1) door2(emit2) visor(around) anm_left(right)   anm_right(right))
+	("crew_human_visible_anm"	place(gunner) 	 door(emit1) door2(emit2) visor(main) 	 anm_left(left)    anm_right(left))
+	("crew_human_visible_anm"	place(charger) 	 door(emit1) door2(emit2) visor(main) 	 anm_left(left)    anm_right(left))
+
+	{extender "inventory"
+		{box
+			{item "bulletger_75_l43 apcbche" 19}	;44 rounds
+			{item "bulletger_75_l43 he" 20}
+			{item "bulletger_75_l43 apcr" 4}
+			{item "ammo mgun_ger drum" 550}			; 12 drums (50 rounds each)
+			{item "geballteladung_3kg" 1}
+		}
+	}
+
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{weapon "76mm_pak36" filling "bulletger_75_l43 apcbche" 1}
+			{RestoreIKAfterAim}
+			("abm_dymamic_td"
+				zeroing(2.5)
+				dispersion(0.25)
+			)
+			{rotate}
+		}
+		{place "mgun1"
+			{type "hull"}
+			{weapon "mg37t" filled}
+			{foresight "foresight4"}
+			{gunner "driver"}
+			{charger "driver"}
+			("abm_mgun")
+			{basic}
+			{ai_in_manual}
+		}
+	}
+
+	{mass 9850}
+	{Chassis
+		("tank_trace" fx("tracks_sm2") step(0.2) len(0.55))
+		("mobility_tank"
+			speed(42) ;----------Max speed when fully accelerated on road, km/h.
+			reverse(10);---------Max speed in reverse on road, km/h.
+			traverse(34) ;-------Track traverse, per second, in degrees.
+			weight(9.85) ;-------Weight in Tonnes.
+			power(125) ;---------Engine Power, in hp.
+			track(5) ;-----------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			fuel(220) ;----------Fuel capacity in Litres.
+			type(fuel) ;---------Fuel type. (diesel OR fuel)
+			range(100) ;---------Range in km, off-road.
+		)
+	}
+
+	{bone "gun_rot"
+		{speed2 10}
+	}
+	{bone "turret"
+		{speed2 8}
+	}
+}

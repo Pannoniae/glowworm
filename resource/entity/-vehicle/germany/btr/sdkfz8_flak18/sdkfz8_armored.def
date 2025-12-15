@@ -1,0 +1,47 @@
+{game_entity
+	(include "/properties/halftrack.ext")
+	(include "/properties/selection/vehicle.inc" scale(1.4))
+	{props "td" "tank" "open_top" "turret" "with_gun" "vision_lev02" "tractor" "tractor_heavy" "detect_td_medium" "open_death_fx_low"}
+	{extension "sdkfz8_armored.mdl"}
+	(include "sdkfz8_armored.ext")
+	{extension "crew_sdkfz8_armored.ext"}
+	{targetclass "armoredcar"}
+	{targetSelector "cannon_aa"}
+	{patherId "sdkfz8"}
+
+	{extender "enumerator"
+		{digit_folder "np"}
+	}
+
+	{sensor
+		{visor "main"
+			{vision "tank_range_210"}
+		}
+	}
+
+	{extender "inventory"
+		{box
+		}
+	}
+
+	{Weaponry
+		("restore_ik_time")
+	}
+
+	{mass 15000}
+	{Chassis "wheel"
+		("tank_trace" fx("tracks_mid") step(0.5) len(0.78) boneleft("FXtraceL2") boneright("FXtraceR2"))
+		("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("mobility_car"
+			speed(40) ;----------------------------------Max speed.
+			speedatmaxturn(15) ;-------------------------Max speed at max turn.
+			reverse(25) ;--------------------------------Max speed in Reverse.
+			weight(20.0) ;-------------------------------Weight in Tonnes.
+			power(185) ;---------------------------------Horse Power.
+			fuel(250) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(110) ;---------------------------------Range in Kilometers.
+		)
+	}
+
+}

@@ -1,0 +1,82 @@
+;Exported by: Mark
+;Date:        Wed Feb 04 21:10:16 2015
+;File:        C:\Users\Mark\WW1\models\21cm\21cm_morser_main_x.max
+{Skeleton
+	{bone revolute "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=body;"}
+			{Position -0.386914	-0.215217	0}
+			{VolumeView "body.ply"}
+			{bone revolute "gun_rot"
+				{parameters "ID=gun;"}
+				{limits -5 40}
+				{speed 0.002}
+				{Matrix34
+					1	0	0
+					0	0	-1
+					0	1	0
+					15.3905	0	25.4001
+				}
+				{VolumeView "gun_rot.ply"}
+				{bone "gun"
+					{parameters "ID=gun;"}
+					{Matrix34
+						1	0	0
+						0	0	1
+						0	-1	0
+						17.9256	-8.8491	-0.263885
+					}
+					{bone "gun_vew"
+						{parameters "ID=gun;"}
+						{Position 7.00	0	0}
+						{VolumeView "gun.ply"}
+					}
+				}
+			}
+			{bone "pivot_front"
+				{Position 22.0095	0.215217	0}
+				{bone revolute "wheell"
+					{parameters "ID=wheelleft;"}
+					{Matrix34
+						1	0	0
+						0	0	-1
+						0	1	0
+						-2.87859	19.37	14.1137
+					}
+					{bone "wheell_view"
+						{Matrix34
+							1.1	0	0
+							0	1.1	0
+							0	0	1
+							0	0	0
+						}
+						{VolumeView "wheell.ply"}
+					}
+				}
+				{bone revolute "wheelr"
+					{parameters "ID=wheelright;"}
+					{Matrix34
+						1	0	0
+						0	0	-1
+						0	1	0
+						-2.84708	-19.3134	14.1137
+					}
+					{bone "wheelr_view"
+						{Matrix34
+							1.1	0	0
+							0	1.1	0
+							0	0	1
+							0	0	0
+						}
+						{VolumeView "wheelr.ply"}
+					}
+				}
+			}
+		}
+	}
+}

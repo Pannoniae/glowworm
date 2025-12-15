@@ -1,0 +1,63 @@
+{game_entity
+	(include "/properties/vehicle_xx.ext")
+	{extension "kv2_39_xx.mdl"}
+
+	{volume "barrel1"
+		{thickness 75
+			{front 90}
+		}
+	}
+	{volume "barrel2"
+		{thickness 30}
+	}
+	{volume "body1"			; Hull
+		{thickness 75
+			{front 75}		; Lower Nose
+			{top 70}		; Glacis
+			{rear 1}
+			{bottom 20}
+		}
+	}
+	{volume "body2"			; Superstructure
+		{thickness 75
+			{top 30}
+			{rear 1}
+			{bottom 1}
+		}
+	}
+	{volume "engine1"
+		{thickness 75
+			{front 20}
+			{top 1}
+			{rear 70}
+			{bottom 20}
+		}
+	}
+	{volume "engine2"
+		{thickness 75
+			{front 20}
+			{top 30}
+			{rear 70}
+			{bottom 1}
+		}
+	}
+	{volume "turret1"		; Main Turret
+		{thickness 75
+			{top 30}
+			{bottom 40}
+		}
+	}
+	{volume "turret"		; Turret Ring
+		{thickness 75}
+	}
+	{volume "mantlet"		; Fixed Left Side
+		{thickness 75}
+	}
+	{volume "gun"
+		{thickness 75
+			{front 90}
+		}
+	}
+
+	("tracks" thickness(20))
+}

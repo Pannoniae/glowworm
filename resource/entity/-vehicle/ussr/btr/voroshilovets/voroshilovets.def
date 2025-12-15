@@ -1,0 +1,131 @@
+{game_entity
+	(include "/properties/tank_unarmed.ext")
+	(include "/properties/shadow/tank.inc" scale(0.9))
+	(include "/properties/selection/vehicle.inc" scale(0.8))
+	{props "vehicle" "armored_car" "-turret" "tank" "explosion_throw_crew" "vision_lev02" "tractor" "tractor_heavy" "diesel"}
+	{Extension "voroshilovets.mdl"}
+	{targetclass "armoredcar" "bullet"}
+	{targetSelector "tank_bullet"}
+	{patherId "t34"}	
+
+	("tankette_tier1")
+	("tracks" repair(30) thickness(15))	
+	{volume "body"
+		{tags "body"}
+		{component "body"}
+		{thickness 3}
+	}
+	{volume "bodyback"
+		{tags "body"}
+		{component "bodyback"}
+		{thickness 1}
+	}
+	{extender "shield"
+			{off}
+	}
+	{Volume "shield"
+		{component "shield"}
+		{thickness 1}	
+	}
+	{component "shield"}
+
+	{Volume "cabin"
+		{tags "body"}
+		{component "cabin"}
+		{thickness 1}	
+	}
+	{Volume "engine"
+		{component "engine"}
+		{thickness 10}
+	}
+	{Volume "fuel"
+		{component "fuel"}
+	}
+	{Volume "trackleft"
+		{thickness 5}
+	}
+	{Volume "trackright"
+		{thickness 5}
+	}
+	{Volume "window1"
+		{Thickness 0.2}
+		{able {visible 0}{window}{obstacle 0}}
+	}
+	{Volume "window2"
+		{Thickness 0.2}
+		{able {visible 0}{window}{obstacle 0}}
+	}
+	{Volume "window3"
+		{Thickness 0.2}
+		{able {visible 0}{window}{obstacle 0}}
+	}
+	{Volume "window4"
+		{Thickness 0.2}
+		{able {visible 0}{window}{obstacle 0}}
+	}
+	{component "cabin"}
+	{component "bodyback"}
+	{component "shield"}
+	
+	{boarder
+		{anm "left"
+			{forward	{begin	"board_big-highcar_driver"} {end "seat_passenger"} {base "doorleft"}}
+			{reverse 	{end	"board_big-highcar_driver" -1} {base "doorleft" -1}}
+		}
+		{anm "right"
+			{forward	{begin	"board_big-highcar"} {end "seat_passenger"} {base "doorright"}}
+			{reverse 	{end	"board_big-highcar" -1} {base "doorright" -1}}
+		}
+		{anm "armor1"
+			{forward	{begin	"board_body"} {end "seat_passenger"}}
+			{reverse 	{end	"emit_body"}}
+		}
+	}
+
+	("crew_human_visible_anm" place(driver) door1(emit1) door2(emit1) visor(driver) anm_left(left) anm_right(left)) 
+	("crew_human_visible_anm" place(commander) door1(emit2) door2(emit2) visor(driver) anm_left(right) anm_right(right))
+	("seat_human" place(seat1) bone(seat01) door(emit4) animation(armor1))
+	("seat_human" place(seat2) bone(seat02) door(emit4) animation(armor1))
+	("seat_human" place(seat3) bone(seat03) door(emit4) animation(armor1))
+	("seat_human" place(seat4) bone(seat04) door(emit4) animation(armor1))
+	("seat_human" place(seat5) bone(seat05) door(emit3) animation(armor1))
+	("seat_human" place(seat6) bone(seat06) door(emit3) animation(armor1))
+	("seat_human" place(seat7) bone(seat07) door(emit3) animation(armor1))
+	("seat_human" place(seat8) bone(seat08) door(emit3) animation(armor1))
+	("seat_human" place(seat9) bone(seat09) door(emit3) animation(armor1))
+
+	{sensor
+		{visor "main"
+			{vision "tank_main-l"}
+			{bone "visor1"}
+		}
+		{Visor "driver"
+			{vision "vehicle_around"}
+			{bone "visor1"}
+		}
+	}
+	{extender "inventory"
+		{box
+			(mod "mp"
+				{item "tow_rope" 1}
+			)
+		}
+	}
+	{mass 15500}
+	{Chassis "track"
+		("tank_trace" fx("tracks_sm2") step(0.15) len(0.45))
+		("mobility_tank"
+			speed(36) ;----------Max speed when fully accelerated on road, km/h.
+			reverse(7) ;--------Max speed in reverse on road, km/h.
+			traverse(35) ;-------Track traverse, per second, in degrees.
+			weight(15.5) ;-------Weight in Tonnes.
+			power(375) ;----------Engine Power, in hp.
+			track(5) ;-----------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			fuel(550) ;-----------Fuel capacity in Litres.
+			type(diesel) ;---------Fuel type. (diesel OR fuel)
+			range(130) ;---------Range in km, off-road.
+		)
+	}		
+	
+	
+}

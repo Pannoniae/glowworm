@@ -1,0 +1,186 @@
+{Car
+	(include "/properties/armoredcar.ext")
+	(include "/properties/selection/vehicle.inc"  scale(1.0))
+	(include "/properties/car_crew.ext")
+	{props "sdkfz251_1" "vehicle" "armored_car" "vision_lev02" "tank" "turret" "wheeled" "explosion_throw_crew" "flak" "barrel1" "tractor" "tractor_heavy"}
+	{targetClass "armoredcar" "ap bullet"}
+	{targetSelector "tank"}
+	{targetSelector "tank_bullet"} 
+
+	(include "sdkfz251_20.ext")
+	{Extension "sdkfz251_20.mdl"}
+	
+	{extender "enumerator"}
+
+
+	
+
+{boarder
+	{anm "passengers"
+		{forward	{begin	"board_SdKfz251-1"} {end "seat_passenger"}}
+		{reverse 	{end	"emit_tank_1"}}
+	}
+	{anm "passengers1"
+		{forward	{begin	"board_SdKfz251-1"} {end "seat_passenger"}}
+		{reverse 	{end	"emit_body"}}
+	}
+	{anm "driver"
+		{forward	{begin	"board_SdKfz251-1"} {end "seat_driver_car"}}
+		{reverse 	{end	"emit_body" 1}}
+	}
+	{anm "gunner"
+		{forward	{begin	"board_SdKfz251-1"} {end "seat_gunner_stand"}}
+		{reverse 	{end	"emit_body" 1}}
+	}
+
+}
+
+(define "crew_human"
+	{placer
+		{place "%place" {group "%group"} {linkbone "%bone"} {turnoff {sensor} {shadow}}}
+	}
+	{boarder
+		{door "%door"}
+		{link "%door" "%place" {anm "%animation"} {forward putoff} {reverse puton}}
+	}
+)
+
+
+
+
+
+("crew_human" place(driver)	door(emit1) bone(driver) animation(driver)		group(crew))
+("crew_human" place(gunner)	door(emit2) bone(gunner) animation(gunner)		group(crew))
+("crew_human" place(seat1)	door(emit3) bone(seat01) animation(passengers)	group(passengers))
+("crew_human" place(seat2)	door(emit4) bone(seat02) animation(passengers1)	group(passengers))
+("crew_human" place(seat3)	door(emit5) bone(seat03) animation(passengers)	group(passengers))
+("crew_human" place(seat4)	door(emit6) bone(seat04) animation(passengers1)	group(passengers))
+("crew_human" place(seat5)	door(emit7) bone(seat05) animation(passengers1)	group(passengers))
+("crew_human" place(seat6)	door(emit8) bone(seat06) animation(passengers)	group(passengers))
+
+
+
+	("crew_2_human")
+ 	("crew_human" place(seat1) bone(seat01) door(emit3) animation(passenger1))
+	("crew_human" place(seat2) bone(seat02) door(emit4) animation(passenger2))
+ 	("crew_human" place(seat3) bone(seat03) door(emit5) animation(passenger1))
+	("crew_human" place(seat4) bone(seat04) door(emit6) animation(passenger2))
+ 	("crew_human" place(seat5) bone(seat05) door(emit7) animation(passenger1))
+	("crew_human" place(seat6) bone(seat06) door(emit8) animation(passenger2))
+
+
+	{placer
+		{place "driver"		{group "driver"} {visor "driver"}}
+		{place "gunner"		{group "driver"} {visor "main"} {turnoff {targetable 0}}}
+	}
+
+
+(define "define_place"
+	{placer
+		{place "%place" {linkbone "%place"} {attach squat_lie} {turnoff {shadow}}}
+	}
+	{Volume "%place"
+		{tags "attach" "attach_%place"}
+		{able clear {bullet 0} {touch 1}}
+	}
+)
+
+{boarder
+	{door "emit"}
+	{door "emit1"}
+	{node "node1"}
+
+	(define "climb"
+		{anm "climb%0"
+			{forward	{begin	"board_SdKfz251-1"} {base "rope%0"}}
+			{reverse 	{begin	"emit_Bk1124"}} ;emit_torpedo_boat
+		}
+	)
+	("climb" args 1)
+	("climb" args 2)
+	("climb" args 3)
+	("climb" args 4)
+	{anm "seat" {forward {end "seat_passenger"}}}
+
+	{link "emit"	"node1"	{anm "climb1"} {forward putoff} {reverse puton}}
+
+        {link "emit1"	"node1"	{anm "climb1"} {forward putoff} {reverse puton}}
+	{link "node1"	"Searchlight"		} ;{anm "walk"}
+
+}
+
+	{extender "inventory"
+		{box
+			{item "ammo mgun_ger drum" 1950}		; 39 drums (50 rounds each)
+			{item "mg42_drum" filling "ammo mgun_ger drum" 50}
+			{item "geballteladung_3kg" 1} ; in case enemy wants to capture
+		}
+	}
+
+	{Weaponry
+		{place "gun"
+			;{weapon "searchlight"}
+			{weapon "searchlight_uhu"}
+			{foresight "foresight3"}
+			{gunner "gunner"}
+			{basic}
+			{ai_in_manual}
+			{rotate}
+		}
+	}
+
+
+	;{sensor
+	;	{visor "gunner" {bone "mgun"}}
+	;
+	;}
+	;{placer 
+	;	{place "gunner01" {useVision} {visor "gunner01"}}
+	;
+	;}
+
+	{sensor
+		{Visor "gun"
+			{vision "searchlight"}
+			{bone "foresight3"}
+		}
+	}
+	
+	{extender "light"
+	    {lamp "lamp1"
+		{preset "lamp_spot"
+                        {light_fx  "light_searchlight"}
+	                {light_bone "lamp_light_spot1"}
+	                {break_fx 	"glass_hit"}
+                        {break_bone "lamp_glass1"}
+                }
+	    }
+            {check_operatable}	    
+	} 
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+
+	{Chassis "wheel"
+		("tank_trace_ex" fx("tracks_sm2") step(0.2) len(0.50) boneleft("FXtraceL3") boneright("FXtraceR3"))
+		("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("mobility_car"
+			speed(65) ;----------------------------------Max speed.
+			speedatmaxturn(20) ;-------------------------Max speed at max turn.
+			reverse(13) ;--------------------------------Max speed in Reverse.
+			weight(4.9) ;--------------------------------Weight in Tonnes.
+			power(100) ;---------------------------------Horse Power.
+			fuel(110) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(150) ;---------------------------------Range in Kilometers.
+		)
+	}
+	{mass 8500}
+
+	{bone "turret"
+		{speed2 30}
+	}
+}
+
+
+
