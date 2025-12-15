@@ -1,0 +1,5 @@
+"/texture/fx/particle/bm_blood_f"
+"/texture/fx/particle/bm_blood_e"
+"/texture/fx/particle/bm_blood_d"
+"/texture/fx/particle/bm_blood_a"
+"/texture/fx/particle/bm_blood_splash_a"
