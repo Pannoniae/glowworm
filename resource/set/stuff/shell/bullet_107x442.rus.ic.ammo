@@ -1,0 +1,19 @@
+{from "pattern ic"
+	{tag "size1" "mortar" "big" "ic"}
+	{inventory {size 4 1}}
+	{entity "107mm_rus_he"}
+	{mass 22.32}
+
+	{view "howitzer_shell_105-150_lv"
+		;//{tail "shell_tracer_100-152_he_long" "tail"}
+	}
+
+	{damage fire
+		{radius 3}
+		{heating 20}
+		{time 1}
+		;{ground_interaction_radius 0.3} ;// crashes game if used with fire damage
+	}
+
+	{detonationThickness 1}
+}

@@ -105,16 +105,23 @@
 
 (define "items_light_fin"
 
+;// pistol
+	{item "m1907_mag"				"ammo" 14 {value 1}}
+
 ;// smg
 	{item "suomi_drum"				"ammo" 72 {value 4}}
 	{item "suomi_stick"				"ammo" 50 {value 3}}
 	{item "bergmann_stick"			"ammo" 50 {value 3}}
 
+;// rifle
+	{item "rifle_swe" "clip"		"ammo" 10 {value 1}}
+
 ;// mg
 	{item "chauchat"				"ammo" 20 {value 2}}
+	{item "kg_m21_mag"				"ammo" 20 {value 2}}
 	{item "m26"						"ammo" 20 {value 2}}
 	{item "madsen"					"ammo" 30 {value 3}}
-	{item "7x58"					"ammo" 20 {value 2}}
+
 	{item "mgun_rus" "l33_36"		"ammo" 75 {value 5}}
 
 ;// Light weaponry
@@ -131,6 +138,7 @@
 	{item "grenade" "molotov_bundle_fin"	1  {value 10}}
 	{item "grenade" "molotov_cocktail_fin"	1  {value 10}}
 
+	{item "grenade" "svkkr_pm"				1  {value 5}}
 	{item "grenade" "m42_wp"				1  {value 5}}
 	{item "grenade" "m43_smoke"				1  {value 5}}
 )
@@ -288,11 +296,13 @@
 	{item "bandage_rus"						1 {value 1}}
 	{item "bandage_fin"						1 {value 1}}
 	{item "bandage_usa"						1 {value 1}}
+	{item "bandage_eng"						1 {value 1}}
 
 	{item "knife_ger"						1 {value 2}}
 	{item "knife_rus"						1 {value 2}}
 	{item "knife_fin"						1 {value 2}}
 	{item "knife_usa"						1 {value 2}}
+	{item "knife_eng"						1 {value 2}}
 )
 
 (define "items_medic"
@@ -301,10 +311,10 @@
 	{item "bandage_rus"						1 {value 1}}
 	{item "bandage_fin"						1 {value 1}}
 	{item "bandage_usa"						1 {value 1}}
+	{item "bandage_eng"						1 {value 1}}
 )
 
 (define "items_heavy_ger"
-	{item "borgward"			"450kg"		"ammo"	1 {value 350}}
 	{item "bullet_20_auto"		"aphe"		"ammo" 20 {value 5}}
 
 	{item "bulletger_15_auto"	"ap"		"ammo" 20 {value 5}}
@@ -945,11 +955,9 @@
 			("items_light_rus")
 			("items_light_eng")
 			("items_light_usa")
-			("items_light_usaf")
 			("items_heavy_rus")
 			("items_heavy_eng")
 			("items_heavy_usa")
-			("items_heavy_usaf")
 		}
 		{radius				15}		;// resupply radius in meter
 		{resupplyPeriod		2}		;// resupply period in seconds
@@ -1209,11 +1217,9 @@
 			("items_light_rus")
 			("items_light_eng")
 			("items_light_usa")
-			("items_light_usaf")
 			("items_heavy_rus")
 			("items_heavy_eng")
 			("items_heavy_usa")
-			("items_heavy_usaf")
 		}
 		{radius 			15}			;// resupply radius in meter
 		{resupplyPeriod 	2}			;// resupply period in seconds

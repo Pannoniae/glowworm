@@ -248,6 +248,14 @@
 	("spotting" r(0.85))
 }
 
+{"tank_rear-mg"							; // Tank with rear turret machine gun
+	{uncover 20}
+	{h_fov 40}
+	{v_fov 50}
+	("spotting" r(0.85))
+}
+
+
 {"tank_remote-mg"						; // Remote controlled roof Machine gun (Hetzer, Stug3g, etc)
 	{uncover 20}
 	{h_fov 8}

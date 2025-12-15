@@ -93,7 +93,15 @@
 		disorder_time(%dispersion) order_time(%zeroing)
 	)
 )
-
+(define "abm_dymamic_gun_poor" ;for AT guns and cannons, have the benefit that they can traverse much more without losing aim.
+	{RestoreIKAfterAim}
+	{ai_in_manual}
+	("accuracy_by_motion"
+		max_linear(1) accuracy_by_linear(0.25)
+		max_angular(1) accuracy_by_angular(0.25)
+		disorder_time(%dispersion) order_time(%zeroing)
+	)
+)
 (define "abm_dymamic_mortar"	;for Mortar cannons
 	{RestoreIKAfterAim}
 	{ai_in_manual}
