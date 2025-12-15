@@ -7,7 +7,7 @@ from zipfile import *
 import shutil
 import traceback
 
-new_directory = "megamod_release"
+new_directory = "glowworm_release"
 # copy mod directory
 try:
     subprocess.call(shlex.split(f"powershell rmdir ../{new_directory} -force -recurse"), shell=True)
