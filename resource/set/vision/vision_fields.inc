@@ -154,23 +154,23 @@
 }
 
 {"moto"
-    {"uncover" 50}
-    {"h_fov" 30}
-    {"v_fov" 140}
+    {uncover 50}
+    {h_fov 30}
+    {v_fov 140}
     ("spotting" r(1))
 }
 
 {"moto_crew"
-    {"uncover" 50}
-    {"h_fov" 90}
-    {"v_fov" 60}
+    {uncover 50}
+    {h_fov 90}
+    {v_fov 60}
     ("spotting" r(1))
 }
 
 {"moto_around"
-    {"uncover" 50}
-    {"h_fov" 360}
-    {"v_fov" 60}
+    {uncover 50}
+    {h_fov 360}
+    {v_fov 60}
     ("spotting" r(1))
 }
 
