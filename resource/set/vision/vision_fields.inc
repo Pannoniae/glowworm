@@ -381,10 +381,10 @@
 ;/*=============== Other Begin ===============*/
 
 {"noise_detection"								; // hearing aid
-	{uncover 5}
-	{h_fov 360}
-	{v_fov 180}
-	("hearing" args 1)
+	;{uncover 5}
+	;{h_fov 360}
+	;{v_fov 180}
+	;("hearing" args 1)
 }
 
 {"cover-detector"
@@ -402,6 +402,7 @@
 
 {"searchlight"
 	{uncover 100}
+	{radius 300}
 	{h_fov 12}
 	{v_fov 90}
 	("spotting" r(3.0))
