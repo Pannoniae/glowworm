@@ -1,0 +1,45 @@
+;SDL
+
+	; armor notes
+	; tracks 10mm
+	; gun 20mm
+
+	("tank_medium_tier2")
+
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(20))
+
+	("shield" args "armor1" 13)
+	("shield" args "armor2" 13)
+	("shield" args "armor3" 8)
+	("shield" args "armor4" 8)
+	("shield" args "armor5" 13)
+	("shield" args "armor6" 13)
+	("shield" args "armor7" 13)
+	("shield" args "armor8" 13)
+	
+				
+	{Volume "body1"
+		{Thickness 13}
+	}
+	{Volume "body2"
+		{Thickness 13}
+	}
+	{Volume "engine"
+		{Thickness 13}
+	}	
+	{Volume "turret"
+		{Thickness 8
+		{front 13}
+	}	
+}
+	;("armor_m19" turret1(13 8 8 8) body1(13 13 13 13) body2(13 13 13 13))
+	;("armor_engine"  t(40 40 40 40))	
+	("fuel" args "fuel")
+	("transmission" args "transmission")	

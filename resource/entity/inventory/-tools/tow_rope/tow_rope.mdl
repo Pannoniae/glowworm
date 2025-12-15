@@ -1,0 +1,78 @@
+;Exported by: Normand
+;Date:        Mon Sep 24 17:54:43 2018
+;File:        C:\Users\Normand\rope_invent.max
+{Skeleton
+	{bone "tow_rope"
+		{parameters "CommonMesh;ID=tool;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "tow_rope.ply"}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-3.02999	-5.99351	-0.879807
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 16.7323 16.7323 1.17113}
+	{Bone "tow_rope"}
+	{Position 1.78413	2.92193	-0.924406}
+}
+{Volume "select"
+	{Box 19.9016 17.7165 3.14961}
+	{Bone "tow_rope"}
+	{Position 1.52175	1.60748	-0.859821}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin 4.97465	-7.79608	29.7795}
+			{lookat 4.28306	-4.97515	12.5889}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 12.7567	-5.18369	4.70144}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -5.45693	-4.57745	3.1321}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 2.37522	-7.71776	29.2169}
+			{lookat 1.71022	-5.00532	12.6875}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 12.7567	-5.18369	4.70144}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -5.45693	-4.57745	3.1321}
+			}
+		}
+	}
+}

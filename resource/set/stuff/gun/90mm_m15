@@ -1,0 +1,32 @@
+{from "pattern gun"     ; Super Pershing
+	{filling "bullet90_t15_usa"}
+	{fireSound "gun/gun_75_105"}
+	{fireSoundclose "gun/gun_interior/size3"}
+	{reloadSound "interior/large/big_reload_interior"}
+	("range_250")
+	{calibre 90}
+
+	("reload time" seconds(11))
+
+	("velocity m/s" ap(975) apcr(1143) he(975) heat(1))
+	("armor health" damage(240))
+	("armor health custom" shell(apcbc) damage(240) filler(102))
+	("90_slope_multipliers")
+
+	; T43
+	("penetration_long" shell(ap) range(250) a(208) b(193) c(177) d(162) e(148))
+
+	; T41
+	("penetration_long" shell(apcbc) range(250) a(221) b(206) c(188) d(172) e(157))
+
+	; T44
+	("penetration_long" shell(apcr) range(250) a(330) b(304) c(274) d(248) e(223))
+	{parameters "apcr"
+		("large_apcr_slope_multiplier")
+	}
+
+	{parameters "he"
+		{range 240 240}
+	}
+	("accuracy_direct" r1(0.50) range_ap(250) range_he(240) range_heat(240))
+}

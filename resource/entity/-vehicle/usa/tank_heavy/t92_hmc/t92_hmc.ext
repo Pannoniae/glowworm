@@ -1,0 +1,125 @@
+;SDL
+
+	; armor notes
+	; tracks and wheels 20mm
+	; gun 25mm
+
+	("tank_medium_tier1")
+
+	{component "shield1" {tags "cut_part"}}
+	{component "shield2" {tags "cut_part"}}
+	{component "shield1" {tags "cut_part"}}
+	{component "shielr2" {tags "cut_part"}}
+
+	("shield_tear" args "shieldl1" 5)
+	("shield_tear" args "shieldl2" 5)
+	("shield_tear" args "shieldr1" 5)
+	("shield_tear" args "shieldr2" 5)
+
+	("fuel" args "fuel")
+	("transmission" args "transmission")
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(30))
+
+	{volume "trackleft"
+		{able {holed}}
+	}
+	{volume "trackright"
+		{able {holed}}
+	}
+
+	("ammo" args "ammo1")
+	("ammo" args "ammo2")
+	("fuel" args "fuel1")
+	("fuel" args "fuel2")
+	("transmission" args "transmission")
+
+	{volume "body1"
+		{thickness 25.4}
+	}
+	{volume "body2"
+		{thickness 12.7
+			{front 25.4}
+			{top 12.7}
+			{bottom 25.4}
+		}
+	}
+	{volume "engine1"
+		{thickness 12.7
+			{bottom 22}
+			{top 12.7}
+		}
+	}
+	{volume "engine2"
+		{thickness 25.4}
+	}
+	{volume "engine3"
+		{thickness 12.7}
+	}
+	
+	{volume "shield_turret1"
+		{thickness 12.7}
+	}
+	{volume "shield_turret2"
+		{thickness 12.7}
+	}
+	{volume "shield_turret3"
+		{thickness 12.7}
+	}
+	{volume "shield_turret4"
+		{thickness 12.7}
+		{able {holed}}
+	}
+	{volume "shield_turret5"
+		{thickness 12.7}
+	}
+	{volume "shield_turret6"
+		{thickness 12.7}
+	}
+	{volume "shield_turret7"
+		{thickness 12.7}
+	}
+	{volume "shield_turret8"
+		{thickness 12.7}
+	}
+	{volume "shield_turret9"
+		{thickness 12.7}
+	}
+	{volume "shield_turret10"
+		{thickness 12.7}
+	}
+	{volume "shield_turret11"
+		{thickness 12.7}
+	}
+	{volume "shield_turret12"
+		{thickness 12.7}
+	}
+	{volume "shield_front1"
+		{thickness 25.4}
+	}
+	{volume "shield_front2"
+		{thickness 25.4}
+	}
+	{volume "shield_side1"
+		{thickness 12.7}
+	}
+	{volume "shield_side2"
+		{thickness 12.7}
+	}
+	{volume "turret1"
+		{thickness 30}
+	}
+	{volume "turret2"
+		{thickness 30}
+	}
+	{volume "shield_back1"
+		{thickness 12.7}
+	}
+	{volume "shield_back2"
+		{thickness 12.7}
+	}
+	{volume "shield_back3"
+		{thickness 12.7}
+	}
+	
+	

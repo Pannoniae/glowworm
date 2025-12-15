@@ -1,0 +1,18 @@
+{from "pattern reactive"
+	{tag "gun"}
+	{filling "ammo bm8" 24}
+	{fireSound "reactive/katy_burst/"}
+	{calibre 132}
+	("rocket_artillery")
+
+	{projectileDamage 100}
+	("armor health" damage(800))
+	("fire rate" rpm(120))
+	("velocity" mps(340))
+	{gravity 6}
+	{burst 
+             {min 24} 
+             {noaiming}
+        }
+	{range 170 180}
+}

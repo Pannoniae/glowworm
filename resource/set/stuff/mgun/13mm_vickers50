@@ -1,0 +1,19 @@
+{from "pattern hmgun"
+	{tag "weapon build_in gun"}
+	{entity "13mm_vickers50"}
+	{inventory {size 7 3}}
+	{filling "ammo 13x81" 30}	
+	{fireSound	"mgun/browning_burst/"}
+	{fireSoundclose "mgun/mg_interior"}
+	{reloadSound "interior/small/dt_reload_interior"}
+	{calibre 13.2}
+	{mass 34}
+	("fire rate" rpm(450))
+	("velocity" mps(800))
+	("reload time" seconds(10))
+	{projectileDamageTable {0 24} {50 20} {100 16} {150 13} {200 4.5} {225 0}} 
+	("burst_medium")
+	("spreading_medium")
+	{traceFreq 4}
+}
+;Cost=50;

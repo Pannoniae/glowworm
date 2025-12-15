@@ -1,0 +1,16 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{collider "ammo"}
+	{Volume "body"
+		{thickness 4}
+		{able {touch} {bullet} {blast}}
+	}
+	{props "steel" "explosive_stuff"}
+	{constrain none}
+	{fogable never}
+	(include "/properties/shadow/round.inc")
+	{Extension "BR-240SP_ammo.mdl"}
+	{extender "stuff"
+		{item "ammo BR_240SP"}
+	}
+}

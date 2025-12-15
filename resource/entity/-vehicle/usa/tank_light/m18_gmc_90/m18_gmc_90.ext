@@ -1,0 +1,110 @@
+;SDL
+	
+	; armor notes
+	; tracks and wheels 20mm
+	; gun 20mm
+	; spare tracks 20mm 
+	; hull/turret front spaced armor 20mm
+	; schürzen 5mm
+
+	("tank_medium_tier1")
+
+
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(40))
+
+	("ammo" args "ammo1")
+	("ammo" args "ammo2")
+	("ammo" args "ammo3")
+	("fuel" args "fuel")
+	("transmission" args "transmission")
+
+
+	("shield" args "shieldl1" 10)
+	("shield" args "shieldl2" 10)
+	("shield" args "shieldl3" 10)
+	("shield" args "shieldl4" 10)
+	("shield" args "shieldl5" 10)
+	("shield" args "shieldr1" 10)
+	("shield" args "shieldr2" 10)
+	("shield" args "shieldr3" 10)
+	("shield" args "shieldr4" 10)
+	("shield" args "shieldr5" 10)
+
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+	{component "sticky_body"}  
+	{Volume "body1"
+		{tags "body"}
+		{component "body"}
+		{thickness 13}
+	}
+	{Volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 13}
+	}
+	{Volume "body3"
+		{tags "body"}
+		{component "body"}
+		{thickness 13}
+	}	
+	{Volume "turret1"
+		{tags "turret"}
+		{component "turret"}
+		{thickness 32}
+	}
+	{Volume "turret2"
+		{tags "turret"}
+		{component "turret"}
+		{thickness 26}
+	}
+	{Volume "mantlet1"
+		{thickness 77}
+	}	
+	{Volume "mantlet2"
+		{thickness 77}
+	}		
+	{Volume "mantlet3"
+		{thickness 77}
+	}	
+	{Volume "mantlet4"
+		{thickness 77}
+	}			
+	{Volume "engine"
+		{tags "engine"}
+		{component "engine"}
+		{thickness 13}
+	}			
+	{Volume "gun"
+		{thickness 20}
+	}
+	{volume "trackleft"
+		{tags "trackleft"}
+		{component "trackleft"}
+		{thickness 15}
+	}
+	{volume "trackright"
+		{tags "trackright"}
+		{component "trackright"}
+		{thickness 15}
+	}	
+
+	;("armor_m18_90" turret1(32 32 32 8) turret2(26 26 26 26) body1(13 13 13 8) body2(13 13 13 8) body3(13 13 13 8))
+
+	;("shield" args 10)
+
+	
+	{component "shieldl1"}
+	{component "shieldl2"}
+	{component "shieldl3"}
+	{component "shieldl4"}
+	{component "shieldl5"}	
+	{component "shieldr1"}
+	{component "shieldr2"}
+	{component "shieldr3"}
+	{component "shieldr4"}
+	{component "shieldr5"}

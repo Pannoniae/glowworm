@@ -1,0 +1,24 @@
+{from "pattern hmgun"
+	{tag "gun"}
+	{inventory {size 7 3}}
+	{filling "ammo 15x104" 25}
+	{entity "besa_15mm"}
+	{fireSound	"mgun/browning_burst/"}
+	{fireSoundclose "mgun/mg_interior"}
+	{reloadSound "interior/small/dt_reload_interior"}
+	;{foresight "foresight1"}
+	{calibre 15}
+	{mass 55}
+
+	("fire rate" rpm(450))
+	("velocity" mps(818))
+
+	("reload_belt")
+
+	{projectileDamageTable {12.5 20} {62.5 19} {125 16} {187.5 12} {250 3}}
+	
+	("burst_medium")
+	("spreading_medium")
+	{traceFreq 4}
+}
+;Cost=50;

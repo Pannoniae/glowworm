@@ -1,0 +1,70 @@
+;SDL
+
+	("tank_heavy_tier1")
+
+        ("shield" args "shieldl1" 30)
+	("shield" args "shieldr1" 30)
+       	("shield_tear" args "shieldl2" 5)
+	("shield" args "shieldr2" 30)
+	("shield_tear" args "shieldl3" 5)
+	("shield_tear" args "shieldr3" 5)
+       	("shield_tear" args "shieldl4" 5)
+	("shield_tear" args "shieldr4" 5)
+        ("shield_tear" args "shieldl5" 5)
+	("shield_tear" args "shieldr5" 5)
+	("shield_tear" args "shieldr6" 5)
+        ("shield" args "shieldl6" 5)
+	("shield" args "shieldr7" 5)
+	("shield" args "skirt1" 4)
+	("shield" args "skirt2" 4)
+	("shield" args "skirt3" 4)
+	("shield" args "skirt4" 4)
+
+	{volume "body2"
+		{thickness 20
+                         {top 50}
+                         {left 10}
+                }
+        }
+	{volume "body3"
+		{thickness 30
+                        {top 50}
+	        }
+        }
+	{volume "engine1"
+		{Thickness 30
+                }
+	}
+	{volume "body1"
+		{Thickness 30
+                }
+	}
+        {volume "mantlet1"
+		{Thickness 50
+                }
+	}
+        {volume "mantlet2"
+		{Thickness 30
+                }
+	}
+       	{volume "cupola1"
+		{Thickness 20
+                    {top 50}
+                }
+	}
+        {volume "cupola2"
+		{Thickness 20
+                    {top 50}
+                }
+	}
+
+	("tracks" repair(30) thickness(30))
+	("gun" repair(30) thickness(30))
+
+	("ammo" args "ammo1")
+	("ammo" args "ammo3")
+	("ammo" args "ammo2")
+	("ammo" args "ammo4")
+	("fuel" args "fuel1")
+        ("fuel" args "fuel2")
+	("transmission" args "transmission")

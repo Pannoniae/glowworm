@@ -1,0 +1,15 @@
+{from "pattern sr"
+	{tag "shell size3 88to105_he_filler shrapnel all_he"}
+	{inventory {size 4 1}}
+	{entity "107mm_rus_he"}
+	{mass 22.32}
+
+	{view "howitzer_shell_105-150_lv"}
+
+	("he_level_3" weight(16.5) filler(0.44))
+	{damage add blastwave
+		{energy 1}
+		{area 12 20}
+		{ground_interaction_radius 0}		;// value is multiplied by 2nd value of area to deterimine is blast is close enough to ground to trigger terrain fx
+	}
+}

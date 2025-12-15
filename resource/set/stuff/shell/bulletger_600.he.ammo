@@ -1,0 +1,22 @@
+{from "pattern he"
+	{tag "shell size7 150to152 arty"}
+	{inventory {size 9 3}{weight 150}}
+	{entity "600mm_ger_he"}
+	{mass 2170}
+
+	{view "600mm_ger_he"
+		{tail "shell_tracer_600" "tail"}
+	}
+
+	("he_level_8" weight(2170) filler(289)) ;// schwere betongranate 040
+	{damage add blastwave
+		{energy 18}
+		{area 50 50}
+		{ground_interaction_radius 0}		;// value is multiplied by 2nd value of area to deterimine is blast is close enough to ground to trigger terrain fx
+	}
+	{damage add blastwave
+		{energy 2}
+		{area 90 90}
+		{ground_interaction_radius 0}		;// value is multiplied by 2nd value of area to deterimine is blast is close enough to ground to trigger terrain fx
+	}
+}

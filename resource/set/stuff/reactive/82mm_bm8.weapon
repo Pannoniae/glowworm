@@ -1,0 +1,34 @@
+;_________________________________________
+; Soviet BM8 Light Rocket Artillery
+;=========================================
+
+{from "pattern reactive"		; "bm8"
+	{filling "ammo 82mm_rs82" 24}
+	{fillingVisible "rocket"}
+	{fireSound "reactive/rocket_burst/"}
+	{calibre 82}
+
+	("rocket_artillery")
+
+	{spreading
+		{radiusTable
+			{0 0}
+			{100 10}
+			{200 20}
+			{354.99 40} ;// max range
+			{355 100}
+			{375 200}
+		}
+	}
+
+	{burst 
+		{min 24}
+		{noaiming}
+	}
+
+	{range 355 355}
+	("velocity" mps(320))
+	("reload time" seconds(120))
+	("fire rate" rpm(120))
+	{gravity 3.25}
+}

@@ -1,0 +1,30 @@
+{from "pattern reactive_ammo"
+	{tag "big mortar fg itemin2hands"}
+	{inventory
+		{size 4 1}
+		{weight 100}
+	}	
+	{entity "bm8_ammo"}
+	{mass 36.05}
+	{view "bm8_ammo"
+		{tail "rocket_smoke_bm13" "tail"}
+	}
+	{detonationThickness 1}
+	{applyProjectile}
+	{damage blastwave
+		{energy 5}
+		{area 1 2}      
+	}
+	{damage add blastwave
+		{energy 2.4}
+		{area 5 8}
+                {ground_interaction_radius 0}
+	}
+        {damage add blastwave
+		{energy 1.5}
+		{area 10 16}
+		{ground_interaction_radius 0} 
+	}
+
+	{possibleDamageRadius 30}
+}

@@ -1,0 +1,147 @@
+{game_entity
+
+	(include "/properties/tank.ext")
+	(include "/properties/selection/vehicle.inc" scale(1.2))
+	{props "spg" "heavy" "-turret" "vision_lev04" "muzzle_150mm_155mm" "detect_artillery" "artillery_minimap_heavy" "open_top"}
+	{Extension "t92_hmc.mdl"}
+	(include  "t92_hmc.ext")
+	{targetclass "tank_heavy"}
+	{targetSelector "cannon_howitzer"}
+
+	{boarder
+		{anm "driver"
+			{forward {begin "board_tank_left"} {base "open_driver"}}
+			{reverse {end "emit_tank_2_hold"} {base "open_driver"}}
+		}
+		{anm "co_driver"
+			{forward {begin "board_tank_right"} {base "open_codriver"}}
+			{reverse {end "emit_tank_1_hold"} {base "open_codriver"}}
+		}
+		{anm "left"
+			{forward {begin "board_tank_left"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "right"
+			{forward {begin "board_tank_right"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "gunner_l"
+			{forward {begin "board_tank_left"} {end "m12_gmc_charger"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "gunner_r"
+			{forward {begin "board_tank_right"} {end "m12_gmc_charger"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "charger_l"
+			{forward {begin "board_tank_left"} {end "m12_gmc_charger2"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "charger_r"
+			{forward {begin "board_tank_right"} {end "m12_gmc_charger2"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}	
+		{anm "gunner2_l"
+			{forward {begin "board_tank_left"} {end "m12_gmc_gunner2"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "gunner2_r"
+			{forward {begin "board_tank_right"} {end "m12_gmc_gunner2"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "charger2_l"
+			{forward {begin "board_tank_left"} {end "pose_nashorn_commander"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "charger2_r"
+			{forward {begin "board_tank_right"} {end "pose_nashorn_commander"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "charger3_l"
+			{forward {begin "board_tank_left"} {end "m12_gmc_gunner2"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "charger3_r"
+			{forward {begin "board_tank_right"} {end "m12_gmc_gunner2"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "gunner3_l"
+			{forward {begin "board_tank_left"} {end "pose_nashorn_charger"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+		{anm "gunner3_r"
+			{forward {begin "board_tank_right"} {end "pose_nashorn_charger"}}
+			{reverse {end "emit_tank_2_hold"}}
+		}
+	}
+
+;	("crew_inside")
+;	("crew_human"				place(driver)		door(emit2) door2(emit2) visor(driver))
+;	("crew_human"				place(commander)	door(emit1) door2(emit2) visor(around))
+
+	("crew_driver" 									 door(emit2) door2(emit2) door3(emit2))
+	("crew_co_driver" 		place(commander) 	door(emit1) door2(emit1) door3(emit1))
+	("crew_human_visible_anm"	place(gunner)		door(emit3) door2(emit4) visor(main)   anm_left(gunner_l)	anm_right(gunner_r))
+	("crew_human_visible_anm"	place(gunner2)		door(emit3) door2(emit4) visor(main)   anm_left(gunner2_l)	anm_right(gunner2_r))
+	("crew_human_visible_anm"	place(gunner3)		door(emit3) door2(emit4) visor(main)   anm_left(gunner3_l)	anm_right(gunner3_r))
+	("crew_human_visible_anm"	place(charger)		door(emit3) door2(emit4) visor(around) anm_left(charger_l)	anm_right(charger_r))
+	("crew_human_visible_anm"	place(charger2)		door(emit3) door2(emit4) visor(around) anm_left(charger2_l)	anm_right(charger2_r))
+	("crew_human_visible_anm"	place(charger3)		door(emit3) door2(emit4) visor(around) anm_left(charger3_l)	anm_right(charger3_r))
+
+	{extender "inventory"
+		{box
+			{item "ammo bulletusa_240 he" 7}		;10 rounds
+			{item "satchel_charge_usa" 1}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "240mm_m1" filling "bulletusa_240 he" 1}
+			{gunner "gunner gunner2 gunner3" minWorkers 1}
+			{charger "charger charger2 charger3" minWorkers 1}
+			{rotate}
+			("abm_dymamic_gun"
+				zeroing(8.0)	; // time it takes to aim until the reticle shrinks. Bigger values, more control.
+				dispersion(1)   ; // time it takes to distort the reticle when you move the gun (how abrupt it loses zeroing). Bigger values, more control.
+			)
+		}
+	}
+
+	{mass 127000}
+	{Chassis
+		("tank_trace" fx("tracks_mid") step(0.3) len(-0.45))
+		("mobility_tank"
+			speed(24) ;----------Max speed when fully accelerated on road, km/h.
+			reverse(6) ;---------Max speed in reverse on road, km/h.
+			traverse(15) ;-------Track traverse, per second, in degrees.
+			weight(127) ;---------Weight in Tonnes.
+			power(470) ;---------Engine Power, in hp.
+			track(4) ;-----------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			fuel(660) ;----------Fuel capacity in Litres.
+			type(fuel) ;---------Fuel type. (diesel OR fuel)
+			range(193) ;---------Range in km, off-road.
+		)
+	}
+	
+	{bone "Basis"
+		{speed2 2}
+		{limits -0 0}
+	}
+	{bone "turret"
+		{limits -7 7}
+		{speed2 3}
+	}
+	{bone "gun_rot"
+		{limits -0 30}
+		{speed2 3}
+	}
+	(mod "mp"
+		{brain
+			{properties
+				{fire_mode hold}
+			}
+		}
+	)
+}

@@ -1,0 +1,23 @@
+;_________________________________________
+; German medium AA gun
+;=========================================
+
+{from "pattern gun"			;  "ME262"
+	{filling "bulletger_30_auto" 400}
+	{fireSound "cannon/s1/d1/Shared/mk103/"}
+	{fireSoundclose "cannon/s1/3p/Shared/mk103/"}
+	{reloadSound "tank/reload_small"}
+	("range_aircraft_gun")
+	{cursor "ironsights/aa"}
+	{calibre 30}
+
+	{traceFreq 2}
+	("human health" damage(250))
+	("fire rate" rpm(1320))
+	("reload time" seconds(18))
+	("velocity" mps(540))
+
+	("armor health" damage(45))
+	("penetration" a(28) b(19) c(16) d(12) e(7))			
+	("ap_slope_multiplier")
+}

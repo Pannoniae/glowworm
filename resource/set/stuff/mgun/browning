@@ -1,0 +1,23 @@
+{from "pattern hmgun"
+	{inventory {size 6 2 }}
+	{filling "ammo 12x99" 100}
+	{entity "browningm2"}
+	{fireSound "smallarms/s4/d1/USA/M2HB/"}
+	{fireSoundclose "smallarms/s4/d1/USA/M2HB/"}
+	{reloadSound "dt"}
+
+	{calibre 12.7}
+	{mass 34}
+
+	("fire rate" rpm(550))
+	("velocity" mps(890))
+
+	("reload time" seconds(10.5))
+
+	{projectileDamageTable {20 31} {100 19} {165 12} {215 8} {250 6}}
+
+	("burst_medium")
+	("spreading_medium")
+	{traceFreq 4}
+}
+;Cost=50;

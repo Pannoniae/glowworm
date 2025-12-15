@@ -1,0 +1,31 @@
+{from "pattern reactive"		; "pz38h_w40"
+	{filling "ammo BR_240SP" 2}
+	{fireSound "reactive/nebel_burst/"}
+	{calibre 250}
+
+	{foresight "foresight"}
+
+	("rocket_artillery")
+
+	{spreading
+		{radiusTable
+			{0 0}
+			{100 10}
+			{150 22}
+			{179.99 32} ;// max range
+			{215 100}
+			{235 200}
+		}
+	}
+
+	{burst 
+		{min 1}
+		{noaiming}
+	}
+	{gravity 0.5}
+
+	{minRange 50}
+	{maxRange 180} ;//4,55km
+	("velocity" mps(100))
+	("reload time" seconds(150))
+}
