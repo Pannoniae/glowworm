@@ -20,7 +20,7 @@
 		{attenuation1 0.7}
 		{radius 120}
 		{priority 5}
-		{effectonground}
+		{## effectonground}
 		{offset 0 0 10}
 		{pulseperiod 0.1 0.02}
 	}
@@ -38,7 +38,7 @@
 				{lifetime 0.75 0.25}
 			}
 			{axisz}
-			{timetolive 20}
+			{## timetolive 20}
 		}
 		{mover
 			{damping 0.95}
@@ -112,11 +112,11 @@
 						}
 					}
 					{visibility 0.5
-						{## linear
+						{linear
 							{min 0.6 0.1}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.5}
 							{pow 0.2}
@@ -132,7 +132,7 @@
 			}
 		}
 	}
-	{#+ particleview cooking
+	{##+ particleview cooking
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -146,7 +146,7 @@
 				{lifetime 0.75 0.25}
 			}
 			{axisz}
-			{timetolive 5}
+			{## timetolive 5}
 		}
 		{mover
 			{damping 0.95}

@@ -7,7 +7,7 @@
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -29,7 +29,7 @@
 		{intensity 1}
 		{radiusfalloff 10}
 	}
-	{#+ particleview central
+	{##+ particleview central
 		{generator
 			{emissionarea
 				{radius 0}
@@ -170,7 +170,7 @@
 			{emissionarea
 				{alpha0 0}
 				{alpha1 75 75}
-				{distributionlaw sphere}
+				{## distributionlaw sphere}
 			}
 			{particleinit
 				{speed 25 5}
@@ -185,7 +185,7 @@
 			{particlesinblock 8}
 		}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{delay 0.1}
 		{generator
 			{emissionarea

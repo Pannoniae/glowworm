@@ -171,7 +171,7 @@
 					}
 					{preturn 180 180}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.45 0.05}
 							{max 0}
 						}
@@ -289,7 +289,7 @@
 			{gravity
 				{value 0.2}
 			}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -377,7 +377,7 @@
 		}
 		{#+ offset 0 0 16}
 	}
-	{#+ spriteview smoke_ground_start
+	{##+ spriteview smoke_ground_start
 		{sprite "/texture/fx/smoke/smoke_g04a"
 			{visibility 1
 				{npower
@@ -402,7 +402,7 @@
 		{orientation normal}
 		{offset 0 0 15}
 	}
-	{#+ particleview gas_Start
+	{##+ particleview gas_Start
 		{generator
 			{emissionarea
 				{radius 0}
@@ -457,7 +457,7 @@
 		}
 		{#+ offset 0 0 2}
 	}
-	{#+ particleview gas_Start_2
+	{##+ particleview gas_Start_2
 		{generator
 			{emissionarea
 				{radius 0}
@@ -513,7 +513,7 @@
 		{#+ offset 0 0 2}
 		{delay 1}
 	}
-	{#+ particleview smoke_ground_bounded
+	{##+ particleview smoke_ground_bounded
 		{generator
 			{emissionarea
 				{radius 0}
@@ -612,7 +612,7 @@
 							{pow 1.25 0.25}
 						}
 					}
-					{shifty 1
+					{## shifty 1
 						{linear
 							{min 0}
 							{max -500}
@@ -632,7 +632,7 @@
 		{#+ offset 0 0 0}
 		{#+ delay 0}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 100}
 			{emissionarea
@@ -650,7 +650,7 @@
 		{offset 0 0 50}
 		{mover
 			{damping 0.993}
-			{gravity
+			{## gravity
 				{value -0.001}
 			}
 			{collisions
@@ -684,7 +684,7 @@
 							{max 0.2}
 						}
 					}
-					{highlight 0xff9f9f9f}
+					{## highlight 0xff9f9f9f}
 				}
 				{sprite "$/smoke/smoke_g04b"
 					{timer

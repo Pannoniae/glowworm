@@ -6,7 +6,7 @@
 		{#+ animator
 			{highlight 0xfffe6b10}
 			{visibility 1
-				{## linear
+				{linear
 					{min 0.9 0.3}
 					{max 0.9 0.3}
 				}
@@ -18,7 +18,7 @@
 		}
 		{radius 170}
 		{priority 5}
-		{effectonground}
+		{## effectonground}
 		{offset 0 0 20}
 		{pulseperiod 0.1 0.02}
 		{radiusfalloff 100}
@@ -38,7 +38,7 @@
 				{lifetime 1.5 0.5}
 			}
 			{axisz}
-			{timetolive 7}
+			{## timetolive 7}
 		}
 		{mover
 			{damping 0.975}
@@ -72,7 +72,7 @@
 							{max 1}
 						}
 					}
-					{#+ light 1
+					{##+ light 1
 						{linear
 							{min 0.1}
 							{max 0}
@@ -80,7 +80,7 @@
 					}
 					{highlight 0xff3a3a3a}
 				}
-				{#+ sprite "$/smoke/smoke_g04g"
+				{##+ sprite "$/smoke/smoke_g04g"
 					{timer
 						{mode play }
 						{duration -1}
@@ -104,7 +104,7 @@
 							{max 0.4}
 						}
 					}
-					{highlight 0xff100903}
+					{## highlight 0xff100903}
 				}
 			}
 		}
@@ -123,7 +123,7 @@
 				{speed 1.2}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -144,7 +144,7 @@
 							{max 0.02}
 						}
 					}
-					{highlight 0xfffe491c}
+					{## highlight 0xfffe491c}
 				}
 			}
 		}
@@ -164,7 +164,7 @@
 				{speed 0.1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -192,7 +192,7 @@
 						}
 					}
 					{preturn 0 15}
-					{turn 0 15}
+					{## turn 0 15}
 					{prescalex 1}
 					{prescaley 0.6}
 					{highlight 0xffffb865}
@@ -219,9 +219,9 @@
 				}
 			}
 		}
-		{offset 0 0 15}
+		{## offset 0 0 15}
 	}
-	{sound "fire/loops/big"}
+	{## sound "fire/loops/big"}
 	{storeable 1}
 	{#+ spriteview
 		{sprite "/texture/fx/flash/halo02"

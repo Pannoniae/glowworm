@@ -23,7 +23,7 @@
 		{offset 0 0 15}
 		{pulseperiod 0.1 0.02}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -102,14 +102,14 @@
 		{offset 0 0 5}
 		{notifyowner}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 30}
 			{emissionarea
 				{radius 7.5 7.5}
 				{alpha0 0}
 				{alpha1 4}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -143,14 +143,14 @@
 					{highlight 0xfffedcad}
 					{scalex 0.45 0.15}
 					{scaley 0.5 0.1}
-					{highlight 0xffffb278}
+					{## highlight 0xffffb278}
 					{preturn 180}
 				}
 			}
 		}
 		{offset 0 0 10}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 8}
 			{emissionarea
@@ -203,13 +203,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xff162a35}
+					{## highlight 0xff162a35}
 				}
 			}
 		}
 		{offset 0 0 -9}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -225,7 +225,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -264,7 +264,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -305,14 +305,14 @@
 			}
 		}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 10}
 			{emissionarea
 				{radius 9 9}
 				{alpha0 0}
 				{alpha1 4}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -353,7 +353,7 @@
 		}
 		{offset 0 0 10}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 8}
 			{emissionarea
@@ -410,9 +410,9 @@
 				}
 			}
 		}
-		{offset 0 0 -9}
+		{## offset 0 0 -9}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -428,7 +428,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -522,7 +522,7 @@
 		}
 	}
 	{storeable 1}
-	{#+ spriteview
+	{##+ spriteview
 		{sprite "/texture/fx/flash/flash_g03"
 			{visibility 0.02
 				{linear
@@ -537,10 +537,10 @@
 			{scale 0.6}
 		}
 		{offset 0 0 5}
-		{ground}
+		{## ground}
 		{halo}
 	}
-	{#+ spriteview
+	{##+ spriteview
 		{sprite "/texture/fx/flash/flash_g03"
 			{visibility 0.2
 				{linear
@@ -554,8 +554,8 @@
 			}
 		}
 		{offset 0 0 5}
-		{fire}
+		{## fire}
 		{ground}
-		{halo}
+		{## halo}
 	}
 }

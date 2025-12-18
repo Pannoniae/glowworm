@@ -1,5 +1,5 @@
 {fx
-	{sound "weapon/shot/reactive/launch03"}
+	{## sound "weapon/shot/reactive/launch03"}
 	{#+ lightview
 		{animator
 			{timer
@@ -8,7 +8,7 @@
 			}
 			{visibility 1}
 			{scale 1
-				{## linear
+				{linear
 					{min 0.5}
 					{max 1.2}
 				}
@@ -195,13 +195,13 @@
 					{max 0}
 				}
 			}
-			{#+ scalex 1
+			{##+ scalex 1
 				{linear
 					{min 0}
 					{max 0.3}
 				}
 			}
-			{scaley 0.15}
+			{## scaley 0.15}
 			{scale 1
 				{linear
 					{min 0}
@@ -227,13 +227,13 @@
 					{max 0}
 				}
 			}
-			{#+ scalex 1
+			{##+ scalex 1
 				{linear
 					{min 0}
 					{max 0.3}
 				}
 			}
-			{scaley 0.15}
+			{## scaley 0.15}
 			{scale 1
 				{linear
 					{min 0}
@@ -247,7 +247,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview halo
+	{##+ spriteview halo
 		{sprite "$/flash/flashss3"
 			{timer
 				{mode play }
@@ -264,9 +264,9 @@
 		{notifyowner}
 		{halo}
 		{autovisible}
-		{offset 0 0 10}
+		{## offset 0 0 10}
 	}
-	{#+ particleview puff
+	{##+ particleview puff
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -319,7 +319,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ spriteview halo1
+	{##+ spriteview halo1
 		{sprite "$/flash/flash_g03"
 			{timer
 				{mode play loop }
@@ -338,7 +338,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ spriteview halo2
+	{##+ spriteview halo2
 		{sprite "$/flash/halo01"
 			{timer
 				{mode play loop }

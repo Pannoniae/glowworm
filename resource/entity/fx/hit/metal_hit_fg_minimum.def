@@ -42,8 +42,8 @@
 			}
 			{preturn 90 90}
 		}
-		{ground}
-		{layer grounddynamic}
+		{## ground}
+		{## layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
 		{notifyowner}
@@ -73,7 +73,7 @@
 		{autovisible}
 	}
 	{#+ particleview flash2
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 0}
@@ -152,7 +152,7 @@
 		{autovisible}
 	}
 	{#+ particleview dirt
-		{delay 0.2}
+		{## delay 0.2}
 		{generator
 			{totalparticles 30}
 			{particlesinblock 30}
@@ -212,7 +212,7 @@
 		{notifyowner}
 	}
 	{#+ particleview sparkles
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -255,7 +255,7 @@
 		}
 	}
 	{#+ particleview kaboom2
-		{delay 0.05}
+		{## delay 0.05}
 		{generator
 			{emissionarea
 				{radius 0}
@@ -281,7 +281,7 @@
 			{stage 
 				{sprite "$/explosion/exp_muzzle_01"
 					{scale 0.75 0.25
-						{linear
+						{## linear
 							{min 1.5 1.5}
 							{max 1.5 1.5}
 						}
@@ -322,7 +322,7 @@
 				{value 0.2}
 			}
 			{damping 0.98}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -365,7 +365,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.002}
@@ -393,16 +393,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.75 0.25}
 							{max 0}
 						}
 					}
-					{highlight 0xffc9ae92}
+					{## highlight 0xffc9ae92}
 				}
 				{sprite "$/smoke/smokesmal4b_70"
 					{timer
@@ -423,16 +423,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.9 0.1}
 							{max 0}
 						}
 					}
-					{highlight 0xffc9ae92}
+					{## highlight 0xffc9ae92}
 				}
 				{#+ sprite "$/smoke/smokesmal4b"
 					{timer
@@ -453,11 +453,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.65 0.15}
 							{max 0}
 						}
@@ -484,7 +484,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.001}
@@ -512,16 +512,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.8 0.2}
 							{max 0}
 						}
 					}
-					{highlight 0xffc9ae92}
+					{## highlight 0xffc9ae92}
 				}
 				{#+ sprite "$/smoke/smokesmal4b"
 					{timer
@@ -542,11 +542,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.65 0.15}
 							{max 0}
 						}
@@ -573,7 +573,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.001}
@@ -601,11 +601,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.55 0.15}
 							{max 0}
 						}
@@ -632,7 +632,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.001}
@@ -660,16 +660,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
-					{highlight 0xff654836}
+					{## highlight 0xff654836}
 				}
 			}
 		}

@@ -1,6 +1,6 @@
 {fx
 	{sound "detonation/explosion_vehicle/"}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
@@ -26,8 +26,8 @@
 		{radiusfalloff 10}
 		{intensity 5}
 	}
-	{#+ particleview kaboom
-		{delay 0.5}
+	{##+ particleview kaboom
+		{## delay 0.5}
 		{generator
 			{emissionarea
 				{radius 0}
@@ -43,7 +43,7 @@
 			{timetolive 0.01}
 			{axisz}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 		{mover
 			{damping 0.97}
 			{gravity
@@ -66,7 +66,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{light 1
+					{## light 1
 						{linear
 							{min 0.4}
 							{max 0}
@@ -83,8 +83,8 @@
 			}
 		}
 	}
-	{#+ particleview smoke
-		{delay 0.3}
+	{##+ particleview smoke
+		{## delay 0.3}
 		{generator
 			{totalparticles 60}
 			{emissionarea
@@ -112,7 +112,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 1.5 0.5}
@@ -163,7 +163,7 @@
 						{duration -1}
 					}
 				}
-				{#+ sprite "$/smoke/fire_particle_02"
+				{##+ sprite "$/smoke/fire_particle_02"
 					{scale 1
 						{linear
 							{min 0.1 -0.1}
@@ -188,7 +188,7 @@
 						{duration -1}
 					}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 2 0.3}
@@ -216,7 +216,7 @@
 			}
 		}
 	}
-	{#+ particleview dirt
+	{##+ particleview dirt
 		{delay 0.15}
 		{generator
 			{totalparticles 20}
@@ -308,8 +308,8 @@
 			}
 		}
 	}
-	{#+ particleview "fire slow"
-		{delay 0.05}
+	{##+ particleview "fire slow"
+		{## delay 0.05}
 		{entitygenerator
 			{totalparticles 6}
 			{emissionarea
@@ -328,7 +328,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ spriteview flash
+	{##+ spriteview flash
 		{sprite "$/flash/flash_g03"
 			{timer
 				{mode }
@@ -358,14 +358,14 @@
 				{mode }
 				{duration 2}
 			}
-			{preturn 90 90}
+			{## preturn 90 90}
 			{scale 5}
 			{light 1
-				{## linear
+				{linear
 					{min 0.4}
 					{max 0}
 				}
-				{peak
+				{## peak
 					{min 0.6}
 					{max 0}
 				}
@@ -378,10 +378,10 @@
 		{offset 0 0 30}
 	}
 	{#+ particleview parts
-		{delay 0.2}
+		{## delay 0.2}
 		{entitygenerator
 			{totalparticles 30}
-			{axisz}
+			{## axisz}
 			{emissionarea
 				{radius 16}
 				{alpha0 22.5 22.5}
@@ -419,7 +419,7 @@
 				{lifetime 2 1}
 			}
 			{timetolive 0.1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{damping 0.97}
@@ -433,8 +433,8 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/particle/oskolki"
-					{#+ scale 1
+				{##+ sprite "$/particle/oskolki"
+					{##+ scale 1
 						{linear
 							{min 0.3 0.2}
 							{max 0.1 0.05}
@@ -460,7 +460,7 @@
 				}
 				{flags trace }
 				{sprite "$/particle/spark_c"
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.3 0.2}
 							{max 0.1 0.05}
@@ -476,13 +476,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{#+ scalex 2
+					{##+ scalex 2
 						{linear
 							{min 2}
 							{max 0}
 						}
 					}
-					{scaley 0.065 0.015}
+					{## scaley 0.065 0.015}
 					{scale 0.125 0.075}
 					{preturn 90}
 				}
@@ -490,14 +490,14 @@
 		}
 	}
 	{#+ particleview "fire explosion forward"
-		{delay 0.5}
+		{## delay 0.5}
 		{generator
 			{emissionarea
 				{radius 0}
 				{alpha0 22.5 22.5}
 				{alpha1 22.5 22.5}
 				{theta -20}
-				{speed 0.05}
+				{## speed 0.05}
 			}
 			{particleinit
 				{speed 8.5 8.5}
@@ -506,9 +506,9 @@
 			{totalparticles 15}
 			{particlesinblock 15}
 			{timetolive 1}
-			{axisz}
+			{## axisz}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 		{mover
 			{damping 0.97}
 			{gravity
@@ -520,12 +520,12 @@
 			{stage 
 				{sprite "$/explosion/exp_blast00_slow"
 					{scale 1
-						{#+ npower
+						{##+ npower
 							{min 0.2}
 							{max 1.5}
 							{pow 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.6 0.4}
 							{max 1.25 0.25}
 						}
@@ -546,14 +546,14 @@
 		}
 	}
 	{#+ particleview "fire explosion up"
-		{delay 0.5}
+		{## delay 0.5}
 		{generator
 			{emissionarea
 				{radius 0}
 				{alpha0 22.5 22.5}
 				{alpha1 22.5 22.5}
-				{theta -20}
-				{speed 0.05}
+				{## theta -20}
+				{## speed 0.05}
 			}
 			{particleinit
 				{speed 2.5 2.5}
@@ -564,7 +564,7 @@
 			{timetolive 1}
 			{axisz}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 		{mover
 			{damping 0.97}
 			{gravity
@@ -576,12 +576,12 @@
 			{stage 
 				{sprite "$/explosion/exp_blast00_slow"
 					{scale 1
-						{#+ npower
+						{##+ npower
 							{min 0.2}
 							{max 1.5}
 							{pow 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.6 0.4}
 							{max 1.25 0.25}
 						}
@@ -602,7 +602,7 @@
 		}
 	}
 	{#+ particleview "smoke forward"
-		{delay 0.3}
+		{## delay 0.3}
 		{generator
 			{totalparticles 80}
 			{emissionarea
@@ -615,7 +615,7 @@
 				{speed 6 6}
 				{lifetime 11.5 3.5}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 80}
 			{timetolive 0.5}
 		}
@@ -631,7 +631,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 1.5 0.5}
@@ -682,7 +682,7 @@
 						{duration -1}
 					}
 				}
-				{#+ sprite "$/smoke/fire_particle_02"
+				{##+ sprite "$/smoke/fire_particle_02"
 					{scale 1
 						{linear
 							{min 0.1 -0.1}
@@ -707,7 +707,7 @@
 						{duration -1}
 					}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 2 0.3}
@@ -736,7 +736,7 @@
 		}
 	}
 	{#+ particleview "smoke up"
-		{delay 0.3}
+		{## delay 0.3}
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -765,7 +765,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 1.5 0.5}
@@ -816,7 +816,7 @@
 						{duration -1}
 					}
 				}
-				{#+ sprite "$/smoke/fire_particle_02"
+				{##+ sprite "$/smoke/fire_particle_02"
 					{scale 1
 						{linear
 							{min 0.1 -0.1}
@@ -841,7 +841,7 @@
 						{duration -1}
 					}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 2 0.3}

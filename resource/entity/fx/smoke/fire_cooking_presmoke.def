@@ -1,6 +1,6 @@
 {fx
 	{sound "detonation/vehic_die_new2"}
-	{#+ particleview cooking
+	{##+ particleview cooking
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -24,12 +24,12 @@
 		}
 		{visualizer
 			{stage 
-				{sprite "$/explosion/exp01"
+				{## sprite "$/explosion/exp01"
 					{timer
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{linear
 							{min 0.3 0.1}
 							{max 0.65 0.15}
@@ -42,7 +42,7 @@
 						}
 					}
 					{scalex 0.6 0.1
-						{linear
+						{## linear
 							{min 0.25 0.05}
 							{max 1}
 						}
@@ -58,7 +58,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 1000}
 			{particlesinblock 15}
@@ -95,7 +95,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 1000}
 			{particlesinblock 1000}
@@ -133,7 +133,7 @@
 			}
 		}
 	}
-	{#+ particleview sparks
+	{##+ particleview sparks
 		{generator
 			{emissionarea
 				{radius 1}
@@ -177,7 +177,7 @@
 			}
 		}
 	}
-	{#+ particleview cooking
+	{##+ particleview cooking
 		{generator
 			{totalparticles 2}
 			{emissionarea
@@ -206,7 +206,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{linear
 							{min 1}
 							{max 1}
@@ -218,7 +218,7 @@
 							{max 0.65 0.15}
 						}
 					}
-					{scalex 0.6 0.1
+					{## scalex 0.6 0.1
 						{linear
 							{min 0.2}
 							{max 0.2}
@@ -274,11 +274,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.4}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.8}
 							{pow 0.2}
@@ -289,7 +289,7 @@
 						{duration -1}
 					}
 					{preturn 180 80}
-					{highlight 0xffa3a3a3}
+					{## highlight 0xffa3a3a3}
 				}
 				{sprite "/texture/fx/smoke/smoke_burn"
 					{turn 1
@@ -309,12 +309,12 @@
 							{min 0.7}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.8}
 							{pow 0.1}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.7}
 						}
@@ -367,11 +367,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.3}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.8}
 							{pow 0.2}
@@ -384,7 +384,7 @@
 					{preturn 180 80}
 					{highlight 0xffa5a5a5}
 				}
-				{sprite "/texture/fx/_bmp/smoke/smokeend_loop"
+				{## sprite "/texture/fx/_bmp/smoke/smokeend_loop"
 					{turn 1
 						{linear
 							{min 0}

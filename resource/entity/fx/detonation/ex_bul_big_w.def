@@ -1,10 +1,10 @@
 {fx
 	{sound "hit/water/bullet"}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -54,7 +54,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview
+	{##+ spriteview
 		{sprite "$/explosion/exp_sled"
 			{visibility 1
 				{npower
@@ -82,7 +82,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 10}
 			{particlesinblock 10}
@@ -138,7 +138,7 @@
 			}
 		}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 50}
 			{particlesinblock 2}
@@ -359,7 +359,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{particlesinblock 30}
 			{totalparticles 30}
@@ -415,7 +415,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{emissionarea
 				{radius 0}
@@ -463,7 +463,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ spriteview
+	{##+ spriteview
 		{#+ delay 0.01}
 		{sprite "$/water/exp_water"
 			{timer
@@ -495,7 +495,7 @@
 		{orientation normalXZ}
 		{notifyowner}
 	}
-	{#+ spriteview
+	{##+ spriteview
 		{#+ delay 0.01}
 		{sprite "$/water/exp_water"
 			{timer
@@ -534,7 +534,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview "  "
+	{##+ particleview "  "
 		{generator
 			{particlesinblock 15}
 			{totalparticles 15}
@@ -617,7 +617,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{emissionarea
 				{radius 15 5}
@@ -715,7 +715,7 @@
 		{notifyowner}
 		{offset 0 0 -10}
 	}
-	{#+ particleview fuzzy1
+	{##+ particleview fuzzy1
 		{generator
 			{emissionarea
 				{radius 0}
@@ -757,7 +757,7 @@
 						}
 					}
 					{preturn 90}
-					{highlight 0xffafafaf}
+					{## highlight 0xffafafaf}
 				}
 				{flags trace }
 			}
@@ -765,7 +765,7 @@
 		{notifyowner}
 		{delay 0.1}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 20}
 			{particlesinblock 20}

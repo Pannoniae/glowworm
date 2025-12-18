@@ -1,6 +1,6 @@
 {fx
 	{constrain ground}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{highlight 0xffc455}
@@ -23,7 +23,7 @@
 		{offset 0 0 20}
 		{pulseperiod 0.1 0.02}
 	}
-	{#+ particleview "hot smoke"
+	{##+ particleview "hot smoke"
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -101,7 +101,7 @@
 			}
 		}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -157,7 +157,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 13}
 			{emissionarea
@@ -171,7 +171,7 @@
 				{speed 1.2}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -204,7 +204,7 @@
 		}
 		{delay 1}
 	}
-	{#+ spriteview "halo------"
+	{##+ spriteview "halo------"
 		{sprite "/texture/fx/flash/flashss3"
 			{light 1}
 			{highlight 0xfffd521b}
@@ -215,14 +215,14 @@
 			{visibility 0.4}
 			{scale 6}
 		}
-		{nightonly}
+		{## nightonly}
 		{halo}
-		{autovisible}
-		{fire}
-		{orientation billboard}
+		{## autovisible}
+		{## fire}
+		{## orientation billboard}
 	}
-	{sound "fire/loops/fire_big_01"}
-	{#+ particleview "fire round"
+	{## sound "fire/loops/fire_big_01"}
+	{##+ particleview "fire round"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -236,7 +236,7 @@
 				{speed 1 0.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -269,7 +269,7 @@
 			}
 		}
 	}
-	{#+ particleview "fire round big"
+	{##+ particleview "fire round big"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -283,7 +283,7 @@
 				{lifetime 2.5 1.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -333,7 +333,7 @@
 			}
 			{axisz}
 			{particlesinblock 5}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 1}
@@ -349,21 +349,21 @@
 						{mode play }
 						{duration -1}
 					}
-					{scalex 0.2 0.1}
-					{scaley 0.2 0.1}
+					{## scalex 0.2 0.1}
+					{## scaley 0.2 0.1}
 					{light 1
 						{peak
 							{min 0}
 							{max 0.5}
 						}
 					}
-					{preturn 180}
+					{## preturn 180}
 					{highlight 0xffff903a}
 					{scale 0.2 0.1}
 				}
 			}
 		}
-		{offset 0 0 5}
+		{## offset 0 0 5}
 	}
 	{#+ particleview aftersmoke
 		{generator
@@ -379,7 +379,7 @@
 				{lifetime 5.5 4.5}
 			}
 			{axisz}
-			{timetolive 15}
+			{## timetolive 15}
 		}
 		{mover
 			{damping 0.97}
@@ -463,7 +463,7 @@
 				{speed 0.85 0.15}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -551,7 +551,7 @@
 				{lifetime 2.5 1.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -602,7 +602,7 @@
 				{speed 1 0.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}

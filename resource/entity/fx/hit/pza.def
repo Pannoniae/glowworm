@@ -1,6 +1,6 @@
 {fx
 	{sound "animal/chicken/die"}
-	{#+ lightview
+	{##+ lightview
 		{animator
 			{timer
 				{mode play }
@@ -19,7 +19,7 @@
 		{radius 100}
 		{effectonground}
 	}
-	{#+ particleview central
+	{##+ particleview central
 		{delay 0.5}
 		{generator
 			{emissionarea
@@ -46,7 +46,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.05}
 							{max 0.7}
 						}
@@ -72,7 +72,7 @@
 		}
 		{#+ notifyowner}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{delay 0.5}
 		{generator
 			{emissionarea
@@ -105,7 +105,7 @@
 		}
 		{#+ notifyowner}
 	}
-	{#+ spriteview "halo night"
+	{##+ spriteview "halo night"
 		{sprite "$/flash/halo01"
 			{timer
 				{mode play }
@@ -120,7 +120,7 @@
 			{scale 0.3}
 		}
 		{halo}
-		{nightonly}
+		{## nightonly}
 		{autovisible}
 		{notifyowner}
 	}

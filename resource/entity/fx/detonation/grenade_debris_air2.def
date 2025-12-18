@@ -27,7 +27,7 @@
 					}
 					{preturn 180 180}
 					{turn 1
-						{## linear
+						{linear
 							{min 0}
 							{max 0 180}
 						}
@@ -74,12 +74,12 @@
 							{pow 1}
 						}
 					}
-					{highlight 0xff222222}
+					{## highlight 0xff222222}
 				}
 			}
 		}
 	}
-	{particleview smoke
+	{## particleview smoke
 		{generator
 			{emissionarea
 				{radius 0}
@@ -127,7 +127,7 @@
 					}
 					{highlight 0xffacacac}
 				}
-				{sprite "$/smoke/smokesmal4b"
+				{## sprite "$/smoke/smokesmal4b"
 					{timer
 						{mode play }
 						{duration -1}

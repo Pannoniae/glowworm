@@ -1,6 +1,6 @@
 {fx
 	{sound "hit/human/bullet/"}
-	{#+ particleview splash
+	{##+ particleview splash
 		{generator
 			{totalparticles 4}
 			{particlesinblock 4}
@@ -20,7 +20,7 @@
 				{value 0.05}
 			}
 			{damping 0.81}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -28,7 +28,7 @@
 		}
 		{visualizer
 			{stage 
-				{flags trace }
+				{## flags trace }
 				{sprite "$/particle/blood_splash"
 					{scale 1
 						{power
@@ -38,7 +38,7 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -48,13 +48,13 @@
 						{duration -1}
 					}
 					{preturn 0 180}
-					{highlight 0xff893c39}
+					{## highlight 0xff893c39}
 				}
 			}
 		}
 		{notifyowner}
 	}
-	{#+ particleview splash_smoke
+	{##+ particleview splash_smoke
 		{generator
 			{totalparticles 8}
 			{particlesinblock 8}
@@ -68,14 +68,14 @@
 				{lifetime 1.5 0.5}
 			}
 			{timetolive 0.1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{gravity
 				{value 0.01}
 			}
 			{damping 0.7}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -104,7 +104,7 @@
 					{preturn 0 180}
 					{highlight 0xffd2cabf}
 				}
-				{flags trace }
+				{## flags trace }
 			}
 		}
 		{notifyowner}
@@ -182,7 +182,7 @@
 		}
 		{mover
 			{damping 1}
-			{gravity
+			{## gravity
 				{value 0.01}
 			}
 			{collisions
@@ -211,7 +211,7 @@
 							{max 0.01}
 						}
 					}
-					{preturn 0 180}
+					{## preturn 0 180}
 					{visibility 1
 						{power
 							{min 1}
@@ -220,7 +220,7 @@
 						}
 					}
 				}
-				{sprite "$/additional/blood1"
+				{## sprite "$/additional/blood1"
 					{timer
 						{mode play }
 						{duration -1}
@@ -259,14 +259,14 @@
 				{lifetime 0.65 0.15}
 			}
 			{timetolive 0.1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{gravity
 				{value 0.01}
 			}
 			{damping 0.9}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -295,7 +295,7 @@
 					{preturn 0 180}
 					{highlight 0xffd2cabf}
 				}
-				{flags trace }
+				{## flags trace }
 			}
 		}
 		{notifyowner}

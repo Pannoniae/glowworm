@@ -1,6 +1,6 @@
 {fx
 	{sound "detonation/electrical/poles/"}
-	{#+ lightview
+	{##+ lightview
 		{animator
 			{timer
 				{mode play loop }
@@ -20,7 +20,7 @@
 		{radius 70}
 		{effectonground}
 	}
-	{#+ particleview central
+	{##+ particleview central
 		{generator
 			{emissionarea
 				{radius 0}
@@ -46,7 +46,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.085 0.035}
 							{max 0.3 0.1}
 						}
@@ -74,7 +74,7 @@
 				{speed 1.5 1.5}
 				{lifetime 3.5 1.5}
 			}
-			{totalparticles 100}
+			{## totalparticles 100}
 			{particlesinblock 50}
 			{axisz}
 			{timetolive 0.2}
@@ -125,7 +125,7 @@
 			{scale 5}
 		}
 		{halo}
-		{nightonly}
+		{## nightonly}
 		{autovisible}
 	}
 	{#+ spriteview "halo yellow big"
@@ -143,7 +143,7 @@
 			{scale 1}
 		}
 		{halo}
-		{nightonly}
+		{## nightonly}
 		{autovisible}
 	}
 	{#+ spriteview halo
@@ -160,10 +160,10 @@
 			}
 			{scale 2 0.5}
 		}
-		{halo}
+		{## halo}
 		{autovisible}
 	}
-	{#+ spriteview "halo yellow"
+	{##+ spriteview "halo yellow"
 		{sprite "$/flash/halo03"
 			{timer
 				{mode play }

@@ -1,5 +1,5 @@
 {fx
-	{sound "detonation/grenade"}
+	{## sound "detonation/grenade"}
 	{#+ particleview smoke
 		{generator
 			{totalparticles 1}
@@ -13,7 +13,7 @@
 				{speed 1.5 1}
 				{lifetime 12.5 2.5}
 			}
-			{timetolive 0.1}
+			{## timetolive 0.1}
 			{particlesinblock 1}
 			{axisz}
 		}
@@ -33,7 +33,7 @@
 					}
 					{preturn 90 90}
 					{turn 1
-						{## linear
+						{linear
 							{min 0}
 							{max 0 150}
 						}
@@ -81,7 +81,7 @@
 		{notifyowner}
 		{offset 0 0 -10}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 24}
 			{emissionarea
@@ -130,7 +130,7 @@
 						}
 					}
 				}
-				{sprite "$/smoke/smokesmal4b_30"
+				{## sprite "$/smoke/smokesmal4b_30"
 					{timer
 						{mode play }
 						{duration -1}
@@ -158,7 +158,7 @@
 			}
 		}
 	}
-	{#+ particleview "wp flares"
+	{##+ particleview "wp flares"
 		{visualizer
 			{stage 
 				{sprite "/texture/fx/flash/halo03"
@@ -190,7 +190,7 @@
 			{axisz}
 		}
 	}
-	{#+ particleview "wp flares fake"
+	{##+ particleview "wp flares fake"
 		{generator
 			{emissionarea
 				{radius 1}
@@ -213,7 +213,7 @@
 			}
 			{collisions
 				{terrain}
-				{restitution 0.2}
+				{## restitution 0.2}
 				{once}
 			}
 		}
@@ -227,7 +227,7 @@
 					{light 0.4}
 					{scale 0.025 0.005}
 				}
-				{flags ground }
+				{## flags ground }
 			}
 			{stage collided 
 				{sprite "/texture/fx/flash/halo03"
@@ -243,7 +243,7 @@
 		}
 		{offset 0 0 5}
 	}
-	{#+ particleview explosion
+	{##+ particleview explosion
 		{generator
 			{totalparticles 2}
 			{emissionarea
@@ -274,19 +274,19 @@
 						{duration -1}
 					}
 					{preturn 90 90}
-					{turn 1
+					{## turn 1
 						{linear
 							{min 0}
 							{max 0 300}
 						}
 					}
 					{scale 0.2
-						{linear
+						{## linear
 							{min 0.2}
 							{max 0.2}
 						}
 					}
-					{light 1
+					{## light 1
 						{linear
 							{min 0.7}
 							{max 0}
@@ -294,7 +294,7 @@
 					}
 					{highlight 0xffffc078}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_50"
+				{##+ sprite "$/smoke/smokesmal4b_50"
 					{timer
 						{mode play }
 						{duration -1}
@@ -319,7 +319,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_30"
+				{##+ sprite "$/smoke/smokesmal4b_30"
 					{timer
 						{mode play }
 						{duration -1}

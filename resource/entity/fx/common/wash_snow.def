@@ -58,7 +58,7 @@
 				{#+ sprite "$/water/wash_new02"
 					{preturn 90}
 					{scaley 1
-						{#+ linear
+						{##+ linear
 							{min 1.7 0.5}
 							{max 2.5 0.8}
 						}
@@ -83,7 +83,7 @@
 				{#+ sprite "$/water/wash_new01"
 					{preturn 90}
 					{#+ scaley 1.15 0.35
-						{linear
+						{## linear
 							{min 1.7 0.5}
 							{max 2.5 0.8}
 						}
@@ -109,7 +109,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview waves2
+	{##+ particleview waves2
 		{generator
 			{totalparticles 20}
 			{emissionarea

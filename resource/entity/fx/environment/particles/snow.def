@@ -59,7 +59,7 @@
 				{sprite "$/flash/wash_new01b"
 					{preturn 90}
 					{#+ scaley 2
-						{linear
+						{## linear
 							{min 1.7 0.5}
 							{max 2.5 0.8}
 						}
@@ -85,7 +85,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview waves2
+	{##+ particleview waves2
 		{generator
 			{totalparticles 20}
 			{emissionarea

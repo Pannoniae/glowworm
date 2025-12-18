@@ -20,7 +20,7 @@
 		{attenuation1 0.7}
 		{radius 120}
 		{priority 5}
-		{effectonground}
+		{## effectonground}
 		{offset 0 0 10}
 		{pulseperiod 0.1 0.02}
 	}
@@ -117,11 +117,11 @@
 						}
 					}
 					{visibility 0.5
-						{## linear
+						{linear
 							{min 0.45 0.15}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.5}
 							{pow 0.2}
@@ -132,7 +132,7 @@
 						{duration -1}
 					}
 					{preturn 180 80}
-					{highlight 0xff000000}
+					{## highlight 0xff000000}
 				}
 			}
 		}

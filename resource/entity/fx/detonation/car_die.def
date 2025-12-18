@@ -128,7 +128,7 @@
 						}
 					}
 					{preturn 0 80}
-					{highlight 0xc0c0c0}
+					{## highlight 0xc0c0c0}
 					{timer
 						{mode play }
 						{duration -1}
@@ -200,7 +200,7 @@
 		}
 		{offset 0 0 -10}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{delay 0.2}
 		{generator
 			{particlesinblock 40}
@@ -281,7 +281,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{light 1
+					{## light 1
 						{linear
 							{min 1}
 							{max 0}
@@ -420,7 +420,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ particleview "pieces light"
+	{##+ particleview "pieces light"
 		{delay 0.1}
 		{entitygenerator
 			{totalparticles 5}
@@ -494,15 +494,15 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xffff5639}
-					{visibility 1
+					{## highlight 0xffff5639}
+					{## visibility 1
 						{linear
 							{min 0.2}
 							{max 0}
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smoke_fireball"
+				{##+ sprite "$/smoke/smoke_fireball"
 					{scale 1
 						{linear
 							{min 0.175 0.025}
@@ -531,7 +531,7 @@
 			}
 		}
 	}
-	{#+ particleview fire2
+	{##+ particleview fire2
 		{delay 0.2}
 		{generator
 			{totalparticles 20}
@@ -741,7 +741,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview "hot smoke"
+	{##+ particleview "hot smoke"
 		{delay 0.2}
 		{generator
 			{totalparticles 100}

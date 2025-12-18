@@ -1,6 +1,6 @@
 {fx
 	 
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
@@ -27,7 +27,7 @@
 		{offset 0 0 5}
 		{nightonly}
 	}
-	{#+ particleview "smoke puff"
+	{##+ particleview "smoke puff"
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -79,7 +79,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ spriteview muz3
+	{##+ spriteview muz3
 		{#+ sprite "$/flash/flashssp3"
 			{light 1
 				{linear
@@ -93,13 +93,13 @@
 			}
 			{scale 0.2}
 			{preturn 90 90}
-			{shiftz 1.8}
+			{## shiftz 1.8}
 			{highlight 0xffffbe3b}
 		}
 		{orientation normalYZ}
 		{autovisible}
 	}
-	{#+ particleview "smoke stream"
+	{##+ particleview "smoke stream"
 		{generator
 			{totalparticles 2}
 			{emissionarea
@@ -152,7 +152,7 @@
 			}
 		}
 	}
-	{#+ particleview "smoke fast"
+	{##+ particleview "smoke fast"
 		{generator
 			{totalparticles 4}
 			{emissionarea
@@ -165,14 +165,14 @@
 				{lifetime 0.6 0.2}
 			}
 			{particlesinblock 4}
-			{timetolive 0.1}
+			{## timetolive 0.1}
 		}
 		{mover
 			{damping 0.9}
 			{gravity
 				{value -0.002}
 			}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -217,14 +217,14 @@
 				{lifetime 1.5 0.5}
 			}
 			{particlesinblock 2}
-			{timetolive 0.1}
+			{## timetolive 0.1}
 		}
 		{mover
 			{damping 0.9}
 			{gravity
 				{value -0.002}
 			}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -256,21 +256,21 @@
 			}
 		}
 	}
-	{#+ spriteview "muz1 xy    "
+	{##+ spriteview "muz1 xy    "
 		{sprite "$/flash/muzzle-side2"
 			{light 1
-				{linear
+				{## linear
 					{min 0.5}
 					{max 0}
 				}
 			}
-			{#+ scalex 0.6
+			{##+ scalex 0.6
 				{linear
 					{min 0}
 					{max 0.1 0.1}
 				}
 			}
-			{#+ scaley 0.35
+			{##+ scaley 0.35
 				{linear
 					{min 0}
 					{max 0.075 0.075}
@@ -291,21 +291,21 @@
 		{orientation normalXY}
 		{autovisible}
 	}
-	{#+ spriteview "muz1 xz"
+	{##+ spriteview "muz1 xz"
 		{sprite "$/flash/muzzle-side2"
 			{light 1
-				{linear
+				{## linear
 					{min 0.5}
 					{max 0}
 				}
 			}
-			{#+ scalex 0.6
+			{##+ scalex 0.6
 				{linear
 					{min 0}
 					{max 0.1 0.1}
 				}
 			}
-			{#+ scaley 0.35
+			{##+ scaley 0.35
 				{linear
 					{min 0}
 					{max 0.075 0.075}
@@ -326,7 +326,7 @@
 		{orientation normalXZ}
 		{autovisible}
 	}
-	{#+ spriteview muz2
+	{##+ spriteview muz2
 		{sprite "$/flash/muzzle-side"
 			{light 1
 				{linear
@@ -355,7 +355,7 @@
 		{orientation normalXZ}
 		{autovisible}
 	}
-	{#+ spriteview halo1
+	{##+ spriteview halo1
 		{sprite "$/flash/halo02"
 			{timer
 				{mode play }
@@ -375,7 +375,7 @@
 		{offset 1 1 1}
 		{nightonly}
 	}
-	{#+ spriteview halo2
+	{##+ spriteview halo2
 		{sprite "$/flash/flash_g03"
 			{timer
 				{mode play }
@@ -394,7 +394,7 @@
 		{autovisible}
 		{offset 0 0 0}
 	}
-	{#+ spriteview "muzzle rear"
+	{##+ spriteview "muzzle rear"
 		{sprite "/texture/fx/flash/muzzle-back"
 			{scale 1
 				{linear
@@ -413,14 +413,14 @@
 					{max 0}
 				}
 			}
-			{turn -115}
+			{## turn -115}
 			{highlight 0xffd7894e}
 		}
-		{delay 0.1}
+		{## delay 0.1}
 		{orientation normalYZ}
 		{autovisible}
 	}
-	{#+ spriteview muz1
+	{##+ spriteview muz1
 		{sprite "$/flash/muzzle-side2"
 			{light 1
 				{linear
@@ -449,7 +449,7 @@
 		{orientation normalXZ}
 		{autovisible}
 	}
-	{#+ spriteview muz2
+	{##+ spriteview muz2
 		{sprite "$/flash/muzzle-side"
 			{light 1
 				{linear

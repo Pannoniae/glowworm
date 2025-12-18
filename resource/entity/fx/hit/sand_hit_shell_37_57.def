@@ -3,7 +3,7 @@
 	{sound "detonation/s1/d2/AP_Shell/"}
 	{sound "detonation/s1/d3/AP_Shell/"}
 	{sound "detonation/s1/shockwave/Dirt/Impact/"}
-	{#+ spriteview mark
+	{##+ spriteview mark
 		{#+ sprite "$/explosion/small_decal"
 			{visibility 1
 				{linear
@@ -22,7 +22,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview "dust ground"
+	{##+ particleview "dust ground"
 		{generator
 			{emissionarea
 				{radius 0}
@@ -79,7 +79,7 @@
 			}
 		}
 	}
-	{#+ particleview dirt
+	{##+ particleview dirt
 		{generator
 			{emissionarea
 				{radius 5 5}
@@ -147,7 +147,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview shock
+	{##+ particleview shock
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -174,7 +174,7 @@
 							{max 0.2}
 						}
 					}
-					{highlight 0xff0a0a0a}
+					{## highlight 0xff0a0a0a}
 					{visibility 1
 						{peak
 							{min 0}
@@ -200,13 +200,13 @@
 				{speed 2 2}
 				{lifetime 1.85 1.65}
 			}
-			{axisz}
+			{## axisz}
 			{timetolive 0.1}
 			{particlesinblock 20}
 		}
 		{mover
 			{gravity
-				{value 0.01}
+				{## value 0.01}
 			}
 			{damping 0.9}
 		}
@@ -282,11 +282,11 @@
 			{timetolive 0.01}
 			{totalparticles 6}
 			{particlesinblock 6}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{damping 0.93}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -310,7 +310,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -339,7 +339,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "dirt up"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 8}
 			{particlesinblock 8}
@@ -352,10 +352,10 @@
 				{speed 3 1}
 				{lifetime 1}
 			}
-			{axisz}
+			{## axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value 0.1}
@@ -363,8 +363,8 @@
 			{damping 0.9}
 			{nodependonwind}
 			{collisions
-				{terrain}
-				{once}
+				{## terrain}
+				{## once}
 			}
 		}
 		{visualizer

@@ -1,12 +1,12 @@
 {fx
 	{fire}
-	{#+ particleview cooking
+	{##+ particleview cooking
 		{generator
 			{totalparticles 7}
 			{emissionarea
 				{radius 0}
 				{alpha1 165 15}
-				{speed 0.1}
+				{## speed 0.1}
 			}
 			{particleinit
 				{speed 1.5 0.5}
@@ -29,7 +29,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{linear
 							{min 0.3 0.1}
 							{max 0.65 0.15}
@@ -58,7 +58,7 @@
 							{max 1.75 0.25}
 						}
 					}
-					{highlight 0xffffc765}
+					{## highlight 0xffffc765}
 					{preturn 180}
 				}
 			}
@@ -66,7 +66,7 @@
 		{notifyowner}
 		{offset 0 0 10}
 	}
-	{#+ particleview sparks
+	{##+ particleview sparks
 		{generator
 			{emissionarea
 				{radius 1}
@@ -151,14 +151,14 @@
 			}
 		}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 10}
 			{emissionarea
 				{radius 0}
 				{alpha0 0}
 				{alpha1 10 10}
-				{speed 0.1}
+				{## speed 0.1}
 			}
 			{particleinit
 				{speed 2 1}
@@ -201,7 +201,7 @@
 				{radius 0}
 				{alpha0 0}
 				{alpha1 10 10}
-				{speed 0.1}
+				{## speed 0.1}
 			}
 			{particleinit
 				{speed 1.25 0.25}
@@ -284,12 +284,12 @@
 							{min 0.95 0.05}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0.8}
 							{max 0}
 							{pow 1}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.7}
 						}
@@ -319,12 +319,12 @@
 							{min 0.95 0.05}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0.8}
 							{max 0}
 							{pow 1}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.5 0.2}
 						}
@@ -381,12 +381,12 @@
 							{min 0.95 0.05}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.8}
 							{pow 0.2}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 1}
 						}
@@ -507,7 +507,7 @@
 		}
 	}
 	{sound "fire/fire_hatch"}
-	{#+ particleview smoke3
+	{##+ particleview smoke3
 		{generator
 			{emissionarea
 				{radius 2 2}
@@ -566,7 +566,7 @@
 			}
 		}
 	}
-	{#+ particleview smoke3
+	{##+ particleview smoke3
 		{generator
 			{emissionarea
 				{radius 2 2}

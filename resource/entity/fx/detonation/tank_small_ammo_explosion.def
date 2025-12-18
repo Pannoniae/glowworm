@@ -3,7 +3,7 @@
 	{#+ lightview
 		{type point}
 		{animator
-			{scale 1
+			{## scale 1
 				{## linear
 					{min 1}
 					{max 0.5}
@@ -15,11 +15,11 @@
 				}
 			}
 			{visibility 1
-				{## linear
+				{##+ linear
 					{min 1}
 					{max 0}
 				}
-				{## power
+				{##+ power
 					{min 1}
 					{max 0}
 					{pow 0.5}
@@ -180,7 +180,7 @@
 		{notifyowner}
 	}
 	{#+ particleview sparkles
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{particlesinblock 60}
 			{totalparticles 60}
@@ -216,7 +216,7 @@
 				}
 			}
 		}
-		{notifyowner}
+		{## notifyowner}
 	}
 	{#+ spriteview shock1
 		{sprite "$/flash/supershock"
@@ -243,7 +243,7 @@
 		{layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ spriteview shock2
 		{sprite "$/explosion/fire_sled"
@@ -270,7 +270,7 @@
 		{layer grounddynamic}
 		{offset 0 0 5}
 		{autovisible}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview fuzzy
 		{delay 0.05}
@@ -319,7 +319,7 @@
 				}
 			}
 		}
-		{notifyowner}
+		{## notifyowner}
 	}
 	{#+ particleview "fire burst"
 		{delay 0.05}
@@ -377,7 +377,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview kaboom
 		{generator
@@ -420,7 +420,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview "smoke gnd"
 		{delay 0.05}
@@ -491,7 +491,7 @@
 				}
 			}
 		}
-		{notifyowner}
+		{## notifyowner}
 	}
 	{#+ particleview "smoke up"
 		{delay 0.15}
@@ -610,7 +610,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ spriteview flash1
 		{sprite "$/flash/flash_g03"
@@ -780,7 +780,7 @@
 		{delay 2}
 		{#+ generator
 			{totalparticles 20}
-			{particlesinblock 20}
+			{## particlesinblock 20}
 			{emissionarea
 				{radius 15 15}
 				{alpha0 0}
@@ -806,7 +806,7 @@
 		{visualizer
 			{stage 
 				{sprite "$/particle/pieces2"
-					{#+ turn 1
+					{##+ turn 1
 						{npower
 							{min 10 10}
 							{max 90 90}
@@ -834,7 +834,7 @@
 					}
 				}
 			}
-			{#+ stage collided dying 
+			{##+ stage collided dying 
 				{flags killparticle ground }
 				{sprite "$/particle/pieces"
 					{visibility 1
@@ -920,7 +920,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview "smoke up"
 		{generator
@@ -1017,7 +1017,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview "smoke around"
 		{generator
@@ -1177,7 +1177,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview "explosion up"
 		{generator
@@ -1225,7 +1225,7 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 	{#+ particleview "explosion up"
 		{generator
@@ -1273,6 +1273,6 @@
 				}
 			}
 		}
-		{#+ notifyowner}
+		{##+ notifyowner}
 	}
 }

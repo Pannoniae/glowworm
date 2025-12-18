@@ -80,7 +80,7 @@
 			}
 		}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 24}
 			{emissionarea
@@ -129,7 +129,7 @@
 						}
 					}
 				}
-				{sprite "$/smoke/smokesmal4b_30"
+				{## sprite "$/smoke/smokesmal4b_30"
 					{timer
 						{mode play }
 						{duration -1}
@@ -212,7 +212,7 @@
 			}
 			{collisions
 				{terrain}
-				{restitution 0.2}
+				{## restitution 0.2}
 				{once}
 			}
 		}
@@ -227,10 +227,10 @@
 					{scale 0.025 0.005}
 					{highlight 0xffffd7ab}
 				}
-				{flags ground }
+				{## flags ground }
 			}
 			{stage collided 
-				{#+ sprite "/texture/fx/flash/halo03"
+				{##+ sprite "/texture/fx/flash/halo03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -239,7 +239,7 @@
 					{scale 0.025 0.005}
 					{highlight 0xffffd7ab}
 				}
-				{flags ground }
+				{## flags ground }
 			}
 		}
 		{offset 0 0 5}
@@ -275,19 +275,19 @@
 						{duration -1}
 					}
 					{preturn 90 90}
-					{turn 1
+					{## turn 1
 						{linear
 							{min 0}
 							{max 0 300}
 						}
 					}
 					{scale 0.2
-						{linear
+						{## linear
 							{min 0.2}
 							{max 0.2}
 						}
 					}
-					{light 1
+					{## light 1
 						{linear
 							{min 0.7}
 							{max 0}
@@ -295,7 +295,7 @@
 					}
 					{highlight 0xffffc078}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_50"
+				{##+ sprite "$/smoke/smokesmal4b_50"
 					{timer
 						{mode play }
 						{duration -1}
@@ -320,7 +320,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smokesmal4b_30"
+				{##+ sprite "$/smoke/smokesmal4b_30"
 					{timer
 						{mode play }
 						{duration -1}

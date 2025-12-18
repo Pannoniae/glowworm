@@ -28,8 +28,8 @@
 				{radius 4 2}
 				{alpha0 0 180}
 				{alpha1 0 180}
-				{psi 180}
-				{theta -90}
+				{## psi 180}
+				{## theta -90}
 			}
 			{particleinit
 				{speed -0.175 -0.125}
@@ -59,12 +59,12 @@
 					}
 					{scale 0.00185 0.00035}
 					{light 0.6 0.2
-						{npower
+						{## npower
 							{min 1}
 							{max 0}
 							{pow 2}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 1}
 						}
@@ -99,15 +99,15 @@
 					{max 0.35}
 				}
 			}
-			{visibility 1
+			{## visibility 1
 				{peak
 					{min 0}
 					{max 0}
 				}
 			}
-			{light 1}
+			{## light 1}
 		}
-		{orientation trace}
+		{## orientation trace}
 		{softintersection}
 	}
 	{#+ spriteview "flash core"
@@ -122,8 +122,8 @@
 				{mode play loop }
 				{duration 3}
 			}
-			{scale 0.2}
-			{highlight 0xffffffc7}
+			{## scale 0.2}
+			{## highlight 0xffffffc7}
 			{scalex 0
 				{peak
 					{min 0.22}
@@ -138,7 +138,7 @@
 			}
 			{preshiftx 10}
 		}
-		{offset 0 0 -1}
+		{## offset 0 0 -1}
 		{softintersection}
 		{orientation trace}
 	}
@@ -155,7 +155,7 @@
 				{duration 5}
 			}
 			{scale 0.5}
-			{highlight 0xff809ee4}
+			{## highlight 0xff809ee4}
 		}
 	}
 	{storeable 1}
@@ -183,7 +183,7 @@
 					{max 0.7}
 				}
 			}
-			{light 1}
+			{## light 1}
 			{highlight 0xffffedd7}
 		}
 		{orientation trace}
@@ -202,11 +202,11 @@
 				{duration 3}
 			}
 			{scale 0.025}
-			{highlight 0xffffffc7}
-			{preshiftx 10}
+			{## highlight 0xffffffc7}
+			{## preshiftx 10}
 		}
-		{offset 0 0 -1}
-		{softintersection}
-		{orientation trace}
+		{## offset 0 0 -1}
+		{## softintersection}
+		{## orientation trace}
 	}
 }

@@ -1,6 +1,6 @@
 {fx
-	{fire}
-	{#+ particleview smoke
+	{## fire}
+	{##+ particleview smoke
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -28,7 +28,7 @@
 			{stage 
 				{sprite "$/smoke/sm06_loop"
 					{turn 1
-						{## linear
+						{linear
 							{min 0 30}
 							{max 0 90}
 						}
@@ -56,13 +56,13 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview flames
+	{##+ particleview flames
 		{generator
 			{totalparticles 10}
 			{emissionarea
 				{radius 1.5 1.5}
 				{alpha1 90 90}
-				{speed 0.7}
+				{## speed 0.7}
 			}
 			{particleinit
 				{speed 0}
@@ -99,7 +99,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 10}
 			{particlesinblock 1}
@@ -137,7 +137,7 @@
 			}
 		}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 30}
 			{emissionarea
@@ -245,5 +245,5 @@
 		}
 		{notifyowner}
 	}
-	{#+ sound "fire/loops/fire_big_01"}
+	{##+ sound "fire/loops/fire_big_01"}
 }

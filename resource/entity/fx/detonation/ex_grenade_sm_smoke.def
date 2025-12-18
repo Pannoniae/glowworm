@@ -42,8 +42,8 @@
 			}
 			{preturn 90 90}
 		}
-		{ground}
-		{layer grounddynamic}
+		{## ground}
+		{## layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
 		{notifyowner}
@@ -170,7 +170,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview fuzzy_epicentre
+	{##+ particleview fuzzy_epicentre
 		{generator
 			{emissionarea
 				{radius 0}
@@ -199,7 +199,7 @@
 						{duration -1}
 					}
 					{visibility 0.2
-						{npower
+						{## npower
 							{min 1}
 							{max 0}
 							{pow 1}
@@ -209,16 +209,16 @@
 							{max 0}
 						}
 					}
-					{preturn 0}
+					{## preturn 0}
 					{highlight 0xffff9e53}
-					{#+ scalex 1
+					{##+ scalex 1
 						{npower
 							{min 0.01 0.01}
 							{max 0.15 0.05}
 							{pow 0.4}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{npower
 							{min 0.075 -0.025}
 							{max 0.15 0.05}
@@ -233,7 +233,7 @@
 		{offset 0 0 50}
 	}
 	{#+ particleview "dust afterexp2"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 5}
 			{particlesinblock 5}
@@ -256,7 +256,7 @@
 				{value -0.005}
 			}
 			{damping 0.955}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -289,7 +289,7 @@
 			}
 		}
 	}
-	{#+ particleview dust
+	{##+ particleview dust
 		{#+ delay 0.03}
 		{generator
 			{totalparticles 40}
@@ -341,7 +341,7 @@
 		{notifyowner}
 	}
 	{particleview "dirt up"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 40}
 			{particlesinblock 40}
@@ -357,14 +357,14 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value 0.03}
 			}
 			{damping 1}
 			{nodependonwind}
-			{collisions
+			{## collisions
 				{terrain}
 				{once}
 			}
@@ -390,11 +390,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.8}
 							{max 0}
 						}
@@ -403,7 +403,7 @@
 			}
 		}
 	}
-	{#+ particleview "dust trails"
+	{##+ particleview "dust trails"
 		{entitygenerator
 			{totalparticles 2}
 			{emissionarea
@@ -421,8 +421,8 @@
 			{axisz}
 		}
 	}
-	{#+ particleview "dust ground"
-		{delay 0.15}
+	{##+ particleview "dust ground"
+		{## delay 0.15}
 		{generator
 			{totalparticles 40}
 			{particlesinblock 40}
@@ -444,7 +444,7 @@
 				{value -0.005}
 			}
 			{damping 0.955}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -461,17 +461,17 @@
 						}
 					}
 					{scale 2
-						{#+ linear
+						{##+ linear
 							{min 0.125 0.025}
 							{max 0.45 0.05}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.3}
 							{max 0}
 						}

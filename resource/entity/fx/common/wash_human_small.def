@@ -1,5 +1,5 @@
 {fx
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -30,7 +30,7 @@
 				{sprite "$/water/wash_new02"
 					{preturn 270}
 					{scaley 1
-						{## linear
+						{linear
 							{min 0.1 0.05}
 							{max 0.2 0.15}
 						}
@@ -144,7 +144,7 @@
 		{notifyowner}
 		{offset 0 0 -10}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -198,7 +198,7 @@
 					}
 					{shifty 0 1}
 				}
-				{sprite "$/water/wash_new01"
+				{## sprite "$/water/wash_new01"
 					{preturn 270}
 					{scaley 1
 						{linear
@@ -283,7 +283,7 @@
 					}
 					{shifty 0 1}
 				}
-				{#+ sprite "$/water/wash_new01"
+				{##+ sprite "$/water/wash_new01"
 					{preturn 270}
 					{scaley 1
 						{linear

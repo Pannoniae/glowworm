@@ -3,11 +3,11 @@
 	{sound "detonation/s1/d2/AP_Shell/"}
 	{sound "detonation/s1/d3/AP_Shell/"}
 	{sound "crush/medium/concrete"}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -109,7 +109,7 @@
 			}
 		}
 	}
-	{#+ particleview flash
+	{##+ particleview flash
 		{generator
 			{emissionarea
 				{radius 0}
@@ -186,7 +186,7 @@
 			{entity "#grunt2"
 				{fx "spheredust_small_short"}
 			}
-			{entity "#metall3"}
+			{## entity "#metall3"}
 		}
 		{notifyowner}
 	}
@@ -353,7 +353,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ spriteview fuzzy1
+	{##+ spriteview fuzzy1
 		{sprite "/texture/fx/explosion/bum_one_var"
 			{timer
 				{mode play }
@@ -394,7 +394,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview fuzzy2
+	{##+ spriteview fuzzy2
 		{sprite "/texture/fx/explosion/bum_one_var"
 			{timer
 				{mode play }
@@ -429,7 +429,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview fuzzy3
+	{##+ spriteview fuzzy3
 		{sprite "/texture/fx/explosion/bum_one_var"
 			{timer
 				{mode play }
@@ -470,7 +470,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview fuzzy4
+	{##+ spriteview fuzzy4
 		{sprite "/texture/fx/explosion/bum_one_var"
 			{timer
 				{mode play }
@@ -520,7 +520,7 @@
 				{lifetime 4.5 0.5}
 			}
 			{timetolive 0.1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{gravity

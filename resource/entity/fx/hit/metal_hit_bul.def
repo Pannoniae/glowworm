@@ -1,6 +1,6 @@
 {fx
 	{sound "hit/steel/hit/bullet"}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
@@ -26,7 +26,7 @@
 		{intensity 3}
 		{radiusfalloff 30}
 	}
-	{#+ spriteview halo
+	{##+ spriteview halo
 		{sprite "$/flash/halo03"
 			{timer
 				{mode play }
@@ -150,13 +150,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xffa5a5a5}
+					{## highlight 0xffa5a5a5}
 				}
 			}
 		}
 		{notifyowner}
 	}
-	{#+ particleview "smoke fwd"
+	{##+ particleview "smoke fwd"
 		{generator
 			{emissionarea
 				{radius 2.5 2.5}

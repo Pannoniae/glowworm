@@ -30,7 +30,7 @@
 					{highlight 0xffffffff}
 					{scaley 0.085 0.045}
 					{scalex 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0.5}
 						}
@@ -66,8 +66,8 @@
 		{mover
 			{damping 1}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -78,7 +78,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.15 0.05}
 							{max 0.35 0.15}
@@ -86,18 +86,18 @@
 					}
 					{preturn 0}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
@@ -120,7 +120,7 @@
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
 	{#+ particleview "smoke forward long"
 		{generator
@@ -162,11 +162,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.175 0.025}
 							{max 0.5 0.1}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -178,9 +178,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -209,6 +209,6 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 }

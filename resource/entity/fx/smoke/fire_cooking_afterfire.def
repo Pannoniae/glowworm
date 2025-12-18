@@ -24,7 +24,7 @@
 		}
 		{visualizer
 			{stage 
-				{sprite "$/explosion/exp01"
+				{## sprite "$/explosion/exp01"
 					{timer
 						{mode play }
 						{duration -1}
@@ -162,11 +162,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 0.6}
 							{pow 0.2}
@@ -252,7 +252,7 @@
 		}
 		{visualizer
 			{stage 
-				{sprite "$/explosion/exp01"
+				{## sprite "$/explosion/exp01"
 					{timer
 						{mode play }
 						{duration -1}
@@ -325,7 +325,7 @@
 							{max 0}
 						}
 					}
-					{visibility 1
+					{## visibility 1
 						{peak
 							{min 0}
 							{max 0.5}
@@ -347,7 +347,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smtanko"
+				{##+ sprite "$/smoke/smtanko"
 					{turn 1
 						{linear
 							{min 0}
@@ -360,7 +360,7 @@
 							{max 0.15 0.05}
 						}
 					}
-					{visibility 1
+					{## visibility 1
 						{peak
 							{min 0}
 							{max 0.4}
@@ -391,7 +391,7 @@
 							{max 0}
 						}
 					}
-					{visibility 1
+					{## visibility 1
 						{peak
 							{min 0}
 							{max 0.5}
@@ -426,7 +426,7 @@
 							{max 0}
 						}
 					}
-					{visibility 1
+					{## visibility 1
 						{peak
 							{min 0}
 							{max 0.5}

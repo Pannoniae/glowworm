@@ -46,7 +46,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.085 0.035}
 							{max 0.3 0.1}
 						}
@@ -201,7 +201,7 @@
 			}
 		}
 	}
-	{#+ spriteview "halo night"
+	{##+ spriteview "halo night"
 		{sprite "$/flash/flashbsgl"
 			{timer
 				{mode play loop }
@@ -231,7 +231,7 @@
 			}
 			{timetolive 90}
 			{totalparticles 80}
-			{axisz}
+			{## axisz}
 			{particlesinblock 20 5}
 		}
 		{mover

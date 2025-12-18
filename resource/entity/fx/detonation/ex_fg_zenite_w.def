@@ -235,7 +235,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -259,7 +259,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -317,12 +317,12 @@
 						{duration -1}
 					}
 					{visibility 1
-						{npower
+						{## npower
 							{min 1}
 							{max 0}
 							{pow 3}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -342,7 +342,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 15}
 			{particlesinblock 15}
@@ -358,13 +358,13 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.001}
 			}
 			{damping 0.955}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -387,16 +387,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
 					}
-					{highlight 0xffc9ae92}
+					{## highlight 0xffc9ae92}
 				}
 				{sprite "$/smoke/smokesmal10"
 					{timer
@@ -417,16 +417,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
 					}
-					{highlight 0xff8a642f}
+					{## highlight 0xff8a642f}
 				}
 				{#+ sprite "$/smoke/smokesmal4b_70"
 					{timer
@@ -486,7 +486,7 @@
 		}
 	}
 	{#+ particleview "dust up"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 6}
 			{particlesinblock 6}
@@ -502,7 +502,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value 0.06}
@@ -535,16 +535,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.6}
 							{max 0}
 						}
 					}
-					{highlight 0xffc9ae92}
+					{## highlight 0xffc9ae92}
 				}
 				{#+ sprite "$/smoke/smoke_g04"
 					{timer
@@ -700,7 +700,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "snow up2"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 3}
 			{particlesinblock 3}
@@ -716,7 +716,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value 0.005}
@@ -749,11 +749,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.6}
 							{max 0}
 						}

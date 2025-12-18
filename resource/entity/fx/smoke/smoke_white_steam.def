@@ -30,7 +30,7 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.3 0.1}
 							{max 2.5 0.7}
 						}
@@ -118,7 +118,7 @@
 						{duration -1}
 					}
 				}
-				{sprite "$/smoke/smoke_turb2"
+				{## sprite "$/smoke/smoke_turb2"
 					{visibility 1
 						{peak
 							{min 0}
@@ -145,7 +145,7 @@
 			}
 		}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{axisz}
 			{totalparticles 25}

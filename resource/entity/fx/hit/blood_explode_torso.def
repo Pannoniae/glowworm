@@ -45,12 +45,12 @@
 						{mode play }
 						{duration 1.8}
 					}
-					{highlight 0x670000}
+					{## highlight 0x670000}
 					{visibility 1}
 				}
 			}
 			{stage collided 
-				{#+ sprite "$/particle/bloodspot01"
+				{##+ sprite "$/particle/bloodspot01"
 					{scale 1
 						{linear
 							{min 0.125 0.025}
@@ -72,7 +72,7 @@
 				{flags killparticle ground }
 				{sprite "$/particle/bloodstain"
 					{scale 0.0045 0.0025
-						{linear
+						{## linear
 							{min 0.015 0.005}
 							{max 0.035 0.005}
 						}
@@ -94,7 +94,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview drops2
+	{##+ particleview drops2
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -190,7 +190,7 @@
 		{visualizer
 			{stage 
 				{sprite "$/particle/blood_splash2"
-					{scale 1
+					{## scale 1
 						{linear
 							{min 0.045 0.025}
 							{max 0.15 0.05}
@@ -214,7 +214,7 @@
 						}
 					}
 					{scaley 0.15 0.05
-						{linear
+						{## linear
 							{min 0.045 0.025}
 							{max 0.15 0.05}
 						}
@@ -267,7 +267,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0x670000}
+					{## highlight 0x670000}
 					{visibility 1
 						{linear
 							{min 0.75}

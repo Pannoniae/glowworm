@@ -7,20 +7,20 @@
 				{radius 105 95}
 				{alpha0 0}
 				{alpha1 5 10}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{lifetime 15}
 				{speed 0.8 0.3}
 			}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{damping 8}
 			{gravity
 				{value 0}
 			}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.3}
 			}
@@ -29,7 +29,7 @@
 			{stage 
 				{sprite "$/smoke/smoke_g04d"
 					{turn 1
-						{## linear
+						{linear
 							{min 0}
 							{max 0 100}
 						}

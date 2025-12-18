@@ -30,7 +30,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smoke_g04f"
+				{##+ sprite "$/smoke/smoke_g04f"
 					{timer
 						{mode play }
 						{duration -1}
@@ -56,7 +56,7 @@
 					}
 					{highlight 0xffb4b4b4}
 				}
-				{#+ sprite "$/smoke/smoke_g04b"
+				{##+ sprite "$/smoke/smoke_g04b"
 					{timer
 						{mode play }
 						{duration -1}
@@ -135,20 +135,20 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 10}
+		{## offset 0 0 10}
 		{mover
 			{damping 0.995}
 			{gravity
 				{value -0.001}
 			}
 			{collisions
-				{terrain}
+				{## terrain}
 				{restitution 0.4}
 			}
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smoke_g04f"
+				{##+ sprite "$/smoke/smoke_g04f"
 					{timer
 						{mode play }
 						{duration -1}
@@ -174,7 +174,7 @@
 					}
 					{highlight 0xffb4b4b4}
 				}
-				{#+ sprite "$/smoke/smoke_g04b"
+				{##+ sprite "$/smoke/smoke_g04b"
 					{timer
 						{mode play }
 						{duration -1}
@@ -224,11 +224,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 0.35 0.05}
 							{max 0}
 						}

@@ -324,7 +324,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -348,7 +348,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -406,12 +406,12 @@
 						{duration -1}
 					}
 					{visibility 1
-						{npower
+						{## npower
 							{min 1}
 							{max 0}
 							{pow 3}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -431,7 +431,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 2}
 			{particlesinblock 2}
@@ -447,13 +447,13 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.001}
 			}
 			{damping 0.97}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -476,11 +476,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.4}
 							{max 0}
 						}
@@ -506,16 +506,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
 					}
-					{highlight 0xff8a642f}
+					{## highlight 0xff8a642f}
 				}
 				{#+ sprite "$/smoke/smokesmal4b_70"
 					{timer
@@ -575,7 +575,7 @@
 		}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 2}
 			{particlesinblock 2}
@@ -591,13 +591,13 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value -0.002}
 			}
 			{damping 0.955}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -625,7 +625,7 @@
 							{max 0.4}
 						}
 					}
-					{highlight 0xff8a642f}
+					{## highlight 0xff8a642f}
 				}
 			}
 		}
@@ -648,7 +648,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -672,7 +672,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -730,12 +730,12 @@
 						{duration -1}
 					}
 					{visibility 1
-						{npower
+						{## npower
 							{min 1}
 							{max 0}
 							{pow 3}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}

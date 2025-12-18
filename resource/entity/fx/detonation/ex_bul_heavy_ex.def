@@ -1,5 +1,5 @@
 {fx
-	{sound "hit/steel/hit/bullet_large"}
+	{## sound "hit/steel/hit/bullet_large"}
 	{#+ lightview
 		{type point}
 		{animator
@@ -40,7 +40,7 @@
 				}
 			}
 			{scale 0.25
-				{linear
+				{## linear
 					{min 1}
 					{max 0}
 				}
@@ -48,18 +48,18 @@
 			{highlight 0xffffc176}
 		}
 		{halo}
-		{orientation trace}
+		{## orientation trace}
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview "sparks fwd"
+	{##+ particleview "sparks fwd"
 		{generator
 			{emissionarea
 				{radius 0}
 				{alpha0 30 30}
 				{alpha1 30 30}
-				{psi 0 30}
-				{theta 0 40}
+				{## psi 0 30}
+				{## theta 0 40}
 			}
 			{particleinit
 				{speed 6.5 3.5}
@@ -105,14 +105,14 @@
 			}
 		}
 	}
-	{#+ particleview "sparks around"
+	{##+ particleview "sparks around"
 		{generator
 			{emissionarea
 				{radius 0}
 				{alpha0 75 15}
 				{alpha1 75 15}
-				{psi 0 30}
-				{theta 0 40}
+				{## psi 0 30}
+				{## theta 0 40}
 			}
 			{particleinit
 				{speed 12.5 7.5}
@@ -149,7 +149,7 @@
 					}
 					{scaley 0.02 0.01}
 					{light 1
-						{linear
+						{## linear
 							{min 1}
 							{max 0}
 						}
@@ -164,8 +164,8 @@
 				{radius 0}
 				{alpha0 45 45}
 				{alpha1 45 45}
-				{psi 0 30}
-				{theta 0 40}
+				{## psi 0 30}
+				{## theta 0 40}
 			}
 			{particleinit
 				{speed 3 2}
@@ -195,8 +195,8 @@
 						{mode play }
 						{duration -1}
 					}
-					{scalex 0.045 0.015}
-					{scaley 0.02 0.01}
+					{## scalex 0.045 0.015}
+					{## scaley 0.02 0.01}
 					{light 1
 						{linear
 							{min 1}
@@ -257,13 +257,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xff8f95a8}
+					{## highlight 0xff8f95a8}
 				}
 			}
 		}
 		{notifyowner}
 	}
-	{#+ particleview "smoke fwd reduced"
+	{##+ particleview "smoke fwd reduced"
 		{generator
 			{emissionarea
 				{radius 2.5 2.5}
@@ -310,7 +310,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xff8f95a8}
+					{## highlight 0xff8f95a8}
 				}
 			}
 		}

@@ -33,7 +33,7 @@
 				}
 				{sprite "$/particle/grit2"
 					{scale 0.125 0.075}
-					{highlight 0xff0e0e0e}
+					{## highlight 0xff0e0e0e}
 					{preturn 0 180}
 				}
 				{sprite "$/particle/snowflake"
@@ -52,7 +52,7 @@
 				{alpha0 15 15}
 				{alpha1 15 15}
 				{speed 0.5}
-				{psi 45}
+				{## psi 45}
 				{theta -30}
 			}
 			{particleinit
@@ -66,8 +66,8 @@
 			}
 			{damping 0.97}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -96,7 +96,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview "snow grit"
+	{##+ particleview "snow grit"
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -104,7 +104,7 @@
 				{alpha0 12.5 12.5}
 				{alpha1 12.5 12.5}
 				{speed 0.2}
-				{psi 45}
+				{## psi 45}
 				{theta -30}
 			}
 			{particleinit
@@ -135,7 +135,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/particle/grit2"
+				{##+ sprite "$/particle/grit2"
 					{scale 0.3 0.2}
 					{preturn 0 180}
 					{turn 1
@@ -149,7 +149,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview rock
+	{##+ particleview rock
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -157,7 +157,7 @@
 				{alpha0 12.5 12.5}
 				{alpha1 12.5 12.5}
 				{speed 0.2}
-				{psi 45}
+				{## psi 45}
 				{theta -30}
 			}
 			{particleinit
@@ -192,7 +192,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview "rock-------------"
+	{##+ particleview "rock-------------"
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -200,7 +200,7 @@
 				{alpha0 5}
 				{alpha1 5}
 				{speed 0.2}
-				{psi 45}
+				{## psi 45}
 				{theta -45}
 			}
 			{particleinit
@@ -236,7 +236,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview "-------------"
+	{##+ particleview "-------------"
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -244,7 +244,7 @@
 				{alpha0 5}
 				{alpha1 5}
 				{speed 0.2}
-				{psi 45}
+				{## psi 45}
 				{theta -45}
 			}
 			{particleinit
@@ -289,7 +289,7 @@
 				{alpha0 12.5 12.5}
 				{alpha1 12.5 12.5}
 				{speed 0.1}
-				{psi 45}
+				{## psi 45}
 				{theta 0}
 			}
 			{particleinit
@@ -334,9 +334,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff958975}
+					{## highlight 0xff958975}
 				}
-				{#+ sprite "$/particle/grit2"
+				{##+ sprite "$/particle/grit2"
 					{scale 0.3 0.2}
 					{preturn 0 180}
 					{turn 1
@@ -358,7 +358,7 @@
 				{alpha0 12.5 12.5}
 				{alpha1 12.5 12.5}
 				{speed 0.2}
-				{psi 45}
+				{## psi 45}
 				{theta 0}
 			}
 			{particleinit
@@ -403,7 +403,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xfff3d4a8}
+					{## highlight 0xfff3d4a8}
 				}
 			}
 		}
@@ -440,7 +440,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{preturn 90}
+					{## preturn 90}
 					{visibility 1
 						{linear
 							{min 1}
@@ -460,7 +460,7 @@
 						}
 					}
 				}
-				{flags trace }
+				{## flags trace }
 			}
 		}
 		{notifyowner}
@@ -491,20 +491,20 @@
 		}
 		{visualizer
 			{stage 
-				{flags trace }
+				{## flags trace }
 				{sprite "$/explosion/bum_new_win"
 					{timer
 						{mode play }
 						{duration -1}
 					}
-					{preturn 90}
+					{## preturn 90}
 					{visibility 1
 						{linear
 							{min 1}
 							{max 0}
 						}
 					}
-					{highlight 0xff8e7a6b}
+					{## highlight 0xff8e7a6b}
 					{scalex 1
 						{linear
 							{min 0.05}
@@ -523,7 +523,7 @@
 		{notifyowner}
 		{offset 0 0 -8}
 	}
-	{#+ particleview "dust slow"
+	{##+ particleview "dust slow"
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -531,7 +531,7 @@
 				{alpha0 12.5 12.5}
 				{alpha1 12.5 12.5}
 				{speed 0.05}
-				{psi 45}
+				{## psi 45}
 				{theta 0}
 			}
 			{particleinit
@@ -580,7 +580,7 @@
 							{max 0.3 0.1}
 						}
 					}
-					{highlight 0xffffebcd}
+					{## highlight 0xffffebcd}
 				}
 			}
 		}
@@ -594,7 +594,7 @@
 				{alpha0 12.5 12.5}
 				{alpha1 12.5 12.5}
 				{speed 0.1}
-				{psi 45}
+				{## psi 45}
 				{theta 0}
 			}
 			{particleinit
@@ -643,7 +643,7 @@
 							{max 0.3 0.1}
 						}
 					}
-					{highlight 0xffffebcd}
+					{## highlight 0xffffebcd}
 				}
 			}
 		}

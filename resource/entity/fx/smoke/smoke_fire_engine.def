@@ -6,7 +6,7 @@
 		{animator
 			{highlight 0xfffe9939}
 			{visibility 0.875 0.125
-				{linear
+				{## linear
 					{min 0.5}
 					{max 1}
 				}
@@ -16,8 +16,8 @@
 				{duration 0.5}
 			}
 		}
-		{attenuation0 0.15}
-		{attenuation1 0.7}
+		{## attenuation0 0.15}
+		{## attenuation1 0.7}
 		{radius 400}
 		{radiusfalloff 50}
 		{priority 5}
@@ -27,7 +27,7 @@
 		{nightonly}
 		{intensity 3}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -180,7 +180,7 @@
 			}
 			{particlesinblock 1}
 			{axisz}
-			{timetolive 1200}
+			{## timetolive 1200}
 		}
 		{mover
 			{damping 0.97}
@@ -204,11 +204,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
@@ -218,20 +218,20 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xfffbd7c2}
+					{## highlight 0xfffbd7c2}
 				}
 			}
 		}
-		{offset 0 0 -9}
+		{## offset 0 0 -9}
 	}
-	{#+ particleview "fire sprite old"
+	{##+ particleview "fire sprite old"
 		{generator
 			{totalparticles 10}
 			{emissionarea
 				{radius 5 5}
 				{alpha0 0}
 				{alpha1 4}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -261,7 +261,7 @@
 							{min 0}
 							{max 0.6 0.2}
 						}
-						{## linear
+						{##+ linear
 							{min 0.5}
 							{max 0}
 						}
@@ -285,7 +285,7 @@
 				{flags trace }
 			}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 	}
 	{#+ particleview sparkles
 		{generator
@@ -331,7 +331,7 @@
 				{radius 5 5}
 				{alpha0 2.5 2.5}
 				{alpha1 2.5 2.5}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -364,7 +364,7 @@
 							{min 0}
 							{max 0.6 0.2}
 						}
-						{## linear
+						{##+ linear
 							{min 0.5}
 							{max 0}
 						}
@@ -382,17 +382,17 @@
 							{max 0.375 0.125}
 						}
 					}
-					{highlight 0xfffd891b}
+					{## highlight 0xfffd891b}
 					{preturn -90}
-					{greenlight 0.3}
-					{bluelight 0.3}
+					{## greenlight 0.3}
+					{## bluelight 0.3}
 				}
 				{flags trace }
 			}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 	}
-	{#+ particleview "round fire"
+	{##+ particleview "round fire"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -408,7 +408,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -425,11 +425,11 @@
 						}
 					}
 					{light 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
-						{## linear
+						{linear
 							{min 0.2}
 							{max 0}
 						}
@@ -446,12 +446,12 @@
 						{duration -1}
 					}
 					{visibility 1}
-					{highlight 0xfffe5c09}
+					{## highlight 0xfffe5c09}
 				}
 			}
 		}
 	}
-	{#+ particleview "fire particles"
+	{##+ particleview "fire particles"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -467,7 +467,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -501,7 +501,7 @@
 						{duration -1}
 					}
 					{visibility 0.3}
-					{highlight 0xfffe5c09}
+					{## highlight 0xfffe5c09}
 				}
 				{sprite "$/smoke/fire_particle_03"
 					{scale 1
@@ -528,7 +528,7 @@
 						{duration -1}
 					}
 					{visibility 0.3}
-					{highlight 0xfffe5c09}
+					{## highlight 0xfffe5c09}
 				}
 				{sprite "$/smoke/fire_particle_02"
 					{scale 1
@@ -555,7 +555,7 @@
 						{duration -1}
 					}
 					{visibility 0.3}
-					{highlight 0xfffe5c09}
+					{## highlight 0xfffe5c09}
 				}
 			}
 		}
@@ -576,7 +576,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -593,11 +593,11 @@
 						}
 					}
 					{light 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
-						{## linear
+						{linear
 							{min 0.4 0.2}
 							{max 0}
 						}
@@ -614,7 +614,7 @@
 						{duration -1}
 					}
 					{visibility 1}
-					{highlight 0xfffe5c09}
+					{## highlight 0xfffe5c09}
 				}
 			}
 		}

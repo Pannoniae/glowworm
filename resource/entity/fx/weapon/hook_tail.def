@@ -14,8 +14,8 @@
 			}
 		}
 		{mover
-			{damping 0.95}
-			{gravity
+			{## damping 0.95}
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -25,7 +25,7 @@
 				{flags trace }
 				{sprite "$/particle/doski2"
 					{visibility 1
-						{linear
+						{## linear
 							{min 1}
 							{max 0}
 						}
@@ -36,26 +36,26 @@
 					}
 					{preturn 0}
 					{scalex 0.75
-						{linear
+						{## linear
 							{min 0.25}
 							{max 0.1}
 						}
 					}
 					{scaley 0.0075}
-					{highlight 0xff0a0a0a}
-					{shifty 1
+					{## highlight 0xff0a0a0a}
+					{## shifty 1
 						{linear
 							{min 0}
 							{max -500}
 						}
 					}
-					{shiftx 1
+					{## shiftx 1
 						{linear
 							{min 0}
 							{max -500}
 						}
 					}
-					{shiftz 1
+					{## shiftz 1
 						{linear
 							{min 0}
 							{max -500}
@@ -66,7 +66,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview "tail test"
+	{##+ particleview "tail test"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -81,7 +81,7 @@
 			}
 		}
 		{mover
-			{damping 0.95}
+			{## damping 0.95}
 			{gravity
 				{value 0.1}
 			}
@@ -91,7 +91,7 @@
 				{flags trace }
 				{sprite "$/particle/doski2"
 					{visibility 1
-						{linear
+						{## linear
 							{min 1}
 							{max 0}
 						}
@@ -102,26 +102,26 @@
 					}
 					{preturn 0}
 					{scalex 0.4
-						{linear
+						{## linear
 							{min 0.25}
 							{max 0.1}
 						}
 					}
 					{scaley 0.0075}
-					{highlight 0xff0a0a0a}
-					{shifty 1
+					{## highlight 0xff0a0a0a}
+					{## shifty 1
 						{linear
 							{min 0}
 							{max -500}
 						}
 					}
-					{shiftx 1
+					{## shiftx 1
 						{linear
 							{min 0}
 							{max -500}
 						}
 					}
-					{shiftz 1
+					{## shiftz 1
 						{linear
 							{min 0}
 							{max -500}

@@ -1,12 +1,12 @@
 {fx
-	{fire}
-	{sound "fire/loops/fire_small_01"}
-	{#+ lightview
+	{## fire}
+	{## sound "fire/loops/fire_small_01"}
+	{##+ lightview
 		{type point}
 		{animator
 			{highlight 0xfffe9939}
 			{visibility 0.75 0.25
-				{linear
+				{## linear
 					{min 0.5}
 					{max 1}
 				}
@@ -16,8 +16,8 @@
 				{duration 0.5}
 			}
 		}
-		{attenuation0 0.15}
-		{attenuation1 0.7}
+		{## attenuation0 0.15}
+		{## attenuation1 0.7}
 		{radius 300}
 		{radiusfalloff 50}
 		{priority 5}
@@ -27,7 +27,7 @@
 		{nightonly}
 		{intensity 1}
 	}
-	{#+ particleview
+	{##+ particleview
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -106,7 +106,7 @@
 		{offset 0 0 5}
 		{notifyowner}
 	}
-	{#+ particleview "smoke long"
+	{##+ particleview "smoke long"
 		{generator
 			{totalparticles 8}
 			{emissionarea
@@ -180,7 +180,7 @@
 			}
 			{particlesinblock 1}
 			{axisz}
-			{timetolive 1200}
+			{## timetolive 1200}
 		}
 		{mover
 			{damping 0.97}
@@ -205,7 +205,7 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{##+ linear
 							{min 0.5}
 							{max 0}
 						}
@@ -219,20 +219,20 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xfffbd7c2}
+					{## highlight 0xfffbd7c2}
 				}
 			}
 		}
-		{offset 0 0 -9}
+		{## offset 0 0 -9}
 	}
-	{#+ particleview "fire sprite"
+	{##+ particleview "fire sprite"
 		{generator
 			{totalparticles 10}
 			{emissionarea
 				{radius 5 5}
 				{alpha0 0}
 				{alpha1 4}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -262,7 +262,7 @@
 							{min 0}
 							{max 0.6 0.2}
 						}
-						{## linear
+						{##+ linear
 							{min 0.5}
 							{max 0}
 						}
@@ -280,14 +280,14 @@
 							{max 0.25 0.1}
 						}
 					}
-					{highlight 0xffffb278}
-					{preturn 180}
+					{## highlight 0xffffb278}
+					{## preturn 180}
 				}
 			}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 	}
-	{#+ particleview "round fire"
+	{##+ particleview "round fire"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -303,7 +303,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -320,11 +320,11 @@
 						}
 					}
 					{light 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
-						{## linear
+						{linear
 							{min 0.2}
 							{max 0}
 						}
@@ -346,7 +346,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -383,7 +383,7 @@
 			}
 		}
 	}
-	{#+ particleview "fire particles"
+	{##+ particleview "fire particles"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -399,7 +399,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity

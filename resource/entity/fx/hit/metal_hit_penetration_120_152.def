@@ -66,7 +66,7 @@
 		{offset 0 0 10}
 	}
 	{#+ particleview "explosion spirte3"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 0}
@@ -88,7 +88,7 @@
 				{value 0}
 			}
 			{collisions
-				{terrain}
+				{## terrain}
 			}
 		}
 		{visualizer
@@ -113,7 +113,7 @@
 					}
 					{highlight 0xffffcf65}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -194,13 +194,13 @@
 		}
 	}
 	{#+ particleview "smoke around1"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 20 20}
 				{alpha0 22.5 22.5}
 				{alpha1 22.5 22.5}
-				{distributionlaw sphere}
+				{## distributionlaw sphere}
 			}
 			{particleinit
 				{speed 1 1}
@@ -216,7 +216,7 @@
 				{value 0}
 			}
 			{collisions
-				{terrain}
+				{## terrain}
 			}
 		}
 		{visualizer
@@ -271,7 +271,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xffc8c8c8}
+					{## highlight 0xffc8c8c8}
 				}
 			}
 		}

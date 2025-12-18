@@ -64,7 +64,7 @@
 		}
 		{autopause}
 	}
-	{#+ particleview "muzzle explosion round test"
+	{##+ particleview "muzzle explosion round test"
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}
@@ -72,7 +72,7 @@
 				{alpha0 2.5 2.5}
 				{alpha1 2.5 2.5}
 				{radius 0}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{speed 12}
@@ -83,8 +83,8 @@
 		{mover
 			{damping 1}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -103,29 +103,29 @@
 					}
 					{preturn 90}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
 					}
-					{#+ scalex 1
+					{##+ scalex 1
 						{linear
 							{min 0.01}
 							{max 0.3}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{linear
 							{min 0.01}
 							{max 0.2}
@@ -133,13 +133,13 @@
 					}
 					{highlight 0xfffff87f}
 				}
-				{flags trace }
+				{## flags trace }
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
-	{#+ particleview "muzzle explosion"
+	{##+ particleview "muzzle explosion"
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}
@@ -147,7 +147,7 @@
 				{alpha0 2.5 2.5}
 				{alpha1 2.5 2.5}
 				{radius 0}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{speed 10}
@@ -158,8 +158,8 @@
 		{mover
 			{damping 0.95}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -173,33 +173,33 @@
 					{scale 0.35}
 					{preturn 90}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
 					}
 					{visibility 1}
-					{highlight 0xfffffffb}
-					{#+ redlight 0.8
-						{linear
+					{## highlight 0xfffffffb}
+					{##+ redlight 0.8
+						{## linear
 							{min 0}
 							{max 1}
 						}
 					}
-					{greenlight 0.9}
+					{## greenlight 0.9}
 				}
 				{flags trace }
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
-	{#+ particleview "muzzle explosion round "
+	{##+ particleview "muzzle explosion round "
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}
@@ -207,7 +207,7 @@
 				{alpha0 0}
 				{alpha1 0}
 				{radius 0}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{speed 15}
@@ -218,8 +218,8 @@
 		{mover
 			{damping 0.95}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -238,36 +238,36 @@
 					}
 					{preturn 0 180}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{highlight 0xfffff87f}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 90}
 						}
 					}
-					{#+ scalex 1
+					{##+ scalex 1
 						{linear
 							{min 1}
 							{max 0.6}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{linear
 							{min 0.5}
 							{max 1}
@@ -277,9 +277,9 @@
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
-	{#+ particleview "muzzle explosion 2 round "
+	{##+ particleview "muzzle explosion 2 round "
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}
@@ -287,7 +287,7 @@
 				{alpha0 0}
 				{alpha1 0}
 				{radius 0}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{speed 15}
@@ -298,8 +298,8 @@
 		{mover
 			{damping 0.95}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -318,36 +318,36 @@
 					}
 					{preturn 0 180}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{highlight 0xfffff87f}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 90}
 						}
 					}
-					{#+ scalex 1
+					{##+ scalex 1
 						{linear
 							{min 1}
 							{max 0.6}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{linear
 							{min 0.5}
 							{max 1}
@@ -357,7 +357,7 @@
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
 	{#+ particleview "sprite muzzle flame"
 		{generator
@@ -377,8 +377,8 @@
 		{mover
 			{damping 1}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -389,7 +389,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.15 0.05}
 							{max 0.35 0.15}
@@ -397,18 +397,18 @@
 					}
 					{preturn 0}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
@@ -431,7 +431,7 @@
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
 	{#+ spriteview shock
 		{sprite "/texture/fx/flash/flash_shockwave"
@@ -451,7 +451,7 @@
 					{max 0}
 				}
 			}
-			{preturn 0 180}
+			{## preturn 0 180}
 		}
 		{autovisible}
 	}
@@ -462,7 +462,7 @@
 				{duration 0.05}
 			}
 			{scale 2
-				{#+ linear
+				{##+ linear
 					{min 0}
 					{max 0.6}
 				}
@@ -492,7 +492,7 @@
 				{speed 30}
 				{lifetime 0.075 0.025}
 			}
-			{particlesinblock 40}
+			{## particlesinblock 40}
 			{timetolive 0.1}
 		}
 		{mover
@@ -513,34 +513,34 @@
 						{duration -1}
 					}
 					{preturn 180}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 50}
 						}
 					}
-					{#+ scale 0.15
-						{linear
+					{##+ scale 0.15
+						{## linear
 							{min 1}
 							{max 1}
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.35}
 							{max 0}
 						}
-						{## peak
+						{##+ peak
 							{min 0}
 							{max 0.5}
 						}
-						{#+ npower
+						{##+ npower
 							{min 0}
 							{max 1}
 							{pow 0.1}
 						}
 					}
-					{highlight 0xff414140}
+					{## highlight 0xff414140}
 					{scalex 0.1}
 					{scaley 1
 						{linear
@@ -553,7 +553,7 @@
 			}
 		}
 		{autopause}
-		{offset 0 50 0}
+		{## offset 0 50 0}
 	}
 	{#+ particleview "smoke jet long"
 		{generator
@@ -568,7 +568,7 @@
 				{speed 20}
 				{lifetime 0.075 0.025}
 			}
-			{particlesinblock 40}
+			{## particlesinblock 40}
 			{timetolive 0.18}
 		}
 		{mover
@@ -589,34 +589,34 @@
 						{duration -1}
 					}
 					{preturn 180}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 50}
 						}
 					}
-					{#+ scale 0.15
-						{linear
+					{##+ scale 0.15
+						{## linear
 							{min 1}
 							{max 1}
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.35}
 							{max 0}
 						}
-						{## peak
+						{##+ peak
 							{min 0}
 							{max 0.5}
 						}
-						{#+ npower
+						{##+ npower
 							{min 0}
 							{max 1}
 							{pow 0.1}
 						}
 					}
-					{highlight 0xff414140}
+					{## highlight 0xff414140}
 					{scalex 0.1}
 					{scaley 1
 						{linear
@@ -629,7 +629,7 @@
 			}
 		}
 		{autopause}
-		{offset 0 50 0}
+		{## offset 0 50 0}
 	}
 	{#+ particleview "smoke forward fast big"
 		{generator
@@ -671,11 +671,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.45 0.05}
 							{max 1.1 0.2}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -692,7 +692,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward super fast"
 		{generator
@@ -734,11 +734,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.075 0.025}
 							{max 0.85 0.05}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -750,9 +750,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -781,7 +781,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward quick"
 		{generator
@@ -823,11 +823,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.2 0.05}
 							{max 0.7 0.1}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -839,9 +839,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -870,7 +870,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward long"
 		{generator
@@ -912,11 +912,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.225 0.025}
 							{max 0.6 0.1}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -928,9 +928,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -959,7 +959,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward round 3060"
 		{generator
@@ -1001,11 +1001,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.175 0.025}
 							{max 0.6 0.1}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -1017,9 +1017,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1048,7 +1048,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward round 2040"
 		{generator
@@ -1090,11 +1090,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.175 0.025}
 							{max 0.5 0.1}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -1106,9 +1106,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1137,7 +1137,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke barrel"
 		{generator
@@ -1152,7 +1152,7 @@
 				{speed 0.45 0.05}
 				{lifetime 1.75 1.25}
 			}
-			{particlesinblock 40}
+			{## particlesinblock 40}
 			{timetolive 2.5}
 		}
 		{mover
@@ -1186,22 +1186,22 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.2 0.1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.35 0.15}
 						}
 					}
-					{highlight 0xff414140}
+					{## highlight 0xff414140}
 				}
 			}
 		}
 		{autopause}
 	}
-	{#+ particleview "muzzle explosion"
+	{##+ particleview "muzzle explosion"
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}
@@ -1209,7 +1209,7 @@
 				{alpha0 0}
 				{alpha1 0}
 				{radius 0}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{speed 5}
@@ -1220,8 +1220,8 @@
 		{mover
 			{damping 0.95}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -1235,31 +1235,31 @@
 					{scale 0.35}
 					{preturn 90}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
 					}
 					{visibility 1}
-					{highlight 0xfffffffb}
-					{#+ redlight 0.8
-						{linear
+					{## highlight 0xfffffffb}
+					{##+ redlight 0.8
+						{## linear
 							{min 0}
 							{max 1}
 						}
 					}
-					{greenlight 0.9}
+					{## greenlight 0.9}
 				}
 				{flags trace }
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
 	{#+ particleview "muzzle explosion 2 round "
 		{generator
@@ -1269,7 +1269,7 @@
 				{alpha0 0}
 				{alpha1 0}
 				{radius 0}
-				{theta 90}
+				{## theta 90}
 			}
 			{particleinit
 				{speed 15}
@@ -1280,8 +1280,8 @@
 		{mover
 			{damping 0.95}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 			{nodependonwind}
 		}
@@ -1300,36 +1300,36 @@
 					}
 					{preturn 0 180}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{highlight 0xfffff87f}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 90}
 						}
 					}
-					{#+ scalex 1
+					{##+ scalex 1
 						{linear
 							{min 1}
 							{max 0.6}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{linear
 							{min 0.5}
 							{max 1}
@@ -1339,6 +1339,6 @@
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
 }

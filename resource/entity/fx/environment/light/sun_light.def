@@ -1,5 +1,5 @@
 {fx
-	{#+ lightview
+	{##+ lightview
 		{type spot}
 		{animator
 			{highlight 0xa0a0a0}
@@ -14,7 +14,7 @@
 		{effectonground}
 		{#+ offset 0 0 0}
 	}
-	{#+ spriteview flash
+	{##+ spriteview flash
 		{sprite "$/flash/flashbsgl"
 			{light 1
 				{peak
@@ -30,7 +30,7 @@
 			{highlight 0xfee992}
 		}
 	}
-	{#+ particleview flies
+	{##+ particleview flies
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -87,8 +87,8 @@
 			{visibility 0.96}
 		}
 		{orientation billboard}
-		{blend}
-		{blend light}
+		{## blend}
+		{## blend light}
 		{halo}
 		{ground}
 		{autovisible}

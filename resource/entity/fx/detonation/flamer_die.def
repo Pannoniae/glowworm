@@ -4,7 +4,7 @@
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.2}
 				}
@@ -26,7 +26,7 @@
 		{radiusfalloff 10}
 		{intensity 3}
 	}
-	{#+ particleview dirt
+	{##+ particleview dirt
 		{delay 0.2}
 		{generator
 			{emissionarea
@@ -118,7 +118,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{delay 0.2}
 		{generator
 			{totalparticles 35}
@@ -156,7 +156,7 @@
 			}
 		}
 	}
-	{#+ spriteview shock1
+	{##+ spriteview shock1
 		{sprite "$/flash/flash_shock"
 			{visibility 1
 				{npower
@@ -248,7 +248,7 @@
 							{max 0.35 0.05}
 						}
 					}
-					{light 1
+					{## light 1
 						{linear
 							{min 1}
 							{max 0}
@@ -259,7 +259,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{turn 1
+					{## turn 1
 						{linear
 							{min 0}
 							{max 0 200}
@@ -273,7 +273,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smoke_fireball"
+				{##+ sprite "$/smoke/smoke_fireball"
 					{scale 1
 						{linear
 							{min 0.025 -0.025}
@@ -303,7 +303,7 @@
 		}
 		{offset 0 0 -10}
 	}
-	{#+ particleview "smoke up"
+	{##+ particleview "smoke up"
 		{generator
 			{totalparticles 30}
 			{particlesinblock 30}
@@ -376,7 +376,7 @@
 		{mover
 			{damping 0.9}
 			{gravity
-				{value -0.01}
+				{## value -0.01}
 			}
 		}
 		{visualizer
@@ -472,16 +472,16 @@
 		{halo}
 		{notifyowner}
 		{autovisible}
-		{#+ nightonly}
+		{##+ nightonly}
 	}
-	{#+ spriteview kaboom
+	{##+ spriteview kaboom
 		{sprite "$/explosion/exp05_slow"
 			{timer
 				{mode }
 				{duration 1}
 			}
 			{preturn 180}
-			{highlight 0xffffec85}
+			{## highlight 0xffffec85}
 			{scale 1}
 			{light 1
 				{linear

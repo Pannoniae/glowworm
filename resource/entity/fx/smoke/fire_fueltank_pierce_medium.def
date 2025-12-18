@@ -1,6 +1,6 @@
 {fx
 	{fire}
-	{#+ particleview "smoke long"
+	{##+ particleview "smoke long"
 		{generator
 			{totalparticles 8}
 			{emissionarea
@@ -57,7 +57,7 @@
 				}
 			}
 		}
-		{offset 0 0 -10}
+		{## offset 0 0 -10}
 	}
 	{#+ particleview smoke
 		{generator
@@ -74,7 +74,7 @@
 			}
 			{particlesinblock 1}
 			{axisz}
-			{timetolive 1200}
+			{## timetolive 1200}
 		}
 		{mover
 			{damping 0.97}
@@ -98,11 +98,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.75 0.15}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
@@ -112,13 +112,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xfffbd7c2}
+					{## highlight 0xfffbd7c2}
 				}
 			}
 		}
-		{offset 0 0 -10}
+		{## offset 0 0 -10}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -154,16 +154,16 @@
 				}
 			}
 		}
-		{offset 0 0 -10}
+		{## offset 0 0 -10}
 	}
-	{#+ particleview "fire sprite"
+	{##+ particleview "fire sprite"
 		{generator
 			{totalparticles 5}
 			{emissionarea
 				{radius 2.5 2.5}
 				{alpha0 2.5 2.5}
 				{alpha1 2.5 2.5}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -196,7 +196,7 @@
 							{min 0}
 							{max 0.6 0.2}
 						}
-						{## linear
+						{##+ linear
 							{min 0.5}
 							{max 0}
 						}
@@ -214,15 +214,15 @@
 							{max 0.25 0.1}
 						}
 					}
-					{highlight 0xfffd891b}
+					{## highlight 0xfffd891b}
 					{preturn -90}
-					{greenlight 0.3}
-					{bluelight 0.3}
+					{## greenlight 0.3}
+					{## bluelight 0.3}
 				}
 				{flags trace }
 			}
 		}
-		{offset 0 0 -10}
+		{## offset 0 0 -10}
 	}
 	{#+ particleview "round fire"
 		{generator
@@ -256,11 +256,11 @@
 						}
 					}
 					{light 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
-						{## linear
+						{linear
 							{min 0.4 0.2}
 							{max 0}
 						}
@@ -277,10 +277,10 @@
 						{duration -1}
 					}
 					{visibility 1}
-					{highlight 0xfffe5c09}
+					{## highlight 0xfffe5c09}
 				}
 			}
 		}
-		{offset 0 0 -10}
+		{## offset 0 0 -10}
 	}
 }

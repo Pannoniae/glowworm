@@ -30,7 +30,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.1}
 							{max 0.3}
 						}
@@ -83,7 +83,7 @@
 						{duration -1}
 					}
 					{scale 0.15 0.05
-						{linear
+						{## linear
 							{min 0.1}
 							{max 0.3}
 						}
@@ -101,7 +101,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xfffdcb9b}
+					{## highlight 0xfffdcb9b}
 				}
 			}
 		}
@@ -155,7 +155,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xfffdcb9b}
+					{## highlight 0xfffdcb9b}
 				}
 			}
 		}
@@ -209,7 +209,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xfffdcb9b}
+					{## highlight 0xfffdcb9b}
 				}
 			}
 		}
@@ -414,12 +414,12 @@
 						{duration -1}
 					}
 					{scale 0.06 0.03}
-					{#+ turn 0 180
+					{##+ turn 0 180
 						{## linear
 							{min 0 360}
 							{max 0 1060}
 						}
-						{power
+						{## power
 							{min 360}
 							{max 100}
 							{pow 2}
@@ -501,12 +501,12 @@
 						{duration -1}
 					}
 					{scale 0.06 0.03}
-					{#+ turn 0 180
+					{##+ turn 0 180
 						{## linear
 							{min 0 360}
 							{max 0 1060}
 						}
-						{power
+						{## power
 							{min 360}
 							{max 100}
 							{pow 2}
@@ -598,12 +598,12 @@
 							{max 0.125 0.025}
 						}
 					}
-					{#+ turn 0 180
+					{##+ turn 0 180
 						{## linear
 							{min 0 360}
 							{max 0 1060}
 						}
-						{power
+						{## power
 							{min 360}
 							{max 100}
 							{pow 2}

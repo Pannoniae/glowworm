@@ -24,7 +24,7 @@
 		{radiusfalloff 10}
 		{intensity 3}
 	}
-	{#+ spriteview shock1
+	{##+ spriteview shock1
 		{sprite "$/flash/flash_shock"
 			{visibility 1
 				{npower
@@ -47,12 +47,12 @@
 			{preturn 90 90}
 			{highlight 0xff696969}
 		}
-		{layer grounddynamic}
+		{## layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview flash1
+	{##+ spriteview flash1
 		{sprite "$/flash/flash_g03"
 			{timer
 				{mode }
@@ -135,7 +135,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview sparkles1
+	{##+ particleview sparkles1
 		{generator
 			{totalparticles 15}
 			{particlesinblock 15}
@@ -158,7 +158,7 @@
 				{value 0.05}
 			}
 			{damping 0.96}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -178,7 +178,7 @@
 						}
 					}
 					{scaley 0.055 0.005}
-					{highlight 0xfffe9939}
+					{## highlight 0xfffe9939}
 					{light 1
 						{linear
 							{min 1}
@@ -210,7 +210,7 @@
 		}
 		{mover
 			{damping 0.95}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -230,7 +230,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -238,7 +238,7 @@
 						}
 					}
 					{preturn 90}
-					{highlight 0xfff7e5d0}
+					{## highlight 0xfff7e5d0}
 					{scalex 1
 						{## linear
 							{min 0.05}
@@ -257,7 +257,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/explosion/bum_one_var"
+				{##+ sprite "$/explosion/bum_one_var"
 					{timer
 						{mode play }
 						{duration -1}
@@ -269,7 +269,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -319,7 +319,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -343,7 +343,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -418,7 +418,7 @@
 						}
 					}
 					{visibility 1
-						{## peak
+						{##+ peak
 							{min 0}
 							{max 1}
 						}
@@ -439,7 +439,7 @@
 		}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 5}
 			{particlesinblock 5}
@@ -461,7 +461,7 @@
 				{value -0.005}
 			}
 			{damping 0.5}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -484,16 +484,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.35 0.05}
 							{max 0}
 						}
 					}
-					{highlight 0xffebc9a0}
+					{## highlight 0xffebc9a0}
 				}
 			}
 		}
@@ -547,7 +547,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xfffeeacf}
+					{## highlight 0xfffeeacf}
 				}
 			}
 		}
@@ -561,7 +561,7 @@
 				{radius -10}
 				{alpha0 0}
 				{alpha1 12.5 12.5}
-				{speed 3}
+				{## speed 3}
 			}
 			{particleinit
 				{speed 3 3}
@@ -576,7 +576,7 @@
 				{value -0.005}
 			}
 			{damping 0.92}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -603,25 +603,25 @@
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0.4}
 							{max 0}
 							{pow 4}
 						}
 					}
-					{highlight 0xffffd7ab}
+					{## highlight 0xffffd7ab}
 				}
 			}
 		}
-		{delay 0.2}
-		{delay 0.1}
+		{## delay 0.2}
+		{## delay 0.1}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 7}
 			{particlesinblock 7}
@@ -666,16 +666,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
 					}
-					{highlight 0xffebc9a0}
+					{## highlight 0xffebc9a0}
 				}
 			}
 		}
@@ -700,7 +700,7 @@
 		}
 		{mover
 			{damping 0.95}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -720,7 +720,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -728,7 +728,7 @@
 						}
 					}
 					{preturn 90}
-					{highlight 0xfff7e5d0}
+					{## highlight 0xfff7e5d0}
 					{scalex 1
 						{## linear
 							{min 0.05}
@@ -747,7 +747,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/explosion/bum_one_var"
+				{##+ sprite "$/explosion/bum_one_var"
 					{timer
 						{mode play }
 						{duration -1}
@@ -759,7 +759,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -811,7 +811,7 @@
 		}
 		{mover
 			{damping 0.95}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -831,7 +831,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -839,7 +839,7 @@
 						}
 					}
 					{preturn 90}
-					{highlight 0xfff7e5d0}
+					{## highlight 0xfff7e5d0}
 					{scalex 1
 						{## linear
 							{min 0.05}
@@ -858,7 +858,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/explosion/bum_one_var"
+				{##+ sprite "$/explosion/bum_one_var"
 					{timer
 						{mode play }
 						{duration -1}
@@ -870,7 +870,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}

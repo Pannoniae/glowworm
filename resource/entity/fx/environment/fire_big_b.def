@@ -20,7 +20,7 @@
 		{attenuation1 0.7}
 		{radius 170}
 		{priority 5}
-		{effectonground}
+		{## effectonground}
 		{offset 0 0 20}
 		{pulseperiod 0.1 0.02}
 	}
@@ -38,7 +38,7 @@
 				{lifetime 1.5 0.5}
 			}
 			{axisz}
-			{timetolive 7}
+			{## timetolive 7}
 		}
 		{mover
 			{damping 0.975}
@@ -79,7 +79,7 @@
 						}
 					}
 				}
-				{sprite "$/smoke/smoke_g04g"
+				{## sprite "$/smoke/smoke_g04g"
 					{timer
 						{mode play }
 						{duration -1}
@@ -103,12 +103,12 @@
 							{max 0.4}
 						}
 					}
-					{highlight 0xff100903}
+					{## highlight 0xff100903}
 				}
 			}
 		}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -178,7 +178,7 @@
 				{speed 1.2}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -219,7 +219,7 @@
 				{speed 1.25 0.25}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -229,7 +229,7 @@
 		}
 		{visualizer
 			{stage 
-				{sprite "$/water/exp_water"
+				{## sprite "$/water/exp_water"
 					{timer
 						{mode play }
 						{duration -1}
@@ -246,8 +246,8 @@
 							{max 0}
 						}
 					}
-					{preturn 45}
-					{turn 0 90}
+					{## preturn 45}
+					{## turn 0 90}
 				}
 				{sprite "$/explosion/flare"
 					{timer
@@ -267,7 +267,7 @@
 						}
 					}
 					{preturn 0 45}
-					{turn 0 15}
+					{## turn 0 15}
 					{prescalex 1}
 					{prescaley 0.6}
 				}
@@ -293,7 +293,7 @@
 				}
 			}
 		}
-		{offset 0 0 15}
+		{## offset 0 0 15}
 	}
 	{#+ particleview "small flames"
 		{generator
@@ -308,7 +308,7 @@
 			}
 			{axisz}
 			{particlesinblock 5}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 1}
@@ -355,7 +355,7 @@
 				{lifetime 9}
 			}
 			{axisz}
-			{timetolive 13}
+			{## timetolive 13}
 		}
 		{mover
 			{damping 0.97}
@@ -393,7 +393,7 @@
 							{max 0.45 0.15}
 						}
 					}
-					{highlight 0xff253342}
+					{## highlight 0xff253342}
 				}
 				{#+ sprite "$/smoke/smoke_g04"
 					{timer
@@ -423,7 +423,7 @@
 							{max 0.45 0.15}
 						}
 					}
-					{highlight 0xff253342}
+					{## highlight 0xff253342}
 				}
 			}
 		}
@@ -443,7 +443,7 @@
 				{lifetime 6.5 1.5}
 			}
 			{axisz}
-			{timetolive 13}
+			{## timetolive 13}
 		}
 		{mover
 			{damping 0.97}
@@ -502,16 +502,16 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.15 0.05}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
-					{highlight 0xff253342}
+					{## highlight 0xff253342}
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 {fx
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -12,8 +12,8 @@
 				{speed 0.05 0.05}
 				{lifetime 1 0.5}
 			}
-			{particlesinblock 40}
-			{timetolive 2.5}
+			{## particlesinblock 40}
+			{## timetolive 2.5}
 		}
 		{mover
 			{gravity
@@ -47,22 +47,22 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.75 0.15}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.35 0.15}
 						}
 					}
-					{highlight 0xff414140}
+					{## highlight 0xff414140}
 				}
 			}
 		}
 		{autopause}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -75,8 +75,8 @@
 				{speed 0.2 0.1}
 				{lifetime 1.15 0.35}
 			}
-			{particlesinblock 40}
-			{timetolive 2.5}
+			{## particlesinblock 40}
+			{## timetolive 2.5}
 		}
 		{mover
 			{gravity
@@ -87,7 +87,7 @@
 				{terrain}
 				{restitution 0.8}
 			}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -110,11 +110,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.5 0.1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.35 0.15}
 						}
@@ -138,8 +138,8 @@
 				{speed 0.15 0.05}
 				{lifetime 2 1}
 			}
-			{particlesinblock 40}
-			{timetolive 2.5}
+			{## particlesinblock 40}
+			{## timetolive 2.5}
 		}
 		{mover
 			{gravity
@@ -147,11 +147,11 @@
 			}
 			{damping 0.99}
 			{collisions
-				{terrain}
+				{## terrain}
 				{restitution 1}
-				{objects}
+				{## objects}
 			}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -174,11 +174,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.3 0.1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.35 0.15}
 						}

@@ -1,5 +1,5 @@
 {fx
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -13,20 +13,20 @@
 				{lifetime 1}
 			}
 			{timetolive 0.8}
-			{autoturn}
+			{## autoturn}
 			{ownerspeed}
-			{axisz}
+			{## axisz}
 		}
 		{mover
-			{damping 0.7}
+			{## damping 0.7}
 			{gravity
 				{value 0.02}
 			}
 			{nodependonwind}
 		}
 		{visualizer
-			{stage 
-				{#+ sprite "$/smoke/smtanko"
+			{## stage 
+				{##+ sprite "$/smoke/smtanko"
 					{timer
 						{mode play }
 						{duration -1}
@@ -62,13 +62,13 @@
 						{duration -1}
 					}
 					{preturn 0}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 100}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.05}
 							{max 0.2}
@@ -76,11 +76,11 @@
 					}
 					{highlight 0xffff4416}
 					{#+ light 1
-						{## linear
+						{linear
 							{min 0.5}
 							{max 1}
 						}
-						{peak
+						{## peak
 							{min 1}
 							{max 0.6}
 						}
@@ -97,7 +97,7 @@
 							{max 1.1 0.1}
 						}
 					}
-					{turn 1
+					{## turn 1
 						{linear
 							{min 60 30}
 							{max 135 45}
@@ -107,7 +107,7 @@
 			}
 		}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -199,27 +199,27 @@
 				}
 			}
 		}
-		{delay 1}
+		{## delay 1}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 20}
 			{emissionarea
 				{radius 0}
 				{alpha0 0}
 				{alpha1 0}
-				{speed 2}
+				{## speed 2}
 			}
 			{particleinit
 				{speed 0}
 				{lifetime 0.2}
 			}
 			{timetolive 0.5}
-			{autoturn}
+			{## autoturn}
 			{ownerspeed}
 		}
 		{mover
-			{damping 0.7}
+			{## damping 0.7}
 			{gravity
 				{value 0.02}
 			}
@@ -227,7 +227,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smtanko"
+				{##+ sprite "$/smoke/smtanko"
 					{timer
 						{mode play }
 						{duration -1}
@@ -263,25 +263,25 @@
 						{duration -1}
 					}
 					{preturn 90}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 100}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.05}
 							{max 0.2}
 						}
 					}
-					{highlight 0xffff4416}
+					{## highlight 0xffff4416}
 					{#+ light 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 1}
 							{max 0.6}
 						}
@@ -293,7 +293,7 @@
 						}
 					}
 					{scaley 0.08
-						{linear
+						{## linear
 							{min 0.025}
 							{max 2}
 						}
@@ -301,6 +301,6 @@
 				}
 			}
 		}
-		{delay 1}
+		{## delay 1}
 	}
 }

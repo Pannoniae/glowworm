@@ -2,9 +2,9 @@
 	(include "shell_tracer_define.inc")
 	{#+ lightview Light
 		{type point}
-		{attenuation0 0.5}
+		{## attenuation0 0.5}
 		{animator
-			{#+ timer
+			{##+ timer
 				{mode play }
 				{duration -1}
 			}
@@ -15,14 +15,14 @@
 		{intensity 2}
 		{radius 90}
 		{radiusfalloff 20}
-		{priority 1}
+		{## priority 1}
 		{offset 0 0 25}
 		{nightonly}
 	}
 	{#+ spriteview Glow
 		{sprite "$/flash/halo01"
 			{light 1
-				{linear
+				{## linear
 					{min 1}
 					{max 0}
 				}
@@ -37,7 +37,7 @@
 		{orientation normalYZ}
 		{autovisible}
 	}
-	{#+ spriteview "Glow Trace"
+	{##+ spriteview "Glow Trace"
 		{sprite "$/flash/halo02"
 			{#+ light 1
 				{linear
@@ -69,7 +69,7 @@
 	{#+ spriteview "Glow Trace Long"
 		{sprite "$/tracer_new/trace_scattered_white"
 			{light 1
-				{linear
+				{## linear
 					{min 1}
 					{max 0}
 				}
@@ -80,11 +80,11 @@
 				{duration 0.01}
 				{mode play }
 			}
-			{shiftx -15}
-			{turn 180}
+			{## shiftx -15}
+			{## turn 180}
 		}
 		{orientation trace}
-		{autovisible}
+		{## autovisible}
 		{usedirection}
 	}
 	{#+ particleview "Smoke 1"
@@ -99,20 +99,20 @@
 			}
 			{totalparticles 1}
 			{timetolive 2}
-			{particlesinblock 2}
+			{## particlesinblock 2}
 		}
 		{mover
-			{damping 0.98}
+			{## damping 0.98}
 			{gravity
-				{value -0.001}
+				{## value -0.001}
 			}
 		}
 		{visualizer
 			{stage 
 				{sprite "/texture/fx/smoke/tracer_tail1"
 					{preturn 0}
-					{#+ scale 1
-						{linear
+					{##+ scale 1
+						{## linear
 							{min 0.025 0.005}
 							{max 0.11 0.01}
 						}
@@ -123,13 +123,13 @@
 							{max 0}
 						}
 					}
-					{turn 100 -50}
+					{## turn 100 -50}
 					{timer
 						{mode play }
 						{duration -1}
 					}
 					{scalex 0.5
-						{#+ linear
+						{##+ linear
 							{min 0}
 							{max 0.7}
 						}

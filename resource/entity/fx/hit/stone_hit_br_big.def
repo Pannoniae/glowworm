@@ -3,11 +3,11 @@
 	{sound "detonation/s1/d2/AP_Shell/"}
 	{sound "detonation/s1/d3/AP_Shell/"}
 	{sound "crush/medium/concrete"}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -162,7 +162,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview flash
+	{##+ particleview flash
 		{generator
 			{emissionarea
 				{radius 0}
@@ -239,7 +239,7 @@
 			{entity "#grunt2"
 				{fx "spheredust_small_short"}
 			}
-			{entity "#metall3"}
+			{## entity "#metall3"}
 		}
 		{notifyowner}
 	}
@@ -309,7 +309,7 @@
 						{duration -1}
 					}
 					{preturn 90 90}
-					{highlight 0xff776d5f}
+					{## highlight 0xff776d5f}
 				}
 				{sprite "$/smoke/smoke_g04b"
 					{scale 1
@@ -335,7 +335,7 @@
 						{duration -1}
 					}
 					{preturn 0 20}
-					{highlight 0xffaeaeae}
+					{## highlight 0xffaeaeae}
 				}
 			}
 		}

@@ -13,7 +13,7 @@
 	{#+ spriteview flash
 		{sprite "$/flash/flash_g03"
 			{light 1
-				{## linear
+				{linear
 					{min 2}
 					{max 0}
 				}
@@ -108,7 +108,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ spriteview halo2
+	{##+ spriteview halo2
 		{sprite "$/flash/halo01"
 			{timer
 				{mode play loop }

@@ -24,7 +24,7 @@
 		{autovisible}
 		{offset 0 0 10}
 	}
-	{#+ spriteview central2
+	{##+ spriteview central2
 		{sprite "$/explosion/exp_blast02"
 			{light 1
 				{linear
@@ -48,7 +48,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 15}
 			{particlesinblock 15}
@@ -147,7 +147,7 @@
 		}
 		{autopause}
 	}
-	{#+ particleview "smoke line"
+	{##+ particleview "smoke line"
 		{generator
 			{totalparticles 40}
 			{particlesinblock 40}
@@ -196,7 +196,7 @@
 					}
 					{highlight 0xff959595}
 				}
-				{#+ sprite "$/smoke/smoke_burn"
+				{##+ sprite "$/smoke/smoke_burn"
 					{preturn 0 20}
 					{timer
 						{mode play }
@@ -225,7 +225,7 @@
 		}
 		{autopause}
 	}
-	{#+ particleview "smoke line"
+	{##+ particleview "smoke line"
 		{generator
 			{totalparticles 40}
 			{particlesinblock 40}
@@ -274,7 +274,7 @@
 					}
 					{highlight 0xff666666}
 				}
-				{#+ sprite "$/smoke/smoke_burn"
+				{##+ sprite "$/smoke/smoke_burn"
 					{preturn 0 20}
 					{timer
 						{mode play }
@@ -303,7 +303,7 @@
 		}
 		{autopause}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 10}
 			{particlesinblock 10}
@@ -345,11 +345,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.3 0.1}
 						}
-						{## linear
+						{linear
 							{min 0.3 0.1}
 							{max 0}
 						}
@@ -402,16 +402,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.3 0.1}
 						}
-						{## linear
+						{linear
 							{min 0.25 0.1}
 							{max 0}
 						}
 					}
-					{highlight 0xff777777}
+					{## highlight 0xff777777}
 				}
 			}
 		}
@@ -466,7 +466,7 @@
 					}
 					{highlight 0xffc8c8c8}
 				}
-				{#+ sprite "$/smoke/smoke_burn"
+				{##+ sprite "$/smoke/smoke_burn"
 					{preturn 0 20}
 					{timer
 						{mode play }
@@ -542,9 +542,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff959595}
+					{## highlight 0xff959595}
 				}
-				{#+ sprite "$/smoke/smoke_burn"
+				{##+ sprite "$/smoke/smoke_burn"
 					{preturn 0 20}
 					{timer
 						{mode play }
@@ -601,7 +601,7 @@
 						{duration -1}
 					}
 					{scale 0.35
-						{linear
+						{## linear
 							{min 0.4}
 							{max 0.2}
 						}

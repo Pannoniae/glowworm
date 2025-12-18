@@ -5,7 +5,7 @@
 		{animator
 			{highlight 0xffc455}
 			{visibility 1
-				{## linear
+				{linear
 					{min 0.9 0.3}
 					{max 0.9 0.3}
 				}
@@ -78,7 +78,7 @@
 						}
 					}
 				}
-				{sprite "$/smoke/smoke_g04g"
+				{## sprite "$/smoke/smoke_g04g"
 					{timer
 						{mode play }
 						{duration -1}
@@ -102,12 +102,12 @@
 							{max 0.4}
 						}
 					}
-					{highlight 0xff100903}
+					{## highlight 0xff100903}
 				}
 			}
 		}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -294,7 +294,7 @@
 					}
 					{highlight 0xff253342}
 				}
-				{sprite "$/_bmp/smoke/smokeend_loop"
+				{## sprite "$/_bmp/smoke/smokeend_loop"
 					{timer
 						{mode play }
 						{duration -1}
@@ -318,7 +318,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xffffd781}
+					{## highlight 0xffffd781}
 				}
 			}
 		}

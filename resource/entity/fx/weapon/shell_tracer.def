@@ -10,7 +10,7 @@
 			}
 		}
 	}
-	{#+ spriteview Glow
+	{##+ spriteview Glow
 		{sprite "$/flash/halo02"
 			{light 1
 				{linear
@@ -27,7 +27,7 @@
 		}
 		{orientation normalYZ}
 	}
-	{#+ spriteview "Glow Trace"
+	{##+ spriteview "Glow Trace"
 		{sprite "$/flash/halo02"
 			{#+ light 1
 				{linear
@@ -87,20 +87,20 @@
 			}
 			{totalparticles 1}
 			{timetolive 2}
-			{particlesinblock 2}
+			{## particlesinblock 2}
 		}
 		{mover
-			{damping 0.98}
+			{## damping 0.98}
 			{gravity
-				{value -0.001}
+				{## value -0.001}
 			}
 		}
 		{visualizer
 			{stage 
 				{sprite "/texture/fx/smoke/tracer_tail1"
 					{preturn 0}
-					{#+ scale 1
-						{linear
+					{##+ scale 1
+						{## linear
 							{min 0.025 0.005}
 							{max 0.11 0.01}
 						}
@@ -111,7 +111,7 @@
 							{max 0}
 						}
 					}
-					{turn 100 -50}
+					{## turn 100 -50}
 					{timer
 						{mode play }
 						{duration -1}

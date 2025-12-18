@@ -1,6 +1,6 @@
 {fx
 	{sound "hit/human/melee"}
-	{#+ particleview splash
+	{##+ particleview splash
 		{generator
 			{totalparticles 4}
 			{particlesinblock 4}
@@ -20,7 +20,7 @@
 				{value 0.05}
 			}
 			{damping 0.81}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -52,10 +52,10 @@
 						{duration -1}
 					}
 					{preturn 0 180}
-					{highlight 0xff621300}
+					{## highlight 0xff621300}
 				}
-				{flags trace }
-				{sprite "$/particle/blood_splash"
+				{## flags trace }
+				{## sprite "$/particle/blood_splash"
 					{scale 1
 						{power
 							{min 0.02}
@@ -74,7 +74,7 @@
 						{duration -1}
 					}
 					{preturn 0 180}
-					{highlight 0xff893c39}
+					{## highlight 0xff893c39}
 				}
 			}
 		}
@@ -101,7 +101,7 @@
 				{value 0.01}
 			}
 			{damping 0.5}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -128,9 +128,9 @@
 						{duration -1}
 					}
 					{preturn 0 180}
-					{highlight 0xffd2cabf}
+					{## highlight 0xffd2cabf}
 				}
-				{flags trace }
+				{## flags trace }
 			}
 		}
 		{notifyowner}
@@ -209,7 +209,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.01}
 			}
 			{collisions
@@ -238,7 +238,7 @@
 							{max 0.01}
 						}
 					}
-					{preturn 0 180}
+					{## preturn 0 180}
 					{visibility 1
 						{power
 							{min 1}
@@ -252,7 +252,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xff410000}
+					{## highlight 0xff410000}
 					{scalex 1
 						{linear
 							{min 0.07}

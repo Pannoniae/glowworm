@@ -12,7 +12,7 @@
 				{speed 6 2}
 				{lifetime 25}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 40}
 			{color 0xff000000}
 		}
@@ -21,7 +21,7 @@
 			{gravity
 				{value -0.001}
 			}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.3}
 			}
@@ -30,7 +30,7 @@
 		{visualizer
 			{stage 
 				{sprite "$/test/bird"
-					{turn 1
+					{## turn 1
 						{linear
 							{min 30 15}
 							{max 0 150}
@@ -52,13 +52,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{light 1}
-					{prescaley 1}
+					{## light 1}
+					{## prescaley 1}
 					{preturn 0}
 					{highlight 0xff000000}
 				}
 			}
-			{#+ stage collided 
+			{##+ stage collided 
 				{sprite "/texture/fx/particle/papers01"
 					{visibility 1}
 					{scale 1}

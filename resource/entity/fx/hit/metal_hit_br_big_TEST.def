@@ -4,7 +4,7 @@
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -71,7 +71,7 @@
 			}
 		}
 	}
-	{#+ particleview central
+	{##+ particleview central
 		{generator
 			{emissionarea
 				{radius 0}
@@ -284,7 +284,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smoke_g04a"
+				{##+ sprite "$/smoke/smoke_g04a"
 					{timer
 						{mode play }
 						{duration -1}
@@ -310,7 +310,7 @@
 					}
 					{highlight 0xff202020}
 				}
-				{#+ sprite "$/smoke/smoke_g04b"
+				{##+ sprite "$/smoke/smoke_g04b"
 					{timer
 						{mode play }
 						{duration -1}
@@ -605,7 +605,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview smoke2
+	{##+ particleview smoke2
 		{delay 0.1}
 		{generator
 			{emissionarea
@@ -662,7 +662,7 @@
 			}
 		}
 	}
-	{#+ particleview smoke3
+	{##+ particleview smoke3
 		{delay 0.1}
 		{generator
 			{emissionarea

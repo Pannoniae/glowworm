@@ -7,7 +7,7 @@
 		{type point}
 		{animator
 			{scale 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -29,7 +29,7 @@
 		{radiusfalloff 50}
 		{intensity 1}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{emissionarea
 				{radius 0}
@@ -71,7 +71,7 @@
 					{scalex 0.9 0.1}
 					{scaley 0.045 0.015}
 				}
-				{sprite "$/particle/oskolkim"
+				{## sprite "$/particle/oskolkim"
 					{light 1
 						{linear
 							{min 2}
@@ -220,7 +220,7 @@
 					{max 0}
 				}
 			}
-			{highlight 0xfffdc11b}
+			{## highlight 0xfffdc11b}
 		}
 		{halo}
 		{notifyowner}
@@ -270,7 +270,7 @@
 			}
 		}
 	}
-	{#+ particleview sparks2
+	{##+ particleview sparks2
 		{generator
 			{emissionarea
 				{radius 1 1}
@@ -287,12 +287,12 @@
 		}
 		{mover
 			{damping 1}
-			{gravity
+			{## gravity
 				{value 0.25}
 			}
 			{collisions
-				{terrain}
-				{restitution 0.5}
+				{## terrain}
+				{## restitution 0.5}
 			}
 		}
 		{visualizer
@@ -314,7 +314,7 @@
 			}
 		}
 	}
-	{#+ particleview "smoke fwd"
+	{##+ particleview "smoke fwd"
 		{generator
 			{emissionarea
 				{radius 0.5 0.5}
@@ -366,7 +366,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview smoke2
+	{##+ particleview smoke2
 		{delay 0.1}
 		{generator
 			{emissionarea

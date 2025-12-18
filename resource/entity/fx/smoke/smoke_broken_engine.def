@@ -1,6 +1,6 @@
 {fx
 	{fire}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{highlight 0xffc455}
@@ -23,14 +23,14 @@
 		{intensity 1}
 		{radiusfalloff 100}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 5}
 			{emissionarea
 				{radius 7.5 7.5}
 				{alpha0 0}
 				{alpha1 4}
-				{speed 0.5}
+				{## speed 0.5}
 			}
 			{particleinit
 				{speed 0}
@@ -64,12 +64,12 @@
 					{highlight 0xfffedcad}
 					{scalex 0.45 0.15}
 					{scaley 0.5 0.1}
-					{highlight 0xffffb278}
+					{## highlight 0xffffb278}
 				}
 			}
 		}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 6}
 			{emissionarea
@@ -122,13 +122,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xff162a35}
+					{## highlight 0xff162a35}
 				}
 			}
 		}
 		{offset 0 0 -9}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -144,7 +144,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -183,7 +183,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -217,7 +217,7 @@
 			}
 		}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 8}
 			{emissionarea
@@ -270,13 +270,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xfffbd7c2}
+					{## highlight 0xfffbd7c2}
 				}
 			}
 		}
-		{offset 0 0 -9}
+		{## offset 0 0 -9}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -292,7 +292,7 @@
 			{particlesinblock 1}
 			{axisz}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{damping 0.9975}
 			{gravity
@@ -424,11 +424,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.1}
 						}
@@ -438,7 +438,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xff162a35}
+					{## highlight 0xff162a35}
 				}
 			}
 		}

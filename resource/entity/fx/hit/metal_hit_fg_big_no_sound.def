@@ -6,7 +6,7 @@
 				{duration 0.2}
 			}
 			{visibility 1
-				{## linear
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -134,7 +134,7 @@
 				{speed 7 5}
 				{lifetime 0.6 0.2}
 			}
-			{axisz}
+			{## axisz}
 			{timetolive 0.1}
 		}
 		{mover
@@ -142,7 +142,7 @@
 				{value 0.2}
 			}
 			{damping 0.97}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -601,7 +601,7 @@
 			}
 		}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{delay 0.1}
 		{generator
 			{emissionarea
@@ -705,7 +705,7 @@
 			}
 		}
 	}
-	{#+ particleview pieces
+	{##+ particleview pieces
 		{entitygenerator
 			{totalparticles 2}
 			{emissionarea
@@ -717,8 +717,8 @@
 				{speed 10 5}
 				{lifetime 3.5 0.5}
 			}
-			{entity "#metall1"}
-			{entity "#metall3"
+			{## entity "#metall1"}
+			{## entity "#metall3"
 				{fx "smoke_black_small"}
 			}
 			{entity "#metall2"

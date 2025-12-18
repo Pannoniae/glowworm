@@ -1,5 +1,5 @@
 {fx
-	{#+ particleview "start fire"
+	{##+ particleview "start fire"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -33,7 +33,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{peak
 							{min 0.01}
 							{max 0.2}
@@ -57,7 +57,7 @@
 						}
 					}
 					{scalex 0.2
-						{peak
+						{## peak
 							{min 0}
 							{max 0.3}
 						}
@@ -103,18 +103,18 @@
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{peak
 							{min 0.01}
 							{max 0.2}
 						}
 					}
 					{light 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0}
 							{max 1}
 							{pow 1.8}
@@ -127,7 +127,7 @@
 						}
 					}
 					{scalex 0.2
-						{peak
+						{## peak
 							{min 0}
 							{max 0.3}
 						}
@@ -173,24 +173,24 @@
 						{duration 1}
 					}
 					{preturn 0}
-					{turn 1
+					{## turn 1
 						{linear
 							{min 0}
 							{max 0 40}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.125 0.025}
 							{max 0.3 0.1}
 						}
 					}
 					{light 1
-						{## linear
+						{linear
 							{min 0.85 0.15}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.55 0.05}
 						}
@@ -217,7 +217,7 @@
 						{duration -1}
 					}
 					{preturn 0}
-					{turn 1
+					{## turn 1
 						{linear
 							{min 0}
 							{max 0 40}
@@ -235,13 +235,13 @@
 							{max 0}
 						}
 					}
-					{#+ scalex 1
+					{##+ scalex 1
 						{linear
 							{min 0.13 0.05}
 							{max 0}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{linear
 							{min 0.13 0.05}
 							{max 0}
@@ -251,10 +251,10 @@
 				{flags ground }
 			}
 		}
-		{delay 1}
-		{offset 0 0 0}
+		{## delay 1}
+		{## offset 0 0 0}
 	}
-	{#+ particleview "start fire white"
+	{##+ particleview "start fire white"
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -287,13 +287,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{peak
 							{min 0.01}
 							{max 0.2}
 						}
 					}
-					{#+ light 1
+					{##+ light 1
 						{linear
 							{min 1}
 							{max 0}
@@ -306,7 +306,7 @@
 						}
 					}
 					{scalex 0.3
-						{peak
+						{## peak
 							{min 0}
 							{max 0.3}
 						}
@@ -324,7 +324,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -375,7 +375,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/explosion/exp01"
+				{##+ sprite "$/explosion/exp01"
 					{timer
 						{mode play }
 						{duration -1}
@@ -404,7 +404,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview "small flames"
+	{##+ particleview "small flames"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -481,7 +481,7 @@
 				}
 			}
 			{stage collided 
-				{sprite "$/explosion/flare"
+				{## sprite "$/explosion/flare"
 					{timer
 						{mode play }
 						{duration -1}
@@ -505,7 +505,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview "flame             "
+	{##+ particleview "flame             "
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -562,9 +562,9 @@
 			}
 		}
 		{notifyowner}
-		{offset 10 0 0}
+		{## offset 10 0 0}
 	}
-	{#+ particleview "flame  -- CUT --    "
+	{##+ particleview "flame  -- CUT --    "
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -623,7 +623,7 @@
 		{notifyowner}
 		{offset 0 0 0}
 	}
-	{#+ particleview "burner particles"
+	{##+ particleview "burner particles"
 		{entitygenerator
 			{emissionarea
 				{alpha0 0}
@@ -637,7 +637,7 @@
 			{entity "fx_piece_flame_30"}
 			{totalparticles 40}
 			{timetolive 2}
-			{ownerspeed}
+			{## ownerspeed}
 		}
 	}
 }

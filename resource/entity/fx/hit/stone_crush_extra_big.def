@@ -17,7 +17,7 @@
 				{spiny 0 1}
 				{spinz 0 1}
 			}
-			{#+ entity "#flotsam2"
+			{##+ entity "#flotsam2"
 				{fx "ex_dusttrail_concrete"}
 			}
 			{axisz}
@@ -87,7 +87,7 @@
 					{scale 0.3 0.1}
 					{turn 90 45}
 					{visibility 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0.5}
 						}
@@ -230,7 +230,7 @@
 			}
 		}
 	}
-	{#+ particleview pieces
+	{##+ particleview pieces
 		{entitygenerator
 			{totalparticles 4}
 			{emissionarea
@@ -242,9 +242,9 @@
 				{speed 10}
 				{lifetime 0.1}
 			}
-			{entity "#flotsam1"}
+			{## entity "#flotsam1"}
 			{entity "#flotsam2"
-				{fx "ex_dusttrail_concrete"}
+				{## fx "ex_dusttrail_concrete"}
 			}
 			{axisz}
 			{timetolive 0.01}

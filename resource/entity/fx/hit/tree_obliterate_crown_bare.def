@@ -30,7 +30,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.1}
 							{max 0.3}
 						}
@@ -52,7 +52,7 @@
 			}
 		}
 	}
-	{#+ particleview debri
+	{##+ particleview debri
 		{generator
 			{totalparticles 50}
 			{emissionarea
@@ -243,7 +243,7 @@
 			}
 		}
 	}
-	{#+ particleview leaves
+	{##+ particleview leaves
 		{generator
 			{totalparticles 100}
 			{emissionarea
@@ -316,12 +316,12 @@
 							{max 0.125 0.025}
 						}
 					}
-					{#+ turn 0 180
+					{##+ turn 0 180
 						{## linear
 							{min 0 360}
 							{max 0 1060}
 						}
-						{power
+						{## power
 							{min 360}
 							{max 100}
 							{pow 2}
@@ -340,7 +340,7 @@
 			}
 		}
 	}
-	{#+ particleview "leaves wild"
+	{##+ particleview "leaves wild"
 		{generator
 			{totalparticles 100}
 			{emissionarea
@@ -413,12 +413,12 @@
 							{max 0.125 0.025}
 						}
 					}
-					{#+ turn 0 180
+					{##+ turn 0 180
 						{## linear
 							{min 0 360}
 							{max 0 1060}
 						}
-						{power
+						{## power
 							{min 360}
 							{max 100}
 							{pow 2}

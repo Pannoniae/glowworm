@@ -2,7 +2,7 @@
 	{sound "hit/shared/Sonic_Crack/s4/d1/"}
 	{sound "hit/shared/Sonic_Crack/s4/d2/"}
 	{sound "detonation/s1/shockwave/Dirt/Trickle/"}
-	{#+ spriteview shock1
+	{##+ spriteview shock1
 		{#+ sprite "$/flash/flash_shock"
 			{visibility 1
 				{npower
@@ -25,12 +25,12 @@
 			{preturn 90 90}
 			{highlight 0xff696969}
 		}
-		{layer grounddynamic}
+		{## layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
 		{notifyowner}
 	}
-	{#+ spriteview flash1
+	{##+ spriteview flash1
 		{sprite "$/flash/flash_g03"
 			{timer
 				{mode }
@@ -54,7 +54,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview sparkles1
+	{##+ particleview sparkles1
 		{generator
 			{totalparticles 15}
 			{particlesinblock 15}
@@ -77,7 +77,7 @@
 				{value 0.05}
 			}
 			{damping 0.96}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -97,7 +97,7 @@
 						}
 					}
 					{scaley 0.055 0.005}
-					{highlight 0xfffe9939}
+					{## highlight 0xfffe9939}
 					{light 1
 						{linear
 							{min 1}
@@ -109,7 +109,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview fuzzy_centre2
+	{##+ particleview fuzzy_centre2
 		{generator
 			{emissionarea
 				{radius 0}
@@ -127,7 +127,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -151,7 +151,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -180,7 +180,7 @@
 		{notifyowner}
 		{offset 0 0 -10}
 	}
-	{#+ particleview "dirt up"
+	{##+ particleview "dirt up"
 		{delay 0.1}
 		{generator
 			{totalparticles 5}
@@ -226,7 +226,7 @@
 						}
 					}
 					{visibility 1
-						{## peak
+						{##+ peak
 							{min 0}
 							{max 1}
 						}
@@ -246,7 +246,7 @@
 			{stage }
 		}
 	}
-	{#+ particleview "dust up"
+	{##+ particleview "dust up"
 		{generator
 			{totalparticles 20}
 			{particlesinblock 20}
@@ -254,7 +254,7 @@
 				{radius -10}
 				{alpha0 0}
 				{alpha1 12.5 12.5}
-				{speed 3}
+				{## speed 3}
 			}
 			{particleinit
 				{speed 5 3}
@@ -269,7 +269,7 @@
 				{value -0.005}
 			}
 			{damping 0.92}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{#+ visualizer
 			{stage 
@@ -310,11 +310,11 @@
 				}
 			}
 		}
-		{delay 0.2}
-		{delay 0.1}
+		{## delay 0.2}
+		{## delay 0.1}
 	}
-	{#+ particleview "dust ground"
-		{delay 0.15}
+	{##+ particleview "dust ground"
+		{## delay 0.15}
 		{generator
 			{totalparticles 10}
 			{particlesinblock 10}
@@ -359,11 +359,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.5}
 							{max 0}
 						}
@@ -452,7 +452,7 @@
 		}
 		{mover
 			{damping 0.95}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -472,7 +472,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -480,7 +480,7 @@
 						}
 					}
 					{preturn 90}
-					{highlight 0xfff7e5d0}
+					{## highlight 0xfff7e5d0}
 					{scalex 1
 						{## linear
 							{min 0.05}
@@ -499,7 +499,7 @@
 						}
 					}
 				}
-				{sprite "$/explosion/bum_one_var"
+				{## sprite "$/explosion/bum_one_var"
 					{timer
 						{mode play }
 						{duration -1}
@@ -511,7 +511,7 @@
 							{pow 2}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -544,7 +544,7 @@
 		{offset 0 0 0}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 5}
 			{particlesinblock 5}
@@ -566,7 +566,7 @@
 				{value -0.005}
 			}
 			{damping 0.5}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -589,16 +589,16 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.35 0.05}
 							{max 0}
 						}
 					}
-					{highlight 0xffebc9a0}
+					{## highlight 0xffebc9a0}
 				}
 			}
 		}
@@ -652,7 +652,7 @@
 							{max 0}
 						}
 					}
-					{highlight 0xfffeeacf}
+					{## highlight 0xfffeeacf}
 				}
 			}
 		}

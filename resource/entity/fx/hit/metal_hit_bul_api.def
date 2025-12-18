@@ -1,6 +1,6 @@
 {fx
 	{sound "hit/steel/hit/bullet"}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
@@ -39,7 +39,7 @@
 				}
 			}
 			{scale 0.15
-				{linear
+				{## linear
 					{min 0.2}
 					{max 0}
 				}
@@ -148,13 +148,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xffa5a5a5}
+					{## highlight 0xffa5a5a5}
 				}
 			}
 		}
 		{notifyowner}
 	}
-	{#+ particleview "smoke fwd"
+	{##+ particleview "smoke fwd"
 		{generator
 			{emissionarea
 				{radius 2.5 2.5}

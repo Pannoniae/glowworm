@@ -3,8 +3,8 @@
 	{#+ lightview
 		{type point}
 		{animator
-			{scale 1
-				{## linear
+			{## scale 1
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -50,7 +50,7 @@
 		{halo}
 		{autovisible}
 	}
-	{#+ spriteview flash
+	{##+ spriteview flash
 		{delay 0.05}
 		{sprite "$/flash/flashssp"
 			{timer
@@ -345,7 +345,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -425,7 +425,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -478,7 +478,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview flames
+	{##+ particleview flames
 		{generator
 			{totalparticles 3}
 			{emissionarea

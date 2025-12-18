@@ -1,5 +1,5 @@
 {fx
-	{#+ particleview pieces
+	{##+ particleview pieces
 		{#+ generator
 			{totalparticles 7}
 			{particlesinblock 7}
@@ -67,12 +67,12 @@
 				{speed 0.5 0.5}
 				{lifetime 1 0.5}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 3}
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value 0.01}
 			}
 			{damping 0.97}
@@ -105,7 +105,7 @@
 					{preturn 180 180}
 					{highlight 0xffd2cabf}
 				}
-				{#+ sprite "$/smoke/smoke_g04f"
+				{##+ sprite "$/smoke/smoke_g04f"
 					{scale 0.5
 						{linear
 							{min 0.1}
@@ -148,12 +148,12 @@
 				{speed 0.1 0.1}
 				{lifetime 3 1}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 1}
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value 0.01}
 			}
 			{damping 0.97}
@@ -190,7 +190,7 @@
 					{preturn 180 180}
 					{highlight 0xffd2cabf}
 				}
-				{#+ sprite "$/smoke/smoke_g04f"
+				{##+ sprite "$/smoke/smoke_g04f"
 					{scale 0.5
 						{linear
 							{min 0.1}

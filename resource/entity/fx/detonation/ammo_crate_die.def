@@ -29,7 +29,7 @@
 		{intensity 10}
 		{radiusfalloff 10}
 	}
-	{#+ particleview sparkles2
+	{##+ particleview sparkles2
 		{generator
 			{emissionarea
 				{radius 10 10}
@@ -79,7 +79,7 @@
 			}
 		}
 	}
-	{#+ particleview "hot smoke"
+	{##+ particleview "hot smoke"
 		{delay 0.2}
 		{generator
 			{totalparticles 100}
@@ -107,7 +107,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/smoke/smokesmal4b_100"
+				{##+ sprite "$/smoke/smokesmal4b_100"
 					{scale 1
 						{linear
 							{min 1.5 0.3}
@@ -193,7 +193,7 @@
 		{offset 0 0 -10}
 	}
 	{#+ particleview "smoke gnd"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 60}
 			{emissionarea
@@ -241,7 +241,7 @@
 						}
 					}
 					{preturn 0 180}
-					{highlight 0xc0c0c0}
+					{## highlight 0xc0c0c0}
 					{timer
 						{mode play }
 						{duration -1}
@@ -252,7 +252,7 @@
 		}
 		{offset 0 0 -10}
 	}
-	{#+ particleview dirt
+	{##+ particleview dirt
 		{delay 0.2}
 		{generator
 			{totalparticles 10}
@@ -314,7 +314,7 @@
 		{offset 0 0 -10}
 	}
 	{#+ particleview sparkles
-		{delay 0.2}
+		{## delay 0.2}
 		{generator
 			{particlesinblock 60}
 			{totalparticles 60}
@@ -375,7 +375,7 @@
 			{timetolive 0.1}
 			{axisz}
 		}
-		{offset 0 0 0}
+		{## offset 0 0 0}
 		{mover
 			{damping 0.97}
 			{gravity
@@ -396,7 +396,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{light 1
+					{## light 1
 						{linear
 							{min 1}
 							{max 0}
@@ -411,9 +411,9 @@
 				}
 			}
 		}
-		{delay 0.3}
+		{## delay 0.3}
 	}
-	{#+ spriteview shock
+	{##+ spriteview shock
 		{sprite "$/flash/flash_shock"
 			{visibility 1
 				{npower
@@ -460,7 +460,7 @@
 			}
 		}
 	}
-	{#+ particleview fire1
+	{##+ particleview fire1
 		{delay 0.1}
 		{generator
 			{emissionarea
@@ -515,15 +515,15 @@
 						{mode play }
 						{duration -1}
 					}
-					{highlight 0xffff5639}
-					{visibility 1
+					{## highlight 0xffff5639}
+					{## visibility 1
 						{linear
 							{min 0.2}
 							{max 0}
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smoke_fireball"
+				{##+ sprite "$/smoke/smoke_fireball"
 					{scale 1
 						{linear
 							{min 0.175 0.025}
@@ -552,7 +552,7 @@
 			}
 		}
 	}
-	{#+ particleview fire2
+	{##+ particleview fire2
 		{delay 0.2}
 		{generator
 			{totalparticles 20}
@@ -695,14 +695,14 @@
 			}
 		}
 	}
-	{#+ spriteview flash
+	{##+ spriteview flash
 		{sprite "$/flash/halo02"
 			{timer
 				{mode }
 				{duration 0.15}
 			}
 			{preturn 90 90}
-			{highlight 0xffffd98e}
+			{## highlight 0xffffd98e}
 			{scale 3}
 			{light 1
 				{linear
@@ -715,7 +715,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ spriteview halo1
+	{##+ spriteview halo1
 		{sprite "$/flash/flash_flare"
 			{timer
 				{mode }
@@ -738,7 +738,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ spriteview halo2
+	{##+ spriteview halo2
 		{sprite "$/flash/halo02"
 			{timer
 				{mode }
@@ -757,7 +757,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview "hot smoke"
+	{##+ particleview "hot smoke"
 		{delay 0.2}
 		{generator
 			{totalparticles 100}
@@ -864,7 +864,7 @@
 		}
 		{offset 0 0 -10}
 	}
-	{#+ particleview sparkles1
+	{##+ particleview sparkles1
 		{generator
 			{emissionarea
 				{radius 0}
@@ -915,7 +915,7 @@
 		}
 	}
 	{#+ particleview "smoke up"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -963,7 +963,7 @@
 						}
 					}
 					{preturn 0 180}
-					{highlight 0xc0c0c0}
+					{## highlight 0xc0c0c0}
 					{timer
 						{mode play }
 						{duration -1}
@@ -972,10 +972,10 @@
 				}
 			}
 		}
-		{offset 0 0 -10}
+		{## offset 0 0 -10}
 	}
 	{#+ particleview wood
-		{delay 0.2}
+		{## delay 0.2}
 		{generator
 			{particlesinblock 40}
 			{totalparticles 40}
@@ -1047,13 +1047,13 @@
 			{stage collided
 				{sprite "$/particle/wood_splinter1"
 					{scale 0.055 0.045}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 300}
 						}
 					}
-					{#+ timer
+					{##+ timer
 						{mode play }
 						{duration -1}
 					}
@@ -1061,13 +1061,13 @@
 				}
 				{sprite "$/particle/wood_splinter2"
 					{scale 0.055 0.045}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 300}
 						}
 					}
-					{#+ timer
+					{##+ timer
 						{mode play }
 						{duration -1}
 					}
@@ -1075,13 +1075,13 @@
 				}
 				{sprite "$/particle/wood_splinter3"
 					{scale 0.055 0.045}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 300}
 						}
 					}
-					{#+ timer
+					{##+ timer
 						{mode play }
 						{duration -1}
 					}

@@ -1,6 +1,6 @@
 {fx
 	{sound "detonation/s1/shockwave/Dirt/Impact/"}
-	{#+ spriteview mark
+	{##+ spriteview mark
 		{#+ sprite "$/explosion/small_decal"
 			{visibility 1
 				{linear
@@ -19,7 +19,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{#+ particleview "dust ground"
+	{##+ particleview "dust ground"
 		{generator
 			{emissionarea
 				{radius 0}
@@ -162,7 +162,7 @@
 		}
 		{mover
 			{gravity
-				{value 0.01}
+				{## value 0.01}
 			}
 			{damping 0.9}
 		}
@@ -242,7 +242,7 @@
 		}
 		{mover
 			{damping 0.92}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -266,7 +266,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -295,7 +295,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "dirt up"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 5}
 			{particlesinblock 5}
@@ -311,7 +311,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 20}
+		{## offset 0 0 20}
 		{mover
 			{gravity
 				{value 0.03}
@@ -344,11 +344,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -384,7 +384,7 @@
 							{max 0.2}
 						}
 					}
-					{highlight 0xff0a0a0a}
+					{## highlight 0xff0a0a0a}
 					{visibility 1
 						{peak
 							{min 0}
@@ -398,7 +398,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview dust
+	{##+ particleview dust
 		{generator
 			{totalparticles 30}
 			{emissionarea
@@ -416,7 +416,7 @@
 		}
 		{mover
 			{gravity
-				{value 0.01}
+				{## value 0.01}
 			}
 			{damping 0.9}
 		}
@@ -478,7 +478,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
 			{scale 1
@@ -504,7 +504,7 @@
 		{effectonground}
 		{offset 0 0 30}
 	}
-	{#+ particleview central
+	{##+ particleview central
 		{generator
 			{emissionarea
 				{radius 0}
@@ -549,7 +549,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{emissionarea
 				{radius 0}
@@ -686,7 +686,7 @@
 		}
 		{mover
 			{damping 0.81}
-			{gravity
+			{## gravity
 				{value 0.03}
 			}
 		}
@@ -718,7 +718,7 @@
 					}
 					{highlight 0xfffebf64}
 				}
-				{sprite "$/smoke/smoke_g04b"
+				{## sprite "$/smoke/smoke_g04b"
 					{timer
 						{mode play }
 						{duration -1}

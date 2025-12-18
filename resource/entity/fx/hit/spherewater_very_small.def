@@ -29,7 +29,7 @@
 			{stage initial 
 				{#+ sprite "$/water/splash_water_a2"
 					{scale 1
-						{## linear
+						{linear
 							{min 0.04}
 							{max 0.115 0.035}
 						}
@@ -103,7 +103,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview dust
+	{##+ particleview dust
 		{generator
 			{totalparticles 15}
 			{particlesinblock 15}
@@ -119,7 +119,7 @@
 			{axisz}
 			{timetolive 0.1}
 		}
-		{offset 0 0 10}
+		{## offset 0 0 10}
 		{mover
 			{gravity
 				{value 0.03}
@@ -131,7 +131,7 @@
 		}
 		{visualizer
 			{stage initial 
-				{#+ sprite "$/smoke/smoke_turb"
+				{##+ sprite "$/smoke/smoke_turb"
 					{turn 1
 						{linear
 							{min 0}
@@ -181,7 +181,7 @@
 					}
 					{preturn 90 90}
 				}
-				{#+ sprite "$/water/water_i03"
+				{##+ sprite "$/water/water_i03"
 					{turn 1
 						{linear
 							{min 0}
@@ -210,7 +210,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview fuzzy1
+	{##+ particleview fuzzy1
 		{generator
 			{emissionarea
 				{radius -5}

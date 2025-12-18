@@ -313,7 +313,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.05}
 			}
 			{damping 0.93}
@@ -395,7 +395,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.05}
 			}
 			{damping 0.95}
@@ -931,7 +931,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.05}
 			}
 			{damping 0.95}
@@ -1014,7 +1014,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.05}
 			}
 			{damping 0.95}
@@ -1096,7 +1096,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.02}
 			}
 			{damping 0.96}
@@ -1208,7 +1208,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.01}
 			}
 			{damping 0.98}
@@ -1296,7 +1296,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.01}
 			}
 			{damping 0.96}
@@ -1791,7 +1791,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.01}
 			}
 			{damping 0.94}
@@ -1821,11 +1821,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
@@ -1850,7 +1850,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{gravity
+			{## gravity
 				{value -0.01}
 			}
 			{damping 0.94}
@@ -1880,11 +1880,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.45 0.05}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
@@ -1921,7 +1921,7 @@
 					{max 0.7}
 				}
 			}
-			{preturn 90}
+			{## preturn 90}
 		}
 		{orientation trace}
 		{autovisible}
@@ -1973,11 +1973,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.3}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
@@ -2003,23 +2003,23 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.6}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.2}
 						}
 					}
-					{highlight 0xffc9ae92}
+					{## highlight 0xffc9ae92}
 				}
 			}
 		}
 		{offset 0 0 -35}
 	}
 	{#+ particleview "dust forward"
-		{delay 0.02}
+		{## delay 0.02}
 		{generator
 			{totalparticles 25}
 			{emissionarea
@@ -2031,7 +2031,7 @@
 				{speed 9 9}
 				{lifetime 3 2}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 25}
 			{timetolive 0.01}
 		}
@@ -2118,7 +2118,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "dust forward"
-		{delay 0.02}
+		{## delay 0.02}
 		{generator
 			{totalparticles 25}
 			{emissionarea
@@ -2131,7 +2131,7 @@
 				{speed 9 9}
 				{lifetime 3 2}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 25}
 			{timetolive 0.01}
 		}
@@ -2218,7 +2218,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "dust forward"
-		{delay 0.02}
+		{## delay 0.02}
 		{generator
 			{totalparticles 25}
 			{emissionarea
@@ -2231,7 +2231,7 @@
 				{speed 9 9}
 				{lifetime 3 2}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 25}
 			{timetolive 0.01}
 		}

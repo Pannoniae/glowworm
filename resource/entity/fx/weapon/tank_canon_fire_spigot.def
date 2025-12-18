@@ -1,5 +1,5 @@
 {fx
-	{#+ lightview "light flash"
+	{##+ lightview "light flash"
 		{type point}
 		{animator
 			{timer
@@ -46,7 +46,7 @@
 					{highlight 0xffffffff}
 					{scaley 0.045 0.015}
 					{scalex 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0.5}
 						}
@@ -64,7 +64,7 @@
 		}
 		{autopause}
 	}
-	{#+ particleview "sprite muzzle flame"
+	{##+ particleview "sprite muzzle flame"
 		{generator
 			{totalparticles 5}
 			{particlesinblock 5}
@@ -94,7 +94,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{linear
 							{min 0.15 0.05}
 							{max 0.35 0.15}
@@ -102,18 +102,18 @@
 					}
 					{preturn 0}
 					{light 1
-						{#+ power
+						{##+ power
 							{min 1}
 							{max 0}
 							{pow 10}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
 					}
 					{visibility 1
-						{#+ linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
@@ -136,7 +136,7 @@
 			}
 		}
 		{autopause}
-		{offset -5 0 0}
+		{## offset -5 0 0}
 	}
 	{#+ spriteview shock
 		{sprite "/texture/fx/flash/flash_shockwave"
@@ -159,14 +159,14 @@
 		}
 		{autovisible}
 	}
-	{#+ spriteview halo1
+	{##+ spriteview halo1
 		{sprite "$/flash/halo03"
 			{timer
 				{mode }
 				{duration 0.05}
 			}
 			{scale 0.3
-				{#+ linear
+				{##+ linear
 					{min 0}
 					{max 0.6}
 				}
@@ -223,11 +223,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.075 0.025}
 							{max 0.45 0.05}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -239,9 +239,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -270,7 +270,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward quick"
 		{generator
@@ -312,11 +312,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.075 0.025}
 							{max 0.25 0.05}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -328,9 +328,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -359,7 +359,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward long"
 		{generator
@@ -401,11 +401,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.125 0.025}
 							{max 0.45 0.05}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -417,9 +417,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -448,7 +448,7 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
 	{#+ particleview "smoke forward"
 		{generator
@@ -490,11 +490,11 @@
 						}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.075 0.025}
 							{max 0.35 0.05}
 						}
-						{#+ power
+						{##+ power
 							{min 0.025 -0.025}
 							{max 0.425 0.125}
 							{pow 0.9}
@@ -506,9 +506,9 @@
 							{max 0}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -537,9 +537,9 @@
 			}
 		}
 		{autopause}
-		{delay 0.2}
+		{## delay 0.2}
 	}
-	{#+ particleview "muzzle explosion 2"
+	{##+ particleview "muzzle explosion 2"
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}
@@ -581,7 +581,7 @@
 							{max 0}
 						}
 					}
-					{#+ visibility 1
+					{##+ visibility 1
 						{linear
 							{min 0.5}
 							{max 0}
@@ -589,7 +589,7 @@
 					}
 					{highlight 0xfffff87f}
 				}
-				{flags trace }
+				{## flags trace }
 			}
 		}
 		{autopause}

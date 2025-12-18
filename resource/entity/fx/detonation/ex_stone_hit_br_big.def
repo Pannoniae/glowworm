@@ -26,7 +26,7 @@
 		{effectonground}
 	}
 	{#+ particleview "stones               "
-		{delay 0.05}
+		{## delay 0.05}
 		{generator
 			{particlesinblock 75}
 			{totalparticles 75}
@@ -221,7 +221,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "big stones"
-		{delay 0.02}
+		{## delay 0.02}
 		{entitygenerator
 			{totalparticles 30}
 			{emissionarea
@@ -236,7 +236,7 @@
 			{entity "#grunt2"
 				{fx "spheredust_small_short"}
 			}
-			{entity "#metall3"}
+			{## entity "#metall3"}
 		}
 		{notifyowner}
 	}
@@ -820,8 +820,8 @@
 			}
 			{preturn 90 90}
 		}
-		{ground}
-		{layer grounddynamic}
+		{## ground}
+		{## layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
 		{notifyowner}
@@ -919,11 +919,11 @@
 			}
 			{scale 10}
 			{light 1
-				{peak
+				{## peak
 					{min 0}
 					{max 1}
 				}
-				{## linear
+				{linear
 					{min 1}
 					{max 0}
 				}
@@ -952,7 +952,7 @@
 		{autovisible}
 	}
 	{#+ particleview dirt
-		{delay 5}
+		{## delay 5}
 		{generator
 			{totalparticles 50}
 			{particlesinblock 50}
@@ -1014,7 +1014,7 @@
 		{delay 0.2}
 		{entitygenerator
 			{totalparticles 3}
-			{axisz}
+			{## axisz}
 			{emissionarea
 				{radius 16}
 				{alpha0 0}
@@ -1048,7 +1048,7 @@
 				{speed 2 2}
 				{lifetime 2.5 0.5}
 			}
-			{axisz}
+			{## axisz}
 			{particlesinblock 30}
 			{timetolive 0.5}
 		}
@@ -1208,7 +1208,7 @@
 			}
 			{particlesinblock 40}
 			{timetolive 0.1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{damping 0.97}
@@ -1250,9 +1250,9 @@
 			{totalparticles 1}
 			{particlesinblock 1}
 			{timetolive 0.01}
-			{axisz}
+			{## axisz}
 		}
-		{offset 0 0 40}
+		{## offset 0 0 40}
 		{mover
 			{damping 0.97}
 			{gravity
@@ -1296,7 +1296,7 @@
 				{speed 4 4}
 				{lifetime 0.85 0.35}
 			}
-			{axisz}
+			{## axisz}
 			{timetolive 0.1}
 		}
 		{mover
@@ -1304,7 +1304,7 @@
 				{value 0.2}
 			}
 			{damping 0.975}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -1344,7 +1344,7 @@
 				{speed 2.5 1.5}
 			}
 			{timetolive 0.1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{damping 0.8}

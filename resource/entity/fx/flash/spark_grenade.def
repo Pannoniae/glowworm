@@ -1,5 +1,5 @@
 {fx
-	{#+ particleview central
+	{##+ particleview central
 		{generator
 			{emissionarea
 				{radius 0}
@@ -25,7 +25,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{linear
 							{min 0.005 0.005}
 							{max 0.045 0.005}
 						}
@@ -56,14 +56,14 @@
 				{lifetime 0.55 0.15}
 			}
 			{totalparticles 5}
-			{axisz}
-			{particlesinblock 22.5 7.5}
+			{## axisz}
+			{## particlesinblock 22.5 7.5}
 		}
 		{mover
 			{nodependonwind}
 			{collisions
 				{terrain}
-				{objects}
+				{## objects}
 				{restitution 0.5}
 			}
 			{gravity
@@ -91,7 +91,7 @@
 			}
 		}
 	}
-	{#+ spriteview "halo night"
+	{##+ spriteview "halo night"
 		{sprite "$/flash/flashss1"
 			{timer
 				{mode play loop }

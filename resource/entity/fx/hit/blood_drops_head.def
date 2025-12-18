@@ -7,7 +7,7 @@
 				{alpha0 0}
 				{alpha1 10}
 				{speed 1}
-				{psi 89}
+				{## psi 89}
 				{theta -89}
 			}
 			{particleinit
@@ -15,7 +15,7 @@
 				{lifetime 3 1}
 			}
 			{particlesinblock 1}
-			{axisz}
+			{## axisz}
 		}
 		{mover
 			{damping 0.95}
@@ -47,12 +47,12 @@
 						{mode play }
 						{duration 1.8}
 					}
-					{highlight 0x670000}
+					{## highlight 0x670000}
 					{visibility 1}
 				}
 			}
 			{stage collided 
-				{#+ sprite "$/particle/bloodspot01"
+				{##+ sprite "$/particle/bloodspot01"
 					{scale 1
 						{linear
 							{min 0.125 0.025}
@@ -74,7 +74,7 @@
 				{flags killparticle ground }
 				{sprite "$/particle/bloodstain"
 					{scale 0.0045 0.0025
-						{linear
+						{## linear
 							{min 0.015 0.005}
 							{max 0.035 0.005}
 						}
@@ -96,7 +96,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview drops2
+	{##+ particleview drops2
 		{generator
 			{totalparticles 10}
 			{emissionarea

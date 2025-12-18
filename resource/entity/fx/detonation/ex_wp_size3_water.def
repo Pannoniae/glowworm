@@ -168,7 +168,7 @@
 			}
 			{collisions
 				{terrain}
-				{restitution 0.2}
+				{## restitution 0.2}
 				{once}
 			}
 		}
@@ -183,10 +183,10 @@
 					{scale 0.025 0.005}
 					{highlight 0xffffd7ab}
 				}
-				{flags ground }
+				{## flags ground }
 			}
 			{stage collided 
-				{#+ sprite "/texture/fx/flash/halo03"
+				{##+ sprite "/texture/fx/flash/halo03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -195,7 +195,7 @@
 					{scale 0.025 0.005}
 					{highlight 0xffffd7ab}
 				}
-				{flags ground }
+				{## flags ground }
 			}
 		}
 		{offset 0 0 5}
@@ -250,7 +250,7 @@
 				{value 0.05}
 			}
 			{damping 0.96}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -270,7 +270,7 @@
 						}
 					}
 					{scaley 0.055 0.005}
-					{highlight 0xfffe9939}
+					{## highlight 0xfffe9939}
 					{light 1
 						{linear
 							{min 1}
@@ -305,7 +305,7 @@
 				{value 0.05}
 			}
 			{damping 0.96}
-			{collisions
+			{## collisions
 				{terrain}
 				{restitution 0.5}
 			}
@@ -325,7 +325,7 @@
 						}
 					}
 					{scaley 0.055 0.005}
-					{highlight 0xfffe9939}
+					{## highlight 0xfffe9939}
 					{light 1
 						{linear
 							{min 1}
@@ -338,7 +338,7 @@
 		{notifyowner}
 	}
 	{#+ particleview explosion
-		{delay 0.05}
+		{## delay 0.05}
 		{generator
 			{totalparticles 6}
 			{particlesinblock 6}
@@ -361,7 +361,7 @@
 				{value -0.001}
 			}
 			{damping 0.98}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -371,19 +371,19 @@
 						{duration -1}
 					}
 					{preturn 0 45}
-					{#+ turn 1
+					{##+ turn 1
 						{linear
 							{min 0}
 							{max 0 80}
 						}
 					}
-					{#+ scale 0.3
-						{#+ linear
+					{##+ scale 0.3
+						{##+ linear
 							{min 0.1}
 							{max 0.25 0.05}
 						}
 					}
-					{#+ visibility 1
+					{##+ visibility 1
 						{linear
 							{min 0.3 0.2}
 							{max 0}
@@ -415,8 +415,8 @@
 					{max 0}
 				}
 			}
-			{scalex 1.5}
-			{scaley 0.75}
+			{## scalex 1.5}
+			{## scaley 0.75}
 		}
 		{halo}
 		{notifyowner}
@@ -432,12 +432,12 @@
 				}
 			}
 			{scale 1
-				{npower
+				{## npower
 					{min 0.1}
 					{max 2}
 					{pow 0.8}
 				}
-				{## linear
+				{linear
 					{min 0}
 					{max 1}
 				}
@@ -447,9 +447,9 @@
 				{duration 0.12}
 			}
 			{preturn 90 90}
-			{highlight 0xff696969}
+			{## highlight 0xff696969}
 		}
-		{layer grounddynamic}
+		{## layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
 		{notifyowner}
@@ -462,7 +462,7 @@
 				{radius 0}
 				{alpha0 30 30}
 				{alpha1 30 30}
-				{speed 3}
+				{## speed 3}
 			}
 			{particleinit
 				{speed 0.8 0.7}
@@ -477,7 +477,7 @@
 				{value -0.005}
 			}
 			{damping 0.98}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -504,11 +504,11 @@
 							{min 0}
 							{max 0.45 0.15}
 						}
-						{## linear
+						{linear
 							{min 0.45 0.15}
 							{max 0}
 						}
-						{npower
+						{## npower
 							{min 0.4}
 							{max 0}
 							{pow 4}
@@ -518,11 +518,11 @@
 				}
 			}
 		}
-		{delay 0.2}
-		{delay 0.1}
+		{## delay 0.2}
+		{## delay 0.1}
 	}
 	{#+ particleview "dust ground"
-		{delay 0.15}
+		{## delay 0.15}
 		{generator
 			{totalparticles 8}
 			{particlesinblock 8}
@@ -544,7 +544,7 @@
 				{value 0}
 			}
 			{damping 0.97}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
@@ -567,11 +567,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.6}
 						}
-						{## linear
+						{linear
 							{min 0.35 0.15}
 							{max 0}
 						}
@@ -582,7 +582,7 @@
 		}
 	}
 	{#+ particleview "explosion spirte2"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 0}
@@ -604,7 +604,7 @@
 				{value 0}
 			}
 			{collisions
-				{terrain}
+				{## terrain}
 			}
 		}
 		{visualizer
@@ -627,10 +627,10 @@
 							{max 0}
 						}
 					}
-					{highlight 0xffffe5ae}
+					{## highlight 0xffffe5ae}
 					{highlight 0xffffc053}
 				}
-				{#+ sprite "$/smoke/sm03"
+				{##+ sprite "$/smoke/sm03"
 					{timer
 						{mode play }
 						{duration -1}
@@ -677,7 +677,7 @@
 		}
 		{mover
 			{damping 0.99}
-			{gravity
+			{## gravity
 				{value 0.1}
 			}
 			{nodependonwind}
@@ -701,7 +701,7 @@
 							{max 0}
 						}
 					}
-					{#+ scale 1
+					{##+ scale 1
 						{npower
 							{min 1 0.2}
 							{max 1.85 0.35}
@@ -709,7 +709,7 @@
 						}
 					}
 					{preturn 90}
-					{highlight 0xfff7e5d0}
+					{## highlight 0xfff7e5d0}
 					{scalex 1
 						{npower
 							{min 0.01}
@@ -726,7 +726,7 @@
 					}
 					{highlight 0xffa99d90}
 				}
-				{#+ sprite "$/explosion/ground_exp3"
+				{##+ sprite "$/explosion/ground_exp3"
 					{timer
 						{mode play }
 						{duration -1}
@@ -754,18 +754,18 @@
 						}
 					}
 				}
-				{#+ sprite "$/explosion/bum_one_var"
+				{##+ sprite "$/explosion/bum_one_var"
 					{timer
 						{mode play }
 						{duration -1}
 					}
 					{visibility 1
-						{npower
+						{## npower
 							{min 1}
 							{max 0}
 							{pow 3}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}

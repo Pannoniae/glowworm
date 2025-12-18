@@ -1,6 +1,6 @@
 {fx
 	{fire}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -61,30 +61,30 @@
 			{emissionarea
 				{radius 1.5 1.5}
 				{alpha1 90 90}
-				{speed 0.7}
+				{## speed 0.7}
 			}
 			{particleinit
 				{speed 0}
 				{lifetime 0.75 0.25}
 			}
 			{axisz}
-			{timetolive 75}
+			{## timetolive 75}
 		}
 		{mover
 			{damping 0.9}
 			{gravity
-				{value -0.001}
+				{## value -0.001}
 			}
 			{nodependonwind}
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/explosion/fire"
+				{##+ sprite "$/explosion/fire"
 					{timer
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{linear
 							{min 0.3 0.1}
 							{max 0.65 0.15}
@@ -97,7 +97,7 @@
 						}
 					}
 					{scalex 0.6 0.1
-						{linear
+						{## linear
 							{min 0.25 0.05}
 							{max 1}
 						}
@@ -140,7 +140,7 @@
 		{notifyowner}
 		{offset 0 0 -5}
 	}
-	{#+ particleview "round flames"
+	{##+ particleview "round flames"
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -153,23 +153,23 @@
 				{lifetime 0.35 0.15}
 			}
 			{axisz}
-			{timetolive 75}
+			{## timetolive 75}
 		}
 		{mover
 			{damping 0.9}
 			{gravity
 				{value -0.02}
 			}
-			{nodependonwind}
+			{## nodependonwind}
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/explosion/fire"
+				{##+ sprite "$/explosion/fire"
 					{timer
 						{mode play }
 						{duration -1}
 					}
-					{scale 1
+					{## scale 1
 						{linear
 							{min 0.3 0.1}
 							{max 0.65 0.15}
@@ -182,7 +182,7 @@
 						}
 					}
 					{scalex 0.6 0.1
-						{linear
+						{## linear
 							{min 0.25 0.05}
 							{max 1}
 						}
@@ -200,22 +200,22 @@
 						{duration -1}
 					}
 					{light 1
-						{#+ peak
+						{##+ peak
 							{min 0}
 							{max 0.65 0.15}
 						}
-						{## linear
+						{linear
 							{min 0.15 0.05}
 							{max 0}
 						}
 					}
-					{#+ scalex 1
+					{##+ scalex 1
 						{#+ linear
 							{min 0}
 							{max 0.2 0.1}
 						}
 					}
-					{#+ scaley 1
+					{##+ scaley 1
 						{#+ linear
 							{min 0}
 							{max 0.125 0.025}
@@ -247,7 +247,7 @@
 				{lifetime 1.25 0.75}
 			}
 			{axisz}
-			{timetolive 40}
+			{## timetolive 40}
 		}
 		{mover
 			{damping 0.95}
@@ -265,7 +265,7 @@
 				{sprite "$/particle/oskolki"
 					{scale 0.1 0.05}
 				}
-				{#+ sprite "$/particle/oskolki"
+				{##+ sprite "$/particle/oskolki"
 					{scale 0.1 0.05}
 				}
 			}
@@ -321,7 +321,7 @@
 						{duration -1}
 					}
 					{preturn 180 50}
-					{highlight 0xffc5c5c5}
+					{## highlight 0xffc5c5c5}
 				}
 			}
 		}

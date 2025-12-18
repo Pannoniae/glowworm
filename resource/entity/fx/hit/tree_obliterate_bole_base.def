@@ -85,7 +85,7 @@
 					{preturn 0 360}
 					{highlight 0xfffde5b7}
 				}
-				{#+ sprite "$/smoke/smoke_g04"
+				{##+ sprite "$/smoke/smoke_g04"
 					{turn 1
 						{linear
 							{min 0}
@@ -139,7 +139,7 @@
 			}
 		}
 	}
-	{#+ particleview pieces
+	{##+ particleview pieces
 		{entitygenerator
 			{totalparticles 5}
 			{emissionarea
@@ -165,7 +165,7 @@
 			}
 		}
 	}
-	{#+ particleview "fire round"
+	{##+ particleview "fire round"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -179,7 +179,7 @@
 				{lifetime 2 1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.95}
@@ -202,12 +202,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -219,7 +219,7 @@
 						}
 					}
 				}
-				{sprite "$/smoke/smoke_g04d"
+				{## sprite "$/smoke/smoke_g04d"
 					{timer
 						{mode play }
 						{duration -1}
@@ -232,12 +232,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -252,7 +252,7 @@
 			}
 		}
 	}
-	{#+ particleview "fire round"
+	{##+ particleview "fire round"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -266,7 +266,7 @@
 				{lifetime 7.5 2.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.95}
@@ -289,12 +289,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -319,12 +319,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -339,7 +339,7 @@
 			}
 		}
 	}
-	{#+ particleview "fire round"
+	{##+ particleview "fire round"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -353,7 +353,7 @@
 				{lifetime 4 1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.96}
@@ -363,7 +363,7 @@
 		}
 		{visualizer
 			{stage 
-				{#+ sprite "$/particle/snow"
+				{##+ sprite "$/particle/snow"
 					{timer
 						{mode play }
 						{duration -1}
@@ -381,22 +381,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -420,22 +420,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -463,7 +463,7 @@
 				{spinz -0.5 1.5}
 			}
 			{axisz}
-			{#+ entity "#trunk2_big"
+			{##+ entity "#trunk2_big"
 				{fx "tree_obliterate_bole_trail"}
 				{spinx 0 1}
 				{spiny -0.5 1.5}
@@ -497,7 +497,7 @@
 				{spinz -0.5 1.5}
 			}
 			{axisz}
-			{#+ entity "#trunk2_big"
+			{##+ entity "#trunk2_big"
 				{fx "tree_obliterate_bole_trail"}
 				{spinx 0 1}
 				{spiny -0.5 1.5}
@@ -531,7 +531,7 @@
 				{spinz -0.5 1.5}
 			}
 			{axisz}
-			{#+ entity "#trunk2_big"
+			{##+ entity "#trunk2_big"
 				{fx "tree_obliterate_bole_trail"}
 				{spinx 0 1}
 				{spiny -0.5 1.5}

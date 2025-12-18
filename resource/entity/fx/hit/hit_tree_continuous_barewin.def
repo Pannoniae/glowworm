@@ -1,9 +1,9 @@
 {fx
 	{constrain ground}
-	{#+ lightview
+	{##+ lightview
 		{type point}
 		{animator
-			{highlight 0xffffb278}
+			{## highlight 0xffffb278}
 			{visibility 1
 				{linear
 					{min 0.55 0.15}
@@ -24,9 +24,9 @@
 		{offset 0 0 20}
 		{pulseperiod 0.1 0.02}
 		{nightonly}
-		{pulseperiod 5}
+		{## pulseperiod 5}
 	}
-	{#+ particleview "hot smoke"
+	{##+ particleview "hot smoke"
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -104,7 +104,7 @@
 			}
 		}
 	}
-	{#+ particleview flame
+	{##+ particleview flame
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -160,7 +160,7 @@
 			}
 		}
 	}
-	{#+ particleview sparkles
+	{##+ particleview sparkles
 		{generator
 			{totalparticles 13}
 			{emissionarea
@@ -174,7 +174,7 @@
 				{speed 1.2}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -207,7 +207,7 @@
 		}
 		{delay 1}
 	}
-	{#+ spriteview halo
+	{##+ spriteview halo
 		{sprite "/texture/fx/flash/flashss3"
 			{light 1}
 			{highlight 0xfffd521b}
@@ -218,13 +218,13 @@
 			{visibility 0.4}
 			{scale 6}
 		}
-		{nightonly}
+		{## nightonly}
 		{halo}
-		{autovisible}
-		{fire}
-		{orientation billboard}
+		{## autovisible}
+		{## fire}
+		{## orientation billboard}
 	}
-	{#+ particleview "small flames----------"
+	{##+ particleview "small flames----------"
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -237,7 +237,7 @@
 			}
 			{axisz}
 			{particlesinblock 5}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 1}
@@ -261,15 +261,15 @@
 							{max 0.5}
 						}
 					}
-					{preturn 180}
+					{## preturn 180}
 					{highlight 0xffff903a}
 				}
 			}
 		}
 		{offset 0 0 5}
 	}
-	{sound "fire/loops/fire_big_02"}
-	{#+ particleview "fire round"
+	{## sound "fire/loops/fire_big_02"}
+	{##+ particleview "fire round"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -283,7 +283,7 @@
 				{lifetime 1 0.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -320,7 +320,7 @@
 			}
 		}
 	}
-	{#+ particleview "fire round big"
+	{##+ particleview "fire round big"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -334,7 +334,7 @@
 				{lifetime 2 1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -371,7 +371,7 @@
 			}
 		}
 	}
-	{#+ particleview smoke
+	{##+ particleview smoke
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -385,7 +385,7 @@
 				{lifetime 5}
 			}
 			{axisz}
-			{timetolive 15}
+			{## timetolive 15}
 		}
 		{mover
 			{damping 0.97}
@@ -423,7 +423,7 @@
 							{max 0.5}
 						}
 					}
-					{highlight 0xfffffffb}
+					{## highlight 0xfffffffb}
 				}
 				{sprite "$/smoke/smoke04"
 					{timer
@@ -455,7 +455,7 @@
 		}
 		{delay 1.1}
 	}
-	{#+ particleview aftersmoke
+	{##+ particleview aftersmoke
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -469,7 +469,7 @@
 				{lifetime 12.5 2.5}
 			}
 			{axisz}
-			{timetolive 15}
+			{## timetolive 15}
 		}
 		{mover
 			{damping 0.97}
@@ -507,13 +507,13 @@
 							{max 0.55 0.15}
 						}
 					}
-					{highlight 0xff646464}
+					{## highlight 0xff646464}
 				}
 			}
 		}
 		{delay 1.1}
 	}
-	{#+ particleview fire_particles
+	{##+ particleview fire_particles
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -527,7 +527,7 @@
 				{lifetime 1.75 1.25}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.99}
@@ -543,7 +543,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{##+ linear
 							{min 0.075 0.025}
 							{max 0.015 0.005}
 						}
@@ -573,7 +573,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{## linear
+						{##+ linear
 							{min 0.075 0.025}
 							{max 0.05}
 						}
@@ -645,7 +645,7 @@
 				{lifetime 2 1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.95}
@@ -668,22 +668,22 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 0.35 0.05}
 							{max 0}
 						}
@@ -703,12 +703,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -719,12 +719,12 @@
 							{max 0.2 0.1}
 						}
 					}
-					{highlight 0xffafafaf}
+					{## highlight 0xffafafaf}
 				}
 			}
 		}
 	}
-	{#+ particleview "fire round"
+	{##+ particleview "fire round"
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -738,7 +738,7 @@
 				{lifetime 7.5 2.5}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.95}
@@ -761,12 +761,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -791,12 +791,12 @@
 					}
 					{turn 0 60}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
@@ -825,7 +825,7 @@
 				{lifetime 4 1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.96}
@@ -853,22 +853,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -892,22 +892,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -931,22 +931,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -969,7 +969,7 @@
 				{lifetime 4 1}
 			}
 			{axisz}
-			{timetolive 12}
+			{## timetolive 12}
 		}
 		{mover
 			{damping 0.96}
@@ -997,22 +997,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -1036,22 +1036,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
@@ -1075,22 +1075,22 @@
 						}
 					}
 					{preturn 180 180}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{#+ linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 0.45 0.15}
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.5}
 						}
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}

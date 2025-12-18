@@ -90,7 +90,7 @@
 				}
 			}
 		}
-		{delay 1}
+		{## delay 1}
 	}
 	{#+ particleview sm
 		{generator
@@ -134,8 +134,8 @@
 							{max 1.05 0.0500001}
 						}
 					}
-					{#+ light 1
-						{## linear
+					{##+ light 1
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
@@ -151,7 +151,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smoke_g04l"
+				{##+ sprite "$/smoke/smoke_g04l"
 					{timer
 						{mode play }
 						{duration -1}
@@ -200,7 +200,7 @@
 						}
 					}
 					{light 1
-						{## linear
+						{##+ linear
 							{min 1}
 							{max 0}
 						}
@@ -240,7 +240,7 @@
 							{max 0.2}
 						}
 					}
-					{#+ visibility 1
+					{##+ visibility 1
 						{#+ peak
 							{min 0}
 							{max 0.35 0.05}
@@ -249,9 +249,9 @@
 				}
 			}
 		}
-		{delay 1}
+		{## delay 1}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -336,9 +336,9 @@
 				}
 			}
 		}
-		{delay 1}
+		{## delay 1}
 	}
-	{#+ particleview fire
+	{##+ particleview fire
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -380,7 +380,7 @@
 							{max 0.2 0.05}
 						}
 					}
-					{light 1
+					{## light 1
 						{## linear
 							{min 1}
 							{max 0}
@@ -397,7 +397,7 @@
 						}
 					}
 				}
-				{#+ sprite "$/smoke/smoke_g04l"
+				{##+ sprite "$/smoke/smoke_g04l"
 					{timer
 						{mode play }
 						{duration -1}
@@ -429,7 +429,7 @@
 				}
 			}
 		}
-		{delay 1}
+		{## delay 1}
 		{offset 0 0 -5}
 	}
 }

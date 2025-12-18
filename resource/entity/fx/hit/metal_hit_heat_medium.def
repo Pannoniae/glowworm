@@ -55,7 +55,7 @@
 						{duration -1}
 					}
 					{scale 1.5
-						{linear
+						{## linear
 							{min 0.5}
 							{max 4}
 						}
@@ -163,7 +163,7 @@
 		}
 	}
 	{#+ particleview smoke2
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 25 25}
@@ -324,7 +324,7 @@
 		}
 	}
 	{#+ particleview smoke2
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 25 25}
@@ -469,11 +469,11 @@
 						}
 					}
 					{visibility 1
-						{peak
+						{## peak
 							{min 0}
 							{max 0.4}
 						}
-						{## linear
+						{linear
 							{min 0.4}
 							{max 0}
 						}
@@ -485,7 +485,7 @@
 		{notifyowner}
 	}
 	{#+ particleview "smoke black"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 30 30}
@@ -553,11 +553,11 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 0.45 0.15}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 1}
 						}
@@ -593,7 +593,7 @@
 		}
 	}
 	{#+ particleview "smoke gray"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 30 30}
@@ -646,7 +646,7 @@
 		}
 	}
 	{#+ particleview "smoke gray light"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 20 20}
@@ -812,7 +812,7 @@
 		}
 	}
 	{#+ particleview "smoke black near"
-		{delay 0.1}
+		{## delay 0.1}
 		{generator
 			{emissionarea
 				{radius 20 20}
@@ -880,16 +880,16 @@
 						}
 					}
 					{visibility 1
-						{## linear
+						{linear
 							{min 1}
 							{max 0}
 						}
-						{peak
+						{## peak
 							{min 0}
 							{max 1}
 						}
 					}
-					{highlight 0xff202020}
+					{## highlight 0xff202020}
 				}
 				{#+ sprite "$/smoke/smoke_g04b"
 					{timer
