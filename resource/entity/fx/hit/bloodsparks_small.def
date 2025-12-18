@@ -30,7 +30,7 @@
 			{stage 
 				{sprite "$/particle/bloodspot03"
 					{scale 1
-						{linear
+						{## linear
 							{min 0.0125 0.0075}
 							{max 0.03 0.01}
 						}
@@ -82,7 +82,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ spriteview splash1
+	{#+ spriteview splash1
 		{sprite "$/particle/bloodsplash01"
 			{timer
 				{mode play }
@@ -108,7 +108,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ spriteview splash2
+	{#+ spriteview splash2
 		{sprite "$/particle/bloodsplash01"
 			{timer
 				{mode play }

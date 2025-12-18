@@ -1,9 +1,9 @@
 {fx
 	{sound "hit/plasma"}
-	{##+ spriteview Woronka
+	{#+ spriteview Woronka
 		{sprite "$/explosion/fire_sled"
 			{visibility 1
-				{linear
+				{## linear
 					{min 1}
 					{max 0}
 				}
@@ -18,7 +18,7 @@
 		{layer grounddynamic}
 		{notifyowner}
 	}
-	{##+ spriteview mark
+	{#+ spriteview mark
 		{sprite "$/explosion/exp_sled"
 			{visibility 1
 				{linear
@@ -37,7 +37,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ particleview dirt
+	{#+ particleview dirt
 		{generator
 			{emissionarea
 				{radius 0}

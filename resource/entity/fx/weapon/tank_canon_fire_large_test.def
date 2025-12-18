@@ -32,7 +32,7 @@
 						{duration -1}
 					}
 					{scale 1
-						{linear
+						{## linear
 							{min 0.1 0.1}
 							{max 0.025 0.025}
 						}
@@ -53,7 +53,7 @@
 			}
 		}
 	}
-	{##+ spriteview central
+	{#+ spriteview central
 		{sprite "$/flash/flash_bc"
 			{light 1
 				{linear
@@ -82,7 +82,7 @@
 		{autovisible}
 		{notifyowner}
 	}
-	{##+ spriteview flash1
+	{#+ spriteview flash1
 		{sprite "$/flash/flash_g03"
 			{timer
 				{mode }
@@ -106,7 +106,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ particleview flash2
+	{#+ particleview flash2
 		{delay 0.1}
 		{generator
 			{emissionarea
@@ -167,7 +167,7 @@
 			}
 		}
 	}
-	{##+ spriteview flash3
+	{#+ spriteview flash3
 		{delay 0.1}
 		{sprite "$/flash/flash_g04"
 			{timer
@@ -209,7 +209,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ spriteview halo2
+	{#+ spriteview halo2
 		{sprite "$/flash/halo01"
 			{timer
 				{mode }
@@ -227,7 +227,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ spriteview "halo2 night"
+	{#+ spriteview "halo2 night"
 		{sprite "$/flash/halo02"
 			{timer
 				{mode }
@@ -342,7 +342,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.05}
 			}
 			{damping 0.93}
@@ -424,7 +424,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.05}
 			}
 			{damping 0.99}
@@ -490,7 +490,7 @@
 			}
 		}
 	}
-	{##+ particleview fire
+	{#+ particleview fire
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -685,7 +685,7 @@
 		{orientation normalYZ}
 		{autovisible}
 	}
-	{##+ particleview explosion
+	{#+ particleview explosion
 		{generator
 			{totalparticles 1}
 			{particlesinblock 1}

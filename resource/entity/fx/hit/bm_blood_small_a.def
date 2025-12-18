@@ -20,7 +20,7 @@
 				{value 0.05}
 			}
 			{damping 0.81}
-			{## collisions
+			{collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -28,7 +28,7 @@
 		}
 		{visualizer
 			{stage 
-				{## flags trace }
+				{flags trace }
 				{#+ sprite "$/particle/blood_splash2"
 					{scale 1
 						{power
@@ -59,7 +59,7 @@
 		}
 		{notifyowner}
 	}	
-	{##+ particleview sparks
+	{#+ particleview sparks
 		{generator
 			{emissionarea
 				{radius 1 1}
@@ -93,7 +93,7 @@
 						{duration -1}
 					}
 					{scalex 1
-						{## linear
+						{linear
 							{min 0.2}
 							{max 0.01}
 						}
@@ -132,7 +132,7 @@
 		}
 		{mover
 			{damping 1}
-			{## gravity
+			{gravity
 				{value 0.01}
 			}
 			{collisions
@@ -161,7 +161,7 @@
 							{max 0.015 0.015}
 						}
 					}
-					{## preturn 0 180}
+					{preturn 0 180}
 					{visibility 1
 						{power
 							{min 1}

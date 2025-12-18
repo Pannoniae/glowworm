@@ -16,7 +16,7 @@
 		}
 		{mover
 			{damping 1}
-			{## gravity
+			{gravity
 				{value 0.01}
 			}
 			{collisions
@@ -35,7 +35,7 @@
 					{highlight 0x61210e}
 					;{highlight 0xffa43d3c}
 					{scalex 1
-						{linear
+						{## linear
 							{min 0.02}
 							{max 0.07 0.03}
 						}
@@ -46,7 +46,7 @@
 							{max 0.5 0.5}
 						}
 					}
-					{## preturn 0 180}
+					{preturn 0 180}
 					{visibility 1
 						{power
 							{min 1}
@@ -55,7 +55,7 @@
 						}
 					}
 				}
-				{## sprite "$/additional/blood1"
+				{sprite "$/additional/blood1"
 					{timer
 						{mode play }
 						{duration -1}

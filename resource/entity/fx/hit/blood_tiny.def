@@ -1,5 +1,6 @@
 {fx
-	{##+ particleview splash
+	{sound "hit/human/bullet/"}
+	{#+ particleview splash
 		{generator
 			{totalparticles 4}
 			{particlesinblock 4}
@@ -19,7 +20,7 @@
 				{value 0.05}
 			}
 			{damping 0.81}
-			{## collisions
+			{collisions
 				{terrain}
 				{restitution 0.4}
 			}
@@ -27,7 +28,7 @@
 		}
 		{visualizer
 			{stage 
-				{## flags trace }
+				{flags trace }
 				{sprite "$/particle/blood_splash"
 					{scale 1
 						{power
@@ -37,7 +38,7 @@
 						}
 					}
 					{visibility 1
-						{linear
+						{## linear
 							{min 1}
 							{max 0}
 						}
@@ -47,8 +48,63 @@
 						{duration -1}
 					}
 					{preturn 0 180}
-					{## highlight 0xff893c39}
+					{highlight 0xff893c39}
 				}
+			}
+		}
+		{notifyowner}
+	}
+	{#+ particleview splash_smoke
+		{generator
+			{totalparticles 8}
+			{particlesinblock 8}
+			{emissionarea
+				{radius 2 2}
+				{alpha0 0}
+				{alpha1 15 15}
+			}
+			{particleinit
+				{speed 2 2}
+				{lifetime 1.5 0.5}
+			}
+			{timetolive 0.1}
+			{axisz}
+		}
+		{mover
+			{gravity
+				{value 0.01}
+			}
+			{damping 0.7}
+			{collisions
+				{terrain}
+				{restitution 0.4}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/smoke/smokesmal4"
+					{scale 1
+						{power
+							{min 0.3}
+							{max 0.35 0.05}
+							{pow 0.8}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.3 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xffd2cabf}
+				}
+				{flags trace }
 			}
 		}
 		{notifyowner}
@@ -87,7 +143,7 @@
 						{duration -1}
 					}
 					{scalex 1
-						{## linear
+						{linear
 							{min 0.2}
 							{max 0.01}
 						}
@@ -126,7 +182,7 @@
 		}
 		{mover
 			{damping 1}
-			{## gravity
+			{gravity
 				{value 0.01}
 			}
 			{collisions
@@ -155,7 +211,7 @@
 							{max 0.01}
 						}
 					}
-					{## preturn 0 180}
+					{preturn 0 180}
 					{visibility 1
 						{power
 							{min 1}
@@ -164,7 +220,7 @@
 						}
 					}
 				}
-				{## sprite "$/additional/blood1"
+				{sprite "$/additional/blood1"
 					{timer
 						{mode play }
 						{duration -1}
@@ -188,5 +244,60 @@
 				}
 			}
 		}
+	}
+	{particleview splash_smoke
+		{generator
+			{totalparticles 10}
+			{particlesinblock 10}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 10 10}
+			}
+			{particleinit
+				{speed 1 1}
+				{lifetime 0.65 0.15}
+			}
+			{timetolive 0.1}
+			{axisz}
+		}
+		{mover
+			{gravity
+				{value 0.01}
+			}
+			{damping 0.9}
+			{collisions
+				{terrain}
+				{restitution 0.4}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/smoke/smokesmal4"
+					{scale 1
+						{power
+							{min 0.3}
+							{max 0.35 0.05}
+							{pow 0.8}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.3 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xffd2cabf}
+				}
+				{flags trace }
+			}
+		}
+		{notifyowner}
 	}
 }

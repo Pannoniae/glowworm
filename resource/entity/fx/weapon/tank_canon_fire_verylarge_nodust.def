@@ -6,7 +6,7 @@
 				{radius 3}
 				{alpha0 3}
 				{alpha1 1}
-				{## psi -100}
+				{psi -100}
 			}
 			{particleinit
 				{speed 18.5 16.5}
@@ -54,7 +54,7 @@
 			}
 		}
 	}
-	{##+ particleview "sparkles right"
+	{#+ particleview "sparkles right"
 		{generator
 			{totalparticles 30}
 			{emissionarea
@@ -194,7 +194,7 @@
 			}
 		}
 	}
-	{##+ spriteview flash3_deactive
+	{#+ spriteview flash3_deactive
 		{delay 0.1}
 		{sprite "$/flash/flash_g04"
 			{timer
@@ -236,7 +236,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ spriteview halo2_deactive
+	{#+ spriteview halo2_deactive
 		{sprite "$/flash/halo01"
 			{timer
 				{mode }
@@ -353,7 +353,7 @@
 			}
 		}
 	}
-	{##+ particleview smoke2_deactive
+	{#+ particleview smoke2_deactive
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -369,7 +369,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.05}
 			}
 			{damping 0.93}
@@ -435,7 +435,7 @@
 			}
 		}
 	}
-	{##+ particleview smoke3_deactive
+	{#+ particleview smoke3_deactive
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -451,7 +451,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.05}
 			}
 			{damping 0.95}
@@ -719,7 +719,7 @@
 			{emissionarea
 				{alpha0 0 3}
 				{alpha1 -5 2}
-				{## psi 90}
+				{psi 90}
 			}
 			{particleinit
 				{speed 10}
@@ -761,7 +761,7 @@
 			}
 		}
 	}
-	{##+ particleview "smoke1 right_deactive"
+	{#+ particleview "smoke1 right_deactive"
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -842,7 +842,7 @@
 			}
 		}
 	}
-	{##+ particleview "smoke1 left_deactive"
+	{#+ particleview "smoke1 left_deactive"
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -923,7 +923,7 @@
 			}
 		}
 	}
-	{##+ particleview "smoke3 right_deactive"
+	{#+ particleview "smoke3 right_deactive"
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -940,7 +940,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.05}
 			}
 			{damping 0.95}
@@ -1006,7 +1006,7 @@
 			}
 		}
 	}
-	{##+ particleview "smoke3 left_deactive"
+	{#+ particleview "smoke3 left_deactive"
 		{generator
 			{totalparticles 15}
 			{emissionarea
@@ -1023,7 +1023,7 @@
 			{timetolive 0.01}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.05}
 			}
 			{damping 0.95}
@@ -1096,7 +1096,7 @@
 				{radius 1 3}
 				{alpha0 0}
 				{alpha1 0}
-				{## psi 90}
+				{psi 90}
 			}
 			{particleinit
 				{speed 25}
@@ -1145,7 +1145,7 @@
 			}
 		}
 	}
-	{##+ particleview "smoke4 left_deactive"
+	{#+ particleview "smoke4 left_deactive"
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -1162,7 +1162,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.01}
 			}
 			{damping 0.98}
@@ -1234,7 +1234,7 @@
 			}
 		}
 	}
-	{##+ particleview "smoke4 right_deactive"
+	{#+ particleview "smoke4 right_deactive"
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -1251,7 +1251,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.01}
 			}
 			{damping 0.98}
@@ -1323,7 +1323,7 @@
 			}
 		}
 	}
-	{##+ particleview dust_deactive
+	{#+ particleview dust_deactive
 		{delay 0.02}
 		{generator
 			{totalparticles 50}
@@ -1422,7 +1422,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview dust
+	{#+ particleview dust
 		{delay 0.02}
 		{generator
 			{totalparticles 60}
@@ -1477,7 +1477,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview dust
+	{#+ particleview dust
 		{delay 0.02}
 		{generator
 			{totalparticles 60}
@@ -1528,7 +1528,7 @@
 						}
 					}
 				}
-				{##+ sprite "$/smoke/smokesmal10"
+				{#+ sprite "$/smoke/smokesmal10"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1583,7 +1583,7 @@
 				{radius 1 3}
 				{alpha0 0}
 				{alpha1 12.5 12.5}
-				{## psi -90}
+				{psi -90}
 			}
 			{particleinit
 				{speed 6.5 5.5}
@@ -1593,7 +1593,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.01}
 			}
 			{damping 0.99}
@@ -1623,11 +1623,11 @@
 						}
 					}
 					{visibility 1
-						{linear
+						{## linear
 							{min 0.1}
 							{max 0}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.2}
 						}
@@ -1643,7 +1643,7 @@
 				{radius 1 3}
 				{alpha0 0}
 				{alpha1 12.5 12.5}
-				{## psi -90}
+				{psi -90}
 			}
 			{particleinit
 				{speed 6.5 5.5}
@@ -1653,7 +1653,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.01}
 			}
 			{damping 0.99}
@@ -1683,11 +1683,11 @@
 						}
 					}
 					{visibility 1
-						{linear
+						{## linear
 							{min 0.45 0.05}
 							{max 0}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.2}
 						}
@@ -1709,7 +1709,7 @@
 				{duration 0.2}
 			}
 			{scalex 1
-				{## linear
+				{linear
 					{min 0.3}
 					{max 1}
 				}
@@ -1724,7 +1724,7 @@
 					{max 1}
 				}
 			}
-			{## preturn 90}
+			{preturn 90}
 		}
 		{orientation trace}
 		{autovisible}
@@ -1737,7 +1737,7 @@
 				{radius 1 3}
 				{alpha0 0}
 				{alpha1 12.5 12.5}
-				{## psi -90}
+				{psi -90}
 			}
 			{particleinit
 				{speed 3 2}
@@ -1747,7 +1747,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.01}
 			}
 			{damping 0.98}
@@ -1777,11 +1777,11 @@
 						}
 					}
 					{visibility 1
-						{linear
+						{## linear
 							{min 0.1}
 							{max 0}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.2}
 						}
@@ -1797,7 +1797,7 @@
 				{radius 1 3}
 				{alpha0 0}
 				{alpha1 12.5 12.5}
-				{## psi -90}
+				{psi -90}
 			}
 			{particleinit
 				{speed 3 2}
@@ -1807,7 +1807,7 @@
 			{timetolive 0.1}
 		}
 		{mover
-			{## gravity
+			{gravity
 				{value -0.01}
 			}
 			{damping 0.98}
@@ -1837,11 +1837,11 @@
 						}
 					}
 					{visibility 1
-						{linear
+						{## linear
 							{min 0.45 0.05}
 							{max 0}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.2}
 						}

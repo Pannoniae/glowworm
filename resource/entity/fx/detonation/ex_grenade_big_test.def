@@ -1,10 +1,10 @@
 {fx
 	{sound "detonation/at_detonation"}
-	{##+ lightview
+	{#+ lightview
 		{type point}
 		{animator
 			{scale 1
-				{linear
+				{## linear
 					{min 1}
 					{max 0.5}
 				}
@@ -26,7 +26,7 @@
 		{effectonground}
 		{offset 0 0 30}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 1}
 			{emissionarea
@@ -55,7 +55,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 4}
 			{emissionarea
@@ -149,7 +149,7 @@
 			{scale 1.25 0.25}
 		}
 	}
-	{##+ spriteview Shok
+	{#+ spriteview Shok
 		{sprite "/texture/fx/_bmp/flash/supershock"
 			{visibility 1
 				{power
@@ -172,7 +172,7 @@
 		}
 		{offset 0 0 10}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 3}
 			{emissionarea
@@ -211,7 +211,7 @@
 		}
 		{offset 0 0 50}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -273,7 +273,7 @@
 		}
 		{offset 0 0 20}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 60}
 			{emissionarea
@@ -365,7 +365,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -423,7 +423,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -500,7 +500,7 @@
 			}
 		}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 60}
 			{emissionarea
@@ -592,7 +592,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview
+	{#+ particleview
 		{generator
 			{totalparticles 0}
 			{emissionarea
@@ -1068,7 +1068,7 @@
 					}
 					{highlight 0xff69563f}
 				}
-				{## sprite "$/smoke/smokesmal9"
+				{sprite "$/smoke/smokesmal9"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1092,7 +1092,7 @@
 							{max 0}
 						}
 					}
-					{## highlight 0xff5f640f}
+					{highlight 0xff5f640f}
 				}
 			}
 		}
@@ -1152,7 +1152,7 @@
 					}
 					{highlight 0xff725d45}
 				}
-				{## sprite "$/smoke/smokesmal9"
+				{sprite "$/smoke/smokesmal9"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1177,7 +1177,7 @@
 						}
 					}
 				}
-				{## sprite "$/smoke/smokesmal9"
+				{sprite "$/smoke/smokesmal9"
 					{timer
 						{mode play }
 						{duration -1}

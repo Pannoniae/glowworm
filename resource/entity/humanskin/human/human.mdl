@@ -20,9 +20,10 @@
 				0	0.0344553	19.9224
 			}
 			{bone revolute "aim_ref_h"
-				{limits -10 10}
+				{limits -50 40}
 				;{limits -45 50}
-				{speed 0.004}
+				; this one is for the TPC aiming!
+				{speed2 720}
 				{Matrix34		; standing
 					0.127994	-0.657619	0.742398
 					-0.048175	0.743549	0.666944
@@ -30,8 +31,8 @@
 					7.61786	-0.828973	1.01826
 				}
 				{bone revolute "aim_ref_v"
-					{limits -20 20}
-					{speed 0.004}
+					{limits -70 70}
+					{speed2 720}
 					{Matrix34
 						1	0	0
 						0	0	1
@@ -337,11 +338,11 @@
 		}
 		{bone revolute "foresight2rot"
 			{limits -20 20}
-			{speed 0.0004}
+			{speed 0.004}
 			{Position 13.7429	0.0246876	27.5947}
 			{bone revolute "foresight2"
 				{limits -10 80}
-				{speed 0.0004}
+				{speed 0.004}
 				{Matrix34
 					1	0	0
 					0	0	1

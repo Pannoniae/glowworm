@@ -3,8 +3,8 @@
 	{#+ lightview
 		{type point}
 		{animator
-			{## scale 1
-				{## linear
+			{scale 1
+				{linear
 					{min 1}
 					{max 0.5}
 				}
@@ -15,11 +15,11 @@
 				}
 			}
 			{visibility 1
-				{##+ linear
+				{## linear
 					{min 1}
 					{max 0}
 				}
-				{##+ power
+				{#+ power
 					{min 1}
 					{max 0}
 					{pow 0.5}
@@ -42,7 +42,7 @@
 		{offset 0 0 50}
 	}
 	{#+ particleview pieces1
-		{## delay 0.07}
+		{delay 0.07}
 		{entitygenerator
 			{totalparticles 7}
 			{emissionarea
@@ -93,7 +93,7 @@
 		{#+ notifyowner}
 	}
 	{#+ particleview pieces2
-		{## delay 0.07}
+		{delay 0.07}
 		{entitygenerator
 			{totalparticles 7}
 			{emissionarea
@@ -113,7 +113,7 @@
 		{#+ notifyowner}
 	}
 	{#+ particleview pieces3
-		{## delay 0.07}
+		{delay 0.07}
 		{entitygenerator
 			{totalparticles 20}
 			{emissionarea
@@ -127,13 +127,13 @@
 			}
 			{axisz}
 			{entity "#metall1"
-				{## fx "smoke_black_small"}
+				{fx "smoke_black_small"}
 			}
 			{entity "#metall2"
-				{## fx "smoke_barrel_small"}
+				{fx "smoke_barrel_small"}
 			}
 			{entity "#metall3"
-				{## fx "smoke_barrel_small"}
+				{fx "smoke_barrel_small"}
 			}
 		}
 		{#+ notifyowner}
@@ -231,7 +231,7 @@
 		{notifyowner}
 	}
 	{#+ particleview sparkles
-		{## delay 0.1}
+		{delay 0.1}
 		{generator
 			{particlesinblock 250}
 			{totalparticles 250}
@@ -262,12 +262,12 @@
 				{sprite "$/particle/oskolki"
 					{scale 0.275 0.175}
 				}
-				{## sprite "$/particle/oskolkim"
+				{sprite "$/particle/oskolkim"
 					{scale 0.225 0.125}
 				}
 			}
 		}
-		{## notifyowner}
+		{notifyowner}
 	}
 	{#+ spriteview shock1
 		{sprite "$/flash/supershock"
@@ -290,11 +290,11 @@
 			}
 			{preturn 90 90}
 		}
-		{## ground}
-		{## layer grounddynamic}
+		{ground}
+		{layer grounddynamic}
 		{offset 0 0 10}
 		{autovisible}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ spriteview shock2
 		{sprite "$/explosion/fire_sled"
@@ -321,7 +321,7 @@
 		{layer grounddynamic}
 		{offset 0 0 5}
 		{autovisible}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview fuzzy
 		{delay 0.05}
@@ -370,7 +370,7 @@
 				}
 			}
 		}
-		{## notifyowner}
+		{notifyowner}
 	}
 	{#+ particleview "fire burst"
 		{delay 0.05}
@@ -428,9 +428,9 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
-	{##+ particleview kaboom
+	{#+ particleview kaboom
 		{#+ generator
 			{particlesinblock 1}
 			{totalparticles 1}
@@ -472,7 +472,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview "smoke gnd"
 		{delay 0.05}
@@ -543,7 +543,7 @@
 				}
 			}
 		}
-		{## notifyowner}
+		{notifyowner}
 	}
 	{#+ particleview "smoke up"
 		{delay 0.15}
@@ -662,7 +662,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ spriteview flash1
 		{sprite "$/flash/flash_g03"
@@ -791,7 +791,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ spriteview halo2
+	{#+ spriteview halo2
 		{sprite "$/flash/halo01"
 			{timer
 				{mode }
@@ -832,7 +832,7 @@
 		{delay 2}
 		{#+ generator
 			{totalparticles 20}
-			{## particlesinblock 20}
+			{particlesinblock 20}
 			{emissionarea
 				{radius 15 15}
 				{alpha0 0}
@@ -858,7 +858,7 @@
 		{visualizer
 			{stage 
 				{sprite "$/particle/pieces2"
-					{##+ turn 1
+					{#+ turn 1
 						{npower
 							{min 10 10}
 							{max 90 90}
@@ -871,7 +871,7 @@
 						{duration -1}
 					}
 				}
-				{##+ sprite "$/particle/pieces"
+				{#+ sprite "$/particle/pieces"
 					{turn 1
 						{npower
 							{min 90 90}
@@ -886,7 +886,7 @@
 					}
 				}
 			}
-			{##+ stage collided dying 
+			{#+ stage collided dying 
 				{flags killparticle ground }
 				{sprite "$/particle/pieces"
 					{visibility 1
@@ -972,7 +972,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview "smoke up"
 		{generator
@@ -998,7 +998,7 @@
 		}
 		{visualizer
 			{stage 
-				{##+ sprite "$/smoke/smoke_g04"
+				{#+ sprite "$/smoke/smoke_g04"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1069,9 +1069,9 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
-	{##+ particleview "smoke around"
+	{#+ particleview "smoke around"
 		{generator
 			{totalparticles 100}
 			{particlesinblock 50}
@@ -1141,7 +1141,7 @@
 						}
 					}
 				}
-				{## sprite "$/smoke/smoke_s01"
+				{sprite "$/smoke/smoke_s01"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1184,7 +1184,7 @@
 						}
 					}
 				}
-				{## sprite "$/smoke/smoke_g04"
+				{sprite "$/smoke/smoke_g04"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1229,7 +1229,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview "explosion up"
 		{generator
@@ -1277,9 +1277,9 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
-	{##+ particleview smoketrails
+	{#+ particleview smoketrails
 		{mover}
 		{entitygenerator
 			{emissionarea
@@ -1494,7 +1494,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview "smoke around"
+	{#+ particleview "smoke around"
 		{generator
 			{totalparticles 100}
 			{particlesinblock 50}
@@ -1548,7 +1548,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview "smoke up"
 		{generator
@@ -1598,26 +1598,26 @@
 							{max 0}
 						}
 					}
-					{##+ redlight 1
+					{#+ redlight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
-					{##+ greenlight 1
+					{#+ greenlight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
-					{##+ bluelight 1
+					{#+ bluelight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
 				}
-				{##+ sprite "$/_bmp/smoke/smokeend_loop"
+				{#+ sprite "$/_bmp/smoke/smokeend_loop"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1645,9 +1645,9 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
-	{##+ particleview explosion
+	{#+ particleview explosion
 		{generator
 			{totalparticles 2}
 			{particlesinblock 2}
@@ -1677,7 +1677,7 @@
 						{duration -1}
 					}
 					{preturn 0 10}
-					{## turn 1
+					{turn 1
 						{linear
 							{min 0}
 							{max 0 100}
@@ -1695,26 +1695,26 @@
 							{max 0}
 						}
 					}
-					{##+ redlight 1
+					{#+ redlight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
-					{##+ greenlight 1
+					{#+ greenlight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
-					{##+ bluelight 1
+					{#+ bluelight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
 				}
-				{##+ sprite "$/_bmp/smoke/smokeend_loop"
+				{#+ sprite "$/_bmp/smoke/smokeend_loop"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1742,9 +1742,9 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
-	{##+ particleview "explosion testings"
+	{#+ particleview "explosion testings"
 		{generator
 			{totalparticles 10}
 			{particlesinblock 10}
@@ -1773,7 +1773,7 @@
 						{mode play }
 						{duration -1}
 					}
-					{## turn 1
+					{turn 1
 						{linear
 							{min 0}
 							{max 0 100}
@@ -1794,7 +1794,7 @@
 					{preturn 0 90}
 					{highlight 0xfffdaf41}
 				}
-				{##+ sprite "$/_bmp/smoke/smokeend_loop"
+				{#+ sprite "$/_bmp/smoke/smokeend_loop"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1822,7 +1822,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview "smoke up"
 		{generator
@@ -1872,26 +1872,26 @@
 							{max 0}
 						}
 					}
-					{##+ redlight 1
+					{#+ redlight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
-					{##+ greenlight 1
+					{#+ greenlight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
-					{##+ bluelight 1
+					{#+ bluelight 1
 						{linear
 							{min 1}
 							{max 0.5}
 						}
 					}
 				}
-				{##+ sprite "$/_bmp/smoke/smokeend_loop"
+				{#+ sprite "$/_bmp/smoke/smokeend_loop"
 					{timer
 						{mode play }
 						{duration -1}
@@ -1919,7 +1919,7 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 	{#+ particleview "explosion test"
 		{generator
@@ -1951,7 +1951,7 @@
 						{duration -1}
 					}
 					{preturn 0 10}
-					{## turn 1
+					{turn 1
 						{linear
 							{min 0}
 							{max 0 100}
@@ -1964,8 +1964,8 @@
 							{pow 0.1}
 						}
 					}
-					{##+ visibility 1
-						{##+ linear
+					{#+ visibility 1
+						{#+ linear
 							{min 0.1}
 							{max 0}
 						}
@@ -1978,7 +1978,7 @@
 					}
 					{highlight 0xfffea652}
 				}
-				{##+ sprite "$/_bmp/smoke/smokeend_loop"
+				{#+ sprite "$/_bmp/smoke/smokeend_loop"
 					{timer
 						{mode play }
 						{duration -1}
@@ -2006,6 +2006,6 @@
 				}
 			}
 		}
-		{##+ notifyowner}
+		{#+ notifyowner}
 	}
 }

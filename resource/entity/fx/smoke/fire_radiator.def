@@ -6,7 +6,7 @@
 		{animator
 			{highlight 0xfffe9939}
 			{visibility 0.875 0.125
-				{## linear
+				{linear
 					{min 0.5}
 					{max 1}
 				}
@@ -16,8 +16,8 @@
 				{duration 0.5}
 			}
 		}
-		{## attenuation0 0.15}
-		{## attenuation1 0.7}
+		{attenuation0 0.15}
+		{attenuation1 0.7}
 		{radius 400}
 		{radiusfalloff 50}
 		{priority 5}
@@ -27,7 +27,7 @@
 		{nightonly}
 		{intensity 3}
 	}
-	{##+ particleview smoke
+	{#+ particleview smoke
 		{generator
 			{totalparticles 40}
 			{emissionarea
@@ -118,7 +118,7 @@
 				{lifetime 7 3}
 			}
 			{particlesinblock 1}
-			{## axisz}
+			{axisz}
 			{timetolive 0}
 		}
 		{mover
@@ -177,8 +177,8 @@
 				{lifetime 3 1}
 			}
 			{particlesinblock 1}
-			{## axisz}
-			{## timetolive 1200}
+			{axisz}
+			{timetolive 1200}
 		}
 		{mover
 			{damping 0.97}
@@ -202,11 +202,11 @@
 						}
 					}
 					{visibility 1
-						{linear
+						{## linear
 							{min 0.5}
 							{max 0}
 						}
-						{## peak
+						{peak
 							{min 0}
 							{max 0.5}
 						}
@@ -216,13 +216,13 @@
 						{mode play }
 						{duration -1}
 					}
-					{## highlight 0xfffbd7c2}
+					{highlight 0xfffbd7c2}
 				}
 			}
 		}
-		{## offset 0 0 -9}
+		{offset 0 0 -9}
 	}
-	{##+ particleview flame1
+	{#+ particleview flame1
 		{generator
 			{totalparticles 5}
 			{emissionarea
@@ -260,7 +260,7 @@
 							{min 0}
 							{max 0.6 0.2}
 						}
-						{##+ linear
+						{## linear
 							{min 0.5}
 							{max 0}
 						}
@@ -278,17 +278,17 @@
 							{max 0.3}
 						}
 					}
-					{## highlight 0xfffd891b}
-					{## preturn -90}
-					{## greenlight 0.3}
-					{## bluelight 0.3}
+					{highlight 0xfffd891b}
+					{preturn -90}
+					{greenlight 0.3}
+					{bluelight 0.3}
 				}
 				{flags trace }
 			}
 		}
-		{## offset 0 0 0}
+		{offset 0 0 0}
 	}
-	{##+ particleview flame2
+	{#+ particleview flame2
 		{generator
 			{totalparticles 20}
 			{emissionarea
@@ -307,7 +307,7 @@
 		}
 		{#+ visualizer
 			{stage 
-				{## sprite "$/explosion/exp01"
+				{sprite "$/explosion/exp01"
 					{turn 1
 						{linear
 							{min 0}
@@ -325,7 +325,7 @@
 						}
 					}
 					{highlight 0xffffad65}
-					{## preturn 80}
+					{preturn 80}
 					{scalex 0.4 0.1}
 					{scaley 0.3 0.1}
 				}
@@ -364,11 +364,11 @@
 						}
 					}
 					{light 1
-						{## peak
+						{peak
 							{min 0}
 							{max 0.2}
 						}
-						{linear
+						{## linear
 							{min 0.4 0.2}
 							{max 0}
 						}
@@ -385,7 +385,7 @@
 						{duration -1}
 					}
 					{visibility 1}
-					{## highlight 0xfffe5c09}
+					{highlight 0xfffe5c09}
 				}
 			}
 		}

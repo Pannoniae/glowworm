@@ -3,7 +3,7 @@
 	{#+ spriteview Woronka
 		{sprite "$/explosion/fire_sled"
 			{visibility 1
-				{linear
+				{## linear
 					{min 1}
 					{max 0}
 				}
@@ -37,7 +37,7 @@
 		{notifyowner}
 		{autovisible}
 	}
-	{##+ particleview dirt
+	{#+ particleview dirt
 		{generator
 			{emissionarea
 				{radius 0}
@@ -153,7 +153,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview splash
+	{#+ particleview splash
 		{generator
 			{emissionarea
 				{radius 0}
@@ -201,7 +201,7 @@
 			}
 		}
 	}
-	{##+ particleview dust
+	{#+ particleview dust
 		{generator
 			{totalparticles 10}
 			{emissionarea
@@ -255,7 +255,7 @@
 		}
 		{notifyowner}
 	}
-	{##+ particleview "smoke up"
+	{#+ particleview "smoke up"
 		{generator
 			{emissionarea
 				{radius 0}
