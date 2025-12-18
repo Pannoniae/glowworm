@@ -3,35 +3,63 @@ import sys
 from pathlib import Path
 
 SCRIPT_PATH = Path(__file__).resolve()
-PREFERRED = {'peak', 'power', 'npower', 'mpower'}
+PRIORITY = {'npower': 4, 'mpower': 3, 'power': 2, 'peak': 1, 'linear': 0}
 
 def fix_visibility_blocks(content: str) -> str:
     lines = content.splitlines(keepends=True)
-    block_re = re.compile(r'^(\s*)\{(#?\+?\s*)(linear|peak|n?power|mpower)\b')
+    block_re = re.compile(r'^(\s*)\{(#?\+?\s*)(linear|peak|npower|mpower|power)\b')
     
-    # Collect interpolation blocks: (line_idx, indent_len, keyword, already_commented)
+    # Collect: (line_idx, indent_len, keyword, is_commented)
     blocks = []
     for i, line in enumerate(lines):
         if m := block_re.match(line):
             blocks.append((i, len(m[1]), m[3], '##' in m[2]))
     
-    # Find linear blocks needing fix
-    to_fix = set()
-    for idx, indent, kw, commented in blocks:
-        if kw == 'linear' and not commented:
-            for idx2, indent2, kw2, _ in blocks:
-                if indent2 == indent and kw2 in PREFERRED and _are_siblings(lines, idx, idx2, indent):
-                    to_fix.add(idx)
-                    break
+    # Group into sibling sets
+    n = len(blocks)
+    assigned = [False] * n
+    sibling_groups = []
     
-    # Apply fixes
-    for i in to_fix:
-        lines[i] = re.sub(r'\{#?\+?\s*linear\b', '{## linear', lines[i], count=1)
+    for i in range(n):
+        if assigned[i]:
+            continue
+        group = {i}
+        assigned[i] = True
+        changed = True
+        while changed:
+            changed = False
+            for j in range(n):
+                if j in group or assigned[j] or blocks[i][1] != blocks[j][1]:
+                    continue
+                if any(_are_siblings(lines, blocks[g][0], blocks[j][0], blocks[i][1]) for g in group):
+                    group.add(j)
+                    assigned[j] = True
+                    changed = True
+        sibling_groups.append(group)
+    
+    # For each group, keep only highest-priority preferred type
+    to_fix = set()
+    for group in sibling_groups:
+        active = [(idx, blocks[idx][2]) for idx in group if not blocks[idx][3]]
+        if len(active) <= 1:
+            continue
+        
+        preferred_active = [(idx, kw) for idx, kw in active if kw != 'linear']
+        if not preferred_active:
+            continue
+        
+        winner_idx = max(preferred_active, key=lambda x: PRIORITY[x[1]])[0]
+        
+        for idx, _ in active:
+            if idx != winner_idx:
+                to_fix.add(blocks[idx][0])
+    
+    for line_idx in to_fix:
+        lines[line_idx] = re.sub(r'\{#?\+?\s*(linear|peak|npower|mpower|power)\b', r'{## \1', lines[line_idx], count=1)
     
     return ''.join(lines)
 
 def _are_siblings(lines: list[str], a: int, b: int, indent: int) -> bool:
-    """True if no line between a and b has indentation < indent (parent boundary)."""
     for i in range(min(a, b) + 1, max(a, b)):
         line = lines[i]
         if line.strip() and (len(line) - len(line.lstrip())) < indent:
