@@ -21,39 +21,39 @@
 		}
 		{load					0			25			50			75}		;// equipment weight (in kg)
 		{movement_limits
-			{Fast		1		10}
-			{Normal		0		0 }
-			{Slow		-1		-1}
+			{Fast 		1		25}
+			{Normal 	0		0 }
+			{Slow 		-1		-1}
 		}
 	}
-	{Damage
-		{"head"		1.4}
-		{"face"		1.4}
-		{"body"		1.0}
-		{"hand1r"	0.85}
-		{"hand2r"	0.7}
-		{"hand1l"	0.85}
-		{"hand2l"	0.7}
-		{"foot1r"	0.85}
-		{"foot2r"	0.7}
-		{"foot1l"	0.85}
-		{"foot2l"	0.7}
-	}
-	{DamageBlast	1.00}
-	{DamageTPC 				;// Third person and direct control
-		{"head"		1.75}
-		{"face"		1.75}
-		{"body"		1.0}
-		{"hand1r"	0.85}
-		{"hand2r"	0.7}
-		{"hand1l"	0.85}
-		{"hand2l"	0.7}
-		{"foot1r"	0.85}
-		{"foot2r"	0.7}
-		{"foot1l"	0.85}
-		{"foot2l"	0.7}
-	}
-	(mod "hardcore"
+	;{Damage
+	;	{"head"		2.0}
+	;	{"face"		2.0}
+	;	{"body"		1.0}
+	;	{"hand1r"	0.85}
+	;	{"hand2r"	0.7}
+	;	{"hand1l"	0.85}
+	;	{"hand2l"	0.7}
+	;	{"foot1r"	0.85}
+	;	{"foot2r"	0.7}
+	;	{"foot1l"	0.85}
+	;	{"foot2l"	0.7}
+	;}
+	;{DamageBlast	1.00}
+	;{DamageTPC 				;// Third person and direct control
+	;	{"head"		2.5}
+	;	{"face"		2.5}
+	;	{"body"		1.0}
+	;	{"hand1r"	0.85}
+	;	{"hand2r"	0.7}
+	;	{"hand1l"	0.85}
+	;	{"hand2l"	0.7}
+	;	{"foot1r"	0.85}
+	;	{"foot2r"	0.7}
+	;	{"foot1l"	0.85}
+	;	{"foot2l"	0.7}
+	;}
+	;(mod "hardcore"
 		{Damage
 			{"head"		3.0}
 			{"face"		3.0}
@@ -81,7 +81,7 @@
 			{"foot1l"	1.5}
 			{"foot2l"	1.2}
 		}
-	)
+	;)
 }
 
 {extender "resources"
@@ -125,7 +125,7 @@
 }
 
 {bone "foresight2"
-	{speed 5}
+	{speed 0.0004}
 }
 
 {Sensor
@@ -154,23 +154,23 @@
 	;// speed S (km/h) animation A (km/h) rotation R (degree/s)
 
 	{Crawl		;// S	A	R
-		{Slow		3.5	6	180 }
-		{Normal		4.5	7	180 }
-		{Fast		6	9	180 }
+		{Slow		3.5	4	60 }
+		{Normal		4.5	5	90 }
+		{Fast		6	6	90 }
 	}
 	{Swim
-		{Slow		2	5	180 }
-		{Normal		3	5	180 }
-		{Fast		5	5	180 }
+		{Slow		2	5	90 }
+		{Normal		3	5	150 }
+		{Fast		5	5	150 }
 	}
 	{Run
-		{Sneak		5	2	360 }	; x 0.85
-		{Spot		6	2	420 }	; x 0.5		// Manual TPC Zoom
-		{Walk		4	1.8 600 }	; x 0.48
-		{Slow		8	8	360 }	; x 1
-		{Normal		13	7	600 }	; x 0.55
-		{Fast		18	6.5 600 }	; x 0.33
-		{Bow		16	6.5	600 }	; x 0.55
+		{Sneak		5	2	90  }	; x 0.85
+		{Spot		6	2	90  }	; x 0.5		// Manual TPC Zoom
+		{Walk		4	1.8 90  }	; x 0.48
+		{Slow		8	8	180 }	; x 1
+		{Normal		12	7	180 }	; x 0.55
+		{Fast		18	6.5 180 }	; x 0.33
+		{Bow		16	6.5	180 }	; x 0.55
 	}
 	{Strafe
 		;//			m  m+v  km/h  speed	animation up 					animation down					; m+v = mask + value for strafe counter
@@ -248,7 +248,7 @@
 	{const "bomb/detect_explosives"	15}		;// detect explosives inside 7 meter radius
 	{const "bomb/detect_grenades"	15}		;// detect grenades inside 5 meter radius
 	{const "bomb/danger_zone"		5}		;// hide if danger is more than "x" meters away, otherwise run away
-	{const "fight/distance"			9.7} 	;// was at 1.5
+	{const "fight/distance"			2.5} 	;// was at 1.5
 	{const "weapon/change_time"		3}		;// disable ai weapon switch for 20 seconds
 
 

@@ -62,8 +62,8 @@
 ("squad_with5types_conquest" side(rus) period(mid) min_stage(1) max_stage(8) name(squad_sapper_con)				c1(sapper_nco_rifle:1) c2(sapper_builder:1) c3(sapper_mine_at:1) c4(sapper_mine_ap:1) c5(sapper_rifle:4))
 ("squad_with9types_conquest" side(rus) period(late) min_stage(9) max_stage(99) name(squad_sapper_44_con)		c1(sapper_nco:1) c2(sapper_senior:1) c3(sapper_smg_pps43:2) c4(sapper_rifle:1) c5(sapper_builder:1) c6(sapper_miner_ap:1) c7(sapper_miner_at:1) c8(sapper_flamer:1) c9(sapper_smg_stick:1))
 
-("squad_with4types_conquest" side(rus) period(mid) min_stage(1) max_stage(99) name(squad_at_rifle_con)			c1(nco:1) c2(antitank_ptrs:1) c3(antitank_1:2) c4(antitank_2:3))
-("squad_with3types_conquest" side(rus) period(mid) min_stage(1) max_stage(99) name(squad_nkvd_at_rifle_con)		c1(nkvd_nco_rifle:1) c2(nkvd_at_rifle:3) c3(nkvd_at_asst:3))
+("squad_with4types_conquest" side(rus) period(mid) min_stage(3) max_stage(99) name(squad_at_rifle_con)			c1(nco:1) c2(antitank_ptrs:1) c3(antitank_1:2) c4(antitank_2:3))
+("squad_with3types_conquest" side(rus) period(mid) min_stage(2) max_stage(99) name(squad_nkvd_at_rifle_con)		c1(nkvd_nco_rifle:1) c2(nkvd_at_rifle:3) c3(nkvd_at_asst:3))
 
 ;1941
 ("squad_with5types_conquest" side(rus) period(mid) min_stage(2) max_stage(99) name(squad_nkvd_rifle_con)		c1(nkvd_nco_rifle:1) c2(nkvd_senior_rifle:1) c3(nkvd_rifle:8) c4(nkvd_mg:1) c5(nkvd_mg_asst:1))
@@ -140,13 +140,13 @@
 ;|________________________________________________|
 
 
-("squad_with2types_conquest" side(rus) period(mid) min_stage(1) max_stage(99) name(single_at)			c1(antitank_1:1) c2(antitank_2:1))
-("squad_with2types_conquest" side(rus) period(mid) min_stage(1) max_stage(99) name(single_at2)			c1(antitank_ptrs:1) c2(antitank_2:1))
+("squad_with2types_conquest" side(rus) period(mid) min_stage(2) max_stage(99) name(single_at)			c1(antitank_1:1) c2(antitank_2:1))
+("squad_with2types_conquest" side(rus) period(mid) min_stage(3) max_stage(99) name(single_at2)			c1(antitank_ptrs:1) c2(antitank_2:1))
 ("squad_with2types_conquest" side(rus) period(late) min_stage(9) max_stage(99) name(single_at_pzs_late_con)	c1(antitank_asst2:1) c2(antitank_5:1))
 ("squad_with2types_conquest" side(rus) period(late) min_stage(10) max_stage(99) name(single_at_late_con)	c1(antitank_3:1) c2(antitank_4:1))
 
 ("squad_with1types_conquest" side(rus) period(mid) min_stage(1) max_stage(99) name(single_medic)		c1(medic:2))
-("squad_with2types_conquest" side(rus) period(mid) min_stage(2) max_stage(99) name(single_riflegrenade)	c1(antitank_3:1) c2(antitank_4:1))
+("squad_with2types_conq_scf" side(rus) period(mid) min_stage(2) max_stage(99) name(single_riflegrenade)	c1(antitank_3:1) c2(antitank_4:1) scf(1.38))
 ("squad_with1types_conquest" side(rus) period(mid) min_stage(2) max_stage(99) name(single_ap_miner)		c1(miner-ap:2))
 ("squad_with1types_conquest" side(rus) period(mid) min_stage(3) max_stage(99) name(single_at_miner)		c1(miner-at:2))
 ("squad_with2types_conquest" side(rus) period(mid) min_stage(4) max_stage(99) name(single_engineer)		c1(engineer_1:1) c2(engineer_2:1))
@@ -228,11 +228,7 @@
 	{cost 190}
 }
 {"57mm_zis2"
-	("vehicle"  side(rus) period(mid) min_stage(4) max_stage(9) cw(1) cp(16) crew(artilleryman:4))
-	{cost 450}
-}
-{"57mm_zis2_late"
-	("vehicle"  side(rus) period(mid) min_stage(6) max_stage(99) cw(1) cp(16) crew(artilleryman:4))
+	("vehicle"  side(rus) period(mid) min_stage(4) max_stage(99) cw(1) cp(16) crew(artilleryman:4))
 	{cost 450}
 }
 {"76mm_bpk76"
@@ -261,10 +257,6 @@
 }
 
 ;HOWITZERS
-{"50mm_krh38_su"
-	("vehicle"  side(rus) period(early) min_stage(1) max_stage(7) cw(1) cp(8) crew(artilleryman:2))
-	{cost 180}
-}
 {"82mm_bm37"
 	("vehicle"  side(rus) period(mid) min_stage(1) max_stage(99) cw(1) cp(8) crew(artilleryman:2))
 	{cost 250}
@@ -276,10 +268,6 @@
 {"76mm_m1927"
 	("vehicle"  side(rus) period(mid) min_stage(1) max_stage(6) cw(1) cp(10) crew(artilleryman:4))
 	{cost 340}
-}
-{"76mm_m1927_late"
-	("vehicle"  side(rus) period(mid) min_stage(5) max_stage(8) cw(1) cp(10) crew(artilleryman:4))
-	{cost 400}
 }
 {"76mm_m43"
 	("vehicle"  side(rus) period(mid) min_stage(6) max_stage(99) cw(1) cp(10) crew(artilleryman:4))
@@ -418,29 +406,9 @@
 	("vehicle2" side(rus) period(mid) min_stage(7) max_stage(99) cw(2) cp(4) crew1(tankman:1) crew2(tank_commander:1))
 	{cost 150}
 }
-{"ba64_dshk"
-	("vehicle2" side(rus) period(mid) min_stage(7) max_stage(99) cw(2) cp(1) crew1(tankman:1) crew2(tank_commander:1))
-	{cost 220}
-}
-{"ba64_ptrs"
-	("vehicle2" side(rus) period(mid) min_stage(7) max_stage(99) cw(2) cp(1) crew1(tankman:1) crew2(tank_commander:1))
-	{cost 200}
-}
-{"ba64_sg_43"
-	("vehicle2" side(rus) period(mid) min_stage(7) max_stage(99) cw(2) cp(1) crew1(tankman:1) crew2(tank_commander:1))
-	{cost 170}
-}
 {"universal_carrier_rus"
 	("vehicle2" side(rus) period(mid) min_stage(2) max_stage(99) cw(2) cp(3) crew1(rifleman_1:2) crew2(tank_commander:1))
 	{cost 160}
-}
-{"bren_carrier_rus"
-	("vehicle2" side(rus) period(early) min_stage(3) max_stage(6) cw(2) cp(2) crew1(tankman_b:1) crew2(tank_commander:1))
-	{cost 100}
-}
-{"dshk_carrier_rus"
-	("vehicle2" side(rus) period(late) min_stage(7) max_stage(99) cw(2) cp(3) crew1(rifleman_1:2) crew2(tank_commander_ssh:1))
-	{cost 185}
 }
 {"mmg_carrier_rus"
 	("vehicle2" side(rus) period(mid) min_stage(2) max_stage(99) cw(2) cp(3) crew1(rifleman_1:2) crew2(tank_commander:1))
@@ -450,22 +418,7 @@
 	("vehicle"  side(rus) period(mid) min_stage(2) max_stage(99) cw(2) cp(4) crew(rifleman_1:2))
 	{cost 200}
 }
-{"m3a1e1_scout"
-	("vehicle"  side(rus) period(mid) min_stage(5) max_stage(99) cw(1) cp(2) crew(mg_crew:1))
-	{cost 30}
-}
-{"stalinetz60"
-	("vehicle"  side(rus) period(early) min_stage(1) max_stage(99) cw(1) cp(2) crew(tankman:1))
-	{cost 10}
-}
-{"gaz98"
-	("vehicle2"  side(rus) period(mid) min_stage(1) max_stage(99) cw(1) cp(0) crew1(tankman:1) crew2(tank_commander:1))
-	{cost 40}
-}
-{"nkl26"
-	("vehicle2"  side(rus) period(mid) min_stage(1) max_stage(99) cw(1) cp(0) crew1(tankman:1) crew2(tank_commander:1))
-	{cost 70}
-}
+
 
 ;_________________________________________________
 ;|        Main Battle Tanks and SPGs              |
@@ -480,11 +433,6 @@
 {"t37a"
 	("vehicle2" side(rus) period(mid) min_stage(1) max_stage(2) cw(4) cp(6) crew1(tankman:1) crew2(tank_commander:1))
 	{cost 120}
-}
-
-{"t37a_shkas"
-	("vehicle2" side(rus) period(early) min_stage(1) max_stage(2) cw(4) cp(6) crew1(tankman:1) crew2(tank_commander:1))
-	{cost 160}
 }
 {"t40"
 	("vehicle2" side(rus) period(mid) min_stage(2) max_stage(3) cw(4) cp(12) crew1(tankman:1) crew2(tank_commander:1))
@@ -544,10 +492,6 @@
 }
 {"t26_33"
 	("vehicle2" side(rus) period(mid) min_stage(2) max_stage(3) cw(4) cp(17) crew1(tankman:2) crew2(tank_commander:1))
-	{cost 250}
-}
-{"t26_38"
-	("vehicle2" side(rus) period(early) min_stage(2) max_stage(3) cw(4) cp(17) crew1(tankman:2) crew2(tank_commander:1))
 	{cost 250}
 }
 {"t26_39"
@@ -776,10 +720,6 @@
 }
 {"isu152"
 	("vehicle2" side(rus) period(mid) min_stage(12) max_stage(99) cw(8) cp(45) crew1(tankman:4) crew2(tank_commander:1))
-	{cost 1250}
-}
-{"su100y"
-	("vehicle2" side(rus) period(early) min_stage(4) max_stage(6) cw(8) cp(45) crew1(tankman:5) crew2(tank_commander:1))
 	{cost 1250}
 }
 {"conquest_blank"

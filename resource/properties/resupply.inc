@@ -75,7 +75,6 @@
 ;// rifle
 	{item "atrifle_rus"				"ammo" 5  {value 5}}
 	{item "rifle_rus" "clip"		"ammo" 10 {value 1}}
-	{item "6mm_arisaka"				"ammo" 10 {value 1}}
 	{item "rifle_rus" "svt"			"ammo" 10 {value 1}}
 	{item "shotgun"					"ammo" 10 {value 1}}
 
@@ -535,16 +534,16 @@
 	{item "bullet_20x138b_auto" "fin" "ap"	"ammo" 20 {value 5}}
 	{item "bullet_20x138b_auto" "fin" "he"	"ammo" 20 {value 5}}
 
-	{item "bullet25_fra" 		"ap" 		"ammo" 5  {value 5}}
-	{item "bullet25_fra" 		"he" 		"ammo" 5  {value 5}}
+	;{item "bullet25_fra" 		"ap" 		"ammo" 5  {value 5}}
+	;{item "bullet25_fra" 		"he" 		"ammo" 5  {value 5}}
 	{item "bullet_40x331_auto" "fin" "apbc"	"ammo" 10 {value 5}}
 	{item "bullet_40x331_auto" "fin" "he"	"ammo" 10 {value 5}}
 
 	{item "bullet_37x94" "fin" "aphe"		"ammo" 2 {value 5}}
 	{item "bullet_37x94" "fin" "he"			"ammo" 2 {value 5}}
-	{item "bulletfin_45"  "aphe"		"ammo" 2 {value 5}}
-	{item "bulletfin_45"  "he2"			"ammo" 2 {value 5}}
-	{item "bulletfin_45"  "apc"			"ammo" 2 {value 5}}
+	;{item "bulletfin_45"  "aphe"		"ammo" 2 {value 5}}
+	;{item "bulletfin_45"  "he2"			"ammo" 2 {value 5}}
+	;{item "bulletfin_45"  "apc"			"ammo" 2 {value 5}}
 	{item "bullet_37x257" "fin" "ap"		"ammo" 2 {value 5}}
 	{item "bullet_37x257" "fin" "he"		"ammo" 2 {value 5}}
 
