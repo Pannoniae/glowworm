@@ -3,44 +3,40 @@ import sys
 from pathlib import Path
 
 SCRIPT_PATH = Path(__file__).resolve()
+PREFERRED = {'peak', 'power', 'npower', 'mpower'}
 
 def fix_visibility_blocks(content: str) -> str:
-    """Comment out {linear when it coexists with a preferred interpolation sibling."""
+    lines = content.splitlines(keepends=True)
+    block_re = re.compile(r'^(\s*)\{(#?\+?\s*)(linear|peak|n?power|mpower)\b')
     
-    def find_block_end(s: str, start: int) -> int:
-        """Find matching closing brace from start position (after opening brace)."""
-        depth = 1
-        i = start
-        while i < len(s) and depth > 0:
-            if s[i] == '{': depth += 1
-            elif s[i] == '}': depth -= 1
-            i += 1
-        return i
+    # Collect interpolation blocks: (line_idx, indent_len, keyword, already_commented)
+    blocks = []
+    for i, line in enumerate(lines):
+        if m := block_re.match(line):
+            blocks.append((i, len(m[1]), m[3], '##' in m[2]))
     
-    result = []
-    i = 0
+    # Find linear blocks needing fix
+    to_fix = set()
+    for idx, indent, kw, commented in blocks:
+        if kw == 'linear' and not commented:
+            for idx2, indent2, kw2, _ in blocks:
+                if indent2 == indent and kw2 in PREFERRED and _are_siblings(lines, idx, idx2, indent):
+                    to_fix.add(idx)
+                    break
     
-    while i < len(content):
-        match = re.match(r'\{\w+\b', content[i:])
-        if match:
-            block_start = i
-            inner_start = i + match.end()
-            block_end = find_block_end(content, inner_start)
-            block = content[block_start:block_end]
-            
-            has_linear = re.search(r'\{#?\+?\s*linear\b', block) and not re.search(r'\{##\s*linear\b', block)
-            has_preferred = re.search(r'\{#?\+?\s*(peak|n?power|mpower)\b', block)
-            
-            if has_linear and has_preferred:
-                block = re.sub(r'\{#?\+?\s*linear\b', '{## linear', block, count=1)
-            
-            result.append(block)
-            i = block_end
-        else:
-            result.append(content[i])
-            i += 1
+    # Apply fixes
+    for i in to_fix:
+        lines[i] = re.sub(r'\{#?\+?\s*linear\b', '{## linear', lines[i], count=1)
     
-    return ''.join(result)
+    return ''.join(lines)
+
+def _are_siblings(lines: list[str], a: int, b: int, indent: int) -> bool:
+    """True if no line between a and b has indentation < indent (parent boundary)."""
+    for i in range(min(a, b) + 1, max(a, b)):
+        line = lines[i]
+        if line.strip() and (len(line) - len(line.lstrip())) < indent:
+            return False
+    return True
 
 def main():
     dry_run = '--dry-run' in sys.argv
