@@ -1,0 +1,34 @@
+;_________________________________________
+; UK tank gun
+;=========================================
+
+
+{from "76mm_qf17"		; L/55 "achilles"
+	{fireSoundclose "cannon/s2/1p/Shared/"}
+	{reloadSound "tank/1p/medium_long/"}
+	
+	("range_250")
+	
+	("penetration_long" shell(ap) range(250) a(161) b(149) c(132) d(114) e(98))		; AP shot MK.III - VI
+	("penetration_long" shell(apc) range(250) a(173) b(152) c(129) d(109) e(92))		; APC shot MK.IV
+	("penetration_long" shell(apcbc) range(250) a(176) b(165) c(151) d(139) e(127))		; APCBC shot MK.VII
+	;("penetration_long" shell(apds) range(250) a(248) b(230) c(210) d(192) e(175))		; APDS shot MK.I; reduction in pen due to yaw issues
+
+	("penetration_long" shell(apds) range(250) a(275) b(256) c(233) d(213) e(194))	; APDS shot MK.I, ideal penetration
+
+	{parameters "he2" ;HE/HC reduced
+		("velocity" mps(550))
+		{range 240 240}
+	}
+
+	("accuracy_direct" r1(0.60) range_ap(250) range_he(240) range_heat(240))
+
+	{parameters "apds"	;// custom accuracy for 17pdr APDS as it had big issues With accuracy due to sabot separation and yawing
+		{spreading
+			;{radiusTable {0 0} {50 1.25} {100 1.75} {140 2.75} {209.99 4.75} {260 10}}
+			{radiusTable {0 0} {50 0.75} {100 1.25} {140 1.75} {249.99 3.25} {260 10}}
+		}
+	}
+
+	("reload time" seconds(7.5))
+}

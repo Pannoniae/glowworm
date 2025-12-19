@@ -158,8 +158,8 @@
 	{ai_in_manual}
 	("accuracy_by_motion"
 		max_linear(10) accuracy_by_linear(0.6)				;// aim accuracy on actor movement
-		max_angular(15) accuracy_by_angular(0.6)			;// aim accuracy on aim movement
-		disorder_time(0.5) order_time(1.0)
+		max_angular(20) accuracy_by_angular(0.75)			;// aim accuracy on aim movement
+		disorder_time(0.35) order_time(1.0)
 	)
 )
 

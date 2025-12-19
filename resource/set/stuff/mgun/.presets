@@ -3,26 +3,38 @@
 ;/*=========================*/
 
 (define "burst_short"
+	;{burst
+	;	{short 3 1}			;// short burst shots on long distance, rand (+-)shots
+	;	{long 8 2}				;// long burst shots on short distance, rand (+-)shots
+	;	{rangeKoef 0.5}			;// rangeKoef * aimRange = max long burst distance
+	;}
 	{burst
-		{short 3 1}			;// short burst shots on long distance, rand (+-)shots
-		{long 8 2}				;// long burst shots on short distance, rand (+-)shots
-		{rangeKoef 0.5}			;// rangeKoef * aimRange = max long burst distance
-	}
+		{short 3 0.1}
+		{long 5 1}
+	}	
 )
 
 (define "burst_medium"
+	;{burst
+	;	{short 4 1}
+	;	{long 10 3}
+	;	{rangeKoef 0.5}
+	;}
 	{burst
-		{short 4 1}
-		{long 10 3}
-		{rangeKoef 0.5}
+		{short 4 0.1}
+		{long 7 1}
 	}
 )
 
 (define "burst_long"
+	;{burst
+	;	{short 5 1}
+	;	{long 12 3}
+	;	{rangeKoef 0.5}
+	;}
 	{burst
-		{short 5 1}
-		{long 12 3}
-		{rangeKoef 0.5}
+		{short 5 0.1}
+		{long 10 1}
 	}
 )
 
@@ -53,8 +65,11 @@
 ;/*=========================*/
 
 (define "spreading_mounted_low"
-	{spreading
-		{BurstAccuracy 100 98 95 93 90 88 85 83 80 78 }
+	;{spreading
+	;	{BurstAccuracy 100 98 95 93 90 88 85 83 80 78 }
+	;}
+	{Spreading
+		{BurstAccuracy 100 97 94 91 88 85 82 75 70 50 30}
 	}
 )
 
@@ -62,37 +77,53 @@
 	{spreading
 		{BurstAccuracy 100 97 93 88 83 78 72 67	62 57}
 	}
+	{Spreading
+		{BurstAccuracy 100 97 94 91 88 85 82 75 70 60 40 20}
+	}
 )
 
 (define "spreading_low"
-	{spreading
-		{BurstAccuracy 100 98 94 88 83 76 72 67 61 56 50 45 40 35 30}
+	;{spreading
+	;	{BurstAccuracy 100 98 94 88 83 76 72 67 61 56 50 45 40 35 30}
+	;}
+	{Spreading
+		{BurstAccuracy 100 95 90 85 80 75 70 65 60 55 45 35 15}
 	}
 )
 
 (define "spreading_medium"
-	{spreading 
-		{BurstAccuracy 100 95 90 84 78 70 64 60 55 50 45 40 35 30}
+	;{spreading 
+	;	{BurstAccuracy 100 95 90 84 78 70 64 60 55 50 45 40 35 30}
+	;}
+	{Spreading
+		{BurstAccuracy 100 96.5 93 89.5 86 82.5 79 70 50 30 10}
 	}
 )
 
 (define "spreading_high"
-	{spreading 
-		{BurstAccuracy 100 90 80 70 60 55 50 45 40 35 30}
+	;{spreading 
+	;	{BurstAccuracy 100 90 80 70 60 55 50 45 40 35 30}
+	;}
+	{Spreading
+		{BurstAccuracy 100 95 90 85 80 70 55 40 10}
 	}
 )
 (define "spreading_dp"
 	{spreading
-		{BurstRecoveryTime 0.3}
+		{BurstRecoveryTime 1}
 		;{BurstAccuracy 100 96 91 86 81 75 70 64 58 52 46}
 		{BurstAccuracy 100 97 93 89 85 81 76 70 64 58 52 46 40}
 	}
 )
 (define "spreading_mg42"
-	{spreading 
-		{BurstRecoveryTime 0.25}
-		;{BurstAccuracy 100 94 88 82 72 62 52 42 35 30}
-		{BurstAccuracy 100 98 93 88 83 78 72 70 64 58 52 46 40}
+	;{spreading 
+	;	{BurstRecoveryTime 0.25}
+	;	;{BurstAccuracy 100 94 88 82 72 62 52 42 35 30}
+	;	{BurstAccuracy 100 98 93 88 83 78 72 70 64 58 52 46 40}
+	;}
+	{Spreading 1
+		{BurstRecoveryTime 1}
+		{BurstAccuracy 100 96 92 88 84 80 75 70 50 30 10}
 	}
 )
 ;/*=========================*/

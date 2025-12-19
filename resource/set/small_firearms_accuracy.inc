@@ -22,54 +22,94 @@
 ;/*----------------------*/
 
 	(define "accuracy_pistol"
-		("pistol_range"  r1(0.4) r2(1.0) globalaccuracy(1.00)) ;Robz  r1(0.20) r2(0.80) r3(2.50)
+		;("pistol_range"  r1(0.2) r2(0.8) globalaccuracy(1.00)) ;Robz  r1(0.20) r2(0.80) r3(2.50)
+		{spreading 
+			{radiusTable {0 0} {10 0.2} {40 0.8} {70 2.6}}
+		}
 	)
 
 ;/*----------------------*/
 
 	(define "accuracy_smg"
-		("smg_range"  r1(0.9) r2(2.2) globalaccuracy(1.00)) ;Robz r1(0.33) r2(1.65) r3(3.85)
+		;("smg_range"  r1(0.9) r2(2.2) globalaccuracy(1.00)) ;Robz r1(0.33) r2(1.65) r3(3.85)
+		{spreading
+			{radiusTable {0 0} {10 0.33} {40 1.7} {80 3.85}}
+		}
 	)
 
 ;/*----------------------*/
 
 	(define "accuracy_rifle"
-		("rifle_range"	r0(0.3) r1(0.4) r2(0.8) r3(1.00) globalaccuracy(1.00))	;Robz r1(0.35) r2(0.60) r3(1.25) r4(1.75) r5(2.25)
+		;("rifle_range"	r0(0.3) r1(0.4) r2(0.8) r3(1.00) globalaccuracy(1.00))	;Robz r1(0.35) r2(0.60) r3(1.25) r4(1.75) r5(2.25)
+		{spreading
+			{radiusTable {0 0} {10 0.35} {40 0.60} {70 1.25} {100 1.75} {130 2.25}}
+		}
 	)
 	(define "accuracy_rifle_sniper"
-		("sniper_range" r0(0.25) r1(0.3) r2(0.6) r3(0.75) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.45) r3(1.15) r4(1.55) r5(1.85)
+		;("sniper_range" r0(0.25) r1(0.3) r2(0.6) r3(0.75) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.45) r3(1.15) r4(1.55) r5(1.85)
+		{spreading
+			{radiusTable {0 0} {10 0.30} {40 0.45} {70 1.15} {100 1.55} {150 1.85}}
+		}
 	)
 	(define "accuracy_rifle_auto"
-		("rifle_range"	r0(0.3) r1(0.5) r2(1.0) r3(1.50) globalaccuracy(1.00))	;Robz r1(0.40) r2(0.70) r3(1.50) r4(2.00) r5(2.50)
+		;("rifle_range"	r0(0.3) r1(0.5) r2(1.0) r3(1.50) globalaccuracy(1.00))	;Robz r1(0.40) r2(0.70) r3(1.50) r4(2.00) r5(2.50)
+		{spreading
+			{radiusTable {0 0} {10 0.40} {40 0.70} {70 1.50} {100 2.00} {130 2.50}}
+		}
 	)
 	(define "accuracy_rifle_auto_sniper"
-		("sniper_range" r0(0.3) r1(0.4) r2(0.7) r3(0.90) globalaccuracy(1.00))	;Robz r1(0.45) r2(0.60) r3(1.25) r4(1.70) r5(2.00)
+		;("sniper_range" r0(0.3) r1(0.4) r2(0.7) r3(0.90) globalaccuracy(1.00))	;Robz r1(0.45) r2(0.60) r3(1.25) r4(1.70) r5(2.00)
+		{spreading
+			{radiusTable {0 0} {10 0.45} {40 0.60} {70 1.25} {100 1.70} {150 2.00}}
+		}
 	)
 	(define "accuracy_battle_rifle"
-		("rifle_range"	r0(0.3) r1(0.6) r2(1.2) r3(1.80) globalaccuracy(1.00))	;Robz NONE
+		;("rifle_range"	r0(0.3) r1(0.6) r2(1.2) r3(1.80) globalaccuracy(1.00))	;Robz NONE
+		{spreading
+			{radiusTable {0 0} {10 0.40} {40 0.65} {70 1.3} {100 1.8} {130 2.33}}
+		}
 	)
 	(define "accuracy_assault_rifle"
-		("rifle_range"	r0(0.3) r1(0.6) r2(1.25) r3(2.00) globalaccuracy(1.00))	;Robz r1(0.825) r2(1.10) r3(2.20) r4(3.50) r5(4.00)
+		;("rifle_range"	r0(0.3) r1(0.6) r2(1.25) r3(2.00) globalaccuracy(1.00))	;Robz r1(0.825) r2(1.10) r3(2.20) r4(3.50) r5(4.00)
+		{spreading
+			{radiusTable {0 0} {10 0.825} {40 1.10} {70 2.20} {100 3.50} {130 4.00}}
+		}
 	)
 	(define "accuracy_shotgun"
-		("rifle_range"	r0(0.1) r1(0.3) r2(1.0) r3(1.25) globalaccuracy(1.00))	;Robz NONE
+		;("rifle_range"	r0(0.1) r1(0.3) r2(1.0) r3(1.25) globalaccuracy(1.00))	;Robz NONE
+		("rifle_range"	r0(0.1) r1(0.3) r2(1.0) r3(1.25) globalaccuracy(1.40))	;Robz NONE
 	)
 	(define "accuracy_rifle_at"
-		("rifle_range"	r0(0.4) r1(0.8) r2(1.2) r3(1.50) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.60) r3(1.20) r4(1.90)
+		;("rifle_range"	r0(0.4) r1(0.8) r2(1.2) r3(1.50) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.60) r3(1.20) r4(1.90)
+		{spreading
+			{radiusTable {0 0} {10 0.30} {40 0.60} {70 1.20} {100 3.50} {130 1.90}}
+		}
 	)
 
 ;/*----------------------*/
 	(define "accuracy_mg_high"
-		("mg_range" r1(0.3) r2(1.0) r3(1.2) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.90) r5(4.0) r6(5.0)) 
+		;("mg_range" r1(0.3) r2(1.0) r3(1.2) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.90) r5(4.0) r6(5.0)) 
+		{spreading
+			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 3.4} {150 4.0}}
+		}
 	)
 	(define "accuracy_mg"
-		("mg_range" r1(0.5) r2(1.3) r3(1.5) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.95) r5(4.5) r6(6.0)) 
+		;("mg_range" r1(0.5) r2(1.3) r3(1.5) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.95) r5(4.5) r6(6.0))
+		{spreading
+			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 4.0} {150 5.0}}
+		}
 	)
 	(define "accuracy_hmg"
 		("hmg_range" r1(0.5) r2(1.3) r3(1.5) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.90) r3(1.74) r4(2.76) r5(3.5) r6(4.8))	
+		{spreading
+			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 3.4} {150 4.0}}
+		}
 	)
 	(define "accuracy_hmg_tank"
 		("hmg_range" r1(0.4) r2(1.2) r3(1.4) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.85) r5(3.5) r6(4.5)) 
+		{spreading
+			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 3.25} {150 3.6}}
+		}
 	)
 
 	(define "accuracy_mg_plane"
