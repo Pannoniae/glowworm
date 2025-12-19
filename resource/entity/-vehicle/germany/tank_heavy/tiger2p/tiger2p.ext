@@ -12,15 +12,13 @@
 	("shield" args "shieldL3" 5)
 	("shield" args "shieldL4" 5)
 	("shield" args "shieldL5" 5)
-	("shield" args "shieldL6" 5)
 	("shield" args "shieldR1" 5)
 	("shield" args "shieldR2" 5)
 	("shield" args "shieldR3" 5)
 	("shield" args "shieldR4" 5)
 	("shield" args "shieldR5" 5)
-	("shield" args "shieldR6" 5)
 
-	("tracks" repair(40) thickness(30))
+	("tracks" repair(30) thickness(30))
 	("gun" repair(30) thickness(30))
 
 	("ammo" args "ammo1")
@@ -39,7 +37,7 @@
 			{rear 25}
 			{bottom 25}
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 	}
 	{volume "body2"			; Superstructure
 		{thickness 80
@@ -48,7 +46,7 @@
 			{rear 25}
 			{bottom 25}		; Overhang (above tracks)
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 	}
 	{volume "engine1"		; Hull
 		{thickness 80
@@ -65,7 +63,7 @@
 			{rear 80}
 			{bottom 25}		; Overhang (above tracks)
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 	}
 	{volume "turret1"		; Main Turret
 		{thickness 80
@@ -73,7 +71,7 @@
 			{top 40}
 			{bottom 25}
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 	}
 	{volume "turret2"		; Turret Ring
 		{thickness 80
@@ -81,18 +79,18 @@
 			{top 25}
 			{bottom 25}
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 	}
 	{volume "turret3"		; Buldge for Cupola
 		{thickness 80
 			{top 40}
 			{bottom 25}
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 	}
 	{volume "mantlet"
 		{thickness 120}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 		{CastSteel 0.8063}
 	}
 	{volume "cupola"
@@ -100,12 +98,12 @@
 			{top 40}
 			{bottom 25}
 		}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 		{CastSteel 0.8063}
 	}
 	{volume "mg_port"
 		{thickness 150}
-		{Quality "large_flaw"}
+		;{Quality "large_flaw"}
 		{CastSteel 0.8063}
 		{component "body"}
 	}
@@ -115,10 +113,8 @@
 	{component "shieldl3" {tags "cut_part"}}
 	{component "shieldl4" {tags "cut_part"}}
 	{component "shieldl5" {tags "cut_part"}}
-	{component "shieldl6" {tags "cut_part"}}
 	{component "shieldr1" {tags "cut_part"}}
 	{component "shieldr2" {tags "cut_part"}}
 	{component "shieldr3" {tags "cut_part"}}
 	{component "shieldr4" {tags "cut_part"}}
 	{component "shieldr5" {tags "cut_part"}}
-	{component "shieldr6" {tags "cut_part"}}

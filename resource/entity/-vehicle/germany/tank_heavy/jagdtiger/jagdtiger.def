@@ -69,11 +69,11 @@
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "128mm_pak80" filling "bulletger_128 apcbche" 1}
+			{weapon "128mm_pak44" filling "bulletger_128 apcbche" 1}
 			{gunner "gunner"}
 			{charger "charger"}
-			("abm_dymamic_gun"
-				zeroing(4.0)
+			("abm_dymamic_stabilised"
+				zeroing(3.0)
 				dispersion(0.20)
 			)
 		}
@@ -117,16 +117,16 @@
 
 	{bone "gun_rot"
 		{limits -7 15}
-		{speed2 2}
+		{speed2 0.8}
 	}
 	{bone "turret"
 		{limits -10 10}
-		{speed2 3.5}
+		{speed2 1.75}
 	}
 	{bone "mgun_a_rot1"
-		{speed2 60}
+		{speed2 36.0}
 	}
 	{bone "mgun_a_rot2"
-		{speed2 60}
+		{speed2 36.0}
 	}
 }

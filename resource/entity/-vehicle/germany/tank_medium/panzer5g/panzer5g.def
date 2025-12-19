@@ -57,7 +57,8 @@
 		{box
 			{item "bulletger_75_l70 apcbche" 40} 	; 82 rounds
 			{item "bulletger_75_l70 he" 41}
-			{item "ammo mgun_ger belt" 4500}		; 32 belts (150 rounds each)
+			{item "bulletger_75_l70 apcr" 3}
+			{item "ammo mgun_ger belt" 5100}		; 32 belts (150 rounds each)
 			{item "mg34_drum" filled {user "mgun"}}
 			{item "geballteladung_3kg" 1}
 			{item "nbks grenade" 6}
@@ -84,6 +85,7 @@
 			{charger "charger"}
 			("abm_mgun")
 			{basic}
+			{ai_in_manual}
 		}
 		{place "mgun1"
 			{type "hull"}
@@ -125,7 +127,7 @@
 
 	{bone "gun_rot"
 		{limits -8 18}
-		{speed2 4}
+		{speed2 2.0}
 	}
 	{bone "turret"
 		("turret_medium" power_traverse(20))
