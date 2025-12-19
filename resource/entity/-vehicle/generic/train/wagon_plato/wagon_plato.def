@@ -1,0 +1,68 @@
+{game_entity
+	(include "/properties/railway.ext")
+	
+	{mass 10000}
+	{props "platform" "train_part" "no_minimap_view"}
+
+	{Placer
+		{place "vehicle"
+			{Linkbone "attach_vehicle"}
+			{handlebone "basis"}
+			{attach}
+		}
+	}
+
+	{Extension "wagon_plato.mdl"}
+
+	("wheel" args "wheel_front")
+	("wheel" args "wheel_back")
+
+	{Volume "body1"
+		{thickness 30}
+	}
+	{volume "body2"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body3"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body4"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body5"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body6"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body7"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body8"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body9"
+		{thickness 5}
+		{material "wood"}
+	}
+	{Volume "wheel_front1"
+		{thickness 30}
+	}
+	{Volume "wheel_front2"
+		{thickness 30}
+	}
+	{Volume "wheel_back1"
+		{thickness 30}
+	}
+	{Volume "wheel_back2"
+		{thickness 30}
+	}
+	{component "body"}
+}

@@ -1,0 +1,188 @@
+;Exported by:	 guita
+;Date:			 08.10.2025 20:08:05
+;File:			 G:\SVN\Working Resources\GatesOfHell\GoH_3d_vehicle_eng\vehicles\trailer\M10_trailer\ammo_trailer_eng_xx.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.3;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{matrix34
+				0.9994 	 0 	 0.0349
+				0 	 1 	 0
+				-0.0349 	 0 	 0.9994
+				0 	 0 	 9.7751
+			}
+			{VolumeView "body.ply"}
+			{bone "part3"
+				{parameters "id=part3;"}
+				{matrix34
+					0.9962 	 0 	 0.0872
+					0 	 1 	 0
+					-0.0872 	 0 	 0.9962
+					-44.9004 	 0.5904 	 5.2982
+				}
+				{VolumeView "part3.ply"}
+			}
+			{bone "part2"
+				{parameters "id=part2;"}
+				{matrix34
+					-1 	 0 	 0.0058
+					0 	 1 	 0
+					-0.0058 	 0 	 -1
+					15.5656 	 0.0042 	 4.1845
+				}
+				{VolumeView "part2.ply"}
+			}
+			{bone "part1"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					12.8747 	 16.0434 	 15.5789
+				}
+				{VolumeView "part1.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0 	 0 	 9.7751}
+			{bone prizmatic "suspension_r1"
+				{limits -0.04 0.04}
+				{speed 0.15}
+				{Position 0 	 -20.039 	 0}
+				{bone revolute "wheelr"
+					{parameters "id=wheelright;radius=0.3;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr.ply"}
+				}
+			}
+			{bone prizmatic "suspension_l1"
+				{limits -0.04 0.04}
+				{speed 0.15}
+				{Position 0 	 20.0361 	 0}
+				{bone revolute "wheell"
+					{parameters "id=wheelleft;radius=0.3;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell.ply"}
+				}
+			}
+		}
+	}
+}
+{obstacle "obstacle"
+	{polygon2
+		{radius 0}
+		{vertex 9.7441 -21.0921}
+		{vertex 15.1855 -16.5688}
+		{vertex 15.1855 16.764}
+		{vertex 9.7441 21.367}
+		{vertex -9.74409 21.367}
+		{vertex -50.8894 3.12614}
+		{vertex -50.8894 -3.10126}
+		{vertex -9.74409 -21.0921}
+	}
+	{rotate}
+}
+{volume "body1"
+	{box 31.3908 13.5996 33.2538}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0 	 0.0349
+		-0.0349 	 0 	 0.9994
+		0 	 -1 	 0
+		-1.036 	 -0.058 	 7.8032
+	}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{Position -23.7085 	 -0.0124 	 1.3635}
+}
+{volume "body3"
+	{polyhedron "body3.vol"}
+	{bone "body"}
+	{Position -40.8563 	 -0.0124 	 3.941}
+}
+{volume "box"
+	{box 9.84689 5.56563 15.5772}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0 	 0.0349
+		-0.0349 	 0 	 0.9994
+		0 	 -1 	 0
+		-22.4287 	 -0.0118 	 4.8857
+	}
+}
+{volume "hole1"
+	{box 32.4491 13.0593 29.068}
+	{bone "body"}
+	{matrix34
+		0.9993 	 0 	 0.0364
+		-0.0364 	 0 	 0.9993
+		0 	 -1 	 0
+		0.0306 	 -0.0858 	 8.6692
+	}
+}
+{volume "part1"
+	{cylinder 0.44211 27.7111}
+	{bone "part1"}
+	{matrix34
+		0 	 -1 	 0
+		-0.0049 	 0 	 1
+		-1 	 0 	 -0.0049
+		-14.6067 	 -2.3069 	 3.4322
+	}
+}
+{volume "part2"
+	{box 0.729983 10.1636 30.9962}
+	{bone "part2"}
+	{matrix34
+		-0.9996 	 0 	 0.0291
+		-0.0291 	 0 	 -0.9996
+		0 	 -1 	 0
+		-0.6447 	 -0.0535 	 5.7251
+	}
+}
+{volume "part3"
+	{box 1.50882 10.8175 4.28823}
+	{bone "part3"}
+	{matrix34
+		0.9984 	 0 	 -0.0563
+		0.0563 	 0 	 0.9984
+		0 	 -1 	 0
+		-0.1841 	 -0.6006 	 -5.2214
+	}
+}
+{volume "wheelleft"
+	{cylinder 5.90551 3.44114}
+	{bone "wheell"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.6646
+	}
+}
+{volume "wheelright"
+	{cylinder 5.90551 3.48366}
+	{bone "wheelr"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.4139
+	}
+}

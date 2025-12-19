@@ -1,0 +1,93 @@
+;Exported by:	 TigerF
+;Date:			 30.04.2025 15:26:30
+;File:			 D:\GOH\3dsmax9_saves\scenes\GoH_3d_vehicle_rus\vehicles\cannon\45mm_21k_naval\45mm_21k_naval_x.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position 0 	 0 	 0.2869}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{speed 0.003}
+				{Position 0.0074 	 0.0018 	 16.68}
+				{bone "turret_sup"
+					{parameters "id=body;"}
+					{orientation
+						1 	 -0.0005 	 -0.0031
+						0.0005 	 0.9999 	 0.0172
+						0.0031 	 -0.0172 	 0.9998
+					}
+					{VolumeView "turret_sup.ply"}
+					{bone revolute "gun_rot"
+						{parameters "id=gun;"}
+						{animation
+							{sequence "break" {file "gun_b.anm"}{speed 0.7}}
+						}
+						{limits 0 35}
+						{speed 0.005}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 1
+							0 	 -1 	 0
+							-6.0811 	 -0.5827 	 9.8257
+						}
+						{VolumeView "gun_rot.ply"}
+						{bone "gun"
+							{parameters "id=gun;"}
+							{matrix34
+								1 	 0 	 0
+								0 	 0 	 -1
+								0 	 1 	 0
+								7.6038 	 0.3514 	 -0.3921
+							}
+							{VolumeView "gun.ply"}
+							{bone "lever"
+								{parameters "id=gun;"}
+								{Position -19.3373 	 -1.9559 	 -1.0764}
+								{VolumeView "lever.ply"}
+							}
+							{bone "breechblock"
+								{parameters "id=gun;"}
+								{Position -20.8716 	 0.3063 	 0.0214}
+								{VolumeView "breechblock.ply"}
+							}
+						}
+						{bone "rod"
+							{parameters "id=gun;"}
+							{matrix34
+								1 	 0 	 0
+								0 	 0 	 -1
+								0 	 1 	 0
+								-8.9957 	 -0.0644 	 1.486
+							}
+							{VolumeView "rod.ply"}
+						}
+					}
+					{bone "aim_v"
+						{parameters "id=body;"}
+						{Position -2.8283 	 7.654 	 2.5092}
+						{VolumeView "aim_v.ply"}
+					}
+					{bone "aim_h"
+						{parameters "id=body;"}
+						{matrix34
+							0.9455 	 -0.3256 	 0
+							0.3256 	 0.9455 	 0
+							0 	 0 	 1
+							-5.7145 	 5.3779 	 0.2418
+						}
+						{VolumeView "aim_h.ply"}
+					}
+				}
+			}
+		}
+	}
+}

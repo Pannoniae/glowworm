@@ -1,14 +1,14 @@
 {game_entity
 	(include "/properties/car.ext")
 	(include "/properties/selection/vehicle_elongated.inc" scale(1.25))
-	{props "aa" "truck" "shell_eject" "with_gun" "open_top" "explosion_throw_crew" "vision_lev02" "muzzle_75mm_76mm" "detect_td_medium" "tractor" "tractor_heavy" "open_death_fx_low"}
-	{able "emit_on_attack"}
+	{props "truck" "shell_eject" "with_gun" "open_top" "explosion_throw_crew" "vision_lev02" "muzzle_75mm_76mm" "detect_td_medium" "tractor" "tractor_heavy" "open_death_fx_low" "support_open_ani"}
 	{extension "yag10_29k.mdl"}
+	{able "emit_on_attack"}
 	{extension "crew.ext"}
 	{collider "truck"}
 	{patherId "gazaaa"}
 	{targetSelector "cannon_aa"}
-	
+
 	{extender "enumerator"
 		{digit_folder "np_w"}
 	}

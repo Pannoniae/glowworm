@@ -1,0 +1,41 @@
+{game_entity
+	(include "/properties/marine.ext")
+	(include "/properties/selection/vehicle_big.inc" scale(1.6))
+	{mass 100000}
+	{props "marine" "emit_on_sink" "boat" "big" "explosion_throw_crew" "windowed"}
+
+	{extension "small_barge.mdl"}
+	{extension "crew.ext"}
+
+	{volume "body1"
+	}
+	{volume "body2"
+	}
+	{volume "body3"
+	}
+	{volume "body4"
+	}
+	{volume "body5"
+	}
+	{volume "body6"
+	}
+	{volume "body7"
+	}
+	{volume "body8"
+	}
+	{volume "body9"
+	}
+	{volume "cabin"
+	}
+	{patherid "deep_water"}
+	{chassis
+		{Locomotion ("locomotion")
+			{TurnRadius	20}
+			{MaxSpeed	18}
+			{StartTime	15}	
+			{BrakeTime	15}
+			{TurnTime	45}
+		}
+	}
+	
+}

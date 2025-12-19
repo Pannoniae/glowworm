@@ -1,46 +1,118 @@
 {game_entity
 	(include "/properties/vehicle_xx.ext")
 	{extension "stug3a_xx.mdl"}
-	{volume "body2"
-		{thickness 21}
+	{volume "armor2"
+		{thickness 10}
 	}
-	{volume "body3"
-		{thickness 21}
+	{volume "barrel1"
+		{thickness 10}
 	}
-	{volume "body1"
-		{thickness 21}
+	{volume "barrel2"
+		{thickness 10}
 	}
-	{volume "body4"
-		{thickness 21}
+	{volume "body1"			; Hull front
+		{thickness	30
+			{front 50}
+			{top 25}		; Glacis
+			{rear 10}
+			{bottom 15}
+		}
 	}
-	{volume "body5"
-		{thickness 21}
+	{volume "body2"			; middle_lower
+		{thickness 30}
 	}
-	{volume "body6"
-		{thickness 21}
+	{volume "body3"			; Superstructure upper 
+		{thickness 30
+			{front 50}
+			{top 10}
+		}
 	}
-	{volume "body7"
-		{thickness 21}
+	{volume "body4"			; Superstructure Front, Left
+		{thickness 30
+			{front 50}
+			{top 25}
+		}
 	}
-	{volume "engine"
-		{thickness 21}
+	{volume "body5"			; Superstructure Front, Left, Top
+		{thickness 30
+			{top 10}
+		}
 	}
-	{volume "gun"
-		{thickness 21}
+	{volume "body6"			; Superstructure Front, Right
+		{thickness 30
+			{front 50}
+			{top 10}
+		}
+	}
+	{volume "body7"			; left box
+		{thickness 30}
+	}
+	{volume "body8"			; left slope
+		{thickness 30
+		{bottom 10}
+		}
+	}
+	{volume "body9"			; right slope
+		{thickness 30
+		{bottom 10}
+		}
+	}
+	{volume "engine1"		; main
+		{thickness 30
+			{front 10}
+			{top 16}
+			{rear 30}
+			{bottom 15}
+		}
+	}
+	{volume "engine2"			; right cooler box
+		{thickness 30
+		{left 35}
+		}
+	}
+	{volume "engine3"			; left cooler box
+		{thickness 30
+		{left 35}
+		}
+	}
+	{volume "engine4"			; rear cooler box
+		{thickness 30}
 	}
 	{volume "mantlet"
-		{thickness 21}
+		{thickness 50}
+		{tags "armor"}
+	}
+	{volume "barrel1"
+		{thickness 50}
+		{tags "gun"}
+		{component "gun"}
+	}
+	{volume "armor1"			
+		{thickness 30}
+	}
+	{volume "armor2"			
+		{thickness 30}
 	}
 	{volume "part1"
-		{thickness 21}
+		{thickness 4}
 	}
 	{volume "part2"
-		{thickness 21}
+		{thickness 4}
 	}
-	{volume "trackleft"
-		{thickness 21}
+	{volume "part3"
+		{thickness 10}
 	}
-	{volume "trackright"
-		{thickness 21}
+	{volume "shield1"
+		{thickness 4}
 	}
+	{volume "shield2"
+		{thickness 4}
+	}
+	{volume "shield3"
+		{thickness 4}
+	}
+	{volume "shield4"
+		{thickness 4}
+	}
+	("tracks" thickness(20))
 }

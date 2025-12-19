@@ -1,0 +1,157 @@
+;Exported by:	 ftiger
+;Date:			 21.04.2016 19:16:44
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\Early WW2 tanks\germany\pz4\h\pz4h_2012\pz4g_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{matrix34
+				0.9981 	 -0.0542 	 -0.0297
+				0.0535 	 0.9983 	 -0.0244
+				0.0309 	 0.0228 	 0.9993
+				-1.3082 	 -0.4508 	 15.2562
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{parameters "id=turret;"}
+				{matrix34
+					0.9316 	 0.3628 	 -0.0218
+					-0.3627 	 0.9319 	 0.0081
+					0.0233 	 0.0003 	 0.9997
+					1.7141 	 -0.8425 	 19.9258
+				}
+				{VolumeView "turret.ply"}
+				{bone "part5"
+					{parameters "id=part5;"}
+					{Position -23.6946 	 1.1112 	 -0.2967}
+					{VolumeView "part5.ply"}
+				}
+				{bone "part2"
+					{parameters "id=part2;"}
+					{Position 37.6242 	 -0.1333 	 -3.2996}
+					{VolumeView "part2.ply"}
+				}
+			}
+			{bone revolute "part3"
+				{parameters "id=part3;"}
+				{matrix34
+					0.9897 	 -0.1412 	 -0.0214
+					0.1419 	 0.9556 	 0.2583
+					-0.0161 	 -0.2587 	 0.9658
+					-45.1112 	 -23.7548 	 -8.2241
+				}
+				{VolumeView "part3.ply"}
+			}
+			{bone revolute "part1"
+				{parameters "id=part1;"}
+				{matrix34
+					0.9981 	 0.0535 	 0.0309
+					-0.0542 	 0.9983 	 0.0228
+					-0.0297 	 -0.0244 	 0.9993
+					46.0057 	 23.5985 	 -4.1644
+				}
+				{VolumeView "part1.ply"}
+			}
+			{bone revolute "part4"
+				{parameters "id=part4;"}
+				{matrix34
+					0.9981 	 0.0535 	 0.0309
+					-0.0542 	 0.9983 	 0.0228
+					-0.0297 	 -0.0244 	 0.9993
+					-6.0449 	 -22.2443 	 -11.1686
+				}
+				{VolumeView "part4.ply"}
+			}
+		}
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position 3.407 	 -0.003 	 -3.1971}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{Position 9.231 	 0.3598 	 9.2353}
+}
+{volume "engine"
+	{polyhedron "engine.vol"}
+	{bone "body"}
+	{Position -31.9135 	 -0.0381 	 9.4}
+}
+{volume "part1"
+	{cylinder 7.87736 6.33355}
+	{bone "part1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		0.0233 	 0.0973 	 0.1922
+	}
+}
+{volume "part2"
+	{cylinder 1.3482 37.7202}
+	{bone "part2"}
+	{matrix34
+		-0.0758 	 0.9938 	 0.0812
+		0.1436 	 -0.0697 	 0.9872
+		0.9867 	 0.0865 	 -0.1374
+		14.3118 	 1.2007 	 -1.4217
+	}
+}
+{volume "part3"
+	{cylinder 6.56144 3.58638}
+	{bone "part3"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		0.1514 	 -0.1194 	 -0.0526
+	}
+}
+{volume "part4"
+	{box 18.7379 9.72116 5.27479}
+	{bone "part4"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		0.1706 	 -1.2657 	 -0.1871
+	}
+}
+{volume "part5"
+	{polyhedron "part5.vol"}
+	{bone "part5"}
+	{Position -0.9385 	 0.1372 	 -0.0313}
+}
+{volume "trackleft"
+	{box 105.551 22.4787 8.37106}
+	{bone "body"}
+	{matrix34
+		0.9982 	 0.0517 	 0.0289
+		-0.0275 	 -0.0276 	 0.9992
+		0.0525 	 -0.9983 	 -0.0261
+		-1.078 	 23.6237 	 -3.4743
+	}
+}
+{volume "trackright"
+	{box 105.551 22.4787 8.37106}
+	{bone "body"}
+	{matrix34
+		0.9982 	 0.0517 	 0.0289
+		-0.0275 	 -0.0276 	 0.9992
+		0.0525 	 -0.9983 	 -0.0261
+		1.4151 	 -23.8174 	 -4.7161
+	}
+}
+{volume "turret"
+	{polyhedron "turret.vol"}
+	{bone "turret"}
+	{Position -1.1125 	 -0.4604 	 0.2076}
+}

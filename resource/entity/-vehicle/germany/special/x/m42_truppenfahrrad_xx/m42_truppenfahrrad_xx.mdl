@@ -1,0 +1,186 @@
+;Exported by:	 guita
+;Date:			 19.05.2022 10:03:41
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_ger\vehicles\special\Truppen Fahrrad\Truppenfahrrad_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position -1.9685 	 0 	 0.0197}
+			{VolumeView "body.ply"}
+			{bone "part8"
+				{parameters "id=part3;"}
+				{Position -5.0833 	 -0.1225 	 11.7375}
+				{VolumeView "part8.ply"}
+			}
+			{bone "part7"
+				{parameters "id=part3;"}
+				{Position -5.0719 	 -1.186 	 18.7449}
+				{VolumeView "part7.ply"}
+			}
+			{bone "part5"
+				{parameters "id=part3;"}
+				{matrix34
+					0.887 	 -0.4617 	 0
+					0.4617 	 0.887 	 0
+					0 	 0 	 1
+					12.5203 	 -0.9525 	 13.7929
+				}
+				{VolumeView "part5.ply"}
+			}
+			{bone "part4"
+				{parameters "id=part3;"}
+				{Position -11.1885 	 0.3103 	 12.3471}
+				{VolumeView "part4.ply"}
+			}
+			{bone revolute "part2"
+				{parameters "id=part2;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-10.2497 	 -0.0054 	 7.4862
+				}
+				{VolumeView "part2.ply"}
+			}
+			{bone "part6"
+				{parameters "id=part3;"}
+				{matrix34
+					0.887 	 -0.4617 	 0
+					0.4617 	 0.887 	 0
+					0 	 0 	 1
+					6.9752 	 -0.6942 	 20.2843
+				}
+				{VolumeView "part6.ply"}
+			}
+			{bone revolute "part1"
+				{parameters "id=part1;"}
+				{matrix34
+					0.9809 	 0.1748 	 -0.0854
+					-0.0381 	 -0.2582 	 -0.9653
+					-0.1908 	 0.9502 	 -0.2466
+					14.9478 	 -1.4339 	 7.3494
+				}
+				{VolumeView "part1.ply"}
+			}
+		}
+		{bone "pivot_back"
+			{Position -12.2182 	 -0.0054 	 7.5059}
+		}
+		{bone "pivot_front"
+			{Position 12.5578 	 -0.0081 	 7.5059}
+		}
+	}
+}
+{area "body8"
+	{obb2
+		{center 6.7405 1.81726}
+		{extent 0.577824 3.67648}
+		{axis 0.927257 0.374426}
+	}
+	{rotate}
+}
+{volume "body1"
+	{box 0.353497 2.27624 8.69705}
+	{bone "part8"}
+	{matrix34
+		0.8518 	 0 	 -0.5239
+		0 	 1 	 0
+		0.5239 	 0 	 0.8518
+		-3.0286 	 0.1037 	 -0.6513
+	}
+}
+{volume "body2"
+	{box 0.433497 5.34916 9.60368}
+	{bone "part4"}
+	{matrix34
+		-0.039 	 0.1713 	 -0.9844
+		0.1298 	 0.9777 	 0.165
+		0.9908 	 -0.1213 	 -0.0604
+		-0.2447 	 -0.0808 	 3.1028
+	}
+}
+{volume "body3"
+	{box 2.30542 3.90478 5.57282}
+	{bone "part7"}
+	{matrix34
+		0.1156 	 0.2221 	 -0.9681
+		0.447 	 0.8588 	 0.2504
+		0.887 	 -0.4617 	 0
+		-0.2577 	 -0.2193 	 -0.0385
+	}
+}
+{volume "body4"
+	{cylinder 0.329463 13.2402}
+	{bone "body"}
+	{matrix34
+		0.9138 	 0 	 0.4062
+		0 	 1 	 0
+		-0.4062 	 0 	 0.9138
+		-2.5702 	 0 	 12.592
+	}
+}
+{volume "body5"
+	{cylinder 0.349463 13.0624}
+	{bone "body"}
+	{matrix34
+		0.6705 	 0 	 -0.7419
+		0 	 1 	 0
+		0.7419 	 0 	 0.6705
+		4.843 	 0 	 11.0987
+	}
+}
+{volume "body6"
+	{cylinder 0.324463 13.7676}
+	{bone "body"}
+	{matrix34
+		0 	 0 	 1
+		0 	 1 	 0
+		-1 	 0 	 0
+		2.2535 	 0 	 16.8478
+	}
+}
+{volume "body7"
+	{box 0.423497 2.0058 13.6258}
+	{bone "part5"}
+	{matrix34
+		0.9309 	 0.0672 	 0.359
+		-0.1542 	 0.9633 	 0.2196
+		-0.3311 	 -0.2598 	 0.9071
+		-1.1544 	 -1.2192 	 -0.2635
+	}
+}
+{volume "body8"
+	{box 0.735 7.34003 1.00645}
+	{bone "part6"}
+	{matrix34
+		0.1835 	 0.0079 	 -0.983
+		-0.1003 	 0.9949 	 -0.0108
+		0.9779 	 0.1006 	 0.1834
+		2.0565 	 -0.1956 	 -0.561
+	}
+}
+{volume "wheelleft1"
+	{cylinder 7.65748 0.951294}
+	{bone "part1"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 0.0018
+	}
+}
+{volume "wheelleft2"
+	{cylinder 7.65748 0.941875}
+	{bone "part2"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 -0.0029
+	}
+}

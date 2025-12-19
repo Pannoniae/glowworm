@@ -59,8 +59,6 @@
 		{box
 			{item "bulletger_88_l71 apcbche" 39}	; 80 rounds
 			{item "bulletger_88_l71 he" 40}
-			{item "bulletger_88_l71 heat" 3}
-			;{item "bulletger_88_l71 apcr" 2}
 			{item "ammo mgun_ger belt" 4500}		; 32 belts (150 rounds each)
 			{item "mg34_drum" filled {user "mgun"}}
 			{item "geballteladung_3kg" 1}
@@ -72,7 +70,7 @@
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "88mm_kwk43" filling "bulletger_88_l71 apcbche" 1}
+			{weapon "88mm_kwk43_2" filling "bulletger_88_l71 apcbche" 1}
 			{gunner "gunner"}
 			{charger "charger"}
 			("abm_dymamic_stabilised"
@@ -132,6 +130,6 @@
 		{speed2 3}
 	}
 	{bone "turret"
-		("turret_heavy" power_traverse(19))
+		("turret_heavy" power_traverse(23.7))
 	}
 }

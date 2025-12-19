@@ -1,0 +1,61 @@
+{game_entity
+	(include "/properties/railway.ext")
+	
+	{props "platform" "train_part" "no_minimap_view"}
+	{Extension "wagon1a_ammo.mdl"}
+	{mass 10000}
+
+	{Placer
+		{place "vehicle"
+			{Linkbone "attach_vehicle"}
+			{handlebone "basis"}
+			{attach}
+		}
+	}
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+	("wheel" args "wheelright2")
+	("wheel" args "wheelleft2")
+
+	{volume "body1"
+		{thickness 30}
+	}
+	{volume "body2"
+		{thickness 10}
+		{able {visible 0}}
+	}
+	{volume "body3"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "body4"
+		{thickness 5}
+		{material "wood"}
+	}
+	{volume "wheelleft1"
+		{thickness 30}
+	}
+	{volume "wheelleft2"
+		{thickness 30}
+	}
+	{volume "wheelright1"
+		{thickness 30}
+	}
+	{volume "wheelright2"
+		{thickness 30}
+	}
+
+	{Placer
+		{place "ammo_boxes_01"
+			{entity "ammo_boxes_01"}
+			{Linkbone "ammo_boxes_01"}
+			{handlebone "body"}
+		}
+		{place "ammo_boxes_04"
+			{entity "ammo_boxes_04"}
+			{Linkbone "ammo_boxes_04"}
+			{handlebone "body"}
+		}
+	}
+}

@@ -18,15 +18,15 @@
 ;/*===============  TANK DEF GUIDE END ===============*/
 
 (define "turret_light" ;// small turrets, BTR/light tanks
-	{speed2 (+ 10 (/ %power_traverse 2.5))}
+	{speed2 (+ 6 (/ %power_traverse 6))}
 )
 
 (define "turret_medium" ;// medium turrets, big turret light tanks, medium tanks
-	{speed2 (+ 6 (/ %power_traverse 2.5))}
+	{speed2 (+ 3 (/ %power_traverse 6))}
 )
 
 (define "turret_heavy" ;// heavy turrets, big turret medium tanks, heavy tanks
-	{speed2 (+ 4 (/ %power_traverse 3))}
+	{speed2 (+ 1.5 (/ %power_traverse 7))}
 )
 
 (define "mobility_tank"

@@ -1,0 +1,112 @@
+;Exported by: Kislov_A
+;Date:        Mon May 04 15:38:25 2009
+;File:        E:\Black\Design doc\Art\Models\Technics\Marines\Marines\YA-5\ya5_x.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=body;"}
+			{Position 40.3871	-0.0486946	-4.09718}
+			{VolumeView "body.ply"}
+			{bone "attach_gun1"
+				{Position 115.268	0.222496	34.926}
+				{VolumeView "attach_gun1.ply"}
+			}
+			{bone "attach_gun2"
+				{Position -203.069	-0.468904	25.7586}
+				{VolumeView "attach_gun2.ply"}
+			}
+			{bone "body_front"
+				{parameters "ID=body_front;"}
+				{VolumeView "body_front.ply"}
+			}
+			{bone "body_rear"
+				{parameters "ID=body_rear;"}
+				{VolumeView "body_rear.ply"}
+				{bone "tubes_1"
+					{Matrix34
+						-1	0	0
+						0	-1	0
+						0	0	1
+						-146.883	-25.1527	-3.39277
+					}
+					{VolumeView "tubes_1.ply"}
+				}
+				{bone "tubes_2"
+					{Matrix34
+						-1	0	0
+						0	-1	0
+						0	0	1
+						-146.883	-25.1527	-3.39277
+					}
+					{VolumeView "tubes_2.ply"}
+				}
+			}
+			{bone "door_r"
+				{parameters "id=cabin;"}
+				{Position -30.1592	19.9294	42.8364}
+				{VolumeView "door_r.ply"}
+			}
+			{bone "cabin"
+				{parameters "CommonMesh;id=cabin;"}
+				{animation
+					{sequence "break" {file "cabin_b.anm"}}
+				}
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					24.1995	0.127436	27.5814
+				}
+				{VolumeView "cabin.ply"}
+			}
+			{bone "flag"
+				{parameters "id=cabin;"}
+				{Matrix34
+					1	0	0
+					0	0	1
+					0	-1	0
+					-82.3428	0.0486832	17.3706
+				}
+				{VolumeView "flag.ply"}
+			}
+			{bone "tubes_3"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					-146.883	-25.1527	-3.39277
+				}
+				{VolumeView "tubes_3.ply"}
+			}
+		}
+		{bone "volume_holder"
+			{Matrix34
+				0.999926	0	-0.0121343
+				0	1	0
+				0.0121343	0	0.999926
+				-1.11532e-005	0	0
+			}
+		}
+		{bone "pivot_back"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-162.392	-0.688477	0
+			}
+		}
+		{bone "pivot_front"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				155.009	-0.688461	0
+			}
+		}
+	}
+}

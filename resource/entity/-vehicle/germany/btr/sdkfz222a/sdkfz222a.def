@@ -2,7 +2,7 @@
 	(include "/properties/armoredcar.ext")
 	
 	(include "/properties/selection/vehicle.inc" scale(0.9))
-	{props "tank" "turret" "wheeled" "hatch" "with_gun" "vision_lev02" "muzzle_20mm_25mm_auto"}
+	{props "tank" "turret" "wheeled" "-hatch" "with_gun" "vision_lev02" "muzzle_20mm_25mm_auto"}
 	{extension "sdkfz222a.mdl"}
 	{extension "crew.ext"}
 	{patherId "sdkfz222"}
@@ -18,7 +18,7 @@
 		}
 	}
 
-	{extender "shield" {on}}
+	{extender "shield" {off}}
 
 	{extender "inventory"
 		{box
@@ -71,8 +71,8 @@
 	}
 
 	{bone "gun_rot"
-		{limits -7 5}		;// hatch closed limits
-				;{limits -7 85}		;// AA mode limits
+		{limits -7 85}		;// AA mode limits
+		;{limits -7 3}		;// hatch closed limits
 		{speed2 20}
 	}
 	{bone "turret"

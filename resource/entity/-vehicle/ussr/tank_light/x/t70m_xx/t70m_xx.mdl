@@ -1,0 +1,182 @@
+;Exported by:	 TigerF
+;Date:			 28.12.2020 17:57:53
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\Early WW2 tanks\russian\t70\T-70M_export_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{matrix34
+				0.9998 	 0.0047 	 -0.0208
+				-0.0054 	 0.9995 	 -0.0311
+				0.0206 	 0.0312 	 0.9993
+				-0.4826 	 0 	 10.4413
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{parameters "id=turret;"}
+				{matrix34
+					0.9777 	 0.2066 	 -0.0374
+					-0.2068 	 0.9784 	 -0.0001
+					0.0366 	 0.0078 	 0.9993
+					-4.0847 	 1.6893 	 13.6733
+				}
+				{VolumeView "turret.ply"}
+			}
+			{bone revolute "part1"
+				{parameters "id=part1;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 -0.0523 	 -0.9986
+					0 	 0.9986 	 -0.0523
+					34.9203 	 20.0695 	 0.7419
+				}
+				{VolumeView "part1.ply"}
+			}
+			{bone "part5"
+				{parameters "id=part5;"}
+				{matrix34
+					0.9998 	 -0.0054 	 0.0206
+					0.0047 	 0.9995 	 0.0312
+					-0.0208 	 -0.0311 	 0.9993
+					-20.0158 	 -12.6282 	 15.8292
+				}
+				{VolumeView "part5.ply"}
+			}
+			{bone revolute "part3"
+				{parameters "id=part3;"}
+				{matrix34
+					0.9998 	 -0.0054 	 0.0206
+					0.0208 	 0.0311 	 -0.9993
+					0.0047 	 0.9995 	 0.0312
+					-11.2791 	 -19.9939 	 -6.5103
+				}
+				{VolumeView "part3.ply"}
+			}
+			{bone revolute "part2"
+				{parameters "id=part2;"}
+				{matrix34
+					0.9998 	 -0.0054 	 0.0206
+					0.0208 	 0.0311 	 -0.9993
+					0.0047 	 0.9995 	 0.0312
+					0.1733 	 20.2792 	 -5.0201
+				}
+				{VolumeView "part2.ply"}
+			}
+		}
+	}
+}
+{volume "barrel"
+	{polyhedron "barrel.vol"}
+	{bone "turret"}
+	{matrix34
+		0.9877 	 0 	 -0.1564
+		0 	 1 	 0
+		0.1564 	 0 	 0.9877
+		32.6893 	 -2.5387 	 2.4339
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position -2.6839 	 0 	 4.1651}
+}
+{volume "engine1"
+	{polyhedron "engine1.vol"}
+	{bone "body"}
+	{Position -2.6839 	 0 	 4.1651}
+}
+{volume "engine2"
+	{polyhedron "engine2.vol"}
+	{bone "body"}
+	{Position -2.566 	 -14.8644 	 14.4296}
+}
+{volume "engine3"
+	{box 21.98 10.5493 12.6978}
+	{bone "body"}
+	{Position -0.1187 	 -10.0594 	 0.8875}
+}
+{volume "mantlet"
+	{polyhedron "mantlet.vol"}
+	{bone "turret"}
+	{matrix34
+		0.9877 	 0 	 -0.1564
+		0 	 1 	 0
+		0.1564 	 0 	 0.9877
+		15.0104 	 -0.0952 	 5.2805
+	}
+}
+{volume "part1"
+	{cylinder 5.61646 2.91334}
+	{bone "part1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.1324
+	}
+}
+{volume "part2"
+	{cylinder 5.47244 1.75197}
+	{bone "part2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.3836
+	}
+}
+{volume "part3"
+	{cylinder 5.47723 1.75994}
+	{bone "part3"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.397
+	}
+}
+{volume "part5"
+	{polyhedron "part5.vol"}
+	{bone "part5"}
+	{Position 0.0371 	 0.2117 	 -0.5019}
+}
+{volume "trackleft"
+	{polyhedron "trackleft.vol"}
+	{bone "body"}
+	{matrix34
+		0.9998 	 -0.0054 	 0.0206
+		0.0047 	 0.9995 	 0.0312
+		-0.0208 	 -0.0311 	 0.9993
+		0.5553 	 19.8884 	 -1.2393
+	}
+}
+{volume "trackright"
+	{polyhedron "trackright.vol"}
+	{bone "body"}
+	{matrix34
+		0.9998 	 -0.0054 	 0.0206
+		0.0047 	 0.9995 	 0.0312
+		-0.0208 	 -0.0311 	 0.9993
+		0.3684 	 -19.774 	 -2.4761
+	}
+}
+{volume "turret1"
+	{polyhedron "turret1.vol"}
+	{bone "turret"}
+	{Position -0.8657 	 -0.0151 	 5.7895}
+}
+{volume "turret2"
+	{polyhedron "turret2.vol"}
+	{bone "turret"}
+	{Position -0.8657 	 -0.0151 	 5.7895}
+}
+{volume "turret3"
+	{polyhedron "turret3.vol"}
+	{bone "turret"}
+	{Position 10.5146 	 -0.0682 	 6.3754}
+}

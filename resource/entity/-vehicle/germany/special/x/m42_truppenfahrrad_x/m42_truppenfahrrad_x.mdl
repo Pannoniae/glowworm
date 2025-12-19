@@ -1,0 +1,93 @@
+;Exported by:	 TigerF
+;Date:			 19.05.2022 13:37:23
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\GoH_3D_vehicles_ger\vehicles\special\Truppen Fahrrad\Truppenfahrrad_x.max
+{skeleton
+	{bone "basis"
+		{parameters "steermax=40;wheelradius=0.35;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position -1.9755 	 0 	 0.0197}
+			{VolumeView "body.ply"}
+			{bone "chain"
+				{parameters "id=body;"}
+				{Position -4.6472 	 -0.675 	 6.7102}
+				{VolumeView "chain.ply"}
+			}
+			{bone "detail1"
+				{parameters "id=body;"}
+				{Position -11.8434 	 0.0021 	 17.2566}
+				{VolumeView "detail1.ply"}
+			}
+			{bone "detail2"
+				{parameters "id=body;"}
+				{Position 3.4547 	 0 	 17.1882}
+				{VolumeView "detail2.ply"}
+			}
+			{bone "detail3"
+				{parameters "id=body;"}
+				{Position 1.8497 	 0.105 	 14.8393}
+				{VolumeView "detail3.ply"}
+			}
+			{bone "gear"
+				{parameters "id=body;"}
+				{matrix34
+					-1 	 0 	 0
+					0 	 1 	 0
+					0 	 0 	 -1
+					0.0128 	 -0.0018 	 6.7145
+				}
+				{VolumeView "gear.ply"}
+			}
+			{bone "pivot_back"
+				{Position -10.2497 	 -0.0054 	 7.4862}
+				{bone revolute "wheel2"
+					{parameters "id=wheel2;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheel2.ply"}
+				}
+			}
+			{bone "pivot_front"
+				{Position 14.5263 	 -0.0081 	 7.4862}
+				{bone revolute "steer"
+					{parameters "id=body;"}
+					{matrix34
+						-0.9267 	 0 	 -0.3759
+						0 	 1 	 0
+						0.3759 	 0 	 -0.9267
+						-5.1496 	 0.0081 	 8.688
+					}
+					{VolumeView "steer.ply"}
+					{bone revolute "wheel1"
+						{parameters "id=wheel1;"}
+						{matrix34
+							-0.9267 	 0 	 0.3759
+							0.3759 	 0 	 0.9267
+							0 	 1 	 0
+							-1.5063 	 -0.0081 	 9.9865
+						}
+						{VolumeView "wheel1.ply"}
+					}
+					{bone "detail4"
+						{parameters "id=body;"}
+						{matrix34
+							-0.9267 	 0 	 0.3759
+							0 	 1 	 0
+							-0.3759 	 0 	 -0.9267
+							-1.4082 	 0 	 -4.6128
+						}
+						{VolumeView "detail4.ply"}
+					}
+				}
+			}
+		}
+	}
+}

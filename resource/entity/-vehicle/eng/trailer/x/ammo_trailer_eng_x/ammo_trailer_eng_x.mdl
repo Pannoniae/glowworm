@@ -1,0 +1,181 @@
+;Exported by:	 TigerF
+;Date:			 22.10.2024 15:01:14
+;File:			 D:\GOH\3dsmax9_saves\scenes\GoH_3d_vehicle_eng\vehicles\trailer\M10_trailer\ammo_trailer_eng_x.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.43;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{matrix34
+				0.9994 	 0 	 0.0349
+				0 	 1 	 0
+				-0.0349 	 0 	 0.9994
+				0 	 0 	 9.7751
+			}
+			{VolumeView "body.ply"}
+			{bone "1"
+				{matrix34
+					0.9962 	 0 	 0.0872
+					0 	 1 	 0
+					-0.0872 	 0 	 0.9962
+					-44.9004 	 0.5904 	 5.2982
+				}
+				{VolumeView "1.ply"}
+			}
+			{bone "holder1"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					-35.2156 	 -4.4551 	 4.6131
+				}
+				{VolumeView "holder1.ply"}
+				{bone "holder2"
+					{parameters "id=body;"}
+					{Position -4.6282 	 4.4593 	 -5.3183}
+					{VolumeView "holder2.ply"}
+				}
+			}
+			{bone "fixer"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					-35.2069 	 -0.2314 	 4.6208
+				}
+				{VolumeView "fixer.ply"}
+			}
+			{bone "hand_breakl"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					-20.7517 	 -10.8084 	 0.9571
+				}
+				{VolumeView "hand_breakl.ply"}
+			}
+			{bone "hand_breakr"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					-20.7517 	 10.8085 	 0.9571
+				}
+				{VolumeView "hand_breakr.ply"}
+			}
+			{bone "tarp"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					-2.0334 	 0 	 16.8926
+				}
+				{VolumeView "tarp.ply"}
+			}
+			{bone "back_door"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					15.5656 	 0.0042 	 4.1845
+				}
+				{VolumeView "back_door.ply"}
+			}
+			{bone "ammo_box"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					9.4165 	 -0.1425 	 8.5715
+				}
+				{VolumeView "ammo_box.ply"}
+			}
+			{bone "holder3"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					12.8747 	 -16.0434 	 15.5789
+				}
+				{VolumeView "holder3.ply"}
+			}
+			{bone "holder4"
+				{parameters "id=body;"}
+				{matrix34
+					0.9994 	 0 	 0.0349
+					0 	 1 	 0
+					-0.0349 	 0 	 0.9994
+					12.8747 	 16.0434 	 15.5789
+				}
+				{VolumeView "holder4.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0 	 0 	 9.7751}
+			{bone prizmatic "suspension_r1"
+				{limits -0.04 0.04}
+				{speed 0.15}
+				{Position 0 	 -20.039 	 0}
+				{bone revolute "wheelr"
+					{parameters "id=wheelright;radius=0.43;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr.ply"}
+				}
+			}
+			{bone prizmatic "suspension_l1"
+				{limits -0.04 0.04}
+				{speed 0.15}
+				{Position 0 	 20.0361 	 0}
+				{bone revolute "wheell"
+					{parameters "id=wheelleft;radius=0.43;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell.ply"}
+				}
+			}
+		}
+	}
+}
+{volume "wheelleft"
+	{cylinder 8.46457 3.44114}
+	{bone "wheell"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.6646
+	}
+}
+{volume "wheelright"
+	{cylinder 8.46457 3.48366}
+	{bone "wheelr"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.4139
+	}
+}

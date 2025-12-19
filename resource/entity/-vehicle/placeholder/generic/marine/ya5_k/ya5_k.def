@@ -1,0 +1,70 @@
+{game_entity
+	(include "/properties/marine.ext")
+	(include "/properties/selection/vehicle_big.inc" scale(2.1))
+	{props "vehicle" "marine" "flag" "emit_on_sink" "boat" "big"}
+	{targetClass "car"}
+	{targetSelector "cannon_zenite"}
+	{patherID "water"}
+	{Extension "ya5_k.mdl"}
+	(include "ya5_k.ext")
+	{extension "crew.ext"}
+
+	{extender "inventory"
+		{box
+			{size 6 6}
+			{clear}
+			{item "ammo hmgun_rus api" 2000}
+		}
+	}
+	
+	{Weaponry
+		{place "dshk_mgunF"
+			{type "mgun_front"}
+			{LinkBone "dshk_mgunF"}
+			{LinkAnimation "off"}
+			{weapon "dshk" filling "hmgun_rus api" 50}
+			{foresight "foresight5"}
+			{gunner "gunner1"}
+			{charger "gunner1"}
+			("abm_mgun")
+			{basic}
+			{ai_in_manual}
+		}
+		{place "dshk_mgunB"
+			{type "mgun_rear"}
+			{LinkBone "dshk_mgunB"}
+			{LinkAnimation "off"}
+			{weapon "dshk" filling "hmgun_rus api" 50}
+			{foresight "foresight6"}
+			{gunner "gunner2"}
+			{charger "gunner2"}
+			("abm_mgun")
+			{basic}
+			{ai_in_manual}
+		}
+	}
+
+	{mass 100000}
+	{chassis
+		{Locomotion ("locomotion")
+			{TurnRadius	10}
+			{MaxSpeed	25}	
+		}
+		{waterline 0.5}
+	}
+
+	{bone "dshk_turretF"
+		{speed2 70}
+	}
+	{bone "dshk_gun_rotF"
+		{limits -10 70}
+		{speed2 70}
+	}
+	{bone "dshk_turretB"
+		{speed2 70}
+	}
+	{bone "dshk_gun_rotB"
+		{limits -10 70}
+		{speed2 70}
+	}
+}

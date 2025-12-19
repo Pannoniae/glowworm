@@ -1,0 +1,76 @@
+;Exported by:	 guita
+;Date:			 24.09.2023 08:42:15
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_ger2\vehicles\trailer\infanty_cart_if8\infantry_cart_if8_x.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.29;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "body" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position 0.0024 	 0 	 5.9758}
+			{VolumeView "body.ply"}
+			{bone "susp"
+				{parameters "id=body;"}
+				{VolumeView "susp.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0.0024 	 0 	 5.9758}
+			{bone prizmatic "suspension_l1"
+				{limits -0.03 0.03}
+				{speed 0.16}
+				{Position 0 	 9.0609 	 0}
+				{bone revolute "wheell"
+					{parameters "id=wheelleft;radius=0.29;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell.ply"}
+				}
+			}
+			{bone prizmatic "suspension_r1"
+				{limits -0.03 0.03}
+				{speed 0.16}
+				{Position 0 	 -9.0961 	 0}
+				{bone revolute "wheelr"
+					{parameters "id=wheelright;radius=0.29;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr.ply"}
+				}
+			}
+		}
+	}
+}
+{volume "wheelleft"
+	{cylinder 5.70866 2.45906}
+	{bone "wheell"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.011
+	}
+}
+{volume "wheelright"
+	{cylinder 5.70866 2.34098}
+	{bone "wheelr"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.0116
+	}
+}

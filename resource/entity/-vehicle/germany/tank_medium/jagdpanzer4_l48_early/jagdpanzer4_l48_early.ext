@@ -1,0 +1,84 @@
+;SDL
+	
+	; armor notes
+	; tracks and wheels 20mm
+	; gun 25mm
+	; spare tracks 20mm
+	; schürzen 5mm
+
+	("tank_medium_tier2")
+
+	("shield_track" args "shield1" 20)
+	("shield" args "shieldl1" 5)
+	("shield" args "shieldl2" 5)
+	("shield" args "shieldl3" 5)
+	("shield" args "shieldr1" 5)
+	("shield" args "shieldr2" 5)
+	("shield" args "shieldr3" 5)
+
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(25))
+
+	("ammo" args "ammo1")
+	("ammo" args "ammo2")
+	("ammo" args "ammo3")
+	("ammo" args "ammo4")
+	("ammo" args "ammo5")
+	("ammo" args "ammo6")
+	("fuel" args "fuel")
+	("transmission" args "transmission")
+
+	{volume "body1"			; Hull front
+		{thickness	30
+			{front 60}		; front upper plate
+			{top 20}		
+			{rear 50}		; front lower plate
+			{bottom 20}
+		}
+	}
+	{volume "body2"			; middle part
+		{thickness 30
+			{front 60}
+			{bottom 20}
+		}
+	}
+	{volume "body3"			; middle part Top
+		{thickness 40
+			{front 60}
+			{rear 30}
+			{top 20}
+			{bottom 20}
+		}
+	}
+	{volume "body4"			; gun tower
+		{thickness 75}
+	}
+	{volume "body5"			; around gun tower
+		{thickness 80}		; 20mm+60mm 
+		{able {holed}}
+	}
+	{volume "engine1"		; lower part
+		{thickness 30
+			{front 10}
+			{rear 22}
+			{bottom 20}
+		}
+	}
+	{volume "engine2"		; upper part
+		{thickness 30
+			{front 10}
+			{top 20}
+			{rear 22}
+		}
+	}
+	{volume "mantlet"
+		{thickness 75}
+		{CastSteel 0.8063}
+		{tags "armor"}
+	}
+	{volume "detail11"		; spare wheel
+		{thickness 20}
+	}
+	{volume "detail12"		; spare wheel
+		{thickness 20}
+	}

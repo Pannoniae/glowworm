@@ -1,9 +1,8 @@
 {game_entity
 	(include "/properties/car.ext")
-	(include "/properties/shadow/tank.inc" scale(1.0))
-	(include "/properties/selection/vehicle.inc" scale(1.1))
+	(include "/properties/selection/vehicle_elongated.inc" scale(1.0))
 	(include "/properties/resupply.inc")
-	{props "multi_board" "truck" "vision_lev02" "tractor" "tractor_heavy"}
+	{props "multi_board" "truck" "vision_lev02" "tractor" "tractor_heavy" "blast_large"}
 	{able "emit_on_attack"}
 	{extension "gaz_aaa_supply.mdl"}
 	{collider "truck"}
@@ -37,7 +36,7 @@
 
 	{volume "shield_cover" {able {holed}}}
 
-	("rus_truck_ammo_heavy")
+	("truck_ammo_heavy")
 
 	("crew_2_human")
 	("crew_human" place(seat1) bone(seat01) door(emit3)	animation(passenger) group(passenger))

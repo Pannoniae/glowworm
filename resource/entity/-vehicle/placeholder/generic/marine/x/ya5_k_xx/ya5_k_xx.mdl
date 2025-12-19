@@ -1,0 +1,141 @@
+;Exported by: Kislov_A
+;Date:        Mon May 04 15:39:10 2009
+;File:        E:\Black\Design doc\Art\Models\Technics\Marines\Marines\YA-5\ya5_xx.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=body;"}
+			{Position 40.3871	-0.0486946	-4.09718}
+			{VolumeView "body.ply"}
+			{bone "attach_gun1"
+				{Position 115.268	0.222496	34.926}
+				{VolumeView "attach_gun1.ply"}
+			}
+			{bone "attach_gun2"
+				{Position -203.069	-0.468904	25.7586}
+				{VolumeView "attach_gun2.ply"}
+			}
+			{bone "body_front"
+				{parameters "ID=body_front;"}
+				{VolumeView "body_front.ply"}
+			}
+			{bone "body_rear"
+				{parameters "ID=body_rear;"}
+				{VolumeView "body_rear.ply"}
+				{bone "tubes_1"
+					{Matrix34
+						-1	0	0
+						0	-1	0
+						0	0	1
+						-146.883	-25.1527	-3.39277
+					}
+					{VolumeView "tubes_1.ply"}
+				}
+				{bone "tubes_2"
+					{Matrix34
+						-1	0	0
+						0	-1	0
+						0	0	1
+						-146.883	-25.1527	-3.39277
+					}
+					{VolumeView "tubes_2.ply"}
+				}
+			}
+			{bone "door_r"
+				{parameters "id=cabin;"}
+				{Position -30.1592	19.9294	42.8364}
+				{VolumeView "door_r.ply"}
+			}
+			{bone "cabin"
+				{parameters "id=cabin;"}
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					24.1995	0.127436	27.5814
+				}
+				{VolumeView "cabin.ply"}
+			}
+			{bone "flag"
+				{parameters "id=cabin;"}
+				{Matrix34
+					1	0	0
+					0	0	1
+					0	-1	0
+					-82.3428	0.0486832	17.3706
+				}
+				{VolumeView "flag.ply"}
+			}
+			{bone "tubes_3"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					-146.883	-25.1527	-3.39277
+				}
+				{VolumeView "tubes_3.ply"}
+			}
+		}
+		{bone "pivot_back"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-162.392	-0.688477	0
+			}
+		}
+		{bone "pivot_front"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				155.009	-0.688461	0
+			}
+		}
+	}
+}
+{Volume "body_front"
+	{Polyhedron "body_front.vol"}
+	{Bone "body_front"}
+	{Matrix34
+		0.999926	0	-0.0121343
+		0	-1	0
+		-0.0121343	0	-0.999926
+		93.4843	0.0461731	-11.8058
+	}
+}
+{Volume "body_rear"
+	{Box 122.321 70.8661 47.4614}
+	{Bone "body_rear"}
+	{Matrix34
+		0.999926	0	-0.0121343
+		0	-1	0
+		-0.0121343	0	-0.999926
+		-170.587	0.0462077	15.6429
+	}
+}
+{Volume "body"
+	{Box 150.307 70.8661 47.4614}
+	{Bone "body"}
+	{Matrix34
+		1	0	0
+		0	-1	0
+		0	0	-1
+		-35.1227	0.0461737	13.4856
+	}
+}
+{Volume "cabin"
+	{Box 41.0046 36.4015 77.5363}
+	{Bone "cabin"}
+	{Matrix34
+		0.00394947	0.0591142	-0.998243
+		-0.999992	0.000234247	-0.00394252
+		0	0.998251	0.0591147
+		-0.433037	34.5497	22.1007
+	}
+}

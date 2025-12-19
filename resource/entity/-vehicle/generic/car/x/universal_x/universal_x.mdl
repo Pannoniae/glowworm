@@ -1,0 +1,286 @@
+;Exported by:	 TigerF
+;Date:			 03.05.2021 22:03:39
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\Early WW2 tanks\russian\Universal2\universal2_x.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.6;steermax=30;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position -2.8889 	 -0.0049 	 16.4954}
+			{LODView
+				{VolumeView "body.ply"}
+				{VolumeView "body_lod1.ply"}
+			}
+			{bone "engine"
+				{parameters "id=engine;"}
+				{animation
+					{sequence "break" {file "engine_b.anm"}{speed 0.7}}
+				}
+				{Position 6.61 	 0 	 -0.0398}
+				{LODView
+					{VolumeView "engine.ply"}
+					{VolumeView "engine_lod1.ply"}
+				}
+				{bone "belt"
+					{parameters "id=engine;"}
+					{Position 9.0951 	 0 	 8.9082}
+					{VolumeView "belt.ply"}
+				}
+				{bone "fan"
+					{parameters "id=engine;"}
+					{Position 10.2239 	 0 	 8.1787}
+					{VolumeView "fan.ply"}
+				}
+				{bone "kardan"
+					{parameters "id=engine;"}
+					{Position -13.9943 	 0 	 0}
+					{VolumeView "kardan.ply"}
+				}
+				{bone "ehood"
+					{parameters "id=engine;"}
+					{Position 1.023 	 -0.0045 	 15.1176}
+					{VolumeView "ehood.ply"}
+				}
+				{bone "lamp"
+					{parameters "id=engine;"}
+					{Position 13.8899 	 -6.2001 	 12.2943}
+					{VolumeView "lamp.ply"}
+				}
+				{bone "genaxle"
+					{parameters "id=engine;"}
+					{Position 4.6237 	 -4.1785 	 3.8907}
+					{VolumeView "genaxle.ply"}
+				}
+			}
+			{bone revolute "steer2"
+				{parameters "id=body;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 -1 	 0
+					0 	 0 	 -1
+					25.9944 	 0 	 15.8991
+				}
+				{VolumeView "steer2.ply"}
+			}
+			{bone revolute "steer1"
+				{parameters "id=body;"}
+				{matrix34
+					0 	 0 	 1
+					0 	 1 	 0
+					-1 	 0 	 0
+					22.7683 	 -0.0078 	 15.1931
+				}
+				{VolumeView "steer1.ply"}
+			}
+			{bone revolute "steer"
+				{parameters "id=body;"}
+				{matrix34
+					0 	 0 	 -1
+					0 	 1 	 0
+					1 	 0 	 0
+					1.0326 	 0 	 16.793
+				}
+				{VolumeView "steer.ply"}
+			}
+			{bone "fuel"
+				{parameters "id=body;"}
+				{Position -5.9348 	 -0.0052 	 13.1617}
+				{VolumeView "fuel.ply"}
+			}
+			{bone "transmission"
+				{parameters "id=body;"}
+				{Position -15.7722 	 2.0411 	 3.0252}
+				{VolumeView "transmission.ply"}
+			}
+			{bone "detail1"
+				{parameters "id=body;"}
+				{Position 0 	 0 	 0}
+				{LODView
+					{VolumeView "detail1.ply"}
+					{VolumeView "detail1_lod1.ply"}
+				}
+			}
+		}
+		{bone "pivot_front"
+			{Position 23.1624 	 0 	 13.3479}
+			{bone revolute "steerl1"
+				{matrix34
+					1 	 0 	 0
+					0 	 -1 	 0
+					0 	 0 	 -1
+					0 	 11.8853 	 0.9188
+				}
+				{bone prizmatic "suspension_l1"
+					{limits -0.02 0.02}
+					{speed 0.05}
+					{matrix34
+						1 	 0 	 0
+						0 	 -1 	 0
+						0 	 0 	 -1
+						0 	 -1.505 	 5.1243
+					}
+					{bone revolute "wheell1"
+						{parameters "id=wheelleft1;radius=0.46;"}
+						{orientation
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+						}
+						{LODView
+							{VolumeView "wheell1.ply"}
+							{VolumeView "wheell1_lod1.ply"}
+						}
+					}
+				}
+				{bone "steerl"
+					{parameters "id=body;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 -1 	 0
+						0 	 0 	 -1
+						0 	 0 	 0
+					}
+					{VolumeView "steerl.ply"}
+				}
+			}
+			{bone revolute "steerr1"
+				{matrix34
+					1 	 0 	 0
+					0 	 -1 	 0
+					0 	 0 	 -1
+					-0.0005 	 -11.8952 	 0.9189
+				}
+				{bone prizmatic "suspension_r1"
+					{limits -0.02 0.02}
+					{speed 0.05}
+					{matrix34
+						1 	 0 	 0
+						0 	 -1 	 0
+						0 	 0 	 -1
+						0.0006 	 1.5053 	 5.1244
+					}
+					{bone revolute "wheelr1"
+						{parameters "id=wheelright1;radius=0.46;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							0 	 0 	 0
+						}
+						{LODView
+							{VolumeView "wheelr1.ply"}
+							{VolumeView "wheelr1_lod1.ply"}
+						}
+					}
+				}
+				{bone "steerr"
+					{parameters "id=body;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 -1 	 0
+						0 	 0 	 -1
+						0 	 0 	 0
+					}
+					{VolumeView "steerr.ply"}
+				}
+			}
+			{bone "axlefront"
+				{parameters "id=body;"}
+				{Position 0 	 0 	 0}
+				{VolumeView "axlefront.ply"}
+			}
+			{bone "rod"
+				{parameters "id=body;"}
+				{Position -4.1668 	 -0.0042 	 1.2842}
+				{VolumeView "rod.ply"}
+			}
+		}
+		{bone "pivot_back"
+			{Position -24.0708 	 0 	 11.944}
+			{bone prizmatic "suspension_r2"
+				{limits -0.02 0.02}
+				{speed 0.05}
+				{Position 0 	 -14.6798 	 0}
+				{bone revolute "wheelr2"
+					{parameters "id=wheelright2;radius=0.6;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 0 	 0
+					}
+					{LODView
+						{VolumeView "wheelr2.ply"}
+						{VolumeView "wheelr2_lod1.ply"}
+					}
+				}
+			}
+			{bone prizmatic "suspension_l2"
+				{limits -0.02 0.02}
+				{speed 0.05}
+				{Position 0 	 14.6642 	 0}
+				{bone revolute "wheell2"
+					{parameters "id=wheelleft2;radius=0.6;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 0 	 0
+					}
+					{LODView
+						{VolumeView "wheell2.ply"}
+						{VolumeView "wheell2_lod1.ply"}
+					}
+				}
+			}
+		}
+	}
+}
+{volume "wheelleft1"
+	{cylinder 9.23658 2.18989}
+	{bone "wheell1"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 1.0099
+	}
+}
+{volume "wheelleft2"
+	{cylinder 12.0301 4.53142}
+	{bone "wheell2"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 0.2936
+	}
+}
+{volume "wheelright1"
+	{cylinder 9.23658 2.18989}
+	{bone "wheelr1"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 -0.9465
+	}
+}
+{volume "wheelright2"
+	{cylinder 12.0301 4.53142}
+	{bone "wheelr2"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 -0.273
+	}
+}

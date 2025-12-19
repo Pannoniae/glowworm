@@ -1,0 +1,290 @@
+;Exported by:	 TigerF
+;Date:			 13.11.2024 14:31:39
+;File:			 D:\GOH\3dsmax9_saves\scenes\GoH_3d_vehicle_eng\vehicles\btr\AEC_mk1\aec_mk1_x.max
+{skeleton
+	{bone "basis"
+		{parameters "steermax=25;wheelradius=0.55;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position 0.0965 	 0.0375 	 11.9015}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{parameters "id=turret;"}
+				{animation
+					{sequence "break" {file "turret_b.anm"}{speed 0.7}}
+				}
+				{speed 0.008}
+				{Position 1.9187 	 0 	 22.8616}
+				{VolumeView "turret.ply"}
+				{bone "turrent_hatch1"
+					{parameters "id=turret;"}
+					{Position 0.265 	 -3.0516 	 13.3372}
+					{VolumeView "turrent_hatch1.ply"}
+				}
+				{bone "turret_hatch_aft"
+					{parameters "id=turret;"}
+					{Position -7.9455 	 3.2378 	 12.7613}
+					{VolumeView "turret_hatch_aft.ply"}
+				}
+				{bone revolute "gun_rot"
+					{parameters "id=gun;"}
+					{animation
+						{sequence "break" {file "gun_b.anm"}{speed 0.7}}
+					}
+					{limits -10 25}
+					{speed 0.02}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 1
+						0 	 -1 	 0
+						10.2452 	 0.1958 	 7.0316
+					}
+					{bone "mantlet"
+						{parameters "id=gun;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							0 	 0 	 0
+						}
+						{VolumeView "mantlet.ply"}
+					}
+					{bone "gun"
+						{parameters "id=gun;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							5.9971 	 -0.4134 	 0.0476
+						}
+						{VolumeView "gun.ply"}
+					}
+				}
+			}
+			{bone "engine"
+				{parameters "id=engine;"}
+				{animation
+					{sequence "break" {file "engine_b.anm"}{speed 0.7}}
+				}
+				{Position -31.0069 	 0 	 14.157}
+				{VolumeView "engine.ply"}
+				{bone "engine_hatch1"
+					{parameters "id=engine;"}
+					{matrix34
+						0.9904 	 0 	 0.1382
+						0 	 1 	 0
+						-0.1382 	 0 	 0.9904
+						10.6245 	 0 	 8.2973
+					}
+					{VolumeView "engine_hatch1.ply"}
+				}
+				{bone "engine_hatch2"
+					{parameters "id=engine;"}
+					{matrix34
+						0.9904 	 0 	 0.1382
+						0 	 1 	 0
+						-0.1382 	 0 	 0.9904
+						10.6245 	 0 	 8.2973
+					}
+					{VolumeView "engine_hatch2.ply"}
+				}
+			}
+			{bone "windshield"
+				{parameters "id=body;"}
+				{Position 31.045 	 0 	 20.7874}
+				{VolumeView "windshield.ply"}
+				{bone "glass"
+					{parameters "id=body;"}
+					{VolumeView "glass.ply"}
+				}
+			}
+			{bone "front_hatch"
+				{parameters "id=body;"}
+				{Position 19.8605 	 5.3867 	 23.2028}
+				{VolumeView "front_hatch.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 35.0577 	 0 	 11.7726}
+			{bone revolute "steerl1"
+				{limits -25 25}
+				{matrix34
+					1 	 0 	 0
+					0 	 -1 	 0
+					0 	 0 	 -1
+					0 	 17.726 	 0
+				}
+				{bone prizmatic "suspension_l1"
+					{limits -0.1 0.1}
+					{speed 0.08}
+					{orientation
+						1 	 0 	 0
+						0 	 -1 	 0
+						0 	 0 	 -1
+					}
+					{bone "breakdruml"
+						{parameters "id=body;"}
+						{VolumeView "breakdruml.ply"}
+					}
+					{bone revolute "wheell1"
+						{parameters "id=wheelleft1;radius=0.55;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							0 	 4.1411 	 0
+						}
+						{VolumeView "wheell1.ply"}
+					}
+				}
+			}
+			{bone revolute "steerr1"
+				{limits -25 25}
+				{matrix34
+					1 	 0 	 0
+					0 	 -1 	 0
+					0 	 0 	 -1
+					0 	 -17.7071 	 0
+				}
+				{bone prizmatic "suspension_r1"
+					{limits -0.1 0.1}
+					{speed 0.08}
+					{orientation
+						1 	 0 	 0
+						0 	 -1 	 0
+						0 	 0 	 -1
+					}
+					{bone "breakdrumr"
+						{parameters "id=body;"}
+						{VolumeView "breakdrumr.ply"}
+					}
+					{bone revolute "wheelr1"
+						{parameters "id=wheelright1;radius=0.55;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							0 	 -4.085 	 0
+						}
+						{VolumeView "wheelr1.ply"}
+					}
+				}
+			}
+			{bone "susp_front"
+				{parameters "id=body;"}
+				{VolumeView "susp_front.ply"}
+			}
+			{bone prizmatic "suspension_l3"
+				{limits -0.1 0.1}
+				{speed 0.08}
+				{Position 0 	 17.726 	 0}
+				{bone revolute "wheell3"
+					{parameters "id=wheelleft3;radius=0.595;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+				}
+			}
+			{bone prizmatic "suspension_r3"
+				{limits -0.1 0.1}
+				{speed 0.08}
+				{Position 0 	 -17.7071 	 0}
+				{bone revolute "wheelr3"
+					{parameters "id=wheelright3;radius=0.595;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+				}
+			}
+		}
+		{bone "pivot_back"
+			{Position -31.3063 	 0 	 11.7726}
+			{bone prizmatic "suspension_r2"
+				{limits -0.1 0.1}
+				{speed 0.08}
+				{Position 0 	 -17.7071 	 0}
+				{bone revolute "wheelr2"
+					{parameters "id=wheelright2;radius=0.55;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 -4.085 	 0
+					}
+					{VolumeView "wheelr2.ply"}
+				}
+			}
+			{bone prizmatic "suspension_l2"
+				{limits -0.1 0.1}
+				{speed 0.08}
+				{Position 0 	 17.726 	 0}
+				{bone revolute "wheell2"
+					{parameters "id=wheelleft2;radius=0.55;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 4.1411 	 0
+					}
+					{VolumeView "wheell2.ply"}
+				}
+			}
+			{bone "susp_back"
+				{parameters "id=body;"}
+				{VolumeView "susp_back.ply"}
+			}
+		}
+	}
+}
+{volume "wheelleft1"
+	{cylinder 10.8268 7.82752}
+	{bone "wheell1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}
+{volume "wheelleft2"
+	{cylinder 10.8268 7.82752}
+	{bone "wheell2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}
+{volume "wheelright1"
+	{cylinder 10.8268 7.82752}
+	{bone "wheelr1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.0133
+	}
+}
+{volume "wheelright2"
+	{cylinder 10.8268 7.82752}
+	{bone "wheelr2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}

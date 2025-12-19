@@ -1,0 +1,112 @@
+;Exported by:	 guita
+;Date:			 02.03.2025 11:00:14
+;File:			 G:\SVN\Working Resources\GatesOfHell\GoH_3d_vehicle_eng\vehicles\cannon\81mm_ML3_mortar\81mm_ml3_xx.max
+{skeleton
+	{bone revolute "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0.033 	 0 	 0.9492}
+			{VolumeView "body.ply"}
+			{bone "part1"
+				{parameters "id=part1;"}
+				{matrix34
+					0.9951 	 0 	 0.0992
+					0 	 1 	 0
+					-0.0992 	 0 	 0.9951
+					-0.0309 	 -0.0068 	 -0.172
+				}
+				{VolumeView "part1.ply"}
+			}
+			{bone "part2"
+				{parameters "id=part2;"}
+				{Position 9.6276 	 0 	 15.1287}
+				{VolumeView "part2.ply"}
+			}
+			{bone "part3"
+				{parameters "id=part3;"}
+				{matrix34
+					0.891 	 0 	 0.454
+					0 	 1 	 0
+					-0.454 	 0 	 0.891
+					12.7131 	 2.4901 	 9.0906
+				}
+				{VolumeView "part3.ply"}
+			}
+			{bone "part4"
+				{parameters "id=part4;"}
+				{matrix34
+					0.891 	 0 	 0.454
+					0 	 1 	 0
+					-0.454 	 0 	 0.891
+					12.7131 	 -2.4901 	 9.0906
+				}
+				{VolumeView "part4.ply"}
+			}
+		}
+	}
+}
+{volume "body1"
+	{box 8.44274 5.47177 0.993369}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0.0007
+		0 	 1 	 0
+		-0.0007 	 0 	 1
+		-0.9453 	 0 	 -0.5494
+	}
+}
+{volume "body2"
+	{cylinder 0.944743 26.172}
+	{bone "part1"}
+	{matrix34
+		0.8408 	 0 	 -0.5413
+		0 	 1 	 0
+		0.5413 	 0 	 0.8408
+		6.8198 	 0.0203 	 10.6104
+	}
+}
+{volume "body3"
+	{cylinder 0.403121 13.313}
+	{bone "part2"}
+	{matrix34
+		-0.3317 	 0.9286 	 -0.1661
+		-0.8295 	 -0.371 	 -0.4175
+		-0.4493 	 -0.0007 	 0.8934
+		3.5632 	 0.008 	 -7.014
+	}
+}
+{volume "body4"
+	{polyhedron "body4.vol"}
+	{bone "part2"}
+	{matrix34
+		0.8918 	 0 	 0.4525
+		0 	 1 	 0
+		-0.4525 	 0 	 0.8918
+		3.0446 	 -0.013 	 -4.7657
+	}
+}
+{volume "body5"
+	{cylinder 0.390319 12.0897}
+	{bone "part4"}
+	{matrix34
+		0.9955 	 0.0918 	 -0.024
+		-0.0949 	 0.9665 	 -0.2383
+		0.0013 	 0.2395 	 0.9709
+		-0.0315 	 -1.2227 	 -5.6948
+	}
+}
+{volume "body6"
+	{cylinder 0.403121 12.0897}
+	{bone "part3"}
+	{matrix34
+		-0.3122 	 0.924 	 0.2206
+		-0.95 	 -0.3018 	 -0.0804
+		-0.0077 	 -0.2346 	 0.9721
+		0.0266 	 1.3133 	 -5.6549
+	}
+}

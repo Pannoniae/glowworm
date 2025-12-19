@@ -1,0 +1,138 @@
+;Exported by:	 TigerF
+;Date:			 17.12.2023 17:50:56
+;File:			 D:\GOH\3dsmax9_saves\scenes\_GoH_3D_vehicle_usa\vehicles\trailer\ammo_trailer_us\ammo_trailer_us_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0 	 0 	 6.4342}
+			{VolumeView "body.ply"}
+		}
+		{bone "pivot_front"
+			{Position 0 	 0 	 7.4596}
+			{bone prizmatic "suspension_r1"
+				{limits -0.05 0.05}
+				{speed 0.15}
+				{Position 0 	 -13.3884 	 0}
+				{bone revolute "wheelr"
+					{parameters "id=wheelright;radius=0.23;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr.ply"}
+				}
+				{bone "drumr"
+					{parameters "id=body;"}
+					{matrix34
+						-0.9962 	 0 	 -0.0872
+						0 	 -1 	 0
+						-0.0872 	 0 	 0.9962
+						0.007 	 26.2637 	 0.0104
+					}
+					{VolumeView "drumr.ply"}
+				}
+			}
+			{bone prizmatic "suspension_l1"
+				{limits -0.05 0.05}
+				{speed 0.15}
+				{Position 0 	 13.3636 	 0}
+				{bone revolute "wheell"
+					{parameters "id=wheelleft;radius=0.23;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell.ply"}
+				}
+				{bone "druml"
+					{parameters "id=body;"}
+					{matrix34
+						-0.9962 	 0 	 -0.0872
+						0 	 -1 	 0
+						-0.0872 	 0 	 0.9962
+						0.007 	 -26.2617 	 0.0104
+					}
+					{VolumeView "druml.ply"}
+				}
+			}
+			{bone "susp"
+				{parameters "id=body;"}
+				{matrix34
+					-0.9962 	 0 	 -0.0872
+					0 	 -1 	 0
+					-0.0872 	 0 	 0.9962
+					0.007 	 -0.0325 	 0.0104
+				}
+				{VolumeView "susp.ply"}
+			}
+		}
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{matrix34
+		0.9962 	 0 	 0.0872
+		0 	 1 	 0
+		-0.0872 	 0 	 0.9962
+		-2.0019 	 -0.0192 	 8.9255
+	}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{matrix34
+		0.9962 	 0 	 0.0872
+		0 	 1 	 0
+		-0.0872 	 0 	 0.9962
+		-2.0019 	 -0.0192 	 8.9255
+	}
+}
+{volume "body3"
+	{polyhedron "body3.vol"}
+	{bone "body"}
+	{matrix34
+		0.9962 	 0 	 0.0872
+		0 	 1 	 0
+		-0.0872 	 0 	 0.9962
+		-25.244 	 0.0139 	 2.1367
+	}
+}
+{volume "hole1"
+	{box 34.6125 19.1489 8.92591}
+	{bone "body"}
+	{matrix34
+		0.9962 	 0 	 0.0872
+		0 	 1 	 0
+		-0.0872 	 0 	 0.9962
+		-2.1317 	 0.1131 	 10.0716
+	}
+}
+{volume "wheelleft"
+	{cylinder 4.52756 3.44114}
+	{bone "wheell"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.0111
+	}
+}
+{volume "wheelright"
+	{cylinder 4.52756 3.48367}
+	{bone "wheelr"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.0014
+	}
+}

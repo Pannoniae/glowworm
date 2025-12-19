@@ -1,0 +1,172 @@
+;Exported by:	 guita
+;Date:			 07.06.2021 19:01:41
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_export\3d_vehicles\GENERIC\Train\wagon1_freight\wagon1_freight_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0.5003 	 0 	 23.1296}
+			{VolumeView "body.ply"}
+			{bone "pivot_back"
+				{parameters "id=body;"}
+				{Position -38.0212 	 0 	 -10.4837}
+				{VolumeView "pivot_back.ply"}
+				{bone revolute "wheell2"
+					{parameters "id=wheelleft2;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 15.8955 	 0
+					}
+					{VolumeView "wheell2.ply"}
+				}
+				{bone revolute "wheelr2"
+					{parameters "id=wheelright2;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 -15.8955 	 0
+					}
+					{VolumeView "wheelr2.ply"}
+				}
+			}
+			{bone "pivot_front"
+				{parameters "id=body;"}
+				{Position 37.0175 	 0 	 -10.4837}
+				{VolumeView "pivot_front.ply"}
+				{bone revolute "wheell1"
+					{parameters "id=wheelleft1;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 15.8955 	 0
+					}
+					{VolumeView "wheell1.ply"}
+				}
+				{bone revolute "wheelr1"
+					{parameters "id=wheelright1;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 -15.8955 	 0
+					}
+					{VolumeView "wheelr1.ply"}
+				}
+			}
+			{bone "part1"
+				{parameters "id=part1;"}
+				{Position -1.0516 	 30.9511 	 23.0797}
+				{VolumeView "part1.ply"}
+			}
+			{bone "part2"
+				{parameters "id=part2;"}
+				{Position 0.1332 	 -31.3833 	 22.7325}
+				{VolumeView "part2.ply"}
+			}
+		}
+	}
+}
+{volume "body1"
+	{box 127.618 59.7884 5.258}
+	{bone "body"}
+	{Position -0.6292 	 0 	 0.7177}
+}
+{volume "body2"
+	{box 55.9157 59.7884 4.66061}
+	{bone "body"}
+	{Position 34.4768 	 0 	 47.0733}
+}
+{volume "body4"
+	{box 46.8483 59.7704 42.1608}
+	{bone "body"}
+	{Position 40.0131 	 0 	 24.4271}
+}
+{volume "part1a"
+	{box 1.87308 41.7487 0.668081}
+	{bone "part1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		18.0942 	 -0.7752 	 -0.1818
+	}
+}
+{volume "part1b"
+	{box 1.87308 41.7487 0.668081}
+	{bone "part1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		-18.0663 	 -0.7752 	 -0.1818
+	}
+}
+{volume "part2a"
+	{box 1.82063 41.7487 0.668081}
+	{bone "part2"}
+	{matrix34
+		0.9998 	 0 	 -0.0175
+		0.0175 	 0 	 0.9998
+		0 	 -1 	 0
+		18.1833 	 0.4345 	 -0.2383
+	}
+}
+{volume "part2b"
+	{box 1.82063 41.7487 0.668081}
+	{bone "part2"}
+	{matrix34
+		0.9998 	 0 	 -0.0175
+		0.0175 	 0 	 0.9998
+		0 	 -1 	 0
+		-18.1863 	 1.0349 	 0.767
+	}
+}
+{volume "wheelleft1"
+	{cylinder 11.5844 2.54319}
+	{bone "wheell1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.6002
+	}
+}
+{volume "wheelleft2"
+	{cylinder 11.5844 2.54319}
+	{bone "wheell2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.3459
+	}
+}
+{volume "wheelright1"
+	{cylinder 11.5844 2.54319}
+	{bone "wheelr1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.5327
+	}
+}
+{volume "wheelright2"
+	{cylinder 11.5844 2.54319}
+	{bone "wheelr2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.3744
+	}
+}

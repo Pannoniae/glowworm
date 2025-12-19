@@ -1,0 +1,168 @@
+;Exported by:	 nic21
+;Date:			 08.08.2025 20:58:39
+;File:			 C:\Gates of Hell SVN\GoH_3d_vehicle_fin\3d vehicles\Cannon\210mm_H17\210mm_H17_x.max
+{skeleton
+	{bone revolute "basis"
+		{parameters "wheelradius=0.72;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position 0 	 0 	 13.7598}
+			{VolumeView "body.ply"}
+			{bone revolute "gun_rot"
+				{parameters "id=gun;"}
+				{animation
+					{sequence "break" {file "gun_b.anm"}{speed 0.7}}
+				}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 1
+					0 	 -1 	 0
+					-5.8268 	 0 	 12.874
+				}
+				{VolumeView "gun_rot.ply"}
+				{bone "gun"
+					{parameters "id=gun;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						55.8858 	 5.0197 	 0
+					}
+					{VolumeView "gun.ply"}
+					{bone "breech_lock"
+						{parameters "id=gun;"}
+						{Position -57.2047 	 -4.311 	 4.0323}
+						{VolumeView "breech_lock.ply"}
+					}
+					{bone "breech"
+						{parameters "id=gun;"}
+						{Position -55.3519 	 -0.1789 	 -0.0365}
+						{VolumeView "breech.ply"}
+					}
+					{bone "handle1_1"
+						{parameters "id=gun;"}
+						{Position -61.7623 	 -2.2099 	 5.4072}
+						{VolumeView "handle1_1.ply"}
+					}
+					{bone "handle1_2"
+						{parameters "id=gun;"}
+						{Position -61.7635 	 2.2047 	 5.5757}
+						{VolumeView "handle1_2.ply"}
+					}
+				}
+			}
+			{bone "valve1_1"
+				{parameters "id=body;"}
+				{Position 15.8973 	 3.6244 	 0.8155}
+				{VolumeView "valve1_1.ply"}
+			}
+			{bone "seatfright"
+				{parameters "id=body;"}
+				{Position -24.8723 	 -10.2559 	 -2.3425}
+				{VolumeView "seatfright.ply"}
+			}
+			{bone "seatfleft"
+				{parameters "id=body;"}
+				{Position -24.8723 	 9.5669 	 -4.1929}
+				{VolumeView "seatfleft.ply"}
+			}
+			{bone "gun_lock"
+				{parameters "id=body;"}
+				{Position 12.4622 	 0 	 9.7405}
+				{visibility 0}
+				{VolumeView "gun_lock.ply"}
+			}
+			{bone "tension_bar_gun"
+				{parameters "id=body;"}
+				{Position 5.6305 	 0 	 7.9097}
+				{VolumeView "tension_bar_gun.ply"}
+			}
+			{bone "spade"
+				{parameters "id=body;"}
+				{matrix34
+					-0.342 	 0 	 -0.9397
+					0 	 1 	 0
+					0.9397 	 0 	 -0.342
+					-60.3935 	 0 	 -7.6575
+				}
+				{VolumeView "spade.ply"}
+			}
+			{bone "tow_bar"
+				{parameters "id=body;"}
+				{Position -74.8819 	 0.0197 	 -6.1614}
+				{VolumeView "tow_bar.ply"}
+			}
+			{bone "aim_v1_1"
+				{parameters "id=body;"}
+				{matrix34
+					0.9455 	 0 	 -0.3256
+					0 	 1 	 0
+					0.3256 	 0 	 0.9455
+					-13.9454 	 8.486 	 9.9311
+				}
+				{VolumeView "aim_v1_1.ply"}
+			}
+			{bone "aim_v1_2"
+				{parameters "id=body;"}
+				{matrix34
+					0.9455 	 0 	 -0.3256
+					0 	 1 	 0
+					0.3256 	 0 	 0.9455
+					-15.5206 	 8.486 	 10.4763
+				}
+				{VolumeView "aim_v1_2.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0 	 0 	 13.7656}
+			{bone revolute "wheell"
+				{parameters "id=wheelleft;radius=0.72;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					0 	 16.063 	 0
+				}
+				{VolumeView "wheell.ply"}
+			}
+			{bone revolute "wheelr"
+				{parameters "id=wheelright;radius=0.72;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					0 	 -16.063 	 0
+				}
+				{VolumeView "wheelr.ply"}
+			}
+		}
+	}
+}
+{volume "wheelleft"
+	{cylinder 14.1732 4.80315}
+	{bone "wheell"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -1.0827
+	}
+}
+{volume "wheelright"
+	{cylinder 14.1732 4.80315}
+	{bone "wheelr"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 1.0778
+	}
+}

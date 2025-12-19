@@ -1,0 +1,53 @@
+{game_entity
+	(include "/properties/vehicle_xx.ext")
+	{extension "ostwind_xx.mdl"}
+	{volume "body1"			; Hull
+		{thickness 30
+			{front 80}		; 50mm base + 30mm plate
+			{top 20}		; Glacis
+			{rear 10}
+			{bottom 10}
+		}
+	}
+	{volume "body2"			; Superstructure
+		{thickness 30
+			{front 80}		; 50mm base + 30mm plate
+			{top 12}
+			{rear 10}
+		}
+	}
+	{volume "engine1"
+		{thickness 30
+			{front 10}
+			{rear 20}
+			{bottom 10}
+		}
+	}
+	{volume "engine2"
+		{thickness 30
+			{front 10}
+			{top 10}
+			{rear 20}
+		}
+	}
+	{volume "turret1"	;main
+		{thickness 25}
+		{able {holed}}
+	}
+	{volume "turret2"	;ring
+		{thickness 25}
+	}
+	{volume "barrel1"
+		{thickness 20}
+	}
+	{volume "barrel2"
+		{thickness 20}
+	}
+	{volume "barrel3"
+		{thickness 20}
+	}
+	{volume "part3"
+		{thickness 10}
+	}
+	("tracks" thickness(20))
+}

@@ -1,0 +1,214 @@
+;Exported by:	 nic21
+;Date:			 31.07.2025 21:13:23
+;File:			 C:\Gates of Hell SVN\GoH_3d_vehicle_fin\3d vehicles\Cannon\76mm_K00_M1900\76mm_k00_xx.max
+{skeleton
+	{bone revolute "basis"
+		{parameters "wheelradius=0.7;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0 	 0 	 13.878}
+			{VolumeView "body.ply"}
+			{bone "recoil_spring"
+				{parameters "id=body;"}
+				{Position -21.5674 	 0 	 -7.9581}
+				{VolumeView "recoil_spring.ply"}
+			}
+			{bone "recoil_mechanism"
+				{parameters "id=gun;"}
+				{matrix34
+					0.9732 	 -0.0145 	 0.2296
+					0.0179 	 0.9998 	 -0.0127
+					-0.2293 	 0.0165 	 0.9732
+					-6.9628 	 0 	 1.7649
+				}
+				{VolumeView "recoil_mechanism.ply"}
+				{bone "gun_rot_bar"
+					{parameters "id=gun;"}
+					{matrix34
+						0.9744 	 0 	 -0.225
+						0 	 1 	 0
+						0.225 	 0 	 0.9744
+						-2.3549 	 -4.3903 	 1.8944
+					}
+					{VolumeView "gun_rot_bar.ply"}
+				}
+				{bone "rotating_fake"
+					{parameters "id=gun;"}
+					{matrix34
+						0.9744 	 0 	 -0.225
+						0 	 1 	 0
+						0.225 	 0 	 0.9744
+						8.5739 	 0 	 2.1032
+					}
+					{VolumeView "rotating_fake.ply"}
+				}
+				{bone revolute "gun_rot"
+					{parameters "id=gun;"}
+					{matrix34
+						0.9958 	 0 	 -0.0919
+						0.0919 	 0 	 0.9958
+						0 	 -1 	 0
+						8.5739 	 0 	 2.1032
+					}
+					{bone "gun"
+						{parameters "id=gun;"}
+						{orientation
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+						}
+						{VolumeView "gun.ply"}
+						{bone "breech"
+							{parameters "id=gun;"}
+							{matrix34
+								0.5217 	 0.8467 	 0.1041
+								-0.8458 	 0.5293 	 -0.0661
+								-0.1111 	 -0.0535 	 0.9924
+								-16.2598 	 -2.5197 	 0.1642
+							}
+							{VolumeView "breech.ply"}
+							{bone "hinge1_1"
+								{parameters "id=gun;"}
+								{matrix34
+									0.9322 	 -0.2129 	 -0.2927
+									0.225 	 0.9743 	 0.008
+									0.2835 	 -0.0733 	 0.9562
+									-2.4016 	 2.5198 	 -1.2468
+								}
+								{VolumeView "hinge1_1.ply"}
+							}
+							{bone "hinge1_2"
+								{parameters "id=gun;"}
+								{matrix34
+									0.866 	 0 	 0.5
+									0 	 1 	 0
+									-0.5 	 0 	 0.866
+									-2.4016 	 2.5198 	 -1.2468
+								}
+								{VolumeView "hinge1_2.ply"}
+							}
+						}
+					}
+				}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0.0984 	 0 	 13.878}
+			{bone revolute "wheelr"
+				{parameters "id=wheelright;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-0.0984 	 -13.4252 	 0
+				}
+				{VolumeView "wheelr.ply"}
+			}
+			{bone revolute "wheell"
+				{parameters "id=wheelleft;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-0.0984 	 13.4252 	 0
+				}
+				{VolumeView "wheell.ply"}
+			}
+		}
+	}
+}
+{obstacle "obstacle1"
+	{obb2
+		{center -33.5913 -0}
+		{extent 16.8 7.28}
+		{axis 1 0}
+	}
+	{rotate}
+}
+{obstacle "obstacle"
+	{obb2
+		{center 0 0}
+		{extent 16.8 20}
+		{axis 1 0}
+	}
+	{rotate}
+}
+{volume "barrel1"
+	{polyhedron "barrel1.vol"}
+	{bone "recoil_mechanism"}
+	{matrix34
+		0.9744 	 0 	 -0.225
+		0 	 1 	 0
+		0.225 	 0 	 0.9744
+		-0.0973 	 0 	 -0.3193
+	}
+}
+{volume "barrel2"
+	{polyhedron "barrel2.vol"}
+	{bone "gun"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 1 	 0
+		1 	 0 	 0
+		6.4749 	 0 	 -0.0197
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position -0.315 	 0 	 -0.7283}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+}
+{volume "body3"
+	{cylinder 1.57738 1.33869}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		0.1575 	 12.7362 	 0.0394
+	}
+}
+{volume "body4"
+	{polyhedron "body4.vol"}
+	{bone "body"}
+	{Position 0.277 	 0 	 -2.2985}
+}
+{volume "body5"
+	{polyhedron "body5.vol"}
+	{bone "body"}
+	{Position 0.0777 	 -9.4411 	 -0.726}
+}
+{volume "body6"
+	{polyhedron "body6.vol"}
+	{bone "body"}
+	{Position 0.0777 	 9.4488 	 -0.726}
+}
+{volume "body7"
+	{cylinder 1.57738 1.33869}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		0.1575 	 -12.7362 	 0.0394
+	}
+}
+{volume "wheelleft"
+	{cylinder 13.7795 1.65999}
+	{bone "wheell"}
+	{Position 0.2065 	 0 	 3.0907}
+}
+{volume "wheelright"
+	{cylinder 13.7795 1.65999}
+	{bone "wheelr"}
+	{Position 0.2065 	 0 	 -3.0906}
+}

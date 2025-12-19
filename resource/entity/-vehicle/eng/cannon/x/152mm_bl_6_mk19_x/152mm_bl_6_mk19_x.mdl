@@ -1,0 +1,206 @@
+;Exported by:	 nic21
+;Date:			 09.11.2025 19:35:22
+;File:			 C:\Gates of Hell SVN\GoH_3d_vehicle_eng\vehicles\cannon\152mm_BL6_mk19\152mm_BL6_mk19_x.max
+{skeleton
+	{bone revolute "basis"
+		{parameters "wheelradius=0.8;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.65}}
+			}
+			{matrix34
+				1 	 0 	 0
+				0 	 0 	 -1
+				0 	 1 	 0
+				0 	 0.0464 	 16.4304
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{parameters "id=body;"}
+				{limits -4 4}
+				{speed 0.002}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 1
+					0 	 -1 	 0
+					12.5941 	 -1.9107 	 0
+				}
+				{VolumeView "turret.ply"}
+				{bone revolute "gun_rot"
+					{parameters "id=gun;"}
+					{animation
+						{sequence "break" {file "gun_b.anm"}{speed 0.65}}
+					}
+					{limits -5 45}
+					{speed 0.003}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 1
+						0 	 -1 	 0
+						-7.0021 	 0 	 8.6115
+					}
+					{VolumeView "gun_rot.ply"}
+					{bone "gun"
+						{parameters "id=gun;"}
+						{matrix34
+							0 	 0 	 1
+							1 	 0 	 0
+							0 	 1 	 0
+							-9.3535 	 2.8112 	 0.0003
+						}
+						{VolumeView "gun.ply"}
+						{bone "breech"
+							{parameters "id=gun;"}
+							{Position 5.6359 	 -18.0167 	 -2.7625}
+							{VolumeView "breech.ply"}
+							{bone "handle"
+								{parameters "id=gun;"}
+								{Position 0.8041 	 -2.9969 	 2.6876}
+								{VolumeView "handle.ply"}
+							}
+						}
+					}
+				}
+				{bone "aim_ver"
+					{parameters "id=body;"}
+					{matrix34
+						0 	 -1 	 0
+						1 	 0 	 0
+						0 	 0 	 1
+						-37.8703 	 11.3885 	 -1.644
+					}
+					{VolumeView "aim_ver.ply"}
+				}
+				{bone "rod"
+					{parameters "id=body;"}
+					{Position -12.6765 	 7.2171 	 12.8774}
+					{VolumeView "rod.ply"}
+				}
+			}
+			{bone "aim_hor"
+				{parameters "id=body;"}
+				{matrix34
+					0 	 0 	 -1
+					1 	 0 	 0
+					0 	 -1 	 0
+					-20.9434 	 2.4255 	 17.7922
+				}
+				{VolumeView "aim_hor.ply"}
+			}
+			{bone "fixer_helper"
+				{matrix34
+					0.9799 	 -0.1994 	 0
+					0 	 0 	 1
+					-0.1994 	 -0.9799 	 0
+					-23.5652 	 2.8734 	 -11.5461
+				}
+				{bone "fixer"
+					{parameters "id=body;"}
+					{Position 0 	 0 	 0}
+					{VolumeView "fixer.ply"}
+				}
+			}
+			{bone "rod_hor"
+				{parameters "id=body;"}
+				{matrix34
+					-1 	 0 	 0
+					0 	 0 	 -1
+					0 	 -1 	 0
+					-20.9434 	 0.8792 	 13.5374
+				}
+				{VolumeView "rod_hor.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0 	 0.0464 	 16.4304}
+			{bone prizmatic "suspension_r1"
+				{limits -0.06 0.02}
+				{speed 0.09}
+				{Position 0 	 -19.2699 	 0.0001}
+				{bone revolute "wheelr"
+					{parameters "id=wheelright;radius=0.8;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 0 	 0
+					}
+					{LODView
+						{VolumeView "wheelr.ply"}
+						{VolumeView "wheelr_lod1.ply"}
+					}
+				}
+				{bone "wheelr_detail"
+					{parameters "id=wheelright;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 0 	 0
+					}
+					{LODView
+						{VolumeView "wheelr_detail.ply"}
+						{VolumeView "wheelr_detail_lod1.ply"}
+					}
+				}
+			}
+			{bone prizmatic "suspension_l1"
+				{limits -0.06 0.02}
+				{speed 0.09}
+				{Position 0 	 19.1771 	 0}
+				{bone revolute "wheell"
+					{parameters "id=wheelleft;radius=0.8;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 0 	 0
+					}
+					{LODView
+						{VolumeView "wheell.ply"}
+						{VolumeView "wheell_lod1.ply"}
+					}
+				}
+				{bone "wheell_detail"
+					{parameters "id=wheelleft;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						0 	 0 	 0
+					}
+					{LODView
+						{VolumeView "wheell_detail.ply"}
+						{VolumeView "wheell_detail_lod1.ply"}
+					}
+				}
+			}
+		}
+	}
+}
+{volume "wheelleft"
+	{cylinder 15.748 6.19427}
+	{bone "wheell"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 -0.0003 	 1.2322
+	}
+}
+{volume "wheelright"
+	{cylinder 15.748 6.19427}
+	{bone "wheelr"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -1.1759
+	}
+}

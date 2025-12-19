@@ -1,0 +1,55 @@
+{game_entity
+	(include "/properties/vehicle_xx.ext")
+	{extension "panzer3f_xx.mdl"}
+	("tracks" thickness(20))
+
+	{volume "body1"			; Hull
+		{thickness	30
+			{front 30}
+			{top 25}		; Glacis
+			{rear 10}
+			{bottom 16}
+		}
+	}
+
+	{volume "body2"			; Superstructure
+		{thickness 30
+			{top 16}
+			{rear 10}
+		}
+	}
+
+	{volume "engine"
+		{thickness 30
+			{front 10}
+			{top 16}
+			{rear 20}
+			{bottom 16}
+		}
+	}
+
+	{volume "turret1"
+		{thickness 30
+			{top 10}
+		}
+	}
+
+	{volume "turret2"
+		{thickness 30}
+	}
+
+	{volume "mantlet1"
+		{thickness 20
+			{front 30}
+		}
+		{tags "gun"}
+		{component "gun"}
+	}
+
+
+	{volume "cupola"
+		{thickness 30
+			{top 10}
+		}
+	}
+}

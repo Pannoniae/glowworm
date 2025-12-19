@@ -1,8 +1,8 @@
 {game_entity
 	(include "/properties/cannon_mgun.ext")
-	(include "/properties/shadow/tank.inc" scale(0.6))
+	
 	{extension "maxim_x4.mdl"}
-	{props "vision_lev00_can" "-carried" "fixed" "detect_cannon_aa" "maxim_" "c_mg_med" "aa"}
+	{props "vision_lev00_can" "-carried" "fixed" "detect_cannon_aa" "maxim_" "mg_x4" "c_mg_med"}
 	{targetclass "cannon_bullet"}
 	{targetSelector "cannon_zenite"}
 
@@ -49,7 +49,6 @@
 			{type "main"}
 			{gunner "gunner"}
 			{charger "gunner"}
-
 			{weapon "maxim_1910_30_x4" filling "mgun_rus belt api" 1000}
 			("abm_mgun")
 			{Rotate}

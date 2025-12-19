@@ -1,0 +1,608 @@
+;Exported by:	 guita
+;Date:			 05.12.2022 09:22:39
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_rus\vehicles\tank_light\kht130\kht130_x.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.35;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.6}}
+			}
+			{Position 1.3135 	 0.0004 	 9.8368}
+			{VolumeView "body.ply"}
+			{bone "hatch_lower"
+				{parameters "id=body;"}
+				{Position 22.3324 	 -9.7236 	 12.0341}
+				{VolumeView "hatch_lower.ply"}
+			}
+			{bone "hatch_upper"
+				{parameters "id=body;"}
+				{Position 14.6166 	 -9.7236 	 20.2757}
+				{VolumeView "hatch_upper.ply"}
+			}
+			{bone "frontlight"
+				{parameters "id=body;"}
+				{matrix34
+					0.999 	 0 	 -0.0436
+					0 	 1 	 0
+					0.0436 	 0 	 0.999
+					18.7151 	 1.0675 	 13.0041
+				}
+				{VolumeView "frontlight.ply"}
+			}
+			{bone revolute "turret"
+				{parameters "id=turret;"}
+				{animation
+					{sequence "break" {file "turret_b.anm"}{speed 0.45}}
+				}
+				{Position 1.1209 	 -3.495 	 20.2047}
+				{VolumeView "turret.ply"}
+				{bone "hatchr"
+					{parameters "id=turret;"}
+					{Position -0.4676 	 -7.9787 	 12.6546}
+					{VolumeView "hatchr.ply"}
+				}
+				{bone "hatchl"
+					{parameters "id=turret;"}
+					{Position -0.4736 	 7.8687 	 12.6546}
+					{VolumeView "hatchl.ply"}
+				}
+				{bone revolute "gun_rot"
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 1
+						0 	 -1 	 0
+						13.6439 	 2.4633 	 8.0877
+					}
+					{bone "gun"
+						{parameters "id=gun;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							0 	 0 	 0
+						}
+						{VolumeView "gun.ply"}
+					}
+				}
+				{bone revolute "mgun_c_rot1"
+					{Position 14.7582 	 -3.5916 	 6.8163}
+					{bone revolute "mgun_c_rot2"
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 1
+							0 	 -1 	 0
+							0 	 0 	 0
+						}
+						{bone "mgun_shield"
+							{parameters "id=turret;"}
+							{matrix34
+								0.9998 	 0 	 -0.0178
+								-0.0178 	 0 	 -0.9998
+								0 	 1 	 0
+								0 	 0 	 0
+							}
+							{VolumeView "mgun_shield.ply"}
+							{bone "dt29_turret"
+								{parameters "id=turret;"}
+								{matrix34
+									0.9998 	 -0.0178 	 0
+									0.0178 	 0.9998 	 0
+									0 	 0 	 1
+									2.6559 	 -0.0188 	 -0.5592
+								}
+								{VolumeView "dt29_turret.ply"}
+							}
+						}
+					}
+				}
+			}
+			{bone "engine"
+				{parameters "id=engine;"}
+				{animation
+					{sequence "break" {file "engine_b.anm"}{speed 0.6}}
+				}
+				{Position -27.9671 	 0 	 4.9858}
+				{LODView
+					{VolumeView "engine.ply"}
+					{VolumeView "engine_lod1.ply"}
+				}
+				{bone "cooler2"
+					{parameters "id=engine;"}
+					{Position 8.5829 	 -1.047 	 9.221}
+					{VolumeView "cooler2.ply"}
+				}
+				{bone "cooler1"
+					{parameters "id=engine;"}
+					{Position 8.6251 	 -1.0472 	 8.1005}
+					{VolumeView "cooler1.ply"}
+				}
+				{bone "detail1"
+					{parameters "id=engine;"}
+					{Position 13.2082 	 12.294 	 11.1229}
+					{VolumeView "detail1.ply"}
+				}
+			}
+			{bone revolute "wheell10"
+				{parameters "id=trackleft;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					25.0597 	 20.4943 	 8.334
+				}
+				{LODView
+					{VolumeView "wheell10.ply"}
+					{VolumeView "wheell10_lod1.ply"}
+				}
+			}
+			{bone revolute "wheelr10"
+				{parameters "id=trackright;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					25.0597 	 -20.4952 	 8.334
+				}
+				{LODView
+					{VolumeView "wheelr10.ply"}
+					{VolumeView "wheelr10_lod1.ply"}
+				}
+			}
+			{bone revolute "wheell11"
+				{parameters "id=trackleft;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					8.8327 	 20.4943 	 7.2097
+				}
+				{LODView
+					{VolumeView "wheell11.ply"}
+					{VolumeView "wheell11_lod1.ply"}
+				}
+			}
+			{bone revolute "wheelr11"
+				{parameters "id=trackright;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					8.8327 	 -20.4951 	 7.2097
+				}
+				{LODView
+					{VolumeView "wheelr11.ply"}
+					{VolumeView "wheelr11_lod1.ply"}
+				}
+			}
+			{bone revolute "wheell12"
+				{parameters "id=trackleft;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-6.3002 	 20.4943 	 6.0225
+				}
+				{LODView
+					{VolumeView "wheell12.ply"}
+					{VolumeView "wheell12_lod1.ply"}
+				}
+			}
+			{bone revolute "wheelr12"
+				{parameters "id=trackright;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-6.3002 	 -20.4951 	 6.0225
+				}
+				{LODView
+					{VolumeView "wheelr12.ply"}
+					{VolumeView "wheelr12_lod1.ply"}
+				}
+			}
+			{bone revolute "wheell13"
+				{parameters "id=trackleft;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-22.5038 	 20.4943 	 4.9857
+				}
+				{LODView
+					{VolumeView "wheell13.ply"}
+					{VolumeView "wheell13_lod1.ply"}
+				}
+			}
+			{bone revolute "wheelr13"
+				{parameters "id=trackright;radius=0.16;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-22.5038 	 -20.4951 	 4.9857
+				}
+				{LODView
+					{VolumeView "wheelr13.ply"}
+					{VolumeView "wheelr13_lod1.ply"}
+				}
+			}
+			{bone revolute "wheell14"
+				{parameters "id=trackleft;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-36.7411 	 20.3757 	 0.2878
+				}
+				{VolumeView "wheell14.ply"}
+			}
+			{bone revolute "wheelr14"
+				{parameters "id=trackright;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-36.7411 	 -20.3765 	 0.2878
+				}
+				{VolumeView "wheelr14.ply"}
+			}
+			{bone revolute "wheell1"
+				{parameters "id=trackleft;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					37.9326 	 20.6262 	 5.7885
+				}
+				{VolumeView "wheell1.ply"}
+			}
+			{bone revolute "wheelr1"
+				{parameters "id=trackright;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					37.9326 	 -20.627 	 5.7885
+				}
+				{VolumeView "wheelr1.ply"}
+			}
+			{bone "detail2"
+				{parameters "id=body;"}
+				{Position 18.5289 	 -19.2726 	 13.5675}
+				{VolumeView "detail2.ply"}
+			}
+			{bone "detail3"
+				{parameters "id=body;"}
+				{Position -18.83 	 -17.8371 	 11.106}
+				{VolumeView "detail3.ply"}
+			}
+			{bone "detail4"
+				{parameters "id=body;"}
+				{Position -13.6774 	 19.6027 	 11.3856}
+				{VolumeView "detail4.ply"}
+			}
+			{bone "detail5"
+				{parameters "id=body;"}
+				{Position -22.8959 	 20.1461 	 10.9486}
+				{VolumeView "detail5.ply"}
+			}
+		}
+		{bone "body_virt"
+			{matrix34
+				1 	 0 	 0
+				0 	 0 	 1
+				0 	 -1 	 0
+				0.4979 	 0 	 10.2204
+			}
+			{bone "wheelsl"
+				{parameters "id=trackleft;"}
+				{animation
+					{sequence "break" {file "trackl_b.anm"}{speed 0.6}}
+				}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-0.4979 	 6.4407 	 0
+				}
+				{bone "suspl"
+					{parameters "id=body;"}
+					{Position 2.1604 	 20.0236 	 -9.7089}
+					{VolumeView "suspl.ply"}
+				}
+				{bone "trackl"
+					{parameters "commonmesh;id=trackleft;"}
+					{Position 1.7395 	 20.2685 	 -5.5214}
+					{VolumeView "trackl.ply"}
+				}
+				{bone prizmatic "suspension_l1"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.05 0.05}
+					{Position 25.6904 	 20.2487 	 -12.9156}
+					{bone revolute "wheell2"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.9845 	 0.0659 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell2.ply"}
+							{VolumeView "wheell2_lod1.ply"}
+						}
+					}
+					{bone revolute "wheell3"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9721 	 0.0659 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell3.ply"}
+							{VolumeView "wheell3_lod1.ply"}
+						}
+					}
+				}
+				{bone prizmatic "suspension_l2"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.08 0.08}
+					{Position 9.6849 	 20.2487 	 -12.9156}
+					{bone revolute "wheell4"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.9823 	 0.0659 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell4.ply"}
+							{VolumeView "wheell4_lod1.ply"}
+						}
+					}
+					{bone revolute "wheell5"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9902 	 0.0659 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell5.ply"}
+							{VolumeView "wheell5_lod1.ply"}
+						}
+					}
+				}
+				{bone prizmatic "suspension_l3"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.09 0.09}
+					{Position -5.3532 	 20.2487 	 -12.9156}
+					{bone revolute "wheell6"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.982 	 0.0659 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell6.ply"}
+							{VolumeView "wheell6_lod1.ply"}
+						}
+					}
+					{bone revolute "wheell7"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9904 	 0.0659 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell7.ply"}
+							{VolumeView "wheell7_lod1.ply"}
+						}
+					}
+				}
+				{bone prizmatic "suspension_l4"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.05 0.05}
+					{Position -21.3664 	 20.2487 	 -12.9156}
+					{bone revolute "wheell8"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.9716 	 0.0658 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell8.ply"}
+							{VolumeView "wheell8_lod1.ply"}
+						}
+					}
+					{bone revolute "wheell9"
+						{parameters "id=trackleft;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.985 	 0.0658 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheell9.ply"}
+							{VolumeView "wheell9_lod1.ply"}
+						}
+					}
+				}
+			}
+			{bone "wheelsr"
+				{parameters "id=trackright;"}
+				{animation
+					{sequence "break" {file "trackr_b.anm"}{speed 0.6}}
+				}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-0.4979 	 6.4407 	 0
+				}
+				{bone "suspr"
+					{parameters "id=body;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						2.1604 	 -20.0236 	 -9.7089
+					}
+					{VolumeView "suspr.ply"}
+				}
+				{bone revolute "trackr"
+					{parameters "commonmesh;id=trackright;"}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+						1.7395 	 -20.2685 	 -5.5214
+					}
+					{VolumeView "trackr.ply"}
+				}
+				{bone prizmatic "suspension_r1"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.05 0.05}
+					{Position 25.6904 	 -20.3269 	 -12.9156}
+					{bone revolute "wheelr2"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.9845 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr2.ply"}
+							{VolumeView "wheelr2_lod1.ply"}
+						}
+					}
+					{bone revolute "wheelr3"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9721 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr3.ply"}
+							{VolumeView "wheelr3_lod1.ply"}
+						}
+					}
+				}
+				{bone prizmatic "suspension_r2"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.08 0.08}
+					{Position 9.6849 	 -20.3269 	 -12.9156}
+					{bone revolute "wheelr4"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.9823 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr4.ply"}
+							{VolumeView "wheelr4_lod1.ply"}
+						}
+					}
+					{bone revolute "wheelr5"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9902 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr5.ply"}
+							{VolumeView "wheelr5_lod1.ply"}
+						}
+					}
+				}
+				{bone prizmatic "suspension_r3"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.09 0.09}
+					{Position -5.3532 	 -20.3269 	 -12.9156}
+					{bone revolute "wheelr6"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.982 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr6.ply"}
+							{VolumeView "wheelr6_lod1.ply"}
+						}
+					}
+					{bone revolute "wheelr7"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9904 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr7.ply"}
+							{VolumeView "wheelr7_lod1.ply"}
+						}
+					}
+				}
+				{bone prizmatic "suspension_r4"
+					{parameters "ikspeed2=0.05;"}
+					{limits -0.05 0.05}
+					{Position -21.3717 	 -20.3269 	 -12.9156}
+					{bone revolute "wheelr8"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							3.9768 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr8.ply"}
+							{VolumeView "wheelr8_lod1.ply"}
+						}
+					}
+					{bone revolute "wheelr9"
+						{parameters "id=trackright;radius=0.16;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-3.9798 	 0.0123 	 0.0002
+						}
+						{LODView
+							{VolumeView "wheelr9.ply"}
+							{VolumeView "wheelr9_lod1.ply"}
+						}
+					}
+				}
+			}
+		}
+	}
+}

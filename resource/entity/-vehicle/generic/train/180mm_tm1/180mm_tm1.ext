@@ -1,0 +1,219 @@
+
+	("train_durability" body(750) engine(250) turret(300) mantlet(225) gun(225))
+
+	("gun" repair(60) thickness(30))
+	("turret" repair(45))
+	("shield_group" args "shield1" 35 "shield")
+	("shield_group" args "shield2" 35 "shield")
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+	("wheel" args "wheelright2")
+	("wheel" args "wheelleft2")
+	("wheel" args "wheelright3")
+	("wheel" args "wheelleft3")
+	("wheel" args "wheelright4")
+	("wheel" args "wheelleft4")
+	("wheel" args "wheelright5")
+	("wheel" args "wheelleft5")
+	("wheel" args "wheelright6")
+	("wheel" args "wheelleft6")
+	("wheel" args "wheelright7")
+	("wheel" args "wheelleft7")
+	("wheel" args "wheelright8")
+	("wheel" args "wheelleft8")
+
+	{volume "body1"
+		{thickness 20}
+	}
+	{volume "body2"
+		{thickness 20}
+	}
+	{volume "body3"
+		{thickness 20}
+	}
+	{volume "body4"
+		{thickness 20}
+	}
+	{volume "body5"
+		{thickness 20}
+	}
+	{volume "body6"
+		{thickness 20}
+	}
+	{volume "body7"
+		{thickness 20}
+	}
+	{volume "body8"
+		{thickness 20}
+	}
+	{volume "body9"
+		{thickness 20}
+	}
+	{volume "body10"
+		{thickness 20}
+	}
+	{volume "turret1"
+		{thickness 20}
+		{able {obstacle 0}}
+		{able {holed}}
+	}
+	{volume "turret2"
+		{thickness 20}
+	}
+	{volume "turret3"
+		{thickness 20}
+		{able {holed}}
+	}
+	{volume "turret4"
+		{thickness 20}
+		{able {holed}}
+	}
+	{volume "shield1"
+		{thickness 35
+			{top 20}
+		}
+	}
+	{volume "shield2"
+		{thickness 35
+			{top 20}
+		}
+	}
+	{volume "barrel1"
+		{thickness 20}
+	}
+	{volume "barrel2"
+		{thickness 35}
+	}
+	{volume "barrel3"
+		{thickness 20}
+	}
+	{volume "barrel4"
+		{thickness 20}
+	}
+	{volume "wheelleft1"
+		{thickness 30}
+	}
+	{volume "wheelleft2"
+		{thickness 30}
+	}
+	{volume "wheelleft3"
+		{thickness 30}
+	}
+	{volume "wheelleft4"
+		{thickness 30}
+	}
+	{volume "wheelleft5"
+		{thickness 30}
+	}
+	{volume "wheelleft6"
+		{thickness 30}
+	}
+	{volume "wheelleft7"
+		{thickness 30}
+	}
+	{volume "wheelleft8"
+		{thickness 30}
+	}
+	{volume "wheelright1"
+		{thickness 30}
+	}
+	{volume "wheelright2"
+		{thickness 30}
+	}
+	{volume "wheelright3"
+		{thickness 30}
+	}
+	{volume "wheelright4"
+		{thickness 30}
+	}
+	{volume "wheelright5"
+		{thickness 30}
+	}
+	{volume "wheelright6"
+		{thickness 30}
+	}
+	{volume "wheelright7"
+		{thickness 30}
+	}
+	{volume "wheelright8"
+		{thickness 30}
+	}
+	
+	{sensor
+		{visor "main"
+			{vision "cannon_range_210"}
+			{bone "visor"}
+		}
+		{visor "driver"
+			{vision "vehicle_main"}
+			{bone "visor2"}
+		}
+		{visor "none"
+			{vision "none"}
+		}
+	}
+
+	(define "crew_human_visible_anm"
+		{placer
+			{place "%place"
+				{group "crew"}
+				{visor "%visor"}
+				{linkbone "%linkbone"}
+				{turnoff %off}
+				;{openForCrush}
+			}
+		}
+		{boarder
+			{anm "1_gunner"
+				{forward {begin "board_kv"} {end "pose_m5_gunlayer"} {base "doorleft1"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorleft1" -1}}
+			}
+			{anm "2_gunner"
+				{forward {begin "board_tank_right"} {end "pose_m5_gunlayer"} {base "doorright2"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorright2" -1}}
+			}
+			{anm "3_gunner"
+				{forward {begin "board_tank_right"} {end "pose_m5_gunlayer"} {base "doorright1"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorright1" -1}}
+			}
+
+			{anm "1_charger"
+				{forward {begin "board_kv"} {end "seat_tm1_charger"} {base "doorleft1"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorleft1" -1}}
+			}
+			{anm "2_charger"
+				{forward {begin "board_tank_right"} {end "seat_tm1_charger"} {base "doorright2"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorright2" -1}}
+			}
+			{anm "3_charger"
+				{forward {begin "board_tank_right"} {end "seat_tm1_charger"} {base "doorright1"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorright1" -1}}
+			}
+
+			{anm "1_commander"
+				{forward {begin "board_kv"} {end "pose_watch_binocular"} {base "doorleft1"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorleft1" -1}}
+			}
+			{anm "2_commander"
+				{forward {begin "board_tank_right"} {end "pose_watch_binocular"} {base "doorright2"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorright2" -1}}
+			}
+			{anm "3_commander"
+				{forward {begin "board_tank_right"} {end "pose_watch_binocular"} {base "doorright1"}}
+				{reverse {end "emit_tank_1_hold"} {base "doorright1" -1}}
+			}
+
+			{door "%door"}
+			{door "%door2"}
+			{door "%door3"}
+			{link "%door" "%place" {anm "1_%pose"} {forward putoff} {reverse puton}}
+			{link "%door2" "%place" {anm "2_%pose"} {forward putoff} {reverse puton}}
+			{link "%door3" "%place" {anm "3_%pose"} {forward putoff} {reverse puton}}
+		}
+	)
+	("crew_human_visible_anm" place(driver) linkbone() door(emit1) door2(emit2) door3(emit3) visor(driver) pose(gunner) off({sensor}))
+	("crew_human_visible_anm" place(gunner) linkbone(gunner) door(emit1) door2(emit2) door3(emit3) pose(gunner) visor(main) off({sensor}))
+	("crew_human_visible_anm" place(charger) linkbone(charger) door(emit1) door2(emit2) door3(emit3) pose(charger) visor(none) off({sensor}))
+	("crew_human_visible_anm" place(charger2) linkbone(charger2) door(emit1) door2(emit2) door3(emit3) pose(charger) visor(none) off())
+	("crew_human_visible_anm" place(commander) linkbone(commander) door(emit1) door2(emit2) door3(emit3) pose(commander) visor(none) off())

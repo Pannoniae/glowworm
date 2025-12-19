@@ -1,0 +1,121 @@
+;Exported by:	 TigerF
+;Date:			 08.09.2020 17:03:16
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\_mozdony\wagons\wagon3_plato\wagon3_plato_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "pivot_back"
+			{Position -54.0555 	 0 	 12.6459}
+			{bone revolute "wheel_back"
+				{parameters "id=wheel_back;"}
+				{orientation
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+				}
+				{VolumeView "wheel_back.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 54.3339 	 0 	 12.6459}
+			{bone revolute "wheel_front"
+				{parameters "id=wheel_front;"}
+				{orientation
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+				}
+				{VolumeView "wheel_front.ply"}
+			}
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0.0003 	 0 	 23.2438}
+			{VolumeView "body.ply"}
+			{bone "part1"
+				{parameters "id=part1;"}
+				{Position 0.0314 	 -30.3194 	 -4.1518}
+				{VolumeView "part1.ply"}
+			}
+			{bone "part2"
+				{parameters "id=part2;"}
+				{Position 46.2793 	 30.188 	 -4.1162}
+				{VolumeView "part2.ply"}
+			}
+		}
+	}
+}
+{volume "body1"
+	{box 186.455 6.92237 57.6696}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -0.0349 	 0.9994
+		0 	 -0.9994 	 -0.0349
+		-0.2248 	 0.3213 	 0.8532
+	}
+}
+{volume "part1"
+	{box 1.44887 12.8094 54.4397}
+	{bone "part1"}
+	{matrix34
+		0 	 0.9831 	 -0.1832
+		0 	 0.1832 	 0.9831
+		1 	 0 	 0
+		-0.0663 	 -0.501 	 -0.1991
+	}
+}
+{volume "part2"
+	{box 1.33424 13.0327 35.7729}
+	{bone "part2"}
+	{matrix34
+		0 	 0.9934 	 0.1145
+		0 	 -0.1145 	 0.9934
+		1 	 0 	 0
+		-0.9422 	 0.4206 	 -0.6852
+	}
+}
+{volume "wheel_back1"
+	{cylinder 11.5844 2.54319}
+	{bone "wheel_back"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		-0.0005 	 0 	 15.5496
+	}
+}
+{volume "wheel_back2"
+	{cylinder 11.5844 2.54319}
+	{bone "wheel_back"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		-0.0005 	 0 	 -15.5212
+	}
+}
+{volume "wheel_front1"
+	{cylinder 11.5844 2.54319}
+	{bone "wheel_front"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 15.2953
+	}
+}
+{volume "wheel_front2"
+	{cylinder 11.5844 2.54319}
+	{bone "wheel_front"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -15.3628
+	}
+}

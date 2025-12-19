@@ -8,61 +8,61 @@
 ; // howitzer artillery
 
 	{"detect_artillery" "attack"
-		{0		0}
+		{0		15}
 	}
 	{"detect_artillery" "visible"
-		{0		5}
+		{0		10}
 	}
 
 ; // small caliber artillery, mortars and support guns
 
 	{"detect_artillery_small" "attack"
-		{0		0}
+		{0		15}
 	}
 	{"detect_artillery_small" "visible"
-		{0		5}
+		{0		10}
 	}
 
-; // AT guns, low detect-ability, class advantage
+; // AT guns, low detectability, class advantage
 
 	{"detect_atgun" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_atgun" "visible"
-		{0		5}
+		{0		10}
 	}
 
-; // Small AT guns, very low detect-ability, class advantage
+; // Small AT guns, very low detectability, class advantage
 
 	{"detect_atgun_small" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_atgun_small" "visible"
-		{0		5}
-	}
-
-; // AA guns and MGs, very hard to detect, linked to max auto cannon range of 170m
-
-	{"detect_cannon_aa" "attack"
 		{0		10}
 	}
+
+; // AA guns and MGs, very hard to detect, linked to max autocannon range of 170m
+
+	{"detect_cannon_aa" "attack"
+		{0		17}
+	}
 	{"detect_cannon_aa" "visible"
-		{0		5}
+		{0		10}
 	}
 
 ; // Tanks of various shapes and forms
 
 	{"detect_spg" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_spg" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	;//----------
 
 	{"detect_tank_mg" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_tank_mg" "visible"
 		{0		5}
@@ -71,47 +71,47 @@
 	;//----------
 
 	{"detect_td_heavy" "attack"
-		{0		15}
+		{0		22}
 	}
 	{"detect_td_heavy" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	{"detect_td_light" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_td_light" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	{"detect_td_medium" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_td_medium" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	;//----------
 
 	{"detect_tank_heavy" "attack"
-		{0		15}
+		{0		22}
 	}
 	{"detect_tank_heavy" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	{"detect_tank_light" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_tank_light" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	{"detect_tank_medium" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"detect_tank_medium" "visible"
-		{0		5}
+		{0		10}
 	}
 
 	;//----------
@@ -120,23 +120,23 @@
 ; // Generic vehicles, will use this rule if not propped
 
 	{"vehicle" "attack"
-		{0		10}
+		{0		17}
 	}
 	{"vehicle" "visible"
-		{0		5}
+		{0		10}
 	}
 
 ; // Human detection range
 
 	{"human" "attack"
-		{0		5}
-		{80		5}
+		{0		10}
+		{80		10}
 		{82		0}
 	}
 	{"human" "visible"
-		{0		5}
+		{0		10}
 	}
 	{"animal" "visible"
-		{0		5}
+		{0		10}
 	}
 }

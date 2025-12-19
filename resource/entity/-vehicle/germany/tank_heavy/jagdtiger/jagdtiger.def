@@ -1,6 +1,5 @@
 {game_entity
 	(include "/properties/tank_assaultgun.ext")
-	
 	(include "/properties/selection/vehicle_big.inc" scale(1))
 	{props "heavy" "td" "-turret" "vision_lev05" "muzzle_122mm_128mm" "shield" "smoke" "nvw" "detect_td_heavy"}
 	{extension "jagdtiger.mdl"}
@@ -16,7 +15,7 @@
 
 	{sensor
 		{visor "main"
-			{vision "tank_range_250"}
+			{vision "tank_range_220"}
 		}
 	}
 
@@ -70,11 +69,11 @@
 		("restore_ik_time")
 		{place "gun"
 			{RestoreIKAfterAim}
-			{weapon "128mm_pak44" filling "bulletger_128 apcbche" 1}
+			{weapon "128mm_pak80" filling "bulletger_128 apcbche" 1}
 			{gunner "gunner"}
 			{charger "charger"}
-			("abm_dymamic_stabilised"
-				zeroing(3.0)
+			("abm_dymamic_gun"
+				zeroing(4.0)
 				dispersion(0.20)
 			)
 		}
@@ -106,7 +105,7 @@
 		("mobility_tank"
 			speed(34.6) ;--------Max speed when fully accelerated on road, km/h.
 			reverse(11) ;--------Max speed in reverse on road, km/h. (+2 of real life speed)
-			traverse(16) ;-------Track traverse, per second, in degrees.
+			traverse(14) ;-------Track traverse, per second, in degrees.
 			weight(75.2) ;-------Weight in Tonnes.
 			power(600) ;---------Engine Power, in hp. //engine was governed to 2500 max rpm which reduced it from 700HP to 600HP
 			track(2.8) ;---------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
@@ -122,7 +121,7 @@
 	}
 	{bone "turret"
 		{limits -10 10}
-		{speed2 4.5}
+		{speed2 3.5}
 	}
 	{bone "mgun_a_rot1"
 		{speed2 60}

@@ -57,8 +57,7 @@
 		{box
 			{item "bulletger_75_l70 apcbche" 40} 	; 82 rounds
 			{item "bulletger_75_l70 he" 41}
-			{item "bulletger_75_l70 apcr" 3}
-			{item "ammo mgun_ger belt" 5100}		; 32 belts (150 rounds each)
+			{item "ammo mgun_ger belt" 4500}		; 32 belts (150 rounds each)
 			{item "mg34_drum" filled {user "mgun"}}
 			{item "geballteladung_3kg" 1}
 			{item "nbks grenade" 6}
@@ -85,7 +84,6 @@
 			{charger "charger"}
 			("abm_mgun")
 			{basic}
-			{ai_in_manual}
 		}
 		{place "mgun1"
 			{type "hull"}
@@ -114,11 +112,11 @@
 		("tank_trace" fx("tracks_big") step(0.47) len(0.94))
 		("mobility_tank"
 			speed(46) ;----------Max speed when fully accelerated on road, km/h.
-			reverse(5.3) ;---------Max speed in reverse on road, km/h. 3.3 + 2kmh
+			reverse(5.3) ;-------Max speed in reverse on road, km/h. 3.3 + 2kmh
 			traverse(35) ;-------Track traverse, per second, in degrees.
 			weight(45.5) ;-------Weight in Tonnes.
 			power(600) ;---------Engine Power, in hp. //engine was governed to 2500 max rpm which reduced it from 700HP to 600HP
-			track(3.5) ;---------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			track(6.0) ;---------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
 			fuel(700) ;----------Fuel capacity in Litres.
 			type(fuel) ;---------Fuel type. (diesel OR fuel)
 			range(100) ;---------Range in km, off-road.
@@ -133,4 +131,3 @@
 		("turret_medium" power_traverse(20))
 	}
 }
-	

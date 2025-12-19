@@ -1,0 +1,47 @@
+;Exported by:	 guita
+;Date:			 27.09.2024 11:46:11
+;File:			 G:\SVN\Working Resources\GatesOfHell\GoH_3d_vehicle_eng\vehicles\marine\GoatleyBoat\Goatley_Boat_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body1;"}
+			{Position 0 	 0 	 -0.8551}
+			{VolumeView "body.ply"}
+			{bone "part1"
+				{parameters "id=part1;"}
+				{Position -46.3601 	 0.2692 	 4.8273}
+				{VolumeView "part1.ply"}
+			}
+		}
+		{bone "pivot_back"
+			{Position -32.8001 	 0 	 0}
+		}
+		{bone "pivot_front"
+			{Position 38.1495 	 0 	 0}
+		}
+	}
+}
+{volume "body"
+	{polyhedron "body.vol"}
+	{bone "body"}
+}
+{volume "hole1"
+	{polyhedron "hole1.vol"}
+	{bone "part1"}
+	{Position 1.3658 	 0.3002 	 3.7953}
+}
+{volume "hole"
+	{polyhedron "hole.vol"}
+	{bone "body"}
+	{Position 10.011 	 -0.0069 	 8.6175}
+}
+{volume "part1"
+	{polyhedron "part1.vol"}
+	{bone "part1"}
+	{Position -0.2533 	 0.1232 	 -1.3639}
+}

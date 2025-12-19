@@ -1,0 +1,116 @@
+;SDL
+	
+	; armor notes
+	; tracks and wheels 20mm
+	; gun 25mm
+	; spare tracks 20mm
+	; side shields 25mm
+
+	("tank_medium_tier1")
+
+	("shield_track" args "detail1" 20)
+	("shield_track" args "detail2" 20)
+	("shield_track" args "detail3" 20)
+	
+	("shield" args "shieldl1" 25)
+	("shield" args "shieldl2" 25)
+	("shield" args "shieldl3" 25)
+	("shield" args "shieldl4" 25)
+	("shield" args "shieldl5" 25)
+	("shield" args "shieldl6" 25)
+	("shield" args "shieldl7" 25)
+	("shield" args "shieldl8" 25)
+
+	("shield" args "shieldr1" 25)
+	("shield" args "shieldr2" 25)
+	("shield" args "shieldr3" 25)
+	("shield" args "shieldr4" 25)
+	("shield" args "shieldr5" 25)
+	("shield" args "shieldr6" 25)
+	("shield" args "shieldr7" 25)
+	("shield" args "shieldr8" 25)
+
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(25))
+
+	("ammo" args "ammo1")
+	("fuel" args "fuel1")
+	("fuel" args "fuel2")
+	("transmission" args "transmission")
+
+	{volume "body1"			; Hull
+		{thickness 40
+			{rear 10}
+			{bottom 20}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "body2"			; Middle Superstructure
+		{thickness 40
+			{front 35}		; Glacis
+			{rear 10}
+			{bottom 10}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "body3"			; Top Superstructure
+		{thickness 40
+			{front 47}
+			{top 25}
+			{rear 10}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "body4"			; Front Left Superstructure
+		{thickness 40
+			{front 47}
+			{top 25}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "engine1"
+		{thickness 40
+			{front 10}
+			{rear 25}
+			{bottom 20}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "engine2"
+		{thickness 40
+			{front 10}
+			{top 25}
+			{rear 25}
+			{bottom 25}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "turret1"		; Main Turret
+		{thickness 45
+			{front 56}
+			{top 30}
+		}
+		{CastSteel 0.8063}
+	}
+	{volume "turret2"		; Square Back side
+		{thickness 45}
+		{CastSteel 0.8063}
+	}
+	{volume "mantlet"
+		{thickness 45}
+		{CastSteel 0.8063}
+	}
+	{volume "mantlet2"
+		{thickness 45}
+		{CastSteel 0.8063}
+	}
+	{volume "cupola"
+		{thickness 40
+			{top 30}
+		}
+		{CastSteel 0.8063}
+	}
+
+	{component "detail1" {tags "cut_part"}}
+	{component "detail2" {tags "cut_part"}}
+	{component "detail3" {tags "cut_part"}}

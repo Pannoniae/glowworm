@@ -1,0 +1,173 @@
+;Exported by:	 TigerF
+;Date:			 07.11.2021 23:35:20
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\GoH_3D_vehicles_rus\vehicles\Trailer\AP_2\AP_2_x.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.4;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position -0.2372 	 0 	 21.456}
+			{VolumeView "body.ply"}
+			{bone "shield_cover"
+				{parameters "id=shield_cover;"}
+				{Position -0.3266 	 0.0012 	 16.0052}
+				{VolumeView "shield_cover.ply"}
+			}
+			{bone "detail1"
+				{parameters "id=body;"}
+				{Position 4.6391 	 0 	 -2.7937}
+				{VolumeView "detail1.ply"}
+			}
+			{bone "back_door"
+				{parameters "id=body;"}
+				{Position 37.178 	 -16.6889 	 1.9372}
+				{VolumeView "back_door.ply"}
+			}
+		}
+		{bone revolute "pivot_back"
+			{parameters "id=pivot_back;"}
+			{Position -24.9156 	 0 	 7.8264}
+			{bone prizmatic "suspension_l2"
+				{limits -0.07 0.07}
+				{speed 0.09}
+				{Position 0 	 15.7792 	 0}
+				{bone revolute "wheell2"
+					{parameters "id=wheelleft2;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell2.ply"}
+				}
+			}
+			{bone prizmatic "suspension_r2"
+				{limits -0.07 0.07}
+				{speed 0.09}
+				{Position 0 	 -15.7414 	 0}
+				{bone revolute "wheelr2"
+					{parameters "id=wheelright2;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr2.ply"}
+				}
+			}
+			{bone "ridingbed"
+				{parameters "id=body;"}
+				{Position 0.0694 	 0 	 7.5972}
+				{VolumeView "ridingbed.ply"}
+				{bone "1"
+					{parameters "id=body;"}
+					{matrix34
+						0.9336 	 0 	 0.3584
+						0 	 1 	 0
+						-0.3584 	 0 	 0.9336
+						-13.5304 	 0 	 -1.5893
+					}
+					{VolumeView "1.ply"}
+				}
+			}
+			{bone "susp_back"
+				{parameters "id=body;"}
+				{Position 0.0694 	 0 	 7.5972}
+				{VolumeView "susp_back.ply"}
+			}
+		}
+		{bone revolute "pivot_front"
+			{parameters "id=pivot_front;"}
+			{Position 24.4877 	 0 	 7.8264}
+			{bone "susp_front"
+				{parameters "id=body;"}
+				{Position -24.7249 	 0 	 13.6296}
+				{VolumeView "susp_front.ply"}
+			}
+			{bone prizmatic "suspension_r1"
+				{limits -0.07 0.07}
+				{speed 0.09}
+				{Position 0 	 -15.7414 	 0}
+				{bone revolute "wheelr1"
+					{parameters "id=wheelright1;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr1.ply"}
+				}
+			}
+			{bone prizmatic "suspension_l1"
+				{limits -0.07 0.07}
+				{speed 0.09}
+				{Position 0 	 15.7793 	 0}
+				{bone revolute "wheell1"
+					{parameters "id=wheelleft1;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell1.ply"}
+				}
+			}
+		}
+	}
+}
+{area "obstacle"
+	{obb2
+		{center -0.316296 0.135523}
+		{extent 33.2588 19.536}
+		{axis 1 0}
+	}
+	{rotate}
+}
+{volume "wheelleft1"
+	{cylinder 7.57874 7.07287}
+	{bone "wheell1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}
+{volume "wheelleft2"
+	{cylinder 7.57874 7.07283}
+	{bone "wheell2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}
+{volume "wheelright1"
+	{cylinder 7.57874 7.07287}
+	{bone "wheelr1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}
+{volume "wheelright2"
+	{cylinder 7.57874 7.07283}
+	{bone "wheelr2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0
+	}
+}

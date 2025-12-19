@@ -1,0 +1,258 @@
+;Exported by:	 guita
+;Date:			 07.10.2025 09:15:02
+;File:			 G:\SVN\Working Resources\GatesOfHell\GoH_3d_vehicle_eng\vehicles\cannon\84mm_QF18_5p\84mm_qf18_5p_x.max
+{skeleton
+	{bone revolute "basis"
+		{parameters "wheelradius=0.48;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position 0.0145 	 0 	 10.0985}
+			{VolumeView "body.ply"}
+			{bone "standl"
+				{parameters "id=body;"}
+				{Position 0 	 7.3792 	 4.3172}
+				{VolumeView "standl.ply"}
+				{bone "detail4"
+					{parameters "id=body;"}
+					{Position -37.5136 	 18.2824 	 -8.3401}
+					{VolumeView "detail4.ply"}
+				}
+				{bone "detail2"
+					{parameters "id=body;"}
+					{Position -18.7124 	 13.435 	 -5.378}
+					{VolumeView "detail2.ply"}
+				}
+				{bone "spikel"
+					{parameters "id=body;"}
+					{matrix34
+						0.8537 	 -0.4263 	 -0.2992
+						0.4494 	 0.8933 	 0.0095
+						0.2632 	 -0.1426 	 0.9541
+						-52.3993 	 26.5576 	 -11.4112
+					}
+					{VolumeView "spikel.ply"}
+				}
+			}
+			{bone "standr"
+				{parameters "id=body;"}
+				{Position 0 	 -7.3792 	 4.3172}
+				{VolumeView "standr.ply"}
+				{bone "detail1"
+					{parameters "id=body;"}
+					{Position -21.423 	 -12.2194 	 -5.6487}
+					{VolumeView "detail1.ply"}
+				}
+				{bone "detail3"
+					{parameters "id=body;"}
+					{Position -25.356 	 -13.1083 	 -4.1637}
+					{VolumeView "detail3.ply"}
+				}
+				{bone "detail5"
+					{parameters "id=body;"}
+					{Position -37.5608 	 -18.3128 	 -8.281}
+					{VolumeView "detail5.ply"}
+				}
+				{bone "spiker"
+					{parameters "id=body;"}
+					{matrix34
+						0.8849 	 0.411 	 -0.2192
+						-0.4 	 0.9116 	 0.0945
+						0.2386 	 0.0041 	 0.9711
+						-52.0336 	 -26.2826 	 -11.6041
+					}
+					{VolumeView "spiker.ply"}
+				}
+				{bone "fixer1"
+					{parameters "id=body;"}
+					{matrix34
+						0.8458 	 0.5144 	 0.1411
+						-0.5159 	 0.8561 	 -0.0284
+						-0.1355 	 -0.0488 	 0.9896
+						-16.6653 	 -7.4474 	 -5.0284
+					}
+					{VolumeView "fixer1.ply"}
+				}
+			}
+			{bone revolute "turret"
+				{parameters "id=body;"}
+				{limits -25 25}
+				{speed 0.01}
+				{Position -2.294 	 0 	 4.8475}
+				{VolumeView "turret.ply"}
+				{bone "shield"
+					{parameters "id=shield;"}
+					{Position 1.501 	 4.4643 	 4.7184}
+					{VolumeView "shield.ply"}
+					{bone "detail7"
+						{parameters "id=body;"}
+						{Position 2.805 	 -12.9584 	 -0.8991}
+						{VolumeView "detail7.ply"}
+					}
+					{bone "detail8"
+						{parameters "id=body;"}
+						{Position 3.1415 	 3.9647 	 -0.912}
+						{VolumeView "detail8.ply"}
+					}
+					{bone "detail9"
+						{parameters "id=body;"}
+						{Position -0.3051 	 7.8477 	 6.9334}
+						{VolumeView "detail9.ply"}
+					}
+					{bone "shield_upper"
+						{parameters "id=shield_upper;"}
+						{Position 2.2725 	 -9.6022 	 10.3072}
+						{VolumeView "shield_upper.ply"}
+						{bone "detail10"
+							{parameters "id=body;"}
+							{Position -1.7825 	 -0.3362 	 1.1537}
+							{VolumeView "detail10.ply"}
+						}
+					}
+				}
+				{bone revolute "gun_rot"
+					{parameters "id=gun;"}
+					{animation
+						{sequence "break" {file "gun_b.anm"}{speed 0.7}}
+					}
+					{limits -5 30}
+					{speed 0.01}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 1
+						0 	 -1 	 0
+						3.9056 	 0.3443 	 4.6682
+					}
+					{VolumeView "gun_rot.ply"}
+					{bone "gun"
+						{parameters "id=gun;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							-11.7807 	 3.0329 	 0.3443
+						}
+						{VolumeView "gun.ply"}
+						{bone "breechblock"
+							{parameters "id=gun;"}
+							{Position -5.5182 	 -2.3673 	 0.0038}
+							{VolumeView "breechblock.ply"}
+							{bone "lever"
+								{parameters "id=gun;"}
+								{Position -1.4843 	 -0.72 	 0.1294}
+								{VolumeView "lever.ply"}
+							}
+						}
+					}
+					{bone "aim_ver2_helper"
+						{matrix34
+							0.9928 	 -0.0661 	 0.0994
+							-0.0432 	 -0.9751 	 -0.2177
+							0.1113 	 0.2118 	 -0.9709
+							-12.9504 	 3.5144 	 4.4012
+						}
+						{bone "aim_ver2"
+							{parameters "id=gun;"}
+							{Position 0 	 0 	 0}
+							{VolumeView "aim_ver2.ply"}
+						}
+					}
+				}
+				{bone "aim_hor_helper"
+					{matrix34
+						0.8718 	 -0.459 	 -0.1711
+						0.4497 	 0.8884 	 -0.0923
+						0.1944 	 0.0035 	 0.9809
+						-1.9214 	 7.3449 	 2.7971
+					}
+					{bone "aim_hor"
+						{parameters "id=body;"}
+						{Position 0 	 0 	 0}
+						{VolumeView "aim_hor.ply"}
+					}
+				}
+				{bone "aim_ver1_helper"
+					{matrix34
+						0.9945 	 0.1051 	 0
+						-0.1051 	 0.9945 	 0
+						0 	 0 	 1
+						1.1129 	 9.8959 	 3.1839
+					}
+					{bone "aim_ver1"
+						{parameters "id=gun;"}
+						{Position 0 	 0 	 0}
+						{VolumeView "aim_ver1.ply"}
+					}
+				}
+				{bone "aim_sight"
+					{parameters "id=body;"}
+					{Position 3.8996 	 6.4372 	 4.6651}
+					{VolumeView "aim_sight.ply"}
+				}
+			}
+			{bone "shield_lower"
+				{parameters "id=body;"}
+				{Position 9.5882 	 0 	 4.6909}
+				{VolumeView "shield_lower.ply"}
+			}
+		}
+		{bone "pivot_front"
+			{Position 0.0145 	 0 	 10.0985}
+			{bone prizmatic "suspension_r1"
+				{limits -0.05 0.05}
+				{speed 0.09}
+				{Position 0 	 -19.4578 	 0}
+				{bone revolute "wheelr"
+					{parameters "id=wheelright;radius=0.48;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheelr.ply"}
+				}
+			}
+			{bone prizmatic "suspension_l1"
+				{limits -0.05 0.05}
+				{speed 0.09}
+				{Position 0 	 19.4578 	 0}
+				{bone revolute "wheell"
+					{parameters "id=wheelleft;radius=0.48;"}
+					{orientation
+						1 	 0 	 0
+						0 	 0 	 -1
+						0 	 1 	 0
+					}
+					{VolumeView "wheell.ply"}
+				}
+			}
+		}
+	}
+}
+{volume "wheelleft"
+	{cylinder 9.44882 4.11398}
+	{bone "wheell"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 -0.3511
+	}
+}
+{volume "wheelright"
+	{cylinder 9.44882 5.01693}
+	{bone "wheelr"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 0.5504
+	}
+}

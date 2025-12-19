@@ -1,7 +1,7 @@
 {game_entity
-	(include "/properties/halftrack.ext")
+	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc" scale(1.4))
-	{props "td" "tank" "shell_eject" "open_top" "turret" "with_gun" "vision_lev02" "muzzle_85mm_93mm" "tractor" "tractor_heavy" "detect_td_medium" "open_death_fx_low" "aa"}
+	{props "td" "tank" "halftrack" "wheeled" "shell_eject" "open_top" "turret" "with_gun" "vision_lev02" "muzzle_85mm_93mm" "tractor" "tractor_heavy" "detect_td_medium" "open_death_fx_low"}
 	{extension "sdkfz8_flak18.mdl"}
 	(include "sdkfz8_flak18.ext")
 	{extension "crew.ext"}
@@ -11,12 +11,6 @@
 
 	{extender "enumerator"
 		{digit_folder "np"}
-	}
-
-	{sensor
-		{visor "main"
-			{vision "tank_range_210"}
-		}
 	}
 
 	{extender "inventory"
@@ -32,7 +26,7 @@
 			{RestoreIKAfterAim}
 			{weapon "88mm_flak18_2" filling "bulletger_88_l56 apcbche2" 1}
 			{gunner "gunner gunner2" minWorkers 1}
-			{charger "charger charger2" minWorkers 1}
+			{charger "charger" minWorkers 1}
 			("abm_dymamic_td"
 				zeroing(3.5)
 				dispersion(0.25)
@@ -57,7 +51,7 @@
 	}
 
 	{bone "gun_rot"
-		{limits -3 85}
+		{limits -3 15}
 		{speed2 15}
 	}
 	{bone "turret"

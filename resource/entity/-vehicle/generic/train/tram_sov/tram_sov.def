@@ -1,0 +1,228 @@
+{game_entity
+	(include "/properties/railway.ext")
+	(include "/properties/car_crew.ext")
+	(include "/properties/selection/vehicle.inc"  scale(1.5))
+	{props "tramway" "vehicle" "steel" "car" "support_open_ani"}
+	{extension "tram_sov.mdl"}
+	
+	{extender "enumerator"
+		{digit_folder "us3"}
+	}
+
+	("glass" args "glass1")
+	("glass" args "glass2")
+	("glass" args "glass3")
+	("glass" args "glass4")
+	("glass" args "glass5")
+	("glass" args "glass6")
+	("glass" args "glass7")
+	("glass" args "glass8")
+	("glass" args "glass9")
+	("glass" args "glass10")
+	("glass" args "glass11")
+	("glass" args "glass12")
+	("glass" args "glass13")
+	("glass" args "glass14")
+	("glass" args "glass15")
+	("glass" args "glass16")
+	("glass" args "glass17")
+	("glass" args "glass18")
+	("glass" args "glass19")
+	("glass" args "glass20")
+	("glass" args "glass21")
+	("glass" args "glass22")
+	("glass" args "glass23")
+	("glass" args "glass24")
+	("glass" args "glass25")
+	("glass" args "glass26")
+	("glass" args "glass27")
+	("glass" args "glass28")
+	("glass" args "glass29")
+	("glass" args "glass30")
+	("glass" args "glass31")
+	("glass" args "glass32")
+	("glass" args "glass33")
+	("glass" args "glass34")
+	("glass" args "glass35")
+	("glass" args "glass36")
+	("glass" args "glass37")
+	("glass" args "glass38")
+	("glass" args "glass39")
+	("glass" args "glass40")
+	("glass" args "glass41")
+	("glass" args "glass42")
+	("glass" args "glass43")
+	("glass" args "glass44")
+	("glass" args "glass45")
+	("glass" args "glass46")
+	("glass" args "glass47")
+	("glass" args "glass48")
+	("glass" args "glass49")
+	("glass" args "glass50")
+	("glass" args "glass51")
+	("glass" args "glass52")
+	("glass" args "glass53")
+	("glass" args "glass54")
+	("glass" args "glass55")
+	("glass" args "glass56")
+	("glass" args "glass57")
+	("glass" args "glass58")
+	("glass" args "glass59")
+	("glass" args "glass60")
+	("glass" args "glass61")
+	("glass" args "glass62")
+	("glass" args "glass63")
+	("glass" args "glass64")
+	("glass" args "glass65")
+	("glass" args "glass66")
+	("glass" args "glass67")
+	("glass" args "glass68")
+
+	
+	{Volume "wheels_left"
+		{thickness 10}
+	}
+	{Volume "wheels_right"
+		{thickness 10}
+	}
+	
+	{component "body"
+		{tags "mover"}
+	}
+	{component "wheels_left"
+		{tags "mover"}
+	}
+	{component "wheels_right"
+		{tags "mover"}
+	}
+	
+	{volume "armor1"
+		{thickness 10}
+	}
+	{volume "armor2"
+		{thickness 10}
+	}
+	{volume "armor3"
+		{thickness 10}
+	}
+	{volume "armor4"
+		{thickness 10}
+	}
+	{volume "armor5"
+		{thickness 10}
+	}
+	{volume "armor6"
+		{thickness 10}
+	}
+	{volume "armor7"
+		{thickness 10}
+	}
+	{volume "armor8"
+		{thickness 10}
+	}
+	{volume "armor9"
+		{thickness 10}
+	}
+	{volume "armor10"
+		{thickness 10}
+	}
+	{volume "armor11"
+		{thickness 10}
+	}
+	{volume "armor12"
+		{thickness 10}
+	}
+	{volume "armor13"
+		{thickness 10}
+	}
+	{volume "armor14"
+		{thickness 10}
+	}
+	{volume "armor15"
+		{thickness 10}
+	}
+	{volume "armor16"
+		{thickness 10}
+	}
+	{volume "armor17"
+		{thickness 10}
+	}
+	{volume "armor18"
+		{thickness 10}
+	}
+	{volume "armor19"
+		{thickness 10}
+	}
+	{volume "armor20"
+		{thickness 10}
+	}
+	{volume "armor21"
+		{thickness 10}
+	}
+	{volume "armor22"
+		{thickness 10}
+	}
+	{volume "armor23"
+		{thickness 10}
+	}
+	{volume "armor24"
+		{thickness 10}
+	}
+	{volume "armor25"
+		{thickness 10}
+	}
+	{volume "armor26"
+		{thickness 10}
+	}
+	{volume "armor27"
+		{thickness 10}
+	}
+	{volume "armor28"
+		{thickness 10}
+	}
+	{volume "armor29"
+		{thickness 10}
+	}
+	{volume "armor30"
+		{thickness 10}
+	}
+
+	{volume "body1"
+		{thickness 10}
+		{component "body"}
+		{able {holed}}
+	}
+	{volume "body2"
+		{thickness 10}
+		{component "body"}
+	}
+	{volume "body3"
+		{thickness 10}
+		{component "body"}
+	}
+	
+	{Chassis
+		{Locomotion ("locomotion")
+			{MaxSpeed	25}
+			{StartTime	3}
+			{BrakeTime	3}
+		}
+	}
+
+	{boarder
+		{anm "driver"
+			{forward {begin	"board_steam_locomotive"} {end "pose_tram_driver"} {base "doorleft"}}
+			{reverse {end "board_steam_locomotive" -1} {base "doorleft" -1}}
+		}
+		{anm "driver1"
+			{forward {begin	"board_steam_locomotive"} {end "pose_tram_driver"} {base "doorright"}}
+			{reverse {end "board_steam_locomotive" -1} {base "doorright" -1}}
+		}
+	}
+
+	("crew_human" place(driver) bone(driver) door(emit1) animation(driver))
+	("crew_human" place(driver) bone(driver) door(emit2) animation(driver1))
+	
+    {mass 15000}
+
+}

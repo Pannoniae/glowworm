@@ -1,63 +1,24 @@
 {game_entity
+;// Defines
 	(include "/properties/vehicle_xx.ext")
 	{extension "sdkfz251b_xx.mdl"}
-
-	{volume "part1"		; wheel front left
-		{thickness 0.5}
-	}
-	{volume "part2"		; wheel front right
-		{thickness 0.5}
-	}
-
-	{volume "part4"		; track wheel left
-		{thickness 15}
-	}
-	{volume "part5"		; track wheel right 1
-		{thickness 15}
-	}
-	{volume "part6"		; track wheel right 2
-		{thickness 15}
-	}
-	
-	{volume "part9"		; engine door left
-		{thickness 10}
-	}
-	{volume "part10"	; engine door right
-		{thickness 10}
-	}
-	
-	{volume "body1"		; Lower Hull
-		{thickness 8}
-	}
-
-	{volume "body2"		; Upper Hull
-		{thickness 8}
-		{able {holed}}
-	}
-	
-	{volume "engine1"	; Lower
-		{thickness 8
-			{front 	14.5}
-		}
-	}
-	{volume "engine2"	; Upper
-		{thickness 8
-			{front 	14.5}
-			{top	10}
-		}
-	}
-	{Volume "part8" ; MG Shield
-		{thickness 8}
-	}
-
-	{volume "part3"		; door left
-		{thickness 8}
-		{able {obstacle 0}}
-	}
-	
-	{volume "part7"		; door right
-		{thickness 8}
-		{able {obstacle 0}}
-	}
 	("tracks" thickness(15))
+
+;// Components
+	{volume "body1" {thickness 8 {front 12} {top 5.5} {bottom 5.5}} {able {holed}}} 	;// Upper body
+	{volume "body2" {thickness 8 {front 12} {top 5.5} {bottom 5.5}}} 	;// Lower body 1_1
+	{volume "body3" {thickness 8 {front 12} {top 5.5} {bottom 5.5}}} 	;// Lower body 1_1
+	{volume "engine" {thickness 8 {front 14.5} {top 5.5}}} 	;// Entire engine deck
+	{volume "wheelright1" {thickness 0.5}}
+	{volume "wheelleft1" {thickness 0.5}}
+
+
+;//Non-Components
+	{volume "gun_shield" {thickness 8} {able {holed}}} 	;// Gun shield (front)
+	{volume "doorl" {thickness 8}}
+	{volume "doorr" {thickness 8}}
+
+;// Parts
+	{volume "part7" {thickness 5.5}}
+	{volume "part8" {thickness 5.5}}
 }

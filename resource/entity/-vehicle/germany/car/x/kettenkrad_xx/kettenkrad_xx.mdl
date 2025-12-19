@@ -1,0 +1,170 @@
+;Exported by:	 guita
+;Date:			 09.06.2021 16:39:19
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_ger\vehicles\btr\Kettenkrad HK101\kettenkrad_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{matrix34
+				0.9997 	 0.0186 	 -0.0186
+				-0.0169 	 0.9961 	 0.0868
+				0.0202 	 -0.0865 	 0.9961
+				-0.2747 	 -0.0051 	 6.3115
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "part2"
+				{parameters "id=part2;"}
+				{Position 12.7087 	 9.4296 	 -0.3352}
+				{VolumeView "part2.ply"}
+			}
+			{bone revolute "part5"
+				{parameters "id=part5;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-20.9071 	 9.5211 	 -0.8772
+				}
+				{VolumeView "part5.ply"}
+			}
+			{bone "part4"
+				{parameters "id=part4;"}
+				{matrix34
+					0.9997 	 -0.0169 	 0.0202
+					0.0186 	 0.9961 	 -0.0865
+					-0.0186 	 0.0868 	 0.9961
+					12.7087 	 -9.4296 	 -0.3352
+				}
+				{VolumeView "part4.ply"}
+			}
+			{bone revolute "part3"
+				{parameters "id=part3;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					-20.9071 	 -9.5211 	 -0.8772
+				}
+				{VolumeView "part3.ply"}
+			}
+			{bone revolute "part1"
+				{parameters "id=part1;"}
+				{matrix34
+					0.8956 	 0.4446 	 -0.0173
+					-0.015 	 -0.0088 	 -0.9998
+					-0.4447 	 0.8957 	 -0.0012
+					22.3504 	 3.2517 	 -0.9393
+				}
+				{VolumeView "part1.ply"}
+			}
+			{bone "engine"
+				{matrix34
+					0.9997 	 -0.0169 	 0.0202
+					0.0186 	 0.9961 	 -0.0865
+					-0.0186 	 0.0868 	 0.9961
+					-7.7552 	 0.1173 	 11.5638
+				}
+			}
+		}
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position -5.267 	 0.0051 	 3.5998}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{Position 1.0139 	 0.0028 	 8.3463}
+}
+{volume "body3"
+	{polyhedron "body3.vol"}
+	{bone "body"}
+	{Position -7.2836 	 0.0028 	 12.6804}
+}
+{volume "body4"
+	{polyhedron "body4.vol"}
+	{bone "body"}
+	{Position -20.7569 	 10.9287 	 8.7032}
+}
+{volume "body5"
+	{polyhedron "body5.vol"}
+	{bone "body"}
+	{Position -20.7569 	 -10.9505 	 8.7032}
+}
+{volume "part1"
+	{cylinder 5.17323 2.83258}
+	{bone "part1"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.012
+	}
+}
+{volume "part2"
+	{cylinder 4.54724 2.97244}
+	{bone "part2"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		0 	 0.0084 	 0
+	}
+}
+{volume "part3"
+	{cylinder 5 2.22441}
+	{bone "part3"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 0.0315
+	}
+}
+{volume "part4"
+	{cylinder 4.54724 2.97244}
+	{bone "part4"}
+	{matrix34
+		0.9997 	 0.0186 	 -0.0186
+		0.0202 	 -0.0865 	 0.9961
+		0.0169 	 -0.9961 	 -0.0868
+		-0.0004 	 0.026 	 0.0023
+	}
+}
+{volume "part5"
+	{cylinder 4.99257 2.22441}
+	{bone "part5"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0 	 0 	 -0.0639
+	}
+}
+{volume "trackleft"
+	{polyhedron "trackleft.vol"}
+	{bone "body"}
+	{matrix34
+		0.9997 	 -0.0169 	 0.0202
+		0.0186 	 0.9961 	 -0.0865
+		-0.0186 	 0.0868 	 0.9961
+		-4.1705 	 9.3837 	 -1.9802
+	}
+}
+{volume "trackright"
+	{polyhedron "trackright.vol"}
+	{bone "body"}
+	{matrix34
+		0.9997 	 -0.0169 	 0.0202
+		0.0186 	 0.9961 	 -0.0865
+		-0.0186 	 0.0868 	 0.9961
+		-4.5203 	 -9.3605 	 -0.3531
+	}
+}

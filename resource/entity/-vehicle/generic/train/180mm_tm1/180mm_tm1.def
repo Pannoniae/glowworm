@@ -1,0 +1,44 @@
+{game_entity
+	(include "/properties/railway.ext")
+	(include "/properties/tank_crew.ext")
+	(include "/properties/selection/vehicle_elongated.inc" scale(2))
+	{props "with_gun" "turret" "muzzle_170mm_210mm" "vision_lev05" "detect_artillery" "artillery_minimap_heavy"}
+	{extension "180mm_tm1.mdl"}
+	(include "180mm_tm1.ext")
+	{targetclass "howitzer"}
+	{targetSelector "cannon_howitzer"}
+
+	("train_durability" body(500) engine(250) turret(300) mantlet(225) gun(225))
+
+	{extender "inventory"
+		{box
+			{Size 9 6}
+			{weight 10000}
+			{item "repair_kit" 3}
+			{item "bulletrus_180 he" 10}
+		}
+	}
+
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{weapon "180mm_tm1" filling "bulletrus_180 he" 1}
+			{gunner "gunner"}
+			{RestoreIKAfterAim}
+			("abm_dymamic_gun"
+				zeroing(8.0)	; // time it takes to aim until the reticle shrinks. Bigger values, more control.
+				dispersion(1)	; // time it takes to distort the reticle when you move the gun (how abrupt it loses zeroing). Bigger values, more control.
+			)
+		}
+	}
+	{mass 7300}
+
+	{bone "gun_rot"
+		{limits 0 49}
+		{speed2 4}
+	}
+	{bone "turret"
+		{speed2 2}
+	}
+}
+

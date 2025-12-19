@@ -1,0 +1,97 @@
+;Exported by:	 TigerF
+;Date:			 30.04.2025 15:54:29
+;File:			 D:\GOH\3dsmax9_saves\scenes\GoH_3d_vehicle_rus\vehicles\cannon\45mm_21k_naval\45mm_21k_naval_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0 	 0 	 0.2869}
+			{VolumeView "body.ply"}
+			{bone "turret_sup"
+				{parameters "id=body;"}
+				{matrix34
+					0.9835 	 -0.1789 	 0.027
+					0.1766 	 0.9817 	 0.0709
+					-0.0391 	 -0.065 	 0.9971
+					0.0074 	 0.0018 	 16.68
+				}
+				{VolumeView "turret_sup.ply"}
+				{bone revolute "part2"
+					{parameters "id=part2;"}
+					{matrix34
+						0.9735 	 0.0675 	 0.2187
+						-0.2248 	 0.1028 	 0.969
+						0.0429 	 -0.9924 	 0.1152
+						-6.0811 	 -0.5827 	 9.8257
+					}
+					{VolumeView "part2.ply"}
+					{bone "part1"
+						{parameters "id=part1;"}
+						{matrix34
+							0.9999 	 0.0069 	 0.0104
+							0.009 	 0.187 	 -0.9823
+							-0.0087 	 0.9823 	 0.1869
+							1.5521 	 0.4082 	 -0.3061
+						}
+						{VolumeView "part1.ply"}
+					}
+				}
+			}
+		}
+	}
+}
+{volume "barrel1"
+	{box 6.79116 7.01101 2.80196}
+	{bone "part2"}
+	{Position 2.2951 	 0.4592 	 -0.5665}
+}
+{volume "barrel2"
+	{cylinder 0.898059 17.7769}
+	{bone "part2"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 1 	 0
+		1 	 0 	 0
+		-1.2693 	 2.7697 	 -0.5849
+	}
+}
+{volume "barrel3"
+	{cylinder 0.898059 18.8705}
+	{bone "part2"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 1 	 0
+		1 	 0 	 0
+		-0.7225 	 -1.9475 	 -0.5849
+	}
+}
+{volume "barrel4"
+	{cylinder 1.21359 43.8005}
+	{bone "part1"}
+	{matrix34
+		0 	 1 	 0
+		0 	 0 	 1
+		1 	 0 	 0
+		0.0514 	 0.1928 	 -0.0266
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position -0.0839 	 0.0286 	 7.3331}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "turret_sup"}
+	{matrix34
+		0.9835 	 0.1766 	 -0.0391
+		-0.1789 	 0.9817 	 -0.065
+		0.027 	 0.0709 	 0.9971
+		-0.013 	 0.1221 	 2.1514
+	}
+}

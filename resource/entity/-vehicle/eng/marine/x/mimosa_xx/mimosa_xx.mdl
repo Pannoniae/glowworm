@@ -1,0 +1,329 @@
+;Exported by:	 nic21
+;Date:			 09.10.2025 16:49:33
+;File:			 C:\Gates of Hell SVN\GoH_3d_vehicle_eng\vehicles\marine\Mimosa\mimosa_xx.max
+{skeleton
+	{bone "basis"
+		{parameters "steermax=30;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0 	 0 	 16.293}
+			{VolumeView "body.ply"}
+			{bone "cabin"
+				{parameters "id=cabin;"}
+				{Position -49.4592 	 0 	 13.3861}
+				{VolumeView "cabin.ply"}
+				{bone "part4"
+					{parameters "id=cabin;"}
+					{Position 24.075 	 14.4933 	 7.7387}
+					{VolumeView "part4.ply"}
+				}
+				{bone revolute "part5"
+					{parameters "id=cabin;"}
+					{Position 0.6348 	 0.0001 	 14.0981}
+					{VolumeView "part5.ply"}
+				}
+				{bone revolute "part3"
+					{parameters "id=cabin;"}
+					{Position 44.5948 	 -12.0616 	 4.2978}
+					{VolumeView "part3.ply"}
+				}
+			}
+			{bone "part2"
+				{parameters "id=body;"}
+				{Position 11.8198 	 -7.376 	 40.2658}
+				{VolumeView "part2.ply"}
+			}
+			{bone "engine"
+				{parameters "id=engine;"}
+				{Position -11.0037 	 0 	 -14.85}
+				{VolumeView "engine.ply"}
+			}
+			{bone "part1"
+				{parameters "id=body;"}
+				{Position 63.7854 	 13.9887 	 14.5567}
+				{VolumeView "part1.ply"}
+			}
+		}
+		{bone "pivot_back"
+			{Position -98.2974 	 0 	 0}
+		}
+		{bone "pivot_front"
+			{Position 98.553 	 0 	 0}
+		}
+	}
+}
+{volume "armor1"
+	{cylinder 1.59154 5.90043}
+	{bone "body"}
+	{Position 58.5841 	 -0.048 	 25.2137}
+}
+{volume "armor2"
+	{box 7.10149 7.55237 8.14108}
+	{bone "body"}
+	{Position 58.584 	 0 	 18.3262}
+}
+{volume "armor3"
+	{cylinder 1.59154 93.6575}
+	{bone "part2"}
+	{matrix34
+		0.201 	 0 	 0.9796
+		0 	 1 	 0
+		-0.9796 	 0 	 0.201
+		-0.5144 	 7.328 	 -1.4218
+	}
+}
+{volume "armor4"
+	{polyhedron "armor4.vol"}
+	{bone "part2"}
+	{matrix34
+		0.201 	 0 	 0.9796
+		0 	 1 	 0
+		-0.9796 	 0 	 0.201
+		-3.1232 	 -1.4396 	 0.6584
+	}
+}
+{volume "armor5"
+	{polyhedron "armor5.vol"}
+	{bone "part1"}
+	{matrix34
+		0.0959 	 0.0377 	 -0.9947
+		0.1888 	 -0.9818 	 -0.019
+		-0.9773 	 -0.186 	 -0.1013
+		0.2299 	 -3.9441 	 0.2754
+	}
+}
+{volume "armor6"
+	{box 9.83601 0.914539 20.6693}
+	{bone "cabin"}
+	{matrix34
+		0.9958 	 -0.0911 	 0
+		0.0911 	 0.9958 	 0
+		0 	 0 	 1
+		0.7978 	 -19.9212 	 15.4919
+	}
+}
+{volume "armor7"
+	{box 9.83601 0.914539 20.6693}
+	{bone "cabin"}
+	{matrix34
+		0.9958 	 0.0911 	 0
+		-0.0911 	 0.9958 	 0
+		0 	 0 	 1
+		0.7978 	 19.9213 	 15.4919
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{Position 0.0451 	 0.1603 	 -28.6556}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{Position -74.9745 	 -0.0712 	 -8.2647}
+}
+{volume "body3"
+	{polyhedron "body3.vol"}
+	{bone "body"}
+	{Position 70.303 	 0 	 -2.2865}
+}
+{volume "cabin1"
+	{polyhedron "cabin1.vol"}
+	{bone "cabin"}
+	{Position 32.128 	 0 	 8.2859}
+}
+{volume "cabin2"
+	{polyhedron "cabin2.vol"}
+	{bone "cabin"}
+	{Position -23.6044 	 0 	 -2.4427}
+}
+{volume "engine"
+	{box 36.6724 39.252 23.0212}
+	{bone "engine"}
+	{Position 0 	 0 	 2.9049}
+}
+{volume "hole10"
+	{box 2.66871 7.83213 10.1493}
+	{bone "cabin"}
+	{Position 6.4129 	 -14.3123 	 17.1274}
+}
+{volume "hole11"
+	{box 18.0494 12.2047 10.1496}
+	{bone "cabin"}
+	{matrix34
+		0.6541 	 0.7564 	 0
+		-0.7564 	 0.6541 	 0
+		0 	 0 	 1
+		46.2937 	 11.8504 	 17.1274
+	}
+}
+{volume "hole12"
+	{box 9.28913 5.00739 10.1496}
+	{bone "cabin"}
+	{matrix34
+		0.9982 	 0.0603 	 0
+		-0.0603 	 0.9982 	 0
+		0 	 0 	 1
+		39.0084 	 21.6339 	 17.1275
+	}
+}
+{volume "hole14"
+	{box 9.28913 5.00739 10.1496}
+	{bone "cabin"}
+	{matrix34
+		0.9982 	 0.0603 	 0
+		-0.0603 	 0.9982 	 0
+		0 	 0 	 1
+		12.4126 	 19.9607 	 17.1274
+	}
+}
+{volume "hole15"
+	{box 2.66871 7.83213 10.1493}
+	{bone "cabin"}
+	{Position 6.4129 	 14.3111 	 17.1274}
+}
+{volume "hole16"
+	{polyhedron "hole16.vol"}
+	{bone "cabin"}
+	{Position 32.0388 	 -0.0073 	 7.6269}
+}
+{volume "hole17"
+	{polyhedron "hole17.vol"}
+	{bone "cabin"}
+	{Position -43.0429 	 0 	 -2.2488}
+}
+{volume "hole18"
+	{polyhedron "hole18.vol"}
+	{bone "cabin"}
+	{Position -23.5329 	 0 	 -2.2488}
+}
+{volume "hole19"
+	{polyhedron "hole19.vol"}
+	{bone "cabin"}
+	{Position -4.0331 	 0 	 -3.0626}
+}
+{volume "hole1"
+	{cylinder 3.3887 67.126}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		14.7258 	 0 	 5.1751
+	}
+}
+{volume "hole20"
+	{polyhedron "hole20.vol"}
+	{bone "cabin"}
+	{matrix34
+		0 	 -1 	 0
+		1 	 0 	 0
+		0 	 0 	 1
+		-51.874 	 0.0057 	 -1.4089
+	}
+}
+{volume "hole2"
+	{cylinder 3.3887 67.126}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		45.5111 	 0 	 5.1732
+	}
+}
+{volume "hole3"
+	{cylinder 3.3887 63.9764}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		76.3187 	 0 	 5.1659
+	}
+}
+{volume "hole4"
+	{cylinder 3.3887 54.1339}
+	{bone "body"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		107.097 	 0 	 5.1832
+	}
+}
+{volume "hole5"
+	{box 24.8032 20.665 10.1496}
+	{bone "cabin"}
+	{Position 46.7452 	 0 	 17.1275}
+}
+{volume "hole6"
+	{box 18.0494 12.2047 10.1496}
+	{bone "cabin"}
+	{matrix34
+		0.6541 	 -0.7564 	 0
+		0.7564 	 0.6541 	 0
+		0 	 0 	 1
+		46.2937 	 -11.8497 	 17.1274
+	}
+}
+{volume "hole7"
+	{box 9.28913 5.00739 10.1496}
+	{bone "cabin"}
+	{matrix34
+		0.9982 	 -0.0603 	 0
+		0.0603 	 0.9982 	 0
+		0 	 0 	 1
+		39.0084 	 -21.6256 	 17.1275
+	}
+}
+{volume "hole8"
+	{box 13.1906 53.0721 31.3619}
+	{bone "cabin"}
+	{Position 25.6663 	 0 	 7.8461}
+}
+{volume "hole9"
+	{box 9.28913 5.00739 10.1496}
+	{bone "cabin"}
+	{matrix34
+		0.9982 	 -0.0603 	 0
+		0.0603 	 0.9982 	 0
+		0 	 0 	 1
+		12.4126 	 -19.9601 	 17.1274
+	}
+}
+{volume "part3"
+	{cylinder 5.25318 0.968504}
+	{bone "part3"}
+	{matrix34
+		-0.1063 	 -0.6652 	 0.7391
+		0.0739 	 0.7359 	 0.673
+		-0.9916 	 0.1262 	 -0.029
+		0.1974 	 -0.0251 	 0.0058
+	}
+}
+{volume "part4"
+	{box 7.13349 0.984253 37.6318}
+	{bone "part4"}
+	{matrix34
+		0.6074 	 -0.7669 	 -0.2071
+		0.7894 	 0.6118 	 0.0496
+		0.0887 	 -0.1936 	 0.9771
+		-1.5209 	 1.9202 	 0.4849
+	}
+}
+{volume "part5"
+	{cylinder 7.29608 1.1811}
+	{bone "part5"}
+	{matrix34
+		0.2684 	 0.3786 	 0.8858
+		-0.0219 	 0.9217 	 -0.3873
+		-0.9631 	 0.0846 	 0.2556
+		0.2707 	 -0.0238 	 -0.0718
+	}
+}

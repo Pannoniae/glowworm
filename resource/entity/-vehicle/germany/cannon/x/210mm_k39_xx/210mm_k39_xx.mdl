@@ -1,0 +1,222 @@
+;Exported by:	 TigerF
+;Date:			 05.06.2024 19:15:47
+;File:			 D:\GOH\3dsmax9_saves\scenes\GoH_3d_vehicle_ger\vehicles\cannon\210mm_K39\210mm_k39_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0 	 0 	 -10.0555}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{parameters "id=body;"}
+				{matrix34
+					0.9835 	 -0.1784 	 0.0299
+					0.1766 	 0.9828 	 0.0538
+					-0.039 	 -0.0476 	 0.9981
+					0 	 0 	 13.4357
+				}
+				{VolumeView "turret.ply"}
+				{bone "part1"
+					{parameters "id=part1;"}
+					{matrix34
+						0.9613 	 0.2756 	 0
+						-0.2756 	 0.9613 	 0
+						0 	 0 	 1
+						-25.0213 	 -13.9617 	 18.4022
+					}
+					{VolumeView "part1.ply"}
+				}
+			}
+		}
+	}
+}
+{obstacle "obstacle"
+	{polygon2
+		{radius 0}
+		{vertex 25.4838 -25.3419}
+		{vertex 25.4838 25.6627}
+		{vertex -25.5823 25.6627}
+		{vertex -25.5823 -25.4034}
+	}
+	{rotate}
+}
+{obstacle "obstacle1"
+	{polygon2
+		{radius 0}
+		{vertex -25.7849 19.3943}
+		{vertex -103.796 2.32436}
+		{vertex -96.7769 -36.6016}
+		{vertex -26.4231 -23.6795}
+	}
+	{rotate}
+}
+{volume "barrel1"
+	{cylinder 5.20899 65.2483}
+	{bone "turret"}
+	{matrix34
+		-0.0092 	 0.9992 	 -0.0379
+		-0.2248 	 0.0349 	 0.9738
+		0.9744 	 0.0174 	 0.2243
+		28.9836 	 0.0477 	 36.6467
+	}
+}
+{volume "barrel2"
+	{cylinder 2.5524 56.6786}
+	{bone "turret"}
+	{matrix34
+		-0.0092 	 0.9992 	 -0.0379
+		-0.2248 	 0.0349 	 0.9738
+		0.9744 	 0.0174 	 0.2243
+		11.235 	 0.0457 	 40.8772
+	}
+}
+{volume "barrel3"
+	{cylinder 1.96535 56.6786}
+	{bone "turret"}
+	{matrix34
+		-0.0092 	 0.9992 	 -0.0379
+		-0.2248 	 0.0349 	 0.9738
+		0.9744 	 0.0174 	 0.2243
+		14.9401 	 -0.5385 	 24.5922
+	}
+}
+{volume "barrel4"
+	{polyhedron "barrel4.vol"}
+	{bone "turret"}
+	{matrix34
+		0.9745 	 0.0155 	 0.224
+		-0.0491 	 0.9882 	 0.1453
+		-0.2191 	 -0.1526 	 0.9637
+		92.0364 	 0.9364 	 51.5762
+	}
+}
+{volume "barrel5"
+	{box 16.3222 15.6646 11.6599}
+	{bone "turret"}
+	{matrix34
+		0.9745 	 0.0155 	 0.224
+		-0.2191 	 -0.1526 	 0.9637
+		0.0491 	 -0.9882 	 -0.1453
+		-21.2268 	 -0.9962 	 26.6906
+	}
+}
+{volume "barrel6"
+	{cylinder 5.2972 6.32246}
+	{bone "turret"}
+	{matrix34
+		-0.0491 	 0.9882 	 0.1453
+		-0.2191 	 -0.1526 	 0.9637
+		0.9745 	 0.0155 	 0.224
+		-31.9746 	 -1.034 	 23.0568
+	}
+}
+{volume "body10"
+	{polyhedron "body10.vol"}
+	{bone "turret"}
+	{Position -70.4582 	 -0.0443 	 7.9152}
+}
+{volume "body11"
+	{polyhedron "body11.vol"}
+	{bone "turret"}
+	{Position -5.6383 	 7.8189 	 20.7749}
+}
+{volume "body12"
+	{polyhedron "body12.vol"}
+	{bone "turret"}
+	{Position -5.6383 	 -7.78 	 20.7749}
+}
+{volume "body13"
+	{cylinder 3.97449 4.38996}
+	{bone "turret"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0.1845 	 0.9828
+		0 	 -0.9828 	 0.1845
+		55.4365 	 5.9963 	 25.7516
+	}
+}
+{volume "body14"
+	{cylinder 3.97449 4.38996}
+	{bone "turret"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		55.5286 	 -5.9108 	 26.8721
+	}
+}
+{volume "body1"
+	{box 51.1189 51.0547 17.4838}
+	{bone "body"}
+	{Position -0.0256 	 -0.1265 	 3.204}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "turret"}
+	{Position 1.4756 	 0 	 0.4254}
+}
+{volume "body3"
+	{box 72.5127 1.81453 14.6521}
+	{bone "turret"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		-13.9757 	 15.979 	 3.1908
+	}
+}
+{volume "body4"
+	{box 72.5127 1.81453 14.6521}
+	{bone "body"}
+	{matrix34
+		0.9833 	 -0.1805 	 0.025
+		-0.0254 	 0 	 0.9997
+		-0.1804 	 -0.9836 	 -0.0046
+		-16.4248 	 -13.5896 	 15.4649
+	}
+}
+{volume "body5"
+	{box 26.4866 8.82014 1.1537}
+	{bone "turret"}
+	{Position -64.1701 	 14.121 	 3.4979}
+}
+{volume "body6"
+	{box 26.4866 8.82014 1.1537}
+	{bone "turret"}
+	{Position -64.1701 	 -14.1 	 3.4979}
+}
+{volume "body7"
+	{box 15.4941 39.6775 2.51256}
+	{bone "turret"}
+	{Position -92.1268 	 -0.1901 	 -0.4905}
+}
+{volume "body8"
+	{polyhedron "body8.vol"}
+	{bone "turret"}
+	{Position 46.183 	 -7.78 	 25.8493}
+}
+{volume "body9"
+	{polyhedron "body9.vol"}
+	{bone "turret"}
+	{Position 46.183 	 7.8189 	 25.8493}
+}
+{volume "hole1"
+	{box 40.6119 13.5622 18.8266}
+	{bone "turret"}
+	{Position -0.1847 	 -0.1474 	 -6.8591}
+}
+{volume "part1"
+	{box 39.0329 9.70308 2.39076}
+	{bone "part1"}
+	{matrix34
+		1 	 0.0049 	 -0.0021
+		0.0019 	 0.0433 	 0.9991
+		0.005 	 -0.9991 	 0.0433
+		0.1458 	 0.5625 	 -0.0056
+	}
+}

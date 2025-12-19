@@ -1,0 +1,62 @@
+;Exported by:	 guita
+;Date:			 23.09.2023 17:40:12
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_ger2\vehicles\tank_light\h39_turret\h39_turret_x.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone revolute "turret"
+			{parameters "id=turret;"}
+			{animation
+				{sequence "break" {file "body_b.anm"}{speed 0.7}}
+			}
+			{Position 0 	 0 	 0.642}
+			{VolumeView "turret.ply"}
+			{bone "cover2"
+				{parameters "id=body;"}
+				{Position -1.2736 	 6.5144 	 12.0761}
+				{VolumeView "cover2.ply"}
+			}
+			{bone "cover1"
+				{parameters "id=body;"}
+				{Position -1.2736 	 -2.8886 	 12.0636}
+				{VolumeView "cover1.ply"}
+			}
+			{bone "turret_hatch"
+				{parameters "id=body;"}
+				{Position -13.7085 	 -0.6358 	 1.9239}
+				{VolumeView "turret_hatch.ply"}
+			}
+			{bone revolute "gun_rot1"
+				{limits -5 5}
+				{Position 8.9524 	 -1.3636 	 4.7985}
+				{bone revolute "gun_rot"
+					{parameters "id=gun;"}
+					{animation
+						{sequence "break" {file "gun_b.anm"}{speed 0.7}}
+					}
+					{matrix34
+						1 	 0 	 0
+						0 	 0 	 1
+						0 	 -1 	 0
+						0 	 0 	 0
+					}
+					{VolumeView "gun_rot.ply"}
+					{bone "gun"
+						{parameters "id=gun;"}
+						{matrix34
+							1 	 0 	 0
+							0 	 0 	 -1
+							0 	 1 	 0
+							13.8406 	 -0.326 	 0.1714
+						}
+						{VolumeView "gun.ply"}
+					}
+				}
+			}
+		}
+	}
+}

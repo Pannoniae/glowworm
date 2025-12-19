@@ -1,0 +1,89 @@
+{game_entity
+	(include "/properties/vehicle_xx.ext")
+	{extension "panzer4_70_v_xx.mdl"}
+	
+	{volume "body1"			; Hull front
+		{thickness	30
+			{front 80}		; front upper plate
+			{top 20}		
+			{rear 50}		; front lower plate
+			{bottom 20}
+		}
+	}
+	{volume "body2"			; middle part
+		{thickness 30
+			{front 80}
+			{bottom 20}
+		}
+	}
+	{volume "body3"			; middle part Top
+		{thickness 40
+			{front 80}
+			{rear 30}
+			{top 20}
+			{bottom 20}
+		}
+	}
+	{volume "body4"			; gun tower
+		{thickness 75}
+	}
+	{volume "body5"			; around gun tower 230+80
+		{thickness 100}
+		{able {holed}}
+	}
+	{volume "engine1"		; lower
+		{thickness 30
+			{front 10}
+			{rear 22}
+			{bottom 20}
+		}
+	}
+	{volume "engine2"		; upper
+		{thickness 30
+			{front 10}
+			{top 20}
+			{rear 22}
+		}
+	}
+	{volume "barrel1"
+		{thickness 25}
+	}
+	{volume "mantlet"
+		{thickness 75}
+		{CastSteel 0.8063}
+	}
+	{volume "shieldl1"
+		{thickness 5}
+	}
+	{volume "shieldl2"
+		{thickness 5}
+	}
+	{volume "shieldl3"
+		{thickness 5}
+	}
+	{volume "shieldl4"
+		{thickness 5}
+	}
+	{volume "shieldl5"
+		{thickness 5}
+	}
+	{volume "shieldr1"
+		{thickness 5}
+	}
+	{volume "shieldr2"
+		{thickness 5}
+	}
+	{volume "shieldr3"
+		{thickness 5}
+	}
+	{volume "shieldr4"
+		{thickness 5}
+	}
+	{volume "shieldr5"
+		{thickness 5}
+	}
+	{volume "part3"
+		{thickness 10}
+	}
+	("tracks" thickness(20))
+}

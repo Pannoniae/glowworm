@@ -7,7 +7,11 @@
 
 	("tank_medium_tier1")
 
-	("shield" args "shieldw1" 15)
+	("shield" args "shield1" 4)
+	("shield" args "shield2" 4)
+	("shield" args "shield3" 4)
+	("shield" args "shield4" 4)
+	("shield_track" args "detail8" 20)
 
 	("tracks" repair(30) thickness(20))
 	("gun" repair(30) thickness(20))
@@ -17,7 +21,7 @@
 	("fuel" args "fuel")
 	("transmission" args "transmission")
 
-	{volume "body1"			; Hull
+	{volume "body1"			; Hull front
 		{thickness	30
 			{front 50}
 			{top 25}		; Glacis
@@ -25,14 +29,14 @@
 			{bottom 15}
 		}
 	}
-	{volume "body2"			; Superstructure
+	{volume "body2"			; middle_lower
 		{thickness 30
-			{front 50}
 			{top 10}
-			{rear 30}
+			{bottom 15}
+			{rear 10}
 		}
 	}
-	{volume "body3"			; Superstructure Front, Right
+	{volume "body3"			; Superstructure upper 
 		{thickness 30
 			{front 50}
 			{top 10}
@@ -41,6 +45,7 @@
 	{volume "body4"			; Superstructure Front, Left
 		{thickness 30
 			{front 50}
+			{top 25}
 		}
 	}
 	{volume "body5"			; Superstructure Front, Left, Top
@@ -48,7 +53,26 @@
 			{top 10}
 		}
 	}
-	{volume "engine"		; Hull 
+	{volume "body6"			; Superstructure Front, Right
+		{thickness 30
+			{front 50}
+			{top 10}
+		}
+	}
+	{volume "body7"			; left box
+		{thickness 30}
+	}
+	{volume "body8"			; left slope
+		{thickness 30
+			{bottom 10}
+		}
+	}
+	{volume "body9"			; right slope
+		{thickness 30
+		{bottom 10}
+		}
+	}
+	{volume "engine1"		; main
 		{thickness 30
 			{front 10}
 			{top 16}
@@ -56,14 +80,36 @@
 			{bottom 15}
 		}
 	}
+	{volume "engine2"			; right cooler box
+		{thickness 30
+			{left 35}
+		}
+	}
+	{volume "engine3"			; left cooler box
+		{thickness 30
+			{left 35}
+		}
+	}
+	{volume "engine4"			; rear cooler box
+		{thickness 30}
+	}
 	{volume "mantlet"
 		{thickness 50}
 		{tags "armor"}
 	}
-	{volume "mantlet1"
+	{volume "barrel1"
 		{thickness 50}
 		{tags "gun"}
 		{component "gun"}
 	}
+	{volume "armor1"
+		{thickness 30}
+	}
+	{volume "armor2"
+		{thickness 30}
+	}
 
-	{component "shieldw1" {tags "cut_part"}}
+	{component "shield1" {tags "cut_part"}}
+	{component "shield2" {tags "cut_part"}}
+	{component "shield3" {tags "cut_part"}}
+	{component "shield4" {tags "cut_part"}}

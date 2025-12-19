@@ -1,0 +1,44 @@
+;Exported by:	 guita
+;Date:			 07.06.2021 17:47:52
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_export\3d_vehicles\GENERIC\Train\wagon4_oiltank\wagon4_tanker_x.max
+{skeleton
+	{bone "basis"
+		{parameters "wheelradius=0.6;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "pivot_front"
+			{Position 38.2345 	 0 	 12.6459}
+			{bone revolute "wheel_front"
+				{parameters "id=body;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					0 	 0 	 0
+				}
+				{VolumeView "wheel_front.ply"}
+			}
+		}
+		{bone "pivot_back"
+			{Position -38.5275 	 0 	 12.6459}
+			{bone revolute "wheel_back"
+				{parameters "id=body;"}
+				{matrix34
+					1 	 0 	 0
+					0 	 0 	 -1
+					0 	 1 	 0
+					0 	 0 	 0
+				}
+				{VolumeView "wheel_back.ply"}
+			}
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position -0.1479 	 0 	 24.1744}
+			{VolumeView "body.ply"}
+		}
+	}
+}

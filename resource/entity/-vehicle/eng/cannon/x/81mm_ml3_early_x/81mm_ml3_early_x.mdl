@@ -1,0 +1,86 @@
+;Exported by:	 TigerF
+;Date:			 26.06.2024 20:01:17
+;File:			 D:\GOH\3dsmax9_saves\scenes\GoH_3d_vehicle_eng\vehicles\cannon\81mm_ML3_mortar\81mm_ml3_x.max
+{skeleton
+	{bone revolute "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{Position 0.033 	 0 	 0.9492}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{speed 0.01}
+				{Position 0.006 	 0 	 -0.2694}
+				{bone "gun_rot"
+					{parameters "id=body;"}
+					{Position -0.039 	 0 	 0.0974}
+					{VolumeView "gun_rot.ply"}
+					{bone "gun"
+						{parameters "id=body;"}
+						{matrix34
+							0.9951 	 0 	 0.0992
+							0 	 1 	 0
+							-0.0992 	 0 	 0.9951
+							0.0021 	 -0.0068 	 0
+						}
+						{VolumeView "gun.ply"}
+						{bone "bipod_base"
+							{parameters "id=body;"}
+							{matrix34
+								0.9951 	 0 	 -0.0992
+								0 	 1 	 0
+								0.0992 	 0 	 0.9951
+								11.1282 	 0.0068 	 14.2675
+							}
+							{VolumeView "bipod_base.ply"}
+							{bone "stan_r"
+								{parameters "id=body;"}
+								{matrix34
+									0.891 	 0 	 0.454
+									0 	 1 	 0
+									-0.454 	 0 	 0.891
+									3.0854 	 -2.4901 	 -6.0381
+								}
+								{VolumeView "stan_r.ply"}
+								{bone "1r"
+									{parameters "id=body;"}
+									{Position -0.0065 	 -1.2696 	 -7.4633}
+									{VolumeView "1r.ply"}
+									{bone "2r"
+										{parameters "id=body;"}
+										{Position -0.0004 	 1.5051 	 -0.0462}
+										{VolumeView "2r.ply"}
+									}
+								}
+							}
+							{bone "stan_l"
+								{parameters "id=body;"}
+								{matrix34
+									0.891 	 0 	 0.454
+									0 	 1 	 0
+									-0.454 	 0 	 0.891
+									3.0854 	 2.4901 	 -6.0381
+								}
+								{VolumeView "stan_l.ply"}
+								{bone "1l"
+									{parameters "id=body;"}
+									{Position -0.0065 	 1.2696 	 -7.4633}
+									{VolumeView "1l.ply"}
+									{bone "2l"
+										{parameters "id=body;"}
+										{Position -0.0004 	 -1.5051 	 -0.0462}
+										{VolumeView "2l.ply"}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

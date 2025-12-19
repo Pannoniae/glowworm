@@ -1,0 +1,34 @@
+{game_entity
+	(include "/properties/railway.ext")
+	{props "train_part" "no_minimap_view"}
+	{Extension "wagon_tanker.mdl"}
+	{mass 10000}
+
+	("wheel" args "wheelright1")
+	("wheel" args "wheelleft1")
+	("wheel" args "wheelright2")
+	("wheel" args "wheelleft2")
+
+	{volume "body1"
+		{thickness 30}
+		{able {visible 0}}
+	}
+	{volume "body2"
+		{thickness 5}
+	}
+	{volume "body3"
+		{thickness 5}
+	}
+	{volume "wheelleft1"
+		{thickness 30}
+	}
+	{volume "wheelright1"
+		{thickness 30}
+	}
+	{volume "wheelleft2"
+		{thickness 30}
+	}
+	{volume "wheelright2"
+		{thickness 30}
+	}
+}

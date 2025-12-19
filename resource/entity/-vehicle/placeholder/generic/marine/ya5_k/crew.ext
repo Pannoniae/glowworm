@@ -1,0 +1,88 @@
+;SDL
+
+(define "crew"
+	{placer
+		{place "%place"
+			{group "crew"}
+			{linkbone "%place"}
+			{turnoff {sensor} {shadow}}
+			{visor "%visor"}
+			;{openForCrush}
+		}
+	}
+	{boarder
+		{door "%door"}
+		{door "%door2"}
+		{door "%door3"}
+		{door "%door4"}
+		{door "%door5"}
+		{door "%door6"}
+		{link "%door" "%place" {anm "%anm"} {forward putoff} {reverse puton}}
+		{link "%door2" "%place" {anm "%anm"} {forward putoff} {reverse puton}}
+		{link "%door3" "%place" {anm "%anm"} {forward putoff} {reverse puton}}
+		{link "%door4" "%place" {anm "%anm"} {forward putoff} {reverse puton}}
+		{link "%door5" "%place" {anm "%anm"} {forward putoff} {reverse puton}}
+		{link "%door6" "%place" {anm "%anm"} {forward putoff} {reverse puton}}
+	}
+)
+
+{boarder
+	{anm "driver"
+		{forward	{begin	"board_lowarmor"} {end "seat_passenger"}}
+		{reverse	{begin	"emit_Bk1124"}}
+	}
+	{anm "gunner"
+		{forward	{begin	"board_lowarmor"} {end "pose_mgun_stan"}}
+		{reverse	{begin	"emit_Bk1124"}}
+	}
+	{anm "passenger"
+		{forward	{begin	"board_lowarmor"} {end "pose_squat_empty"}}
+		{reverse	{begin	"emit_Bk1124"}}
+	}
+}
+
+("crew" place(driver) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2) visor(driver) anm(driver))
+("crew" place(gunner1) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2) visor(gunner1) anm(gunner))
+("crew" place(gunner2) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2) visor(gunner2) anm(gunner))
+
+{sensor
+	{visor "driver" {vision "human"}}
+	{visor "gunner1" {vision "human"} {bone "foresight5"}}
+	{visor "gunner2" {vision "human"} {bone "foresight6"}}
+}
+
+(define "passenger"
+	{placer
+		{place "%place"
+			{group "passenger"}
+			{linkbone "%place"}
+			{turnoff {shadow}}
+			;{openForCrush}
+		}
+	}
+	{boarder
+		{door "%door"}
+		{door "%door2"}
+		{door "%door3"}
+		{door "%door4"}
+		{door "%door5"}
+		{door "%door6"}
+		{link "%door" "%place" {anm "passenger"} {forward putoff} {reverse puton}}
+		{link "%door2" "%place" {anm "passenger"} {forward putoff} {reverse puton}}
+		{link "%door3" "%place" {anm "passenger"} {forward putoff} {reverse puton}}
+		{link "%door4" "%place" {anm "passenger"} {forward putoff} {reverse puton}}
+		{link "%door5" "%place" {anm "passenger"} {forward putoff} {reverse puton}}
+		{link "%door6" "%place" {anm "passenger"} {forward putoff} {reverse puton}}
+	}
+)
+
+("passenger" place(place1) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place2) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place3) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place4) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place5) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place6) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place7) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place8) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place9) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))
+("passenger" place(place10) door(emitx6) door2(emitx5) door3(emitx3) door4(emitx7) door5(emitx1) door6(emitx2))

@@ -1,0 +1,127 @@
+;Exported by:	 ftiger
+;Date:			 21.04.2016 20:41:32
+;File:			 D:\PROGRAMS\3ds_max\3dsmax9_saves\scenes\Early WW2 tanks\germany\pz4\d\2012\pz4d_xx.max
+{skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "body"
+			{parameters "id=body;"}
+			{matrix34
+				0.9994 	 -0.0194 	 -0.0297
+				0.0186 	 0.9995 	 -0.0244
+				0.0301 	 0.0239 	 0.9993
+				-1.3082 	 -0.4508 	 16.9038
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "turret"
+				{parameters "id=turret;"}
+				{matrix34
+					0.932 	 0.3621 	 -0.0144
+					-0.3623 	 0.9317 	 -0.0243
+					0.0047 	 0.0279 	 0.9996
+					1.2206 	 -5.3577 	 19.9258
+				}
+				{VolumeView "turret.ply"}
+			}
+			{bone "part1"
+				{parameters "id=part1;"}
+				{Position -48.1818 	 -5.1311 	 2.1402}
+				{VolumeView "part1.ply"}
+			}
+		}
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0.0186 	 0.0301
+		-0.0194 	 0.9995 	 0.0239
+		-0.0297 	 -0.0244 	 0.9993
+		3.4527 	 0.0998 	 -1.5065
+	}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0.0186 	 0.0301
+		-0.0194 	 0.9995 	 0.0239
+		-0.0297 	 -0.0244 	 0.9993
+		8.8972 	 0.2675 	 11.1009
+	}
+}
+{volume "cupola"
+	{cylinder 6.67576 4.70521}
+	{bone "turret"}
+	{matrix34
+		0.9378 	 -0.3455 	 0.0353
+		0.3435 	 0.9377 	 0.0516
+		-0.0509 	 -0.0363 	 0.998
+		-11.4028 	 0.0257 	 9.3786
+	}
+}
+{volume "engine"
+	{polyhedron "engine.vol"}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0.0186 	 0.0301
+		-0.0194 	 0.9995 	 0.0239
+		-0.0297 	 -0.0244 	 0.9993
+		-32.2187 	 -0.9013 	 10.0164
+	}
+}
+{volume "gun"
+	{cylinder 1.36907 26.1922}
+	{bone "turret"}
+	{matrix34
+		0.0287 	 0.9953 	 0.0922
+		0.1102 	 -0.0948 	 0.9894
+		0.9935 	 -0.0182 	 -0.1124
+		30.1083 	 -0.3094 	 -2.0874
+	}
+}
+{volume "part1"
+	{polyhedron "part1.vol"}
+	{bone "part1"}
+	{matrix34
+		0.9994 	 0.0186 	 0.0301
+		-0.0194 	 0.9995 	 0.0239
+		-0.0297 	 -0.0244 	 0.9993
+		-1.043 	 3.2161 	 1.947
+	}
+}
+{volume "trackleft"
+	{box 105.551 22.4787 8.37106}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0.0186 	 0.0301
+		-0.0297 	 -0.0244 	 0.9993
+		0.0194 	 -0.9995 	 -0.0239
+		-0.024 	 23.8784 	 -5.1814
+	}
+}
+{volume "trackright"
+	{box 105.551 22.4787 8.37106}
+	{bone "body"}
+	{matrix34
+		0.9994 	 0.0186 	 0.0301
+		-0.0297 	 -0.0244 	 0.9993
+		0.0194 	 -0.9995 	 -0.0239
+		0.8962 	 -23.6219 	 -6.315
+	}
+}
+{volume "turret"
+	{polyhedron "turret.vol"}
+	{bone "turret"}
+	{matrix34
+		0.9994 	 -0.0299 	 0.0168
+		0.0301 	 0.9995 	 -0.0125
+		-0.0164 	 0.013 	 0.9998
+		-1.2084 	 0.0403 	 0.6976
+	}
+}
