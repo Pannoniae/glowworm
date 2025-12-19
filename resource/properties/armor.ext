@@ -89,7 +89,7 @@
 )
 
 (define "global_damage_mod"
-	{armor_damage_modifier 0.1} ;// multiplier adjusts ratio of which part of penetration does damage to component. (shell penetration - armor thickness) verses minimumDamageModifier. values < 1 = less damage done by over penetration.
+	{armor_damage_modifier 0.5} ;// multiplier adjusts ratio of which part of penetration does damage to component. (shell penetration - armor thickness) verses minimumDamageModifier. values < 1 = less damage done by over penetration.
 )
 
 (define "general_durability"
@@ -110,14 +110,14 @@
 		{component "cabin"
 			{health
 				{hp %body}
-				{hp_broken %body}	;// destroys component and cannot be repaired
+				{hp_broken (* %body 2)}	;// destroys component and cannot be repaired
 			}
 			("global_damage_mod")
 		}
 		{component "engine"
 			{health
 				{hp %engine}
-				{hp_broken (* %engine 1.5)}	;// destroys component and cannot be repaired
+				;{hp_broken (* %engine 1.5)}	;// destroys component and cannot be repaired
 			}
 			("global_damage_mod")
 		}
@@ -236,7 +236,7 @@
 		{component "body"
 			{health
 				{hp %body}
-				{hp_broken (* %body 0.5)}
+				{hp_broken (+ 1000 (* %body 5))}
 			}
 			("global_damage_mod")
 		}
@@ -266,7 +266,7 @@
 		{component "body"
 			{health
 				{hp %body}
-				{hp_broken (* %body 0.5)}
+				{hp_broken (* %body 1)}
 			}
 			("global_damage_mod")
 		}
@@ -319,7 +319,7 @@
 		{component "body"
 			{health
 				{hp %body}
-				{hp_broken (* %body 0.75)}
+				{hp_broken (* %body 1)}
 			}
 			("global_damage_mod")
 		}
@@ -422,7 +422,7 @@
 		{component "engine"
 			{health
 				{hp %engine}
-				{hp_broken %engine}	;// destroys component and cannot be repaired
+				{hp_broken (* 3 %engine)}	;// destroys component and cannot be repaired
 			}
 			("global_damage_mod")
 			{armor_damage_modifier 3}
