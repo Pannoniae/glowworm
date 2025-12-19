@@ -1,0 +1,55 @@
+;Exported by:	 JG52_
+;Date:			 22.07.2023 11:29:24
+;File:			 W:\git\GoH_3D_human_usa\weapons\bar\bar_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 1.89048 3.29488 0.600951}
+	{bone "magazine"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		-0.0133 	 -0.0222 	 -0.0065
+	}
+}
+{volume "select"
+	{box 2.1738 3.75953 0.919392}
+	{bone "magazine"}
+	{Position 0.0005 	 0.038 	 0.0122}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.878 	 -16.524 	 53.6526}
+			{lookat -0.0502 	 -0.6944 	 2.1962}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.1984 	 7.429 	 7.5013}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -6.0603 	 -15.1909 	 0.893}
+			}
+		}
+	}
+}

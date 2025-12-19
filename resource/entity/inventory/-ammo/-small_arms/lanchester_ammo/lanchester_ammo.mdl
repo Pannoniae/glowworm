@@ -1,0 +1,58 @@
+;Exported by:	 carlo
+;Date:			 13.11.2025 23:42:12
+;File:			 C:\svn\GoH_source\GoH_3d_human_eng\weapons\lanchester\Export\lanchester50_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 0.787402 9.73363 1.1811}
+	{bone "magazine"}
+	{matrix34
+		0 	 1 	 0
+		0 	 0 	 1
+		1 	 0 	 0
+		0.0194 	 0.0049 	 0
+	}
+}
+{volume "select"
+	{box 1.16246 10.1289 1.0546}
+	{bone "magazine"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		-0.0262 	 0.0033 	 -0.0586
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.8723 	 53.0129 	 16.348}
+			{lookat -0.0604 	 2.5485 	 0.8235}
+			{fov 4.65248}
+			{horizon 0.218503}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2936 	 -0.3874 	 -0.117}
+			}
+			{"1"
+				{type point}
+				{position -6.0767 	 0.9047 	 16.4267}
+			}
+		}
+	}
+}

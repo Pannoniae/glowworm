@@ -1,0 +1,85 @@
+;Exported by:	 Robin
+;Date:			 09.03.2025 19:32:27
+;File:			 E:\SVN GoH UK 3D models\shells\eng\3ds max\140mm_eng\140mm_eng_he_80lb.max
+{skeleton
+	{bone "140mm_eng_he_80lb"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "140mm_eng_he_80lb.ply"}
+			{VolumeView "140mm_eng_he_80lb_lod1.ply"}
+			{VolumeView "140mm_eng_he_80lb_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 1.58327 14.0157}
+	{bone "140mm_eng_he_80lb"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.8917 	 -0.0087 	 0
+	}
+}
+{volume "select"
+	{cylinder 2.95276 17.9723}
+	{bone "140mm_eng_he_80lb"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.914 	 -0.0104 	 0
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 1.2905 	 41.9613 	 -74.5499}
+			{lookat 1.2906 	 0.0436 	 0.0328}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4577 	 0.2013}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 1.2739 	 28.5361 	 -50.7409}
+			{lookat 1.2741 	 0.0109 	 0.0144}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.458 	 0.2007}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+			}
+		}
+	}
+}

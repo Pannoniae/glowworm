@@ -1,0 +1,35 @@
+;Exported by:	 guita
+;Date:			 28.05.2021 19:13:25
+;File:			 D:\Git\3D_Scenes\GoH_3D_human_export\3d_ammunition\shell_cannon\Max\shell_cannon_auto [2015] (export).max
+{skeleton
+	{bone "lo_shell_cannon"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "lo_shell_cannon.ply"}
+			{VolumeView "lo_shell_cannon_lod1.ply"}
+			{VolumeView "lo_shell_cannon_lod2.ply"}
+		}
+		{bone "fx_shellsmoke"
+			{matrix34
+				0 	 1 	 0
+				-1 	 0 	 0
+				0 	 0 	 1
+				0.0055 	 7.0839 	 -0.0199
+			}
+		}
+	}
+}
+{volume "body"
+	{cylinder 0.970932 7.81768}
+	{bone "lo_shell_cannon"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 1
+		0 	 -1 	 0
+		-0.023 	 2.7839 	 0.0203
+	}
+}

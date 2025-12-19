@@ -1,0 +1,62 @@
+;Exported by:	 carlos
+;Date:			 16.11.2023 01:42:30
+;File:			 F:\goh-3d-human-eng\weapons\bren_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "magazine"
+	{polyhedron "magazine.vol"}
+	{bone "magazine"}
+	{matrix34
+		0.6157 	 -0.788 	 0
+		-0.788 	 -0.6157 	 0
+		0 	 0 	 -1
+		0.1607 	 1.843 	 0.3499
+	}
+}
+{volume "select"
+	{box 2.95276 4.72441 1.1811}
+	{bone "magazine"}
+	{matrix34
+		0.9304 	 -0.3665 	 0
+		0.3665 	 0.9304 	 0
+		0 	 0 	 1
+		0.7176 	 1.6111 	 0.0643
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 5.0548 	 -9.6743 	 30.242}
+			{lookat 0.4992 	 -1.6223 	 -0.0982}
+			{fov 4.12352}
+			{horizon 179.674}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.3254 	 0.1163 	 -0.3614}
+			}
+			{"1"
+				{type point}
+				{position -3.9343 	 6.5489 	 4.4393}
+			}
+			{"2"
+				{type point}
+				{position 4.598 	 -16.9506 	 3.9125}
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+;Exported by:	 carlo
+;Date:			 13.11.2025 23:35:13
+;File:			 C:\svn\GoH_source\GoH_3d_human_eng\weapons\Stens\Export\sten_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+		{bone "round"
+			{matrix34
+				1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 -1
+				-0.005 	 3.0622 	 0.0128
+			}
+			{LODView
+				{VolumeView "round.ply"}
+				{VolumeView "round_lod1.ply"}
+				{VolumeView "round_lod2.ply"}
+				{VolumeView "round_lod3.ply"}
+			}
+		}
+	}
+}
+{volume "body"
+	{box 0.787402 6.29921 1.1811}
+	{bone "magazine"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 1 	 0
+		1 	 0 	 0
+		0.0286 	 -0.1634 	 -0.0095
+	}
+}
+{volume "select"
+	{box 1.16246 7.07783 1.35205}
+	{bone "magazine"}
+	{Position -0.113 	 -0.0304 	 -0.0004}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.9201 	 -16.4244 	 53.0512}
+			{lookat -0.1082 	 -0.8999 	 2.5867}
+			{fov 3.20254}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.0952 	 -0.5055 	 10.235}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -6.1635 	 -12.0874 	 1.8057}
+			}
+		}
+	}
+}

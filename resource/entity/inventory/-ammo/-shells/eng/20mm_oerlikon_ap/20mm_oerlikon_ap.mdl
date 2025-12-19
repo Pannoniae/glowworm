@@ -1,0 +1,98 @@
+;Exported by:	 ART_2
+;Date:			 30.04.2025 16:05:46
+;File:			 G:\Current work\20 mm Polsten\Export\Oerlikon mag ap [2015].max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+		}
+		{bone "20mm_eng_auto_ap"
+			{matrix34
+				-0.0872 	 0.9962 	 0
+				-0.9962 	 -0.0872 	 0
+				0 	 0 	 1
+				0.3839 	 -0.8885 	 1.1465
+			}
+			{LODView
+				{VolumeView "20mm_eng_auto_ap.ply"}
+				{VolumeView "20mm_eng_auto_ap_lod1.ply"}
+				{VolumeView "20mm_eng_auto_ap_lod2.ply"}
+			}
+		}
+	}
+}
+{volume "body"
+	{box 4.5416 7.08158 2.16535}
+	{bone "magazine"}
+	{matrix34
+		0.999 	 0.0436 	 0
+		0.0436 	 -0.999 	 0
+		0 	 0 	 -1
+		0.1242 	 -0.0152 	 -0.0532
+	}
+}
+{volume "select"
+	{box 5.58071 8.40945 2.75591}
+	{bone "magazine"}
+	{matrix34
+		1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 -1
+		0.1134 	 -0.0169 	 -0.038
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.2032 	 -1.5891 	 44.9508}
+			{lookat 0.4909 	 -0.0109 	 -0.3592}
+			{fov 8.23638}
+			{horizon -175.001}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2922 	 0.2252 	 -0.3375}
+			}
+			{"1"
+				{type directional}
+				{direction 0.41 	 -0.1796 	 -0.2228}
+			}
+			{"2"
+				{type directional}
+				{direction 0.1184 	 0.4162 	 -0.2505}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin -4.3158 	 -0.9598 	 15.1407}
+			{lookat 2.5736 	 -1.5625 	 1.3681}
+			{fov 10.2855}
+			{horizon 180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.4851 	 0.0055 	 0.1209}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction 0.4742 	 -0.0417 	 0.1531}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction -0.0882 	 0.0585 	 -0.4887}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+;Exported by:	 ART_2
+;Date:			 30.04.2025 16:12:33
+;File:			 G:\Current work\20 mm Polsten\Export\Oerlikon drum ap [2015].max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+		}
+		{bone "handle"
+			{matrix34
+				1 	 0 	 0
+				0 	 1 	 -0.0009
+				0 	 0.0009 	 1
+				-0.3053 	 3.0813 	 -0.5793
+			}
+		}
+		{bone "20mm_eng_auto_ap"
+			{matrix34
+				0 	 1 	 0
+				-1 	 0 	 0
+				0 	 0 	 1
+				0.1364 	 -0.2963 	 4.118
+			}
+			{LODView
+				{VolumeView "20mm_eng_auto_ap.ply"}
+				{VolumeView "20mm_eng_auto_ap_lod1.ply"}
+				{VolumeView "20mm_eng_auto_ap_lod2.ply"}
+			}
+		}
+	}
+}
+{volume "body"
+	{cylinder 3.47442 4.43725}
+	{bone "magazine"}
+	{matrix34
+		0 	 0 	 1
+		0.0872 	 0.9962 	 0
+		-0.9962 	 0.0872 	 0
+		-0.0927 	 0.0175 	 0.564
+	}
+}
+{volume "select"
+	{box 8.85827 8.85827 8.85827}
+	{bone "magazine"}
+	{matrix34
+		1 	 0 	 0
+		0 	 0 	 -1
+		0 	 1 	 0
+		0.0642 	 0.104 	 0.1635
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.655 	 -1.7122 	 46.1668}
+			{lookat 0.1716 	 0.0586 	 -1.1319}
+			{fov 8.23638}
+			{horizon 164.721}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.011 	 0.2897 	 -0.4074}
+			}
+			{"1"
+				{type directional}
+				{direction 0.3952 	 0.2547 	 -0.1701}
+			}
+			{"2"
+				{type directional}
+				{direction -0.4403 	 -0.1913 	 -0.14}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin -9.1591 	 -1.8618 	 13.6474}
+			{lookat 2.367 	 -1.8617 	 4.2008}
+			{fov 10.2855}
+			{horizon 180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.3726 	 -0.0002 	 0.3334}
+				{diffuse 0xffffeecd}
+			}
+			{"1"
+				{type directional}
+				{direction 0.1367 	 -0.0013 	 -0.4809}
+			}
+			{"2"
+				{type directional}
+				{direction -0.4945 	 0.0015 	 -0.0739}
+				{diffuse 0xffe2ecff}
+			}
+		}
+	}
+}

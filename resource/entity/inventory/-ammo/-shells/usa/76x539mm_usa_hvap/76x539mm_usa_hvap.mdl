@@ -1,0 +1,85 @@
+;Exported by:	 ART
+;Date:			 29.08.2022 14:10:06
+;File:			 E:\Autodesk\Low poly\freelance\Carlos\Shells\Export\Usa\76mm_usa\76mm_usa_hvap.max
+{skeleton
+	{bone "76mm_usa_hvap"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "76mm_usa_hvap.ply"}
+			{VolumeView "76mm_usa_hvap_lod1.ply"}
+			{VolumeView "76mm_usa_hvap_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 0.922999 17.0489}
+	{bone "76mm_usa_hvap"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.6724 	 -0.0098 	 0
+	}
+}
+{volume "select"
+	{cylinder 1.59317 18.176}
+	{bone "76mm_usa_hvap"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.6158 	 -0.0116 	 0
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 5.9123 	 18.3885 	 -32.7079}
+			{lookat 5.9124 	 0.0008 	 0.0081}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4577 	 0.2013}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.7106 	 32.5654 	 -57.877}
+			{lookat 0.7107 	 0.0253 	 0.0219}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.458 	 0.2007}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+			}
+		}
+	}
+}

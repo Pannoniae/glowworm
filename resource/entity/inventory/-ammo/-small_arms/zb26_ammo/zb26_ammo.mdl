@@ -1,0 +1,52 @@
+;Exported by:	 carlos
+;Date:			 04.10.2023 13:06:12
+;File:			 F:\GoH_3D_human_export\3d_weapons\zb26\zb26_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 1.76655 3.22094 0.548067}
+	{bone "magazine"}
+	{matrix34
+		1 	 -0.0079 	 0
+		0.0079 	 1 	 0
+		0 	 0 	 1
+		0.0041 	 0.1548 	 -0.0041
+	}
+}
+{volume "select"
+	{box 2.33549 3.75328 1.09516}
+	{bone "magazine"}
+	{Position 0.0672 	 0.1255 	 -0.0135}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.9818 	 -19.35 	 62.3047}
+			{lookat -0.0216 	 -0.9889 	 2.6194}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"1"
+				{type point}
+				{position -1.7782 	 -12.2378 	 -4.6484}
+			}
+		}
+	}
+}

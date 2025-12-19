@@ -1,0 +1,86 @@
+;Exported by:	 carlos
+;Date:			 19.11.2023 19:49:43
+;File:			 F:\GoH_3D_vehicles_usa\bombs\100lb_bomb_export.max
+{skeleton
+	{animation
+		{sequence "start" {speed 1}}
+	}
+	{bone "100lb"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "100lb.ply"}
+			{VolumeView "100lb_lod1.ply"}
+			{VolumeView "100lb_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 2.73727 22.4984}
+	{bone "100lb"}
+	{matrix34
+		0 	 -1 	 0
+		0 	 0 	 1
+		-1 	 0 	 0
+		0.0003 	 -0.2288 	 -0.0616
+	}
+}
+{volume "select"
+	{cylinder 4.27589 26.0982}
+	{bone "100lb"}
+	{matrix34
+		0 	 -1 	 0
+		0 	 0 	 1
+		-1 	 0 	 0
+		-0.3245 	 -0.2288 	 -0.0616
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin -0.0724 	 -22.647 	 13.7179}
+			{lookat -0.2348 	 0.0642 	 0.0574}
+			{fov 45}
+			{horizon -0.528971}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 8.6569 	 -3.1885 	 51.1825}
+			}
+			{"1"
+				{type directional}
+				{direction -0.01 	 0.4999 	 0.0036}
+			}
+			{"2"
+				{type point}
+				{position 16.2654 	 -72.0176 	 -1.1324}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin -0.0321 	 -22.7449 	 13.7943}
+			{lookat -0.1945 	 -0.0336 	 0.1338}
+			{fov 45}
+			{horizon -0.528971}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 8.6569 	 -3.1885 	 51.1825}
+			}
+			{"1"
+				{type directional}
+				{direction -0.01 	 0.4999 	 0.0036}
+			}
+			{"2"
+				{type point}
+				{position 16.2654 	 -72.0176 	 -1.1324}
+			}
+		}
+	}
+}

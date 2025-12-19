@@ -1,0 +1,97 @@
+;Exported by:	 ART_2
+;Date:			 11.10.2025 19:37:06
+;File:			 G:\Current work\weapons\Cromwell rocket\rocket.max
+{skeleton
+	{bone "rocket"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "rocket.ply"}
+			{VolumeView "rocket_lod1.ply"}
+			{VolumeView "rocket_lod2.ply"}
+			{VolumeView "rocket_lod3.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 0 	 -1
+				0 	 -1 	 0
+				-17.6494 	 0 	 -0.0076
+			}
+		}
+		{bone "sound_rocket"}
+	}
+}
+{volume "body"
+	{cylinder 2.3622 36.4173}
+	{bone "rocket"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.6829 	 -0.0098 	 -0.0076
+	}
+}
+{volume "select"
+	{cylinder 3.93701 39.3701}
+	{bone "rocket"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.2147 	 -0.0115 	 -0.0076
+	}
+}
+{extender "preview"
+	{"stuff_secondary"
+		{camera
+			{origin 14.0688 	 -12.8635 	 -36.6773}
+			{lookat 14.0688 	 0.0095 	 0.0072}
+			{fov 15.1893}
+			{horizon -180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 0.494 	 -0.0769}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0002 	 -0.4927 	 0.0848}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 0.0051 	 0.5}
+				{diffuse 0xffe2ecff}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.4459 	 -48.7663 	 -138.989}
+			{lookat 0.4456 	 0.0095 	 0.0072}
+			{fov 15.1893}
+			{horizon -180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 0.4939 	 -0.0778}
+			}
+			{"1"
+				{type directional}
+				{direction 0.004 	 -0.498 	 0.0443}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0267 	 0.4993}
+				{diffuse 0xffe2ecff}
+			}
+		}
+	}
+}

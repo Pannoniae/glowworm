@@ -1,0 +1,52 @@
+;Exported by:	 carlo
+;Date:			 28.07.2025 23:59:53
+;File:			 C:\svn\GoH_source\GoH_3d_human_fin\Weapons\swedish BAR\export\bar_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "magazine"
+	{polyhedron "magazine.vol"}
+	{bone "magazine"}
+	{Position 0.109 	 -0.1844 	 -0.5021}
+}
+{volume "select"
+	{box 2.81496 4.50787 1.1811}
+	{bone "magazine"}
+	{Position -0.0087 	 0.0144 	 0.0643}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.0681 	 -8.5592 	 27.9942}
+			{lookat 0.0681 	 0.0134 	 -0.1195}
+			{fov 4.12352}
+			{horizon 179.674}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2259 	 0.2614 	 -0.3614}
+			}
+			{"1"
+				{type point}
+				{position -0.0066 	 9.378 	 4.4392}
+			}
+			{"2"
+				{type point}
+				{position -4.1522 	 -15.2764 	 3.9124}
+			}
+		}
+	}
+}

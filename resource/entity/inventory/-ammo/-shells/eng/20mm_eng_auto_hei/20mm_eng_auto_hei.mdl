@@ -1,0 +1,87 @@
+;Exported by:	 ART
+;Date:			 30.11.2021 16:57:06
+;File:			 E:\Autodesk\Low poly\freelance\Carlos\Shells\Export\Eng\20mm_eng_auto\20mm_eng_auto_hei.max
+{skeleton
+	{bone "20mm_eng_auto_hei"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "20mm_eng_auto_hei.ply"}
+			{VolumeView "20mm_eng_auto_hei_lod1.ply"}
+			{VolumeView "20mm_eng_auto_hei_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 3.69617 4.67426 0.596329}
+	{bone "20mm_eng_auto_hei"}
+	{matrix34
+		1 	 0 	 0
+		0 	 1 	 0
+		0 	 0 	 1
+		0.229 	 0.0452 	 -0.0567
+	}
+}
+{volume "select"
+	{box 4.92126 5.90551 1.9685}
+	{bone "20mm_eng_auto_hei"}
+	{matrix34
+		1 	 0 	 0
+		0 	 1 	 0
+		0 	 0 	 1
+		0.229 	 0.0452 	 0.1095
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 0.251 	 0.1917 	 21.7365}
+			{lookat 0.2511 	 0.5097 	 -0.0231}
+			{fov 10.2855}
+			{horizon -180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 0.3062 	 -0.3953}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 -0.488 	 -0.109}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 0.305 	 0.3962}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.2447 	 -0.1525 	 14.3575}
+			{lookat 0.2447 	 0.0575 	 -0.0282}
+			{fov 15.1893}
+			{horizon -180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 0.3067 	 -0.3949}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 -0.488 	 -0.109}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 0.3039 	 0.3971}
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+;Exported by:	 ART
+;Date:			 29.08.2022 11:05:53
+;File:			 E:\Autodesk\Low poly\freelance\Carlos\Shells\Export\Usa\107mm_usa_mortar\107mm_usa_mortar_he.max
+{skeleton
+	{bone "107mm_usa_mortar_he"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "107mm_usa_mortar_he.ply"}
+			{VolumeView "107mm_usa_mortar_he_lod1.ply"}
+			{VolumeView "107mm_usa_mortar_he_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 0 	 -1
+				0 	 -1 	 0
+				-5.2015 	 0 	 0
+			}
+		}
+		{bone "sound_mortar"}
+	}
+}
+{volume "body"
+	{cylinder 1.16991 10.7528}
+	{bone "107mm_usa_mortar_he"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.166 	 -0.0087 	 0
+	}
+}
+{volume "select"
+	{cylinder 1.9685 13.1289}
+	{bone "107mm_usa_mortar_he"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.3148 	 -0.0104 	 0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.1688 	 20.7621 	 -36.8892}
+			{lookat 0.1689 	 0.0193 	 0.0191}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.458 	 0.2007}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin 0.1732 	 31.1344 	 -55.3049}
+			{lookat 0.1733 	 0.0355 	 0.0282}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4577 	 0.2013}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+			}
+		}
+	}
+}

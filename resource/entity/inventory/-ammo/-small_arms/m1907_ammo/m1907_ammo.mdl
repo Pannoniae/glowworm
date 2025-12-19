@@ -1,0 +1,56 @@
+;Exported by:	 carlo
+;Date:			 14.08.2025 12:28:19
+;File:			 C:\svn\GoH_source\GoH_3d_human_fin\Weapons\Husqvarna pistol\husqvarna_ammo.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+		}
+	}
+}
+{volume "magazine"
+	{box 0.862205 2.18504 0.334646}
+	{bone "magazine"}
+	{matrix34
+		0.9744 	 -0.225 	 0
+		0.225 	 0.9744 	 0
+		0 	 0 	 1
+		-0.0358 	 0.0002 	 -0.0024
+	}
+}
+{volume "select"
+	{box 1.93701 2.97638 0.784252}
+	{bone "magazine"}
+	{Position -0.0426 	 -0.0876 	 -0.0137}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.0196 	 -9.4558 	 30.9247}
+			{lookat 0.0196 	 0.0191 	 -0.148}
+			{fov 3.65975}
+			{horizon 179.674}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2259 	 0.2614 	 -0.3614}
+			}
+			{"1"
+				{type point}
+				{position -0.0404 	 9.4799 	 4.44}
+			}
+			{"2"
+				{type point}
+				{position -4.186 	 -15.1745 	 5.7453}
+			}
+		}
+	}
+}

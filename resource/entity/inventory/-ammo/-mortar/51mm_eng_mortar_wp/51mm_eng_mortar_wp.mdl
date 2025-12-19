@@ -1,0 +1,66 @@
+;Exported by:	 guita
+;Date:			 24.09.2021 16:30:03
+;File:			 D:\Git\3D_Scenes\GoH_3D_vehicles_rus\inventory\50mm_eng_mortar_sm.max
+{skeleton
+	{bone "body"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{VolumeView "body.ply"}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 0 	 1
+				0 	 1 	 0
+				-2.7195 	 0.0062 	 -0.0056
+			}
+		}
+		{bone "sound_mortar"}
+	}
+}
+{volume "body"
+	{cylinder 0.522203 5.06582}
+	{bone "body"}
+	{matrix34
+		0 	 1 	 0
+		0 	 0 	 1
+		1 	 0 	 0
+		-0.0005 	 0 	 0
+	}
+}
+{volume "select"
+	{cylinder 1.01307 6.83885}
+	{bone "body"}
+	{matrix34
+		0 	 1 	 0
+		0 	 0 	 1
+		1 	 0 	 0
+		0.1116 	 0 	 0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -1.6974 	 -11.5027 	 8.0905}
+			{lookat -0.0304 	 -0.0439 	 0.1513}
+			{fov 22.6199}
+			{horizon -175.5}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2378 	 0.373 	 0.2331}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0207 	 0.4295 	 -0.2552}
+			}
+			{"2"
+				{type directional}
+				{direction 0.0617 	 -0.3826 	 -0.3159}
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+;Exported by:	 carlos
+;Date:			 05.11.2023 23:28:54
+;File:			 F:\GoH_3D_human_usa\grenades\rifle_grenades\export\rifle_grenad_m9a1.max
+{skeleton
+	{bone "m9a1"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "m9a1.ply"}
+			{VolumeView "m9a1_lod1.ply"}
+			{VolumeView "m9a1_lod2.ply"}
+			{VolumeView "m9a1_lod3.ply"}
+		}
+		{bone "handle"
+			{matrix34
+				0 	 0 	 1
+				1 	 0 	 0
+				0 	 1 	 0
+				-0.1778 	 0.0139 	 0.0419
+			}
+		}
+	}
+}
+{volume "body"
+	{cylinder 0.760039 5.51181}
+	{bone "m9a1"}
+	{matrix34
+		0 	 0 	 1
+		0 	 -1 	 0
+		1 	 0 	 0
+		0.4718 	 -0.0127 	 0.0139
+	}
+}
+{volume "select"
+	{box 2.3622 2.3622 7.08661}
+	{bone "m9a1"}
+	{matrix34
+		0 	 0 	 1
+		0 	 -1 	 0
+		1 	 0 	 0
+		0.4305 	 0.014 	 0.0133
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.5157 	 -28.6308 	 15.206}
+			{lookat 0.5457 	 0.7511 	 -0.2995}
+			{fov 10.2855}
+			{horizon 0.0197823}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.4834 	 0.0776 	 -0.1012}
+			}
+			{"1"
+				{type directional}
+				{direction -0.113 	 0.1914 	 -0.4479}
+			}
+			{"2"
+				{type directional}
+				{direction -0.4352 	 0.2225 	 -0.1051}
+			}
+		}
+	}
+}

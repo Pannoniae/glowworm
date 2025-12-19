@@ -1,0 +1,48 @@
+;Exported by:	 carlos
+;Date:			 05.10.2023 22:23:49
+;File:			 F:\GoH_3D_human_usa\weapons\thompson\Export\thompson_drum_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 1.64858 0.787031}
+	{bone "magazine"}
+	{Position -0.0216 	 0.0034 	 -0.0169}
+}
+{volume "select"
+	{cylinder 1.88968 1.10184}
+	{bone "magazine"}
+	{Position -0.0216 	 0.0034 	 0.01}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.275 	 -0.7798 	 8.4998}
+			{lookat 0.0481 	 -0.2597 	 2.9222}
+			{fov 25.1609}
+			{horizon 155.799}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0854 	 0.2023 	 -0.4492}
+			}
+			{"1"
+				{type point}
+				{position -0.1548 	 -17.239 	 2.1314}
+			}
+		}
+	}
+}

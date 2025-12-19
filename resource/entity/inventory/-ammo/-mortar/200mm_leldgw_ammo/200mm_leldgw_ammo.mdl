@@ -1,0 +1,70 @@
+;Exported by:	 Carlos
+;Date:			 15.04.2022 13:15:23
+;File:			 T:\GoH_3D_vehicles_ger\vehicles\cannon\20cm_leLdgW\20mm_leldgw_ammo.max
+{skeleton
+	{bone "body"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "body.ply"}
+			{VolumeView "body_lod1.ply"}
+			{VolumeView "body_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 -0.0005 	 0
+				-0.0005 	 1 	 0
+				0 	 0 	 -1
+				-6.5463 	 -0.0136 	 0.0251
+			}
+		}
+		{bone "sound_mortar"}
+	}
+}
+{volume "body"
+	{cylinder 2.25805 15.8675}
+	{bone "body"}
+	{matrix34
+		0.0005 	 -1 	 0
+		0 	 0 	 -1
+		1 	 0.0005 	 0
+		1.298 	 0 	 -0.001
+	}
+}
+{volume "select"
+	{cylinder 3.21874 16.3386}
+	{bone "body"}
+	{matrix34
+		0.0005 	 -1 	 0
+		0 	 0 	 -1
+		1 	 0.0005 	 0
+		1.4418 	 0.0001 	 0.0019
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.1545 	 26.2882 	 16.5908}
+			{lookat 0.8492 	 1.0128 	 0.8719}
+			{fov 30.5282}
+			{horizon -0.736217}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 34.1072 	 25.5048 	 -22.9972}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0248 	 0.0807 	 -0.4928}
+			}
+			{"2"
+				{type point}
+				{position 0.7571 	 37.3519 	 20.4173}
+			}
+		}
+	}
+}

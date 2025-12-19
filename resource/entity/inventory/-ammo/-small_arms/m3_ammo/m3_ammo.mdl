@@ -1,0 +1,52 @@
+;Exported by:	 carlos
+;Date:			 02.09.2023 12:22:05
+;File:			 F:\GoH_3D_human_usa\weapons\grease_gun\grease_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 0.77477 5.47627 0.493733}
+	{bone "magazine"}
+	{Position -0.0268 	 -0.1224 	 0.0039}
+}
+{volume "select"
+	{box 1.18571 6.00316 0.994481}
+	{bone "magazine"}
+	{Position -0.016 	 -0.0714 	 0.0094}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.9947 	 -17.5154 	 57.493}
+			{lookat -0.1122 	 -0.6409 	 2.6404}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.3422 	 5.983 	 1.086}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -6.0955 	 -16.6369 	 0.8763}
+			}
+		}
+	}
+}

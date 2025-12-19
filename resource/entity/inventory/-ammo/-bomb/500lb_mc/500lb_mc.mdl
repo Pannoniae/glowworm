@@ -1,0 +1,85 @@
+;Exported by:	 carlo
+;Date:			 05.11.2025 13:16:07
+;File:			 C:\svn\GoH_source\GoH_3d_vehicle_eng\ordnance\500lb_mc\500lb_mc_export.max
+{skeleton
+	{animation
+		{sequence "start" {speed 1}}
+	}
+	{bone "bomb"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "bomb.ply"}
+			{VolumeView "bomb_lod1.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 3.55148 35.5295}
+	{bone "bomb"}
+	{matrix34
+		0 	 -1 	 0
+		0 	 0 	 1
+		-1 	 0 	 0
+		-1.7053 	 -0.2288 	 0.2391
+	}
+}
+{volume "select"
+	{cylinder 5.43755 38.5823}
+	{bone "bomb"}
+	{matrix34
+		0 	 -1 	 0
+		0 	 0 	 1
+		-1 	 0 	 0
+		-2.4902 	 -0.2288 	 0.2391
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -2.2191 	 -45.3434 	 7.8296}
+			{lookat -2.4781 	 -0.4306 	 0.113}
+			{fov 45}
+			{horizon -0.528971}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 8.6568 	 -3.1885 	 51.1825}
+			}
+			{"1"
+				{type directional}
+				{direction -0.01 	 0.4999 	 0.0036}
+			}
+			{"2"
+				{type point}
+				{position 16.2653 	 -72.0176 	 -1.1324}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin -2.3348 	 -45.2501 	 7.9853}
+			{lookat -2.5934 	 -0.4026 	 0.2799}
+			{fov 45}
+			{horizon -0.528971}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 8.6568 	 -3.1885 	 51.1825}
+			}
+			{"1"
+				{type directional}
+				{direction -0.01 	 0.4999 	 0.0036}
+			}
+			{"2"
+				{type point}
+				{position 16.2653 	 -72.0176 	 -1.1324}
+			}
+		}
+	}
+}

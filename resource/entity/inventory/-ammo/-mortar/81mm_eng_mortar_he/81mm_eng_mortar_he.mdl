@@ -1,0 +1,94 @@
+;Exported by:	 guita
+;Date:			 21.02.2025 11:22:34
+;File:			 G:\SVN\Working Resources\GatesOfHell\GoH_3d_vehicle_eng\shells\eng\3ds max\81mm_eng_mortar\81mm_eng_mortar_he.max
+{skeleton
+	{bone "81mm_eng_mortar_he"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "81mm_eng_mortar_he.ply"}
+			{VolumeView "81mm_eng_mortar_he_lod1.ply"}
+			{VolumeView "81mm_eng_mortar_he_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 0 	 -1
+				0 	 -1 	 0
+				-4.7253 	 0 	 0
+			}
+		}
+		{bone "sound_mortar"}
+	}
+}
+{volume "body"
+	{cylinder 0.855448 8.04528}
+	{bone "81mm_eng_mortar_he"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0017 	 -1 	 0.0007
+		-1 	 0.0017 	 0
+		-0.0041 	 -0.0018 	 0
+	}
+}
+{volume "select"
+	{cylinder 1.9685 9.92878}
+	{bone "81mm_eng_mortar_he"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0017 	 -1 	 0.0007
+		-1 	 0.0017 	 0
+		-0.3137 	 -0.0019 	 0
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 0.017 	 22.9332 	 -40.6839}
+			{lookat 0.017 	 0.0476 	 0.035}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4577 	 0.2013}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.0092 	 15.557 	 -27.6275}
+			{lookat 0.0093 	 0.0193 	 0.0191}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.458 	 0.2007}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+			}
+		}
+	}
+}

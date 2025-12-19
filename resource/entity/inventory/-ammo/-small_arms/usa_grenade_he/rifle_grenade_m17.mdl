@@ -1,0 +1,70 @@
+;Exported by:	 carlos
+;Date:			 05.11.2023 23:30:03
+;File:			 F:\GoH_3D_human_usa\grenades\rifle_grenades\export\rifle_grenad_m17.max
+{skeleton
+	{bone "m17"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "m17.ply"}
+			{VolumeView "m17_lod1.ply"}
+			{VolumeView "m17_lod2.ply"}
+			{VolumeView "m17_lod3.ply"}
+		}
+		{bone "handle"
+			{matrix34
+				0 	 0 	 1
+				1 	 0 	 0
+				0 	 1 	 0
+				-0.1778 	 0.0139 	 0.0419
+			}
+		}
+	}
+}
+{volume "body"
+	{cylinder 0.760039 4.67109}
+	{bone "m17"}
+	{matrix34
+		0 	 0 	 1
+		0 	 -1 	 0
+		1 	 0 	 0
+		0.0515 	 -0.0127 	 0.0139
+	}
+}
+{volume "select"
+	{box 2.3622 2.3622 6.28346}
+	{bone "m17"}
+	{matrix34
+		0 	 0 	 1
+		0 	 -1 	 0
+		1 	 0 	 0
+		0.029 	 0.014 	 0.0133
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.5158 	 -28.6307 	 15.206}
+			{lookat 0.5457 	 0.7511 	 -0.2995}
+			{fov 10.2855}
+			{horizon 0.0197823}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.4834 	 0.0776 	 -0.1012}
+			}
+			{"1"
+				{type directional}
+				{direction -0.113 	 0.1914 	 -0.4479}
+			}
+			{"2"
+				{type directional}
+				{direction -0.4352 	 0.2225 	 -0.1051}
+			}
+		}
+	}
+}

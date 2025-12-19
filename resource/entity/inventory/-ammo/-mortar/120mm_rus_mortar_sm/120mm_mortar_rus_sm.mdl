@@ -1,0 +1,88 @@
+;Exported by:	 User
+;Date:			 03.12.2019 21:34:56
+;File:			 D:\Working (GoH)\Small props\Mortar 120mm rounds\Max\120mm_mortar_rus_sm [2015] (export).max
+{skeleton
+	{bone "rus_sm"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "rus_sm.ply"}
+			{VolumeView "rus_sm_lod1.ply"}
+			{VolumeView "rus_sm_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+				-5.1418 	 0.0135 	 0.0357
+			}
+		}
+		{bone "sound_mortar"}
+	}
+}
+{volume "body"
+	{cylinder 1.53543 13.3025}
+	{bone "rus_sm"}
+	{matrix34
+		0 	 -1 	 0.0007
+		-0.001 	 0.0007 	 1
+		-1 	 0 	 -0.001
+		-0.0269 	 0 	 0.0018
+	}
+}
+{volume "select"
+	{cylinder 2.76321 14.9541}
+	{bone "rus_sm"}
+	{matrix34
+		0 	 -1 	 0.0007
+		-0.001 	 0.0007 	 1
+		-1 	 0 	 -0.001
+		0.1391 	 0 	 0.0028
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin -0.0871 	 48.9813 	 27.6496}
+			{lookat -0.087 	 -0.0578 	 0.0881}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.1293 	 -0.4693 	 0.1143}
+				{diffuse 0xfffffbf3}
+			}
+			{"1"
+				{type directional}
+				{direction 0.1181 	 -0.0125 	 -0.4857}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.2694 	 41.9625 	 31.0051}
+			{lookat -0.0977 	 -0.1097 	 0.0569}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0007 	 0.3263 	 -0.3788}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0014 	 -0.4997 	 0.0168}
+				{diffuse 0xffc7c7c7}
+			}
+			{"2"
+				{type directional}
+				{direction 0.0004 	 -0.0896 	 -0.4919}
+			}
+		}
+	}
+}

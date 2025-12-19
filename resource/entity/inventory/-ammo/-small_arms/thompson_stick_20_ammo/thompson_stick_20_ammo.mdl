@@ -1,0 +1,52 @@
+;Exported by:	 carlos
+;Date:			 05.10.2023 20:39:30
+;File:			 F:\GoH_3D_human_usa\weapons\thompson\Export\thompson_stick_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 0.836614 2.91142 0.433071}
+	{bone "magazine"}
+	{Position 0 	 0 	 -0.0029}
+}
+{volume "select"
+	{box 1.18571 3.47544 0.994481}
+	{bone "magazine"}
+	{Position 0.0306 	 0.0194 	 0.0129}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.718 	 -13.2436 	 42.8722}
+			{lookat -0.0694 	 -0.8411 	 2.5563}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.3043 	 6.0546 	 1.0843}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -6.1334 	 -16.5652 	 0.8746}
+			}
+		}
+	}
+}

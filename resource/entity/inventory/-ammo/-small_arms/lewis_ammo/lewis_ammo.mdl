@@ -1,0 +1,57 @@
+;Exported by:	 ART_2
+;Date:			 30.11.2024 12:27:58
+;File:			 G:\Current work\weapons\Lewis\Export\Lewis ammo.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "magazine"
+	{cylinder 2.55906 1.5748}
+	{bone "magazine"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 0.5218
+	}
+}
+{volume "select"
+	{box 5.51181 5.51181 1.9685}
+	{bone "magazine"}
+	{Position 0 	 0 	 0.534}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.0919 	 0.2696 	 66.9671}
+			{lookat -0.0196 	 -0.0362 	 0.0835}
+			{fov 4.12352}
+			{horizon -4.99936}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0373 	 0.284 	 -0.4098}
+			}
+			{"1"
+				{type point}
+				{position 40.0167 	 -8.6101 	 2.799}
+			}
+			{"2"
+				{type point}
+				{position -16.5366 	 -13.1925 	 23.1678}
+			}
+		}
+	}
+}

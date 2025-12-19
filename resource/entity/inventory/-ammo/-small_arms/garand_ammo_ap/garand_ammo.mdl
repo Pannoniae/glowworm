@@ -1,0 +1,52 @@
+;Exported by:	 Carlos
+;Date:			 09.02.2023 13:55:48
+;File:			 H:\git\GoH_3D_human_usa\weapons\m1_garand\m1_garand_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 1.75045 1.11717 0.600951}
+	{bone "magazine"}
+	{Position 0.0268 	 0.0151 	 -0.0034}
+}
+{volume "select"
+	{box 2.1738 1.66813 0.919392}
+	{bone "magazine"}
+	{Position 0.0406 	 -0.0592 	 0.0153}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.7258 	 -13.6287 	 44.3382}
+			{lookat -0.0519 	 -0.7433 	 2.4527}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.2386 	 6.5539 	 7.5044}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -6.0201 	 -16.066 	 0.896}
+			}
+		}
+	}
+}

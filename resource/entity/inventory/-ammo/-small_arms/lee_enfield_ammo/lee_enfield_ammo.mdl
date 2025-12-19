@@ -1,0 +1,50 @@
+;Exported by:	 ART_2
+;Date:			 25.10.2024 17:46:25
+;File:			 G:\Current work\weapons\Lee-Enfield no1 mk3\Export\lee_enfield_ammo.max
+{skeleton
+	{bone "ammo_clips"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "ammo_clips.ply"}
+			{VolumeView "ammo_clips_lod1.ply"}
+			{VolumeView "ammo_clips_lod2.ply"}
+			{VolumeView "ammo_clips_lod3.ply"}
+		}
+		{bone "magazine"
+			{Position -0.0414 	 -0.0227 	 -0.3076}
+		}
+	}
+}
+{volume "select"
+	{box 1.9685 2.3622 1.1811}
+	{bone "ammo_clips"}
+	{Position -0.0408 	 -0.0637 	 0.0643}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.0022 	 -6.8654 	 22.3357}
+			{lookat -0.0022 	 -0.009 	 -0.1502}
+			{fov 4.12352}
+			{horizon 179.674}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2583 	 0.2892 	 -0.3156}
+			}
+			{"1"
+				{type point}
+				{position -0.1287 	 7.8272 	 6.2145}
+			}
+			{"2"
+				{type point}
+				{position -4.2743 	 -18.4219 	 -3.4531}
+			}
+		}
+	}
+}

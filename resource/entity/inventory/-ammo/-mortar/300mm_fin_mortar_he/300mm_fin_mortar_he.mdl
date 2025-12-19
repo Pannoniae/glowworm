@@ -1,0 +1,95 @@
+;Exported by:	 ART_2
+;Date:			 15.08.2025 13:13:14
+;File:			 G:\Current work\weapons\300mm_mortar_shell\300mm_mortar_fin_he(export).max
+{skeleton
+	{bone "fin_he"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "fin_he.ply"}
+			{VolumeView "fin_he_lod1.ply"}
+			{VolumeView "fin_he_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+				-11.1441 	 0.0135 	 0.0357
+			}
+		}
+		{bone "sound_mortar"}
+		{bone "sound_artillery"}
+	}
+}
+{volume "body"
+	{cylinder 3.00945 24.8757}
+	{bone "fin_he"}
+	{matrix34
+		0 	 -1 	 0.0007
+		-0.001 	 0.0007 	 1
+		-1 	 0 	 -0.001
+		-0.1907 	 0 	 -0.0041
+	}
+}
+{volume "select"
+	{cylinder 5.30202 28.7423}
+	{bone "fin_he"}
+	{matrix34
+		0 	 -1 	 0.0007
+		-0.001 	 0.0007 	 1
+		-1 	 0 	 -0.001
+		-0.2292 	 0 	 -0.0043
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin -0.1044 	 131.822 	 74.1234}
+			{lookat -0.1041 	 -0.0214 	 0.0233}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 0.5 	 0.0027}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0001 	 -0.0389 	 -0.4985}
+				{diffuse 0xffe2ecff}
+			}
+			{"2"
+				{type directional}
+				{direction -0.0002 	 -0.3286 	 0.3768}
+				{diffuse 0xffffeecd}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.0187 	 86.9276 	 48.8525}
+			{lookat 0.019 	 -0.0052 	 -0.0054}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.0389 	 -0.4985}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 -0.3286 	 0.3768}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 0.5 	 0.0028}
+			}
+		}
+	}
+}

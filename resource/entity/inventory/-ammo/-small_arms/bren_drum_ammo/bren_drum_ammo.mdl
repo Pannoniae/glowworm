@@ -1,0 +1,57 @@
+;Exported by:	 ART_2
+;Date:			 23.11.2024 12:26:18
+;File:			 G:\Current work\weapons\Vickers VGO\Export\Vickers GO ammo.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "magazine"
+	{cylinder 2.40157 1.41219}
+	{bone "magazine"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0 	 0 	 0.6135
+	}
+}
+{volume "select"
+	{box 5.31496 5.31496 1.9685}
+	{bone "magazine"}
+	{Position 0.0461 	 -0.0757 	 0.6075}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.1773 	 0.2522 	 68.4124}
+			{lookat 0.0635 	 -0.0598 	 0.1571}
+			{fov 4.12352}
+			{horizon -5.00057}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0373 	 0.284 	 -0.4098}
+			}
+			{"1"
+				{type point}
+				{position 40.0803 	 -8.5931 	 2.8725}
+			}
+			{"2"
+				{type point}
+				{position -16.473 	 -13.1755 	 23.2413}
+			}
+		}
+	}
+}

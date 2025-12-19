@@ -1,0 +1,73 @@
+;Exported by:	 carlos
+;Date:			 06.11.2023 19:32:51
+;File:			 F:\GoH_3D_human_usa\weapons\bazooka_m9\export\m6a3 rocket.max
+{skeleton
+	{bone "rocket_m6a3"
+		{parameters "id=mgun;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "rocket_m6a3.ply"}
+			{VolumeView "rocket_m6a3_lod1.ply"}
+			{VolumeView "rocket_m6a3_lod2.ply"}
+			{VolumeView "rocket_m6a3_lod3.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+				-4.6942 	 -0.0077 	 0.0053
+			}
+		}
+		{bone "sound_at_rocket"}
+	}
+}
+{volume "body"
+	{cylinder 0.69513 9.2925}
+	{bone "rocket_m6a3"}
+	{matrix34
+		0 	 1 	 0
+		0 	 0 	 1
+		1 	 0 	 0
+		-0.0213 	 0.0043 	 0.0127
+	}
+}
+{volume "select"
+	{box 13.9949 5.67912 2.88458}
+	{bone "rocket_m6a3"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0.0248 	 -0.1052 	 0.1447
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.0554 	 -31.7967 	 17.891}
+			{lookat -0.0555 	 0.0153 	 0.0121}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 -0.4306 	 -0.2542}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0002 	 0.4225 	 0.2674}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction -0.0001 	 0.0796 	 -0.4936}
+				{diffuse 0xffe2ecff}
+			}
+		}
+	}
+}

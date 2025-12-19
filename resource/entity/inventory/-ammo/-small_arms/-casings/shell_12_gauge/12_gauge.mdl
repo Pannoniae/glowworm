@@ -1,0 +1,29 @@
+;Exported by: ubrashaev
+;Date:        Tue Oct 31 14:37:09 2017
+;File:        E:\work\Dropbox\models\chris\ammo\ammo_export.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "12_low"
+			{Position -0.446474	0.0199315	0.0199317}
+			{LODView
+				{VolumeView "12_low.ply"}
+				{VolumeView "12_low_lod1.ply"}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.182087 0.924349}
+	{Bone "12_low"}
+	{Matrix34
+		0	0	-1
+		0	1	0
+		1	0	0
+		0.446102	0	0
+	}
+}

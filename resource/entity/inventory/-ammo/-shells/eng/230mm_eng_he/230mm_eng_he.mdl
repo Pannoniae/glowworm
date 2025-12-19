@@ -1,0 +1,93 @@
+;Exported by:	 ART_2
+;Date:			 17.10.2025 17:05:55
+;File:			 G:\Current work\weapons\Ammo\230mm_eng_bomb\230mm_eng_bomb_he(export).max
+{skeleton
+	{bone "demolition_he"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "demolition_he.ply"}
+			{VolumeView "demolition_he_lod1.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+				-6.3263 	 0.0135 	 0.0357
+			}
+		}
+		{bone "sound_spigot_big"}
+	}
+}
+{volume "body"
+	{cylinder 2.31704 12.4378}
+	{bone "demolition_he"}
+	{matrix34
+		0 	 -1 	 0.0007
+		-0.001 	 0.0007 	 1
+		-1 	 0 	 -0.001
+		0.0278 	 0 	 0.0023
+	}
+}
+{volume "select"
+	{cylinder 2.54363 13.0414}
+	{bone "demolition_he"}
+	{matrix34
+		0 	 -1 	 0.0007
+		-0.001 	 0.0007 	 1
+		-1 	 0 	 -0.001
+		-0.0149 	 0 	 0.0037
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.3962 	 41.7889 	 30.9209}
+			{lookat 0.2155 	 1.6069 	 1.5092}
+			{fov 15.1893}
+			{horizon 0.0197823}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0003 	 -0.0782 	 -0.4938}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0009 	 -0.4999 	 0.011}
+				{diffuse 0xffc7c7c7}
+			}
+			{"2"
+				{type directional}
+				{direction 0.0004 	 0.3722 	 -0.3339}
+			}
+		}
+	}
+	{"stuff_secondary"
+		{camera
+			{origin 0.3914 	 42.6327 	 31.5386}
+			{lookat 0.2069 	 1.607 	 1.5092}
+			{fov 15.1893}
+			{horizon 0.0197823}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0003 	 -0.0782 	 -0.4938}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0009 	 -0.4999 	 0.011}
+				{diffuse 0xffc7c7c7}
+			}
+			{"2"
+				{type directional}
+				{direction 0.0004 	 0.3722 	 -0.3339}
+			}
+		}
+	}
+}

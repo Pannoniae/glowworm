@@ -1,0 +1,73 @@
+;Exported by:	 carlos
+;Date:			 06.11.2023 19:06:02
+;File:			 F:\GoH_3D_human_usa\weapons\m18_recoiless\export\m18 recoilless wp ammo.max
+{skeleton
+	{bone "wp"
+		{parameters "id=mgun;"}
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "wp.ply"}
+			{VolumeView "wp_lod1.ply"}
+			{VolumeView "wp_lod2.ply"}
+			{VolumeView "wp_lod3.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+				-4.3946 	 -0.0074 	 0.0053
+			}
+		}
+		{bone "sound_shell_low"}
+	}
+}
+{volume "body"
+	{cylinder 0.69513 9.2925}
+	{bone "wp"}
+	{matrix34
+		0 	 1 	 0
+		0 	 0 	 1
+		1 	 0 	 0
+		0.2784 	 0.0046 	 0.0127
+	}
+}
+{volume "select"
+	{box 13.9949 5.67912 2.88458}
+	{bone "wp"}
+	{matrix34
+		-1 	 0 	 0
+		0 	 -1 	 0
+		0 	 0 	 1
+		0.3245 	 -0.105 	 0.1447
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.2442 	 -31.3207 	 17.6233}
+			{lookat 0.2442 	 0.0151 	 0.0121}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 -0.4306 	 -0.2542}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0002 	 0.4225 	 0.2674}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction -0.0001 	 0.0796 	 -0.4936}
+				{diffuse 0xffe2ecff}
+			}
+		}
+	}
+}

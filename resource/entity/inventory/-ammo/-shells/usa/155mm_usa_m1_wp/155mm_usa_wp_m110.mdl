@@ -1,0 +1,93 @@
+;Exported by:	 ART
+;Date:			 29.08.2022 11:30:25
+;File:			 E:\Autodesk\Low poly\freelance\Carlos\Shells\Export\Usa\155mm_usa\155mm_usa_wp_m110.max
+{skeleton
+	{bone "155mm_usa_wp_m110"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "155mm_usa_wp_m110.ply"}
+			{VolumeView "155mm_usa_wp_m110_lod1.ply"}
+			{VolumeView "155mm_usa_wp_m110_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 1 	 0
+				0 	 0 	 -1
+				-6.7272 	 0 	 0
+			}
+		}
+	}
+}
+{volume "body"
+	{cylinder 1.64789 14.0534}
+	{bone "155mm_usa_wp_m110"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.1687 	 -0.0098 	 0
+	}
+}
+{volume "select"
+	{cylinder 1.98225 15.1976}
+	{bone "155mm_usa_wp_m110"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		0.4138 	 -0.0116 	 0
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 0.1773 	 39.2054 	 -69.7461}
+			{lookat 0.1774 	 0.0008 	 0.0081}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4577 	 0.2013}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.137 	 26.4329 	 -46.9656}
+			{lookat 0.1371 	 0.0253 	 0.0219}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.458 	 0.2007}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+			}
+		}
+	}
+}

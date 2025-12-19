@@ -1,0 +1,85 @@
+;Exported by:	 ART
+;Date:			 30.11.2021 15:45:00
+;File:			 E:\Autodesk\Low poly\freelance\Carlos\Shells\Export\Eng\77mm_eng\77mm_eng_apds.max
+{skeleton
+	{bone "77mm_eng_apds"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "77mm_eng_apds.ply"}
+			{VolumeView "77mm_eng_apds_lod1.ply"}
+			{VolumeView "77mm_eng_apds_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 1.17855 13.9154}
+	{bone "77mm_eng_apds"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0017 	 -1 	 0.0007
+		-1 	 0.0017 	 0
+		0.1999 	 0.0033 	 0
+	}
+}
+{volume "select"
+	{cylinder 1.9685 15.748}
+	{bone "77mm_eng_apds"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0017 	 -1 	 0.0007
+		-1 	 0.0017 	 0
+		-0.007 	 0.0031 	 0
+	}
+}
+{extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 4.5062 	 17.6533 	 -31.2994}
+			{lookat 4.5062 	 0.0436 	 0.0327}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4577 	 0.2013}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 0.3224 	 27.597 	 -49.0386}
+			{lookat 0.3225 	 0.0242 	 0.0219}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.458 	 0.2007}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+			}
+		}
+	}
+}

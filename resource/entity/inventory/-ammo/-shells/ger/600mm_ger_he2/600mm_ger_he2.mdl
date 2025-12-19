@@ -1,0 +1,93 @@
+;Exported by:	 carlos
+;Date:			 10.09.2022 20:01:08
+;File:			 F:\GoH_3D_vehicles_ger\shells\Ger\600mm_ger\600mm_ger_he2.max
+{skeleton
+	{bone "600mm_ger_he"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "600mm_ger_he.ply"}
+			{VolumeView "600mm_ger_he_lod1.ply"}
+			{VolumeView "600mm_ger_he_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+				-10 	 0 	 0
+			}
+		}
+	}
+}
+{volume "body"
+	{cylinder 6.2573 50.9861}
+	{bone "600mm_ger_he"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0014 	 -1 	 0.0007
+		-1 	 0.0014 	 0
+		4.0898 	 0.0289 	 0
+	}
+}
+{volume "select"
+	{cylinder 9.17011 62.3238}
+	{bone "600mm_ger_he"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0014 	 -1 	 0.0007
+		-1 	 0.0014 	 0
+		4.5992 	 0.0349 	 0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 3.72 	 83.184 	 -147.878}
+			{lookat 3.7202 	 0.0509 	 0.0383}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4985 	 0.0389}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 0.0028 	 -0.5}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin 3.7334 	 122.921 	 -218.554}
+			{lookat 3.7336 	 0.0622 	 0.0447}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 0.0027 	 -0.5}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0001 	 -0.4985 	 0.0389}
+				{diffuse 0xffe2ecff}
+			}
+			{"2"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+		}
+	}
+}

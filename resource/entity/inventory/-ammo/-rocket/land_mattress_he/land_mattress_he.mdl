@@ -1,0 +1,91 @@
+;Exported by:	 ART_2
+;Date:			 29.05.2025 19:22:08
+;File:			 G:\Current work\weapons\Land mattress\76mm_land_mattress.max
+{skeleton
+	{bone "rocket"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{VolumeView "rocket.ply"}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 0 	 -1
+				0 	 -1 	 0
+				-0.0601 	 0 	 0
+			}
+		}
+		{bone "sound_rocket"}
+	}
+}
+{volume "body"
+	{cylinder 1.47638 35.183}
+	{bone "rocket"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		1.6498 	 -0.0098 	 0
+	}
+}
+{volume "select"
+	{cylinder 2.3622 36.7278}
+	{bone "rocket"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		1.7547 	 -0.0115 	 0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 1.5918 	 79.3736 	 -141.435}
+			{lookat 1.592 	 -0.0911 	 -0.0435}
+			{fov 12.8376}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4978 	 0.0469}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffe2ecff}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0776 	 -0.4939}
+				{diffuse 0xffffeecb}
+			}
+		}
+	}
+	{"stuff_secondary"
+		{camera
+			{origin 14.6168 	 25.064 	 -44.6613}
+			{lookat 14.6168 	 -0.0317 	 -0.0102}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.498 	 0.0452}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffe2ecff}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.0789 	 -0.4937}
+				{diffuse 0xffffeecb}
+			}
+		}
+	}
+}

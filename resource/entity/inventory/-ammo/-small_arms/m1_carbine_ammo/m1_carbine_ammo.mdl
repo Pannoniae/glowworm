@@ -1,0 +1,51 @@
+;Exported by:	 carlos
+;Date:			 03.09.2023 13:22:14
+;File:			 F:\GoH_3D_human_usa\weapons\m1_carbine\m1_carbine_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 0.940881 1.9859 0.443733}
+	{bone "magazine"}
+	{Position 0.0589 	 0.2035 	 -0.0453}
+}
+{volume "select"
+	{box 1.18571 2.50032 0.994481}
+	{bone "magazine"}
+	{Position 0.0658 	 0.2128 	 -0.0392}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -0.8282 	 -16.9035 	 54.1641}
+			{lookat 0.0034 	 -1.0029 	 2.477}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.3395 	 5.983 	 1.0321}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -6.0982 	 -16.6369 	 0.8225}
+			}
+		}
+	}
+}

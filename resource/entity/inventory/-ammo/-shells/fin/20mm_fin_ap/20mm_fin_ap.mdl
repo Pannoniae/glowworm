@@ -1,0 +1,99 @@
+;Exported by:	 Carlos
+;Date:			 05.06.2022 02:47:47
+;File:			 T:\goh_3d_human_fin\Weapons\L_39_20mm\l39_ammo_export.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+		}
+	}
+}
+{volume "body"
+	{box 4.15322 4.31716 0.819714}
+	{bone "magazine"}
+	{matrix34
+		0.9848 	 -0.1736 	 0
+		0.1736 	 0.9848 	 0
+		0 	 0 	 1
+		0.4274 	 0.5178 	 -0.0366
+	}
+}
+{volume "select"
+	{box 5.32406 5.55024 1.35205}
+	{bone "magazine"}
+	{Position 0.4341 	 0.7165 	 0.0028}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -1.6782 	 -40.4085 	 129.233}
+			{lookat 0.3596 	 -1.442 	 2.5676}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.6423 	 5.418 	 7.4847}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -5.6164 	 -17.2019 	 4.1157}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin -5.1399 	 -106.603 	 344.405}
+			{lookat 0.3596 	 -1.442 	 2.5676}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.6423 	 5.418 	 7.4847}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -5.6164 	 -17.2019 	 4.1157}
+			}
+		}
+	}
+	{"stuff_secondary"
+		{camera
+			{origin -5.1399 	 -106.603 	 344.405}
+			{lookat 0.3596 	 -1.442 	 2.5676}
+			{fov 2.17281}
+			{horizon -176.649}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.6423 	 5.418 	 7.4847}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2936 	 0.117 	 -0.3874}
+			}
+			{"2"
+				{type point}
+				{position -5.6164 	 -17.2019 	 4.1157}
+			}
+		}
+	}
+}

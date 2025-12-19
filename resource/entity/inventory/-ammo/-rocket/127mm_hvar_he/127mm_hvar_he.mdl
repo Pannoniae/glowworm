@@ -1,0 +1,95 @@
+;Exported by:	 ART
+;Date:			 29.08.2022 10:55:51
+;File:			 E:\Autodesk\Low poly\freelance\Carlos\Shells\Export\Usa\127mm_usa_rocket\127mm_usa_rocket_he.max
+{skeleton
+	{bone "127mm_usa_rocket_he"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "127mm_usa_rocket_he.ply"}
+			{VolumeView "127mm_usa_rocket_he_lod1.ply"}
+			{VolumeView "127mm_usa_rocket_he_lod2.ply"}
+		}
+		{bone "tail"
+			{matrix34
+				-1 	 0 	 0
+				0 	 0 	 -1
+				0 	 -1 	 0
+				-14.7615 	 0 	 0
+			}
+		}
+		{bone "sound_rocket"}
+	}
+}
+{volume "body"
+	{cylinder 2.10396 34.5412}
+	{bone "127mm_usa_rocket_he"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		1.7776 	 -0.0098 	 0
+	}
+}
+{volume "select"
+	{cylinder 3.12927 36.0466}
+	{bone "127mm_usa_rocket_he"}
+	{matrix34
+		0 	 0 	 -1
+		0 	 -1 	 0
+		-1 	 0 	 0
+		1.7312 	 -0.0115 	 0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 1.9523 	 36.7383 	 -128.827}
+			{lookat 1.9525 	 0.1772 	 0.0614}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.3985 	 0.302}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.4431 	 0.2316}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.1907 	 -0.4622}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin 14.1108 	 -0.6597 	 -58.7151}
+			{lookat 14.1109 	 0.0191 	 0.0147}
+			{fov 10.2855}
+			{horizon 180}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.2957 	 0.4032}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.4907 	 0.0962}
+				{diffuse 0xffffeecd}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 -0.3152 	 -0.3881}
+			}
+		}
+	}
+}

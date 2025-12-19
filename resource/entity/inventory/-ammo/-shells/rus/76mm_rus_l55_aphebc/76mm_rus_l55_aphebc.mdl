@@ -1,0 +1,85 @@
+;Exported by:	 carlos
+;Date:			 27.09.2023 19:29:43
+;File:			 F:\GoH_3D_vehicles_rus\shells\Rus\76mm_rus\76mm_rus_aphebc_l55.max
+{skeleton
+	{bone "76mm_rus_aphebc"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "76mm_rus_aphebc.ply"}
+			{VolumeView "76mm_rus_aphebc_lod1.ply"}
+			{VolumeView "76mm_rus_aphebc_lod2.ply"}
+		}
+	}
+}
+{volume "body"
+	{cylinder 1.02429 18.1885}
+	{bone "76mm_rus_aphebc"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0014 	 -1 	 0.0007
+		-1 	 0.0014 	 0
+		-2.3077 	 0.0038 	 0
+	}
+}
+{volume "select"
+	{cylinder 2.11395 21.9701}
+	{bone "76mm_rus_aphebc"}
+	{matrix34
+		0 	 -0.0007 	 -1
+		-0.0014 	 -1 	 0.0007
+		-1 	 0.0014 	 0
+		-2.0825 	 0.0046 	 0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin -2.4677 	 33.8351 	 -60.2057}
+			{lookat -2.4676 	 -0.0046 	 0.0057}
+			{fov 15.1893}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.0001 	 -0.4985 	 0.0389}
+				{diffuse 0xffe2ecff}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecb}
+			}
+			{"2"
+				{type directional}
+				{direction 0 	 0.0028 	 -0.5}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin 3.9857 	 16.1153 	 -28.6103}
+			{lookat 3.9857 	 0.0233 	 0.0214}
+			{fov 10.2855}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0 	 0.0027 	 -0.5}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0001 	 -0.4985 	 0.0389}
+				{diffuse 0xffe2ecff}
+			}
+			{"2"
+				{type directional}
+				{direction -0.0002 	 0.3768 	 0.3286}
+				{diffuse 0xffffeecd}
+			}
+		}
+	}
+}

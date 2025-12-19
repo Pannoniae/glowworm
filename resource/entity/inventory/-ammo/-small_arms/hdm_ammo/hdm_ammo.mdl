@@ -1,0 +1,62 @@
+;Exported by:	 carlos
+;Date:			 08.11.2023 01:57:54
+;File:			 F:\GoH_3D_human_usa\weapons\hdm\Export\hdm_ammo.max
+{skeleton
+	{bone "magazine"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "magazine.ply"}
+			{VolumeView "magazine_lod1.ply"}
+			{VolumeView "magazine_lod2.ply"}
+			{VolumeView "magazine_lod3.ply"}
+		}
+	}
+}
+{volume "magazine"
+	{box 1.1811 3.34646 0.984252}
+	{bone "magazine"}
+	{matrix34
+		0.8704 	 -0.4924 	 0
+		0.4924 	 0.8704 	 0
+		0 	 0 	 1
+		0.0345 	 -0.018 	 -0.0097
+	}
+}
+{volume "select"
+	{box 2.3622 3.54331 1.1811}
+	{bone "magazine"}
+	{matrix34
+		0.8572 	 -0.515 	 0
+		0.515 	 0.8572 	 0
+		0 	 0 	 1
+		0.037 	 -0.0521 	 0.0645
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 0.0141 	 -9.0145 	 29.5412}
+			{lookat 0.0141 	 0.034 	 -0.1332}
+			{fov 4.12352}
+			{horizon 179.674}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.2259 	 0.2614 	 -0.3614}
+			}
+			{"1"
+				{type point}
+				{position 0.0391 	 9.4444 	 2.5891}
+			}
+			{"2"
+				{type point}
+				{position -4.1065 	 -15.21 	 4.5838}
+			}
+		}
+	}
+}
