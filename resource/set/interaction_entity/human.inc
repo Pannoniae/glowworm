@@ -1864,6 +1864,11 @@
 	{on swim off			;// swimming movement mode
 		{delay 1.5 "after_swim"
 			{view pause "swim"}
+			{if water_level 0.7		;// called after human stops moving from throw-off. checks if human is underwater and cannot be accessed by medic/revived
+				{if tagged "start_personage"
+					{call "unhealable"}
+				}
+			}
 		}
 	}
 
@@ -2102,9 +2107,13 @@
 	{on animation_event "jump"					;// event created by animation
 		{call "eject"}
 	}
-	{on animation_event "play_piano"					;// event created by animation
+	{on animation_event "play_piano"			;// event created by animation
 		{link_sound "play_piano"				"world/instrument/piano"}
 		{play_sound "play_piano"}
+	}
+
+	{on animation_event "bagpipes_stop"			;// event created by animation
+		{call "stop_bagpipes"}
 	}
 
 	{on "falldown"

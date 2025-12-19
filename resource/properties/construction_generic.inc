@@ -53,11 +53,13 @@
 			{volumes "wires*"}
 			{volumes "floor*"}
 			{volumes "wood*"}
+			{volumes "door*"}
 		}
 		{setting "roof"
 			{threshold {pierce {koef 1}}}
 			{ray_cast_thickness}
 			{volumes "roof*"}
+			{volumes "floor*"}
 		}
 	}
 )
@@ -209,9 +211,17 @@
 					{calibre %calibre}
 				}
 			}
+			{volumes "body*"}
+			{volumes "box*"}
+			{volumes "wire*"}
+			{volumes "wires*"}
+			{volumes "wood*"}
+			{volumes "door*"}
 		}
 		{setting "roof"
 			{threshold {blast {value 10}}}
+			{volumes "roof*"}
+			{volumes "floor*"}
 		}
 	}
 )

@@ -56,7 +56,7 @@
 {"soldier_focused"						; // Secondary vision when soldier is looking through scope or binoculars
 	{uncover 30}
 	{h_fov 30}
-	{v_fov 50}
+	{v_fov 90}
 	("spotting" r(1))					; // Disabled secondary vision when looking through scopes or binoculars
 	{wide 2}
 }
@@ -68,7 +68,7 @@
 {"cannon_main"							; // Standard main gun / gunner vision for cannons
 	{uncover 30}
 	{h_fov 15}
-	{v_fov 15}
+	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(50) can_vis(50) can_fire(70))
 }
 
@@ -149,7 +149,7 @@
 {"vehicle_around"						; // Vehicle peripheral / commander vision
 	{uncover 30}
 	{h_fov 360}
-	{v_fov 60}
+	{v_fov 170}
 	("spotting" r(0.6))
 }
 

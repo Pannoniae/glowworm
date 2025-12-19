@@ -124,6 +124,7 @@
 				; do nothing
 			}
 		}
+		{tags add "hedgehog"}
 	}
 }
 

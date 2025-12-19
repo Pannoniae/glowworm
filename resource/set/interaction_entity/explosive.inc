@@ -190,6 +190,7 @@
 		}
 	}
 }
+
 ;/*=========== Explosive Charges End ==========*/
 
 ;/*=========== Bombs Begin ==========*/
@@ -220,7 +221,6 @@
 	}
 }
 
-
 ;/*=========== Bombs End ==========*/
 
 ;/*=========== Artillery Begin ==========*/
@@ -241,12 +241,28 @@
 	)
 }
 
+{"offmap_dummy 88 generic"
+	("offmap" args "artillery_single_88")
+}
+
 {"offmap_dummy 105 generic"
 	("offmap" args "artillery_single_105")
 }
 
 {"offmap_dummy 105_vt"
 	("offmap" args "artillery_single_105_vt")
+}
+
+{"offmap_dummy 114 generic"
+	("offmap" args "artillery_single_114")
+}
+
+{"offmap_dummy 127 generic"
+	("offmap" args "artillery_single_127")
+}
+
+{"offmap_dummy 140 generic"
+	("offmap" args "artillery_single_140")
 }
 
 {"offmap_dummy 150 generic"
@@ -516,6 +532,19 @@
 	}
 )
 
+(define "2x1_barrage"		;// custom barrage used in finest hour missions, requires effect start allowing to place via script first.
+	{on spawn
+		{tags add "_2x1_barrage"}
+		{tags add "fired"}
+
+			("rnd_art_bomb" delay(0.5) shell(%shell) postion(%postion))
+			("rnd_art_bomb" delay(3.0) shell(%shell) postion(%postion))
+
+			{hide 10}
+			{delay 11 {delete}}
+	}
+)
+
 (define "smoke_barrage"
 	{on spawn
 		{if not tagged "fired"
@@ -574,12 +603,28 @@
 
 
 
+{"artillery_barrage_88"
+	("8x2_barrage" shell(artillery_single_88_dummy) postion(550))
+}
+
 {"artillery_barrage_105"
 	("8x2_barrage" shell(artillery_single_105_dummy) postion(550))
 }
 
 {"artillery_barrage_105_vt"	;// 1 battery, 4 guns firing at maximum speed of 10 RPM with 4 rounds each
 	("8x2_barrage" shell(artillery_single_105_vt_dummy) postion(550))
+}
+
+{"artillery_barrage_114"
+	("8x2_barrage" shell(artillery_single_114_dummy) postion(550))
+}
+
+{"artillery_barrage_127"
+	("8x2_barrage" shell(artillery_single_127_dummy) postion(550))
+}
+
+{"artillery_barrage_140"
+	("4x2_barrage" shell(artillery_single_140_dummy) postion(550))
 }
 
 {"artillery_barrage_150"
@@ -594,12 +639,20 @@
 	("4x2_barrage" shell(artillery_single_155_vt_dummy) postion(550))
 }
 
+{"artillery_barrage_180"
+	("2x2_barrage" shell(artillery_single_180_dummy) postion(400))
+}
+
 {"artillery_barrage_203" ;// 1 battery, 2 guns firing 3 shells each
 	("2x2_barrage" shell(artillery_single_203_dummy) postion(400))
 }
 
 {"artillery_barrage_203_vt" ;// 1 battery, 2 guns firing 3 shells each
 	("2x2_barrage" shell(artillery_single_203_vt_dummy) postion(400))
+}
+
+{"artillery_barrage_203_2x1" ;// custom barrage used in finest hour missions, requires effect start allowing to place via script first.
+	("2x1_barrage" shell(artillery_single_203_dummy) postion(200))
 }
 
 {"artillery_barrage_240" ;// 1 battery, 2 guns firing 3 shells each
@@ -635,6 +688,17 @@
 		{delay 40 {delete}}
 	}
 }
+{"flare_artillery_88"				;// Flare that spawns shells that fall to ground. Off-map artillery
+	{on spawn
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{delay 10 {spawn "artillery_barrage_88"}}
+		{delay 36 {spawn "artillery_barrage_88"}}
+		{delay 62 {spawn "artillery_barrage_88"}}
+		{delay 70 {view stop "smoke"}}
+		{delay 70 {delete}}
+	}
+}
 {"flare_artillery_105"				;// Flare that spawns shells that fall to ground. Off-map artillery
 	{on spawn
 		{add_view "smoke_flare_red" "smoke" "root"}
@@ -651,6 +715,35 @@
 		{view start "smoke"}
 		{delay 10 {spawn "artillery_barrage_105_vt"}}
 		{delay 36 {spawn "artillery_barrage_105_vt"}}
+		{delay 40 {view stop "smoke"}}
+		{delay 40 {delete}}
+	}
+}
+{"flare_artillery_114"				;// Flare that spawns shells that fall to ground. Off-map artillery
+	{on spawn
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{delay 10 {spawn "artillery_barrage_114"}}
+		{delay 36 {spawn "artillery_barrage_114"}}
+		{delay 40 {view stop "smoke"}}
+		{delay 40 {delete}}
+	}
+}
+{"flare_artillery_127"				;// Flare that spawns shells that fall to ground. Off-map artillery
+	{on spawn
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{delay 10 {spawn "artillery_barrage_127"}}
+		{delay 36 {spawn "artillery_barrage_127"}}
+		{delay 40 {view stop "smoke"}}
+		{delay 40 {delete}}
+	}
+}
+{"flare_artillery_140"				;// Flare that spawns shells that fall to ground. Off-map artillery
+	{on spawn
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{delay 10 {spawn "artillery_barrage_140"}}
 		{delay 40 {view stop "smoke"}}
 		{delay 40 {delete}}
 	}
@@ -673,6 +766,15 @@
 		{delay 40 {delete}}
 	}
 }
+{"flare_artillery_180"				;// Flare that spawns shells that fall to ground. Off-map artillery
+	{on spawn
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{delay 10 {spawn "artillery_barrage_180"}}
+		{delay 40 {view stop "smoke"}}
+		{delay 40 {delete}}
+	}
+}
 {"flare_artillery_203"				;// Flare that spawns shells that fall to ground. Off-map artillery
 	{on spawn
 		{add_view "smoke_flare_red" "smoke" "root"}
@@ -680,6 +782,18 @@
 		{delay 10 {spawn "artillery_barrage_203"}}
 		{delay 40 {view stop "smoke"}}
 		{delay 40 {delete}}
+	}
+}
+{"flare_artillery_203_storable"		;// Flare that spawns shells that fall to ground. Off-map artillery. Used in mission scripts
+	{on "start"
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{if difficulty "easy"
+			{delay 15 {spawn "artillery_barrage_203_2x1"}}
+		else
+			{delay 10 {spawn "artillery_barrage_203_2x1"}}
+		}
+		{delay 20 {view stop "smoke"}}
 	}
 }
 {"flare_artillery_203_vt"			;// Flare that spawns shells that fall to ground. Off-map artillery
@@ -720,10 +834,20 @@
 		{delay 40 {delete}}
 	}
 }
+{"flare_mortar_107"					;// Flare that spawns shells that fall to ground. Off-map artillery
+	{on spawn
+		{add_view "smoke_flare_red" "smoke" "root"}
+		{view start "smoke"}
+		{delay 10 {spawn "mortar_barrage_107"}}
+		{delay 33 {spawn "mortar_barrage_107"}}
+		{delay 40 {view stop "smoke"}}
+		{delay 40 {delete}}
+	}
+}
 
 {"offmap_mortar"					;// Spawns delayed explosion (fake mortar)
 	{on spawn
-		{start_sound "projectile/Mortar/Incoming/"}
+		{start_sound "projectile/mortar/incoming/"}
 		{delay 1.5
 			{stuff_detonate}
 		}
@@ -732,10 +856,10 @@
 
 (define "mortar_fall"
 	{on spawn overload
-		{link_sound "Incoming" "projectile/Mortar/Incoming/"}
-		{start_sound "weapon/shot/cannon/s2/d3/Shared/Mortar/" ambient}
+		{link_sound "incoming" "projectile/mortar/incoming/"}
+		{start_sound "weapon/shot/cannon/s2/d3/shared/mortar/" ambient}
 		{delay 5
-				{play_sound "Incoming"}
+			{play_sound "incoming"}
 			{delay 0.5
 				{spawn %0 offset -250 0 1000}
 				{hide 1}
@@ -747,12 +871,17 @@
 {"mortar_single_60_dummy"			;// Shells that fall to ground. Source Off-map artillery
 	("mortar_fall" args "mortar_single_60")
 }
+
 {"mortar_single_80_dummy"			;// Shells that fall to ground. Source Off-map artillery
 	("mortar_fall" args "mortar_single_80")
 }
 
 {"mortar_single_81_dummy"			;// Shells that fall to ground. Source Off-map artillery
 	("mortar_fall" args "mortar_single_81")
+}
+
+{"mortar_single_107_dummy"			;// Shells that fall to ground. Source Off-map artillery
+	("mortar_fall" args "mortar_single_107")
 }
 
 {"mortar_single_120_dummy"			;// Shells that fall to ground. Source Off-map artillery
@@ -769,6 +898,10 @@
 
 {"mortar_barrage_81"				;// Flare that spawns timed explosions randomized in area, US 81mm mortar section, 2 mortars, 25 rounds 1/4th of total
 	("std_mortar_barrage" shell(mortar_single_81_dummy) postion(350)) ;//500
+}
+
+{"mortar_barrage_107"				;// Flare that spawns timed explosions randomized in area, US 81mm mortar section, 2 mortars, 25 rounds 1/4th of total
+	("std_mortar_barrage" shell(mortar_single_107_dummy) postion(350))
 }
 
 
@@ -816,6 +949,19 @@
 {"offmap_dummy 155 usa"
 	("offmap" args "artillery_single_155_usa")
 }
+
+{"offmap_dummy 88_sm eng"
+	("offmap" args "artillery_single_88_sm_eng")
+}
+
+{"offmap_dummy 88 eng"
+	("offmap" args "artillery_single_88_eng")
+}
+
+{"offmap_dummy 140 eng"
+	("offmap" args "artillery_single_140_eng")
+}
+
 
 {"mortar_barrage_80"
 	("con_mortar_barrage" shell(mortar_single_80_dummy) postion(600))
@@ -865,6 +1011,18 @@
 	("8x2_barrage" shell(artillery_single_155_usa_dummy) postion(1400))
 }
 
+{"smoke_barrage_88_eng"
+	("smoke_barrage" shell(artillery_single_88_sm_eng_dummy) postion(750))
+}
+
+{"artillery_barrage_88_eng"
+	("8x2_barrage" shell(artillery_single_88_eng_dummy) postion(1200))
+}
+
+{"artillery_barrage_140_eng"
+	("8x2_barrage" shell(artillery_single_140_eng_dummy) postion(1400))
+}
+
 (define "barrage_delay"
 	{link_sound "click" "gui/pointer/"}
 	{play_sound "click"}
@@ -885,6 +1043,14 @@
 	{on spawn
 		("barrage_delay" delay(5) barrage(mortar_barrage_120))
 		("last_barrage_delay" delay(20) barrage(mortar_barrage_120))
+	}
+}
+
+{"conquest_smoke_barrage_88_eng"
+	{on spawn
+		{link_sound "click" "gui/pointer/"}
+		{play_sound "click"}
+		("last_barrage_delay" delay(10) barrage(smoke_barrage_88_eng))
 	}
 }
 
@@ -911,6 +1077,13 @@
 	}
 }
 
+{"conquest_artillery_barrage_88_eng"
+	{on spawn
+		("barrage_delay" delay(15) barrage(artillery_barrage_88_eng))
+		("last_barrage_delay" delay(40) barrage(artillery_barrage_88_eng))
+	}
+}
+
 {"conquest_artillery_barrage_105_ger"
 	{on spawn
 		("barrage_delay" delay(15) barrage(artillery_barrage_105_ger))
@@ -929,6 +1102,13 @@
 	{on spawn
 		("barrage_delay" delay(15) barrage(artillery_barrage_122_rus))
 		("last_barrage_delay" delay(40) barrage(artillery_barrage_122_rus))
+	}
+}
+
+{"conquest_artillery_barrage_140_eng"
+	{on spawn
+		("barrage_delay" delay(20) barrage(artillery_barrage_140_eng))
+		("last_barrage_delay" delay(45) barrage(artillery_barrage_140_eng))
 	}
 }
 
@@ -1044,7 +1224,7 @@
 		{if tagged "explosioned"
 			{blastwave c4 2 r0 4 r1 6}
 			{spawn "fire_shellhole"}
-		    {spawn "burned_spot01"		scale 0.50 random_orientation}		;// stamp
+			{spawn "burned_spot01"		scale 0.50 random_orientation}		;// stamp
 			{spawn "car_die_particle"}
 			{spawn "barrel_die" offset 0 0 7}
 			{delete}

@@ -100,7 +100,7 @@
 			}
 			{bone revolute "ik_leftright"
 				{limits -20 20}
-				{speed 0.01}
+				{speed 0.1}
 				{Matrix34
 					0	0	1
 					0	-1	0
@@ -108,8 +108,8 @@
 					1.90368	0.0344548	0
 				}
 				{bone planarsocket "ik_socket" ;
-					{limits 30}
-					{speed 0.01}
+					{limits 65}
+					{speed 0.1}
 					{Matrix34
 					    0   1	0
 						1	0	0
@@ -127,7 +127,7 @@
 						}
 						{bone revolute "ik_lat" ;
 							{limits -20 20}
-							{speed 0.01}
+							{speed 0.1}
 							{Matrix34
 								0	0	1
 								0	1	0
@@ -136,7 +136,7 @@
 							}
 							{bone revolute "ik_lng" ;
 								{limits -20 20}
-								{speed 0.01}
+								{speed 0.1}
 								{Matrix34
 									1	0	0
 									0	0	1
@@ -153,7 +153,6 @@
 						{bone "ik_updown"
 							;{limits -40 20}
 							;{limits 0 0}
-							;{speed 0.01}
 							;{speed 0.1}
 							{Matrix34
 								1	0	0
