@@ -213,7 +213,7 @@
 		("shell_eject_delay" args 1.5 0.25)
 	}
 }
-{"stug3a tank"
+{"stugIIIa tank"
 	{on "add_movement_sound" overload
 		{link_sound "engine_start"		"vehicle/engine/pz3/start"}
 		{link_sound "engine_stop"		"vehicle/engine/pz3/stop"}

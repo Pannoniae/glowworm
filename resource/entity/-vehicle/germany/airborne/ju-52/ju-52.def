@@ -1,0 +1,158 @@
+{game_entity
+	(include "/properties/airborne_mp.ext")
+	{props "multi_board" "wheeled" "vision_lev02_air" "no_minimap_view"}
+	{PatherID "bf110"}
+	(include "/properties/shadow/airborn.inc" scale(2.2))
+	(include "/properties/selection/airborne.inc" scale(3.0))
+	(include "/properties/car_crew.ext")
+	{extension "crew.ext"}
+	("fighter_tier2")
+
+	(define "part_body"
+		{volume %0
+			{tags "body"}
+			{thickness hollow 2}
+			{able {visible 0}}
+			{density 0.01}
+		}
+		{component %0}
+	)
+
+	("part_body" args "body1")
+	("part_body" args "body2")
+	("part_body" args "cabin")
+
+	("part_body" args "retract_wheell")
+	("part_body" args "retract_wheelr")
+
+	{Volume "propeller1"
+		{tags "part"}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+	{Volume "propeller2"
+		{tags "part"}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+	{Volume "propeller3"
+		{tags "part"}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+
+	{volume "engine"
+		{tags "-body"}
+	}
+
+	{component "body3" {tags "cut_part"}}
+	{component "body4" {tags "cut_part"}}
+	{component "body5" {tags "cut_part"}}
+	{component "body6" {tags "cut_part"}}
+
+	{component "engine1_1" {tags "cut_part"}}
+	{component "engine1_2" {tags "cut_part"}}
+	{component "engine1_3" {tags "cut_part"}}
+	{component "engine2_2" {tags "cut_part"}}
+	{component "engine2_3" {tags "cut_part"}}
+	{component "engine2_4" {tags "cut_part"}}
+	{component "engine3_1" {tags "cut_part"}}
+	{component "engine3_2" {tags "cut_part"}}
+
+	{component "wingr1" {tags "cut_part"}}
+	{component "wingr2" {tags "cut_part"}}
+	{component "wingr3" {tags "cut_part"}}
+	{component "wingr4" {tags "cut_part"}}
+	{component "wingr5" {tags "cut_part"}}
+	{component "wingr6" {tags "cut_part"}}
+	{component "wingr7" {tags "cut_part"}}
+	{component "wingr8" {tags "cut_part"}}
+
+	{component "wingl1" {tags "cut_part"}}
+	{component "wingl2" {tags "cut_part"}}
+	{component "wingl3" {tags "cut_part"}}
+	{component "wingl4" {tags "cut_part"}}
+	{component "wingl5" {tags "cut_part"}}
+	{component "wingl6" {tags "cut_part"}}
+	{component "wingl7" {tags "cut_part"}}
+	{component "wingl8" {tags "cut_part"}}
+	{component "wingl9" {tags "cut_part"}}
+	{component "wingl10" {tags "cut_part"}}
+
+	{component "elevator1" {tags "cut_part"}}
+	{component "elevator2" {tags "cut_part"}}
+	{component "rudder" {tags "cut_part"}}
+	{component "aileron1" {tags "cut_part"}}
+	{component "aileron2" {tags "cut_part"}}
+	{component "wheelr" {tags "cut_part"}}
+	{component "wheell" {tags "cut_part"}}
+	{component "wheelback" {tags "cut_part"}}
+	("double_engine")
+	{Chassis "airborne"
+		("flight_model"
+			speed(480)  ;//---------Max speed (at sea level), km/h.
+			climb_speed(11) ;//-----Climb rate at sea level, in m/s
+			turn(250) ;//-----------Turn-and-burn radius in meters, tightest sustained turn
+			turnMP(250) ;//----------Turn-and-burn radius in meters, tightest sustained turn in Multiplayer
+			aerodynamics(1.55) ;//--Aerodynamic efficiency rating (0-3)
+			weight(7600) ;//--------Weight in kg.
+			power(2200) ;//---------Horse Power.
+			fuel(1300) ;//----------Fuel capacity in Liters.
+			range(1500) ;//---------Distance can travel with full fuel tank, in km.
+			roll_rate(40) ;//-------Roll rate, in degrees per second.
+			roll_angle(65) ;//------Maximum roll angle, in degrees.
+		)
+	}
+	
+	{mass 1000}
+
+	{extender "inventory"
+		{Box
+			{item  "ammo mgun_ger belt" 1000}
+		}
+	}
+	{sensor
+		{visor "front"
+			{vision "vehicle_top_mgun"} 
+			{bone "mgun1"}
+		}
+	}
+	{placer 
+		{place "gunner1" {visor "front"}}
+	}
+	{sensor
+		{visor "rear"
+			{vision "vehicle_top_mgun"} 
+			{bone "mgun2"}
+		}
+	}
+	{placer 
+		{place "gunner2" {visor "rear"}}
+	}
+	{Weaponry
+		{place "mgun1"
+			{weapon "mg34_belt" filled}
+			{charger "gunner1"}
+			{gunner "gunner1"}
+			{foresight "foresight4"}
+			{linkbone "mgun1"}
+			{ai_in_manual}
+			{basic}
+		}
+		{place "mgun2"
+			{weapon "mg34_belt" filled}
+			{charger "gunner2"}
+			{gunner "gunner2"}
+			{foresight "foresight5"}
+			{linkbone "mgun2"}
+			{ai_in_manual}
+			{basic}
+		}
+	}
+	{Sensor
+		{Visor "main"
+			{bone "pivot_back"}
+		}
+	}
+	{Extension "ju-52.mdl"}
+}

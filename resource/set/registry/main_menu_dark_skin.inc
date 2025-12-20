@@ -224,7 +224,7 @@
 	{blink_period "0.7"}
 }
 {dialogbox
-	{text_style "f(arial_narrow)s(8)p(0)c(220 220 220)"}
+	{text_style "f(arial_narrow)s(8)p(0)c(255 255 255)"}
 }
 {frame
 	{text_style "f(open_sans)s(28)c(255 255 255)"}
@@ -236,30 +236,30 @@
 	{text_style "f(arial_narrow)s(%fs)p(0)c(255 255 255)"}
 }
 {event_history
-	{text_style "f(arial_hq)s(8)p(0)"}
+	{text_style "<f(arial_hq)s(8)>p(0)"}
 }
 {talk
 	{text_style "f(arial_narrow)s(15)p(0)c(255 255 255)"} ;temp size fix prev use s(%fs)
 }
 {tip
-	{text_style "f(arial_hq)s(15)e(shadow)c(255 255 255)"}
-	{text_style_link "f(arial_hq)s(15)e(shadow)c(219 165 79)"}
-	{text_style_link_selected "f(arial_hq)s(15)e(shadow)c(255 255 255)"}
+	{text_style "f(arial_hq)s(8)c(20 20 20)"}
+	{text_style_link "f(arial_hq)s(8)c(20 100 20)"}
+	{text_style_link_selected "f(arial_hq)s(8)c(100 20 20)"}
 }
 {scenario
 	{text_style "s(10)c(200 200 200)"}
 	{text_style_small "f(arial_hq)s(8)c(200 200 200)"}
 }
 {gc_hint
-	{text_style_title	"f(anka)s(18)c(219 165 79)"}
-	{text_style			"f(arial_narrow)s(15)c(209 209 209)"}
-	{text_style_req		"f(arial_narrow)s(15)c(240 240 240)"}
-	{text_style_action	"f(arial_narrow)s(15)c(200 200 200)"}
-	{text_style_usage	"f(arial_narrow)s(15)c(124 181 71)"}
-	{face_color "23 23 23 205"}
-	{frame_color "20 20 20 205"}
+	{text_style_title	"f(impact)s(21)c(255 255 255)"}
+	{text_style			"f(arial_narrow)s(15)c(255 255 255)"}
+	{text_style_req		"f(arial_narrow)s(15)c(255 150 150)"}
+	{text_style_action	"f(arial_narrow)s(15)c(255 255 150)"}
+	{text_style_usage	"f(arial_narrow)s(15)c(150 255 150)"}
+	{face_color "50 50 50 180"}
+	{frame_color "140 140 140 180"}
 }
 {video_dialog
-	{face_color "0 0 0"}
+	{face_color "50 50 50 180"}
 	{subtitle_text_style "e(shadow)f(open_sans)s(15)c(255 255 255)"}
 }

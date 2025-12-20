@@ -1007,7 +1007,7 @@
 	{spreading
 		{BurstRecoveryTime 0.5}
 		{BurstAccuracy 100 95 88 82 75 68 55 32}
-		{SpreadXYRatio	1}
+		{SpreadXYRatio	1.5}
 	}
 	{burst
 		{short 2 0.75}			;// short burst shots on long distance, rand (+-)shots
@@ -1195,17 +1195,17 @@
 )
 
 (define "medium_artillery"
-	{spreading {SpreadXYRatio 0.4}}
+	{spreading {SpreadXYRatio 3}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 0.75}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 0.75}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40}
@@ -1217,17 +1217,17 @@
 )
 
 (define "heavy_artillery"
-	{spreading {SpreadXYRatio 0.4}}
+	{spreading {SpreadXYRatio 3}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 0.75}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 0.75}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40}
@@ -1239,17 +1239,17 @@
 )
 
 (define "super_heavy_artillery"
-	{spreading {SpreadXYRatio 0.4}}
+	{spreading {SpreadXYRatio 3}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 0.75}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 0.75}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40}

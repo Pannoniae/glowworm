@@ -2,9 +2,9 @@
 {default_skin
 	{dialog
 		{frame_size 1}
-		{face_color  "66 66 66"}
-		{text_style "f(arial_hq)s(8)c(f4f3ee)"}
-		{frame_color "45 45 45"}
+		{face_color  "77 77 77"}
+		{text_style "f(arial_hq)s(8)c(255 255 255)"}
+		{frame_color "153 153 153"}
 	}	
 	{inputline
 		{selection
@@ -31,14 +31,14 @@
 		{face_color "62 62 62"}
 		{item
 			{text_style
-				{normal		"f(arial_hq)c(200 200 200)"}
-				{selected	"f(arial_hq)c(22 22 22)"}
-				{focused	"f(arial_hq)c(22 22 22)"}
+				{normal		"f(arial_hq)s(8)c(255 255 255)"}
+				{selected	"f(arial_hq)s(8)c(22 22 22)"}
+				{focused	"f(arial_hq)s(8)c(22 22 22)"}
 			}
 			{face_color
-				{normal		"58 58 58"}
-				{selected	"200 200 200"}
-				{focused	"218 178 120"}
+				{normal		"64 64 64"}
+				{selected	"140 140 255"}
+				{focused	"220 170 31"}
 			}
 			{selection_shrink 0}
 			{text_offset 2}
@@ -47,52 +47,52 @@
 	{treeview
 		{item
 			{text_style
-				{normal		"f(arial_hq)s(9)c(200 200 200)"}
-				{selected	"f(arial_hq)s(9)c(30 30 30)"}
-				{focused	"f(arial_hq)s(9)c(218 178 120)"}
+				{normal		"f(arial_hq)s(9)c(255 255 255)"}
+				{selected	"f(arial_hq)s(9)c(0 0 0)"}
+				{focused	"f(arial_hq)s(9)c(0 0 0)"}
 			}
 			{face_color
-				{normal		"64 64 124"}
-				{selected	"120 120 120"}
-				{focused	"40 40 40"}
+				{normal		"64 64 64"}
+				{selected	"140 140 255"}
+				{focused	"220 170 31"}
 			}
 		}
 		{folder "/interface/skin/editor/treeview/"
 			{text_style
-				{normal		"e(shadow)f(arial_hq)s(9)b+c(245 245 245)"}
-				{selected	"f(arial_hq)s(9)b+c(30 30 30)"}
-				{focused	"f(arial_hq)s(9)b+c(30 30 30)"}
+				{normal		"e(shadow)f(arial_hq)s(9)b+c(255 255 255)"}
+				{selected	"f(arial_hq)s(9)b+c(0 0 0)"}
+				{focused	"f(arial_hq)s(9)b+c(0 0 0)"}
 			}
 			{face_color
 				{normal		"64 64 64"}
-				{selected	"120 120 120"}
-				{focused	"218 178 120"}
+				{selected	"140 140 255"}
+				{focused	"220 170 31"}
 			}
 		}
 	}
 	{splitter
 		{folder "/interface/skin/editor/splitter/"}
-		{color_working "220 220 220 120"}
+		{color_working "255 255 255 120"}
 	}
 	{button
 		{text_style
-			{normal 			"f(arial_hq)s(8)e(shadow)c(200 200 200)"}
-			{focused_mouse		"f(arial_hq)s(8)e(shadow)c(218 178 120)"}
-			{focused_keyboard	"f(arial_hq)s(8)e(shadow)c(218 178 120)"}
-			{pressed			"f(arial_hq)s(8)e(shadow)c(218 178 120)"}
+			{normal 			"f(arial_hq)s(8)e(shadow)c(255 255 255)"}
+			{focused_mouse		"f(arial_hq)s(8)e(shadow)c(255 255 255)"}
+			{focused_keyboard	"f(arial_hq)s(8)e(shadow)c(255 255 255)"}
+			{pressed			"f(arial_hq)s(8)e(shadow)c(0 0 0)"}
 			{disabled			"f(arial_hq)s(8)e(disabled)c(55 55 55)"}
 		}
 		{face_color
-			{normal				"66 66 66"}
-			{focused_mouse		"72 72 72"}
-			{focused_keyboard	"69 69 69"}
-			{pressed			"45 45 45"}
+			{normal				"77 77 77"}
+			{focused_mouse		"122 122 122"}
+			{focused_keyboard	"102 102 102"}
+			{pressed			"178 178 178"}
 			{disabled			"77 77 77"}
 		}
 	}
 	{checkbox
 		{text_style
-			{normal				"f(arial_hq)s(8)c(220 220 220)"}
+			{normal				"f(arial_hq)s(8)c(225 225 225)"}
 			{focused_mouse		"f(arial_hq)s(8)e(shadow)c(255 255 255)"}
 			{focused_keyboard	"f(arial_hq)s(8)e(shadow)c(255 255 255)"}
 			{pressed			"f(arial_hq)s(8)e(shadow)c(200 200 200)"}
@@ -115,18 +115,18 @@
 		{title
 			{offset 6}
 			{close_button "/interface/skin/editor/close"}
-			{face_color "45 44 43"} ;178 55 55 55
-			{text_style "e(none)s(10)b+c(150 150 150)"}
+			{face_color "178 178 178"}
+			{text_style "e(none)f(arial_hq)s(10)b+c(0 0 0)"}
 			{active
-				{face_color "42 42 42"} ;50 50 50
-				{text_style "s(10)e(none)b+c(220 220 220)"}
+				{face_color "102 0 0"}
+				{text_style "e(shadow)f(arial_hq)s(10)b+c(255 255 255)"}
 			}
 		}
 	}
 	{console
-		{face_color "22 22 22 220"}
-		{sel_text_color	"220 220 220"}
-		{text_style "e(shadow)c(255 255 75)s(10)"} ;210 54 99
+		{face_color "48 48 48 192"}
+		{sel_text_color	"255 255 255"}
+		{text_style "e(shadow)c(255 255 80)f(arial_hq)s(10)"}
 	}
 	{debug_console
 		{text_style "e(shadow)f(arial_hq)s(10)"}
@@ -142,10 +142,10 @@
 		{color_working "255 255 255 140"}
 	}
 	{hint
-		{offset 6}
-		{face_color "42 42 42 120"}
-		{frame_color "40 40 40 100"}
-		{text_style "f(arial_hq)s(9)c(250 250 250)"}
+		{offset 5}
+		{face_color "0 0 0"}
+		{frame_color "160 160 160"}
+		{text_style "f(arial_hq)s(8)c(250 250 250)"}
 	}
 	{statusbar
 		{height 20}

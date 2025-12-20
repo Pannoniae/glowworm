@@ -1,0 +1,139 @@
+{game_entity
+	(include "/properties/halftrack.ext")
+	(include "/properties/shadow/tank.inc" scale(1.0))
+	(include "/properties/selection/vehicle.inc" scale(1.4))
+	{props "tank" "turret" "vision_lev02" "tractor" "tractor_heavy"}
+	{targetSelector "cannon_rocket"}
+	{targetclass "armoredcar"}
+	{patherId "sdkfz8"}
+	
+	("armoredcar_tier2")
+
+	("turret" repair(50))
+	("tracks" repair(30) thickness(20))
+	("gun" repair(30) thickness(20))
+
+	{volume "body"
+		{tags "body"}
+		{component "body"}
+		{thickness 12
+			{front 20}
+		}
+	}
+	{volume "body2"
+		{tags "body"}
+		{component "body"}
+		{thickness 12}
+	}
+	{volume "body3"
+		{tags "body"}
+		{component "body"}
+		{thickness 12}
+	}
+	{volume "body4"
+		{tags "body"}
+		{component "body"}
+		{thickness 12}
+	}
+	{volume "body5"
+		{tags "body"}
+		{component "body"}
+		{thickness 12}
+	}
+	{volume "gun"
+		{thickness 12}
+	}
+	{volume "turret"
+		{thickness 15}
+	}
+	{volume "engine"
+		{thickness 12
+			{front 20}
+		}
+	}
+	{component "turret"
+		{RepairTime 20}
+	}
+	{component "gun"
+		{RepairTime 15}
+	}
+
+
+	{boarder
+		{anm "driver"
+			{forward	{begin	"board_big-midcar_driver"} {base "doorleft"}}
+			{reverse 	{end	"board_big-midcar_driver" -1} {base "doorleft" -1}}
+		}
+
+		{anm "commander"
+			{forward	{begin	"board_big-midcar"} {base "doorright"}}
+			{reverse 	{end	"board_big-midcar" -1} {base "doorright" -1}}
+		}
+	}
+
+	{sensor
+		{Visor "driver"
+			{vision "tank_driver"}
+			{bone "visor2"}
+		}
+	}
+
+	("crew" place(driver)		bone()	door(emit1)		animation(driver)	visor(driver) 	off({sensor}))
+	("crew" place(commander)	bone()	door(emit2)		animation(commander)	visor(main) 	off())
+
+
+	{extender "inventory"
+		{box
+			{item "ammo 82mm_rs82" 48}
+		}
+	}
+
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{RestoreIKAfterAim}
+			{weapon "weapon 82mm_Vielfachwerfer" filled}
+			{gunner "commander"}
+			{charger "commander"}
+			{Barrels 48}
+			{StationaryFiring}
+		}
+	}
+
+
+	("wheel" args "wheelright")
+	("wheel" args "wheelleft")
+   
+
+	{mass 7500}
+	{Chassis "wheel"
+		("tank_trace" fx("tracks_mid") step(0.5) len(0.59) boneleft("FXtraceL2") boneright("FXtraceR2"))
+		("car_trace" fx("tracewheel02") step(0.09) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+		("mobility_car"
+			speed(35) ;----------------------------------Max speed.
+			speedatmaxturn(12) ;-------------------------Max speed at max turn.
+			reverse(6) ;--------------------------------Max speed in Reverse.
+			weight(7.5) ;-------------------------------Weight in Tonnes.
+			power(60) ;---------------------------------Horse Power.
+			fuel(250) ;----------------------------------Fuel capacity in Litres.
+			type(fuel) ;---------------------------------Fuel type.
+			range(110) ;---------------------------------Range in Kilometers.
+		)
+	}
+
+	{Extension "zgkw303f.mdl"}
+
+	{bone "gun"		
+		{limits 2 42}
+		{speed2 4}
+	}
+	{bone "turret"	
+		{speed2 4}
+	}
+	{brain
+		{properties
+			{fire_mode hold}
+		}
+	}
+}
+

@@ -23,8 +23,8 @@
 	{Automatic}
 	("accuracy_rifle_auto")
 	{LockFireDistanceTime 0.5}
-	("human health" damage(70))
-	("fire rate" rpm(150))
+	("human health" damage(100))
+	("fire rate" rpm(240))
 	{FiringTimeout 2.0 0.5}
 	{FiringTimeoutDistanceFactor
 		{0.2 0.55}	;24m, 1.1s
@@ -52,9 +52,9 @@
 	{Automatic}
 	("accuracy_rifle_auto")
 	{LockFireDistanceTime 0.5}
-	("human health" damage(70))
+	("human health" damage(100))
 	{SyncedProjectiles 0}		;// not for automatic weapons
-	{FiringTimeout 2.0 0.5}
+	{FiringTimeout 0.8 0.5}
 	{FiringTimeoutDistanceFactor
 		{0.2 0.65}	;24m, 1.3s
 		{0.399 0.85};47.9m, 1.7s //still fires bursts
@@ -135,7 +135,7 @@
 	{Automatic}
 	("accuracy_assault_rifle")
 	{LockFireDistanceTime 0.5}
-	("human health" damage(65))
+	("human health" damage(80))
 	{SyncedProjectiles 0}		;// not for automatic weapons
 	{FiringTimeout 1.5 0.5}
 	{FiringTimeoutDistanceFactor
@@ -251,7 +251,7 @@
 	{range 120 120}
 	{Automatic}
 	{tag "bolt_action rifle_shell"}
-	("human health" damage(70))
+	("human health" damage(100))
 	("fire rate" rpm(40)) 
 	{states
 		{reload		"reload"}

@@ -30,11 +30,7 @@
 		range_he(190)			; // Range after which direct-fire accuracy drops to prevent farshooting.
 		range_hei(280)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
 	)
-
-	(mod not "mp"
-		("accuracy_spg" r1(1.25) range_ap(170) range_he(210) range_heat(170))
-		{range 210 210}
-	)
+	
 	{unlimitedRangeTPC 0}   ;// restrict range in TPC/FPC
 
 	{parameters "he2" ;// stielgranate 42

@@ -50,7 +50,7 @@
 	{"210mm_morser_16"
 		{vehicle_view "cannon_sig33"}
 	}
-	{"stug3a"
+	{"stugIIIa"
 		{vehicle_view "stug3b"}
 	}
 	{"pz5g_m10"
@@ -76,9 +76,6 @@
 	}
 	{"panzer3l_pak38"
 		{vehicle_view "panzer3l"}
-	}
-	{"sdkfz251b"
-		{vehicle_view "sdkfz251c"}
 	}
 	{"stug3f8"
 		{vehicle_view "stug3f"}
