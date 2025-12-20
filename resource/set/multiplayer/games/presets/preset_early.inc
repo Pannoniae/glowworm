@@ -42,7 +42,7 @@
 		{unitMode "early"}
 		{specMode "all_normal"}
 		{apply "only_roster_early"}
-		("standard_all"			start(200) finish(8000) doctrine(1) cp(0:100,900:200,1500:250))
+		("standard_all"			start(200) finish(8000) doctrine(1) cp(0:160,900:210,1500:300))
 		{ranked}
 	}
 ;------------------------------------------------------------------------------------------------------------	

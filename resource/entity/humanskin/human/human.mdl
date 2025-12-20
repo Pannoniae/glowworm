@@ -109,7 +109,7 @@
 				}
 				{bone planarsocket "ik_socket" ;
 					{limits 65}
-					{speed 0.1}
+					{speed2 720}
 					{Matrix34
 					    0   1	0
 						1	0	0
@@ -126,8 +126,8 @@
 							0	0   0
 						}
 						{bone revolute "ik_lat" ;
-							{limits -20 20}
-							{speed 0.1}
+							{limits -40 40}
+							{speed2 720}
 							{Matrix34
 								0	0	1
 								0	1	0
@@ -135,8 +135,8 @@
 								0	0	0
 							}
 							{bone revolute "ik_lng" ;
-								{limits -20 20}
-								{speed 0.1}
+								{limits -40 40}
+								{speed2 720}
 								{Matrix34
 									1	0	0
 									0	0	1

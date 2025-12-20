@@ -24,270 +24,270 @@
 ;_________________________________________________
 ;|            Doctrine                            |
 ;|________________________________________________|
-
-
-;===================================
-;       ALL-ROUND DOCTRINE
-;===================================
-
-
-; ======Tier1======
-
-; // Bren Carrier Group
-{"doctrine_squad_carrier_early_all"
-	("squad_eng_carrier_doctrine" side(eng) period(early) year(early) crew1(driver:1) crew2(rifle:1) vehicle1(bren_carrier_boys) c1(sec_com_sgt:1) vehicle2(bren_carrier) c2(detach_com_cpl:1) vehicle3(bren_carrier) c3(detach_com_cpl:1)) 
-	("doctrine_t1" cool(180) d(early_eng_allround) cost(15))
-}
-
-; // mortar_carrier_mk1
-{"doctrine_mortar_carrier_mk1"
-	("squad_2vehicle2_doctrine" side(eng) period(early) year(early) vehicle(mortar_carrier_mk1_boys) crew1(driver:1) crew2(crew:3))
-	("doctrine_t1" cool(180) d(early_eng_allround) cost(15))
-}
-
-; // cruiser_mk3
-{"doctrine_cruiser_mk3"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(cruiser_mk3) crew1(tankman:3) crew2(tank_commander:1))
-	("doctrine_t1" cool(180) d(early_eng_allround) cost(25))
-}
-
-
-; ======Tier2======
-
-; // Artillery Signaller
-{"doctrine_squad_eng_signaller_88_early(eng)"
-	("squad_with1types_doctrine" side(eng) period(early) year(early) c1(fo_radio_88:1))
-	("doctrine_t2" cool(300) d(early_eng_allround) cost(60))
-	{tags "signaller"}
-}
-
-; // Matilda1
-{"doctrine_matilda1"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda1) crew1(tankman:1) crew2(tank_commander:1))
-	("doctrine_t2" cool(300) d(early_eng_allround) cost(35))
-}
-
-; // matilda2_mk1
-{"doctrine_matilda2_mk1_early"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda2_mk1) crew1(tankman:3) crew2(tank_commander:1))
-	("doctrine_t2" cool(300) d(early_eng_allround) cost(65))
-}
-
-
-; ======Tier3======
-
-; // Artillery Signaller
-{"doctrine_squad_eng_signaller_203_early(eng)"
-	("squad_with1types_doctrine" side(eng) period(early) year(early) c1(fo_radio_203:1))
-	("doctrine_t3" cool(480) d(early_eng_allround) cost(60))
-	{tags "signaller_heavy"}
-}
-
-; // 152mm_bl_6
-{"doctrine_152mm_bl_6_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(152mm_bl_6) crew_c(artilleryman:5))
-	("doctrine_t3" cool(480) d(early_eng_allround) cost(75))
-}
-
-
-;===================================
-;       DEFENSIVE DOCTRINE
-;===================================
-
-
-; ======Tier1======
-
-; // Sapper squad
-{"doctrine_squad_r_eng_early_def(eng)"
-	("squad_with10types_doctrine" side(eng) period(early) year(early) c1(r_eng_sec_com:1) c2(r_eng_sec_2ic:1) c3(r_eng_builder:1) c4(r_eng_mine_ap:1) c5(r_eng_mine_at:1) c6(r_eng_sapper:2) c7(r_eng_boys:1) c8(r_eng_boys_asst:1) c9(r_eng_mg:1) c10(r_eng_mg_asst:1)) 
-	("doctrine_t1" cool(180) d(early_eng_defensive) cost(15))
-	{tags "limit4"}
-}
-
-; // 37mm_qf_mk1
-{"doctrine_37mm_qf_mk1"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(37mm_qf_mk1) crew_c(artilleryman:4))
-	("doctrine_t1" cool(180) d(early_eng_defensive) cost(20))
-}
-
-; // cruiser_mk2a_cs
-{"doctrine_cruiser_mk2a_cs_early"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(cruiser_mk2a_cs) crew1(tankman:4) crew2(tank_commander:1))
-	("doctrine_t1" cool(240) d(early_eng_defensive) cost(25))
-}
-
-; ======Tier2======
-
-; // 40mm_qf40_early
-{"doctrine_40mm_qf40_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(40mm_qf40_early) crew_c(artilleryman:3))
-	("doctrine_t2" cool(300) d(early_eng_defensive) cost(25))
-}
-
-; // 84mm_qf18_2pa
-{"doctrine_84mm_qf18_2pa_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(84mm_qf18_2pa) crew_c(artilleryman:4))
-	("doctrine_t2" cool(300) d(early_eng_defensive) cost(50))
-}
-
-; // 88mm_qf25_mk1_5p
-{"doctrine_88mm_qf25_mk1_5p"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(88mm_qf25_mk1_5p) crew_c(artilleryman:4))
-	("doctrine_t2" cool(300) d(early_eng_defensive) cost(70))
-}
-
-; ======Tier3======
-
-; // 94mm_qf_3_7_aa_early
-{"doctrine_94mm_qf_3_7_aa_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(94mm_qf_3_7_aa_early) crew_c(artilleryman:6))
-	("doctrine_t3" cool(480) d(early_eng_defensive) cost(35))
-}
-
-; // 114mm_qf_how_wooden
-{"doctrine_114mm_qf_how_wooden"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(114mm_qf_how_wooden) crew_c(artilleryman:4))
-	("doctrine_t3" cool(480) d(early_eng_defensive) cost(65))
-}
-
-; // 203mm_bl_8
-{"doctrine_203mm_bl_8_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(203mm_bl_8) crew_c(artilleryman:5))
-	("doctrine_t3" cool(480) d(early_eng_defensive) cost(80))
-}
-
-
-
-;===================================
-;       IRREGULAR DOCTRINE
-;===================================
-
-
-; ======Tier1======
-
-; // Light Airstrike
-{"doctrine_blenheim_mk1_eng_light"
-	("squad_vehicle_doctrine" side(eng) period(early) year(early) vehicle(blenheim_mk1_eng) crew(pilot:1))
-	("doctrine_t1" cool(360) d(early_eng_irregular) cost(10))
-	{action "airstrike:250lb_gp_mk4"}
-	{tags "limit3"}
-}
-
-; // vickers_mk6
-{"doctrine_vickers_mk6"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(vickers_mk6) crew1(tankman:2) crew2(tank_commander:1))
-	("doctrine_t1" cool(180) d(early_eng_irregular) cost(10))
-}
-
-; // Bren Carrier Group
-{"doctrine_squad_carrier_early_irr"
-	("squad_eng_rec_scout_doctrine" side(eng) period(early) year(early) crew1(rec_carrier_driver:1) crew2(rec_carrier_gunner:1) vehicle1(universal_carrier_mk1_boys) c1(rec_troop_com:1) vehicle2(mortar_carrier_mk1) c2(rec_carrier_detach_com_sgt:1) c3(rec_carrier_rifle:1) vehicle3(universal_carrier_mk1_2mg) c4(rec_carrier_detach_com_cpl:1) c5(rec_carrier_rifle:1)) 
-	("doctrine_t1" cool(180) d(early_eng_irregular) cost(15))
-}
-
-
-; ======Tier2======
-
-; // Commandos
-{"doctrine_squad_com_early(eng)"
-	("squad_with6types_doctrine" side(eng) period(early) year(early) c1(com_subsec_com:1) c2(com_subsec_2ic:1) c3(com_rifle_gren:1) c4(com_rifle_band:7) c5(com_mg:1) c6(com_mg_asst:1))
-	("doctrine_t2" cool(300) d(early_eng_irregular) cost(20))
-	{tags "limit2"}
-}
-
-; // matilda2_mk4_cs
-{"doctrine_matilda2_mk4_cs_early"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda2_mk4_cs) crew1(tankman:3) crew2(tank_commander:1))
-	("doctrine_t2" cool(300) d(early_eng_irregular) cost(65))
-}
-
-; // 84mm_qf18_5p
-{"doctrine_84mm_qf18_5p_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(84mm_qf18_5p) crew_c(artilleryman:4))
-	("doctrine_t2" cool(300) d(early_eng_irregular) cost(70))
-}
-
-; ======Tier3======
-
-; // Heavy Airstrike
-{"doctrine_blenheim_mk1_eng_heavy"
-	("squad_vehicle_doctrine" side(eng) period(early) year(early) vehicle(blenheim_mk1_eng) crew(pilot:1))
-	("doctrine_t3" cool(360) d(early_eng_irregular) cost(30))
-	{action "airstrike:500lb_mc"}
-}
-
-; // 152mm_bl_6_mk19
-{"doctrine_152mm_bl_6_mk19"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(152mm_bl_6_mk19) crew_c(artilleryman:5))
-	("doctrine_t3" cool(480) d(early_eng_irregular) cost(80))
-}
-
-
-;===================================
-;       OFFENSIVE DOCTRINE
-;===================================
-
-
-; ======Tier1======
-
-;// Recon plane
-{"doctrine_blenheim_mk1_eng_recon_early"
-	("squad_vehicle_doctrine" side(eng) period(early) year(early) vehicle(blenheim_mk1_eng_recon) crew(pilot:1))
-	("doctrine_t1" cool(360) d(early_eng_offensive) cost(5))
-	{action "airstrike:reconnaissance_50"} 
-}
-
-; // Bren Carrier Group
-{"doctrine_squad_carrier_early_off"
-	("squad_eng_carrier_doctrine" side(eng) period(early) year(early) crew1(mot_scout_driver:1) crew2(mot_scout_gunner:1) vehicle1(universal_carrier_mk1_boys) c1(mot_scout_sec_com:1) vehicle2(universal_carrier_mk1_boys) c2(mot_scout_detach_com_cpl:1) vehicle3(universal_carrier_mk1_boys) c3(mot_scout_detach_com_lcpl:1)) 
-	("doctrine_t1" cool(180) d(early_eng_offensive) cost(15))
-}
-
-; // cruiser_mk3_late
-{"doctrine_cruiser_mk3_late"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(cruiser_mk3_late) crew1(tankman:3) crew2(tank_commander:1))
-	("doctrine_t1" cool(180) d(early_eng_offensive) cost(15))
-}
-
-; ======Tier2======
-
-; // Matilda1 .50
-{"doctrine_matilda1_50"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda1_50) crew1(tankman:1) crew2(tank_commander:1))
-	("doctrine_t2" cool(300) d(early_eng_offensive) cost(40))
-}
-
-; // matilda2_mk3
-{"doctrine_matilda2_mk3"
-	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda2_mk3) crew1(tankman:3) crew2(tank_commander:1))
-	("doctrine_t2" cool(300) d(early_eng_offensive) cost(65))
-}
-
-; // 84mm_qf18_4p
-{"doctrine_84mm_qf18_4p"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(84mm_qf18_4p) crew_c(artilleryman:4))
-	("doctrine_t2" cool(300) d(early_eng_offensive) cost(70))
-}
-
-; ======Tier3======
-
-; // 114mm_qf_how
-{"doctrine_114mm_qf_how_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(114mm_qf_how) crew_c(artilleryman:4))
-	("doctrine_t3" cool(480) d(early_eng_offensive) cost(55))
-}
-
-; // 114mm_bl_4_5_mk1
-;{"doctrine_114mm_bl_4_5_mk1"
-;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(114mm_bl_4_5_mk1) crew_c(artilleryman:5))
-;	("doctrine_t3" cool(480) d(early_eng_offensive) cost(75))
+;
+;
+;;===================================
+;;       ALL-ROUND DOCTRINE
+;;===================================
+;
+;
+;; ======Tier1======
+;
+;; // Bren Carrier Group
+;{"doctrine_squad_carrier_early_all"
+;	("squad_eng_carrier_doctrine" side(eng) period(early) year(early) crew1(driver:1) crew2(rifle:1) vehicle1(bren_carrier_boys) c1(sec_com_sgt:1) vehicle2(bren_carrier) c2(detach_com_cpl:1) vehicle3(bren_carrier) c3(detach_com_cpl:1)) 
+;	("doctrine_t1" cool(180) d(early_eng_allround) cost(15))
 ;}
-
-; // 183mm_bl_7_2
-{"doctrine_183mm_bl_7_2_early"
-	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(183mm_bl_7_2) crew_c(artilleryman:5))
-	("doctrine_t3" cool(480) d(early_eng_offensive) cost(80))
-}
+;
+;; // mortar_carrier_mk1
+;{"doctrine_mortar_carrier_mk1"
+;	("squad_2vehicle2_doctrine" side(eng) period(early) year(early) vehicle(mortar_carrier_mk1_boys) crew1(driver:1) crew2(crew:3))
+;	("doctrine_t1" cool(180) d(early_eng_allround) cost(15))
+;}
+;
+;; // cruiser_mk3
+;{"doctrine_cruiser_mk3"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(cruiser_mk3) crew1(tankman:3) crew2(tank_commander:1))
+;	("doctrine_t1" cool(180) d(early_eng_allround) cost(25))
+;}
+;
+;
+;; ======Tier2======
+;
+;; // Artillery Signaller
+;{"doctrine_squad_eng_signaller_88_early(eng)"
+;	("squad_with1types_doctrine" side(eng) period(early) year(early) c1(fo_radio_88:1))
+;	("doctrine_t2" cool(300) d(early_eng_allround) cost(60))
+;	{tags "signaller"}
+;}
+;
+;; // Matilda1
+;{"doctrine_matilda1"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda1) crew1(tankman:1) crew2(tank_commander:1))
+;	("doctrine_t2" cool(300) d(early_eng_allround) cost(35))
+;}
+;
+;; // matilda2_mk1
+;{"doctrine_matilda2_mk1_early"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda2_mk1) crew1(tankman:3) crew2(tank_commander:1))
+;	("doctrine_t2" cool(300) d(early_eng_allround) cost(65))
+;}
+;
+;
+;; ======Tier3======
+;
+;; // Artillery Signaller
+;{"doctrine_squad_eng_signaller_203_early(eng)"
+;	("squad_with1types_doctrine" side(eng) period(early) year(early) c1(fo_radio_203:1))
+;	("doctrine_t3" cool(480) d(early_eng_allround) cost(60))
+;	{tags "signaller_heavy"}
+;}
+;
+;; // 152mm_bl_6
+;{"doctrine_152mm_bl_6_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(152mm_bl_6) crew_c(artilleryman:5))
+;	("doctrine_t3" cool(480) d(early_eng_allround) cost(75))
+;}
+;
+;
+;;===================================
+;;       DEFENSIVE DOCTRINE
+;;===================================
+;
+;
+;; ======Tier1======
+;
+;; // Sapper squad
+;{"doctrine_squad_r_eng_early_def(eng)"
+;	("squad_with10types_doctrine" side(eng) period(early) year(early) c1(r_eng_sec_com:1) c2(r_eng_sec_2ic:1) c3(r_eng_builder:1) c4(r_eng_mine_ap:1) c5(r_eng_mine_at:1) c6(r_eng_sapper:2) c7(r_eng_boys:1) c8(r_eng_boys_asst:1) c9(r_eng_mg:1) c10(r_eng_mg_asst:1)) 
+;	("doctrine_t1" cool(180) d(early_eng_defensive) cost(15))
+;	{tags "limit4"}
+;}
+;
+;; // 37mm_qf_mk1
+;{"doctrine_37mm_qf_mk1"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(37mm_qf_mk1) crew_c(artilleryman:4))
+;	("doctrine_t1" cool(180) d(early_eng_defensive) cost(20))
+;}
+;
+;; // cruiser_mk2a_cs
+;{"doctrine_cruiser_mk2a_cs_early"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(cruiser_mk2a_cs) crew1(tankman:4) crew2(tank_commander:1))
+;	("doctrine_t1" cool(240) d(early_eng_defensive) cost(25))
+;}
+;
+;; ======Tier2======
+;
+;; // 40mm_qf40_early
+;{"doctrine_40mm_qf40_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(40mm_qf40_early) crew_c(artilleryman:3))
+;	("doctrine_t2" cool(300) d(early_eng_defensive) cost(25))
+;}
+;
+;; // 84mm_qf18_2pa
+;{"doctrine_84mm_qf18_2pa_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(84mm_qf18_2pa) crew_c(artilleryman:4))
+;	("doctrine_t2" cool(300) d(early_eng_defensive) cost(50))
+;}
+;
+;; // 88mm_qf25_mk1_5p
+;{"doctrine_88mm_qf25_mk1_5p"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(88mm_qf25_mk1_5p) crew_c(artilleryman:4))
+;	("doctrine_t2" cool(300) d(early_eng_defensive) cost(70))
+;}
+;
+;; ======Tier3======
+;
+;; // 94mm_qf_3_7_aa_early
+;{"doctrine_94mm_qf_3_7_aa_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(94mm_qf_3_7_aa_early) crew_c(artilleryman:6))
+;	("doctrine_t3" cool(480) d(early_eng_defensive) cost(35))
+;}
+;
+;; // 114mm_qf_how_wooden
+;{"doctrine_114mm_qf_how_wooden"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(114mm_qf_how_wooden) crew_c(artilleryman:4))
+;	("doctrine_t3" cool(480) d(early_eng_defensive) cost(65))
+;}
+;
+;; // 203mm_bl_8
+;{"doctrine_203mm_bl_8_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(203mm_bl_8) crew_c(artilleryman:5))
+;	("doctrine_t3" cool(480) d(early_eng_defensive) cost(80))
+;}
+;
+;
+;
+;;===================================
+;;       IRREGULAR DOCTRINE
+;;===================================
+;
+;
+;; ======Tier1======
+;
+;; // Light Airstrike
+;{"doctrine_blenheim_mk1_eng_light"
+;	("squad_vehicle_doctrine" side(eng) period(early) year(early) vehicle(blenheim_mk1_eng) crew(pilot:1))
+;	("doctrine_t1" cool(360) d(early_eng_irregular) cost(10))
+;	{action "airstrike:250lb_gp_mk4"}
+;	{tags "limit3"}
+;}
+;
+;; // vickers_mk6
+;{"doctrine_vickers_mk6"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(vickers_mk6) crew1(tankman:2) crew2(tank_commander:1))
+;	("doctrine_t1" cool(180) d(early_eng_irregular) cost(10))
+;}
+;
+;; // Bren Carrier Group
+;{"doctrine_squad_carrier_early_irr"
+;	("squad_eng_rec_scout_doctrine" side(eng) period(early) year(early) crew1(rec_carrier_driver:1) crew2(rec_carrier_gunner:1) vehicle1(universal_carrier_mk1_boys) c1(rec_troop_com:1) vehicle2(mortar_carrier_mk1) c2(rec_carrier_detach_com_sgt:1) c3(rec_carrier_rifle:1) vehicle3(universal_carrier_mk1_2mg) c4(rec_carrier_detach_com_cpl:1) c5(rec_carrier_rifle:1)) 
+;	("doctrine_t1" cool(180) d(early_eng_irregular) cost(15))
+;}
+;
+;
+;; ======Tier2======
+;
+;; // Commandos
+;{"doctrine_squad_com_early(eng)"
+;	("squad_with6types_doctrine" side(eng) period(early) year(early) c1(com_subsec_com:1) c2(com_subsec_2ic:1) c3(com_rifle_gren:1) c4(com_rifle_band:7) c5(com_mg:1) c6(com_mg_asst:1))
+;	("doctrine_t2" cool(300) d(early_eng_irregular) cost(20))
+;	{tags "limit2"}
+;}
+;
+;; // matilda2_mk4_cs
+;{"doctrine_matilda2_mk4_cs_early"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda2_mk4_cs) crew1(tankman:3) crew2(tank_commander:1))
+;	("doctrine_t2" cool(300) d(early_eng_irregular) cost(65))
+;}
+;
+;; // 84mm_qf18_5p
+;{"doctrine_84mm_qf18_5p_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(84mm_qf18_5p) crew_c(artilleryman:4))
+;	("doctrine_t2" cool(300) d(early_eng_irregular) cost(70))
+;}
+;
+;; ======Tier3======
+;
+;; // Heavy Airstrike
+;{"doctrine_blenheim_mk1_eng_heavy"
+;	("squad_vehicle_doctrine" side(eng) period(early) year(early) vehicle(blenheim_mk1_eng) crew(pilot:1))
+;	("doctrine_t3" cool(360) d(early_eng_irregular) cost(30))
+;	{action "airstrike:500lb_mc"}
+;}
+;
+;; // 152mm_bl_6_mk19
+;{"doctrine_152mm_bl_6_mk19"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(152mm_bl_6_mk19) crew_c(artilleryman:5))
+;	("doctrine_t3" cool(480) d(early_eng_irregular) cost(80))
+;}
+;
+;
+;;===================================
+;;       OFFENSIVE DOCTRINE
+;;===================================
+;
+;
+;; ======Tier1======
+;
+;;// Recon plane
+;{"doctrine_blenheim_mk1_eng_recon_early"
+;	("squad_vehicle_doctrine" side(eng) period(early) year(early) vehicle(blenheim_mk1_eng_recon) crew(pilot:1))
+;	("doctrine_t1" cool(360) d(early_eng_offensive) cost(5))
+;	{action "airstrike:reconnaissance_50"} 
+;}
+;
+;; // Bren Carrier Group
+;{"doctrine_squad_carrier_early_off"
+;	("squad_eng_carrier_doctrine" side(eng) period(early) year(early) crew1(mot_scout_driver:1) crew2(mot_scout_gunner:1) vehicle1(universal_carrier_mk1_boys) c1(mot_scout_sec_com:1) vehicle2(universal_carrier_mk1_boys) c2(mot_scout_detach_com_cpl:1) vehicle3(universal_carrier_mk1_boys) c3(mot_scout_detach_com_lcpl:1)) 
+;	("doctrine_t1" cool(180) d(early_eng_offensive) cost(15))
+;}
+;
+;; // cruiser_mk3_late
+;{"doctrine_cruiser_mk3_late"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(cruiser_mk3_late) crew1(tankman:3) crew2(tank_commander:1))
+;	("doctrine_t1" cool(180) d(early_eng_offensive) cost(15))
+;}
+;
+;; ======Tier2======
+;
+;; // Matilda1 .50
+;{"doctrine_matilda1_50"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda1_50) crew1(tankman:1) crew2(tank_commander:1))
+;	("doctrine_t2" cool(300) d(early_eng_offensive) cost(40))
+;}
+;
+;; // matilda2_mk3
+;{"doctrine_matilda2_mk3"
+;	("squad_vehicle2_doctrine" side(eng) period(early) year(early) vehicle(matilda2_mk3) crew1(tankman:3) crew2(tank_commander:1))
+;	("doctrine_t2" cool(300) d(early_eng_offensive) cost(65))
+;}
+;
+;; // 84mm_qf18_4p
+;{"doctrine_84mm_qf18_4p"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(morris_c8) crew_v(driver:1) cannon(84mm_qf18_4p) crew_c(artilleryman:4))
+;	("doctrine_t2" cool(300) d(early_eng_offensive) cost(70))
+;}
+;
+;; ======Tier3======
+;
+;; // 114mm_qf_how
+;{"doctrine_114mm_qf_how_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(114mm_qf_how) crew_c(artilleryman:4))
+;	("doctrine_t3" cool(480) d(early_eng_offensive) cost(55))
+;}
+;
+;; // 114mm_bl_4_5_mk1
+;;{"doctrine_114mm_bl_4_5_mk1"
+;;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(114mm_bl_4_5_mk1) crew_c(artilleryman:5))
+;;	("doctrine_t3" cool(480) d(early_eng_offensive) cost(75))
+;;}
+;
+;; // 183mm_bl_7_2
+;{"doctrine_183mm_bl_7_2_early"
+;	("towed_gun_doctrine" side(eng) period(early) year(early) vehicle(bedford_oyd) crew_v(driver:1) cannon(183mm_bl_7_2) crew_c(artilleryman:5))
+;	("doctrine_t3" cool(480) d(early_eng_offensive) cost(80))
+;}
 
 
 ;_________________________________________________
@@ -379,86 +379,86 @@
 
 ; // ----- DEFENSIVE -----
 ;//t1
-("squad_with2types_doc" side(eng) name(squad_mp_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(30) g(squad_1) c1(mp_detach_com:1) c2(mp_rifle:3) b(inf1) t()) ;// def/irr, 1 pistol, 3 rifle. std perk
-
-;//t2
-("squad_with2types_doc" side(eng) name(squad_rec_mc_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(60) g(squad_2_recon) c1(rec_sec_com:1) c2(rec_rifle:6) b(inf1) t())) ;// 7 rifles. recon perk
-("squad_with5types_doc_i" side(eng) name(squad_rifle_early_def_1) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(504) t()) ;// 10 rifle, 1 bren
-("squad_with5types_doc_i" side(eng) name(squad_rifle_early_def_2) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(504) t()) ;//  10 rifle, 1 bren
-("squad_with7types_doc_i" side(eng) name(squad_rifle_early_def_3) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:5) c4(antitank_boys:1) c5(antitank_boys_asst:1) c6(mg:1) c7(mg_asst:1) b(inf1) i(504) t()) ;//  9 rifle, 1 bren, 1 boys
-("squad_with2types_doc" side(eng) name(squad_inf_pio_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio:4) b(inf1) t()) ;// 5 rifle, w/ demo. std perk
-("squad_with10types_doc" side(eng) name(squad_r_eng_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(r_eng_sec_com:1) c2(r_eng_sec_2ic:1) c3(r_eng_builder:1) c4(r_eng_mine_ap:1) c5(r_eng_mine_at:1) c6(r_eng_sapper:2) c7(r_eng_boys:1) c8(r_eng_boys_asst:1) c9(r_eng_mg:1) c10(r_eng_mg_asst:1) b(inf1) t()) ;// 11 total. 1 mg, 1 atrifle, 1 ap, 1 at, 1 builder
-("squad_eng_carrier_doc" side(eng) name(squad_carrier_early_def) d(early_eng_defensive) period(early) year(early) scf(0.85) cd(90) ci(90) g(squad_2_mech) crew1(driver:1) crew2(rifle:1) v1(bren_carrier_boys) c1(sec_com_sgt:1) v2(bren_carrier) c2(detach_com_cpl:1) v3(bren_carrier) c3(detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles w/ 3 rifle each 
-
-;//t3
-("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_def_1) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(505) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_def_2) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(505) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with7types_doc_i" side(eng) name(squad_51hl_rifle_early_def_3) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:5) c4(51hl_at_boys:1) c5(51hl_at_boys_asst:1) c6(51hl_mg:1) c7(51hl_mg_asst:1) b(inf1) i(505) t()) ;// 9 rifle, 1 bren. atrifle. def perk
-("squad_with3types_doc" side(eng) name(squad_51hl_inf_pio_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_pio_sec_com:1) c2(51hl_pio_builder:1) c3(51hl_pio:3) b(inf1) t()) ;// 5 rifles, demo, builder. def perk
-("squad_eng_carrier_doc" side(eng) name(squad_51hl_carrier_early_def) d(early_eng_defensive) period(early) year(early) scf(0.85) cd(180) ci(180) g(squad_3) crew1(51hl_driver:1) crew2(51hl_rifle:1) v1(bren_carrier_boys) c1(51hl_sec_com_sgt:1) v2(bren_carrier) c2(51hl_detach_com_cpl:1) v3(bren_carrier) c3(51hl_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. def perk
-
-;//t4
-;kilt squad
-("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_def_1) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(506) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_def_2) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(506) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with7types_doc_i" side(eng) name(squad_hl_bw_rifle_early_def_3) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:5) c4(hl_bw_at_boys:1) c5(hl_bw_at_boys_asst:1) c6(hl_bw_mg:1) c7(hl_bw_mg_asst:1) b(inf1) i(506) t()) ;// 9 rifle, 1 bren. atrifle. def perk
-("squad_with3types_doc" side(eng) name(squad_hl_bw_inf_pio_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_pio_sec_com:1) c2(hl_bw_pio_builder:1) c3(hl_bw_pio:3) b(inf1) t()) ;// 5 rifles, demo, builder. def perk
-
-
-; // ----- IRREGULAR -----
-;//t1
-("squad_with2types_doc" side(eng) name(squad_mp_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(30) g(squad_1) c1(mp_detach_com:1) c2(mp_rifle:3) b(inf1) t()) ;// def/irr, 1 pistol, 3 rifle. std perk
-
-;//t2
-("squad_with2types_doc" side(eng) name(squad_rec_mc_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(60) g(squad_2_recon) c1(rec_sec_com:1) c2(rec_rifle:6) b(inf1) t())) ;// 7 rifles. recon perk
-("squad_eng_rec_scout_doc" side(eng) name(squad_rec_scout_early_irr) d(early_eng_irregular) period(early) year(early) scf(0.85) cd(90) ci(90) g(squad_2_mech) crew1(rec_carrier_driver:1) crew2(rec_carrier_gunner:1) v1(universal_carrier_mk1_boys) c1(rec_troop_com:1) v2(mortar_carrier_mk1) c2(rec_carrier_detach_com_sgt:1) c3(rec_carrier_rifle:1) v3(universal_carrier_mk1_2mg) c4(rec_carrier_detach_com_cpl:1) c5(rec_carrier_rifle:1) b(inf1) t()) ;// 
-("squad_with5types_doc_i" side(eng) name(squad_rifle_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(507) t()) ;// 10 rifle, 1 bren
-("squad_with5types_doc_i" side(eng) name(squad_rifle_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(507) t()) ;//  10 rifle, 1 bren
-("squad_with7types_doc_i" side(eng) name(squad_rifle_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:5) c4(antitank_boys:1) c5(antitank_boys_asst:1) c6(mg:1) c7(mg_asst:1) b(inf1) i(507) t()) ;//  9 rifle, 1 bren, 1 boys
-("squad_with2types_doc" side(eng) name(squad_inf_pio_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio:4) b(inf1) t()) ;// 5 rifle, w/ demo. std perk
-("squad_with4types_doc_i" side(eng) name(squad_pio_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio_builder:1) c3(pio_gren:1) c4(pio:7) b(inf1) i(508) t()) ;// std perk. rifle gren. builder
-("squad_with6types_doc_i" side(eng) name(squad_pio_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio_builder:1) c3(pio_gren:1) c4(pio_band:5) c5(pio_mg:1) c6(pio_mg_asst:1) b(inf1) i(508) t()) ;// std perk. mg. rifle gren. builder
-("squad_with6types_doc_i" side(eng) name(squad_pio_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio_builder:1) c3(pio_gren:1) c4(pio:5) c5(pio_boys:1) c6(pio_boys_asst:1) b(inf1) i(508) t()) ;// std perk. atrifle. rifle gren. builder
-
-;//t3
-("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(509) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(509) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with7types_doc_i" side(eng) name(squad_51hl_rifle_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:5) c4(51hl_at_boys:1) c5(51hl_at_boys_asst:1) c6(51hl_mg:1) c7(51hl_mg_asst:1) b(inf1) i(509) t()) ;// 9 rifle, 1 bren. atrifle. def perk
-("squad_with3types_doc" side(eng) name(squad_51hl_inf_pio_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_pio_sec_com:1) c2(51hl_pio_builder:1) c3(51hl_pio:3) b(inf1) t()) ;// 5 rifles, demo, builder. def per
-("squad_eng_carrier_doc" side(eng) name(squad_51hl_carrier_early_irr) d(early_eng_irregular) period(early) year(early) scf(0.85) cd(180) ci(180) g(squad_3) crew1(51hl_driver:1) crew2(51hl_rifle:1) v1(bren_carrier_boys) c1(51hl_sec_com_sgt:1) v2(bren_carrier) c2(51hl_detach_com_cpl:1) v3(bren_carrier) c3(51hl_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. def perk
-
-;//t4
-;kilt squad
-("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(510) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(510) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with7types_doc_i" side(eng) name(squad_hl_bw_rifle_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:5) c4(hl_bw_at_boys:1) c5(hl_bw_at_boys_asst:1) c6(hl_bw_mg:1) c7(hl_bw_mg_asst:1) b(inf1) i(510) t()) ;// 9 rifle, 1 bren. atrifle. def perk
-("squad_eng_carrier_doc" side(eng) name(squad_hl_bw_carrier_early_irr) d(early_eng_irregular) period(early) year(early) scf(0.85) cd(300) ci(300) g(squad_4) crew1(hl_bw_driver:1) crew2(hl_bw_rifle:1) v1(bren_carrier_boys) c1(hl_bw_sec_com_sgt:1) v2(bren_carrier) c2(hl_bw_detach_com_cpl:1) v3(bren_carrier) c3(hl_bw_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. def perk
-
-
-; // ----- OFFENSIVE -----
-;//t1
-("squad_with1types_doc" side(eng) name(squad_rear_echelon_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(0) ci(60) g(squad_1) c1(rear_echelon_rifle:10) b(inf1) t()) ;// any doc. 10 enf rifles. std perk
-
-;//t2
-("squad_with2types_doc" side(eng) name(squad_rec_mc_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(0) ci(60) g(squad_2_recon) c1(rec_sec_com:1) c2(rec_rifle:6) b(inf1) t())) ;// 7 rifles. recon perk
-("squad_with5types_doc" side(eng) name(squad_rifle_mot_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(mot_sec_com:1) c2(mot_sec_2ic:1) c3(mot_rifle_band:3) c4(mot_mg:1) c5(mot_mg_asst:1) b(inf1) t()) ;// 6 rifle, 1 bren
-("squad_vehicle_with6types_doc" side(eng) name(squad_rifle_mot_mounted_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(90) ci(300) g(squad_2_mot) vehicle(bedford_oyd_boys) c1(driver:1) c2(mot_sec_com:1) c3(mot_sec_2ic:1) c4(mot_rifle_band:3) c5(mot_mg:1) c6(mot_mg_asst:1) b(inf1) t()) ;//  ;// 7 rifle, 1 bren, truck w/ at rifle
-("squad_vehicle_with11types_doc" side(eng) name(squad_r_eng_mot_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(90) ci(300) g(squad_2_mot_alt) vehicle(bedford_oyd) c1(r_eng_sapper:1) c2(r_eng_sec_com:1) c3(r_eng_sec_2ic:1) c4(r_eng_builder:1) c5(r_eng_mine_ap:1) c6(r_eng_mine_at:1) c7(r_eng_sapper:2) c8(r_eng_boys:1) c9(r_eng_boys_asst:1) c10(r_eng_mg:1) c11(r_eng_mg_asst:1) b(inf1) t()) ;// 
-("squad_eng_carrier_doc" side(eng) name(squad_mot_scout_carrier_early_off) d(early_eng_offensive) period(early) year(early) scf(0.85) cd(90) ci(90) g(squad_2_mech) crew1(mot_scout_driver:1) crew2(mot_scout_gunner:1) v1(universal_carrier_mk1_boys) c1(mot_scout_sec_com:1) v2(universal_carrier_mk1_boys) c2(mot_scout_detach_com_cpl:1) v3(universal_carrier_mk1_boys) c3(mot_scout_detach_com_lcpl:1) b(inf1) t()) ;// 3 vehicles w/ 3 rifle each. recon perk
-
-;//t3
-("squad_with5types_doc_i" side(eng) name(squad_gds_rifle_early_off_1) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_sec_com:1) c2(gds_sec_2ic:1) c3(gds_rifle_band:7) c4(gds_mg:1) c5(gds_mg_asst:1) b(inf1) i(511) t()) ;// 10 rifle, 1 bren. std perk
-("squad_with5types_doc_i" side(eng) name(squad_gds_rifle_early_off_2) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_sec_com:1) c2(gds_sec_2ic:1) c3(gds_rifle_band:7) c4(gds_mg:1) c5(gds_mg_asst:1) b(inf1) i(511) t()) ;// 10 rifle, 1 bren. std perk
-("squad_with7types_doc_i" side(eng) name(squad_gds_rifle_early_off_3) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_sec_com:1) c2(gds_sec_2ic:1) c3(gds_rifle_band:5) c4(gds_at_boys:1) c5(gds_at_boys_asst:1) c6(gds_mg:1) c7(gds_mg_asst:1) b(inf1) i(511) t()) ;// 9 rifle, 1 bren. atrifle. std perk
-("squad_with2types_doc" side(eng) name(squad_gds_inf_pio_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_pio_sec_com:1) c2(gds_pio:4) b(inf1) t()) ;//  5 rifles, demo, std perk
-("squad_eng_carrier_doc" side(eng) name(squad_gds_carrier_early_off) d(early_eng_offensive) period(early) year(early) scf(0.85) cd(180) ci(180) g(squad_3) crew1(gds_driver:1) crew2(gds_rifle:1) v1(bren_carrier_boys) c1(gds_sec_com_sgt:1) v2(bren_carrier) c2(gds_detach_com_cpl:1) v3(bren_carrier) c3(gds_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. std perk
-
-;//t4
-;kilt squad
-("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_off_1) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(512) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_off_2) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(512) t()) ;// 10 rifle, 1 bren. def perk
-("squad_with7types_doc_i" side(eng) name(squad_hl_bw_rifle_early_off_3) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:5) c4(hl_bw_at_boys:1) c5(hl_bw_at_boys_asst:1) c6(hl_bw_mg:1) c7(hl_bw_mg_asst:1) b(inf1) i(512) t()) ;// 9 rifle, 1 bren. atrifle. def perk
-("squad_with2types_doc" side(eng) name(squad_hl_bw_inf_pio_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_pio_sec_com:1) c2(hl_bw_pio:4) b(inf1) t()) ;//  5 rifles, demo, std perk
+;("squad_with2types_doc" side(eng) name(squad_mp_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(30) g(squad_1) c1(mp_detach_com:1) c2(mp_rifle:3) b(inf1) t()) ;// def/irr, 1 pistol, 3 rifle. std perk
+;
+;;//t2
+;("squad_with2types_doc" side(eng) name(squad_rec_mc_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(60) g(squad_2_recon) c1(rec_sec_com:1) c2(rec_rifle:6) b(inf1) t())) ;// 7 rifles. recon perk
+;("squad_with5types_doc_i" side(eng) name(squad_rifle_early_def_1) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(504) t()) ;// 10 rifle, 1 bren
+;("squad_with5types_doc_i" side(eng) name(squad_rifle_early_def_2) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(504) t()) ;//  10 rifle, 1 bren
+;("squad_with7types_doc_i" side(eng) name(squad_rifle_early_def_3) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:5) c4(antitank_boys:1) c5(antitank_boys_asst:1) c6(mg:1) c7(mg_asst:1) b(inf1) i(504) t()) ;//  9 rifle, 1 bren, 1 boys
+;("squad_with2types_doc" side(eng) name(squad_inf_pio_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio:4) b(inf1) t()) ;// 5 rifle, w/ demo. std perk
+;("squad_with10types_doc" side(eng) name(squad_r_eng_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(r_eng_sec_com:1) c2(r_eng_sec_2ic:1) c3(r_eng_builder:1) c4(r_eng_mine_ap:1) c5(r_eng_mine_at:1) c6(r_eng_sapper:2) c7(r_eng_boys:1) c8(r_eng_boys_asst:1) c9(r_eng_mg:1) c10(r_eng_mg_asst:1) b(inf1) t()) ;// 11 total. 1 mg, 1 atrifle, 1 ap, 1 at, 1 builder
+;("squad_eng_carrier_doc" side(eng) name(squad_carrier_early_def) d(early_eng_defensive) period(early) year(early) scf(0.85) cd(90) ci(90) g(squad_2_mech) crew1(driver:1) crew2(rifle:1) v1(bren_carrier_boys) c1(sec_com_sgt:1) v2(bren_carrier) c2(detach_com_cpl:1) v3(bren_carrier) c3(detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles w/ 3 rifle each 
+;
+;;//t3
+;("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_def_1) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(505) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_def_2) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(505) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with7types_doc_i" side(eng) name(squad_51hl_rifle_early_def_3) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:5) c4(51hl_at_boys:1) c5(51hl_at_boys_asst:1) c6(51hl_mg:1) c7(51hl_mg_asst:1) b(inf1) i(505) t()) ;// 9 rifle, 1 bren. atrifle. def perk
+;("squad_with3types_doc" side(eng) name(squad_51hl_inf_pio_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_pio_sec_com:1) c2(51hl_pio_builder:1) c3(51hl_pio:3) b(inf1) t()) ;// 5 rifles, demo, builder. def perk
+;("squad_eng_carrier_doc" side(eng) name(squad_51hl_carrier_early_def) d(early_eng_defensive) period(early) year(early) scf(0.85) cd(180) ci(180) g(squad_3) crew1(51hl_driver:1) crew2(51hl_rifle:1) v1(bren_carrier_boys) c1(51hl_sec_com_sgt:1) v2(bren_carrier) c2(51hl_detach_com_cpl:1) v3(bren_carrier) c3(51hl_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. def perk
+;
+;;//t4
+;;kilt squad
+;("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_def_1) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(506) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_def_2) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(506) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with7types_doc_i" side(eng) name(squad_hl_bw_rifle_early_def_3) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:5) c4(hl_bw_at_boys:1) c5(hl_bw_at_boys_asst:1) c6(hl_bw_mg:1) c7(hl_bw_mg_asst:1) b(inf1) i(506) t()) ;// 9 rifle, 1 bren. atrifle. def perk
+;("squad_with3types_doc" side(eng) name(squad_hl_bw_inf_pio_early_def) d(early_eng_defensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_pio_sec_com:1) c2(hl_bw_pio_builder:1) c3(hl_bw_pio:3) b(inf1) t()) ;// 5 rifles, demo, builder. def perk
+;
+;
+;; // ----- IRREGULAR -----
+;;//t1
+;("squad_with2types_doc" side(eng) name(squad_mp_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(30) g(squad_1) c1(mp_detach_com:1) c2(mp_rifle:3) b(inf1) t()) ;// def/irr, 1 pistol, 3 rifle. std perk
+;
+;;//t2
+;("squad_with2types_doc" side(eng) name(squad_rec_mc_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(60) g(squad_2_recon) c1(rec_sec_com:1) c2(rec_rifle:6) b(inf1) t())) ;// 7 rifles. recon perk
+;("squad_eng_rec_scout_doc" side(eng) name(squad_rec_scout_early_irr) d(early_eng_irregular) period(early) year(early) scf(0.85) cd(90) ci(90) g(squad_2_mech) crew1(rec_carrier_driver:1) crew2(rec_carrier_gunner:1) v1(universal_carrier_mk1_boys) c1(rec_troop_com:1) v2(mortar_carrier_mk1) c2(rec_carrier_detach_com_sgt:1) c3(rec_carrier_rifle:1) v3(universal_carrier_mk1_2mg) c4(rec_carrier_detach_com_cpl:1) c5(rec_carrier_rifle:1) b(inf1) t()) ;// 
+;("squad_with5types_doc_i" side(eng) name(squad_rifle_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(507) t()) ;// 10 rifle, 1 bren
+;("squad_with5types_doc_i" side(eng) name(squad_rifle_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:7) c4(mg:1) c5(mg_asst:1) b(inf1) i(507) t()) ;//  10 rifle, 1 bren
+;("squad_with7types_doc_i" side(eng) name(squad_rifle_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(sec_com:1) c2(sec_2ic:1) c3(rifle_band:5) c4(antitank_boys:1) c5(antitank_boys_asst:1) c6(mg:1) c7(mg_asst:1) b(inf1) i(507) t()) ;//  9 rifle, 1 bren, 1 boys
+;("squad_with2types_doc" side(eng) name(squad_inf_pio_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio:4) b(inf1) t()) ;// 5 rifle, w/ demo. std perk
+;("squad_with4types_doc_i" side(eng) name(squad_pio_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio_builder:1) c3(pio_gren:1) c4(pio:7) b(inf1) i(508) t()) ;// std perk. rifle gren. builder
+;("squad_with6types_doc_i" side(eng) name(squad_pio_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio_builder:1) c3(pio_gren:1) c4(pio_band:5) c5(pio_mg:1) c6(pio_mg_asst:1) b(inf1) i(508) t()) ;// std perk. mg. rifle gren. builder
+;("squad_with6types_doc_i" side(eng) name(squad_pio_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(pio_sec_com:1) c2(pio_builder:1) c3(pio_gren:1) c4(pio:5) c5(pio_boys:1) c6(pio_boys_asst:1) b(inf1) i(508) t()) ;// std perk. atrifle. rifle gren. builder
+;
+;;//t3
+;("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(509) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with5types_doc_i" side(eng) name(squad_51hl_rifle_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:7) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(inf1) i(509) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with7types_doc_i" side(eng) name(squad_51hl_rifle_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_sec_com:1) c2(51hl_sec_2ic:1) c3(51hl_rifle_band:5) c4(51hl_at_boys:1) c5(51hl_at_boys_asst:1) c6(51hl_mg:1) c7(51hl_mg_asst:1) b(inf1) i(509) t()) ;// 9 rifle, 1 bren. atrifle. def perk
+;("squad_with3types_doc" side(eng) name(squad_51hl_inf_pio_early_irr) d(early_eng_irregular) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(51hl_pio_sec_com:1) c2(51hl_pio_builder:1) c3(51hl_pio:3) b(inf1) t()) ;// 5 rifles, demo, builder. def per
+;("squad_eng_carrier_doc" side(eng) name(squad_51hl_carrier_early_irr) d(early_eng_irregular) period(early) year(early) scf(0.85) cd(180) ci(180) g(squad_3) crew1(51hl_driver:1) crew2(51hl_rifle:1) v1(bren_carrier_boys) c1(51hl_sec_com_sgt:1) v2(bren_carrier) c2(51hl_detach_com_cpl:1) v3(bren_carrier) c3(51hl_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. def perk
+;
+;;//t4
+;;kilt squad
+;("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_irr_1) d(early_eng_irregular) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(510) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_irr_2) d(early_eng_irregular) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(510) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with7types_doc_i" side(eng) name(squad_hl_bw_rifle_early_irr_3) d(early_eng_irregular) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:5) c4(hl_bw_at_boys:1) c5(hl_bw_at_boys_asst:1) c6(hl_bw_mg:1) c7(hl_bw_mg_asst:1) b(inf1) i(510) t()) ;// 9 rifle, 1 bren. atrifle. def perk
+;("squad_eng_carrier_doc" side(eng) name(squad_hl_bw_carrier_early_irr) d(early_eng_irregular) period(early) year(early) scf(0.85) cd(300) ci(300) g(squad_4) crew1(hl_bw_driver:1) crew2(hl_bw_rifle:1) v1(bren_carrier_boys) c1(hl_bw_sec_com_sgt:1) v2(bren_carrier) c2(hl_bw_detach_com_cpl:1) v3(bren_carrier) c3(hl_bw_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. def perk
+;
+;
+;; // ----- OFFENSIVE -----
+;;//t1
+;("squad_with1types_doc" side(eng) name(squad_rear_echelon_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(0) ci(60) g(squad_1) c1(rear_echelon_rifle:10) b(inf1) t()) ;// any doc. 10 enf rifles. std perk
+;
+;;//t2
+;("squad_with2types_doc" side(eng) name(squad_rec_mc_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(0) ci(60) g(squad_2_recon) c1(rec_sec_com:1) c2(rec_rifle:6) b(inf1) t())) ;// 7 rifles. recon perk
+;("squad_with5types_doc" side(eng) name(squad_rifle_mot_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(0) ci(0) g(squad_2) c1(mot_sec_com:1) c2(mot_sec_2ic:1) c3(mot_rifle_band:3) c4(mot_mg:1) c5(mot_mg_asst:1) b(inf1) t()) ;// 6 rifle, 1 bren
+;("squad_vehicle_with6types_doc" side(eng) name(squad_rifle_mot_mounted_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(90) ci(300) g(squad_2_mot) vehicle(bedford_oyd_boys) c1(driver:1) c2(mot_sec_com:1) c3(mot_sec_2ic:1) c4(mot_rifle_band:3) c5(mot_mg:1) c6(mot_mg_asst:1) b(inf1) t()) ;//  ;// 7 rifle, 1 bren, truck w/ at rifle
+;("squad_vehicle_with11types_doc" side(eng) name(squad_r_eng_mot_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(90) ci(300) g(squad_2_mot_alt) vehicle(bedford_oyd) c1(r_eng_sapper:1) c2(r_eng_sec_com:1) c3(r_eng_sec_2ic:1) c4(r_eng_builder:1) c5(r_eng_mine_ap:1) c6(r_eng_mine_at:1) c7(r_eng_sapper:2) c8(r_eng_boys:1) c9(r_eng_boys_asst:1) c10(r_eng_mg:1) c11(r_eng_mg_asst:1) b(inf1) t()) ;// 
+;("squad_eng_carrier_doc" side(eng) name(squad_mot_scout_carrier_early_off) d(early_eng_offensive) period(early) year(early) scf(0.85) cd(90) ci(90) g(squad_2_mech) crew1(mot_scout_driver:1) crew2(mot_scout_gunner:1) v1(universal_carrier_mk1_boys) c1(mot_scout_sec_com:1) v2(universal_carrier_mk1_boys) c2(mot_scout_detach_com_cpl:1) v3(universal_carrier_mk1_boys) c3(mot_scout_detach_com_lcpl:1) b(inf1) t()) ;// 3 vehicles w/ 3 rifle each. recon perk
+;
+;;//t3
+;("squad_with5types_doc_i" side(eng) name(squad_gds_rifle_early_off_1) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_sec_com:1) c2(gds_sec_2ic:1) c3(gds_rifle_band:7) c4(gds_mg:1) c5(gds_mg_asst:1) b(inf1) i(511) t()) ;// 10 rifle, 1 bren. std perk
+;("squad_with5types_doc_i" side(eng) name(squad_gds_rifle_early_off_2) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_sec_com:1) c2(gds_sec_2ic:1) c3(gds_rifle_band:7) c4(gds_mg:1) c5(gds_mg_asst:1) b(inf1) i(511) t()) ;// 10 rifle, 1 bren. std perk
+;("squad_with7types_doc_i" side(eng) name(squad_gds_rifle_early_off_3) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_sec_com:1) c2(gds_sec_2ic:1) c3(gds_rifle_band:5) c4(gds_at_boys:1) c5(gds_at_boys_asst:1) c6(gds_mg:1) c7(gds_mg_asst:1) b(inf1) i(511) t()) ;// 9 rifle, 1 bren. atrifle. std perk
+;("squad_with2types_doc" side(eng) name(squad_gds_inf_pio_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(180) ci(180) g(squad_3) c1(gds_pio_sec_com:1) c2(gds_pio:4) b(inf1) t()) ;//  5 rifles, demo, std perk
+;("squad_eng_carrier_doc" side(eng) name(squad_gds_carrier_early_off) d(early_eng_offensive) period(early) year(early) scf(0.85) cd(180) ci(180) g(squad_3) crew1(gds_driver:1) crew2(gds_rifle:1) v1(bren_carrier_boys) c1(gds_sec_com_sgt:1) v2(bren_carrier) c2(gds_detach_com_cpl:1) v3(bren_carrier) c3(gds_detach_com_cpl:1) b(inf1) t()) ;// 3 vehicles, 3 rifle each. std perk
+;
+;;//t4
+;;kilt squad
+;("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_off_1) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(512) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with5types_doc_i" side(eng) name(squad_hl_bw_rifle_early_off_2) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:7) c4(hl_bw_mg:1) c5(hl_bw_mg_asst:1) b(inf1) i(512) t()) ;// 10 rifle, 1 bren. def perk
+;("squad_with7types_doc_i" side(eng) name(squad_hl_bw_rifle_early_off_3) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_sec_com:1) c2(hl_bw_sec_2ic:1) c3(hl_bw_rifle_band:5) c4(hl_bw_at_boys:1) c5(hl_bw_at_boys_asst:1) c6(hl_bw_mg:1) c7(hl_bw_mg_asst:1) b(inf1) i(512) t()) ;// 9 rifle, 1 bren. atrifle. def perk
+;("squad_with2types_doc" side(eng) name(squad_hl_bw_inf_pio_early_off) d(early_eng_offensive) period(early) year(early) scf(1) cd(300) ci(300) g(squad_4) c1(hl_bw_pio_sec_com:1) c2(hl_bw_pio:4) b(inf1) t()) ;//  5 rifles, demo, std perk
 
 
 ;_________________________________________________
@@ -484,6 +484,7 @@
 {"inf_crate_eng"
 	("vehicle"  period(early) year(early) cd(0) ci(30) t(supply cannon) side(eng) crew(rifle:2) g(supplybox) b(inf2) cw(1) cp(0)
 	cost(50)) {round_multiple 1.0}
+	{doctrine early_eng_allround}
 }
 
 ;AUTOMATIC WEAPONRY
