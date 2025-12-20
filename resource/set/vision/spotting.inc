@@ -28,15 +28,15 @@
 
 	{visible (* 100 %r)}				;// once human is spotted, the distance the human will remain spotted until Line Of Sight is broken. When placed outside of a specific stance block, it becomes a master value for all stances.
 
-	{cover (* 100 %r)					;// default value incase condition isn't defined below. Important that {cover} block comes before non-cover {stand}, {squat}, and {crawl} blocks, else cover values will be overwritten. 
-		{stand (* 100 %r)				;// "stand" stance - in cover
-			{stealth (* 100 %r)}		;// "stand" stance - in cover and human has stealth skill
+	{cover (* 80 %r)					;// default value incase condition isn't defined below. Important that {cover} block comes before non-cover {stand}, {squat}, and {crawl} blocks, else cover values will be overwritten. 
+		{stand (* 80 %r)				;// "stand" stance - in cover
+			{stealth (* 40 %r)}		;// "stand" stance - in cover and human has stealth skill
 		}
-		{squat (* 100 %r)				;// "squat" stance - in cover
-			{stealth (* 100 %r)}		;// "squat" stance - in cover and human has stealth skill
+		{squat (* 60 %r)				;// "squat" stance - in cover
+			{stealth (* 30 %r)}		;// "squat" stance - in cover and human has stealth skill
 		}
-		{crawl (* 50 %r)				;// "crawl" stance - in cover
-			{stealth (* 25 %r)}		;// "crawl" stance - in cover and human has stealth skill
+		{crawl (* 40 %r)				;// "crawl" stance - in cover
+			{stealth (* 20 %r)}		;// "crawl" stance - in cover and human has stealth skill
 		}
 	}
 
@@ -47,17 +47,17 @@
 		}
 	}
 
-	{squat (* 100 %r)					;// "squat" stance - moving. Also serves as default if other conditions are not defined in this block. (doesn't apply, squat motion doesn't exist in Gem2)
-		{stealth (* 50 %r)}			;// "squat" stance - moving and human has stealth skill (doesn't apply, squat motion doesn't exist in Gem2)
+	{squat (* 90 %r)					;// "squat" stance - moving. Also serves as default if other conditions are not defined in this block. (doesn't apply, squat motion doesn't exist in Gem2)
+		{stealth (* 70 %r)}			;// "squat" stance - moving and human has stealth skill (doesn't apply, squat motion doesn't exist in Gem2)
 		{still (* 100 %r)				;// "squat" stance - still / not moving. kneeling.
 			{stealth (* 80 %r)}		;// "squat" stance - still / not moving and human has stealth skill
 		}
 	}
 
-	{crawl (* 50 %r)					;// "crawl" stance - moving. Also serves as default if other conditions are not defined in this block.
-		{stealth (* 30 %r)}			;// "crawl" stance - moving and human has stealth skill
-		{still (* 50 %r)				;// "crawl" stance - still / not moving. kneeling.
-			{stealth (* 25 %r)}		;// "crawl" stance - still / not moving. kneeling and human has stealth skill
+	{crawl (* 80 %r)					;// "crawl" stance - moving. Also serves as default if other conditions are not defined in this block.
+		{stealth (* 60 %r)}			;// "crawl" stance - moving and human has stealth skill
+		{still (* 70 %r)				;// "crawl" stance - still / not moving. kneeling.
+			{stealth (* 35 %r)}		;// "crawl" stance - still / not moving. kneeling and human has stealth skill
 		}
 	}
 )
@@ -230,8 +230,8 @@
 (define "spotting"
 	("radius" r(%r))				;// vision = radius * (one) applicable "rules" situation * (one) applicable "mods" situation
 	{rules							;// no multiplication within rules blocks
-		{human 100					;// fallback value if no other subordinated case is applicable
-			{firing (/ 150 %r)		;// To achieve a constant distance of firing through noise, it divides by the radius multiplier. 1st Green line in v_visor
+		{human 165					;// fallback value if no other subordinated case is applicable
+			{firing (/ 272 %r)		;// To achieve a constant distance of firing through noise, it divides by the radius multiplier. 1st Green line in v_visor
 				("firing" r(%r))	;// Preset from above (a modifier picked here is final, the stance for example will not be considered anymore)
 			}
 			("spot_human" r(1))			;// Preset from above
@@ -253,8 +253,8 @@
 (define "spotting2"
 	("radius" r(%r))				;// vision = radius * (one) applicable "rules" situation * (one) applicable "mods" situation
 	{rules							;// no multiplication within rules blocks
-		{human (/ 100 %r)			;// fallback value if no other subordinated case is applicable
-			{firing (/ 150 %r)		;// To achieve a constant distance of firing through noise, it divides by the radius multiplier. 1st Green line in v_visor
+		{human (/ 150 %r)			;// fallback value if no other subordinated case is applicable
+			{firing (/ 202.5 %r)		;// To achieve a constant distance of firing through noise, it divides by the radius multiplier. 1st Green line in v_visor
 				("firing" r(%r_human))	;// Preset from above (a modifier picked here is final, the stance for example will not be considered anymore)
 			}
 			("spot_human" r(%r_human))	;// Preset from above

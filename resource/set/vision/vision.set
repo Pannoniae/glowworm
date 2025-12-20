@@ -1,8 +1,8 @@
 {visions
 	(define "radius"
-		(mod "mp" {radius (* 0.75 %r)})		; // This value changes the global vision ranges of the game.
+		(mod "mp" {radius (* 1.00 %r)})		; // This value changes the global vision ranges of the game.
 		; decrease it!
-		(mod not "mp" {radius (* 0.75 %r)})  ; // This value changes the global vision ranges of the game.
+		(mod not "mp" {radius (* 1.00 %r)})  ; // This value changes the global vision ranges of the game.
 	)
 	(include "spotting.inc")
 	(include "hearing.inc")

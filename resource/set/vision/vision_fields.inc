@@ -29,35 +29,35 @@
 	{uncover 70}
 	{h_fov 120}
 	{v_fov 200}
-	("spotting" r(1.1))
+	("spotting" r(1.0))
 }
 
 {"human_recon"							; // Soldiers with dedicated best vision (recon soldiers)
-	{uncover 70}
+	{uncover 20}
 	{h_fov 120}
 	{v_fov 200}
-	("spotting" r(1.3))
+	("spotting" r(1.25))
 }
 
 {"rifle_telescope"						; // Primary vision for sniper scopes
-	{uncover 500}
+	{uncover 7}
 	{h_fov 360}
 	{v_fov 120}
-	("glass" r(500))
+	("glass" r(15))
 }
 
 {"field_glass"							; // Primary vision for binoculars
-	{uncover 500}
+	{uncover 5}
 	{h_fov 360}
 	{v_fov 120}
-	("glass" r(500))
+	("glass" r(30))
 }
 
 {"soldier_focused"						; // Secondary vision when soldier is looking through scope or binoculars
 	{uncover 30}
 	{h_fov 30}
-	{v_fov 90}
-	("spotting" r(1))					; // Disabled secondary vision when looking through scopes or binoculars
+	{v_fov 50}
+	("spotting" r(1.0))					; // Disabled secondary vision when looking through scopes or binoculars
 	{wide 2}
 }
 
@@ -66,56 +66,56 @@
 ;/*=============== Cannon Begin ===============*/
 
 {"cannon_main"							; // Standard main gun / gunner vision for cannons
-	{uncover 30}
-	{h_fov 15}
+	{uncover 25}
+	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(50) can_vis(50) can_fire(70))
 }
 
 {"cannon_mortar"						; // All mortars
-	{uncover 25}
+	{uncover 30}
 	{h_fov 90}
 	{v_fov 170}
 	("spotting" r(1))
 }
 
 {"cannon_range_200"						; // Gunner Vision - Gun range 200m or less (direct fire only)
-	{uncover 25}
+	{uncover 30}
 	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(50) can_vis(50) can_fire(70))
 }
 
 {"cannon_range_210"						; // Gunner Vision - Gun range 210m (direct fire only)
-	{uncover 25}
+	{uncover 30}
 	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(60) can_vis(60) can_fire(80))
 }
 
 {"cannon_range_220"						; // Gunner Vision - Gun range 220m (direct fire only)
-	{uncover 25}
+	{uncover 30}
 	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(70) can_vis(70) can_fire(90))
 }
 
 {"cannon_range_230"						; // Gunner Vision - Gun range 230m (direct fire only)
-	{uncover 25}
+	{uncover 30}
 	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(80) can_vis(80) can_fire(100))
 }
 
 {"cannon_range_240"						; // Gunner Vision - Gun range 240m (direct fire only)
-	{uncover 25}
+	{uncover 30}
 	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(90) can_vis(90) can_fire(110))
 }
 
 {"cannon_range_250"						; // Gunner Vision - Gun range 250m (direct fire only)
-	{uncover 25}
+	{uncover 30}
 	{h_fov 30}
 	{v_fov 170}
 	("spotting2" r(1.5) r_human(0.66) veh_vis(100) can_vis(100) can_fire(120))
@@ -129,14 +129,14 @@
 	{uncover 30}
 	{h_fov 50}
 	{v_fov 140}
-	("spotting" r(1))
+	("spotting" r(1.0))
 }
 
 {"vehicle_top_mgun"						; // Top mounted Machine gunners vision (jeeps, halftracks, etc)
 	{uncover 30}
 	{h_fov 90}
 	{v_fov 140}
-	("spotting" r(1))
+	("spotting" r(1.0))
 }
 
 {"vehicle_top_turret"					; // Vision for cars with closed top / turret gunner
@@ -157,21 +157,21 @@
     {uncover 50}
     {h_fov 30}
     {v_fov 140}
-    ("spotting" r(1))
+    ("spotting" r(1.0))
 }
 
 {"moto_crew"
     {uncover 50}
     {h_fov 90}
     {v_fov 60}
-    ("spotting" r(1))
+    ("spotting" r(1.0))
 }
 
 {"moto_around"
     {uncover 50}
     {h_fov 360}
     {v_fov 60}
-    ("spotting" r(1))
+    ("spotting" r(1.0))
 }
 
 ;/*=============== Vehicle End ===============*/
