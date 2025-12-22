@@ -57,15 +57,15 @@
 		{Damage
 			{"head"		3.0}
 			{"face"		3.0}
-			{"body"		2.0}
-			{"hand1r"	1.5}
-			{"hand2r"	0.8}
-			{"hand1l"	1.5}
-			{"hand2l"	0.8}
-			{"foot1r"	1.5}
-			{"foot2r"	0.8}
-			{"foot1l"	1.5}
-			{"foot2l"	0.8}
+			{"body"		1.0}
+			{"hand1r"	0.9}
+			{"hand2r"	0.7}
+			{"hand1l"	0.9}
+			{"hand2l"	0.7}
+			{"foot1r"	0.9}
+			{"foot2r"	0.7}
+			{"foot1l"	0.9}
+			{"foot2l"	0.7}
 		}
 		{DamageBlast	1.2}
 		{DamageTPC
@@ -254,9 +254,11 @@
 {targetSelector "human"}
 
 {brain "human"
-	{const "bomb/detect_explosives"	15}		;// detect explosives inside 7 meter radius
-	{const "bomb/detect_grenades"	15}		;// detect grenades inside 5 meter radius
+	{const "bomb/detect_explosives"	10}		;// detect explosives inside 7 meter radius
+	{const "bomb/detect_grenades"	7}		;// detect grenades inside 5 meter radius
 	{const "bomb/danger_zone"		5}		;// hide if danger is more than "x" meters away, otherwise run away
+	{const "bomb/danger_zone_jump" 	7}		;jump away if danger is inside 2 - 4 meter radius
+	{const "bomb/danger_zone_hide" 	10}		;hide if danger is inside 4 - 6 meter radius
 	{const "fight/distance"			2.5} 	;// was at 1.5
 	{const "weapon/change_time"		3}		;// disable ai weapon switch for 20 seconds
 
