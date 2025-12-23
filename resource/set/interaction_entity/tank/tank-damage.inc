@@ -536,6 +536,27 @@
 ;/*=========== Blast Hit Probability Begin ===========*/
 
 {on blast_hit										;// blast-wave hits any part of entity
+	{if not able "exploded"
+		{if min_energy 24
+			{if not "super_heavy_tank"
+				{call "explosion"}
+			}
+		else min_energy 19
+			{if not "heavy_tank"
+				{if not "super_heavy_tank"
+					{call "explosion"}
+				}
+			}
+		else min_energy 15
+			{if not "super_heavy_tank"
+				{if not "heavy_tank"
+					{if not "medium_tank"
+						{call "explosion"}
+					}
+				}
+			}
+		}
+	}
 }
 
 ;/*=========== Blast Hit Probability End ===========*/

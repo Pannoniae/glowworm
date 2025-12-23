@@ -89,56 +89,56 @@
 		{unitMode "44-45"}
 		{specMode "cp_80"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:80,900:160,1500:220))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:180,900:230,1500:320))
 	}
 	{"c:custom_100_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_100"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:120,900:200,1500:250))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:120,900:200,1500:250))
 	}
 	{"c:custom_120_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_120"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:120,900:200,1500:260))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:120,900:200,1500:260))
 	}
 	{"c:custom_140_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_140"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:140,900:200,1500:280))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:140,900:200,1500:280))
 	}
 	{"c:custom_160_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_160"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:160,900:210,1500:300))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:160,900:210,1500:300))
 	}
 	{"c:custom_180_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_180"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:180,900:230,1500:320))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:180,900:230,1500:320))
 	}
 	{"c:custom_200_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_200"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:200,900:250,1500:340))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:200,900:250,1500:340))
 	}
 	{"c:custom_250_44-45"
 		{gameMode "custom"}
 		{unitMode "44-45"}
 		{specMode "cp_250"}
 		{apply "only_roster_44-45"}
-		("custom_all"			start(200) finish(8000) doctrine(1) cp(0:250,900:300,1500:360))
+		("custom_all"			start(200) finish(10000) doctrine(1) cp(0:250,900:300,1500:360))
 	}
 	
 	; --- 46 ---
@@ -147,7 +147,7 @@
 		{unitMode "46"}
 		{specMode "all_normal"}
 		{apply "only_roster_46"}
-		("standard_all_46"			start(200) finish(8000) doctrine(1) cp(0:160,900:210,1500:300))
+		("standard_all_46"			start(200) finish(10000) doctrine(1) cp(0:160,900:210,1500:300))
 		{ranked}
 	}
 ;------------------------------------------------------------------------------------------------------------	
@@ -157,56 +157,56 @@
 		{unitMode "46"}
 		{specMode "cp_80"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:80,900:160,1500:220))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:180,900:230,1500:320))
 	}
 	{"c:custom_100_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_100"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:120,900:200,1500:250))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:120,900:200,1500:250))
 	}
 	{"c:custom_120_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_120"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:120,900:200,1500:260))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:120,900:200,1500:260))
 	}
 	{"c:custom_140_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_140"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:140,900:200,1500:280))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:140,900:200,1500:280))
 	}
 	{"c:custom_160_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_160"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:160,900:210,1500:300))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:160,900:210,1500:300))
 	}
 	{"c:custom_180_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_180"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:180,900:230,1500:320))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:180,900:230,1500:320))
 	}
 	{"c:custom_200_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_200"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:200,900:250,1500:340))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:200,900:250,1500:340))
 	}
 	{"c:custom_250_46"
 		{gameMode "custom"}
 		{unitMode "46"}
 		{specMode "cp_250"}
 		{apply "only_roster_46"}
-		("custom_all_46"			start(200) finish(8000) doctrine(1) cp(0:250,900:300,1500:360))
+		("custom_all_46"			start(200) finish(10000) doctrine(1) cp(0:250,900:300,1500:360))
 	}
 	
 ;------------------------------------------------------------------------------------------------------------
