@@ -877,14 +877,16 @@
 			("items_light_eng")
 			("items_light_usa")
 			("items_light_fin")
+			("items_light_fra")
 			("items_heavy_generic")
 			("items_heavy_ger")
 			("items_heavy_rus")
-			("items_light_fra")
 			("items_heavy_generic")
 			("items_heavy_fra")
-			("items_heavy_usa")
+			
 			("items_heavy_eng")
+			("items_heavy_fin")
+			("items_heavy_usa")
 		}
 		{radius				15}		;// resupply radius in meter
 		{resupplyPeriod		2}		;// resupply period in seconds
@@ -981,8 +983,8 @@
 			("items_light_rus")
 			("items_light_eng")
 			("items_light_usa")
-			("items_light_fra")
 			("items_light_fin")
+			("items_light_fra")
 		}
 		{radius				15}		;// resupply radius in meter
 		{resupplyPeriod 	5}		;// resupply period in seconds
@@ -1008,12 +1010,14 @@
 			("items_light_usa")
 			("items_light_fra")
 			("items_light_fin")
+			("items_light_fra")
 			("items_heavy_generic")
 			("items_heavy_ger")
 			("items_heavy_rus")
-			("items_heavy_usa")	
+
 			("items_heavy_eng")
 			("items_heavy_fin")
+			("items_heavy_usa")
 		}
 		{radius 			15}		;// resupply radius in meter
 		{resupplyPeriod 	10}		;// resupply period in seconds
@@ -1071,6 +1075,7 @@
 			("items_light_usa")
 			("items_light_fra")
 			("items_light_fin")
+			("items_light_fra")
 			("items_heavy_generic")
 			("items_heavy_ger")
 			("items_heavy_rus")
@@ -1173,7 +1178,9 @@
 			("items_heavy_generic")
 			("items_heavy_ger")
 			("items_heavy_rus")
-			("items_heavy_usa")	
+			("items_heavy_eng")
+			("items_heavy_fin")
+			("items_heavy_usa")
 		}
 		{radius 			15}			;// resupply radius in meter
 		{resupplyPeriod 	2}			;// resupply period in seconds
