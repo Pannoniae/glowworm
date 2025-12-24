@@ -29,16 +29,27 @@
 		{"fortifications" "foxhole_big"}
 		{"fortifications" "mortar_pit"}
 		{"fortifications" "tank_cover"}
-
-		{"fortifications" "ft_embankment"}
-		{"fortifications" "ft_pillbox"}
-		{"fortifications" "ft_tower"}
-		{"fortifications" "ft_dot"}
 		
-		{"fortifications" "heavy_mg_mg34"}
-		{"fortifications" "heavy_mg_maxim"}
-		{"fortifications" "heavy_mg_maxim_m1910_30"}
-		{"fortifications" "heavy_mg_m1917_30cal"}
+		;new added for test
+		{"fortifications" "log_wall"}
+		{"fortifications" "dragons_teeth"}
+		{"fortifications" "observation_tower"}
+		{"fortifications" "dirt_pillbox"}
+		
+		;{"fortifications" "fin_pillbox"} 
+		;{"fortifications" "coastal_bunker"}
+		;{"fortifications" "medic_tent"}
+		;{"fortifications" "observation_tower"} 
+
+		;{"fortifications" "ft_embankment"}
+		;{"fortifications" "ft_pillbox"}
+		;{"fortifications" "ft_tower"}
+		;{"fortifications" "ft_dot"}
+		
+		;{"fortifications" "heavy_mg_mg34"}
+		;{"fortifications" "heavy_mg_maxim"}
+		;{"fortifications" "heavy_mg_maxim_m1910_30"}
+		;{"fortifications" "heavy_mg_m1917_30cal"}
 	}
 	{"resources" "1000%"}
 	{"resources_regeneration" "0%"}
