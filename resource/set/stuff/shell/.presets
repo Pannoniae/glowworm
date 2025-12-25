@@ -87,17 +87,4 @@
 	}
 )
 
-(define "shrapnel"
-	; anti-tank
-	{damage blastwave
-		{energy (* %0 1.4)}
-		{area 0.7 1.3}
-	}
-	; anti-personel
-	{damage add blastwave
-		{energy (* %0 1)}
-		{area %0 (+ %0 4)}
-	}
-)
-
 ;/*=========== Blast Damage End ===========*/

@@ -20,9 +20,6 @@
 									{burn fx "smoke_after_pen" time 5 fake}
 								else stuff "rocketlauncher"
 									{burn fx "smoke_after_pen" time 5 fake}
-								else stuff "sr"
-									{burn fx "smoke_after_pen" time 5 fake}
-								}
 								{if component "body"
 									{if stuff "shell"
 										{view start "smoke_after_pen_hatch"}
@@ -34,12 +31,6 @@
 										{delay 7 2
 											{view pause "smoke_after_pen_hatch"}
 										}
-									else stuff "sr"
-										{view start "smoke_after_pen_hatch"}
-										{delay 7 2
-											{view pause "smoke_after_pen_hatch"}
-										}
-									}
 								else component "turret"
 									{if stuff "shell"
 										{view start "smoke_after_pen_hatch"}
@@ -51,12 +42,6 @@
 										{delay 7 2
 											{view pause "smoke_after_pen_hatch"}
 										}
-									else stuff "sr"
-										{view start "smoke_after_pen_hatch"}
-										{delay 7 2
-											{view pause "smoke_after_pen_hatch"}
-										}
-									}
 								}
 								{start_sound "hit/steel/penetrate/%pen_sound"}
 								{start_sound "hit/steel/penetrate/bkg/%pen_sound"}
@@ -491,7 +476,7 @@
 		{if stuff "pierce"
 			{if not stuff "auto"
 				{if not stuff "heat_shell"
-					{if not stuff "sr"
+					
 						{if stuff "shell %size"
 							{delay 0.01
 								{if not tagged "pen_fx"
@@ -500,7 +485,7 @@
 								}
 							}
 						}
-					}
+					
 				}
 			}
 		}

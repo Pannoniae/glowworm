@@ -39,7 +39,6 @@
 	{parameters "he2"		("global velocity" gv(%he))}
 	{parameters "sm"		("global velocity" gv(%he))}
 	{parameters "wp"		("global velocity" gv(%he))}
-	{parameters "sr"		("global velocity" gv(%he))}
 	{parameters "can"		("global velocity" gv(%he))}
 
 	{parameters "heat"		("global velocity" gv(%heat))}
@@ -148,7 +147,6 @@
 	{parameters "heata" 	{minimumDamageModifier (* 1.25 %damage)}}
 	{parameters "heatb" 	{minimumDamageModifier (* 1.25 %damage)}}
 	{parameters "heatc" 	{minimumDamageModifier (* 1.25 %damage)}}
-	{parameters "sr" 		{minimumDamageModifier (* 1.25 %damage)}}
 	;// HE, WP, SM not included as they have no penetration power modelled.
 )
 
@@ -283,11 +281,6 @@
 	{parameters "he"
 		{spreading
 			{radiusTable {0 0} {125 (* %he125 (* 0.5 (* %r2 %r0)))} {250 (* 1.85 (* %r2 %r0))} {(- %range_he 0.01) (* %rmax %r0)} {(+ %range_he 1) 60}} ; // Anti-farshoot, accuracy goes haywire past max range
-		}
-	}
-	{parameters "sr"
-		{spreading
-			{radiusTable {0 0} {125 (* %he125 (* 0.5 (* %r2 %r0)))} {250 (* 1.85 (* %r2 %r0))} {(- %range_he 0.1) (* %rmax %r0)} {(+ %range_he 1) 60}} ; // Anti-farshoot, accuracy goes haywire past max range
 		}
 	}
 	{parameters "he2"
@@ -512,13 +505,6 @@
 		{FalloffMeter %range_he}
 		{FalloffStrength %falloff}
 	}
-	{parameters "sr"
-		{spreading
-			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
-		}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
-	}
 	{parameters "sm"
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
@@ -717,23 +703,6 @@
 	;
 	;
 	{parameters "he"
-		{spreading
-			{radiusTable
-				{0 0}
-				{50 (* %he50 (* %r1 %r0))}
-				{100 (* %he100 (* %r1 %r0))}
-				{140 (* %he140 (* %r1 %r0))}
-				{ (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))}
-				{(+ %range_he 10) (* 1.5 (* %r1i %r0i))}
-				{(- %range_hei 0.01) (* %rmax %r0i)}
-				{(+ %range_hei 1) 60}
-			}
-		}
-		{range %range_hei %range_hei}
-		{FalloffMeter %range_hei}
-		{FalloffStrength %falloff}
-	}
-	{parameters "sr"
 		{spreading
 			{radiusTable
 				{0 0}
@@ -2825,9 +2794,6 @@
 	{parameters "aphe"
 		("ap_105_slope_multiplier")
 	}
-	{parameters "sr"
-		("ap_105_slope_multiplier")
-	}
 	{parameters "apc"
 		("apc_90_slope_multiplier")
 	}
@@ -2918,9 +2884,6 @@
 	{parameters "aphe"
 		("ap_75_slope_multiplier")
 	}
-	{parameters "sr"
-		("ap_75_slope_multiplier")
-	}
 	{parameters "apbc"
 		("apbc_76_slope_multiplier")
 	}
@@ -2978,9 +2941,6 @@
 	{parameters "aphe"
 		("ap_122_slope_multiplier")
 	}
-	{parameters "sr"
-		("ap_122_slope_multiplier")
-	}
 	{parameters "aphebc"
 		("apbc_122_slope_multiplier")
 	}
@@ -2997,9 +2957,6 @@
 	}
 	{parameters "heat"
 		("heat_slope_multiplier")
-	}
-	{parameters "sr"
-		("ap_152_slope_multiplier")
 	}
 )
 ;//---CANISTER SHOT---//
