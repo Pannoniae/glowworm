@@ -13,11 +13,8 @@
 	{range 330 330} ; // 8.9km
 
 	("reload time" seconds(20))
-	("armor health custom" shell(sr) damage(320) velocity(190) filler(660))
 	("velocity m/s" ap(1) apcr(1) he(190) heat(1)) ; // Real HE 360m/s
 
-	; Shrapnel
-	("penetration_medium" shell(sr) range(330) a(37) b(31) c(29) d(26) e(22)) ; Pen data for shrapnel shell 
 
 	("accuracy_indirect"   ; // Applies logic for accuracy of indirect weapons over 200m
 		r1(1.20) 				; // Accuracy radius for direct-fire munitions
