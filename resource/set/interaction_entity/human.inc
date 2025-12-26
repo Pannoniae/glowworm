@@ -135,7 +135,8 @@
 	)
 
 	(define "human_health"
-		{health_damage_count (* 1.429 %c)
+		;{health_damage_count (* 1.429 %c)
+		{health_damage_count (* 1.0 %c)
 			{effects "" "hit" "damage" "die" "die"}
 		}
 	)
