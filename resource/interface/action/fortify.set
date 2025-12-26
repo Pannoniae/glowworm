@@ -185,19 +185,61 @@
 ("entrenchment_rotate"		name(foxhole)			entity(soldier_foxhole)		animation(stand_dig_trench)			time(30)	rotation(-90.0)	spacing(100) cost(1)	item(foxhole)	restrictions("bridge bridge_wood rock shallow_water ice water"))
 ;("entrenchment_rotate"		name(mg_foxhole)		entity(mg_foxhole)			animation(stand_dig_trench)			time(60)	rotation(-90.0)	spacing(180) cost(15)	item(trench)	restrictions("bridge bridge_wood rock shallow_water ice water"))
 ("entrenchment_rotate"		name(foxhole_big)		entity(trench_engineer)		animation(dig_pickaxe_01)			time(90)	rotation(180.0)	spacing(180) cost(20)	item(trench)	restrictions("bridge bridge_wood rock shallow_water ice water"))
+
 ("entrenchment_rotate"		name(mortar_pit)		entity(trench_dirt_mortar_engineer)	animation(dig_pickaxe_01)	time(90)	rotation(90.0)	spacing(180) cost(40)	item(trench)	restrictions("bridge bridge_wood rock shallow_water ice water"))
 ("entrenchment_rotate"		name(tank_cover)		entity(tank_cover)			animation(dig_pickaxe_01)			time(120)	rotation(-90.0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood rock shallow_water ice water"))
 
 ; finland 
 ("entrenchment_rotate"		name(fin_bunker)		entity(45mm_pillbox)		animation(stand_dig_01)				time(120)	rotation(-90.0)	spacing(180) cost(50)	item(engineering_fin)	restrictions("bridge bridge_wood rock shallow_water ice water"))
-("entrenchment_rotate_expendable" name(fin_coastal_gun)	entity(75mm_pillbox_stage1)	animation(stand_dig_01)			time(120)	rotation(180.0)	spacing(180) cost(100)	item(engineering_fin)	restrictions("bridge bridge_wood rock shallow_water ice water"))
+("entrenchment_rotate_expendable" name(fin_coastal_gun)	entity(75mm_pillbox_stage1)	animation(stand_dig_01)			time(120)	rotation(180.0)	spacing(180) cost(50)	item(engineering_fin)	restrictions("bridge bridge_wood rock shallow_water ice water"))
 
 ; medic rally
-("building_expendable"		name(medic_rally)		entity(medic_rally)			animation(squat_construct_sandbag)	time(30)	rotation(0.0)	spacing(100) cost(1)	item(tent_kit)	restrictions("shallow_water water"))
+("building_expendable"		name(medic_rally)		entity(medic_rally)			animation(squat_construct_sandbag)	time(30)	rotation(0.0)	spacing(100) cost(20)	item(tent_kit)	restrictions("shallow_water water"))
 
+;hedgehog
+("fortification_draggable"	name(hedgehog)			entity(hedgehog_service)	animation(squat_repair_1)			time(20)	rotation(0.0)	spacing(3.15)	cost(5))
+
+;barbwire
+("fortification_draggable"	name(barbwire)			entity(barbwire)			animation(squat_repair_1)			time(5)		rotation(0.0)	spacing(1.4)	cost(2))
+
+;OLD GOH SANDBAGS, LOW AND TALL SANDBAG WALL
 ;barricade
 ;("cheap_sandbag"	name(barricade_sq)		entity(barricade_sq)		animation(squat_construct_sandbag)	time(20)	rotation(0.0)	spacing(1.8))
 ;("cheap_sandbag"	name(barricade)			entity(barricade)			animation(squat_construct_sandbag)	time(20)	rotation(0.0)	spacing(2.1))
+
+
+
+;EXPERIMENTAL FOR MP
+;finnish dlc bunkers available to all
+("entrenchment_rotate"		name(fin_pillbox)		entity(45mm_pillbox)		animation(stand_dig_01)				time(180)	rotation(-90.0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood shallow_water ice water"))
+("entrenchment_rotate" 		name(coastal_bunker)	entity(75mm_pillbox_stage2)	animation(stand_dig_01)			time(180)	rotation(180.0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood shallow_water ice water"))
+
+;medic rally available to all
+("entrenchment_rotate"		name(medic_tent)		entity(medic_tent)			animation(squat_construct_sandbag)	time(30)	rotation(0.0)	spacing(100) cost(50)	item(trench)	restrictions("shallow_water water"))
+
+;adding observation tower
+("entrenchment_rotate"		name(observation_tower)		entity(watch_tower)			animation(squat_construct_sandbag)	time(180)	rotation(0.0)	spacing(100) cost(50)	item(trench)	restrictions("shallow_water water"))
+
+;adding pillbox (DO NOT USE, kinda shit)
+("entrenchment_rotate"		name(pillbox)		entity(pillbox)		animation(stand_dig_01)				time(180)	rotation(0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood shallow_water ice water"))
+("entrenchment_rotate"		name(pillbox02)		entity(pillbox)		animation(stand_dig_01)				time(180)	rotation(0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood shallow_water ice water"))
+
+;adding casemate
+("entrenchment_rotate"		name(round_pillbox)		entity(casemate)		animation(stand_dig_01)				time(180)	rotation(0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood shallow_water ice water"))
+
+;adding dirt pillbox
+("entrenchment_rotate"		name(dirt_pillbox)		entity(earth_pillbox)		animation(stand_dig_01)				time(180)	rotation(0)	spacing(180) cost(50)	item(trench)	restrictions("bridge bridge_wood sand shallow_water ice water"))
+
+;adding log barrier
+("entrenchment_rotate"		name(log_wall)		entity(log_barrier)		animation(squat_construct_sandbag)				time(90)	rotation(0)	spacing(180) cost(30)	item(trench)	restrictions("shallow_water water"))
+
+;adding large sandbag walls
+("entrenchment_rotate"		name(sandbag_wall_curved)		entity(sandbag_framed_curved)		animation(squat_construct_sandbag)				time(90)	rotation(0)	spacing(180) cost(15)	item(trench)	restrictions("shallow_water water"))
+("entrenchment_rotate"		name(sandbag_wall_straight)		entity(sandbag_framed_straight)		animation(squat_construct_sandbag)				time(90)	rotation(0)	spacing(180) cost(15)	item(trench)	restrictions("shallow_water water"))
+
+;adding dragons teeth
+("entrenchment_rotate"		name(dragons_teeth)		entity(omaha_dot04)		animation(squat_construct_sandbag)				time(30)	rotation(0)	spacing(10) cost(5)	item(trench)	restrictions("shallow_water ice water"))
+
 
 {action "barricade"
 	{cursor "barricade"}
@@ -228,13 +270,6 @@
 		{fsm_request nocheck "hold-nothing"}
 	}
 }
-
-
-;hedgehog
-("fortification_draggable"	name(hedgehog)			entity(hedgehog_service)	animation(squat_repair_1)			time(20)	rotation(0.0)	spacing(3.15)	cost(5))
-
-;barbwire
-("fortification_draggable"	name(barbwire)			entity(barbwire)			animation(squat_repair_1)			time(5)		rotation(0.0)	spacing(1.4)	cost(2))
 
 ;conquest
 ("fortification_mp"			name(heavy_mg_mg34)				entity(heavy_mg_mg34)			time(30)	rotation(-90.0) restrictions("water"))
