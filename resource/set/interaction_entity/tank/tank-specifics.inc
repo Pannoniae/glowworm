@@ -2913,6 +2913,7 @@
 		}
 	}
 }
+
 {"bt42 tank"
 	("bt_sound")
 	{on "add_weapon_sound" overload
@@ -2925,6 +2926,7 @@
 	{on "add_weapon_sound" overload
 		("Autocannon_s2")
 	}
+	{on "zenite_terrain_fx" overload} ; // overwrites and stops dust fx on ground from firing main gun
 }
 {"stug3g_fin_early tank"
 	{on "add_weapon_sound" overload

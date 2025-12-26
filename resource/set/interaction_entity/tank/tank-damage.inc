@@ -20,6 +20,7 @@
 									{burn fx "smoke_after_pen" time 5 fake}
 								else stuff "rocketlauncher"
 									{burn fx "smoke_after_pen" time 5 fake}
+								}
 								{if component "body"
 									{if stuff "shell"
 										{view start "smoke_after_pen_hatch"}
@@ -31,6 +32,7 @@
 										{delay 7 2
 											{view pause "smoke_after_pen_hatch"}
 										}
+									}
 								else component "turret"
 									{if stuff "shell"
 										{view start "smoke_after_pen_hatch"}
@@ -42,6 +44,7 @@
 										{delay 7 2
 											{view pause "smoke_after_pen_hatch"}
 										}
+									}
 								}
 								{start_sound "hit/steel/penetrate/%pen_sound"}
 								{start_sound "hit/steel/penetrate/bkg/%pen_sound"}
@@ -476,16 +479,14 @@
 		{if stuff "pierce"
 			{if not stuff "auto"
 				{if not stuff "heat_shell"
-					
-						{if stuff "shell %size"
-							{delay 0.01
-								{if not tagged "pen_fx"
-									{start_sound "hit/steel/ricochet/%sound"}
-									{start_sound "hit/steel/ricochet/bkg/%sound"}
-								}
+					{if stuff "shell %size"
+						{delay 0.01
+							{if not tagged "pen_fx"
+								{start_sound "hit/steel/ricochet/%sound"}
+								{start_sound "hit/steel/ricochet/bkg/%sound"}
 							}
 						}
-					
+					}
 				}
 			}
 		}
@@ -644,7 +645,8 @@
 		{able select 0}
 		{able repaired 0}
 		{tags add "ammo_cooked"}
-		{tags add "no_scavenge"}
+		{tags add "no_scavenge"}		;// tag for conquest so that vehicle cannot be repaired/recovered
+		{mark_for_persistence}			;// Conquest map persistence
 		{link_sound "cook_off" "detonation/cook_off/cook"}
 		{link_sound "cook_off" "detonation/cook_off/transition"}
 		{link_sound "burnup_ammo" "detonation/cook_off/burn_ammo"}
@@ -768,6 +770,7 @@
 {on "slow_cookoff_4"
 	{view pause "cooking_presmoke_2"}
 	{link_sound "hatch_fire" "fire/loops/big"}
+	{view show "cooking_hatch_fire"}
 	{view start "cooking_hatch_fire"}
 	{play_sound "hatch_fire" 1}
 	{delay 500 150 "slow_cookoff4"
@@ -857,39 +860,45 @@
 				{view stop "cooking_barrel_smoke"}
 				{view start "cooking_barrel_fire"}
 			}
-	
+
 			{fire radius 4 time 4 heating 0.5}
 			{kill_crew}
 			{clear_inventory}
 			{link_sound "hatch_fire" "fire/loops/big"}
+			{view show "cooking_high"}
 			{view start "cooking_high"}
 			{ani_wind "open" end}
 			{ani_wind "open1" end}
 			{play_sound "cook_off" 1}
 			{play_sound "burnup_ammo" 1}
-	
+
 			{delay 10 2 "cookoff7"
+				{view show "cooking_high_2"}
 				{view start "cooking_high_2"}
 				{view start "cooking_turret_smoke"}
+				{view hide "cooking_high"}
 				{view stop "cooking_high"}
 				{view stop "cooking_turret_fire"}
 				{stop_sound "burnup_ammo"}
 				{start_sound "detonation/cook_off/transition"}
-	
+
 				{delay 4 2 "cookoff8"
 					{stop_sound "cook_off"}
 					{start_sound "detonation/cook_off/transition"}
+					{view show "cooking_hatch_fire"}
 					{view start "cooking_hatch_fire"}
 					{play_sound "hatch_fire" 1}
+					{view hide "cooking_high_2"}
 					{view stop "cooking_high_2"}
 					{call_synced "tags_add_ammo_cooked2"}
-	
+
 					{if tagged "barrel_fire"
 						{view start "cooking_barrel_aftersmoke"}
 						{view stop "cooking_barrel_fire"}
 					}
 					{delay 60 10 "cookoff9"
 						{view start "cooking_hatch_smoke"}
+						{view hide "cooking_hatch_fire"}
 						{view stop "cooking_hatch_fire"}
 						{stop_sound "hatch_fire"}
 					}
@@ -1009,7 +1018,7 @@
 		{able select 0}
 		{able repaired 0}
 		{tags add "ammo_cooked"}
-		{tags add "no_scavenge"}
+		{tags add "no_scavenge"}		;// tag for conquest so that vehicle cannot be repaired/recovered
 		{mark_for_persistence}			;// Conquest map persistence
 		{link_sound "fire" "fire/loops/big"}
 		{link_sound "cook_off" "detonation/cook_off/cook-off"}
@@ -1085,7 +1094,8 @@
 			{delay 10 2 "cookoff_open2"
 				{stop_sound "cook_off"}
 				{start_sound "detonation/cook_off/transition"}
-				{view hide "cooking_high_open_2"}				{view stop "cooking_high_open_2"}
+				{view hide "cooking_high_open_2"}
+				{view stop "cooking_high_open_2"}
 				{call_synced "tags_add_ammo_cooked2"}
 				{if not tagged "exploded"
 					{view start "fire_vehicle_death"}
