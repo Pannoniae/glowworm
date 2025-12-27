@@ -542,6 +542,15 @@
 	("basic_gun")
 )
 
+
+
+;NEW DEFINES FOR SQUADS REWORK
+
+(define "recon"
+	("recon_vision")
+	{"speed" 1.1}
+)
+
 (define "skill1"
 	{"rocketlauncher" lvl_1}
 	{"pistol" lvl_1}
@@ -551,6 +560,15 @@
 	{"rifle" lvl_1}
 	{"melee" lvl_1}
 	{"avoidance" lvl_1}
+	
+	{"health" "75%"}
+	{"health_regeneration" "10%"}
+	{"stamina" "75%"}
+	{"stamina_regeneration" "75%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 0.9}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -565,6 +583,15 @@
 	{"rifle" lvl_2}
 	{"melee" lvl_2}
 	{"avoidance" lvl_2}
+	
+	{"health" "90%"}
+	{"health_regeneration" "10%"}
+	{"stamina" "100%"}
+	{"stamina_regeneration" "100%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.0}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -579,6 +606,15 @@
 	{"rifle" lvl_3}
 	{"melee" lvl_3}
 	{"avoidance" lvl_3}
+	
+	{"health" "100%"}
+	{"health_regeneration" "20%"}
+	{"stamina" "100%"}
+	{"stamina_regeneration" "100%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.0}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -593,6 +629,15 @@
 	{"rifle" lvl_4}
 	{"melee" lvl_4}
 	{"avoidance" lvl_4}
+	
+	{"health" "125%"}
+	{"health_regeneration" "20%"}
+	{"stamina" "125%"}
+	{"stamina_regeneration" "125%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.04}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -607,6 +652,15 @@
 	{"rifle" lvl_5}
 	{"melee" lvl_5}
 	{"avoidance" lvl_5}
+	
+	{"health" "150%"}
+	{"health_regeneration" "40%"}
+	{"stamina" "150%"}
+	{"stamina_regeneration" "150%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.08}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -621,6 +675,15 @@
 	{"rifle" lvl_6}
 	{"melee" lvl_6}
 	{"avoidance" lvl_6}
+	
+	{"health" "175%"}
+	{"health_regeneration" "60%"}
+	{"stamina" "175%"}
+	{"stamina_regeneration" "175%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.12}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -635,6 +698,15 @@
 	{"rifle" lvl_7}
 	{"melee" lvl_7}
 	{"avoidance" lvl_7}
+	
+	{"health" "200%"}
+	{"health_regeneration" "80%"}
+	{"stamina" "200%"}
+	{"stamina_regeneration" "200%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.16}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -649,6 +721,15 @@
 	{"rifle" lvl_8}
 	{"melee" lvl_8}
 	{"avoidance" lvl_8}
+	
+	{"health" "220%"}
+	{"health_regeneration" "100%"}
+	{"stamina" "220%"}
+	{"stamina_regeneration" "220%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.2}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
@@ -663,6 +744,15 @@
 	{"rifle" lvl_9}
 	{"melee" lvl_9}
 	{"avoidance" lvl_9}
+	
+	{"health" "220%"}
+	{"health_regeneration" "100%"}
+	{"stamina" "220%"}
+	{"stamina_regeneration" "220%"}
+	{"personage" 0}			;// This means soldiers are revivable at veterancy 0
+	("standard_vision")
+	{"speed" 1.2}
+	
 	("fortification")
 	("basic_repair")
 	("basic_gun")
