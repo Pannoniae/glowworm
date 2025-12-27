@@ -132,6 +132,7 @@
 	{content "%vehicle ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 )"}
 )
 
+
 ; 2 identical vehicles with 3 types of crew
 (define "squad_2vehicle3"
 	("generic_v" cd(%cd) ci(%ci) t(%t %side %year) g(%g) b(%b) cw(%cw) cp(%cp)) ;//h
@@ -2531,6 +2532,37 @@
 ;--------
 ; ITF CUSTOM
 ;--------
+
+
+(define "squad_with4types_vehicle_crew"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{squad_cost_factor 1}
+	}
+)
+
+(define "squad_with8types_vehicle_crew"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{squad_cost_factor 1}
+	}
+)
 
 (define "squad_with5types_2vehicle_crew"
 	{"%name(%side)"
