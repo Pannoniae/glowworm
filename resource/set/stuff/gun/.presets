@@ -172,7 +172,7 @@
 		range_ap(%range_ap)
 		range_he(%range_he)
 		range_heat(%range_heat)
-		falloff(0.05)
+		falloff(0)
 		r0(1.25)					;// global accuracy indirect
 		r01(0.3)					;// global accuracy direct
 		  ap50(1.50)   ap100(2.75)   ap140(3.75)   ap200(6.50)
@@ -308,32 +308,24 @@
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r01))} {100 (* %heat100 (* %r1 %r01))} {140 (* %heat140 (* %r1 %r01))} { %range_heat (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r01))} {(+ %range_heat 1) 10}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heata"
 		("standard_firing_arc")
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r01))} {100 (* %heat100 (* %r1 %r01))} {140 (* %heat140 (* %r1 %r01))} { %range_heat (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r01))} {(+ %range_heat 1) 10}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heatb"
 		("standard_firing_arc")
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r01))} {100 (* %heat100 (* %r1 %r01))} {140 (* %heat140 (* %r1 %r01))} { %range_heat (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r01))} {(+ %range_heat 1) 10}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heatc"
 		("standard_firing_arc")
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r01))} {100 (* %heat100 (* %r1 %r01))} {140 (* %heat140 (* %r1 %r01))} { %range_heat (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r01))} {(+ %range_heat 1) 10}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 )
 
@@ -344,7 +336,7 @@
 		range_ap(%range_ap)
 		range_he(%range_he)
 		range_heat(%range_heat)
-		falloff(0.15)
+		falloff(0)
 		r0(0.30) 								; // global accuracy
 		apbc50(1.50) apbc100(2.50) apbc140(3.50) apbc200(6.00)
 		 apc50(1.50)  apc100(2.75)  apc140(3.75)  apc200(6.75)
@@ -362,7 +354,7 @@
 		range_ap(%range_ap)
 		range_he(%range_he)
 		range_heat(%range_heat)
-		falloff(0.15)
+		falloff(0)
 		r0(0.30) 								; // global accuracy
 		apbc50(1.50) apbc100(2.50) apbc140(3.50) apbc200(6.00)
 		 apc50(1.50)  apc100(2.75)  apc140(3.75)  apc200(6.75)
@@ -380,7 +372,7 @@
 		range_ap(%range_ap)
 		range_he(%range_he)
 		range_heat(%range_heat)
-		falloff(0.15)
+		falloff(0)
 		r0(0.30) 								; // global accuracy
 		apbc50(1.50) apbc100(2.50) apbc140(3.50) apbc200(6.00)
 		 apc50(1.50)  apc100(2.75)  apc140(3.75)  apc200(6.75)
@@ -398,7 +390,7 @@
 		range_ap(%range_ap)
 		range_he(%range_he)
 		range_heat(%range_heat)
-		falloff(0.15)
+		falloff(0)
 		r0(0.30) 								; // global accuracy
 		apbc50(1.50) apbc100(2.50) apbc140(3.50) apbc200(6.00)
 		 apc50(1.50)  apc100(2.75)  apc140(3.75)  apc200(6.75)
@@ -495,64 +487,46 @@
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "he2"
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "sm"
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "wp"
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "ic"
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heat"
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heata"
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heatb"
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heatc"
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 )
 
@@ -566,7 +540,7 @@
 		range_he(%range_he)
 		range_hei(%range_hei)
 		range_heat(%range_heat)
-		falloff(0.15)
+		falloff(0)
 		r0i(1.25)					;// global accuracy indirect
 		r0(0.3)						;// global accuracy direct
 		;he125(0.4)
@@ -716,8 +690,6 @@
 			}
 		}
 		{range %range_hei %range_hei}
-		{FalloffMeter %range_hei}
-		{FalloffStrength %falloff}
 	}
 	{parameters "he2"
 		{spreading
@@ -733,8 +705,6 @@
 			}
 		}
 		{range %range_hei %range_hei}
-		{FalloffMeter %range_hei}
-		{FalloffStrength %falloff}
 	}
 	{parameters "sm"
 		{spreading
@@ -750,8 +720,6 @@
 			}
 		}
 		{range %range_hei %range_hei}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "wp"
 		{spreading
@@ -767,8 +735,6 @@
 			}
 		}
 		{range %range_hei %range_hei}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	{parameters "ic"
 		{spreading
@@ -784,8 +750,6 @@
 			}
 		}
 		{range %range_hei %range_hei}
-		{FalloffMeter %range_he}
-		{FalloffStrength %falloff}
 	}
 	
 	{parameters "heat"
@@ -794,8 +758,6 @@
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heata"
 		("direct_settings_low")
@@ -803,8 +765,6 @@
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heatb"
 		("direct_settings_low")
@@ -812,8 +772,6 @@
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 	{parameters "heatc"
 		("direct_settings_low")
@@ -821,8 +779,6 @@
 		{spreading
 			{radiusTable {0 0} {50 (* %heat50 (* %r1 %r0))} {100 (* %heat100 (* %r1 %r0))} {140 (* %heat140 (* %r1 %r0))} { (- %range_heat 0.01) (* (+ (* (/ (- %range_heat 140) (- 200 140)) (- %heat200 %heat140)) %heat140) (* %r1 %r0))} {%range_heat 20}}
 		}
-		{FalloffMeter %range_heat}
-		{FalloffStrength %falloff}
 	}
 )
 

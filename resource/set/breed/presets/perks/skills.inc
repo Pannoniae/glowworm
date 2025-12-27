@@ -29,27 +29,45 @@
 		{"fortifications" "foxhole_big"}
 		{"fortifications" "mortar_pit"}
 		{"fortifications" "tank_cover"}
+
+		{"fortifications" "heavy_mg_mg34"}
+		{"fortifications" "heavy_mg_maxim"}
+		{"fortifications" "heavy_mg_maxim_m1910_30"}
+		{"fortifications" "heavy_mg_m1917_30cal"}
 		
 		;new added for test
 		{"fortifications" "log_wall"}
 		{"fortifications" "dragons_teeth"}
 		{"fortifications" "observation_tower"}
 		{"fortifications" "dirt_pillbox"}
-		
-		;{"fortifications" "fin_pillbox"} 
-		;{"fortifications" "coastal_bunker"}
-		;{"fortifications" "medic_tent"}
-		;{"fortifications" "observation_tower"} 
+	}
+	{"resources" "1000%"}
+	{"resources_regeneration" "0%"}
+	{mechanic factor 1.0}
+)
 
-		;{"fortifications" "ft_embankment"}
-		;{"fortifications" "ft_pillbox"}
-		;{"fortifications" "ft_tower"}
-		;{"fortifications" "ft_dot"}
-		
-		;{"fortifications" "heavy_mg_mg34"}
-		;{"fortifications" "heavy_mg_maxim"}
-		;{"fortifications" "heavy_mg_maxim_m1910_30"}
-		;{"fortifications" "heavy_mg_m1917_30cal"}
+(define "engineer_heavy_fin"
+	{fortification}
+	{barricade
+		{"fortifications" "barricade_sq"}
+		{"fortifications" "barricade"}
+
+		{"fortifications" "barbwire"}
+		{"fortifications" "hedgehog"}
+
+		{"fortifications" "foxhole"}
+		{"fortifications" "foxhole_big"}
+		{"fortifications" "mortar_pit"}
+		{"fortifications" "tank_cover"}
+
+		{"fortifications" "fin_bunker"}
+		{"fortifications" "fin_coastal_gun"}
+
+		{"fortifications" "heavy_mg_mg34"}
+		{"fortifications" "heavy_mg_maxim"}
+		{"fortifications" "heavy_mg_maxim_m1910_30"}
+		{"fortifications" "heavy_mg_maxim_m32_33"}
+		{"fortifications" "heavy_mg_m1917_30cal"}
 	}
 	{"resources" "1000%"}
 	{"resources_regeneration" "0%"}
@@ -73,31 +91,6 @@
 	{"resources_regeneration" "0%"}
 	{mechanic factor 1.0}
 )
-(define "engineer_heavy_fin"
-	{fortification}
-	{barricade
-		{"fortifications" "barricade_sq"}
-		{"fortifications" "barricade"}
-
-		{"fortifications" "barbwire"}
-		{"fortifications" "hedgehog"}
-
-		{"fortifications" "foxhole"}
-		{"fortifications" "foxhole_big"}
-		{"fortifications" "tank_cover"}
-
-		{"fortifications" "fin_bunker"}
-		{"fortifications" "fin_coastal_gun"}
-
-		{"fortifications" "heavy_mg_mg34"}
-		{"fortifications" "heavy_mg_maxim"}
-		{"fortifications" "heavy_mg_maxim_m1910_30"}
-		{"fortifications" "heavy_mg_m1917_30cal"}
-	}
-	{"resources" "1000%"}
-	{"resources_regeneration" "0%"}
-	{mechanic factor 1.0}
-)
 
 
 ;/* - Repair Skills - */
@@ -114,15 +107,15 @@
 ;/* - Tank and Cannon Main Gun Weapon Skills - */
 
 (define "elite_gun"
-	{"tank_gun" lvl_7}
+	{"tank_gun" lvl_6}
 )
 
 (define "expert_gun"
-	{"tank_gun" lvl_5}
+	{"tank_gun" lvl_4}
 )
 
 (define "skilled_gun"
-	{"tank_gun" lvl_4}
+	{"tank_gun" lvl_3}
 )
 
 (define "basic_gun"
@@ -544,6 +537,132 @@
 	{"rifle" lvl_6}
 	{"melee" lvl_6}
 	{"avoidance" lvl_6}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill1"
+	{"rocketlauncher" lvl_1}
+	{"pistol" lvl_1}
+	{"smg" lvl_1}
+	{"mgun" lvl_1}
+	{"mgun_light" lvl_1}
+	{"rifle" lvl_1}
+	{"melee" lvl_1}
+	{"avoidance" lvl_1}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill2"
+	{"rocketlauncher" lvl_2}
+	{"pistol" lvl_2}
+	{"smg" lvl_2}
+	{"mgun" lvl_2}
+	{"mgun_light" lvl_2}
+	{"rifle" lvl_2}
+	{"melee" lvl_2}
+	{"avoidance" lvl_2}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill3"
+	{"rocketlauncher" lvl_3}
+	{"pistol" lvl_3}
+	{"smg" lvl_3}
+	{"mgun" lvl_3}
+	{"mgun_light" lvl_3}
+	{"rifle" lvl_3}
+	{"melee" lvl_3}
+	{"avoidance" lvl_3}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill4"
+	{"rocketlauncher" lvl_4}
+	{"pistol" lvl_4}
+	{"smg" lvl_4}
+	{"mgun" lvl_4}
+	{"mgun_light" lvl_4}
+	{"rifle" lvl_4}
+	{"melee" lvl_4}
+	{"avoidance" lvl_4}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill5"
+	{"rocketlauncher" lvl_5}
+	{"pistol" lvl_5}
+	{"smg" lvl_5}
+	{"mgun" lvl_5}
+	{"mgun_light" lvl_5}
+	{"rifle" lvl_5}
+	{"melee" lvl_5}
+	{"avoidance" lvl_5}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill6"
+	{"rocketlauncher" lvl_6}
+	{"pistol" lvl_6}
+	{"smg" lvl_6}
+	{"mgun" lvl_6}
+	{"mgun_light" lvl_6}
+	{"rifle" lvl_6}
+	{"melee" lvl_6}
+	{"avoidance" lvl_6}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill7"
+	{"rocketlauncher" lvl_7}
+	{"pistol" lvl_7}
+	{"smg" lvl_7}
+	{"mgun" lvl_7}
+	{"mgun_light" lvl_7}
+	{"rifle" lvl_7}
+	{"melee" lvl_7}
+	{"avoidance" lvl_7}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill8"
+	{"rocketlauncher" lvl_8}
+	{"pistol" lvl_8}
+	{"smg" lvl_8}
+	{"mgun" lvl_8}
+	{"mgun_light" lvl_8}
+	{"rifle" lvl_8}
+	{"melee" lvl_8}
+	{"avoidance" lvl_8}
+	("fortification")
+	("basic_repair")
+	("basic_gun")
+)
+
+(define "skill9"
+	{"rocketlauncher" lvl_9}
+	{"pistol" lvl_9}
+	{"smg" lvl_9}
+	{"mgun" lvl_9}
+	{"mgun_light" lvl_9}
+	{"rifle" lvl_9}
+	{"melee" lvl_9}
+	{"avoidance" lvl_9}
 	("fortification")
 	("basic_repair")
 	("basic_gun")
