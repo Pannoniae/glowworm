@@ -2530,11 +2530,25 @@
 
 
 ;--------
-; ITF CUSTOM
+; PROJECT REALISM CUSTOM
 ;--------
 
-
 (define "squad_with4types_vehicle_crew"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{squad_cost_factor 1}
+	}
+)
+
+(define "squad_with5types_vehicle_crew"
 	{"%name(%side)"
 		{charge 
 			{delay %cd}
@@ -2548,6 +2562,22 @@
 		{squad_cost_factor 1}
 	}
 )
+
+(define "squad_with6types_vehicle_crew"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{squad_cost_factor 1}
+	}
+)
+
 
 (define "squad_with8types_vehicle_crew"
 	{"%name(%side)"
