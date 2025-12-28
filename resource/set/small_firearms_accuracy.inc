@@ -72,7 +72,7 @@
 	(define "accuracy_assault_rifle"
 		;("rifle_range"	r0(0.3) r1(0.6) r2(1.25) r3(2.00) globalaccuracy(1.00))	;Robz r1(0.825) r2(1.10) r3(2.20) r4(3.50) r5(4.00)
 		{spreading
-			{radiusTable {0 0} {10 0.825} {40 1.10} {70 2.20} {100 3.50} {130 4.00}}
+			{radiusTable {0 0} {10 0.4} {40 0.65} {70 1.35} {100 1.9} {130 2.25}}
 		}
 	)
 	(define "accuracy_shotgun"
