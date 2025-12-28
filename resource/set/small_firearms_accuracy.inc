@@ -328,7 +328,7 @@
 	(define "sway_sniper"
 		{swayparams
 			{bounds -0.35 0.25 -0.45 0.35}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
-			{speed 0.2}						; sway speed coef
+			{speed 0.25}						; sway speed coef
 		}
 	)
 
