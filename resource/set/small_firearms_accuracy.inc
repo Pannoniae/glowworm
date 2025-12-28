@@ -82,7 +82,7 @@
 	(define "accuracy_rifle_at"
 		;("rifle_range"	r0(0.4) r1(0.8) r2(1.2) r3(1.50) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.60) r3(1.20) r4(1.90)
 		{spreading
-			{radiusTable {0 0} {10 0.30} {40 0.60} {70 1.20} {100 3.50} {130 1.90}}
+			{radiusTable {0 0} {10 0.30} {40 0.60} {70 1.20} {100 1.7} {130 1.90}}
 		}
 	)
 
