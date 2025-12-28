@@ -6,7 +6,7 @@ Purchases["44-45.usa"] = {
 				---[[
 
 				-- All-round Doctrine Squads
-					---[[
+					--[[
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_mp_late_all(usa)"},
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_cav_late_all_1(usa)"},
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_cav_late_all_2(usa)"},
@@ -22,7 +22,7 @@ Purchases["44-45.usa"] = {
 					--]]
 
 				-- Defensive Doctrine Squads
-					---[[
+					--[[
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_mp_late_def(usa)"},
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_cav_late_def_1(usa)"},
 					{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_cav_late_def_2(usa)"},
@@ -45,7 +45,7 @@ Purchases["44-45.usa"] = {
 					--]]
 
 				-- Irregular Doctrine Squads
-					---[[
+					--[[
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_mp_late_irr(usa)"},
 					{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_cav_late_irr_1(usa)"},
 					{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_cav_late_irr_2(usa)"},
@@ -64,7 +64,7 @@ Purchases["44-45.usa"] = {
 					--]]
 
 				-- Offensive Doctrine Squads
-					---[[
+					--[[
 					{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_arm_recon_late_off(usa)"},
 					{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_arm_rifle_late_off_1(usa)"},
 					{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_arm_rifle_late_off_2(usa)"},
@@ -83,6 +83,29 @@ Purchases["44-45.usa"] = {
 					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_ranger_assault_late_off(usa)"},
 					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_ranger_special_late_off(usa)"},
 					--]]
+					
+					--{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_cav_late_all_1(usa)"},
+					--{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_mp_late_all(usa)"},
+					--{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_arm_rifle_late_off_1(usa)"},
+					--{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_arm_rifle_mech_late_off_1(usa)"},
+					--{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle(usa)"},
+					--{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle_assault(usa)"},
+					--{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle_bar(usa)"},
+					--
+					----{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_eng_late_def_1(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_10th_mountain_late_off_1(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_1st_arm_rifle_late_off_1(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_vet_rifle_late_def_1(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_1st_rifle_late_all_1(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_82nd_glider_late_irr_1(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_ranger_assault_sub_late_all(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_ranger_assault_late_all(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_ranger_special_late_all(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_101st_late_def_1(usa)"},
+					----{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_101st_eng_late_def(usa)"},
+					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_82nd_late_irr_1(usa)"},
+					----{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_82nd_demo_late_irr(usa)"},
+					
 
 			-- Infantry Singles / Teams
 				---[[
@@ -106,8 +129,8 @@ Purchases["44-45.usa"] = {
 				--{priority = 1.0, type = {"Cannon", "Supply", "Ammo",}, unit = "inf_crate_usa"},
 
 				{priority = 1.0, type = {"Class2", "Cannon", "MG",}, unit = "m1917_30cal"},
-				{priority = 1.0, type = {"Class2", "Cannon", "MG",}, unit = "m2_30cal_tripod"},
-				{priority = 1.0, type = {"Class2", "Cannon", "MG",}, unit = "m2_50cal_tripod"},
+				{priority = 1.0, type = {"Class2", "Cannon", "MG",}, unit = "m2_30cal_tripod_ss"},
+				{priority = 1.0, type = {"Class2", "Cannon", "MG",}, unit = "m2_50cal_tripod_ss"},
 				{priority = 1.0, type = {"Class2", "Cannon", "AA",}, unit = "50cal_quad_m45"},
 
 				{priority = 1.0, type = {"Class3", "Cannon", "AT",}, unit = "37mm_m3a1"},
@@ -122,7 +145,7 @@ Purchases["44-45.usa"] = {
 
 			-- Wheeled vehicles
 				---[[
-				{priority = 1.0, type = {"Class3", "Vehicle", "MG",}, unit = "willys_mb_30cal"},
+				{priority = 1.0, type = {"Class3", "Vehicle", "MG",}, unit = "willys_mb_30cal_ss"},
 				{priority = 1.0, type = {"Class3", "Vehicle", "MG",}, unit = "m3a1_scout"},
 				{priority = 1.0, type = {"Class2", "Vehicle", "MG",}, unit = "m20"},
 				{priority = 1.0, type = {"Class1", "Vehicle", "AT",}, unit = "m8_greyhound"},
@@ -153,9 +176,9 @@ Purchases["44-45.usa"] = {
 				--{priority = 1.0, type = {"Class2", "Tank", "Medium",}, unit = "m4_75_late"},
 				{priority = 1.0, type = {"Class3", "Tank", "Medium",}, unit = "m4a1_75_late"},
 				{priority = 1.0, type = {"Class2", "Tank", "Medium",}, unit = "m4a3_75_late"},
-				{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "m4a3_75w_early"},
-				{priority = 1.0, type = {"Class3", "Tank", "Medium",}, unit = "m4a1_76w_mid"},
-				{priority = 1.0, type = {"Class2", "Tank", "Medium",}, unit = "m4a3_76w"},
+				{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "m4a3_75w"},
+				--{priority = 1.0, type = {"Class3", "Tank", "Medium",}, unit = "m4a1_76w_mid"},
+				--{priority = 1.0, type = {"Class2", "Tank", "Medium",}, unit = "m4a3_76w"},
 				{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "m4a3_76w_hvss"},
 				{priority = 1.0, type = {"Class2", "Tank", "Medium",}, unit = "m4a3e2_75"},
 				{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "m4a3e2_76"},
@@ -163,12 +186,12 @@ Purchases["44-45.usa"] = {
 
 			-- Self-Propelled Guns
 				---[[
-				{priority = 1.0, type = {"Class2", "Tank", "Light", "AT",}, unit = "m18_hellcat"},
+				{priority = 1.0, type = {"Class2", "Tank", "Light", "AT",}, unit = "m18_hellcat_late"},
 				{priority = 1.0, type = {"Class3", "Tank", "Medium", "AT",}, unit = "m10_gmc_late"},
 				{priority = 1.0, type = {"Class1", "Tank", "Medium", "AT",}, unit = "m36_gmc_late"},
 				--{priority = 1.0, type = {"Class1", "Tank", "Medium", "AT",}, unit = "m36b1_gmc_late"},
 				{priority = 1.0, type = {"Class2", "Tank", "Medium", "Support",}, unit = "m4_105"},
-				{priority = 1.0, type = {"Class1", "Tank", "Medium", "Support",}, unit = "m4a3_105"},
+				{priority = 1.0, type = {"Class1", "Tank", "Medium", "Support",}, unit = "m4a3_105_hvss"},
 				--]]
 
 
@@ -176,62 +199,62 @@ Purchases["44-45.usa"] = {
 
 				--  All-round Doctrine
 					---[[
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier1", "Armored", "AA",}, unit = "doctrine_m16_mgmc_late"},
-					--{priority = 1.0, type = {"Class3", "Doctrine", "Tier1", "Armored", "Mortar",}, unit = "doctrine_m4a1_mortar_carrier_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier1", "Cannon", "Support",}, unit = "doctrine_75mm_m3a3_late"},
+					{priority = 1.0, type = {"Class2", "Armored", "AA",}, unit = "m16_mgmc"},
+					--{priority = 1.0, type = {"Class3", "Armored", "Mortar",}, unit = "doctrine_m4a1_mortar_carrier_late"},
+					--{priority = 1.0, type = {"Class2", "Cannon", "Support",}, unit = "doctrine_75mm_m3a3_late"},
 
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier2", "Tank", "Medium", "Support",}, unit = "doctrine_m4a3_105_hvss_late"},
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier2", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_155_late(usa)"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier2", "Tank", "Medium", "Artillery",}, unit = "doctrine_m7b1_hmc_late"},
+					--{priority = 1.0, type = {"Class2", "Tank", "Medium", "Support",}, unit = "doctrine_m4a3_105_hvss_late"},
+					--{priority = 1.0, type = {"Class", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_155_late(usa)"},
+					{priority = 1.0, type = {"Class1", "Tank", "Medium", "Artillery",}, unit = "m7b1_hmc"},
 
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier3", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_240_late(usa)"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier3", "Tank", "Heavy",}, unit = "doctrine_m26_pershing_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier3", "Tank", "Medium", "Artillery",}, unit = "doctrine_m12_gmc_late"},
+					--{priority = 1.0, type = {"Class", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_240_late(usa)"},
+					{priority = 1.0, type = {"Class1", "Tank", "Heavy",}, unit = "m26_pershing"},
+					{priority = 1.0, type = {"Class2", "Tank", "Medium", "Artillery",}, unit = "m12_gmc"},
 					--]]
 
 				--  Defensive Doctrine
 					---[[
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier1", "Vehicle", "MG", "Support", "Engineer",}, unit = "doctrine_cckw_engineer_late"},
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier1", "Cannon", "AA",}, unit = "doctrine_40mm_m1_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier1", "Armored", "AT",}, unit = "doctrine_m3a1_gmc_late"},
-
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier2", "Cannon", "Mortar",}, unit = "doctrine_107mm_m2_late"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier2", "Cannon", "AA", "AT",}, unit = "doctrine_90mm_m2_late"},
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier2", "Armored", "Artillery",}, unit = "doctrine_t19_hmc_late"},
-
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier3", "Tank", "Medium", "AT",}, unit = "doctrine_m36b1_gmc_t33_late"},
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier3", "Cannon", "Artillery",}, unit = "doctrine_203mm_m1_late"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier3", "Cannon", "Artillery", "AT",}, unit = "doctrine_155mm_m1a1_longtom_late"},
+					--{priority = 1.0, type = {"Class", "Vehicle", "MG", "Support", "Engineer",}, unit = "doctrine_cckw_engineer_late"},
+					{priority = 1.0, type = {"Class3", "Cannon", "AA",}, unit = "40mm_m1_ss"},
+					{priority = 1.0, type = {"Class2", "Armored", "AT",}, unit = "m3a1_gmc"},
+													   
+					{priority = 1.0, type = {"Class2", "Cannon", "Mortar",}, unit = "107mm_m2"},
+					{priority = 1.0, type = {"Class1", "Cannon", "AA", "AT",}, unit = "90mm_m1a1"},
+					{priority = 1.0, type = {"Class3", "Armored", "Artillery",}, unit = "t19_hmc"},
+													   
+					{priority = 1.0, type = {"Class1", "Tank", "Medium", "AT",}, unit = "m36b1_gmc_t33"},
+					{priority = 1.0, type = {"Class3", "Cannon", "Artillery",}, unit = "203mm_m1"},
+					{priority = 1.0, type = {"Class1", "Cannon", "Artillery", "AT",}, unit = "155mm_m1a1_longtom"},
 					--]]
 
 				--  Irregular Doctrine
 					---[[
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier1", "Infantry",}, unit = "doctrine_squad_1st_special_late(usa)"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier1", "Cannon", "Support",}, unit = "doctrine_75mm_m1a1_late"},
-					--{priority = 1.0, type = {"Class3", "Doctrine", "Tier1", "Vehicle", "MG", "Supply", "Ammo",}, unit = "doctrine_cckw_redball_late"},
+					--{priority = 1.0, type = {"Class3", "Infantry",}, unit = "doctrine_squad_1st_special_late(usa)"},
+					{priority = 1.0, type = {"Class2", "Cannon", "Support",}, unit = "75mm_m1a1_ss"},
+					--{priority = 1.0, type = {"Class3", "Vehicle", "MG", "Supply", "Ammo",}, unit = "doctrine_cckw_redball_late"},
 
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier2", "Plane", "Airstrike",}, unit = "doctrine_p47_250_late"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier2", "Tank", "Medium", "AT",}, unit = "doctrine_m4a3_75w_e4_5_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier2", "Cannon", "Artillery",}, unit = "doctrine_105mm_m3_late"},
+					--{priority = 1.0, type = {"Class", "Plane", "Airstrike",}, unit = "doctrine_p47_250_late"},
+					{priority = 1.0, type = {"Class1", "Tank", "Medium", "AT",}, unit = "m4a3_75w_e4_5"},
+					{priority = 1.0, type = {"Class2", "Cannon", "Artillery",}, unit = "105mm_m3"},
 
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier3", "Plane", "Airstrike",}, unit = "doctrine_p47_500_late"},
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier3", "Cannon", "Artillery",}, unit = "doctrine_114mm_m1_late"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier3", "Tank", "Medium", "Artillery",}, unit = "doctrine_m4a3_calliope_late"},
+					--{priority = 1.0, type = {"Class", "Plane", "Airstrike",}, unit = "doctrine_p47_500_late"},
+					{priority = 1.0, type = {"Class3","Cannon", "Artillery",}, unit = "114mm_m1"},
+					{priority = 1.0, type = {"Class1","Tank", "Medium", "Artillery",}, unit = "m4a3_calliope_ss"},
 					--]]
 
 				--  Offensive Doctrine
 					---[[
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier1", "Armored", "MG",}, unit = "doctrine_m3a1_commander_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier1", "Armored", "AA",}, unit = "doctrine_m15a1_cgmc_late"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier1", "Tank", "Light", "Support",}, unit = "doctrine_m8_hmc_late"},
+					{priority = 1.0, type = {"Class3", "Armored", "MG",}, unit = "m3a1_commander"},
+					{priority = 1.0, type = {"Class2", "Armored", "AA",}, unit = "m15a1_cgmc"},
+					{priority = 1.0, type = {"Class1", "Tank", "Light", "Support",}, unit = "m8_hmc"},
 
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier2", "Tank", "Light", "AT",}, unit = "doctrine_m18_hellcat_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier2", "Tank", "Medium",}, unit = "doctrine_m4a3_76w_field3_late"},
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier2", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_155_vt_late(usa)"},
+					--{priority = 1.0, type = {"Class3", "Tank", "Light", "AT",}, unit = "m18_hellcat_late"},
+					{priority = 1.0, type = {"Class2", "Tank", "Medium",}, unit = "m4a3_76w_field3"},
+					--{priority = 1.0, type = {"Class", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_155_vt_late(usa)"},
 
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier3", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_203_vt_late(usa)"},
-					{priority = 1.0, type = {"Class3", "Doctrine", "Tier3", "Cannon", "Artillery",}, unit = "doctrine_155mm_m1_late"},
-					{priority = 1.0, type = {"Class1", "Doctrine", "Tier3", "Tank", "Heavy",}, unit = "doctrine_t26e4_late"},
+					--{priority = 1.0, type = {"Class", "Infantry", "Team",}, unit = "doctrine_squad_usa_signaller_203_vt_late(usa)"},
+					{priority = 1.0, type = {"Class3", "Cannon", "Artillery",}, unit = "155mm_m1"},
+					{priority = 1.0, type = {"Class1", "Tank", "Heavy",}, unit = "t26e4"},
 					--]]
 
 			--]====]
