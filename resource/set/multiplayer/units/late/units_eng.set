@@ -779,7 +779,7 @@
 
 ;//english paratrooper engineers, paratrooper engineers with 3 flamethrowers
 ("squad_with9types_i" side(eng) name(squad_6th_para_eng_late_def_2) period(late) year(44 45 46) scf(1) cd(360) ci(360) g(squad_4) c1(6th_air_para_eng_sec_com:1) c2(6th_air_para_eng_sec_2ic:1) c3(6th_air_para_eng:1) c4(6th_air_para_eng_at_mine:2) c5(6th_air_para_eng_sapper:3) c6(6th_air_para_eng_piat:1) c7(6th_air_para_eng_piat_asst:1) c8(6th_air_para_eng_mg:1) c9(6th_air_para_eng_mg_asst:1) b(squad) i(510) t())
-("squad_with3types" side(eng) name(squad_1st_para_eng_flame_late_irr) period(late) year(44 45 46) year(late) scf(1) cd(360) ci(360) g(squad_4) c1(1st_air_para_eng_sec_com_sgt:1) c2(1st_air_para_eng_sapper:2) c3(1st_air_para_eng_flamer:3) b(squad) t())
+("squad_with3types" side(eng) name(squad_1st_para_eng_flame_late_irr) period(late) year(44 45 46) scf(1) cd(360) ci(360) g(squad_4) c1(1st_air_para_eng_sec_com_sgt:1) c2(1st_air_para_eng_sapper:2) c3(1st_air_para_eng_flamer:3) b(squad) t())
 
 ;//t4+
 ;//SAS, t4+ stealth unit
@@ -890,15 +890,30 @@
 
 
 ;Plane
-{"typhoon_mk1b_recon"
-	("vehicle"  period(late) year(44 45 46) cd(600) ci(10) t(doctrineonly) side(eng) crew(pilot:1) g(airstrike) b(supply) cost(100) cw(2) cp(4))
+{"doctrine_typhoon_mk1b_recon"
+	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(450) ci(10) vehicle(typhoon_mk1b_recon) crew(pilot:1) g(airstrike) b(supply) cost(100))
 	{action "airstrike:reconnaissance_50"} 
+}
+{"doctrine_typhoon_mk1b_light"
+	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(600) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) b(supply) cost(250))
+	("doctrine_t1" cool(360) d(late_eng_irregular) cost(10))
+	{action "airstrike:250lb_gp_mk4"}
 	{tags "limit3"}
 }
+{"doctrine_typhoon_mk1b_heavy"
+	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(900) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) b(supply) cost(500))
+	("doctrine_t3" cool(360) d(late_eng_irregular) cost(30))
+	{action "airstrike:500lb_mc"}
+}
+
+;Plane
+{"typhoon_mk1b_recon"
+	("vehicle"  period(late) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(-2)
+	cost(100))
+}
 {"typhoon_mk1b"
-	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(doctrineonly) side(eng) crew(pilot:1) g(airstrike) b(supply) cost(400) cw(2) cp(4))
-	{action "airstrike:sc_250_mp"}
-	{tags "limit4"}
+	("vehicle"  period(late) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(-2)
+	cost(300))
 }
 
 
@@ -1290,6 +1305,14 @@
 }
 {"achilles_mk2_vet_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(eng) vehicle(achilles_mk2_vet:1) crew1(tankman_ace:4) crew2(tank_commander_ace:1) g(spg1) b(td) cw(4) cp(28)
+	cost(1000))
+}
+{"achilles_mk2"
+	("vehicle2" period(late) cd(0) ci(0) t(doctrineonly medium) side(eng) crew1(tankman:4) crew2(tank_commander:1) g(spg1) b(tanks) cw(4) cp(26)
+	cost(800))
+}
+{"achilles_mk2_vet"
+	("vehicle2" period(late) cd(0) ci(0) t(doctrineonly medium) side(eng) crew1(tankman:4) crew2(tank_commander:1) g(spg1) b(tanks) cw(4) cp(26)
 	cost(1000))
 }
 

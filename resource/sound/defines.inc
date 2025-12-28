@@ -1028,7 +1028,7 @@
 )
 (define "talk_low"
 	{loudness "talk_quiet"}
-	{volume 0.7}
+	{volume 1.4}
 	{tag emotions}
 )
 
@@ -1049,7 +1049,7 @@
 )
 (define "emotes"
 	{loudness "talk"}
-	{volume 1}
+	{volume 3}
 	{tag emotions}
 )
 ;======================UTILITY======================
@@ -1061,6 +1061,7 @@
 )
 
 ;======================VEHICLE======================
+; these ones are LOUD! but they should drop off exponentially. see sound.set.
 (define "vehicle_engine"
 	{signal movement 30}
 	{loudness "vehicle_engine"}
@@ -1093,21 +1094,21 @@
 )
 (define "vehicle_engine_car_idle"
 	{signal movement 15}
-	{volume 0.35}
+	{volume 1.35}
 	{loudness "vehicle_engine_car_idle"}
 	{tag effects}
 )
 (define "vehicle_electric"
 	{signal movement 10}
 	{loudness "vehicle_engine_car"}
-	{volume 0.3}
+	{volume 1.3}
 	{tag effects}
 )
 
 (define "vehicle_btr"
 	{signal movement 30}
 	{loudness "vehicle_engine"}
-	{volume 0.6}
+	{volume 1.2}
 	{tag effects}
 )
 
@@ -1115,66 +1116,66 @@
 	{signal movement 20}
 	{loudness "vehicle_tracks"}
 	{tag effects}
-	{volume 0.8}
+	{volume 1.4}
 )
 (define "vehicle_wheels"
 	{signal movement 20}
 	{loudness "vehicle_wheels"}
-	{volume 0.5}
+	{volume 1.5}
 	{tag effects}
 )
 (define "vehicle_overlays"
 	{signal movement 10}
 	{loudness "vehicle_overlays"}
-	{volume 0.5}
+	{volume 1.5}
 	{tag effects}
 )
 
 (define "vehicle_overlays_small"
 	{signal movement 10}
 	{loudness "vehicle_overlays_small"}
-	{volume 0.5}
+	{volume 1.5}
 	{tag effects}
 )
 
 (define "vehicle_plane"
 	{signal movement 30}
 	{loudness "vehicle_plane"}
-	{volume 0.7}
+	{volume 1.7}
 	{tag effects}
 )
 
 (define "vehicle_marine"
 	{signal movement 30}
 	{loudness "vehicle_marine"}
-	{volume 0.7}
+	{volume 1.7}
 	{tag effects}
 )
 
 (define "vehicle_internal"
 	{signal explosion 5}
 	{loudness "vehicle_internal"}
-	{volume 0.7}
+	{volume 1.7}
 	{tag effects}
 )
 
 (define "vehicle_anims"
 	{signal movement 5}
 	{loudness "vehicle_anims"}
-	{volume 0.9}
+	{volume 1.6}
 	{tag effects}
 )
 
 (define "turret"
 	{signal movement 5}
 	{loudness "turret"}
-	{volume 0.5}
+	{volume 1.5}
 	{tag effects}
 )
 
 (define "bkg_plane"
 	{loudness "bkg_plane"}
-	{volume 0.7}
+	{volume 1.7}
 	{tag effects}
 )
 
