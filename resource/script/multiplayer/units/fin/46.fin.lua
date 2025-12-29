@@ -174,13 +174,13 @@ Purchases["46.fin"] = {
 			
 				--  All-round Doctrine
 					---[[
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier1", "Infantry",}, unit = "doctrine_squad_command_late(fin)"},
+					--{priority = 1.0, type = {"Class", "Infantry",}, unit = "doctrine_squad_command_late(fin)"},
 					{priority = 1.0, type = {"Class2", "Tank", "Light",}, unit = "t50_fin"}, 
 					{priority = 1.0, type = {"Class3", "Tank", "Light", "AA",}, unit = "l62"},
 					
 					{priority = 1.0, type = {"Class2", "Tank", "Heavy",}, unit = "kv1_42_fin_late"},
-					{priority = 1.0, type = {"Class2", "Doctrine", "Tier2", "Cannon", "Support",}, unit = "84mm_k18_late"},
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier2", "Infantry", "Team",}, unit = "doctrine_squad_signaller_late(fin)"},
+					{priority = 1.0, type = {"Class2", "Cannon", "Support",}, unit = "84mm_k18_late"},
+					--{priority = 1.0, type = {"Class", "Infantry", "Team",}, unit = "doctrine_squad_signaller_late(fin)"},
 					
 					{priority = 1.0, type = {"Class2", "Cannon", "Artillery",}, unit = "120mm_k78_31"},
 					{priority = 1.0, type = {"Class1", "Tank", "Heavy",}, unit = "isu152_fin"},
@@ -189,9 +189,9 @@ Purchases["46.fin"] = {
 
 				--  Defensive Doctrine
 					---[[
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier1", "Infantry",}, unit = "doctrine_squad_engineer_late(fin)"},
+					--{priority = 1.0, type = {"Class", "Infantry",}, unit = "doctrine_squad_engineer_late(fin)"},
 					{priority = 1.0, type = {"Class3", "Cannon", "AA",}, unit = "40mm_itk38b"},
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier1", "Infantry",}, unit = "doctrine_heavy_engineer_late(fin)"},
+					--{priority = 1.0, type = {"Class", "Infantry",}, unit = "doctrine_heavy_engineer_late(fin)"},
 					
 					{priority = 1.0, type = {"Class3", "Cannon", "Mortar",}, unit = "120mm_krh40"},
 					{priority = 1.0, type = {"Class2", "Cannon", "AT",}, unit = "75mm_k40"}, 
@@ -204,7 +204,7 @@ Purchases["46.fin"] = {
 
 				--  Irregular Doctrine
 					---[[
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier1", "Plane", "Airstrike",}, unit = "doctrine_blenheim_small_late"},
+					--{priority = 1.0, type = {"Class", "Plane", "Airstrike",}, unit = "doctrine_blenheim_small_late"},
 					--{priority = 1.0, type = {"Class1", "Infantry",}, unit = "doctrine_white_death_late"},
 					{priority = 1.0, type = {"Class2", "Cannon", "Mortar",}, unit = "170mm_minewerfer"},
 
@@ -212,7 +212,7 @@ Purchases["46.fin"] = {
 					{priority = 1.0, type = {"Class2", "Tank", "Heavy",}, unit = "kv1_40e_fin_late"},
 					{priority = 1.0, type = {"Class1", "Cannon", "AT",}, unit = "75mm_k44"},
 
-					--{priority = 1.0, type = {"Class", "Doctrine", "Tier3", "Plane", "Airstrike",}, unit = "doctrine_blenheim_late"},
+					--{priority = 1.0, type = {"Class", "Plane", "Airstrike",}, unit = "doctrine_blenheim_late"},
 					{priority = 1.0, type = {"Class2", "Cannon", "Artillery",}, unit = "105mm_k34"},
 					{priority = 1.0, type = {"Class2", "Cannon", "Artillery",}, unit = "300mm_krh42"},
 					--]]
