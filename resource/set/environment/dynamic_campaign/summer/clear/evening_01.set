@@ -1,29 +1,33 @@
 {environment
 	{light
-		{direction 0.7 -0.039 -0.712}
-		{ambient 0xff313130}
-		{diffuse 0xff935c3f}
-		{lightsIntensity 0.05}
+		{direction 0.834 -0.346 -0.428}
+		{ambient 0xff2a2d32}
+		{diffuse 0xffab846e}
+		{specularPower 2}
+		{lightsIntensity 0.2}
 		{draw_sun_moon}
-		{sun_moon_radius 1}
+		{sun_moon_radius 0}
 		{night_vision 1}
 		{color_correction
-			{saturation 0.8}
-			{tone 0xff1e0700}
-			{tone_strength 0.2}
+			{gamma 1.2}
+			{brightness 1.5}
+			{contrast 1.02}
+			{saturation 1.2}
+			{tone 0xff000526}
+			{tone_strength 0}
 			{color_shading
-				{shade_tone 0xff4b4b4b}
-				{intensity 0}
+				{shade_tone 0xff000a9d}
+				{intensity 0.08}
 			}
 		}
 		{rim_light
-			{color 0xffffffff}
-			{strength 0.2}
+			{color 0xffc5c5c5}
+			{strength 0.1}
 		}
 		{tone_mapping
-			{max_white_percentile 0.9995}
-			{min_mapping_range 0.9995}
-			{curve "/set/curves/tonemapping/default.bzc"}
+			{max_white_percentile 0}
+			{min_mapping_range 1}
+			{curve "/set/curves/tonemapping/balanced4.bzc"}
 		}
 		{camera_lens_effetcs
 			{vision_mode
@@ -36,8 +40,7 @@
 				{color_tone 0xff4b3c28}
 			}
 			{lens_dirt
-				{enable}
-				{texture "/texture/common/environment/lens_effects/dirty_lens_01"}
+				{texture "/texture/common/environment/lens_effects/dirty_lens_01b"}
 			}
 			{screen_brightening
 				{enable}
@@ -46,14 +49,14 @@
 		}
 	}
 	{wind
-		{direction 0 0 0}
-		{main_strength 0.1}
-		{detail_strength 0.1}
-		{height_amplification 1}
+		{direction -0.551 0.629 0}
+		{main_strength 0.06}
+		{detail_strength 1.2}
+		{height_amplification 1.3}
 	}
 	{haze
 		{enable}
-		{color 0xff736974}
+		{color 0xff7b8599}
 		{start 4500}
 		{end 5000}
 		{altitude_strength 0}
@@ -61,23 +64,23 @@
 	}
 	{sky
 		{enable}
-		{texture "/texture/common/environment/environment_sunset_03"}
-		{globalEnvironment "/texture/common/environment/environment_clouds_03"}
-		{intensity 1.5}
-		{azimuth 90}
+		{texture "/texture/common/environment/env03a_sunset"}
+		{globalEnvironment "/texture/common/environment/environment_clouds_01_grey"}
+		{color 0xffd7cdae}
+		{intensity 1.2}
+		{azimuth 70}
 	}
 	{weather
 		{enable}
-		{sound "world/wind/qp01 0002 wind mod soft"}
-		{volume 40}
-		{"sound 2" "world/insects/qp01 0120 riparian zone night insects"}
-		{"volume 2" 5}
-		{"sound 3" "world/environment_ambient/field/01"}
+		{sound "world/wind/qp01 0004 wind mod strong"}
+		{"sound 2" "world/sea/qp01 0024 surf brilliant"}
+		{"volume 2" 0}
+		{"sound 3" "world/environment_ambient/battle/battle_ambient_cannons_sporatic"}
 	}
 	{ocean_wave_works
 		{sea_settings
 			{global
-				{patch_scale 3000}
+				{patch_scale 1000}
 				{wind_dependency 0.85}
 				{time_factor 0.75}
 				{smoothing 0.03}
@@ -94,12 +97,12 @@
 			}
 			{ocean_look
 				{specular_color 0xffffffff}
-				{specular_power 500}
-				{specular_intensity 0.2}
-				{emissive_strength 0.5}
+				{specular_power 435.004}
+				{specular_intensity 0.22}
+				{emissive_strength 0.83}
 				{enhanced_water_look
-					{costal_softalpha_depth 5}
-					{full_opaque_water_depth 100}
+					{costal_softalpha_depth 12}
+					{full_opaque_water_depth 15}
 					{full_opaque_view_distance 1500}
 				}
 			}
@@ -133,12 +136,12 @@
 			}
 			{ocean_look
 				{specular_color 0xffffffff}
-				{specular_power 500}
-				{specular_intensity 0.2}
-				{emissive_strength 0.5}
+				{specular_power 435.004}
+				{specular_intensity 0.22}
+				{emissive_strength 0.83}
 				{enhanced_water_look
-					{costal_softalpha_depth 5}
-					{full_opaque_water_depth 100}
+					{costal_softalpha_depth 12}
+					{full_opaque_water_depth 15}
 					{full_opaque_view_distance 1500}
 				}
 			}
@@ -172,12 +175,12 @@
 			}
 			{ocean_look
 				{specular_color 0xffffffff}
-				{specular_power 500}
-				{specular_intensity 0.2}
-				{emissive_strength 0.5}
+				{specular_power 435.004}
+				{specular_intensity 0.22}
+				{emissive_strength 0.83}
 				{enhanced_water_look
-					{costal_softalpha_depth 5}
-					{full_opaque_water_depth 100}
+					{costal_softalpha_depth 12}
+					{full_opaque_water_depth 15}
 					{full_opaque_view_distance 1500}
 				}
 			}
@@ -200,29 +203,30 @@
 		{color 0xffffffff}
 	}
 	{dof
+		{enable}
 		{near_scale 2}
-		{far_scale 0.75}
-		{near_start 50}
-		{near_end 100}
+		{far_scale 0.5}
+		{near_start 10}
+		{near_end 35}
 		{far_start 3000}
 		{far_end 6000}
 		{"3rd_Person"
 			{"3rdP_blur_strength" 3}
 		}
-		{blur_strength 5}
+		{blur_strength 2}
 		{"Scenario Settings"
-			{near_scale 2.5}
-			{far_scale 0.75}
-			{near_start 50}
-			{near_end 150}
-			{far_start 2000}
-			{far_end 3500}
+			{near_scale 2}
+			{far_scale 0.5}
+			{near_start 10}
+			{near_end 35}
+			{far_start 3000}
+			{far_end 6000}
 			{blur_strength 5}
 		}
 	}
 	{glow
 		{enable}
 		{amount 0.07}
-		{threshold 1.1}
+		{threshold 0.5}
 	}
 }

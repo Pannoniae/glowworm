@@ -5,7 +5,7 @@
 		{diffuse 0xff75777b}
 		{specularIntensity 4}
 		{specularPower 4}
-		{lightsIntensity 0.05}
+		{lightsIntensity 0.5}
 		{night}
 		{draw_sun_moon}
 		{sun_moon_radius 0}
@@ -14,6 +14,7 @@
 			{tone 0xff3c3452}
 			{tone_strength 0.1}
 			{color_shading
+				{enable}
 				{shade_tone 0xff00185c}
 				{intensity 0.2}
 			}
@@ -58,7 +59,7 @@
 		{start 4500}
 		{end 5000}
 		{altitude_strength 0}
-		{sky_haziness 0}
+		{sky_haziness 0.2}
 	}
 	{sky
 		{enable}
@@ -201,24 +202,25 @@
 		{color 0xffffffff}
 	}
 	{dof
+
 		{near_scale 2.0}
-		{far_scale 0.75}
-		{near_start 50}
-		{near_end 100}
+		{far_scale 0.5}
+		{near_start 10}
+		{near_end 35}
 		{far_start 3000}
 		{far_end 6000}
 		{"3rd_Person"
 			{"3rdP_blur_strength" 3}
 		}
-		{blur_strength 5}
+		{blur_strength 2}
 		{"Scenario Settings"
-			{near_scale 2.5}
-			{far_scale 0.75}
-			{near_start 50}
-			{near_end 100}
+			{near_scale 2.0}
+			{far_scale 0.5}
+			{near_start 10}
+			{near_end 35}
 			{far_start 1000}
 			{far_end 3500}
-			{blur_strength 5}
+			{blur_strength 2}
 		}
 	}
 	{glow

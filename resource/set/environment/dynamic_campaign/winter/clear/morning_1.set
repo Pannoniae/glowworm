@@ -1,31 +1,34 @@
 {environment
 	{light
-		{direction -0.708 0.015 -0.705}
-		{ambient 0xff22232f}
-		{diffuse 0xff393e33}
-		{specularIntensity 2}
+		{direction -0.685 0.598 -0.415}
+		{ambient 0xff202426}
+		{diffuse 0xff494643}
 		{specularPower 2}
-		{lightsIntensity 0.05}
+		{lightsIntensity 0.2}
 		{draw_sun_moon}
-		{sun_moon_radius 1}
+		{sun_moon_radius 0.2}
 		{night_vision 1}
 		{color_correction
-			{saturation 0.8}
-			{tone 0xff0023fd}
+			{gamma 1.2}
+			{brightness 1.5}
+			{contrast 1.02}
+			{saturation 1.2}
+			{tone 0xff000526}
 			{tone_strength 0.05}
 			{color_shading
-				{shade_tone 0xff5b72fd}
+				{enable}
+				{shade_tone 0xff000a9d}
 				{intensity 0.05}
 			}
 		}
 		{rim_light
-			{color 0xffffffff}
-			{strength 0.2}
+			{color 0xffc5c5c5}
+			{strength 0.1}
 		}
 		{tone_mapping
-			{max_white_percentile 0.9995}
+			{max_white_percentile 0}
 			{min_mapping_range 1}
-			{curve "/set/curves/tonemapping/default.bzc"}
+			{curve "/set/curves/tonemapping/balanced4.bzc"}
 		}
 		{camera_lens_effetcs
 			{vision_mode
@@ -39,7 +42,7 @@
 			}
 			{lens_dirt
 				{enable}
-				{texture "/texture/common/environment/lens_effects/dirty_lens_01"}
+				{texture "/texture/common/environment/lens_effects/dirty_lens_01b"}
 			}
 			{screen_brightening
 				{enable}
@@ -49,13 +52,13 @@
 	}
 	{wind
 		{direction -0.551 0.629 0}
-		{main_strength 0.05}
-		{detail_strength 0.7}
-		{height_amplification 0.55}
+		{main_strength 0.06}
+		{detail_strength 1.2}
+		{height_amplification 1.3}
 	}
 	{haze
 		{enable}
-		{color 0xffbec7ce}
+		{color 0xff81888b}
 		{start 4500}
 		{end 5000}
 		{altitude_strength 0}
@@ -63,29 +66,32 @@
 	}
 	{sky
 		{enable}
-		{texture "/texture/common/environment/environment_sunset_04"}
+		{texture "/texture/common/environment/env04_sunset"}
 		{globalEnvironment "/texture/common/environment/environment_clouds_01_grey"}
-		{intensity 1}
-		{azimuth 275}
+		{color 0xffd7cdae}
+		{intensity 1.2}
+		{azimuth 230}
 	}
 	{weather
 		{enable}
-		{density 99}
-		{sound "world/wind/qp01 0002 wind mod soft"}
+		{sound "world/wind/qp01 0004 wind mod strong"}
+		{"sound 2" "world/sea/qp01 0024 surf brilliant"}
+		{"volume 2" 0}
+		{"sound 3" "world/environment_ambient/battle/battle_ambient_cannons_sporatic"}
 	}
 	{ocean_wave_works
 		{sea_settings
 			{global
-				{patch_scale 1110.06}
-				{wind_dependency 1}
+				{patch_scale 1000}
+				{wind_dependency 0.85}
 				{time_factor 0.75}
-				{smoothing 0.011}
+				{smoothing 0.03}
 			}
 			{waves
-				{wind_speed_mps 3.2}
-				{wave_amplitude 0.21}
-				{crest_sharpness 1.54}
-				{foam_threshhold 0.358}
+				{wind_speed_mps 4}
+				{wave_amplitude 0.3}
+				{crest_sharpness 1.2}
+				{foam_threshhold 0.37}
 				{foam_amount 0.12}
 				{foam_crest_intensity 1}
 				{foam_sss_intensity 0.9}
@@ -93,12 +99,12 @@
 			}
 			{ocean_look
 				{specular_color 0xffffffff}
-				{specular_power 450.004}
-				{specular_intensity 0.08}
-				{emissive_strength 0.52}
+				{specular_power 435.004}
+				{specular_intensity 0.22}
+				{emissive_strength 0.83}
 				{enhanced_water_look
-					{costal_softalpha_depth 10}
-					{full_opaque_water_depth 1500}
+					{costal_softalpha_depth 12}
+					{full_opaque_water_depth 15}
 					{full_opaque_view_distance 1500}
 				}
 			}
@@ -132,12 +138,12 @@
 			}
 			{ocean_look
 				{specular_color 0xffffffff}
-				{specular_power 500}
-				{specular_intensity 0.2}
-				{emissive_strength 0.5}
+				{specular_power 435.004}
+				{specular_intensity 0.22}
+				{emissive_strength 0.83}
 				{enhanced_water_look
-					{costal_softalpha_depth 5}
-					{full_opaque_water_depth 100}
+					{costal_softalpha_depth 12}
+					{full_opaque_water_depth 15}
 					{full_opaque_view_distance 1500}
 				}
 			}
@@ -171,12 +177,12 @@
 			}
 			{ocean_look
 				{specular_color 0xffffffff}
-				{specular_power 500}
-				{specular_intensity 0.2}
-				{emissive_strength 0.5}
+				{specular_power 435.004}
+				{specular_intensity 0.22}
+				{emissive_strength 0.83}
 				{enhanced_water_look
-					{costal_softalpha_depth 5}
-					{full_opaque_water_depth 100}
+					{costal_softalpha_depth 12}
+					{full_opaque_water_depth 15}
 					{full_opaque_view_distance 1500}
 				}
 			}
@@ -199,23 +205,24 @@
 		{color 0xffffffff}
 	}
 	{dof
+		{enable}
 		{near_scale 2}
-		{far_scale 0.75}
-		{near_start 50}
-		{near_end 100}
+		{far_scale 0.5}
+		{near_start 10}
+		{near_end 35}
 		{far_start 3000}
 		{far_end 6000}
 		{"3rd_Person"
 			{"3rdP_blur_strength" 3}
 		}
-		{blur_strength 5}
+		{blur_strength 2}
 		{"Scenario Settings"
-			{near_scale 2.5}
-			{far_scale 0.75}
-			{near_start 50}
-			{near_end 150}
-			{far_start 2000}
-			{far_end 3500}
+			{near_scale 2}
+			{far_scale 0.5}
+			{near_start 10}
+			{near_end 35}
+			{far_start 3000}
+			{far_end 6000}
 			{blur_strength 5}
 		}
 	}

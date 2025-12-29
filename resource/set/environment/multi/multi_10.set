@@ -3,10 +3,12 @@
 		{direction -0.32 -0.328 -0.889}
 		{ambient 0xff2d2d37}
 		{diffuse 0xff282832}
-		{lightsIntensity 0.05}
+		{specularIntensity 2}
+		{specularPower 2}
+		{lightsIntensity 0.5}
 		{draw_sun_moon}
-		{sun_moon_radius 1}
-		{night_vision 1}
+		{sun_moon_radius 0}
+		{night_vision 0.75}
 		{color_correction
 			{brightness 1.2}
 			{saturation 0.8}
@@ -18,13 +20,13 @@
 			}
 		}
 		{rim_light
-			{color 0xffffffff}
+			{color 0xfffbfcff}
 			{strength 0.1}
 		}
 		{tone_mapping
-			{max_white_percentile 0.9995}
-			{min_mapping_range 0.7}
-			{curve "set/curves/tonemapping/default.bzc"}
+			{max_white_percentile 0.9999}
+			{min_mapping_range 0.9999}
+			{curve "/set/curves/tonemapping/smooth1.bzc"}
 		}
 		{camera_lens_effetcs
 			{vision_mode
@@ -32,24 +34,24 @@
 			}
 			{light_scattering
 				{enable}
-				{intensity 0.5}
-				{ray_length 0.5}
-				{color_tone 0x1010101}
+				{intensity 0.3}
+				{ray_length 3}
+				{color_tone 0xff4b3c28}
 			}
 			{lens_dirt
 				{enable}
+				{texture "/texture/common/environment/lens_effects/dirty_lens_01"}
 			}
 			{screen_brightening
-				{enable}
-				{intensity 0.3}
+				{intensity 0.25}
 			}
 		}
 	}
 	{wind
-		{direction 0 0 0}
-		{main_strength 0.1}
-		{detail_strength 0.1}
-		{height_amplification 1}
+		{direction -0.551 0.629 0}
+		{main_strength 0.21}
+		{detail_strength 2.2}
+		{height_amplification 1.85}
 	}
 	{haze
 		{enable}
@@ -68,6 +70,12 @@
 	{weather
 		{density 5}
 		{fx "rain"}
+	}
+	{weather
+		{enable}
+		{density 10}
+		{sound "world/wind/qp01 0004 wind mod strong"}
+		{"volume 3" 50}
 	}
 	{thunder
 		{interval 40 15}
@@ -100,7 +108,7 @@
 	}
 	{glow
 		{enable}
-		{amount 0.5}
-		{threshold 1.1}
+		{amount 0.07}
+		{threshold 0.5}
 	}
 }

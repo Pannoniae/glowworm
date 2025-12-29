@@ -4,13 +4,13 @@
 		{ambient 0xff261d20}
 		{diffuse 0xff482c1f}
 		{specularPower 1.5}
-		{lightsIntensity 0.05}
+		{lightsIntensity 0.1}
 		{night}
 		{draw_sun_moon}
 		{sun_moon_radius 1}
 		{night_vision 0.75}
 		{color_correction
-			{brightness 1.2}
+			{brightness 0.8}
 			{tone 0xff002846}
 			{tone_strength 0.2}
 			{color_shading
@@ -55,9 +55,9 @@
 	{haze
 		{enable}
 		{color 0xff322828}
-		{start 3500}
-		{end 4000}
-		{altitude_strength 0}
+		{start 4500}
+		{end 5000}
+		{altitude_strength 0.8}
 		{sky_haziness 0}
 	}
 	{sky
@@ -69,7 +69,6 @@
 	}
 	{weather
 		{enable}
-		{fx "snow"}
 		{sound "world/wind/qp01 0004 wind mod strong"}
 		{volume 50}
 		{"sound 2" "world/environment_ambient/battle"}
@@ -203,24 +202,25 @@
 		{color 0xffffffff}
 	}
 	{dof
+
 		{near_scale 2.0}
-		{far_scale 0.75}
-		{near_start 50}
-		{near_end 75}
-		{far_start 2000}
+		{far_scale 0.5}
+		{near_start 10}
+		{near_end 35}
+		{far_start 3000}
 		{far_end 6000}
 		{"3rd_Person"
 			{"3rdP_blur_strength" 1}
 		}
-		{blur_strength 5}
+		{blur_strength 2}
 		{"Scenario Settings"
-			{near_scale 2.5}
-			{far_scale 0.75}
-			{near_start 50}
-			{near_end 100}
+			{near_scale 2.0}
+			{far_scale 0.5}
+			{near_start 10}
+			{near_end 35}
 			{far_start 1000}
 			{far_end 3500}
-			{blur_strength 5}
+			{blur_strength 2}
 		}
 	}
 	{glow
