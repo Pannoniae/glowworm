@@ -545,27 +545,31 @@
 	{on spawn
 		{delay 0.01 {volumes disable bullet contact blast touch}}
 		{delay 1 {volumes enable bullet contact blast touch}}
-		{delay 300 240 {hide 1}{delay 2 {delete}}}
+		{delay 300 240 {hide 1}}
 	}
 	{on blast
 		{delay 0.01 {volumes disable bullet contact blast touch}}
 		{delay 3 {volumes enable bullet contact blast touch}}
-		{if rand 0.2 {spawn "ground_blood_big"}}
-		{if rand 0.3 {spawn "ground_blood_small"}}
-		{if rand 0.25 {spawn "ground_blood01"}}
-		{if rand 0.2 {spawn "ground_blood02"}}
-		{if rand 0.15 {spawn "ground_blood03"}}
+		{if rand 0.2 {spawn "bm_bloodpool_a"}}
+		{if rand 0.3 {spawn "bm_bloodpool_b"}}
+		{if rand 0.25 {spawn "bm_bloodpool_c"}}
+		{if rand 0.2 {spawn "bm_bloodpool_d"}}
+		{if rand 0.15 {spawn "bm_bloodpool_e"}}
+		{if rand 0.2 {spawn "bm_bloodpool_j"}}
+		{if rand 0.3 {spawn "bm_bloodpool_g"}}
 	}
 	{on bullet_hit
 		{if rand 0.3 {spawn "bloodspark_small01"}}
 		{if rand 0.3 {spawn "bloodspark_small02"}}
-		{if rand 0.3 {spawn "bloodsparks01"}}
-		{if rand 0.3 {spawn "bloodsparks02"}}
-		{if rand 0.2 {spawn "ground_blood_big"}}
-		{if rand 0.1 {spawn "ground_blood_small"}}
-		{if rand 0.15 {spawn "ground_blood01"}}
-		{if rand 0.1 {spawn "ground_blood02"}}
-		{if rand 0.2 {spawn "ground_blood03"}}
+		{if rand 0.2 {spawn "bloodsparks01"}}
+		{if rand 0.1 {spawn "bloodsparks02"}}
+		{if rand 0.1 {spawn "bm_bloodpool_a"}}
+		{if rand 0.2 {spawn "bm_bloodpool_b"}}
+		{if rand 0.25 {spawn "bm_bloodpool_c"}}
+		{if rand 0.2 {spawn "bm_bloodpool_d"}}
+		{if rand 0.15 {spawn "bm_bloodpool_e"}}
+		{if rand 0.2 {spawn "bm_bloodpool_j"}}
+		{if rand 0.3 {spawn "bm_bloodpool_g"}}
 	}
 	{on contact
 		{if stuff "fg"
@@ -642,17 +646,19 @@
 		}
 		{delay 0.01 {volumes disable bullet contact blast touch}}
 		{delay 15 {volumes enable bullet contact touch}}
-		{if rand 0.02 {spawn "ground_blood01"}}
-		{if rand 0.02 {spawn "ground_blood02"}}
-		{if rand 0.02 {spawn "ground_blood03"}}
+		{if rand 0.2 {spawn "bm_bloodpool_j"}}
+		{if rand 0.3 {spawn "bm_bloodpool_g"}}
+		{if rand 0.25 {spawn "bm_bloodpool_c"}}
+		{if rand 0.2 {spawn "bm_bloodpool_d"}}
+		{if rand 0.15 {spawn "bm_bloodpool_e"}}
 	}
 	{on ground_hit
 		{if min_speed 0.1
-			{if rand 0.2 {spawn "ground_blood_big"}}
-			{if rand 0.3 {spawn "ground_blood_small"}}
-			{if rand 0.25 {spawn "ground_blood01"}}
-			{if rand 0.2 {spawn "ground_blood02"}}
-			{if rand 0.15 {spawn "ground_blood03"}}
+			{if rand 0.2 {spawn "bm_bloodpool_a"}}
+			{if rand 0.3 {spawn "bm_bloodpool_b"}}
+			{if rand 0.25 {spawn "bm_bloodpool_c"}}
+			{if rand 0.2 {spawn "bm_bloodpool_d"}}
+			{if rand 0.15 {spawn "bm_bloodpool_e"}}
 		}
 	}
 }
@@ -686,7 +692,7 @@
 	}
 	{on contact
 		{if effector "vehicle"
-			{volumes disable bullet contact blast}		;//prevent destroing at spawn moment
+			{volumes disable bullet contact blast}		;//prevent destroying at spawn moment
 			{hide 1}
 			{delay 2 {delete}}
 		}
@@ -829,9 +835,11 @@
 		}
 	}
 	{on bullet_hit
-		{if stuff "shell"
+		{if stuff "big shell"
 			{call "destroy_part"}
-		else stuff "zenite"
+		 else stuff "shell"
+			{call "destroy_part"}
+		 else stuff "zenite"
 			{impulse up 0.2 0.1 dir 0.1 0.05}
 		}
 	}

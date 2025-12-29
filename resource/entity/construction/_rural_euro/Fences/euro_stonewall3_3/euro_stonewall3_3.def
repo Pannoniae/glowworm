@@ -1,0 +1,14 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "crushable"  "concrete" "parts" "construction" "medium" "no_destroyed_stamp"}
+	("armor_medium" args 1)
+	{extension "euro_stonewall3_3.mdl"}
+	{volume "body07"
+		{Tags "body"}
+		{thickness 40}
+	}
+	{volume "jump01"
+		{Tags "climb"}
+		{able clear {touch 1}}
+	}
+}

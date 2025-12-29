@@ -1,0 +1,105 @@
+{game_entity
+	(include "/properties/building_roof.inc")
+	{props "wood" "big" "parts" "construction"  "tower_wood" "burning"}
+	("armor_medium" args 1.0)
+	{obstacleID "small_building"}
+	{extension "guard_tower_small.mdl"}
+	{volume "attach01"
+		{Tags "attach" "1"}
+		{able clear {bullet 0}{touch 1}}
+	}
+	{volume "body10"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body11"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body12"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body1"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body2"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body3"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body4"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body5"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body6"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body7"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body8"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body9"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}{Obstacle 0}}
+	}
+	{volume "body"
+		{Tags "body" "fire"}
+		{thickness 30}
+		{able {visible 0}}
+	}
+	
+	
+	{mass 30000}
+
+	{placer
+		{place "1" {attach  snipe_cover} 		{linkbone "node01"}}
+	}
+
+	{Boarder
+		{door "emit" {queue 0}}
+		{node "node_ladder_bottom"}
+		{node "node_ladder_top"}
+		
+		{anm "ladder_bind"
+			{forward	{begin	"stand_climb_stairs"}}
+			{reverse	{end	"stand_climb_stairs" -1}}
+		}
+		
+		{anm "ladder"
+			{forward	{speed 1.2} {loop "stand_upstairs"}}
+			{reverse	{speed 1.2} {loop "stand_upstairs" -1}}
+		}
+		
+		{link "emit" "node_ladder_bottom" {anm "ladder_bind"} {forward putoff} {reverse puton}}
+		{link "node_ladder_bottom" "node_ladder_top" {anm "ladder"}}
+
+		{link "node_ladder_top" "1" {forward puton} {reverse putoff}}
+	}
+	
+}

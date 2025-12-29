@@ -1,0 +1,14 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "crushable"  "concrete" "shed" "construction" "medium" "no_destroyed_stamp"}
+	("armor_medium" args 1)
+	{extension "ger_fence_long02.mdl"}
+	{volume "body01"
+		{Tags "body"}
+		{thickness 40}
+	}
+	{volume "jump01"
+		{Tags "climb"}
+		{able clear {visible 0}{touch}}
+	}
+}

@@ -45,7 +45,8 @@
 	("bitgamer")
 	{armor
 		{setting "body"
-			{threshold {pierce {koef 1}}}
+			;{threshold {pierce {koef 1}}}
+			{threshold {pierce {calibre 20}}}
 			{ray_cast_thickness}
 			{volumes "body*"}
 			{volumes "box*"}
@@ -56,7 +57,8 @@
 			{volumes "door*"}
 		}
 		{setting "roof"
-			{threshold {pierce {koef 1}}}
+			;{threshold {pierce {koef 1}}}
+			{threshold {pierce {calibre 20}}}
 			{ray_cast_thickness}
 			{volumes "roof*"}
 			{volumes "floor*"}
@@ -83,11 +85,13 @@
 	{armor
 		{setting "body"
 			{threshold
+				{pierce {calibre 10}}
 				{blast {value 2}}
 			}
 		}
 		{setting "roof"
 			{threshold
+				{pierce {calibre 10}}
 				{blast {value 2}}
 			}
 		}
@@ -98,12 +102,14 @@
 	{armor
 		{setting "body"
 			{threshold
-				{blast {value 10}}
+				{pierce {calibre 37}}
+				{blast {value 5}}
 			}
 		}
 		{setting "roof"
 			{threshold
-				{blast {value 10}}
+				{pierce {calibre 37}}
+				{blast {value 5}}
 			}
 		}
 	}
@@ -113,12 +119,14 @@
 	{armor
 		{setting "body"
 			{threshold
-				{blast {value 13}}
+				{pierce {calibre 57}}
+				{blast {value 8}}
 			}
 		}
 		{setting "roof"
 			{threshold
-				{blast {value 12}}
+				{pierce {calibre 57}}
+				{blast {value 7}}
 			}
 		}
 	}
@@ -128,12 +136,14 @@
 	{armor
 		{setting "body"
 			{threshold
-				{blast {value 17}}
+				{pierce {calibre 75}}
+				{blast {value 11}}
 			}
 		}
 		{setting "roof"
 			{threshold
-				{blast {value 17}}
+				{pierce {calibre 75}}
+				{blast {value 10}}
 			}
 		}
 	}
@@ -143,11 +153,13 @@
 	{armor
 		{setting "body"
 			{threshold
+				{pierce {calibre 85}}
 				{blast {value 22}}
 			}
 		}
 		{setting "roof"
-			{threshold 
+			{threshold
+				{pierce {calibre 85}}
 				{blast {value 24}}
 			}
 		}
@@ -158,11 +170,13 @@
 	{armor
 		{setting "body"
 			{threshold
+				{pierce {calibre 85}}
 				{blast {value 35}}
 			}
 		}
 		{setting "roof"
 			{threshold 
+				{pierce {calibre 85}}
 				{blast {value 34}}
 			}
 		}
@@ -173,11 +187,13 @@
 	{armor
 		{setting "body"
 			{threshold
+				{pierce {calibre 85}}
 				{blast {value 35}}
 			}
 		}
 		{setting "roof"
-			{threshold 
+			{threshold
+				{pierce {calibre 85}}
 				{blast {value 34}}
 			}
 		}
@@ -188,12 +204,14 @@
 	{armor
 		{setting "body"
 			{threshold
-				{blast {value 10}}
+				{pierce {calibre 10}}
+				{blast {value 5}}
 			}
 		}
 		{setting "roof"
 			{threshold
-				{blast {value 10}}
+				{pierce {calibre 10}}
+				{blast {value 5}}
 			}
 		}
 	}
@@ -219,7 +237,7 @@
 			{volumes "door*"}
 		}
 		{setting "roof"
-			{threshold {blast {value 10}}}
+			{threshold {blast {value 5}}}
 			{volumes "roof*"}
 			{volumes "floor*"}
 		}
@@ -248,33 +266,33 @@
 )
 
 (define "armor_hedgehog_big"
-	("armor_adjustable" thresh_fg(40) thresh_ap(100) calibre(85))
+	("armor_adjustable" thresh_fg(30) thresh_ap(100) calibre(85))
 )
 (define "armor_hedgehog"
-	("armor_adjustable" thresh_fg(35) thresh_ap(80) calibre(57)) ; 35fg = 105mm HE and up
+	("armor_adjustable" thresh_fg(15) thresh_ap(80) calibre(57)) ; 35fg = 105mm HE and up
 )
 
 (define "armor_dragontooth"
-	("armor_adjustable" thresh_fg(13) thresh_ap(60) calibre(37))
+	("armor_adjustable" thresh_fg(10) thresh_ap(60) calibre(37))
 )
 
 (define "armor_fabric"
-	("armor_adjustable" thresh_fg(10) thresh_ap(15) calibre(12))
+	("armor_adjustable" thresh_fg(5) thresh_ap(10) calibre(12))
 )
 
 (define "armor_stack"
-	("armor_adjustable" thresh_fg(10) thresh_ap(15) calibre(15))
+	("armor_adjustable" thresh_fg(5) thresh_ap(10) calibre(12))
 )
 
 (define "armor_glass"
-	("armor_adjustable" thresh_fg(10) thresh_ap(15) calibre(0))
+	("armor_adjustable" thresh_fg(5) thresh_ap(10) calibre(0))
 )
 
 (define "armor_sandbag"
-	("armor_adjustable" thresh_fg(10) thresh_ap(15) calibre(30))
+	("armor_adjustable" thresh_fg(5) thresh_ap(10) calibre(30))
 )
 (define "armor_sandbag_woodbeam"
-	("armor_adjustable" thresh_fg(10) thresh_ap(10) calibre(0))
+	("armor_adjustable" thresh_fg(5) thresh_ap(10) calibre(0))
 )
 
 (define "armor_post"
@@ -283,7 +301,7 @@
 	{armor
 		{setting "body"
 			{threshold
-				{blast {value 10}}
+				{blast {value 5}}
 			}
 		}
 	}
@@ -299,11 +317,13 @@
 	{armor
 		{setting "body"
 			{threshold
+				{pierce {calibre 5}}
 				{blast {value 4.75}}
 			}
 		}
 		{setting "roof"
 			{threshold
+				{pierce {calibre 5}}
 				{blast {value 4.75}}
 			}
 		}

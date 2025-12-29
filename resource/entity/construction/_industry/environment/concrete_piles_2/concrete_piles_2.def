@@ -1,0 +1,19 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{collider "construction"}
+	{obstacleID "small_building"}
+	{props "big" "concrete" "construction" "parts" "crushable" "no_destroyed_stamp" }
+	("armor_75mm")
+
+	{lodclass "decor_medium"}
+	{Extension "concrete_piles_2.mdl"}
+	{Volume "body1"
+		{Tags "body"}
+		{able {obstacle 0}}
+		{Thickness 80}
+	}
+	{Volume "body"
+		{Tags "body"}
+		{Thickness 80}
+	}
+}

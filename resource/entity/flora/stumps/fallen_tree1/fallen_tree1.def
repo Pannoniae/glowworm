@@ -1,0 +1,28 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{extension "fallen_tree1.mdl"}
+	{props "wood" "construction" "break_on_burn" "parts" "crushable" "no_destroyed_stamp" "burning"}
+	{lodclass "decor_big"}
+	{obstacleID "tree"}
+	{collider "tree"}
+	{volume "body1"
+		{Tags "body" "fire" "climb"}
+		{thickness 40}
+		{able {visible 0}{touch}}
+	}
+	{volume "body2"
+		{Tags "body" "fire"}
+		{thickness 40}
+		{able {visible 0}}
+	}
+	{volume "body3"
+		{Tags "body" "fire"}
+		{thickness 40}
+		{able {visible 0}}
+	}
+	{volume "body4"
+		{Tags "body" "fire"}
+		{thickness 40}
+		{able {visible 0}}
+	}
+}

@@ -43,6 +43,8 @@
 		{add_view	"drops_puddle_small"	"on_shallow_water"	"foot3l"}
 		{add_view	"drops_puddle_small"	"on_row"		"gun_back"}
 		{add_view 	"fire_dead" 			"burn_fire" "body"}
+		{add_view	"officer" 				"officer" "head"}
+		{add_view	"documents" 			"documents" "head"}
 
 		{add_view	"marker_healing"			"marker_healing"			"head" not_manual not_scenario}
 		{add_view	"marker_repair"				"marker_repair"				"head" not_manual not_scenario}
@@ -140,11 +142,14 @@
 		}
 	)
 
-	{on contact
+	{on contact sync
 		{if not impregnable
 			{if not volume "ram"
 				{kill_flags reset}
 				{volumes disable contact}
+				{delay 2
+					{volumes enable contact}
+				}
 				{if effector "fx_piece_flame"
 					{if not dead
 						("human_health" c(15))
@@ -263,46 +268,46 @@
 
 	{on bullet_hit
 		{if not dead
-		{kill_flags reset}
-		{signal hit 5}
-		{if stuff "shell fg"
-			{bullet_detonate}
-			{call "process_bullet_hit"}
-			{call "unhealable"}
-		else stuff "rocketlauncher"
-			{bullet_detonate}
-			{if rand 0.75 {call "bm_explosion"}
-				else
+			{kill_flags reset}
+			{signal hit 5}
+			{if stuff "shell fg"
+				{bullet_detonate}
 				{call "process_bullet_hit"}
 				{call "unhealable"}
-			}
-		else stuff "rifle_grenade_at"
-			{bullet_detonate}
-			{call "process_bullet_hit"}
-		else stuff "bullet"
-			{if volume_armored
+			else stuff "rocketlauncher"
 				{bullet_detonate}
-				{spawn "helmet_hit_bul"}
-			}
-			{call "process_bullet_hit"}
-			{if tagged "start_personage"
-				{if rand 0.5
-					{call_synced "unhealable"}
+				{if rand 0.75 {call "bm_explosion"}
+					else
+					{call "process_bullet_hit"}
+					{call "unhealable"}
 				}
-			}
-		else stuff "shell"
-			{if rand 0.3 {call "bm_explosion"}
-				else stuff "auto"
+			else stuff "rifle_grenade_at"
+				{bullet_detonate}
+				{call "process_bullet_hit"}
+			else stuff "bullet"
+				{if volume_armored
+					{bullet_detonate}
+					{spawn "helmet_hit_bul"}
+				}
+				{call "process_bullet_hit"}
+				{if tagged "start_personage"
+					{if rand 0.5
+						{call_synced "unhealable"}
+					}
+				}				
+			else stuff "shell"
+				{if rand 0.3 {call "bm_explosion"} 					
+			else stuff "auto"
 					{if rand 0.2 {call "bm_explosion"}		
 						else
 						{call "process_bullet_hit"}
-						{call "unhealable"}
-					}
+						{call "unhealable"}			
+					}				
+				}
+			else
+				{call "process_bullet_hit"}
 			}
-		else
-			{call "process_bullet_hit"}
 		}
-	}
 	}
 	{on "blow_effect"
 		{if not name "knife"
@@ -331,6 +336,7 @@
 			{health_damage_blow
 				{effects "" "hit" "hit" "die_from_knife" "die_from_knife"}
 			}
+			{tags add "_stabbed"}
 		else
 			{health_damage_blow
 				{effects "" "hit" "hit" "die" "die"}
@@ -437,6 +443,14 @@
 				{ani_play "flinch/flinch_leg_l_01" norestart}
 			else volume_any "foot1r foot2r"
 				{ani_play "flinch/flinch_leg_r_01" norestart}
+			}			
+			else
+			{if min_energy 1.6
+				{call "explosion"}
+				else
+				{if min_energy 0.5
+					{if rand 0.2 {call "blood_big"}}
+				}				
 			}
 		}
 		{if stuff "grenade"

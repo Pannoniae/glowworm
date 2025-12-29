@@ -1,0 +1,22 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "crushable"  "concrete" "parts" "construction" "medium" "no_destroyed_stamp"}
+	("armor_medium" args 1)
+	{extension "dutch_fence01_corner02.mdl"}
+	{volume "body01"
+		{Tags "body"}
+		{thickness 1000}
+	}
+	{volume "body02"
+		{Tags "body"}
+		{thickness 1000}
+	}
+	{volume "jump01"
+		{Tags "climb"}
+		{able clear {touch 1}}
+	}
+	{volume "jump02"
+		{Tags "climb"}
+		{able clear {touch 1}}
+	}
+}

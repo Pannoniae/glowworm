@@ -1,0 +1,28 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{Extension "fence_industrial_02_i_upper.mdl"}
+	{props "cornered" "concrete" "parts" "construction" "wall" "red_destroyed_stamp" }
+  {##DecalView
+	;{ownershadow  64 64}
+	{name "shadow"}
+  }
+	{obstacleID "small_building"}
+	("armor_use_volume_thickness")
+	{Volume "body_upper_vol1"
+		{Tags "body"}
+		{thickness 20}
+	}
+	{Volume "body_upper_vol2"
+		{Tags "body"}
+		{thickness 20}
+	}
+	{Volume "body_upper_vol3"
+		{Tags "body"}
+		{thickness 20}
+	}
+	{Volume "body_upper_vol4"
+		{Tags "body"}
+		{thickness 20}
+	}
+	{lodclass "decor_medium"}
+}

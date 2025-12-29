@@ -16,7 +16,7 @@
 {volume "body"
 	{Tags "body"}
 	{able clear {contact}{blast}{bullet}}
-	{thickness 999}
+	{thickness 100}
 	{material "ground"}
 }
 
@@ -24,7 +24,7 @@
 	{setting "body"
 		{volumes "body*"}
 		{threshold
-			{blast {value 48}}
+			{blast {value 15}}
 		}
 	}
 }

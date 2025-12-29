@@ -710,24 +710,6 @@
 ;	("squad_vehicle5" period(late) year(44 45 46) cd(90) ci(180) t(vehicle) side(ger) vehicle(ju-52) crew1(pilot:2) crew2(fallsch_rifle:4) crew3(fallsch_sa:4) crew4(fallsch_mg:1) crew5(fallsch_mg_asst:1) g(lightc) b(squad) )
 ;	{tags "limit2"}
 ;}
-
-
-;AP miners
-("squad_with1types" side(ger) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(squad_1) c1(miner-ap:4)					b(squad) t())
-
-;AT miners
-("squad_with1types" side(ger) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(squad_1) c1(miner-at:4)					b(squad) t())
-
-;Support crew
-("squad_with1types_man" side(ger) name(single_support)		period(late) year(44 45 46) cd(90) ci(0) g(squad_1)		c1(artilleryman:5)					b(squad) t() cost(45))
-
-;Tank Crew
-("squad_with2types" side(ger) name(single_tankman)		period(late) year(44 45 46) cd(0)   ci(60)  g(squad_1) c1(tankman:4) c2(tank_commander:1)				b(squad) t())
-
-;Veteran Tank Crew
-("squad_with1types" side(ger) name(single_tankman_vet)		period(late) year(44 45 46) cd(0)   ci(10)   g(squad_1) c1(tank_commander_ace:1)					b(squad) t())
-
-
 ;_________________________________________________
 ;|             inf2                               |
 ;|________________________________________________|
@@ -746,11 +728,23 @@
 ("squad_with2types" side(ger) name(single_mg_elite2)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_vet_mg:1) c2(fallsch_vet_mg_asst:1) b(single) t())
 ("squad_with2types" side(ger) name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_at) c1(antitank_1:1) c2(antitank_2:1)		b(single) t())
 ("squad_with2types" side(ger) name(single_riflegrenade)	period(late) year(44 45 46) cd(0)   ci(0)  g(single_rifleg) c1(antitank_4:1) c2(antitank_5:1)	b(single) t())
+("squad_with1types" side(ger) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine) c1(miner-ap:2)					b(single) t(engineer miner))
+("squad_with1types" side(ger) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine) c1(miner-at:2)					b(single) t(engineer miner))
 ("squad_with2types" side(ger) name(single_engineer)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng) c1(engineer_1:1) c2(engineer_2:1)	b(single) t(engineer builder))
 ("squad_with1types" side(ger) name(single_flamer)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer) c1(flamer:1) 						b(single) t(flamer))
 ("squad_with1types" side(ger) name(single_medic)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic) c1(medic:2)						b(single) t(medic))
 ("squad_with1types" side(ger) name(single_sniper)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper) c1(sniper:1) 						b(single) t(sniper))
 ("squad_with1types" side(ger) name(single_officer)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer) c1(officer:1)					b(single) t(officer))
+;Support crew
+("squad_with1types_man" side(ger) name(single_support)		period(late) year(44 45 46) cd(90) ci(0) g(squad_1)		c1(artilleryman:5)					b(single) t() cost(45))
+
+;Tank Crew
+("squad_with2types" side(ger) name(single_tankman)		period(late) year(44 45 46) cd(0)   ci(60)  g(squad_1) c1(tankman:4) c2(tank_commander:1)				b(single) t())
+
+;Veteran Tank Crew
+("squad_with1types" side(ger) name(single_tankman_vet)		period(late) year(44 45 46) cd(0)   ci(10)   g(squad_1) c1(tank_commander_ace:1)					b(single) t())
+
+
 
 ;_________________________________________________
 ;|               Wheeled vehicles                 |
