@@ -1,6 +1,6 @@
 
 	(include "/properties/construction.inc")
-	{props "steel" "parts" "big" "construction" "burning" "break_on_burn" "crushable" "no_destroyed_stamp" }
+	{props "steel" "parts" "big" "construction" "burning" "break_on_burn" "crushable" "no_destroyed_stamp" "slow_on_crush"}
 	("armor_house_wood")
 	{obstacleID "small_building"}
 	{mass 1000}
