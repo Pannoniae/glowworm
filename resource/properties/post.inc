@@ -17,7 +17,7 @@ game_entity
 	{collider "tree"}
 	{obstacleID "post"}
 	{mass 200}
-	{props "post"}
+	{props "post" "slow_on_crush"}
 	(include "seasons.inc")
 	(include "construction_generic.inc")
 	(include "light.inc")

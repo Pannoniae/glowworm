@@ -2,6 +2,9 @@
 {if component "engine"
     {damage_report "hit_engine" "component/hit_engine"}
 }
+{if volume "engine"
+    {damage_report "hit_engine" "component/hit_engine"}
+}
 (define "body_damage_display"
     {if hit_side front
         {damage_report "hit_hull_front" "component/hit_hull_front"}
@@ -131,6 +134,24 @@
 }
 {if component "armor_turret"
     {damage_report "hit_shield" "component/hit_mantlet"}
+}
+{if volume "trackleft"
+    {damage_report "hit_trackleft" "component/hit_trackleft"}
+}
+{if volume "trackright"
+    {damage_report "hit_trackright" "component/hit_trackright"}
+}
+{if volume "shield"
+    {damage_report "hit_shield" "component/hit_shield"}
+}
+{if volume "armor_hull"
+    {damage_report "hit_shield" "component/hit_hull_front"}
+}
+{if volume "armor_turret"
+    {damage_report "hit_shield" "component/hit_mantlet"}
+}
+{if volume "gun"
+    {damage_report "hit_gun" "component/hit_gun"}
 }
 {if volume "shieldr1" {damage_report "hit_shield" "component/hit_shield"}}
 {if volume "shieldr2" {damage_report "hit_shield" "component/hit_shield"}}
