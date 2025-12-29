@@ -755,13 +755,13 @@
 
 ;//english and polish mechanized
 ; todo add english icons / names!
-;("squad_vehicle_with8types_i" side(pol) name(squad_rifle_mech_late_off_3) period(late) year(44 45 46) scf(0.85) cd(300) ci(10) g(squad_2_mech) vehicle(m5a1_halftrack) c1(driver_smg:1) c2(mot_rifle_band:1) c3(mot_sec_com:1) c4(mot_sec_2ic:1) c5(mot_piat:1) c6(mot_piat_asst:1) c7(mot_mg:1) c8(mot_mg_asst:1) b(squad) i(503) t())
+("squad_vehicle_with8types_i" side(pol) name(squad_rifle_mech_late_off_3) period(late) year(44 45 46) scf(0.85) cd(300) ci(10) g(squad_2_mech) vehicle(m5a1_halftrack) c1(driver_smg:1) c2(mot_rifle_band:1) c3(mot_sec_com:1) c4(mot_sec_2ic:1) c5(mot_piat:1) c6(mot_piat_asst:1) c7(mot_mg:1) c8(mot_mg_asst:1) b(squad) i(503) t())
 ("squad_vehicle_with7types_i" side(pol) name(squad_rifle_mech_late_off_3) period(late) year(44 45 46) scf(0.85) cd(300) ci(10) g(squad_2_mech) vehicle(m5a1_halftrack) g(squad_2_mech) c1(1st_ad_driver_smg:1) c2(1st_ad_mot_rifle_band:1) c3(1st_ad_mot_sec_com:1) c4(1st_ad_mot_sec_2ic:1) c5(1st_ad_mot_piat:1) c6(1st_ad_mot_piat_asst:1) c7(1st_ad_mot_mg:1) c8(1st_ad_mot_mg_asst:1) b(squad) i(518) t(eng))
 
 ;//t3
 ;//pioneers and assault squad
 ("squad_with3types" side(eng) name(squad_gds_ad_pio_late_def) period(late) year(44 45 46) scf(1) cd(180) ci(180) g(squad_3) c1(gds_ad_pio_sec_com_sgt:1) c2(gds_ad_pio_builder:1) c3(gds_ad_pio:7) b(squad) t())
-;("squad_with6types_i" side(eng) name(squad_rm_com_assault_late_off_2) period(late) year(44 45 46) scf(1) cd(0) ci(30) g(squad_3) c1(rm_com_subsec_com:1) c2(rm_com_subsec_detach_com:1) c3(rm_com_subsec_detach_com_mg:1) c4(rm_com_rifle_band:6) c5(rm_com_mg:1) c6(rm_com_mg_asst:1) b(squad) i(505) t())
+("squad_with6types_i" side(eng) name(squad_rm_com_assault_late_off_2) period(late) year(44 45 46) scf(1) cd(0) ci(30) g(squad_3) c1(rm_com_subsec_com:1) c2(rm_com_subsec_detach_com:1) c3(rm_com_subsec_detach_com_mg:1) c4(rm_com_rifle_band:6) c5(rm_com_mg:1) c6(rm_com_mg_asst:1) b(squad) i(505) t())
 
 ;//royal navy commandos
 ("squad_with7types_i" side(eng) name(squad_rn_com_beach_late_irr_2) period(late) year(44 45 46) scf(1) cd(180) ci(180) g(squad_3) c1(rn_com_bm:1) c2(rn_com_bma:1) c3(rn_com_leading:1) c4(rn_com_able:3) c5(rn_com_rifle:4) c6(rn_com_mg:1) c7(rn_com_mg_asst:1) b(squad) i(506) t())
@@ -779,11 +779,81 @@
 
 ;//english paratrooper engineers, paratrooper engineers with 3 flamethrowers
 ("squad_with9types_i" side(eng) name(squad_6th_para_eng_late_def_2) period(late) year(44 45 46) scf(1) cd(360) ci(360) g(squad_4) c1(6th_air_para_eng_sec_com:1) c2(6th_air_para_eng_sec_2ic:1) c3(6th_air_para_eng:1) c4(6th_air_para_eng_at_mine:2) c5(6th_air_para_eng_sapper:3) c6(6th_air_para_eng_piat:1) c7(6th_air_para_eng_piat_asst:1) c8(6th_air_para_eng_mg:1) c9(6th_air_para_eng_mg_asst:1) b(squad) i(510) t())
-("squad_with3types" side(eng) name(squad_1st_para_eng_flame_late_irr) period(late) year(44 45 46) scf(1) cd(360) ci(360) g(squad_4) c1(1st_air_para_eng_sec_com_sgt:1) c2(1st_air_para_eng_sapper:2) c3(1st_air_para_eng_flamer:3) b(squad) t())
+("squad_with3types" side(eng) name(squad_1st_para_eng_flame_late_irr) period(late) year(44 45 46) year(late) scf(1) cd(360) ci(360) g(squad_4) c1(1st_air_para_eng_sec_com_sgt:1) c2(1st_air_para_eng_sapper:2) c3(1st_air_para_eng_flamer:3) b(squad) t())
 
 ;//t4+
 ;//SAS, t4+ stealth unit
 ("squad_with8types" side(eng) name(doctrine_squad_sas_late) period(late) year(44 45 46) scf(1) cd(420) ci(420) g(squad_4) c1(sas_sec_com:1) c2(sas_subsec_com:2) c3(sas_tsmg:2) c4(sas_rifle:3) c5(sas_piat:1) c6(sas_piat_asst:1) c7(sas_mg:1) c8(sas_mg_asst:1) b(squad) t())
+
+
+
+
+
+;//NEW ROSTER REBUILD
+
+;CHECK ALL FOR IF THEY SHOULD HAVE SANDBAGS OR NOT
+
+;Yellow Devils recon jeep
+;skill 4 recces
+;("squad_vehicle_with3types" side(eng) name(squad_eng_recon) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_1) vehicle(willys_mb_mg_eng) c1(recon_sl:1) c2(recon_rifle:2) c3(recon_smg:1) b(squad) t()) 
+
+;5th Duke of Cornwall's Light Infantry Section
+;skill 4 recces
+;("squad_with4types" side(eng) name(squad_eng_cornwall) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_1) c1(recon_sl:1) c2(recon_smg:1) c3(recon_rifle:6) c4(recon_mortar:1) b(squad) t())
+
+;canadian rifle squad
+;skill 3
+;("squad_with5types" side(eng) name(squad_can_rifle) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_1) c1(can_rifle:6) c2(can_mg:1) c3(can_mg_asst:1) c4(can_subcom:1) c5(can_sec_com) b(squad) t())
+
+;motorised canadian rifle squad
+;skill 3
+;("squad_with6types_vehicle_crew" side(eng) name(squad_can_rifle_mot) period(late) year(44 45 46) cd(0) ci(60) g(squad_2) vehicle1(bedford_oyd) crew1(can_rifle:2) crew2(can_sec_com:1) crew3(can_subcom:1) crew4(can_rifle:6) crew5(can_mg:1) crew6(can_mg_asst:1)		b(squad) t())
+
+;english rifle squad
+;skill 4
+;("squad_with5types" side(eng) name(squad_eng_rifle) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_2) c1(eng_rifle:6) c2(eng_sec_subcom:1) c3(eng_sec_com:1) c4(eng_mg:1) c5(eng_mg_asst:1) b(squad) t())
+
+;motorized english rifle squad
+;skill 4
+;("squad_with6types_vehicle_crew" side(eng) name(squad_eng_rifle_mot) period(late) year(44 45 46) cd(0) ci(60) g(squad_2) vehicle1(bedford_oyd) crew1(eng_rifle:2) crew2(eng_sec_subcom:1) crew3(eng_sec_com:1) crew4(eng_mg:1) crew5(eng_mg_asst:1) crew6(eng_rifle:6)		b(squad) t())
+
+;ADD IN COLDSTREAM GUARD PIONEER SQUAD LATER (use pioneer squad with coldstream guard skins)
+
+;highlander rifle squad
+;skill 5
+;("squad_with5types" side(eng) name(squad_scot_rifle) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_3) c1(51hl_rifle:6) c2(51hl_sec_subcom:1) c3(51hl_sec_com:1) c4(51hl_mg:1) c5(51hl_mg_asst:1) b(squad) t())
+
+;royal marine commando squad (blue tin hats)
+;skill 5
+;("squad_with6types" side(eng) name(squad_rm_commandos) period(late) year(44 45 46) scf(1) cd(0) ci(120) g(squad_3) c1(rn_com_bm:1) c2(rn_com_bma:1) c3(rn_com_rifle:3) c4(rn_com_smg:3) c5(rn_com_mg:2) c6(rn_com_mg_asst:2) b(squad) t())
+
+;french mechanized
+;skill 5
+;("squad_with4types" side(eng) name(squad_fra_rifle) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_3) c1(fra_sl:1) c2(fra_mg:1) c3(fra_mg_asst:1) c4(fra_rifle:) b(squad) t())
+;("squad_with5types_vehicle_crew" side(eng) name(squad_fra_rifle_mech) period(late) year(44 45 46) cd(120) ci(60) g(squad_3) vehicle1(m5a1_halftrack) crew1(fra_rifle:2) crew2(fra_sl:1) crew3(fra_mg:2) crew4(fra_mg_asst:2) crew5(fra_rifle:9)		b(squad) t())
+
+;Paratroopers (2INCH MORTAR DOESNT WORK, DOESNT APPEAR TO BE IN GAME FILES)
+;skill 6
+;("squad_with11types" side(eng) name(squad_eng_para) period(late) year(44 45 46) scf(1) cd(300) ci(300) g(squad_4) c1(6th_air_para_sec_com:1) c2(6th_air_para_sec_2ic:1) c3(6th_air_para_smg_band:2) c4(6th_air_para_rifle_band:2) c5(6th_air_para_mortar:1) c6(6th_air_para_sec_mortar_asst:1) c7(6th_air_para_piat:1) c8(6th_air_para_piat_asst:1) c9(6th_air_para_mg:1) c10(6th_air_para_mg_asst_smg:1) c11(6th_air_para_sniper:1) b(squad) t())
+
+;SAS 
+;skill 8
+;("squad_with10types" side(eng) name(squad_eng_sas) period(late) year(44 45 46) scf(1) cd(420) ci(420) g(squad_4) c1(sas_sec_com:1) c2(sas_subsec_com:1) c3(sas_tsmg:2) c4(sas_rifle:3) c5(sas_piat:1) c6(sas_piat_asst:1) c7(sas_mg:1) c8(sas_mg_asst:1) c9(sas_medic:1) c10(sas_at_rifle:1) b(squad) t())
+
+;AT miner squad
+;NEED TO ADD
+
+;AP miner squad
+;NEED TO ADD
+
+;Support crew
+;NEED TO ADD
+
+;Tank Crew
+;NEED TO ADD
+
+;Veteran tank crew
+;NEED TO ADD
 
 
 
@@ -819,10 +889,13 @@
 	("vehicle" period(late) year(44 45 46) cd(30) ci(10) g(wheel7) side(eng) t(vehicle) crew(driver:1) b(supply) cw(1) cp(2)
 	cost(15))
 }
-{"willys_mb_mg_eng"
-	("vehicle2"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(eng) t(vehicle engtruck) crew1(driver:1) crew2(mg_crew:1) b(supply) cw(1) cp(1)
-	cost(100))
-}
+
+;Removed from buy menu, only available in recon squad in squad buys
+;{"willys_mb_mg_eng"
+;	("vehicle2"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(eng) t(vehicle engtruck) crew1(driver:1) crew2(mg_crew:1) b(supply) cw(1) cp(1)
+;	cost(100))
+;}
+
 {"willys_mb_vgo_eng"
 	("vehicle2" period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(eng) t(vehicle engtruck) crew1(driver:1) crew2(mg_crew:1) b(supply) cw(1) cp(1)
 	cost(80))
@@ -890,30 +963,15 @@
 
 
 ;Plane
-{"doctrine_typhoon_mk1b_recon"
-	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(450) ci(10) vehicle(typhoon_mk1b_recon) crew(pilot:1) g(airstrike) b(supply) cost(100))
+{"typhoon_mk1b_recon"
+	("vehicle"  period(late) year(44 45 46) cd(600) ci(10) t(doctrineonly) side(eng) crew(pilot:1) g(airstrike) b(supply) cost(100) cw(2) cp(4))
 	{action "airstrike:reconnaissance_50"} 
-}
-{"doctrine_typhoon_mk1b_light"
-	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(600) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) b(supply) cost(250))
-	("doctrine_t1" cool(360) d(late_eng_irregular) cost(10))
-	{action "airstrike:250lb_gp_mk4"}
 	{tags "limit3"}
 }
-{"doctrine_typhoon_mk1b_heavy"
-	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(900) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) b(supply) cost(500))
-	("doctrine_t3" cool(360) d(late_eng_irregular) cost(30))
-	{action "airstrike:500lb_mc"}
-}
-
-;Plane
-{"typhoon_mk1b_recon"
-	("vehicle"  period(late) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(-2)
-	cost(100))
-}
 {"typhoon_mk1b"
-	("vehicle"  period(late) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(-2)
-	cost(300))
+	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(doctrineonly) side(eng) crew(pilot:1) g(airstrike) b(supply) cost(400) cw(2) cp(4))
+	{action "airstrike:sc_250_mp"}
+	{tags "limit4"}
 }
 
 
@@ -1305,14 +1363,6 @@
 }
 {"achilles_mk2_vet_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(eng) vehicle(achilles_mk2_vet:1) crew1(tankman_ace:4) crew2(tank_commander_ace:1) g(spg1) b(td) cw(4) cp(28)
-	cost(1000))
-}
-{"achilles_mk2"
-	("vehicle2" period(late) cd(0) ci(0) t(doctrineonly medium) side(eng) crew1(tankman:4) crew2(tank_commander:1) g(spg1) b(tanks) cw(4) cp(26)
-	cost(800))
-}
-{"achilles_mk2_vet"
-	("vehicle2" period(late) cd(0) ci(0) t(doctrineonly medium) side(eng) crew1(tankman:4) crew2(tank_commander:1) g(spg1) b(tanks) cw(4) cp(26)
 	cost(1000))
 }
 
