@@ -16,9 +16,9 @@
 			{0 0}
 			{100 10}
 			{200 20}
-			{274.99 45} ;// max range
-			{275 100}
-			{305 200}
+			{274.99 30} ;// max range
+			{275 35}
+			{500 40}
 		}
 	}
 
@@ -26,12 +26,16 @@
 		{min 12}
 		{noaiming}
 	}
-	{gravity 2.4}
-	{minRange 50}
-	{aimRange 275}
-	{maxRange 275} ;//4,3km
 
+	{range 275 275}
+	
 	("velocity" mps(245))
 	("reload time" seconds(300))
 	("fire rate" rpm(90)) ;// about 8s to fire full salvo
+	
+	{gravity 1.5}
+	
+;	{minRange 50}
+;	{aimRange 275}
+;	{maxRange 275} ;//4,3km
 }

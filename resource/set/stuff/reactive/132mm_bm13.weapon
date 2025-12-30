@@ -16,22 +16,27 @@
 			{0 0}
 			{100 10}
 			{200 20}
-			{324.99 40} ;// max range
-			{325 100}
-			{375 200}
+			{374.99 30} ;// max range
+			{375 35}			
+			{500 40}
 		}
 	}
-
+	
 	{burst
 		{min 16}
 		{noaiming}
 	}
-	{gravity 3.25}
 
-	{minRange 50}
-	{aimRange 325}
-	{maxRange 325} ;//8,47km
+	{range 375 375}
+	
 	("velocity" mps(320))
 	("reload time" seconds(200))
 	("fire rate" rpm(240)) ;// 4s to fire full salvo
+	
+	{gravity 1.5}
+	
+;	{minRange 50}
+;	{aimRange 325}
+;	{maxRange 375} ;//8,47km
+	
 }
