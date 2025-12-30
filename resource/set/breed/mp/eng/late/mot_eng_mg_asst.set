@@ -1,17 +1,17 @@
 {breed
 	{behaviour soldier}
-	{skin "can_arm_s_bren_asst"}
-	{portrait "can_infantry"}
+	{skin "uk_inf2_s_bren_asst"}
+	{portrait "eng_motor"}
 	{icon "rifle"}
 	{icon_priority 0}
 	{tags "soldier"}
-	{nationality can} {voice eng}
+	{nationality eng}
 	{armors
-		{head uk_helm_brodie_mk3_mesh_scrim_3}
+		{head uk_helm_brodie_mesh_scrim_3}
 	}
 	{perks
 		(include "ability.inc")
-		("skill3")
+		("skill4")
 	}
 	{veterancy
 		(include "ability.inc")
@@ -19,7 +19,9 @@
 	}
 	{inventory
 		{item "enfield_no4_mk1" filling "rifle_eng clip ammo" 10}
-		{item "lewis_mag ammo" 188}
+		{item "rifle_eng clip ammo" 50}
+
+		{item "bren_mag ammo" 140}
 
 		{item "no69 grenade" 0.25 0.5}
 		{item "no36m grenade" 1.25 0.5}

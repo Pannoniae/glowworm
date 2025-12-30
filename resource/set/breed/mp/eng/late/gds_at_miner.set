@@ -1,17 +1,18 @@
 {breed
 	{behaviour soldier}
-	{skin "uk_para2_ms_rfl"}
-	{portrait "eng_para"}
+	{skin "uk_gds_ad_rs_rfl"}
+	{portrait "eng_miner_at"}
 	{icon "rifle"}
-	{icon_priority 6}
+	{icon_priority 0}
 	{tags "soldier"}
 	{nationality eng}
 	{armors
-		{head uk_helm_para_net}
+		{head uk_helm_brodie}
 	}
 	{perks
 		(include "ability.inc")
-		("skill6")
+		("skill5")
+		("engineer")
 	}
 	{veterancy
 		(include "ability.inc")
@@ -21,18 +22,16 @@
 		{item "enfield_no4_mk1" filling "rifle_eng clip ammo" 10}
 		{item "rifle_eng clip ammo" 50}
 
-		{item "no69 grenade" 1.25 0.5}
 		{item "no36m grenade" 1.5 0.5}
-		{item "no82 grenade" 1.25 0.5}
-		{item "no75 grenade" 0.75 0.5}
 		{item "no77_wp grenade" 0.75 0.5}
+		{item "mine at_gs_mk5" 8.5 0.5}
 		
-		{item "tnt_eng" 1}
-		{item "satchel_charge_eng" 2}
+		{item "tnt_eng" 1.75 0.5}
 
-		{item "bandage_eng" 5.5 0.5}
+		{item "bandage_eng" 4.5 0.5}
 		{item "shovel_eng"}
-		{item "uk_beret_para"}
+		{item "pickaxe"}
+		{item "sandbag_kit"}
 
 		{in_hands 0}
 	}
