@@ -2,6 +2,7 @@
 ; German Light Rocket Artillery
 ;=========================================
 
+
 {from "pattern reactive"		; "Vielfachwerfer"
 	{filling "ammo 82mm_rs82" 48}
 	{fillingVisible "rocket"}
@@ -9,24 +10,28 @@
 	{calibre 82}
 
 	("rocket_artillery")
+	
 	{spreading
 		{radiusTable
 			{0 0}
 			{100 10}
 			{200 20}
-			{354.99 40} ;// max range
-			{355 100}
-			{375 200}
+			{374.99 25} ;// max range
+			{375 30}
+			{500 35}
 		}
 	}
+	
 	{burst 
 		{min 48}
 		{noaiming}
 	}
 
-	{range 355 355}
-	("velocity" mps(320))
+	{range 375 375}
+	
+	("velocity" mps(340))
 	("reload time" seconds(200))
 	("fire rate" rpm(360))
-	{gravity 3.25}
+	
+	{gravity 1.5}
 }
