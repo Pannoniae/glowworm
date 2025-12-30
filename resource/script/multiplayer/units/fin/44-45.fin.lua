@@ -82,8 +82,8 @@ Purchases["44-45.fin"] = {
 					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_vet_cav_late_irr(fin)"},
 					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_elite_rifle_late_def(fin)"},
 					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_sissi_late(fin)"},
-					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_hrr_cav_late(fin)"},
-					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_urr_cav_late(fin)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_cav_hrr_late(fin)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_cav_urr_late(fin)"},
 
 			-- Infantry Singles / Teams
 				---[[
