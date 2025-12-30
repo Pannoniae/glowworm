@@ -1,9 +1,0 @@
-			{"action_selection"}
-			{"ambient_selection"}
-			{"ambient"}
-			{"error"}
-			{"ai_on"}
-			{"user_nation"}
-			{"user_team"}
-			{"mp"}
-			{"ignore_same_user"}
