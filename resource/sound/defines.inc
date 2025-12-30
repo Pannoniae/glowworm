@@ -1065,12 +1065,12 @@
 (define "vehicle_engine"
 	{signal movement 30}
 	{loudness "vehicle_engine"}
-	{volume 1.40}
+	{volume 1.0}
 	{tag effects}
 )
 (define "vehicle_engine_idle"
 	{signal movement 15}
-	{volume 1.30}
+	{volume 0.8}
 	{loudness "vehicle_engine_idle"}
 	{tag effects}
 )
