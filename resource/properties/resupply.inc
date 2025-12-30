@@ -658,7 +658,7 @@
 	{item "114mm_m8"						"ammo" 1 {value 8}} ;// 60 rockets costs 480 per salvo
 	{item "127mm_hvar" "aphe"				"ammo" 1 {value 25}}
 	{item "127mm_hvar" "he"					"ammo" 1 {value 25}}
-	{item "no1_demolition_bomb" "he"		"ammo" 1 {value 25}}
+	;{item "no1_demolition_bomb" "he"		"ammo" 1 {value 25}}
 )
 
 (define "items_heavy_eng"

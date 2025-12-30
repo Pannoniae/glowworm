@@ -97,7 +97,7 @@
 																	<Children>
 																		<PercentPanel percent="0.37" gap="10" direction="vertical">
 																		<Children>
-																			<StackPanel percent="0.37" placement="top"  id="panel_players">
+																			<StackPanel percent="0.77" placement="top"  id="panel_players">
 																				<MinSize y="380"/>
 																			</StackPanel>
 																			<FlowPanel placement="bottom" direction="vertical" gap="10" halign="center">
@@ -221,6 +221,11 @@
 										<PercentPanel percent="0.4" stretch="true" gap="2">
 											<!--<Insets all="10"/>-->
 											<Children>
+												<DockPanel percent="0.1" vgap="2">
+													<Children>
+														<DialogRef resource="components/MenuUserProfile.xml" placement="top"  />
+													</Children>
+												</DockPanel>
 												<PercentPanel percent="0.5" gap="2" direction="vertical">
 													<Children>
 														<DialogRef resource="components/MenuChat.xml" placement="center"  />
@@ -235,6 +240,11 @@
 																</ClickablePictureDialog>
 															</Children>
 														</FrameView>
+														<DialogRef resource="components/MenuFriends.xml" percent="0.5" />
+														<DialogRef resource="components/MenuParty.xml" percent="0">
+														<Visible value="false"/> <!--party hidden-->
+															<MaxSize x="400" />
+														</DialogRef>
 													</Children>
 												</PercentPanel>
 											</Children>
