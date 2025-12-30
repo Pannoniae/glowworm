@@ -865,8 +865,13 @@
 ("single_with1type" side(eng) name(single_rifle)		period(late) year(44 45 46) cd(0)   ci(3)   g(single_1) 		c1(rifle:1)										b(single) t() scf(1.25))
 ("single_with1type" side(eng) name(single_smg)			period(late) year(44 45 46) cd(0)   ci(5)   g(single_1) 		c1(smg:1)										b(single) t() scf(1.25))
 ("squad_with2types" side(eng) name(single_mg)			period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(mg:1) c2(mg_asst:1)							b(single) t())
+("squad_with2types" side(eng) name(single_mg_sas)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(sas_mg:1) c2(sas_mg_asst:1)					b(single) t())
+("squad_with2types" side(eng) name(single_mg_sas_vgo)	period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(sas_mg_vgo:1) c2(sas_mg_asst_vgo:1)			b(single) t())
+("squad_with2types" side(eng) name(single_at)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_at)		c1(antitank_boys:1) c2(antitank_boys_asst:1)	b(inf2) t())
 ("squad_with2types" side(eng) name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_piat)		c1(antitank_piat:1) c2(antitank_piat_asst:1)	b(single) t())
+("squad_with2types" side(eng) name(single_bazooker_sas)	period(late) year(44 45 46) cd(0)   ci(0)   g(single_piat)		c1(sas_piat:1) c2(sas_piat_asst:1)				b(single) t())
 ("single_with1type" side(eng) name(single_riflegrenade)	period(late) year(44 45 46) cd(0)   ci(60)  g(single_rifleg) 	c1(antitank_gren:2)								b(single) t() scf(1.2))
+; TODO WE NEED TO SOURCE A MODEL/WEAPON FILE FOR THIS!!
 ;("single_with1type" side(eng) name(single_mortar)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mortar) c1(rifle_mortar:1)									b(single) t() scf(1.0))
 ("single_with1type" side(eng) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine)	c1(r_eng_mine_ap:2)								b(single) t(engineer miner) scf(1.6))
 ("single_with1type" side(eng) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine)	c1(r_eng_mine_at:2)								b(single) t(engineer miner) scf(1.6))
@@ -875,6 +880,7 @@
 ("squad_with2types" side(eng) name(single_tankman)		period(late) year(44 45 46) cd(150) ci(150) g(single_crew)		c1(tank_commander:1) c2(tankman:4)				b(single) t())
 ("squad_with1types" side(eng) name(single_medic)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic)	c1(medic:1) 									b(single) t(medic))
 ("squad_with1types" side(eng) name(single_sniper)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sniper:1) 									b(single) t(sniper))
+("squad_with1types" side(eng) name(single_sniper_sas)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sas_sniper:1) 							b(single) t(sniper))
 ("squad_with1types" side(eng) name(single_officer)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer)	c1(coy_com:1)									b(single) t(officer))
 
 ("squad_with1types" side(eng) name(radioman_88)			period(late) year(44 45 46) cd(420) ci(180) g(radioman)			c1(fo_radio_88:1)								b(single) t(signaller))
