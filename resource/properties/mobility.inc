@@ -148,12 +148,12 @@
 		{Slow 10}												;// Slow speed. Mainly used in mission scripting
 		{Normal (* %speed 0.6)}																;// Standard speed. Single click movement order
 		{Fast (* %speed 0.9)}																;// Sprint speed. Double click movement order
-		{MaxSpeed %speed}										;// Max speed.
+		{MaxSpeed (* %speed 1.2)}										;// Max speed.
 		{maxSpeedAtMaxTurn %speedatmaxturn}						;// Max speed the vehicle is limited to when executing a tight turn.
-		{StartTime (* (/ %speed (/ %power %weight)) 7)}			;// Time for vehicle to accelerate from 0kph to max speed.
+		{StartTime (* (/ %speed (/ %power %weight)) 6)}			;// Time for vehicle to accelerate from 0kph to max speed.
 		{SteerOn	12}											;// Steering wheel's turn speed, degrees per second.
 		{SteerOff	30}											;// Steering wheel's relaxed (no control applied) neutral position return speed, degrees per second.
-		{TurnRadius 10}										;// AI turning radius, lower = able to turn more without stopping.
+		{TurnRadius 6}										;// AI turning radius, lower = able to turn more without stopping.
 		{StopTime (+ 7.5 (* %weight (* %speed 0.020)))}			;// Time to come to a complete stop from max speed with out applying brakes. "Coasting".
 		{BrakeTime (+ 1 (* %weight (* %speed 0.008)))}			;// Time to come to a complete stop from max speed with brakes applied. 
 		{Gears 0.15 1}											;// Gearing affects acceleration curve.
@@ -176,12 +176,12 @@
 		{Slow 10}												;// Slow speed. Mainly used in mission scripting
 		{Normal (* %speed 0.6)}																;// Standard speed. Single click movement order
 		{Fast (* %speed 0.9)}																;// Sprint speed. Double click movement order
-		{MaxSpeed %speed}										;// Max speed.
+		{MaxSpeed (* %speed 1.1)}										;// Max speed.
 		{maxSpeedAtMaxTurn %speedatmaxturn}						;// Max speed the vehicle is limited to when executing a tight turn.
-		{StartTime (* (/ %speed (/ %power %weight)) 10)}		;// Time for vehicle to accelerate from 0kph to max speed.
+		{StartTime (* (/ %speed (/ %power %weight)) 5)}			;// Time for vehicle to accelerate from 0kph to max speed.
 		{SteerOn	10}											;// Steering wheel's turn speed, degrees per second.
 		{SteerOff	25}											;// Steering wheel's relaxed (no control applied) neutral position return speed, degrees per second.
-		{TurnRadius 10}										;// AI turning radius, lower = able to turn more without stopping.
+		{TurnRadius 6}										;// AI turning radius, lower = able to turn more without stopping.
 		{StopTime (+ 2 (* %weight (* %speed 0.012)))}			;// Time to come to a complete stop from max speed with out applying brakes. "Coasting".
 		{BrakeTime (+ 1 (* %weight (* %speed 0.012)))}			;// Time to come to a complete stop from max speed with brakes applied. 
 		{Gears 0.15 1}											;// Gearing affects acceleration curve.

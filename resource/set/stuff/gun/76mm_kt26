@@ -29,9 +29,9 @@
 ;	("accuracy_direct" r1(1.10) range_ap(180) range_he(180) range_heat(180))
 
 
-	("accuracy_spg" r1(1.00) range_ap(180) range_he(250) range_heat(180))
+	;("accuracy_spg" r1(1.00) range_ap(180) range_he(250) range_heat(180))
 	
-		("accuracy_spg" ; // Applies logic for accuracy of dual direct-indirect weapons
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
 		r1(1.15) 				; // Accuracy radius for direct-fire munitions
 		r1i(1.2) 				; // Accuracy radius for indirect fire
 		rmax(300) 				; // Accuracy radius for indirect fire at maximum range

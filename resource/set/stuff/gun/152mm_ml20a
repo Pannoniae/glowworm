@@ -31,9 +31,9 @@
 	("penetration_medium" shell(aphebc) range(210) a(180) b(174) c(164) d(155) e(146))  ;RHA
  ;//("penetration_medium" shell(aphebc) range(200) a(148) b(142) c(135) d(128) e(122))  ;FHA
 
-	("accuracy_spg" r1(1.00) range_ap(200) range_he(200) range_heat(190))
+	;("accuracy_spg" r1(1.00) range_ap(200) range_he(200) range_heat(190))
 	
-		("accuracy_spg" ; // Applies logic for accuracy of dual direct-indirect weapons
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
 		r1(0.95) 				; // Accuracy radius for direct-fire munitions
 		r1i(12) 				; // Accuracy radius for indirect fire
 		rmax(50) 				; // Accuracy radius for indirect fire at maximum range
