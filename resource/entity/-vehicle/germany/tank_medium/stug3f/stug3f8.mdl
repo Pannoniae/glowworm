@@ -6,9 +6,9 @@
 		{sequence "start" {speed 0.7}}
 		{sequence "stop" {speed 0.7}}
 		{sequence "hit" {speed 0.8}}
-		{sequence "open" {speed 0.6}{resume}}
+		{sequence "open" {speed 0.6}{resume} {events {125 "hatch_medium"}}}
 		{sequence "fire" {speed 0.7}}
-		{sequence "open1" {speed 0.6}{resume}}
+		{sequence "open1" {speed 0.6}{resume} {events {102 "hatch_medium"}}}
 	}
 	{bone revolute "basis"
 		{parameters "wheelradius=0.4;"}
@@ -186,11 +186,11 @@
 							0 	 1 	 0
 							0 	 0 	 -0.6655
 						}
-						{VolumeView "mantlet.ply"}
+						{VolumeView "mantlet_f8.ply"}
 						{bone "gun"
 							{parameters "id=gun;"}
 							{animation
-								{sequence "repair" {file "gun_r.anm"}{speed 0.7}}
+								{sequence "repair" {file "gun_f8_r.anm"}{speed 0.7}}
 							}
 							{matrix34
 								0 	 1 	 0
@@ -483,18 +483,18 @@
 			}
 			{bone "cover4_helper"
 				{matrix34
-					-0.9909 	 0.0243 	 -0.1326
-					-0.0003 	 -0.984 	 -0.1782
-					-0.1348 	 -0.1766 	 0.975
-					0.1275 	 -12.2001 	 9.758
+					1 	 0 	 0
+					0 	 0.9836 	 0.1802
+					0 	 -0.1802 	 0.9836
+					0.1162 	 -12.311 	 9.8558
 				}
 				{bone "cover4"
 					{parameters "id=body;"}
 					{matrix34
-						-0.9909 	 -0.0003 	 -0.1348
-						0.0243 	 -0.984 	 -0.1766
-						-0.1326 	 -0.1782 	 0.975
-						-0.0044 	 0.0916 	 0.1161
+						1 	 0 	 0
+						0 	 0.9836 	 -0.1802
+						0 	 0.1802 	 0.9836
+						0 	 0 	 0
 					}
 					{VolumeView "cover4.ply"}
 				}
@@ -844,7 +844,7 @@
 	{Position -2.2698 	 -2.3407 	 -14.8325}
 }
 {volume "mantlet1"
-	{polyhedron "mantlet1.vol"}
+	{polyhedron "mantlet1_f8.vol"}
 	{bone "mantlet"}
 	{Position 6.444 	 0.0083 	 0.6897}
 }
