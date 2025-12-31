@@ -1,14 +1,16 @@
-{from "pattern mgun"
-	{filling "ammo 7x56" 47}
+{from "pattern mgun_light"
+	{filling "ammo lewis_mag" 47}
 	{entity "lewis_gun"}
-	{fireSound	"mgun/lewis_burst/"}
-	{fireSoundclose "mgun/lewis_burst/3p/"}
-	{reloadSound "bren_reload"}
+	{fireSound 	"smallarms/s3/d1/ENG/Lewis_Gun/"}
+	{fireSoundclose "smallarms/s3/3p/ENG/Lewis_Gun/"}
+	{reloadSound "mg34"}
 	{calibre 7.7}
-	{mass 10}
+	{mass 13}
+
 	("fire rate" rpm(550))
-	("velocity" mps(740))
+	("velocity" mps(743))
+
 	("burst_short")
 	("spreading_low")
+	{traceFreq 1}
 }
-;Cost=40;

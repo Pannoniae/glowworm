@@ -5,7 +5,7 @@
 		{diffuse 0xff585b5d}
 		{specularIntensity 4}
 		{specularPower 4}
-		{lightsIntensity 0.05}
+		{lightsIntensity 0.2}
 		{draw_sun_moon}
 		{sun_moon_radius 1}
 		{night_vision 1}
@@ -13,7 +13,7 @@
 			{gamma 1.2}
 			{brightness 1.2}
 			{contrast 1.1}
-			{saturation 0.8}
+			{saturation 1.4}
 			{tone 0xff00080a}
 			{tone_strength 0}
 			{color_shading
@@ -207,24 +207,25 @@
 		{color 0xffffffff}
 	}
 	{dof
+		{enable}
 		{near_scale 2.0}
-		{far_scale 0.75}
-		{near_start 50}
-		{near_end 100}
+		{far_scale 0.5}
+		{near_start 10}
+		{near_end 35}
 		{far_start 3000}
 		{far_end 6000}
 		{"3rd_Person"
 			{"3rdP_blur_strength" 3}
 		}
-		{blur_strength 5}
+		{blur_strength 2}
 		{"Scenario Settings"
-			{near_scale 2.5}
-			{far_scale 0.75}
-			{near_start 50}
-			{near_end 100}
+			{near_scale 2.0}
+			{far_scale 0.5}
+			{near_start 10}
+			{near_end 35}
 			{far_start 1000}
 			{far_end 3500}
-			{blur_strength 5}
+			{blur_strength 2}
 		}
 	}
 	{glow
