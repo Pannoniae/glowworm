@@ -1,0 +1,152 @@
+;{mission	
+	{Helpers
+		{event "third_person_off"}
+		{event "third_person_on"}
+		{triggers
+			{"third_person/on"
+				{condition
+					{terms
+						{"2.entities"
+							{selector
+								{tag fuck_my_life}
+							}
+							{count
+								{op "=="}
+								{value 1}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"switch"
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"third_person_control"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag fuck_my_life}
+								}
+								{lock on}
+								{position
+									{linkBone basis}
+									{offest
+										{x -75}
+										{y 0}
+										{z 75}
+									}
+								}
+								{positionZoom
+									{linkBone basis}
+									{offest
+										{x 0}
+										{y 0}
+										{z 0}
+									}
+								}
+								{clip
+									{viewMin -45}
+									{viewMax 15}
+								}
+								{zoom
+									{min -100}
+									{max 650}
+									{fov 90}
+								}
+							}
+						}
+					}
+					{"delay"
+						{time 1}
+					}
+					{"event"
+						{event "third_person_on"}
+						{mode reset}
+						{delay 0}
+					}
+					{"delay"
+						{time 1}
+					}
+					{"trigger"
+						{name "third_person/on"}
+					}
+				}
+			}
+			{"third_person/off"
+				{condition
+					{terms
+						{"2.entities"
+							{selector
+								{tag kv_is_a_pussy}
+							}
+							{count
+								{op "=="}
+								{value 1}
+							}
+						}
+					}
+				}
+				{actions
+					{"delay"
+						{time 0.1}
+					}
+					{"switch"
+						{"default"
+							{"delay"
+								{time 0.1}
+							}
+							{"third_person_control"
+								{selector
+									{ignore_captured_by_user 0}
+									{tag kv_is_a_pussy}
+								}
+								{lock off}
+								{position
+									{offest
+										{x 0}
+										{y 0}
+										{z 0}
+									}
+								}
+								{positionZoom
+									{offest
+										{x 0}
+										{y 0}
+										{z 0}
+									}
+								}
+								{clip
+									{viewMin 0}
+									{viewMax 0}
+								}
+								{zoom
+									{min -100}
+									{max 650}
+									{fov "90"}
+								}
+							}
+						}
+					}
+					{"delay"
+						{time 0.2}
+					}
+					{"event"
+						{event "third_person_off"}
+						{mode reset}
+						{delay 0}
+					}
+					{"delay"
+						{time 1}
+					}
+					{"trigger"
+						{name "third_person/off"}
+					}
+				}
+			}
+		}
+	}
+;}
