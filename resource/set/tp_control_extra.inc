@@ -87,7 +87,6 @@
 
 	{"sdkfz251c_9" inherit "vehicle tank.234_3"}
 	{"sdkfz251d_2" inherit "vehicle mortar.common"}
-	{"sdkfz251b" inherit "vehicle vehicle.hanomag"}
 	{"zgkw303f" inherit "vehicle artillery.katyusha"}
 	{"88mm_raketenwerfer" inherit "vehicle fieldgun.common"}
 	{"tiger_p" inherit "vehicle tank.tiger_p"}
