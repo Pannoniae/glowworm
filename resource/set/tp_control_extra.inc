@@ -104,7 +104,6 @@
 	{"pz5g_m10" inherit "vehicle tank.panther"}
 	{"105mm_lfh16" inherit "vehicle artillery.common"}
 	{"210mm_morser_16" inherit "vehicle artillery.common"}
-	{"stug3a" inherit "vehicle td.stug3b"}
 	{"88mmflak37sfl" inherit "vehicle atgun.flak18.mounted"}
 	{"tiger1e_early" inherit "vehicle tank.tiger"}
 	{"panzer4f1_shielded" inherit "vehicle tank.panzer3n"}
