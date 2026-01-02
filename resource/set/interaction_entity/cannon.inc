@@ -73,7 +73,47 @@
 
 	{on pierce sync
 		{vehicle_health_damage_pierce}
-	}
+		{if volume "turret"
+			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret))}
+			else stuff "size3" {if rand 0.5 ("tear_bone" bone(turret))}
+			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret))}
+			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret))}
+			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret))}
+			}
+		}
+		{if volume "turret1"
+			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret1))}
+			else stuff "size3" {if rand 0.5 ("tear_bone" bone(turret1))}
+			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret1))}
+			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret1))}
+			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret1))}
+			}
+		}
+		{if volume "turret2"
+			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret2))}
+			else stuff "size3" {if rand 0.5 ("tear_bone" bone(turret2))}
+			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret2))}
+			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret2))}
+			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret2))}
+			}
+		}
+		{if volume "turret3"
+			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret3))}
+			else stuff "size3" {if rand 0.5 ("tear_bone" bone(turret3))}
+			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret3))}
+			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret3))}
+			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret3))}
+			}
+		}
+		{if volume "turret4"
+			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret4))}
+			else stuff "size3" {if rand 0.5 ("tear_bone" bone(turret4))}
+			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret4))}
+			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret4))}
+			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret4))}
+			}
+		}
+}
 
 	(define "impluse_process_blast" 				;// {on blast_hit} blastwave hits any part of entity
 		{if min_energy %blast_energy
@@ -89,8 +129,18 @@
 			}
 		}
 	)
+	
+	(define "tear_bone"
+		{spawn	"spheredust_small"}
+		{component destroy}
+		{tear "piece_large_steel" bone "%bone"
+			{volumes disable bullet contact blast}	;prevent destroing at spawn moment
+			{impulse up 6 4 dir 7 3}
+		}
+		{impulse up 0.3}
+	)
 
-	{on blast_hit					;// any part of vehicle hit with blast energy
+	{##on blast_hit					;// any part of vehicle hit with blast energy
 		{if min_mass 100000				;// if mass ≥ 6000 kg			;// Super Heavy Cannons
 			; do nothing
 
@@ -203,6 +253,82 @@
 				impulse(2.5)
 				range(0.25)
 			)
+		}
+	}
+	
+	{on blast_hit
+		{if min_energy 5 
+			{if not linked
+				{impulse up 0.5 0.2 dir 1 0.2}
+			}
+			{if simulating
+				{attack_save}
+				{delay_ex 0.3
+					{attack_load}
+					{crew_throw_off up 4 1 dir 5 1 turn 0 180 forward 2 force}
+				}
+			}
+		else min_energy 1.2
+			{if not linked
+				{impulse up 0.3 0.2 dir 0.7 0.2}
+			}
+			{if simulating
+				{attack_save}
+				{delay_ex 0.3
+					{attack_load}
+					{crew_throw_off up 4 1 dir 5 1 turn 0 180 forward 2 force}
+				}
+			}
+		else min_energy 0.6
+ 		 	{ani_play "hit"}
+		}
+		;{if volume "wheel"
+		;	{if min_energy 2.5
+		;		{call "tear_wheel"}
+		;	else min_energy 1.5
+		;		{component break}
+		;	}
+		;}
+
+		{if volume "turret"
+			{if min_energy 3 ("tear_bone" bone(turret))}
+		}
+		{if volume "turret1"
+			{if min_energy 3 ("tear_bone" bone(turret1))}
+		}
+		{if volume "turret2"
+			{if min_energy 3 ("tear_bone" bone(turret2))}
+		}
+		{if volume "turret3"
+			{if min_energy 3 ("tear_bone" bone(turret3))}
+		}
+		{if volume "turret4"
+			{if min_energy 3 ("tear_bone" bone(turret4))}
+		}
+		
+		{if volume "standl"
+			{if min_energy 2.5
+				("tear_bone" bone(standl))
+				{tags add "standl_tear"}
+				{if tagged "standr_tear"
+					{tear "piece_medium_steel" bone "link1"
+						{impulse up 0 1}
+						{delete}
+					}
+				}
+			}
+		}
+		{if volume "standr"
+			{if min_energy 2.5
+				("tear_bone" bone(standr))
+				{tags add "standr_tear"}
+				{if tagged "standl_tear"
+					{tear "piece_medium_steel" bone "link1"
+						{impulse up 0 1}
+						{delete}
+					}
+				}
+			}
 		}
 	}
 
