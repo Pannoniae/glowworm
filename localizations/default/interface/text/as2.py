@@ -63,16 +63,17 @@ def generate_po_content(maps_by_type):
                 mod_tags = []
                 
                 # AS2 tag (gray color)
-                if "bebebe" in map_name:
-                    mod_tags.append("<c(bebebe)>[AS2]</c>")
+                #if "bebebe" in map_name:
+                #    mod_tags.append("<c(bebebe)>[AS2]</c>")
                 
                 # RobZ tag (green color)
-                if "00ff0aff" in map_name:
-                    mod_tags.append("<c(00ff0aff)>[RobZ]</c>")
+                #if "00ff0aff" in map_name:
+                #    mod_tags.append("<c(00ff0aff)>[RobZ]</c>")
                 
                 # GSM tag (yellow color)
-                if "gsm" in map_id.lower():
-                    mod_tags.append("<c(ffff00)>[GSM]</c>")
+                #if "gsm" in map_id.lower():
+                #    mod_tags.append("<c(ffff00)>[GSM]</c>")
+                mod_tags.append("<c(ff5030)>[Kirikax]</c>")
                 
                 # Replace the closing player count tag with mod tags
                 if mod_tags:
@@ -120,7 +121,7 @@ def main():
     po_content = generate_po_content(maps_by_type)
     
     # Write to output file
-    with open('mission_as2.pot', 'w', encoding='utf-8') as f:
+    with open('mission_aa.pot', 'w', encoding='utf-8') as f:
         f.write(po_content)
     
     print("\nOutput has been written to output.po")
