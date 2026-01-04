@@ -2,7 +2,7 @@
 ; Soviet BM8 Light Rocket Artillery
 ;=========================================
 
-{from "pattern reactive"		; "bm8"
+{from "pattern reactive"		;  BM-8-24. the t60 chassis launcher ONLY
 	{filling "ammo 82mm_rs82" 24}
 	{fillingVisible "rocket"}
 	{fireSound "reactive/rocket_burst/"}
@@ -15,8 +15,7 @@
 			{0 0}
 			{100 10}
 			{200 20}
-			{354.99 25} ;// max range
-			{355 30}
+			{375 30}	;// past their max range
 			{500 35}
 		}
 	}
@@ -26,7 +25,7 @@
 		{noaiming}
 	}
 
-	{range 355 355}
+	{range 330 330}
 	("velocity" mps(340))
 	("reload time" seconds(120))
 	("fire rate" rpm(360))

@@ -1,0 +1,40 @@
+;_________________________________________
+; British Aerial Rocket Launcher
+;=========================================
+
+
+{from "pattern reactive"		; "land mattress"
+	{tag "gun"}
+	{filling "ammo 76mm_landmattress" 30}
+	{fireSound "reactive/d1/ENG/Land_Mattress/"}
+	{calibre 127} ;// 5-inch warhead
+
+	("rocket_artillery")
+
+	{spreading
+		{radiusTable
+			{0 0}
+			{100 10}
+			{200 20}
+			{309.99 40} ;// old max range
+			{320 40} ;// new max range
+			{500 45}
+		}
+	}
+
+	{Automatic}
+	{burst
+		{min 15}
+		{noaiming}
+	}
+
+	{gravity 1.5}
+
+	{minRange 50}
+	{aimRange 320}
+	{maxRange 320} ;// just over the scaled 7.23km
+	;("velocity" mps(320))
+	{speed 105}
+	("reload time" seconds(150))
+	("fire rate" rpm(240)) ;// 4 rounds a second
+}
