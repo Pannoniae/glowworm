@@ -79,7 +79,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret))}
-			}
+			
 		}
 		{if volume "turret1"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret1))}
@@ -87,7 +87,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret1))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret1))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret1))}
-			}
+			
 		}
 		{if volume "turret2"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret2))}
@@ -95,7 +95,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret2))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret2))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret2))}
-			}
+			
 		}
 		{if volume "turret3"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret3))}
@@ -103,7 +103,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret3))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret3))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret3))}
-			}
+			
 		}
 		{if volume "turret4"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret4))}
@@ -111,7 +111,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret4))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret4))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret4))}
-			}
+			
 		}
 }
 
