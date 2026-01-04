@@ -3,7 +3,7 @@
 ;=========================================
 
 
-{from "pattern reactive"		; "Vielfachwerfer"
+{from "pattern reactive"		; "Vielfachwerfer" lightest katyusha rocket
 	{filling "ammo 82mm_rs82" 48}
 	{fillingVisible "rocket"}
 	{fireSound "reactive/rocket_burst/"}
@@ -16,8 +16,7 @@
 			{0 0}
 			{100 10}
 			{200 20}
-			{374.99 25} ;// max range
-			{375 30}
+			{375 30}	;// past their max range
 			{500 35}
 		}
 	}
@@ -27,7 +26,7 @@
 		{noaiming}
 	}
 
-	{range 375 375}
+	{range 330 330}
 	
 	("velocity" mps(340))
 	("reload time" seconds(200))
