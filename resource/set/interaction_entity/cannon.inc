@@ -27,6 +27,16 @@
 	}
 )
 
+(define "tear_bone"
+	{spawn	"spheredust_small"}
+	{component destroy}
+	{tear "piece_large_steel" bone "%bone"
+		{volumes disable bullet contact blast}	;prevent destroing at spawn moment
+		{impulse up 6 4 dir 7 3}
+	}
+	{impulse up 0.3}
+)
+
 ;/*=========== Cannon Begin ===========*/
 
 {"cannon"							;// master / base code for all cannons
@@ -79,7 +89,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret))}
-			
+			}
 		}
 		{if volume "turret1"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret1))}
@@ -87,7 +97,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret1))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret1))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret1))}
-			
+			}
 		}
 		{if volume "turret2"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret2))}
@@ -95,7 +105,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret2))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret2))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret2))}
-			
+			}
 		}
 		{if volume "turret3"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret3))}
@@ -103,7 +113,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret3))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret3))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret3))}
-			
+			}
 		}
 		{if volume "turret4"
 			{if stuff "size2" {if rand 0.3 ("tear_bone" bone(turret4))}
@@ -111,7 +121,7 @@
 			else stuff "size4" {if rand 0.8 ("tear_bone" bone(turret4))}
 			else stuff "size5" {if rand 0.8 ("tear_bone" bone(turret4))}
 			else stuff "size6" {if rand 0.8 ("tear_bone" bone(turret4))}
-			
+			}
 		}
 }
 
@@ -128,16 +138,6 @@
 				}
 			}
 		}
-	)
-	
-	(define "tear_bone"
-		{spawn	"spheredust_small"}
-		{component destroy}
-		{tear "piece_large_steel" bone "%bone"
-			{volumes disable bullet contact blast}	;prevent destroing at spawn moment
-			{impulse up 6 4 dir 7 3}
-		}
-		{impulse up 0.3}
 	)
 
 	{##on blast_hit					;// any part of vehicle hit with blast energy
