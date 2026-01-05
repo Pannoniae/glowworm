@@ -2578,6 +2578,7 @@
 	}
 )
 
+
 (define "squad_with7types_vehicle_crew"
 	{"%name(%side)"
 		{charge 
@@ -2588,6 +2589,22 @@
 		{tags "all infantry %side %t %year"}
 		{group "%g"}
 		{button "%b"}
+		{level 1}
+		{squad_cost_factor 1}
+	}
+)
+
+(define "squad_with7types_vehicle_crew_doc"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{doctrine %d}
 		{level 1}
 		{squad_cost_factor 1}
 	}
@@ -2609,6 +2626,22 @@
 	}
 )
 
+(define "squad_with8types_vehicle_crew_doc"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{doctrine %d}
+		{squad_cost_factor 1}
+	}
+)
+
 (define "squad_with5types_2vehicle_crew"
 	{"%name(%side)"
 		{charge 
@@ -2620,6 +2653,22 @@
 		{group "%g"}
 		{button "%b"}
 		{level 1}
+		{squad_cost_factor 1}
+	}
+)
+
+(define "squad_with5types_2vehicle_crew_doc"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 ) %vehicle2 ( mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{doctrine %d}
 		{squad_cost_factor 1}
 	}
 )
