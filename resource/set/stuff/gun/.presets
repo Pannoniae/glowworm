@@ -2915,17 +2915,3 @@
 		("heat_slope_multiplier")
 	}
 )
-;//---CANISTER SHOT---//
-(define "speed"   
-	{speed (* 0.5 %s)}  
-)
-(define "canister_shot_18"
-	{parameters "can"
-       		{spreading 1}
-		{gravity 0}
-   		{range 100 100}
-		("speed" s(60))
-		{cursorReloading "gun_can"}
-		{DisableRicochet}
-	}
-)
