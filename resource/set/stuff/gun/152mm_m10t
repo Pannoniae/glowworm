@@ -23,15 +23,15 @@
 	; G-530 (Anti-Concrete)? Some sources say, shell was too powerful for KV2 and was not supplied to units
 	("penetration_medium" shell(aphe) range(200) a(160) b(150) c(136) d(123) e(112))
 
-	;("accuracy_spg" r1(1.25) range_ap(200) range_he(250) range_heat(190))
+	;("accuracy_spg" r1(1.00) range_ap(200) range_he(250) range_heat(190))
 	
 	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
-		r1(1.15) 				; // Accuracy radius for direct-fire munitions
+		r1(1.3) 				; // Accuracy radius for direct-fire munitions
 		r1i(6) 				; // Accuracy radius for indirect fire
-		rmax(300) 				; // Accuracy radius for indirect fire at maximum range
+		rmax(50) 				; // Accuracy radius for indirect fire at maximum range
 		range_ap(200) 			; // Range after which accuracy drops to prevent farshooting.
 		range_heat(200) 		; // Range after which accuracy drops to prevent farshooting.
-		range_he(200)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_he(190)			; // Range after which direct-fire accuracy drops to prevent farshooting.
 		range_hei(250)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
 	)
 	
