@@ -25,9 +25,10 @@
 	{parameters "wp"			; M308 Rocket
 		{cursorReloading "gun_wp"}
 	}
-	{gravity 3.5} ;//same as other direct-fire "cannon" type weapons
+	;{gravity 3.5} ;//same as other direct-fire "cannon" type weapons
+	{gravity 1.5} ;// reduced because this is a rocket-assisted projectile
 	{range 90 90}
 	("standard_slope")
 
-	{spreading 1.25} ;// improved accuracy due to sight
+	{spreading 0.8} ;// improved accuracy due to sight
 }
