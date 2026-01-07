@@ -45,7 +45,7 @@
 	("bitgamer")
 	{armor
 		{setting "body"
-			;{threshold {pierce {koef 1}}}
+			;{threshold {pierce {koef 0.4}}}
 			{threshold {pierce {calibre 20}}}
 			{ray_cast_thickness}
 			{volumes "body*"}
@@ -57,7 +57,7 @@
 			{volumes "door*"}
 		}
 		{setting "roof"
-			;{threshold {pierce {koef 1}}}
+			;{threshold {pierce {koef 0.4}}}
 			{threshold {pierce {calibre 20}}}
 			{ray_cast_thickness}
 			{volumes "roof*"}

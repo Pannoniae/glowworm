@@ -1,6 +1,6 @@
 ;SDL
 {weapon_bullet
-	{tag "rocketlauncher to_hand ap cannot_lie mountable"}
+	{tag "rocketlauncher to_hand ap cannot_lie"}
 	{inventory
 		{size 8 2}
 		{link_bone "gun_back"}
@@ -19,6 +19,7 @@
 	{cursor "ironsights/bazooka"}
 	{cursorReloading "gun_heat"}
 	{foresight "foresight3"}
+	{fillingVisible "rocket"}
 
 	{preloaded}
 
@@ -35,7 +36,7 @@
 	{gravity 0.75}
 
 	{spreading 1.75
-		{SpreadPower 2}
+		{SpreadPower 1}
 		{SpreadXYRatio 0.7}
 		{SpreadYadjust 0}
 		{radiusFunction
@@ -48,13 +49,6 @@
 	}
 
 	{ZeroingAccuracy 0.7 0.6 0.5 0.4}
-
-	{overmatchSlope
-		{0 0.05}
-		{30 0.4}
-		{60 0.6}
-		{90 1}
-	}
 
 	{FiringTimeout 11 3}	; min delay between ai shots (note: will be affected by "grenade_timeout" modifier)
 	{AccuracyByMotionK 0.1}
