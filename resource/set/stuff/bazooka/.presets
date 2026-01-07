@@ -11,7 +11,7 @@
 (define "penetration"			;// penetration table. penetration reduced after intended fire range to prevent explotation of Direct control
 	{projectileDamageTable {71 %0} {76 0}}
 )
-(define "standard_slope"
+(define "standard_slope"    ;used by WP warheads e.g. with bazooka
 	{overmatchSlope
 		{0 0.05}
 		{30 0.4}
@@ -19,7 +19,7 @@
 		{90 1}
 	}
 )
-(define "pointed_slope"
+(define "pointed_slope"       ; used by HEAT warheads
 	{overmatchSlope
 		{0 1}
 		{50 1}
