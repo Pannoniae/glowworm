@@ -1,0 +1,69 @@
+;Exported by:	 guita
+;Date:			 31.12.2021 09:43:49
+;File:			 D:\Git\3D_Scenes\GoH_3D_human_export\3d_equipment\body_armour\SN-40_export.max
+{skeleton
+	{bone "body_armor"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{LODView
+			{VolumeView "body_armor.ply"}
+			{VolumeView "body_armor_lod1.ply"}
+			{VolumeView "body_armor_lod2.ply"}
+		}
+		{bone "helper"
+			{matrix34
+				0.9848 	 0.1736 	 0
+				-0.1736 	 0.9848 	 0
+				0 	 0 	 1
+				3.5927 	 0.0428 	 -3.6234
+			}
+		}
+	}
+}
+{volume "body1"
+	{polyhedron "body1.vol"}
+	{bone "helper"}
+	{Position 0 	 0 	 0}
+}
+{volume "body2"
+	{polyhedron "body2.vol"}
+	{bone "helper"}
+	{Position 0 	 0.7009 	 0}
+}
+{volume "select"
+	{box 2.24008 14.6795 7.18602}
+	{bone "body_armor"}
+	{matrix34
+		0.9848 	 0.1736 	 0
+		-0.1736 	 0.9848 	 0
+		0 	 0 	 1
+		2.6855 	 0.7544 	 -0.1585
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 20.4873 	 -10.4328 	 -1.3239}
+			{lookat 1.1659 	 -0.5343 	 -0.0214}
+			{fov 21.6939}
+			{horizon 89.4035}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.1632 	 0.3218 	 8.596}
+			}
+			{"1"
+				{type directional}
+				{direction -0.2905 	 0.1862 	 -0.3618}
+			}
+			{"2"
+				{type point}
+				{position -3.2645 	 -13.0442 	 -4.1376}
+			}
+		}
+	}
+}
