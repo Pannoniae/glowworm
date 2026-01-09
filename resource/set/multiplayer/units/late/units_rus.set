@@ -782,6 +782,54 @@
 }
 
 
+
+{"po2"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(rus) crew(pilot:2) g(spg8) b(supply) cw(0) cp(11)
+	cost(100))
+}
+
+;this one
+{"conquest_po2"
+	("vehicle_ss" side(rus) period(late) year(44 45 46) cd(450) ci(10) vehicle(po2) crew(pilot:2) b(supply) cost(100))
+	{action "airstrike:reconnaissance_50"}
+}
+
+
+
+;Plane
+{"yak1_ser69"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(rus) crew(pilot:1) g(spg7) b(supply) cw(0) cp(23)
+	cost(1000))
+}
+
+;this one
+{"conquest_yak1"
+	("vehicle_ss" side(rus) period(late) year(44 45 46) cd(600) ci(10) vehicle(yak1_ser69) crew(pilot:1) g(airstrike) b(supply) cost(250))
+	{action "airstrike:250lb_gp_mk4"}
+	{tags "limit3"}
+}
+
+
+
+
+{"il2_mod42"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(rus) crew(pilot:1) g(spg7) b(supply) cw(0) cp(23)
+	cost(1000))
+}
+
+
+;this one
+{"conquest_il2"
+	("vehicle_ss" side(rus) period(late) year(44 45 46) cd(900) ci(10) vehicle(il2_mod42) crew(pilot:1) b(supply) cost(500))
+	{action "airstrike:250lb_gp_mk4"}
+	{tags "limit3"}
+}
+
+
+
+
+
+
 ;_________________________________________________
 ;|                  Emplacements                  |
 ;|________________________________________________|
@@ -1141,16 +1189,4 @@
 	cost(1300)) ;// +30 for crew
 }
 
-;Plane
-{"yak1_ser69"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(rus) crew(pilot:1) g(spg7) b(supply) cw(0) cp(23)
-	cost(1000))
-}
-{"il2_mod42"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(rus) crew(pilot:1) g(spg7) b(supply) cw(0) cp(23)
-	cost(1000))
-}
-{"po2"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(rus) crew(pilot:2) g(spg8) b(supply) cw(0) cp(11)
-	cost(100))
-}
+
