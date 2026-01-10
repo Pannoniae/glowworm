@@ -64,6 +64,10 @@
 
 	{extender "inventory"
 		{box
+			{item "thompson_mag stick 30 ammo" 600}
+			{item "rifle_usa clip ammo" 800}
+			{item "ammo mgun_usa belt" 300}
+			{item "mk2 grenade" 10}
 		}
 	}
 
