@@ -8,18 +8,18 @@
 	{extension "sn40_body_armor.mdl"}
 
 	{volume "body1"
-			{able {select} {contact_ground} {touch} {contact} {blast}}
+			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
 		{thickness 2}
 				{component "body"}
 	}
 	{volume "body2"
-			{able {select} {contact_ground} {touch} {contact} {blast}}
-		{thickness 2}
+			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
+		{thickness 0}
 				{component "body"}
 	}
 	{volume "select"
-			{able {select} {contact_ground} {touch} {contact} {blast}}
-		{thickness 2}
+			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
+		{thickness 0}
 				{component "body"}
 	}
 }

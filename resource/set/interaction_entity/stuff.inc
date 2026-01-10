@@ -2,6 +2,7 @@
 {"stuff armor"
 	{on spawn sync
 		{delay 0.1 		
+			{volumes "body" enable contact contact_ground touch bullet blast}	
 			{volumes "body1" enable contact contact_ground touch bullet blast}
 			{volumes "body2" enable contact contact_ground touch bullet blast}
 			{volumes "select" enable contact contact_ground touch bullet blast}	
