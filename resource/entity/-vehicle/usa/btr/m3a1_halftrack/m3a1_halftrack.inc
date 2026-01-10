@@ -55,15 +55,15 @@
 		{Box
 			;{item "browning_m19a4" filling "ammo mgun_usa belt" 250}
 			{item "ammo hmgun_usa" 600}					; 700 .50cal total
-			;{item "ammo mgun_usa belt" 2500}			; 7750 .30cal total
-			;{item "ammo rifle_usa garand_clip ap" 3000} ; .30cal
-			;{item "ammo bar_mag" 1500}					; .30cal
-			;{item "ammo m1_carbine_mag" 500}			; .30cal
-			;{item "ammo m3_grease_mag" 540}
-			{item "mine m1a1" 24}			;24 AT mines
-			;{item "mk2 grenade" 10}			;22 handgrenades
-			;{item "m15_wp grenade" 6}
-			;{item "anm8_smoke grenade" 6}
+			{item "ammo mgun_usa belt" 2500}			; 7750 .30cal total
+			{item "ammo rifle_usa garand_clip ap" 3000} ; .30cal
+			{item "ammo bar_mag" 1500}					; .30cal
+			{item "ammo m1_carbine_mag" 500}			; .30cal
+			{item "ammo m3_grease_mag" 540}
+			;{item "mine m1a1" 24}			;24 AT mines
+			{item "mk2 grenade" 10}			;22 handgrenades
+			{item "m15_wp grenade" 15}
+			{item "anm8_smoke grenade" 20}
 		}
 	}
 
