@@ -169,7 +169,7 @@
 	{on operatable off
 		{unlink_trailer}
 		{tags add "_abandoned"}			;// check for "leave_unit" / self destruction
-		{delay 12 
+		{delay 2 
 			{tags remove "_abandoned"}
 		}
 	}
@@ -674,11 +674,11 @@
 				{call "stat_break"}
 				{tags add "no_scavenge"}		;// tag for conquest so that vehicle cannot be repaired/recovered
 				{mark_for_persistence}			;// Conquest map persistence
-				{delay 4 2
+				{delay 2 2
 					{unlink_trailer}
 					{call_synced "check_burn_emit"}
 				}
-				{delay 10 2
+				{delay 5 2
 					{if not tagged "engine_brake"
 						{components "engine" break}
 					}
@@ -688,9 +688,9 @@
 						{call_synced "railway_destroyed"}
 					}
 				}
-				{delay 180
+				{delay 20
 					{view start "burn_fire_smoke"}
-					{delay 900
+					{delay 90
 						{view stop "burn_fire_smoke"}
 					}
 					{delay 2
@@ -747,29 +747,29 @@
 					{tags add "emit_label"}
 					{crew_emit}
 				}
+				{delay 0.5
+					{if not tagged "_abandoned"
+						{crew_emit}
+					}
+				}
+				{delay 1
+					{if not tagged "_abandoned"
+						{crew_emit}
+					}
+				}
 				{delay 2
 					{if not tagged "_abandoned"
 						{crew_emit}
 					}
 				}
-				{delay 5
-					{if not tagged "_abandoned"
-						{crew_emit}
-					}
-				}
-				{delay 8
-					{if not tagged "_abandoned"
-						{crew_emit}
-					}
-				}
-				{delay 11
+				{delay 3
 					{if not tagged "_abandoned"
 						{crew_emit}
 					}
 					{tags remove "_abandoned"}
 				}
 
-				{delay 16
+				{delay 6
 					{if not operatable
 						{tags add "_abandoned"}
 						{set "broken" 1}
@@ -898,7 +898,7 @@
 	{on "explosion_delete"
 		{set "delete_parts" 1}
 		{call "explosion"}
-		{delay 20
+		{delay 10
 			{hide 3}
 		}
 	}
@@ -1234,16 +1234,16 @@
 		)
 	)
 	{on "friendly_fire_check" ;// added to stop MP users from breaking body component of their own vehicles to exploit CP limits
-		{if friendly_fire
-			{delay 0
-				(mod "gametype:cooperative")				;// stops from running in CooP campaign missions
-				(mod "gametype:campaign_capture_the_flag")	;// stops from running in Conquest
-				("friendly_destroy" args "ammunition")
-				("friendly_destroy" args "battle_zones")	;// Domination
-				("friendly_destroy" args "evacuation")		;// Last Stand
-				("friendly_destroy" args "frontlines")
-			}
-		}
+		;{if friendly_fire
+		;	{delay 0
+		;		(mod "gametype:cooperative")				;// stops from running in CooP campaign missions
+		;		(mod "gametype:campaign_capture_the_flag")	;// stops from running in Conquest
+		;		("friendly_destroy" args ammunition)
+		;		("friendly_destroy" args battle_zones)		;// Domination
+		;		("friendly_destroy" args evacuation)		;// Last Stand
+		;		("friendly_destroy" args frontlines)
+		;	}
+		;}
 	}
 
 	{on "set_static"							;// map/mission helper for static neutral vehicles
@@ -1259,26 +1259,27 @@
 		{clear_inventory}
 	}
 	{on "emit_crew"
-		{delay 4
+		{delay 0.5
 			{if not tagged "_abandoned"
 				{crew_emit}
 			}
 		}
-		{delay 8
+		{delay 1
 			{if not tagged "_abandoned"
 				{crew_emit}
 			}
 		}
-		{delay 12
+		{delay 2
 			{if not tagged "_abandoned"
 				{crew_emit}
 			}
 		}
-		{delay 16
+		{delay 3
 			{if not tagged "_abandoned"
 				{crew_emit}
 			}
 		}
+
 	}
 
 	{on "disable_all_seats"
@@ -1639,7 +1640,7 @@
 	{on animation_event "board"
 		{if tagged "door_open"
 			{kill_delay "boarding"}
-			{delay 5 "boarding"
+			{delay 2.5 "boarding"
 				{if operatable
 					{tags remove "door_open"}
 					{ani_play "close_back" 1}
@@ -1650,7 +1651,7 @@
 			{ani_play "open_back" 1}
 			{tags add "door_open"}
 			{call "open"}
-			{delay 5 "boarding"
+			{delay 2.5 "boarding"
 				{if operatable
 					{tags remove "door_open"}
 					{ani_play "close_back" 1}

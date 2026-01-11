@@ -721,7 +721,7 @@
 				}
 				else ;// slow burn cookoff
 				{if rand 0.25 
-					{delay 250 100
+					{delay 60 50
 						{call_synced "cookoff_rand_explosion"}
 					}
 				}
@@ -740,7 +740,7 @@
 		else
 			{call_synced "slow_cookoff_2"}
 		}
-		{delay 30 20 "slow_cookoff1"
+		{delay 20 10 "slow_cookoff1"
 			{view pause "cooking_presmoke_1"}
 			{if rand 0.5
 				{call_synced "slow_cookoff_3"} ;// continue smoke buildup
@@ -764,7 +764,7 @@
 }
 {on "slow_cookoff_3"
 	{view start "cooking_presmoke_2"}
-	{delay 60 60 "slow_cookoff3"
+	{delay 15 10 "slow_cookoff3"
 		{call_synced "slow_cookoff_4"} ;// hatch fire
 	}
 }
@@ -774,7 +774,7 @@
 	{view show "cooking_hatch_fire"}
 	{view start "cooking_hatch_fire"}
 	{play_sound "hatch_fire" 1}
-	{delay 500 150 "slow_cookoff4"
+	{delay 30 15 "slow_cookoff4"
 		{if rand 0.8
 			{call_synced "slow_cookoff_5"} ;// normal cookoff
 		else
@@ -791,7 +791,7 @@
 	}
 }
 {on "slow_cookoff_6"
-	{delay 150 50 "slow_cookoff6"
+	{delay 20 10 "slow_cookoff6"
 		{call_synced "slow_cookoff_6_events"}
 	}
 }
@@ -813,7 +813,7 @@
 		}
 
 		;// build up of smoke to cookoff
-		{delay 8 6 "cookoff4"
+		{delay 6 6 "cookoff4"
 			{if not able "exploded"
 				{view stop "cooking_presmoke_1"}
 				{view start "cooking_presmoke_2"}
@@ -873,7 +873,7 @@
 			{play_sound "cook_off" 1}
 			{play_sound "burnup_ammo" 1}
 
-			{delay 10 2 "cookoff7"
+			{delay 5 2 "cookoff7"
 				{view show "cooking_high_2"}
 				{view start "cooking_high_2"}
 				{view start "cooking_turret_smoke"}
@@ -897,7 +897,7 @@
 						{view start "cooking_barrel_aftersmoke"}
 						{view stop "cooking_barrel_fire"}
 					}
-					{delay 60 10 "cookoff9"
+					{delay 10 5 "cookoff9"
 						{view start "cooking_hatch_smoke"}
 						{view hide "cooking_hatch_fire"}
 						{view stop "cooking_hatch_fire"}
@@ -974,6 +974,26 @@
 }
 
 {on "kill_cookoff"			;//stops all cookoff delays and sounds
+	{view hide "cooking_hatch_fire"}
+	{view stop "cooking_hatch_fire"}
+	{view stop "smoke_vehicle_death"}
+	{view hide "cooking_high_open"}
+	{view stop "cooking_high_open"}
+	{view hide "cooking_high_open_2"}
+	{view stop "cooking_high_open_2"}
+	{view pause "smoke_after_pen_hatch"}
+	{view stop "smoke_after_pen_hatch"}
+	{view stop "cooking_barrel_aftersmoke"}
+	{view stop "cooking_barrel_fire"}
+	{view pause "fire_vehicle_death"}
+	{view stop "fire_vehicle_death"}
+	{view stop "cooking_presmoke_1"}
+	{view stop "cooking_presmoke_2"}
+	{view stop "cooking_presmoke_3"}
+	{view stop "cooking_presmoke_3"}
+	{view pause "smoke_after_pen_hatch"}
+	{view stop "smoke_after_pen_hatch"}
+	{view stop "burn_fire_smoke"}
 	{kill_delay "cookoff1"}
 	{kill_delay "cookoff2"}
 	{kill_delay "cookoff3"}
@@ -1037,14 +1057,14 @@
 			;//random explosion timer
 			{if rand 0.5
 				{if rand 0.25
-					{delay 30 30
+					{delay 15 15
 						{call_synced "cookoff_rand_explosion"}
 					}
 				}
 				{call_synced "slow_open_top_cookoff"}
 			else
 				{if rand 0.25
-					{delay 11 11
+					{delay 7 7
 						{call_synced "cookoff_rand_explosion"}
 					}
 				}
@@ -1063,7 +1083,7 @@
 				{view pause "smoke_vehicle_death"}
 				{view start "fire_vehicle_death"}
 				{play_sound "fire" 1}
-				{delay 60 60
+				{delay 30 30
 					{if not tagged "exploded"
 						{view pause "fire_vehicle_death"}
 						{stop_sound "fire"}
@@ -1085,14 +1105,14 @@
 		{play_sound "cook_off" 1}
 		{play_sound "burnup_ammo" 1}
 
-		{delay 10 2 "cookoff_open1"
+		{delay 5 2 "cookoff_open1"
 			{view show "cooking_high_open_2"}
 			{view start "cooking_high_open_2"}
 			{view hide "cooking_high_open"}
 			{view stop "cooking_high_open"}
 			{stop_sound "burnup_ammo"}
 			{start_sound "detonation/cook_off/transition"}
-			{delay 10 2 "cookoff_open2"
+			{delay 5 2 "cookoff_open2"
 				{stop_sound "cook_off"}
 				{start_sound "detonation/cook_off/transition"}
 				{view hide "cooking_high_open_2"}
@@ -1101,7 +1121,7 @@
 				{if not tagged "exploded"
 					{view start "fire_vehicle_death"}
 					{play_sound "fire" 1}
-					{delay 400 60 "cookoff_open3"
+					{delay 20 10 "cookoff_open3"
 						{if not tagged "exploded"
 							{view pause "fire_vehicle_death"}
 							{view start "smoke_vehicle_death"}

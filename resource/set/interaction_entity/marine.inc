@@ -1314,6 +1314,23 @@
 		}
 	}
 	
+	{on "no_sink_event" overload
+		{kill_crew}
+		{components "cabin" break}
+		{components "engine" break}
+		{components "gun1" break}
+		{components "gun2" break}
+		{components "gun3" break}
+		{components "gun4" break}
+		{components "gun5" break}
+		{components "gun6" break}
+		{components "shield1" break}
+		{components "shield2" break}
+		{components "shield3" break}
+		{components "shield4" break}
+	}
+
+	{on "light_flash" overload}
 	{on break
 	;	{if component "cabin"
 	;		{bone hide "flag"}

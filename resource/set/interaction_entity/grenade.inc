@@ -430,21 +430,22 @@
 		{delay 0 "smoke"
 			{view stop "smoke3"}
 		}
-		{delay 15 "smoke"
+	{delay 5 "smoke"
 			{view stop "smoke2"}
 		}
-		{delay 20 "smoke"
+		{delay 5 "smoke"
 			{view stop "smoke1"}
 			{view start "smoke0"}
 			{stop_sound "smoke_loop"}
 			{play_sound "smoke_end"}
 		}
-		{delay 30 "smoke"
+		{delay 10 "smoke"
 			{view stop "smoke0"}
 		}
-		{delay 35 "smoke"
+		{delay 15 "smoke"
 			{hide 1}
 		}
+
 	}
 }
 
@@ -591,6 +592,14 @@
 }
 
 {"nbks"
+	{on "add_grenade_sound"
+		{link_sound "smoke_pop"	"detonation/grenade_smoke/generic/pop"}
+		{link_sound "smoke_loop"	"detonation/grenade_smoke/generic/detonation_misc_s1_smoke_generic_loop"}
+		{link_sound "smoke_end"	"detonation/grenade_smoke/generic/detonation_misc_s1_smoke_generic_end_01"}
+	}
+	("smoke_time" args 60 58)
+}
+{"svkkr_pm"
 	{on "add_grenade_sound"
 		{link_sound "smoke_pop"	"detonation/grenade_smoke/generic/pop"}
 		{link_sound "smoke_loop"	"detonation/grenade_smoke/generic/detonation_misc_s1_smoke_generic_loop"}

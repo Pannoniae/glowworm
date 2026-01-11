@@ -555,18 +555,21 @@
 				{kick_entity_manager}
 				{tags add "destroyed"}
 			}
-			{delay 10
+			{delay 4
 				{call "hatch_fire"}
 				{clear_inventory}
 			}
 			{delay 20 5
-				{##/* if rand 0.5
+				{if rand 0.5
 					{call_synced "cookoff"}
 					{view stop "smoke3"}
 					{stop_sound "flame_1"}
-				*/}
+				else
+					{view stop "smoke3"}
+					{stop_sound "flame_1"}
+				}
 			}
-			{delay 87
+			{delay 27
 				{stop_sound "flame_1"}
 			}
 		}
@@ -596,17 +599,21 @@
 					{view start "fire_vehicle_death"}
 					{play_sound "flame_1" 1}
 					{clear_inventory}
-					{delay 500 60
+					{delay 240 60
 						{if not tagged "exploded"
 							{view pause "fire_vehicle_death"}
 							{view start "smoke_vehicle_death"}
 							{stop_sound "flame_1"}
 							{call_synced "tags_add_ammo_cooked"}
 							{call_synced "tags_add_ammo_cooked2"}
+							{delay 60 30
+								{view pause "smoke_vehicle_death"}
+								{view stop "smoke_vehicle_death"}
+							}
 						}
 					}
 				}
-				{delay 200 200
+				{delay 90 30
 					{if rand 0.3
 						{call_synced "rand_break_ammo"}
 					}
@@ -1243,7 +1250,7 @@
 			}
 		}
 	}
-	("turret_torn" args 6 90 30 400 50 turret_light)
+	("turret_torn" args 6 45 30 120 50 turret_light)
 }
 {"turret medium"
 	{on pierce sync
@@ -1268,7 +1275,7 @@
 			}
 		}
 	}
-	("turret_torn" args 6 180 45 500 75 turret)
+	("turret_torn" args 6 60 45 180 75 turret)
 }
 {"turret heavy"
 	{on pierce sync
@@ -1293,7 +1300,7 @@
 			}
 		}
 	}
-	("turret_torn" args 7 200 60 600 100 turret)
+	("turret_torn" args 7 90 60 240 100 turret)
 }
 
 {"tank turret multi_turret"
@@ -1409,7 +1416,7 @@
 						{view stop "fire"}
 						{view start "smoke"}
 					}
-					{delay_effect 90 15 "pause"}				;// calls {on "pause"} in dummy.inc
+					{delay_effect 40 15 "pause"}				;// calls {on "pause"} in dummy.inc
 					{delay 0.1
 						{volumes "gun" disable obstacle}
 					}
@@ -1579,6 +1586,7 @@
 		}
 	}
 }
+
 {"armored_car"
 	{on "explosion_blastwave" overload
 		{impulse up 0.1 0.1 dir 0.2 0.1}
@@ -1974,7 +1982,8 @@
 	{on "check_water_level" overload
 		{if water_level 1.8
 			{able "sinking" 1}
-			{tags add "no_scavenge"}
+			{tags add "no_scavenge"}		;// tag for conquest so that vehicle cannot be repaired/recovered
+			{mark_for_persistence}			;// Conquest map persistence
 		else
 			{able "sinking" 0}
 		}

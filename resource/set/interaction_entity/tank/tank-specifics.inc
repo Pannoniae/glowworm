@@ -4394,6 +4394,22 @@
 		("Cannon_85to100mm")
 		("ZB37")
 	}
+	{on spawn
+		(define "rand_shields"
+			{delay 0.1
+				{bone hide "%shield"}
+				{volumes "%shield" disable all}
+			}
+		)
+		{if rand 0.5
+			("rand_shields" shield(shield2))
+			("rand_shields" shield(shield3))
+			("rand_shields" shield(shield4))
+			("rand_shields" shield(shield5))
+			("rand_shields" shield(shield6))
+			("rand_shields" shield(shield7))
+		}
+	}
 }
 {"cromwell7 tank"
 	("cromwell_sound")
