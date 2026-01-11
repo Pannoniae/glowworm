@@ -473,6 +473,12 @@
 ;skill 3
 ("squad_with6types_man" side(usa) name(squad_rifle_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_2) c1(rifle_sl:1) c2(rifle_sl_asst:1) c3(rifle_gren:1) c4(rifle_rifleman:4) c5(rifle_bar:1) c6(rifle_bar_asst:2) b(squad) cost(160) t())
 
+;Rifle Squad with 2 bars
+;("squad_with6types_man" side(usa) name(squad_rifle_2bars_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_2) c1(rifle_sl:1) c2(rifle_sl_asst:1) c3(rifle_gren:1) c4(rifle_rifleman:3) c5(rifle_bar:2) c6(rifle_bar_asst:2) b(squad) cost(160) t())
+
+;Grenadier Rifle Squad
+;("squad_with6types_man" side(usa) name(squad_rifle_gren_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_2) c1(rifle_sl:1) c2(rifle_sl_asst:1) c3(rifle_gren:3) c4(rifle_rifleman:2) c5(rifle_bar:1) c6(rifle_bar_asst:2) b(squad) cost(160) t())
+
 ;Mechanized 1st Armored Rifle Squad
 ;skill 3
 ("squad_with7types_vehicle_crew_man" side(usa) name(squad_rifle_mechanized_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_2) vehicle1(m3a1_halftrack) crew1(rifle_rifle_mech:2) crew2(rifle_sl_mech:1) crew3(rifle_sl_asst_mech:1) crew4(rifle_gren_mech:1) crew5(rifle_rifle_mech:4) crew6(rifle_bar_mech:1) crew7(rifle_bar_asst_mech:2)  b(squad) cost(260) t())
@@ -933,11 +939,11 @@
 ;HEAVY
 
 {"m26_pershing"
-	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(heavy) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(heavy1) b(mt) cw(8) cp(30)
+	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(heavy) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(heavy1) b(ht) cw(8) cp(30)
 	cost(1200)) ;// +35 for crew
 }
 {"t26e4"
-	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(heavy2) b(mt) cw(8) cp(34)
+	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(heavy2) b(ht) cw(8) cp(34)
 	cost(1700)) ;// +35 for crew
 }
 
@@ -967,10 +973,10 @@
 ;	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg4) b(td) cw(6) cp(26)
 ;	cost(925)) ;// +30 for crew
 ;}
-{"sherman5c"
-	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(medium) side(usa) crew1(tankman_m1:3) crew2(tank_com_m1:1) g(spg5) b(td) cw(6) cp(26)
-	cost(900)) ;// +30 for crew
-}
+;{"sherman5c"
+;	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(medium) side(usa) crew1(tankman_m1:3) crew2(tank_com_m1:1) g(spg5) b(td) cw(6) cp(26)
+;	cost(900)) ;// +30 for crew
+;}
 {"m36b1_gmc_t33"
 	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg5) b(td) cw(6) cp(26)
 	cost(950)) ;// +30 for crew
