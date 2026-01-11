@@ -105,7 +105,7 @@
 			}
 			{particleinit
 				{speed 11 6}
-				{lifetime 60}
+				{lifetime 20}
 			}
 			{entity "wp_piece"
 				{fx "wp_smoketrail"}
@@ -127,8 +127,8 @@
 			}
 		}
 		{entitygenerator
-			{totalparticles 10}
-			{particlesinblock 10}
+			{totalparticles 50}
+			{particlesinblock 50}
 			{emissionarea
 				{radius 1}
 				{alpha0 40 40}
@@ -145,7 +145,7 @@
 			{axisz}
 		}
 	}
-	{#+ particleview "wp flares fake"
+	{##+ particleview "wp flares fake"
 		{generator
 			{emissionarea
 				{radius 1}
