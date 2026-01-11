@@ -17,21 +17,21 @@
 	}
 
 	{foresight "foresight18"}
-	{RelaxationTime 0.25}
+	{RelaxationTime 2.5}
 	{SpreadTolerance 0.20}			;// AI needs to aim 20%
 	{aimingTolerance 1}
 
 	("reload time" seconds(5))
-	{FiringTimeout 3.5 0.5}
+	{FiringTimeout 3.5 0.5}           ;delay before shooting, random up and down
 	{FiringTimeoutDistanceFactor
-		{0.3 0.5}	;36m, 1.75s
-		{0.8 1.0}	;96m, 3.5s
+		{0.3 0.5}	;36m                  ;distance and fraction of timeout at that range
+		{0.8 1.0}	;96m
 	}
 
 	{range 120 120}
 
 	{spreading 
-		{BurstAccuracy 100 90 80 70 60}
+		{BurstAccuracy 100 80 70 60 50}
 	}
 
 	{ZeroingAccuracy 0.9 0.8 0.75}

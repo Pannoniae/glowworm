@@ -15,10 +15,11 @@
 	("reload time" seconds(3.25))
 	("fire rate" rpm(300))
 
-	{FiringTimeout 1.0 0.5}
+	{FiringTimeout 1 0.5}
 	{FiringTimeoutDistanceFactor
-		{0.3 0.5}	;21m, 0.5s
-		{1.0 1.0}	;70m, 1.0s
+		{0.2 0.2}	;point blank, 0.2s
+		{0.35 0.3}	;23m, 0.3s
+		{0.8 2.0}	;46m, 2s
 	}
 
 	{spreading
@@ -26,7 +27,7 @@
 	}
 	{SpreadTolerance 0.3}			;// AI needs to aim 30%
 	
-	("human health" damage(60))
+	("human health" damage(50))
 
 	("penetration" args 3 0)
 	("armor health" damage(0.5))
