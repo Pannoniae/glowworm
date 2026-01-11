@@ -198,7 +198,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview sparkles1
+	{##+ particleview sparkles1
 		{generator
 			{totalparticles 40}
 			{particlesinblock 40}
@@ -253,7 +253,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview sparkles1
+	{##+ particleview sparkles1
 		{generator
 			{totalparticles 40}
 			{particlesinblock 40}
@@ -308,7 +308,7 @@
 		}
 		{notifyowner}
 	}
-	{#+ particleview sparkles1
+	{##+ particleview sparkles1
 		{generator
 			{totalparticles 30}
 			{particlesinblock 30}
@@ -2001,27 +2001,25 @@
 	}
 	{#+ particleview sparkles
 		{generator
-			{totalparticles 30}
-			{particlesinblock 30}
+			{totalparticles 100}
+			{particlesinblock 100}
 			{emissionarea
-				{radius 5 5}
-				{alpha0 67.5 22.5}
-				{alpha1 67.5 22.5}
-				{## psi 80}
-				{## theta 30}
+				{radius 10 10}
+				{alpha0 10}
+				{alpha1 60}
 			}
 			{particleinit
-				{speed 37.5 12.5}
-				{lifetime 0.15 0.1}
+				{speed 9 5}
+				{lifetime 1.45 0.35}
 			}
 			{axisz}
-			{timetolive 0.1}
+			{timetolive 0.2}
 		}
 		{mover
 			{gravity
-				{value 0.05}
+				{value 0.13}
 			}
-			{damping 0.96}
+			{damping 0.975}
 			{## collisions
 				{terrain}
 				{restitution 0.5}
@@ -2030,25 +2028,19 @@
 		{visualizer
 			{stage 
 				{flags trace }
-				{sprite "$/particle/metal_drops1"
+				{sprite "$/particle/metal_drops2"
 					{timer
 						{mode play }
 						{duration -1}
 					}
 					{scalex 1
 						{linear
-							{min 5.5 4.5}
+							{min 1.8}
 							{max 0.1}
 						}
 					}
-					{scaley 0.055 0.005}
-					{## highlight 0xfffe9939}
-					{light 1
-						{linear
-							{min 1}
-							{max 0}
-						}
-					}
+					{scaley 0.075 0.025}
+					{highlight 0xfffe9939}
 				}
 			}
 		}

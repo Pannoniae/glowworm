@@ -748,4 +748,51 @@
 			}
 		}
 	}
+	{#+ particleview sparkles
+		{generator
+			{totalparticles 80}
+			{particlesinblock 80}
+			{emissionarea
+				{radius 10 10}
+				{alpha0 10}
+				{alpha1 60}
+			}
+			{particleinit
+				{speed 5 5}
+				{lifetime 0.85 0.35}
+			}
+			{axisz}
+			{timetolive 0.1}
+		}
+		{mover
+			{gravity
+				{value 0.13}
+			}
+			{damping 0.975}
+			{## collisions
+				{terrain}
+				{restitution 0.5}
+			}
+		}
+		{visualizer
+			{stage 
+				{flags trace }
+				{sprite "$/particle/metal_drops2"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 1
+						{linear
+							{min 1}
+							{max 0.1}
+						}
+					}
+					{scaley 0.075 0.025}
+					{highlight 0xfffe9939}
+				}
+			}
+		}
+		{notifyowner}
+	}
 }

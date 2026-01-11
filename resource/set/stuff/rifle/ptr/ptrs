@@ -9,11 +9,16 @@
 	{mass 17.3}
 
 	("penetration" args 43 40 35)
-	("fire rate" rpm(50))
+	("fire rate" rpm(110))
 	("velocity" mps(1013))
-	{FiringTimeout 2.75 0.5}
+	{FiringTimeout 3 0.5}         ;time the AI needs to aim between shots
 	{FiringTimeoutDistanceFactor
-		{0.3 0.6}	;36m, 1.65s
-		{0.8 1.0}	;96m, 2.75s
+		{0 0.2}		;0m,  0.6s
+		{0.3 0.6}	;36m, 1.8s
+		{0.8 1.0}	;96m, 3s
 	}
+		{spreading 
+		{BurstAccuracy 100 80 70 60 50}
+		}
+		{ZeroingAccuracy 1 1.02 1.04}
 }

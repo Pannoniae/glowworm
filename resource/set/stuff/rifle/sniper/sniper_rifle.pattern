@@ -3,11 +3,11 @@
 
 	{special
 		{mode aim}
-		{PrepareTime 1}
+		{PrepareTime 1}         ; time it takes for the circle to go around and get the shot
 		{PrepareCursor "aimed_shot"}
 		{PrepareCursorScene "aimed_shot_scene"}
-		{accuracy 1.5}
-		{damage 1}
+		{accuracy 10} ; permit the increase in accuracy to simulate zeroing and calculating
+		{damage 1}    ; 1 for no damage boosting, remove vanilla cringe
 	}
 
 	{states
@@ -33,12 +33,12 @@
 
 	("human health" damage(125))
 	("penetration" args 6.5 3.5)
-	{FiringTimeout 3.5 0.5}
+	{FiringTimeout 6 0.5}
 	{FiringTimeoutDistanceFactor
-		{0.2 0.5}	;24m, 1.75s
-		{0.4 0.8}	;48m, 2.8s
-		{0.6 0.9}	;72m, 3.15s
-		{0.8 1.0}	;96m, 3.5s
+		{0.2 0.1}	;50m, 1.2s
+		{0.4 0.5}	;100m, 2.4s
+		{0.6 0.6}	;150, 3.6s
+		{0.8 1.0}	;200, 6s
 	}
 
 	("accuracy_rifle_sniper")

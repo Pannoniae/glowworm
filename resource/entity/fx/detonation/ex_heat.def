@@ -483,51 +483,50 @@
 	}
 	{#+ particleview sparkles
 		{generator
+			{totalparticles 80}
+			{particlesinblock 80}
 			{emissionarea
-				{radius 2.5 2.5}
-				{alpha0 45 45}
-				{alpha1 45 45}
+				{radius 10 10}
+				{alpha0 10}
+				{alpha1 60}
 			}
 			{particleinit
-				{speed 4.5 3.5}
-				{lifetime 0.2 0.1}
+				{speed 5 5}
+				{lifetime 0.85 0.35}
 			}
-			{totalparticles 100}
-			{particlesinblock 100}
 			{axisz}
 			{timetolive 0.1}
 		}
 		{mover
-			{damping 0.96}
 			{gravity
-				{value 0.2}
+				{value 0.13}
 			}
-			{nodependonwind}
+			{damping 0.975}
+			{## collisions
+				{terrain}
+				{restitution 0.5}
+			}
 		}
 		{visualizer
-			{stage initial 
+			{stage 
 				{flags trace }
-				{sprite "/texture/fx/particle/oskolki"
+				{sprite "$/particle/metal_drops2"
 					{timer
 						{mode play }
 						{duration -1}
 					}
-					{scalex 0
+					{scalex 1
 						{linear
 							{min 1}
-							{max 0.2}
+							{max 0.1}
 						}
 					}
-					{scaley 0.04 0.01}
-					{light 1
-						{linear
-							{min 1}
-							{max 0}
-						}
-					}
+					{scaley 0.075 0.025}
+					{highlight 0xfffe9939}
 				}
 			}
 		}
+		{notifyowner}
 	}
 	{#+ particleview "dust ground close"
 		{delay 0.05}
