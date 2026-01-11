@@ -7,6 +7,7 @@
 				{set "pierced_processed" 1}
 				{if rand %tag_test {tags add "tag_test"}}   ;// Used for testing damage_process_pierce.
 				{vehicle_health_damage_pierce}
+				(include "penfx.inc")
 				{if not component "shield"				;// prevents the pen FX from spawning when hitting shield components
 					{if not material "wood"
 						{if not volume "armor"
