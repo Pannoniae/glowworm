@@ -24,5 +24,14 @@
 	; Gr.39 Hl/C
 	("penetration_medium" shell(heat) range(190) a(115) b(115) c(115) d(115) e(115))
 
-	("accuracy_spg" r1(1.00) range_ap(190) range_he(190) range_heat(190))
+	;("accuracy_spg" r1(1.00) range_ap(190) range_he(190) range_heat(190))
+	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
+		r1(0.60) 				; // Accuracy radius for direct-fire munitions
+		r1i(0.8)				; // Accuracy radius for indirect fire
+		rmax(50) 				; // Accuracy radius for indirect fire at maximum range
+		range_ap(190) 			; // Range after which accuracy drops to prevent farshooting.
+		range_heat(190) 		; // Range after which accuracy drops to prevent farshooting.
+		range_he(190)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_hei(370)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
+	)
 }
