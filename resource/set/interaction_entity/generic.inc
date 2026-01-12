@@ -1,31 +1,31 @@
-(define "burst_stop_s"
-	{if not tagged "burst_stop_%mgun"
-		{tags add "burst_stop_%mgun"}
-		{delay 0.6 0.15
-			{weapon_work "%mgun" 0}
-			{delay 0.7 0.1
-				{weapon_work "%mgun" 1}
-				{tags remove "burst_stop_%mgun"}
-			}
-		}
-	}
-)
-
-(define "burst_stop_custom"
-	{if not tagged "burst_stop_%mgun"
-		{tags add "burst_stop_%mgun"}
-		{delay %to 0.15
-			{weapon_work "%mgun" 0}
-			{delay %ro 0.1
-				{weapon_work "%mgun" 1}
-				{tags remove "burst_stop_%mgun"}
-			}
-		}
-	}
-)
-
 {"generic"
 	(include "\set\interaction_terrain\effects\effects-defines.inc")
+	
+	(define "burst_stop_s"
+		{if not tagged "burst_stop_%mgun"
+			{tags add "burst_stop_%mgun"}
+			{delay 0.6 0.15
+				{weapon_work "%mgun" 0}
+				{delay 0.7 0.1
+					{weapon_work "%mgun" 1}
+					{tags remove "burst_stop_%mgun"}
+				}
+			}
+		}
+	)
+
+	(define "burst_stop_custom"
+		{if not tagged "burst_stop_%mgun"
+			{tags add "burst_stop_%mgun"}
+			{delay %to 0.15
+				{weapon_work "%mgun" 0}
+				{delay %ro 0.1
+					{weapon_work "%mgun" 1}
+					{tags remove "burst_stop_%mgun"}
+				}
+			}
+		}
+	)
 	
 	{on "burst_mode"
 		{if tagged "full_auto_mode"

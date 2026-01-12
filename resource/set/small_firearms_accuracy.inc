@@ -99,16 +99,22 @@
 			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 4.0} {150 5.0}}
 		}
 	)
+	(define "accuracy_mg_tank"
+		;("mg_range" r1(0.3) r2(1.0) r3(1.2) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.90) r5(4.0) r6(5.0)) 
+		{spreading
+			{radiusTable {0 0} {20 0.50} {40 0.88} {75 1.60} {110 2.6} {130 2.95} {150 3.2}}
+		}
+	)
 	(define "accuracy_hmg"
-		("hmg_range" r1(0.5) r2(1.3) r3(1.5) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.90) r3(1.74) r4(2.76) r5(3.5) r6(4.8))	
+		;("hmg_range" r1(0.5) r2(1.3) r3(1.5) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.90) r3(1.74) r4(2.76) r5(3.5) r6(4.8))	
 		{spreading
 			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 3.4} {150 4.0}}
 		}
 	)
 	(define "accuracy_hmg_tank"
-		("hmg_range" r1(0.4) r2(1.2) r3(1.4) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.85) r5(3.5) r6(4.5)) 
+		;("hmg_range" r1(0.4) r2(1.2) r3(1.4) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.85) r5(3.5) r6(4.5)) 
 		{spreading
-			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 3.25} {150 3.6}}
+			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.6} {130 3.15} {150 3.4}}
 		}
 	)
 
