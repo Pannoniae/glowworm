@@ -1,5 +1,70 @@
+(define "burst_stop_s"
+	{if not tagged "burst_stop_%mgun"
+		{tags add "burst_stop_%mgun"}
+		{delay 0.6 0.15
+			{weapon_work "%mgun" 0}
+			{delay 0.7 0.1
+				{weapon_work "%mgun" 1}
+				{tags remove "burst_stop_%mgun"}
+			}
+		}
+	}
+)
+
+(define "burst_stop_custom"
+	{if not tagged "burst_stop_%mgun"
+		{tags add "burst_stop_%mgun"}
+		{delay %to 0.15
+			{weapon_work "%mgun" 0}
+			{delay %ro 0.1
+				{weapon_work "%mgun" 1}
+				{tags remove "burst_stop_%mgun"}
+			}
+		}
+	}
+)
+
 {"generic"
 	(include "\set\interaction_terrain\effects\effects-defines.inc")
+	
+	{on "burst_mode"
+		{if tagged "full_auto_mode"
+			{tags remove "full_auto_mode"}
+			{damage_report "mgun" "Unit changed to burst mode"}
+		else
+			{tags add "full_auto_mode"}
+			{damage_report "mgun" "Unit changed to full auto mode"}
+		}
+	}
+	
+	{on "burst_stop"
+		("burst_stop_s" mgun(mgun))
+	}
+	
+	{on "burst_stop_gun"
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.6))
+	}
+	
+	{on "burst_stop_mgun"
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun1"
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun2"
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun3"
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun4"
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
+	}
+	
 	; BM
 	{on ground_hit
 		{if material "flesh"

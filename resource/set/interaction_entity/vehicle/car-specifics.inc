@@ -57,6 +57,13 @@
 		{play_sound "bkg_hmg"}
 		{ani_play "recoil"}
 		{call "spawn_shell"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(gun) to(1.5) ro(0.5))
 	}
 }
 {"willys_2xmg"
@@ -81,6 +88,13 @@
 				{view pause "flashbarrel01"}
 			}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop"}
+		}
+	}
+	
+	{on "burst_stop" overload
+		("burst_stop_custom" mgun(mgun) to(1.6) ro(0.4))
 	}
 }
 (include "car-extra.inc")

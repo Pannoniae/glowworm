@@ -342,6 +342,13 @@
 				{view pause "flashbarrel03"}
 			}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop"}
+		}
+	}
+	
+	{on "burst_stop" overload
+		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
 	}
 }
 {"su57"
@@ -618,6 +625,13 @@
 				{view pause "flashbarrel01"}
 			}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun) to(0.9) ro(0.4))
 	}
 	{on break_armor					;// volume breaks
 		{if volume "aux_turret2"

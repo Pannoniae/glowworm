@@ -1014,11 +1014,22 @@
 	{on fire "mgun"
 		;{view start "flashbarrel"}
 		{ani_play "recoil"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop"}
+		}
 	}
 	{on fire "mgun1"
 		;{view start "flashbarrel"}
 		{ani_play "recoil"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
 	}
+	
+	{on "burst_stop_1"
+		("burst_stop_s" mgun(mgun1))
+	}
+	
 	{on "explosion_blastwave" overload}
 
 	{on "self_destruct" overload
@@ -1475,6 +1486,13 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(1.2) ro(0.75))
 	}
 }
 
@@ -1528,6 +1546,13 @@
 		{if name "00"
 			{call "fire_gun_common"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(1.65) ro(0.9))
 	}
 }
 {"ds39_stand"
@@ -1560,6 +1585,13 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(0.8) ro(0.4))
 	}
 	{on "construction_sandbag_cannon_standard" overload
 		("cannon_sandbag" args "sandbag_straight_heap" "sandbag")
@@ -1583,6 +1615,13 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(0.8) ro(0.4))
 	}
 }
 
@@ -3088,6 +3127,13 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(1.3) ro(0.9))
 	}
 }
 {"maxim_m32_33"
@@ -3114,6 +3160,13 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(1.2) ro(1))
 	}
 }
 {"20mm_l39"
@@ -3761,16 +3814,73 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(0.8) ro(0.3))
 	}
 }
 {"m2_30cal_tripod"
 	{on "add_weapon_sound"
 		("M1919A4")
 	}
+	
+	{on fire "mgun"
+		{play_sound "MG_Mid"}
+		{play_sound "MG_Far"}
+		{play_sound "action_recoil"}
+		{view start "flashbarrel"}
+		{delay 0.2 "fire"
+			{view pause "flashbarrel"}
+		}
+		{kill_delay "shell_off"}
+		{view start "shell"}
+		{view start "ejectsmoke"}
+		{delay 0.12 "shell_off"
+			{view pause "shell"}
+			{view pause "ejectsmoke"}
+		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(0.8) ro(0.25))
+	}
+	
+	
 }
 {"m2_50cal_tripod"
 	{on "add_weapon_sound"
 		("M2HB")
+	}
+	
+	{on fire "mgun"
+		{play_sound "MG_Mid"}
+		{play_sound "MG_Far"}
+		{play_sound "action_recoil"}
+		{view start "flashbarrel"}
+		{delay 0.2 "fire"
+			{view pause "flashbarrel"}
+		}
+		{kill_delay "shell_off"}
+		{view start "shell"}
+		{view start "ejectsmoke"}
+		{delay 0.12 "shell_off"
+			{view pause "shell"}
+			{view pause "ejectsmoke"}
+		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(0.75) ro(0.25))
 	}
 }
 

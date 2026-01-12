@@ -1331,7 +1331,7 @@
 			}
 		)
 
-		{##if name "00"
+		{if name "00"
 			("bm13_fire")
 		else name "01"
 			("bm13_fire")
@@ -1618,6 +1618,13 @@
 		{view start "flashbarrel1"}
 		{view start "flashbarrel1smoke"}
 		{call "spawn_shell"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop"}
+		}
+	}
+	
+	{on "burst_stop" overload
+		("burst_stop_custom" mgun(gun) to(1.5) ro(0.9))
 	}
 }
 
@@ -1692,6 +1699,13 @@
 			{view pause "shell"}
 			{view pause "ejectsmoke"}
 		}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(mgun1) to(1.2) ro(0.4))
 	}
 }
 
@@ -1767,6 +1781,13 @@
 		{view start "flashbarrel1"}
 		{view start "flashbarrel1smoke"}
 		{call "spawn_shell"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(gun) to(1.5) ro(0.7))
 	}
 
 	{on "cut_parts" overload
@@ -1875,6 +1896,13 @@
 		{view start "flashbarrel1"}
 		{view start "flashbarrel1smoke"}
 		{call "spawn_shell"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(gun) to(1.5) ro(0.5))
 	}
 }
 
@@ -1941,6 +1969,13 @@
 		{view start "flashbarrel1"}
 		{view start "flashbarrel1smoke"}
 		{call "spawn_shell"}
+		{if not tagged "full_auto_mode"
+			{call "burst_stop_1"}
+		}
+	}
+	
+	{on "burst_stop_1"
+		("burst_stop_custom" mgun(gun) to(1.2) ro(0.25))
 	}
 
 	{on "cut_parts" overload
