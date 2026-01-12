@@ -1,7 +1,7 @@
 
 	(include "/properties/car.ext")
 	(include "/properties/selection/vehicle_elongated.inc" scale(1.15))
-	{props "cckw" "multi_board" "truck" "vision_lev02" "tractor" "tractor_heavy" "Captor"}
+	{props "cckw" "multi_board" "truck" "vision_lev02" "tractor" "tractor_medium" "Captor"}
 	{able "emit_on_attack"}
 	{extension "cckw.mdl"}
 	{collider "truck"}
