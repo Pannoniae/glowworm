@@ -9,8 +9,9 @@
 	;	{rangeKoef 0.5}			;// rangeKoef * aimRange = max long burst distance
 	;}
 	{burst
-		{short 3 0.1}
-		{long 5 1}
+		{short 2 1}
+		{long 5 2}
+		{rangeKoef 0.3}
 	}	
 )
 
@@ -21,8 +22,9 @@
 	;	{rangeKoef 0.5}
 	;}
 	{burst
-		{short 4 0.1}
-		{long 7 1}
+		{short 4 1}
+		{long 6 2}
+		{rangeKoef 0.5}
 	}
 )
 
@@ -33,8 +35,9 @@
 	;	{rangeKoef 0.5}
 	;}
 	{burst
-		{short 5 0.1}
-		{long 10 1}
+		{short 4 2}
+		{long 8 4}
+		{rangeKoef 0.5}
 	}
 )
 
@@ -133,7 +136,7 @@
 )
 
 (define "penetration"
-	{projectileDamageTable {20 %0} {100 %1} {155 %2} {250 %3} {400 %4}}
+	{projectileDamageTable {20 %0} {100 %1} {155 %2} {250 %3} {400 %4} {2000 0}}
 )
 
 (define "armor health"
