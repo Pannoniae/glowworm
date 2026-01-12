@@ -848,11 +848,11 @@
 )
 (define "direct_settings_low"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45 0.3}
 )
 (define "indirect_settings"
 	{SpreadTolerance 0.75}		;// Zeroing up to 75% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45 0.3}
 	{spreading {SpreadXYRatio 3}}
 )
 
@@ -1133,7 +1133,7 @@
 			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40}
+	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.3 0.25 0.2}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	{DisableRicochet}
@@ -1155,7 +1155,7 @@
 			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40}
+	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40 0.3 0.25 0.2}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	{DisableRicochet}
@@ -1177,7 +1177,7 @@
 			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40}
+	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40 0.3 0.25 0.2}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	{DisableRicochet}
