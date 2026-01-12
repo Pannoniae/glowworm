@@ -12,7 +12,7 @@
 	{calibre 155}
 	{range 505 505} ; // 23.51km
 
-	("reload time" seconds(60))
+	("reload time" seconds(25))
 
 	("velocity m/s" ap(837) apcr(1) he(234) heat(1))
 	("armor health" damage(450))
@@ -24,13 +24,13 @@
 	; APBC-HE M112
 	("penetration_long" shell(aphebc) range(220) a(197) b(192) c(186) d(181) e(175))
 	{parameters "aphebc"
-		("reload time" seconds(30))
+		("reload time" seconds(20))
 	}
 	
 	("accuracy_indirect"   ; // Applies logic for accuracy of indirect weapons over 200m
 		r1(0.60) 				; // Accuracy radius for direct-fire munitions
 		r2(8.29) 				; // Accuracy radius for indirect fire
-		rmax(30) 			; // Accuracy radius for indirect fire at maximum range
+		rmax(28) 			; // Accuracy radius for indirect fire at maximum range
 		range_ap(220) 			; // Range after which accuracy drops to prevent farshooting.
 		range_heat(220) 		; // Range after which accuracy drops to prevent farshooting.
 		range_he(505)			; // Range after which accuracy drops to prevent farshooting.
