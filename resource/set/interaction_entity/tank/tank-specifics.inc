@@ -471,6 +471,22 @@
 
 	{on "zenite_terrain_fx" overload} ; // overwrites and stops dust fx on ground from firing main gun
 }
+{"sdkfz251_20 tank"
+	("hanomag_sound")
+
+	{on "event_no_crew" overload}
+	{on "event_with_crew" overload}
+
+	{on "gunner2_hatch_open" overload
+		{ani_play "mgun_aa" +1.0 resume}
+	}
+	{on "gunner4_hatch_open" overload
+		{ani_play "mgun_aa_2" +1.0 resume}
+	}
+	{on "gunner4_hatch_close" overload
+		{ani_play "mgun_aa_2" -1.0 resume}
+	}
+}
 {"sdkfz251d_22 tank"
 	("hanomag_sound")
 	{on "add_weapon_sound" overload
