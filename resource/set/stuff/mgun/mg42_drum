@@ -1,6 +1,6 @@
 {from "pattern mgun"
 	{filling "mgun_ger" 50}
-	{entity "mg42_drum"}
+	{entity "mg42_drum"}						; this mounts on some vehicles as a secondary MG because having 2 of the main one breaks stuff
 	{fireSound "smallarms/s3/d1/GER/MG42/"}
 	{fireSoundclose "smallarms/s3/3p/GER/MG42/"}
 	{reloadSound "mg34"}
@@ -14,6 +14,9 @@
 	("ger_ap_bullets")
 
 	("burst_long")
+	
+	{range 130 130}
+		
 	("spreading_mg42")
 	{traceFreq 1}
 }
