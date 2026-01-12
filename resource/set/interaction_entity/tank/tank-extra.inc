@@ -343,11 +343,11 @@
 			}
 		}
 		{if not tagged "full_auto_mode"
-			{call "burst_stop"}
+			{call "burst_stop_1"}
 		}
 	}
 	
-	{on "burst_stop" overload
+	{on "burst_stop"
 		("burst_stop_custom" mgun(mgun) to(1.5) ro(0.5))
 	}
 }

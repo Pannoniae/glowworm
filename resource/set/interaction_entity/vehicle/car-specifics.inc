@@ -89,11 +89,11 @@
 			}
 		}
 		{if not tagged "full_auto_mode"
-			{call "burst_stop"}
+			{call "burst_stop_1"}
 		}
 	}
 	
-	{on "burst_stop" overload
+	{on "burst_stop_1"
 		("burst_stop_custom" mgun(mgun) to(1.6) ro(0.4))
 	}
 }
