@@ -2,7 +2,7 @@
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc"  scale(1.0))
 	(include "/properties/car_crew.ext")
-	{props "sdkfz251_1" "vehicle" "armored_car" "vision_lev02" "tank" "turret" "wheeled" "explosion_throw_crew" "flak" "barrel1" "tractor" "tractor_medium"}
+	{props "sdkfz251_1" "vehicle" "armored_car" "vision_lev02" "tank" "turret" "wheeled" "explosion_throw_crew" "flak" "barrel1" "tractor" "tractor_heavy"}
 	{targetClass "armoredcar" "ap bullet"}
 	{targetSelector "tank"}
 	{targetSelector "tank_bullet"} 
@@ -105,12 +105,15 @@
 		{link "emit"	"node1"	{anm "climb1"} {forward putoff} {reverse puton}}
 
         {link "emit1"	"node1"	{anm "climb1"} {forward putoff} {reverse puton}}
-		{link "node1"	"searchlight_uhu"		} ;{anm "walk"}
+		{link "node1"	"Searchlight"		} ;{anm "walk"}
 
 }
 
 	{extender "inventory"
 		{box
+			{item "ammo mgun_ger drum" 1950}		; 39 drums (50 rounds each)
+			{item "mg42_drum" filling "ammo mgun_ger drum" 50}
+			{item "geballteladung_3kg" 1} ; in case enemy wants to capture
 		}
 	}
 
