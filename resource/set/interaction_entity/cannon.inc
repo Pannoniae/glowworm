@@ -1052,6 +1052,10 @@
 		}
 	}
 	
+	{on "burst_stop"
+		("burst_stop_s" mgun(mgun))
+	}
+	
 	{on "burst_stop_1"
 		("burst_stop_s" mgun(mgun1))
 	}
