@@ -63,7 +63,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.5) ro(0.5))
+		("burst_stop_custom" mgun(gun) to(1.2) ro(0.5))
 	}
 }
 {"willys_2xmg"
@@ -94,7 +94,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun) to(1.6) ro(0.4))
+		("burst_stop_custom" mgun(mgun) to(1.4) ro(0.4))
 	}
 }
 (include "car-extra.inc")

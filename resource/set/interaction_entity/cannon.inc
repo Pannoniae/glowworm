@@ -1582,7 +1582,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun1) to(1.65) ro(0.9))
+		("burst_stop_custom" mgun(mgun1) to(1.2) ro(0.9))
 	}
 }
 {"ds39_stand"

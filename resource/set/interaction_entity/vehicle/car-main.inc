@@ -1651,7 +1651,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.5) ro(0.9))
+		("burst_stop_custom" mgun(gun) to(1.2) ro(0.9))
 	}
 }
 
@@ -1814,7 +1814,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.5) ro(0.7))
+		("burst_stop_custom" mgun(gun) to(1.2) ro(0.7))
 	}
 
 	{on "cut_parts" overload
@@ -1929,7 +1929,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.5) ro(0.5))
+		("burst_stop_custom" mgun(gun) to(1.2) ro(0.5))
 	}
 }
 

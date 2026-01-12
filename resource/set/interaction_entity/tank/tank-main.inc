@@ -1,5 +1,34 @@
 {"tank"
 	(include "\set\interaction_terrain\effects\effects-defines.inc")
+	
+	{on "burst_stop"
+		("burst_stop_s" mgun(mgun))
+	}
+	
+	{on "burst_stop_gun"
+		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.6))
+	}
+	
+	{on "burst_stop_mgun"
+		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun1"
+		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun2"
+		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun3"
+		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+	}
+	
+	{on "burst_stop_mgun4"
+		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+	}
+	
 	{on spawn
 		{set "smoke1" 0}				;// used in burn_emit call
 		{set "smoke2" 0}				;// used in burn_emit call
