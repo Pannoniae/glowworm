@@ -458,26 +458,26 @@
 			
 			; 0-5°: EXTREME MICRO-CHATOIC TERRAIN
 			; Simulating individual rocks, pebbles, debris
-			{0.1	4}		; Small skip on a stone
+			{0		0}		; consistent start
 			{0.2	12}		; Hit large rock immediately
-			{0.3	0.5}	; Smooth patch
+			{0.3	1.5}	; Smooth patch
 			{0.4	8}		; Medium stone
-			{0.5	0.1}	; Almost nothing
+			{0.5	2}	; Almost nothing
 			{0.6	15}		; Boulder
-			{0.7	0.3}	; Smooth
+			{0.7	2.5}	; Smooth
 			{0.8	5}		; Small rock cluster
 			{0.9	20}		; Large debris
 			
-			{1.0	0.5}		; Base
+			{1.0	1.5}		; Base
 			{1.1	18}		; Random large rock
-			{1.2	0.2}	; Smooth
+			{1.2	2}	; Smooth
 			{1.3	10}		; Medium obstacle
-			{1.4	2}		; Minor feature
+			{1.4	3}		; Minor feature
 			{1.5	25}		; Shell casing or debris
-			{1.6	0.5}	; Clear
+			{1.6	4}	; Clear
 			{1.7	7}		; Small stone
 			{1.8	30}		; Extreme: hit something metallic
-			{1.9	0.8}	; Back to ground
+			{1.9	3}	; Back to ground
 			
 			{2.0	1}		; Base
 			{2.1	22}		; Rock formation
@@ -485,7 +485,7 @@
 			{2.3	15}		; Debris pile
 			{2.4	3}		; Minor
 			{2.5	35}		; Hit abandoned equipment
-			{2.6	0.5}	; Clear
+			{2.6	2}	; Clear
 			{2.7	12}		; Stone cluster
 			{2.8	40}		; EXTREME: hit something solid and angled
 			{2.9	1}		; Clear
@@ -541,25 +541,25 @@
 			
 			; 10-20°: BROADER SWINGS, EXTREME RANGE
 			{10.0	5}
-			{10.5	75}		; Maximum possible for this angle
+			{10.5	40}		; Maximum possible for this angle
 			{11.0	3}
-			{11.5	55}
+			{11.5	25}
 			{12.0	6}
-			{12.5	80}		; Nearly perpendicular bounce
+			{12.5	30}		; massive bounce
 			{13.0	4}
-			{13.5	65}
+			{13.5	30}
 			{14.0	7}
-			{14.5	70}
+			{14.5	20}
 			{15.0	5}
-			{15.5	85}		; Wild bounce
+			{15.5	35}		; Wild bounce
 			{16.0	3}
-			{16.5	60}
+			{16.5	34}
 			{17.0	8}
-			{17.5	75}
+			{17.5	40}
 			{18.0	4}
-			{18.5	90}		; Complete reversal possible
+			{18.5	30}		; big jump possible
 			{19.0	6}
-			{19.5	70}
+			{19.5	24}
 			{20.0	10}
 			
 			; 20-30°: UNPREDICTABLE MID-RANGE
@@ -602,16 +602,15 @@
 			{45	50}
 			
 			; 45-90°: RARE BUT POSSIBLE EXTREME BOUNDS
-			{50	105}	; Almost impossible but allowed
+			{50	4}	;
 			{55	70}
-			{60	150}	; Maximum cinematic bounce
+			{60	75}	; Maximum cinematic bounce
 			{65	80}
-			{70	160}	; Extreme
+			{70	50}	; Extreme
 			{75	90}
-			{80	170}	; Nearly reversing direction
-			{85	100}
+			{80	20}	
 			{85	40}
-			{90	175}	; Full reversal (theoretical max)
+			{90	89}	; Full reversal (theoretical max)
 		}
 
 
