@@ -48,7 +48,7 @@
 	(define "accuracy_rifle_sniper"
 		;("sniper_range" r0(0.25) r1(0.3) r2(0.6) r3(0.75) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.45) r3(1.15) r4(1.55) r5(1.85)
 		{spreading
-			{radiusTable {0 0} {10 0.20} {40 0.50} {70 0.80} {100 0.90} {250 1.00}}
+			{radiusTable {0 0} {10 0.30} {40 0.45} {70 1.15} {100 1.55} {150 1.85}}
 		}
 	)
 	(define "accuracy_rifle_auto"
