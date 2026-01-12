@@ -966,11 +966,11 @@
 					{view pause "%1"}
 				}
 			}
+			{if not tagged "full_auto_mode"
+				{call "burst_stop_%0"}
+			}
 		}
-		{if not tagged "full_auto_mode"
-			{call "burst_stop_%0"}
-		}
-	}
+	)
 
 	("on_fire_mgun" args mgun flashbarrel3)
 	("on_fire_mgun" args mgun1 flashbarrel4)
