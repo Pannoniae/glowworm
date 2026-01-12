@@ -1,14 +1,14 @@
 {from "pattern rifle"
 	{tag "sniper -shoot_walking -shoot_walking_ai shoot_walking_manual auto_eject rifle_shell"}
 
-	{special
-		{mode aim}
-		{PrepareTime 0.5}        ; time it takes for the circle to go around and get the shot
-		{PrepareCursor "aimed_shot"}
-		{PrepareCursorScene "aimed_shot_scene"}
-		{accuracy 8}  ; permit the increase in accuracy to simulate zeroing and calculating
-		{damage 1}    ; 1 for no damage boosting, remove vanilla cringe
-	}
+;	{special
+;		{mode aim}
+;		{PrepareTime 0.5}        ; time it takes for the circle to go around and get the shot
+;		{PrepareCursor "aimed_shot"}
+;		{PrepareCursorScene "aimed_shot_scene"}
+;		{accuracy 8}  ; permit the increase in accuracy to simulate zeroing and calculating
+;		{damage 1}    ; 1 for no damage boosting, remove vanilla cringe
+;	}
 
 	{cursor "ironsights/mg"}
 
@@ -25,11 +25,12 @@
 
 	("human health" damage(125))
 	("penetration" args 6.5 3.5)
-	{FiringTimeout 5.0 0.5}
+	{FiringTimeout 2 0.5}
 	{FiringTimeoutDistanceFactor
-		{0.1 0.1}	;20m, 0.5s
-		{0.4 0.5}	;80m, 2.5s
-		{0.75 1.0}	;150m, 5.0s
+		{0.1 0.25}	;20m, 0.5s
+		{0.4 1.0}	;80m, 2.5s
+		{0.6 2.5}	;120m, 5.0s
+		{1.0 5.0}	;200m, 10.0s
 	}
 
 	("accuracy_rifle_auto_sniper")
