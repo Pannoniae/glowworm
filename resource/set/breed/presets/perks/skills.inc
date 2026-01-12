@@ -107,22 +107,18 @@
 ;/* - Tank and Cannon Main Gun Weapon Skills - */
 
 (define "elite_gun"
-	("skill8")
 	{"tank_gun" lvl_8}
 )
 
 (define "expert_gun"
-	("skill7")
 	{"tank_gun" lvl_7}
 )
 
 (define "skilled_gun"
-	("skill5")
 	{"tank_gun" lvl_5}
 )
 
 (define "basic_gun"
-	("skill3")
 	{"tank_gun" lvl_3}
 )
 

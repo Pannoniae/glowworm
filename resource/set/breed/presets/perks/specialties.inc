@@ -41,6 +41,13 @@
 	("skilled_gun")
 )
 
+(define "tankman_vet"			;// Tank Crew
+	("skill7")
+	("skilled_repair")
+	{"health" "150%"}
+	("skilled_gun")
+)
+
 
 ;/*=========== Unique Presets End ===========*/
 
