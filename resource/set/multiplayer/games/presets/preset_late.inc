@@ -79,7 +79,7 @@
 		{unitMode "44-45"}
 		{specMode "all_normal"}
 		{apply "only_roster_44-45"}
-		("standard_all"			start(200) finish(8000) doctrine(1) cp(0:160,900:210,1500:300))
+		("standard_all"			start(200) finish(10000) doctrine(1) cp(0:160,900:210,1500:300))
 		{ranked}
 	}
 ;------------------------------------------------------------------------------------------------------------	
