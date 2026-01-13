@@ -106,6 +106,7 @@ Purchases["44-45.rus"] = {
 					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_guard_cav_late_len_3(rus)"},
 					--]]
 					
+				--[[
 				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_conscripts_late(rus)"},
 				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_partisan(rus)"},
 				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_recon_late(rus)"},
@@ -124,6 +125,22 @@ Purchases["44-45.rus"] = {
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_marines_late(rus)"},
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_elite_guards_shock(rus)"},
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_elite_guards(rus)"},
+				--]]
+				
+				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_partisans(rus)"},
+				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_conscripts_rus(rus)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_penal_rus(rus)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle_rus(rus)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_smg_rus(rus)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle_mot_rus(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_shisbr(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_marines_rus(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_shock_rifle(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_shock_smg(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_mountain_rus(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_vet_rifle_rus(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_vet_rifle_mot_rus(rus)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_spetsnaz(rus)"},
 				
 
 			-- Infantry Singles / Teams

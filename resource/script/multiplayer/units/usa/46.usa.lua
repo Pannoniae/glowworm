@@ -106,6 +106,21 @@ Purchases["46.usa"] = {
 					--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_82nd_late_irr_1(usa)"},
 					----{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_82nd_demo_late_irr(usa)"},
 					
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_cav_mot_usa(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_rifle_usa(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_rifle_mechanized_usa(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_29th(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_1st(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_291st(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_1st_ranger(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_2nd_ranger(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_pathfinders(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_mountain_usa(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_arm_mechanized(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_devils_brigade(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_red_arrow(usa)"},
+					{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_101st(usa)"},
+					
 
 			-- Infantry Singles / Teams
 				---[[

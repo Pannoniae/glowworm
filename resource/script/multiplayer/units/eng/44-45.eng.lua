@@ -105,7 +105,7 @@ Purchases["44-45.eng"] = {
 					{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_1st_para_rifle_late_off_3(eng)"},
 					--]]
 					
-					
+				--[[
 				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_rear_echelon_late_off(eng)"},
 				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle_late_irr_1(can)"},
 				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_rifle_late_off_1(pol)"},
@@ -122,6 +122,20 @@ Purchases["44-45.eng"] = {
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_6th_para_eng_late_def_2(eng)"},
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_1st_para_eng_flame_late_irr(eng)"},
 				{priority = 1.0, type = {"Class3", "Infantry", "Squad"}, unit = "doctrine_squad_sas_late(eng)"},
+				--]]
+				
+				
+				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_eng_recon(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_eng_cornwall(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_can_rifle(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_can_rifle_mot(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_eng_rifle(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_eng_rifle_mot(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_coldstream_guards(eng)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_scot_rifle(eng)"},
+				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_rm_commandos(eng)"},
+				{priority = 1.0, type = {"Class2", "Infantry", "Squad",}, unit = "squad_soe_commandos(eng)"},
+				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_eng_sas(eng)"},
 
 			-- Infantry Singles / Teams
 				---[[
