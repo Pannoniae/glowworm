@@ -9,21 +9,20 @@
 	{speed (* 0.75 %mps)}
 )
 (define "penetration"			;// penetration table. penetration reduced after intended fire range to prevent explotation of Direct control
-	{projectileDamageTable {71 %0} {76 0}}
+	{projectileDamageTable {80 %0} {100 0}}
 )
-(define "standard_slope"    ;used by WP warheads and crappier HEAT
+(define "standard_slope"    ; a flatter warhead nose that ensures detonation on impact more reliably
 	{overmatchSlope
-		{0 0.05}
-		{30 0.4}
-		{60 0.6}
-		{90 1}
+		{0 1}
+		{40 99}
+		{60 99}
+		{90 99}
 	}
 )
-(define "pointed_slope"       ; used by more efficient HEAT warheads
+(define "pointed_slope"       ; a pointed warhead nose that deflects off of armour more
 	{overmatchSlope
-		{0 0.05}
-		{50 1}
-		{60 2}
+		{0 1}
+		{60 99}
 		{90 99}
 	}
 )
