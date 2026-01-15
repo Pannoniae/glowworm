@@ -1,14 +1,7 @@
 {from "pattern rifle"
-	{tag "sniper -shoot_walking -shoot_walking_ai shoot_walking_manual bolt_action rifle_shell"}
+	{tag " -shoot_walking -shoot_walking_ai shoot_walking_manual bolt_action rifle_shell"}
 	
-	{special
- 		{mode aim}
-		{PrepareTime 1}         ; time it takes for the circle to go around and get the shot
-		{PrepareCursor "aimed_shot"}
-		{PrepareCursorScene "aimed_shot_scene"}
-		{accuracy 10} ; permit the increase in accuracy to simulate zeroing and calculating
-		{damage 1}    ; 1 for no damage boosting, remove vanilla cringe
-	}
+
 
 	{states
 		{reload		"reload"}
@@ -27,9 +20,9 @@
 	{ZeroingAccuracy 0.9 0.8 0.7 0.6 0.5}
 
 	{aimingTolerance 2.5}
-	{RelaxationTime 2}
+	{RelaxationTime 3}           ;time it takes soldiers to "relax" from aim adjustments and get their full accuracy
 	("reload time" seconds(6))
-	("fire rate" rpm(24))
+	("fire rate" rpm(48))
 
 	("human health" damage(125))
 	("penetration" args 6.5 3.5)
@@ -37,9 +30,9 @@
 	{FiringTimeoutDistanceFactor
 		{0.2 1}		;50m, 3s
 		{0.4 2}		;100m, 6s
-		{0.6 3}		;150m, 9s
-		{0.8 4}		;200m, 12s
-		{1.0 6}		;250m, 18s
+		{0.6 4}		;150m, 12s
+		{0.8 5}		;200m, 15s
+		{1.0 8}		;250m, 24s
 	}
 
 	("accuracy_rifle_sniper")

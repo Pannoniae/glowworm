@@ -48,7 +48,7 @@
 	(define "accuracy_rifle_sniper"
 		;("sniper_range" r0(0.25) r1(0.3) r2(0.6) r3(0.75) globalaccuracy(1.00))	;Robz r1(0.30) r2(0.45) r3(1.15) r4(1.55) r5(1.85)
 		{spreading
-			{radiusTable {0 0} {10 0.30} {40 0.45} {70 1.15} {100 1.55} {150 1.85}}
+			{radiusTable {0 0} {10 0.20} {40 0.40} {70 0.80} {100 0.90} {250 1.00}}
 		}
 	)
 	(define "accuracy_rifle_auto"
@@ -60,7 +60,7 @@
 	(define "accuracy_rifle_auto_sniper"
 		;("sniper_range" r0(0.3) r1(0.4) r2(0.7) r3(0.90) globalaccuracy(1.00))	;Robz r1(0.45) r2(0.60) r3(1.25) r4(1.70) r5(2.00)
 		{spreading
-			{radiusTable {0 0} {10 0.2} {40 0.3} {70 0.7} {100 0.9} {200 1.00}}
+			{radiusTable {0 0} {10 0.25} {40 0.50} {70 0.90} {100 0.95} {200 1.10}}
 		}
 	)
 	(define "accuracy_battle_rifle"
@@ -305,14 +305,14 @@
 
 	(define "sway_pistol"
 		{swayparams
-			{bounds -0.75 0.6 -1.05 0.9}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
-			{speed 0.5}						; sway speed coef
+			{bounds -7.5 6.0 -10.5 9.0}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+			{speed 0.8}						; sway speed coef
 		}
 	)
 
 	(define "sway_smg"
 		{swayparams
-			{bounds -0.5 0.4 -0.7 0.6}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+			{bounds -5.0 4.0 -7.0 6.0}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
 			{speed 0.5}						; sway speed coef
 		}
 	)
@@ -352,7 +352,7 @@
 			{shoot {15.0 5.0} {2 1.75}}		; pitch / +- random and yaw / +- random, per shot, degree
 			{maxAngle 25 12}						; max recoil angle (pitch/yaw), degree
 			{restoreTime 30 0}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
-			{restoreDelay 0.1}					; delay before restore, sec
+			{restoreDelay 0.20}					; delay before restore, sec
 		}
 	)
 
@@ -403,7 +403,7 @@
 
 	(define "recoil_sniper_semi"
 		{recoil
-			{shoot {1.45 0.35} {0 0.8}}		; pitch / +- random and yaw / +- random, per shot, degree
+			{shoot {10 2.5} {0 0.8}}		; pitch / +- random and yaw / +- random, per shot, degree
 			{maxAngle 8 8}						; max recoil angle (pitch/yaw), degree
 			{restoreTime 1.3 0.4}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
 			{restoreDelay 0.20}					; delay before restore, sec
@@ -412,8 +412,8 @@
 
 	(define "recoil_sniper_bolt"
 		{recoil
-			{shoot {1.75 0.4} {0 0.9}}		; pitch / +- random and yaw / +- random, per shot, degree
-			{maxAngle 8 8}						; max recoil angle (pitch/yaw), degree
+			{shoot {8 2} {0 0.9}}		; pitch / +- random and yaw / +- random, per shot, degree
+			{maxAngle 12 12}						; max recoil angle (pitch/yaw), degree
 			{restoreTime 1.50 0.5}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
 			{restoreDelay 0.20}					; delay before restore, sec
 		}
