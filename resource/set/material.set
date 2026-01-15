@@ -5,16 +5,16 @@
 				{0	1}
 				{10	1}
 				{15	1}
-				{30	0.9}
-				{45 0.75}
-				{60 0.25}
+				{30	0.95}
+				{45 0.85}
+				{60 0.30}
 				{75 0.0}
 				{90 0.0}
 			}
 			{angle
 				{1	1}
-				{10	5}
-				{30	15}
+				{10	7}
+				{30	20}
 				{45	30}
 				{90	90}
 			}
@@ -458,7 +458,9 @@
 			
 			; 0-5°: EXTREME MICRO-CHATOIC TERRAIN
 			; Simulating individual rocks, pebbles, debris
+			
 			{0		0}		; consistent start
+			{0.1	4}		; Small skip on a stone
 			{0.2	12}		; Hit large rock immediately
 			{0.3	1.5}	; Smooth patch
 			{0.4	8}		; Medium stone
@@ -602,15 +604,16 @@
 			{45	50}
 			
 			; 45-90°: RARE BUT POSSIBLE EXTREME BOUNDS
-			{50	4}	;
+			{50	105}	; Almost impossible but allowed
 			{55	70}
-			{60	75}	; Maximum cinematic bounce
+			{60	150}	; Maximum cinematic bounce
 			{65	80}
-			{70	50}	; Extreme
+			{70	160}	; Extreme
 			{75	90}
-			{80	20}	
+			{80	170}	; Nearly reversing direction
+			{85	100}
 			{85	40}
-			{90	89}	; Full reversal (theoretical max)
+			{90	175}	; Full reversal (theoretical max)
 		}
 
 
