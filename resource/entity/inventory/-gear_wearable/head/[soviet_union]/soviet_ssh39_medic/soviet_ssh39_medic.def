@@ -4,4 +4,16 @@
 		{item "soviet_ssh39_medic"}
 	}
 	{Extension "soviet_ssh39_medic.mdl"}
+	
+	{volume "body"
+			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
+		{thickness 2}
+				{component "body"}
+
+	}
+	{volume "select"
+			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
+		{thickness 2}
+				{component "body"}
+	}
 }

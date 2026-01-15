@@ -1,19 +1,21 @@
 {actor
 	(include "/properties/stuff_small.ext")
+	{extension "bagpipes.mdl"}
+	{props "bagpipes"}
 	{extender "stuff"
-		{item "soviet_ssh40_medic"}
+		{item "bagpipes"}
 	}
-	{Extension "soviet_ssh39_medic.mdl"}
+	{nogroupmesh 4}
 	
 	{volume "body"
-			{able {select} {contact_ground} {touch} {contact} {bullet}  {blast}}
-		{thickness 2}
+			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
+		{thickness 5}
 				{component "body"}
 
 	}
 	{volume "select"
 			{able {select} {contact_ground} {touch} {contact} {bullet} {blast}}
-		{thickness 2}
+		{thickness 5}
 				{component "body"}
 	}
 }

@@ -130,13 +130,27 @@
 		{cursorReloading "gun_ic"}
 	}
 
+
+;normally, sloped armor increases effective thickness
+;
+;effective armor = thickness / cos(angle)
+;
+;OvermatchDamping reduces how much the angle matters
+;
+;when a shell overmatches armor, the game applies this:
+;
+;effective angle = angle / damping
+;
+;So big damping = angle is “flattened”
+;to make hetzers survive well on PERFECT slopes and reward angled tiger tanks, reduce the damping numbers. to make IS-2s shred panzer 4s with every hit no matter angle, put it up
+
 	{OvermatchDamping							; [??] (angle - damping)
 		{0 1}
-		{30 1.1}
-		{55	1.15}
-		{60	1.45}
-		{70	4}
-		{90	6}
+		{30 1.05}
+		{55	1.1}
+		{60	1.4}
+		{70	3}
+		{90	5}
 	}
 
 	;/*=========== Ammo Types End ===========*/
