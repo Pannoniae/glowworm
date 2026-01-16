@@ -1866,6 +1866,7 @@
 		{delay 0.3
 			{spawn "spherewater_big"}
 		}
+		{call "stop_bagpipes"}
 	}
 
 	{on swim on				;// swimming movement mode
@@ -2442,6 +2443,7 @@
 		}
 		{delay 29.0 "bagpipes_end"
 			{tags remove "playing_bagpipes"}
+			{call "play_bagpipes"}
 		}
 	}
 

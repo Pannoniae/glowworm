@@ -1517,3 +1517,8 @@
 	{loudness "environment_local"}
 	{tag environment}
 )
+(define "bagpipes"
+	{loudness "bagpipes"}
+	{tag environment}
+	{volume 2.5}
+)
