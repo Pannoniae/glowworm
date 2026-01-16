@@ -721,7 +721,7 @@
 
 ;PROJECT REALITY NEW DEFINES
 
-;WERMACHT ------------------------------------------------------
+;Wehrmacht ------------------------------------------------------
 ;Volkssturm
 ;skill2
 ("squad_with4types_doc_man" side(ger) d("44-45_ger_wehr") scf(0) name(squad_volkssturm) period(late) year(44 45 46) scf(0) cd(600) ci(60) g(squad_1) c1(volkssturm_pol:1) c2(volkssturm_rifle:4) c3(volkssturm_pzf:3) c4(volkssturm_smg:1) b(squad) cost(80) t())
@@ -853,7 +853,7 @@
 ;|________________________________________________|
 
 
-;WERMACHT-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+;Wehrmacht-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_wehr") name(single_rifle)		period(late) year(44 45 46) cd(0)   ci(10)   g(single_1) c1(rifleman_1:1)					b(single) 					cost(10) t())
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_wehr") name(single_smg)			period(late) year(44 45 46) cd(0)   ci(10)   g(single_2) c1(smg_1:1)							b(single) 				cost(10) t())
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_wehr") name(single_sa)			period(late) year(44 45 46) cd(0)   ci(25)   g(single_3) c1(rifleman_3:1)						b(single) 				cost(15) t())
@@ -918,7 +918,7 @@
 ;|               Wheeled vehicles                 |
 ;|________________________________________________|
 
-;wehrmacht only
+;Wehrmacht only
 {"kettenkrad_ss"
 	("vehicle_ss"  period(late) year(44 45 46) cd(30) ci(0) g(wheel7) side(ger) t(vehicle) vehicle(kettenkrad) crew(rifleman_1:1) b(supply) cw(1) cp(2)
 	cost(25))
@@ -932,14 +932,14 @@
 }
 
 
-{"kettenkrad"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel7) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
-	cost(10))
-}
-{"schwimmwagen"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
-	cost(15))
-}
+;{"kettenkrad"
+;	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel7) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
+;	cost(10))
+;}
+;{"schwimmwagen"
+;	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
+;	cost(15))
+;}
 
 
 {"bmw_r71"
@@ -951,7 +951,7 @@
 	cost(75))
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"kubelwagen_mg"
 	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(ger) t(vehicle) crew(mgun_2:2) b(supply) cw(1) cp(2)
 	cost(55))
@@ -980,7 +980,7 @@
 	cost(80))
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"blitz3_6"
 	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(rifleman_1:1) b(supply) cw(1) cp(0)
 	cost(25))
@@ -1015,7 +1015,6 @@
 {"sdkfz251d_1"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) g(wheel3) side(ger) t(vehicle) crew(rifleman_1:2) b(supply) cw(2) cp(4)
 	cost(150))
-	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
@@ -1032,7 +1031,7 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"blitz3_6_art_ammo"
 	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(supply1) side(ger) t(vehicle supply) crew(rifleman_1:1) b(supply) cw(1) cp(0)
 	cost(200))
@@ -1058,7 +1057,7 @@
 	cost(100))
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"kettenkrad_eng"
 	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel7) side(ger) t(vehicle) crew(engineer_1:1) b(supply) cw(1) cp(2)
 	cost(50))
@@ -1087,7 +1086,7 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"sdkfz302"
 	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(light) side(ger) crew(tankman:0) g(light1) b(supply) cw(0) cp(0)
 	cost(100))
@@ -1150,14 +1149,14 @@
 	cost(160))
 }
 
-;SS only
+;Wehrmacht only
 {"20mm_flak30"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(empl2) b(support) cw(1) cp(8)
 	cost(180))
-	{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_wehr"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"20mm_flak38"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(empl2) b(support) cw(1) cp(8)
 	cost(200))
@@ -1172,7 +1171,6 @@
 {"30mm_flak38"
 	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(empl2) b(support) cw(1) cp(8)
 	cost(260))
-	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
@@ -1183,12 +1181,16 @@
 	
 }
 
+
+
+;SS only
 {"37mm_pak36_late"
 	("vehicle"  period(late) year(44 45 46) cd(30) ci(10) t(cannon) side(ger) crew(artilleryman:4) g(empl3) b(support) cw(1) cp(6)
 	cost(180))
+	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"37mm_flak37"
 	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(artilleryman:3) g(empl37) b(support) cw(1) cp(10)
 	cost(250))
@@ -1202,7 +1204,7 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"50mm_pak38_late"
 	("vehicle"  period(late) year(44 45 46) cd(60) ci(10) t(cannon mediumcan) side(ger) crew(artilleryman:4) g(empl4) b(support) cw(1) cp(12)
 	cost(200))
@@ -1249,7 +1251,7 @@
 }
 
 
-;Wermacht only
+;Wehrmacht only
 {"88mm_flak36"
 	("vehicle"  period(late) year(44 45 46) cd(720) ci(10) t(cannon heavycan) side(ger) crew(artilleryman:5) g(empl7) b(support) cw(1) cp(20)
 	cost(700))
@@ -1263,13 +1265,14 @@
 	{doctrine "44-45_ger_ss"}
 }
 
+;SS only
 {"88mm_pak4341"
 	("vehicle"  period(late) year(44 45 46) cd(1200) ci(10) t(cannon heavycan) side(ger) crew(artilleryman:4) g(empl5) b(support) cw(1) cp(22)
 	cost(850))
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"128mm_pak44"
 	("vehicle"  period(late) year(44 45 46) cd(1320) ci(10) t(cannon heavycan) side(ger) crew(artilleryman:4) g(empl5) b(support) cw(1) cp(22)
 	cost(1000))
@@ -1285,10 +1288,11 @@
 	cost(360))
 }
 
+;Wehrmacht only
 {"120mm_sgrw42"
 	("vehicle"  period(late) year(44 45 46) cd(600) ci(10) t(artillery) side(ger) crew(artilleryman:2) g(empl9) b(art) cw(1) cp(16)
 	cost(680))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
@@ -1309,7 +1313,7 @@
 ;	cost(300))
 ;}
 
-;wehrmacht only
+;Wehrmacht only
 {"75mm_leig18"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon mediumcan) side(ger) crew(artilleryman:4) g(empl3) b(art) cw(1) cp(12)
 	cost(320))
@@ -1339,7 +1343,7 @@
 
 ; actual howitzers
 
-;wehrmacht only
+;Wehrmacht only
 {"105mm_lefh18"
 	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(artillery) side(ger) crew(artilleryman:4) g(empl9) b(art) cw(1) cp(26)
 	cost(550))
@@ -1358,7 +1362,7 @@
 	cost(700))
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"150mm_sfh18"
 	("vehicle"  period(late) year(44 45 46) cd(1200) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:5) g(empl8) b(art) cw(1) cp(30)
 	cost(750))
@@ -1372,23 +1376,23 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-{"170mm_k18_ss"
-	("vehicle_ss"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) vehicle(170mm_k18) crew(artilleryman:6) g(empl16) b(art) cw(1) cp(30)
-	cost(1200))
-}
+;{"170mm_k18_ss"
+;	("vehicle_ss"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) vehicle(170mm_k18) crew(artilleryman:6) g(empl16) b(art) cw(1) cp(30)
+;	cost(1200))
+;}
 
-=
+;SS only
 {"170mm_k18"
-	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery doctrineonly) side(ger) crew(artilleryman:6) g(empl16) b(art) cw(1) cp(30)
+	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:6) g(empl16) b(art) cw(1) cp(30)
 	cost(1200))
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
-=
+;Wehrmacht only
 {"210mm_morser18"
 	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:6) g(empl10) b(art) cw(1) cp(30)
 	cost(1200))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 
@@ -1396,11 +1400,11 @@
 ;vehicles and shit
 
 
-;wehrmacht only
+;Wehrmacht only
 {"sdkfz251d_2"
 	("vehicle2"  period(late) year(44 45 46) cd(210) ci(10) t(vehicle) side(ger) crew1(rifleman_1:1) crew2(artilleryman:3) g(wheel10) b(art) cw(2) cp(13)
 	cost(380))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 {"stuh42"
@@ -1408,7 +1412,7 @@
 	cost(600)) ;// +30 for crew
 }
 
-;wermacht only
+;Wehrmacht only
 {"grille_k"
 	("vehicle2" period(late) year(44 45 46) cd(900) ci(10) t(light) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg6) b(art) cw(6) cp(34)
 	cost(900)) ;// +35 for crew
@@ -1422,7 +1426,7 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"sig33b"
 	("vehicle2" period(late) year(44 45 46) cd(820) ci(10) t(medium) side(ger) crew1(tankman_stug:4) crew2(tank_commander_stug:1) g(spg4) b(art) cw(6) cp(30)
 	cost(750))
@@ -1439,11 +1443,11 @@
 	cost(800)) ;// +35 for crew
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"hummel"
 	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(ger) crew1(tankman_stug:5) crew2(tank_commander_stug:1) g(spg6) b(art) cw(6) cp(40)
 	cost(1350)) ;// +35 for crew
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 {"sturmtiger_ss"
@@ -1451,23 +1455,23 @@
 	cost(1700)) ;// +35 for crew
 }
 
-{"sturmtiger"
-	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
-	cost(1600)) ;// +35 for crew
-}
+;{"sturmtiger"
+;	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
+;	cost(1600)) ;// +35 for crew
+;}
 
-;wehrmacht only
+;Wehrmacht only
 {"600mm_thor"
 	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:5) g(empl19) b(art) cw(1) cp(50)
 	cost(1700))
 	{doctrine "44-45_ger_wehr"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"150mm_nebelwerfer41"
 	("vehicle"  period(late) year(44 45 46) cd(1080) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:4) g(empl9) b(art) cw(1) cp(28)
 	cost(600))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
@@ -1480,7 +1484,6 @@
 {"300mm_nebelwerfer42"
 	("vehicle"  period(late) year(44 45 46) cd(1320) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:4) g(empl9) b(art) cw(1) cp(48)
 	cost(1200))
-	{doctrine "44-45_ger_wehr"}
 }
 
 
@@ -1500,10 +1503,10 @@
 	cost(1500))
 }
 
-{"sdkfz251d_1_stuka"
-	("vehicle2" period(late) year(44 45 46) cd(1620) ci(10) g(wheel11) side(ger) t(vehicle doctrineonly) crew1(tankman:2) crew2(tank_commander:1) b(art) cw(2) cp(54)
-	cost(1500))
-}
+;{"sdkfz251d_1_stuka"
+;	("vehicle2" period(late) year(44 45 46) cd(1620) ci(10) g(wheel11) side(ger) t(vehicle doctrineonly) crew1(tankman:2) crew2(tank_commander:1) b(art) cw(2) cp(54)
+;	cost(1500))
+;}
 
 ;_________________________________________________
 ;|        Main Battle Tanks and SPGs              |
@@ -1517,10 +1520,11 @@
 	cost(200))
 }
 
+;Wehrmacht only
 {"sdkfz250a_9"
 	("vehicle"  period(late) year(44 45 46) cd(320) ci(10) g(wheel10) side(ger) t(vehicle) crew(artilleryman:4) b(lt) cw(2) cp(8)
 	cost(210))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
@@ -1530,18 +1534,18 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-
+;Wehrmacht only
 {"sdkfz251c_9"
 	("vehicle"  period(late) year(44 45 46) cd(420) ci(10) g(wheel10) side(ger) t(vehicle) crew(artilleryman:4) b(lt) cw(2) cp(8)
 	cost(220))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
-
+;SS only
 {"sdkfz251d_9"
 	("vehicle"  period(late) year(44 45 46) cd(540) ci(10) g(wheel10) side(ger) t(vehicle) crew(artilleryman:4) b(lt) cw(2) cp(8)
 	cost(280))
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
 ;SS only
@@ -1558,7 +1562,7 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"sdkfz221"
 	("vehicle2" period(late) year(44 45 46) cd(320) ci(10) g(wheel4) side(ger) t(vehicle) crew1(tankman_scout:1) crew2(tank_commander_scout:1) b(lt) cw(2) cp(4)
 	cost(180))
@@ -1570,14 +1574,14 @@
 ;	cost(200))
 ;}
 
-;wehrmacht only
+;Wehrmacht only
 {"flakpanzer1a"
 	("vehicle2" period(late) year(44 45 46) cd(350) ci(10) t(light) side(ger) crew1(tankman:2) crew2(tank_commander:1) g(light2) b(lt) cw(4) cp(12)
 	cost(240))
 	{doctrine "44-45_ger_wehr"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"sdkfz222b"
 	("vehicle2" period(late) year(44 45 46) cd(380) ci(10) g(wheel8) side(ger) t(vehicle) crew1(tankman_scout:2) crew2(tank_commander_scout:1) b(lt) cw(2) cp(8)
 	cost(220))
@@ -1646,10 +1650,11 @@
 	{doctrine "44-45_ger_ss"}
 }
 
+;SS only
 {"sdkfz251d_21"
 	("vehicle"  period(late) year(44 45 46) cd(480) ci(10) g(wheel10) side(ger) t(vehicle) crew(artilleryman:4) b(lt) cw(2) cp(10)
 	cost(260))
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
 ;SS only
@@ -1666,13 +1671,14 @@
 	{doctrine "44-45_ger_ss"}
 }
 
+;Wehrmacht only
 {"sdkfz251_20" ; // Searchlight
 	("vehicle" period(late) year(44 45 46) cd(320) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(searchlight) b(lt) cw(1) cp(6)
 	cost(400))
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"sdkfz234_1"
 	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) g(wheel10) side(ger) t(vehicle) crew1(tankman_scout:3) crew2(tank_commander_scout:1) b(lt) cw(2) cp(8)
 	cost(250))
@@ -1689,36 +1695,45 @@
 	cost(350))
 }
 
+;Wehrmacht only
 {"sdkfz7_1"
 	("vehicle2" period(late) year(44 45 46) cd(450) ci(10) g(wheel6) side(ger) t(vehicle) crew1(tankman:3) crew2(tank_commander:1) b(lt) cw(2) cp(12)
 	cost(320))
+	{doctrine "44-45_ger_wehr"}
 }
 
+;Wehrmacht only
 {"sdkfz7_2"
 	("vehicle2" period(late) year(44 45 46) cd(480) ci(10) g(wheel6) side(ger) t(vehicle) crew1(tankman:3) crew2(tank_commander:1) b(lt) cw(2) cp(12)
 	cost(350))
+	{doctrine "44-45_ger_wehr"}
 }
 
+;SS only
 ; timers are gimped on this one so german players actually buy tanks and not just fag halftracks
 {"sdkfz234_4"
 	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) g(wheel10) side(ger) t(vehicle) crew1(tankman_scout:3) crew2(tank_commander_scout:1) b(lt) cw(2) cp(24)
 	cost(450))
+	{doctrine "44-45_ger_ss"}
+	
 }
 
 
+;Wehrmacht only
 {"sdkfz251d_22"
 	("vehicle"  period(late) year(44 45 46) cd(540) ci(10) g(wheel10) side(ger) t(vehicle) crew(artilleryman:4) b(lt) cw(2) cp(20)
 	cost(450))
+	{doctrine "44-45_ger_wehr"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"grille_m_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(480) ci(10) t(light) side(ger) vehicle(grille_m) crew1(tankman_stug:2) crew2(tank_commander_stug:1) g(light2) b(lt) cw(4) cp(12)
 	cost(400)) ;// +30 for crew
 	{doctrine "44-45_ger_wehr"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"grille_m"
 	("vehicle2" period(late) year(44 45 46) cd(480) ci(10) t(light doctrineonly) side(ger) crew1(tankman_stug:2) crew2(tank_commander_stug:1) g(light2) b(lt) cw(4) cp(12)
 	cost(400)) ;// +30 for crew
@@ -1763,11 +1778,11 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"panzer3n"
 	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(20)
 	cost(400)) ;// +35 for crew
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 {"panzer3_flamm"
@@ -1782,31 +1797,30 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"panzer4g"
 	("vehicle2" period(late) year(44 45 46) cd(660) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium3) b(mt) cw(6) cp(24)
 	cost(500)) ;// +35 for crew
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
 {"panzer4f1"
 	("vehicle2" period(late) year(44 45 46) cd(660) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium3) b(mt) cw(6) cp(24)
 	cost(520)) ;// +35 for crew
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"panzer4h"
 	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium4) b(mt) cw(6) cp(24)
 	cost(540)) ;// +35 for crew
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
 {"panzer4j"
 	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(24)
 	cost(480)) ;// +35 for crew
-	{doctrine "44-45_ger_ss"}
 }
 
 ;Wehrmacht only
@@ -1816,7 +1830,7 @@
 	{doctrine "44-45_ger_wehr"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"panzer5a"
 	("vehicle2" period(late) year(44 45 46) cd(1260) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(heavy1) b(mt) cw(6) cp(30)
 	cost(1400)) ;// +35 for crew
@@ -1873,7 +1887,7 @@
 ;	cost(1300)) ;// +35 for crew
 ;}
 
-;wermacht only
+;Wehrmacht only
 {"tiger1hunt_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1320) ci(10) t(heavy) side(ger) vehicle(tiger1hunt) crew1(tankman_ace:4) crew2(tank_commander_ace:1) g(heavy2) b(ht) cw(8) cp(30)
 	cost(1500)) ;// +35 for crew
@@ -1885,7 +1899,7 @@
 	cost(1280)) ;// +35 for crew
 }
 
-;wermacht only
+;Wehrmacht only
 {"tiger1hunt"
 	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman_ace:4) crew2(tank_commander_ace:1) g(heavy2) b(ht) cw(8) cp(30)
 	cost(1500)) ;// +35 for crew
@@ -1897,26 +1911,38 @@
 {"tiger2p_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(ger) vehicle(tiger2p) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
 	cost(2000)) ;// +35 for crew
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
-;Wermacht only
+;Wehrmacht only
 {"tiger2h_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1800) ci(10) t(heavy) side(ger) vehicle(tiger2h) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
 	cost(2000)) ;// +35 for crew
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 }
 
-{"tiger2p"
-	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
-	cost(2000)) ;// +35 for crew
-	;{doctrine "44-45_ger_ss"}
-}
+;{"tiger2p"
+;	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
+;	cost(1900)) ;// +35 for crew
+;}
 
+;{"tiger2h"
+;	("vehicle2" period(late) year(44 45 46) cd(1800) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
+;	cost(2000)) ;// +35 for crew
+;	{doctrine "44-45_ger_wehr"}
+;}
+
+;{"tiger2p"
+;	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
+;	cost(2000)) ;// +35 for crew
+;	{doctrine "44-45_ger_ss"}
+;}
+
+;Wehrmacht only
 {"tiger2h"
 	("vehicle2" period(late) year(44 45 46) cd(1800) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(heavy3) b(ht) cw(8) cp(40)
 	cost(2400)) ;// +35 for crew
-	;{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_wehr"}
 
 }
 
@@ -1950,7 +1976,7 @@
 }
 
 
-;wermacht only
+;Wehrmacht only
 {"marder3m"
 	("vehicle2" period(late) year(44 45 46) cd(600) ci(10) t(light) side(ger) crew1(tankman_pzjag:3) crew2(tank_commander_pzjag:1) g(spg1) b(td) cw(4) cp(20)
 	cost(500)) ;// +30 for crew
@@ -1977,21 +2003,15 @@
 ;	cost(570)) ;// +30 for crew
 ;}
 
-;SS only
-{"stug3f"
-	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(24)
-	cost(600)) ;// +30 for crew
-	;{doctrine "44-45_ger_ss"}
-}
-
-;wehrmacht only
+;Wehrmacht only
 {"stug3g_late"
 	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(24)
 	cost(550)) ;// +30 for crew
 	{doctrine "44-45_ger_wehr"}
 }
 
-{"stug3f8"
+;SS only
+{"stug3f"
 	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(24)
 	cost(630)) ;// +30 for crew
 	{doctrine "44-45_ger_ss"}
@@ -2001,7 +2021,7 @@
 {"panzer4_70_v"
 	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(24)
 	cost(600)) ;// +30 for crew
-	;{doctrine "44-45_ger_ss"}
+	{doctrine "44-45_ger_ss"}
 }
 
 
@@ -2017,7 +2037,7 @@
 ;}
 
 
-;wermacht only
+;Wehrmacht only
 {"jagdpanzer4_l48_early"
 	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_pzjag:3) crew2(tank_commander_pzjag:1) g(spg2) b(td) cw(6) cp(24)
 	cost(500)) ;// +30 for crew
@@ -2043,7 +2063,7 @@
 	{doctrine "44-45_ger_ss"}
 }
 
-;wermacht only
+;Wehrmacht only
 {"88mmflak37sfl"
 	("vehicle2" period(late) year(44 45 46)  cd(1080) ci(180) t(vehicle) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg6) b(td) cw(6) cp(30)
 	cost(800))
@@ -2076,33 +2096,33 @@
 	cost(1600)) ;// +35 for crew
 }
 
-;wehrmacht only
-{"ferdinand_ss"
-	("vehicle2_ss" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(ger) vehicle(ferdinand) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg4) b(td) cw(8) cp(40)
-	cost(1800)) ;// +40 for crew
-	{doctrine "44-45_ger_wehr"}
-}
+;Wehrmacht only
+;{"ferdinand_ss"
+;	("vehicle2_ss" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(ger) vehicle(ferdinand) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg4) b(td) cw(8) cp(40)
+;	cost(1800)) ;// +40 for crew
+;	{doctrine "44-45_ger_wehr"}
+;}
 
-;wehrmacht only
+;Wehrmacht only
 {"elefant_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(ger) vehicle(elefant) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg4) b(td) cw(8) cp(40)
 	cost(1850)) ;// +40 for crew
 	{doctrine "44-45_ger_wehr"}
 }
 
-{"jagdtiger_ss"
-	("vehicle2_ss" period(late) year(44 45 46) cd(1900) ci(10) t(heavy) side(ger) vehicle(jagdtiger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg5) b(td) cw(6) cp(40)
-	cost(2400)) ;// +35 for crew
-	{doctrine "44-45_ger_wehr"}
-}
+;{"jagdtiger_ss"
+;	("vehicle2_ss" period(late) year(44 45 46) cd(1900) ci(10) t(heavy) side(ger) vehicle(jagdtiger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg5) b(td) cw(6) cp(40)
+;	cost(2400)) ;// +35 for crew
+;}
 
-;wehrmacht only
+;Wehrmacht only
 {"ferdinand"
 	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(ger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg4) b(td) cw(8) cp(40)
 	cost(1800)) ;// +40 for crew
+	{doctrine "44-45_ger_wehr"}
 }
 
-;wehrmacht only
+;Wehrmacht only
 {"elefant"
 	("vehicle2" period(late) year(44 45 46) cd(1700) ci(10) t(heavy) side(ger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg4) b(td) cw(8) cp(40)
 	cost(1850)) ;// +40 for crew
@@ -2115,10 +2135,10 @@
 	cost(2400)) ;// +35 for crew
 }
 
-{"flammjagdtiger_ss"
-	("vehicle2_ss" period(late) year(44 45 46) cd(1900) ci(10) t(heavy) side(ger) vehicle(flammjagdtiger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg5) b(td) cw(6) cp(40)
-	cost(1800)) ;// +35 for crew
-}
+;{"flammjagdtiger_ss"
+;	("vehicle2_ss" period(late) year(44 45 46) cd(1900) ci(10) t(heavy) side(ger) vehicle(flammjagdtiger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg5) b(td) cw(6) cp(40)
+;	cost(1800)) ;// +35 for crew
+;}
 
 {"flammjagdtiger"
 	("vehicle2" period(late) year(44 45 46) cd(1900) ci(10) t(heavy) side(ger) crew1(tankman_pzjag:5) crew2(tank_commander_pzjag:1) g(spg5) b(td) cw(6) cp(40)
