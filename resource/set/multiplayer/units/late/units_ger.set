@@ -932,14 +932,14 @@
 }
 
 
-{"kettenkrad"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel7) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
-	cost(10))
-}
-{"schwimmwagen"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
-	cost(15))
-}
+;{"kettenkrad"
+;	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel7) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
+;	cost(10))
+;}
+;{"schwimmwagen"
+;	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel1) side(ger) t(vehicle doctrineonly) crew(rifleman_1:1) b(supply) cw(1) cp(2)
+;	cost(15))
+;}
 
 
 {"bmw_r71"
@@ -1015,6 +1015,7 @@
 {"sdkfz251d_1"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) g(wheel3) side(ger) t(vehicle) crew(rifleman_1:2) b(supply) cw(2) cp(4)
 	cost(150))
+	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
@@ -1149,11 +1150,11 @@
 	cost(160))
 }
 
-;Wehrmacht only
+;SS only
 {"20mm_flak30"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(empl2) b(support) cw(1) cp(8)
 	cost(180))
-	{doctrine "44-45_ger_wehr"}
+	{doctrine "44-45_ger_ss"}
 }
 
 ;Wehrmacht only
@@ -1171,6 +1172,7 @@
 {"30mm_flak38"
 	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(empl2) b(support) cw(1) cp(8)
 	cost(260))
+	{doctrine "44-45_ger_wehr"}
 }
 
 ;SS only
