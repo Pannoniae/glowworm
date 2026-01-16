@@ -847,30 +847,30 @@
 ;|             inf2                               |
 ;|________________________________________________|
 
-("single_with1type" side(eng) name(single_rifle)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_1) 		c1(rifle:1)										b(single) t() scf(1.25))
-("single_with1type" side(eng) name(single_smg)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_1) 		c1(smg:1)										b(single) t() scf(1.25))
-("squad_with2types" side(eng) name(single_mg)			period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(mg:1) c2(mg_asst:1)							b(single) t())
-("squad_with2types" side(eng) name(single_mg_sas)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(sas_mg:1) c2(sas_mg_asst:1)					b(single) t())
-("squad_with2types" side(eng) name(single_mg_sas_vgo)	period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(sas_mg_vgo:1) c2(sas_mg_asst_vgo:1)			b(single) t())
-("squad_with2types" side(eng) name(single_at)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_at)		c1(antitank_boys:1) c2(antitank_boys_asst:1)	b(single) t())
-("squad_with2types" side(eng) name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_piat)		c1(antitank_piat:1) c2(antitank_piat_asst:1)	b(single) t())
-("squad_with2types" side(eng) name(single_bazooker_sas)	period(late) year(44 45 46) cd(0)   ci(0)   g(single_piat)		c1(sas_piat:1) c2(sas_piat_asst:1)				b(single) t())
-("single_with1type" side(eng) name(single_riflegrenade)	period(late) year(44 45 46) cd(0)   ci(60)  g(single_rifleg) 	c1(antitank_gren:2)								b(single) t() scf(1.2))
+("single_with1type_man" side(eng) name(single_rifle)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_1) 		c1(rifle:1)										b(single) cost(10) t())
+("single_with1type_man" side(eng) name(single_smg)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_1) 		c1(smg:1)										b(single) cost(10) t())
+("squad_with2types_man" side(eng) name(single_mg)			period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(mg:1) c2(mg_asst:1)							b(single) cost(50) t())
+("squad_with2types_man" side(eng) name(single_mg_sas)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(sas_mg:1) c2(sas_mg_asst:1)					b(single) cost(80) t())
+("squad_with2types_man" side(eng) name(single_mg_sas_vgo)	period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg)		c1(sas_mg_vgo:1) c2(sas_mg_asst_vgo:1)			b(single) cost(90) t())
+("squad_with2types_man" side(eng) name(single_at)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_at)		c1(antitank_boys:1) c2(antitank_boys_asst:1)	b(single) cost(60) t())
+("squad_with2types_man" side(eng) name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_piat)		c1(antitank_piat:1) c2(antitank_piat_asst:1)	b(single) cost(70) t())
+("squad_with2types_man" side(eng) name(single_bazooker_sas)	period(late) year(44 45 46) cd(0)   ci(0)   g(single_piat)		c1(sas_piat:1) c2(sas_piat_asst:1)				b(single) cost(100) t())
+("single_with1type_man" side(eng) name(single_riflegrenade)	period(late) year(44 45 46) cd(0)   ci(60)  g(single_rifleg) 	c1(antitank_gren:2)								b(single) cost(20) t())
 ; TODO WE NEED TO SOURCE A MODEL/WEAPON FILE FOR THIS!!
-;("single_with1type" side(eng) name(single_mortar)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mortar) c1(rifle_mortar:1)									b(single) t() scf(1.0))
-("single_with1type" side(eng) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine)	c1(r_eng_mine_ap:4)								b(single) t(engineer miner) scf(1.6))
-("single_with1type" side(eng) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine)	c1(r_eng_mine_at:4)								b(single) t(engineer miner) scf(1.6))
-("single_with1type" side(eng) name(single_engineer)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng)		c1(r_eng_builder:2)								b(single) t(engineer builder) scf(1.6))
-("squad_with1types" side(eng) name(single_flamer)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer)	c1(r_eng_flamer:1)								b(single) t(flamer))
-("squad_with1types" side(eng) name(single_medic)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic)	c1(medic:1) 									b(single) t(medic))
-("squad_with1types" side(eng) name(single_sniper)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sniper:1) 									b(single) t(sniper))
-("squad_with1types" side(eng) name(single_sniper_sas)	period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sas_sniper:1) 							b(single) t(sniper))
-("squad_with1types" side(eng) name(single_officer)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer)	c1(coy_com:1)									b(single) t(officer))
+;("single_with1type_man" side(eng) name(single_mortar)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mortar) c1(rifle_mortar:1)									b(single) cost(5) t())
+("single_with1type_man" side(eng) name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine)	c1(r_eng_mine_ap:4)									b(single) cost(50) t(engineer miner))
+("single_with1type_man" side(eng) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine)	c1(r_eng_mine_at:4)									b(single) cost(50) t(engineer miner))
+("single_with1type_man" side(eng) name(single_engineer)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng)		c1(r_eng_builder:2)								b(single) cost(50) t(engineer builder))
+("squad_with1types_man" side(eng) name(single_flamer)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer)	c1(r_eng_flamer:1)								b(single) cost(60) t(flamer))
+("squad_with1types_man" side(eng) name(single_medic)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic)	c1(medic:1) 										b(single) cost(40) t(medic))
+("squad_with1types_man" side(eng) name(single_sniper)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sniper:1) 									b(single) cost(150) t(sniper))
+("squad_with1types_man" side(eng) name(single_sniper_sas)	period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sas_sniper:1) 								b(single) cost(175) t(sniper))
+("squad_with1types_man" side(eng) name(single_officer)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer)	c1(coy_com:1)									b(single) cost(150) t(officer))
 
-("squad_with1types" side(eng) name(radioman_88)			period(late) year(44 45 46) cd(420) ci(180) g(radioman)			c1(fo_radio_88:1)								b(single) t(signaller))
-("squad_with1types" side(eng) name(radioman_114)		period(late) year(44 45 46) cd(750) ci(180) g(radioman)			c1(fo_radio_114:1)								b(single) t(signaller))
-("squad_with1types" side(eng) name(radioman_140)		period(late) year(44 45 46) cd(820) ci(180) g(radioman)			c1(fo_radio_140:1)								b(single) t(signaller))
-("squad_with1types" side(eng) name(radioman_183)		period(late) year(44 45 46) cd(900) ci(180) g(radioman)			c1(fo_radio_183:1)								b(single) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_88)			period(late) year(44 45 46) cd(420) ci(180) g(radioman)			c1(fo_radio_88:1)								b(single) cost(150) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_114)		period(late) year(44 45 46) cd(750) ci(180) g(radioman)			c1(fo_radio_114:1)								b(single) cost(200) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_140)		period(late) year(44 45 46) cd(820) ci(180) g(radioman)			c1(fo_radio_140:1)								b(single) cost(350) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_183)		period(late) year(44 45 46) cd(900) ci(180) g(radioman)			c1(fo_radio_183:1)								b(single) cost(400) t(signaller))
 
 ;Support crew
 ("squad_with1types_man" side(eng) name(squad_support_crew_eng) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_1) c1(crew:5) b(single) cost(50) t())
@@ -919,7 +919,7 @@
 }
 {"bedford_qld_engineer"
 	("vehicle" period(late) year(44 45 46) cd(30) ci(0) g(supply3) side(eng) t(vehicle supply engtruck) crew(r_eng_builder:2)  b(supply) cw(1) cp(0)
-	cost(130))
+	cost(100))
 }
 {"morris_c8"
 	("vehicle"  period(late) year(44 45 46) cd(90) ci(10) g(wheel2) side(eng) t(vehicle) crew(driver:1) b(supply) cw(1) cp(2)
