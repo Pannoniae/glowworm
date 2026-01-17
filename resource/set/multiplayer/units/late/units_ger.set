@@ -772,7 +772,7 @@
 
 ;Begleit Grenadiers
 ;skill6
-("squad_with7types_doc_man" side(ger) d("44-45_ger_wehr") scf(0) name(squad_begleitgren_late_off) period(late) year(44 45 46) cd(0) ci(30) g(squad_3) c1(begleitgren_sl:1) c2(begleitgren_sl_asst:1) c3(begleitgren_rifle_pzf:2) c4(begleitgren_rifle:2) c5(begleitgren_at:1) c6(begleitgren_mg:2) c7(begleitgren_mg_asst:2) b(squad) cost(300) t())
+("squad_with7types_doc_man" side(ger) d("44-45_ger_wehr") scf(0) name(squad_beg) period(late) year(44 45 46) cd(0) ci(30) g(squad_3) c1(begleitgren_sl:1) c2(begleitgren_sl_asst:1) c3(begleitgren_rifle_pzf:2) c4(begleitgren_rifle:2) c5(begleitgren_at:1) c6(begleitgren_mg:2) c7(begleitgren_mg_asst:2) b(squad) cost(300) t())
 
 ;130. Mechanized Panzer-Lehr-Division
 ;skill 7
@@ -801,7 +801,7 @@
 
 ;SS Recon Aufklär Einsatzgruppe
 ;skill 6 recon
-("squad_vehicle_with3types_doc_man" side(ger) d("44-45_ger_ss") name(squad_einsatzgruppe) period(late) year(44 45 46) scf(0) cd(0) ci(0) g(squad_1) vehicle(schwimmwagen) c1(waffen_pz_recon_sl:1) c2(waffen_pz_recon_sl_asst_rifle:1) c3(waffen_pz_recon_sa:2) b(squad) cost(140) t()) 
+("squad_vehicle_with3types_doc_man" side(ger) d("44-45_ger_ss") name(squad_einsatzgruppe) period(late) year(44 45 46) scf(0) cd(0) ci(0) g(squad_1) vehicle(kubelwagen_dak) c1(waffen_pz_recon_sl:1) c2(waffen_pz_recon_sl_asst_rifle:1) c3(waffen_pz_recon_sa:2) b(squad) cost(140) t()) 
 
 ;101st SS Spanish Volunteer Gruppe
 ;skill 3
@@ -866,7 +866,7 @@
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_wehr") name(single_mg_elite2_34)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_vet_mg34:1) c2(fallsch_vet_mg34_asst:1) b(single) 	cost(90) t())
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_wehr") name(single_mg_elite2)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_vet_mg:1) c2(fallsch_vet_mg_asst:1) b(single) 		cost(100) t())
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_wehr") name(single_at_rifle_ger)	period(late) year(44 45 46) cd(0)   ci(10)   g(single_1) c1(rifle_at:1) c2(rifle_at_asst:1)					b(single) 	cost(60) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_wehr") name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_at) c1(antitank_1:1) c2(antitank_2:1)		b(single) 				cost(80) t())
+("squad_with2types_doc_man" side(ger) d("44-45_ger_wehr") name(single_bazooker)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_at) c1(antitank_1:1) c2(antitank_2:1)		b(single) 				cost(40) t())
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_wehr") name(single_riflegrenade)	period(late) year(44 45 46) cd(0)   ci(0)  g(single_rifleg) c1(antitank_4:1) c2(antitank_5:1)	b(single) 				cost(20) t())
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_wehr") name(single_ap_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine) c1(miner-ap:4)					b(single) 					cost(100) t(engineer miner))
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_wehr") name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine) c1(miner-at:4)					b(single) 					cost(100) t(engineer miner))
@@ -878,31 +878,48 @@
 
 ;SS-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_rifle_ss)		period(late) year(44 45 46) cd(0)   ci(10)   g(single_1) c1(rifleman_1:1)					b(single) 						cost(10) t())
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_smg_ss)			period(late) year(44 45 46) cd(0)   ci(10)   g(single_2) c1(smg_1:1)							b(single) 					cost(15) t())
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_sa_ss)			period(late) year(44 45 46) cd(0)   ci(25)   g(single_3) c1(rifleman_3:1)						b(single) 					cost(20) t())
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_stg_ss)			period(late) year(44 45 46) cd(0)   ci(30)   g(single_4) c1(smg_stg:1)						b(single) 						cost(30) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_34_ss)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg) c1(mgun_1_34:1) c2(mgun_2_34:1)				b(single) 			cost(50) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_ss)			period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg) c1(mgun_1:1) c2(mgun_2:1)				b(single) 					cost(60) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite_34_ss)	period(late) year(44 45 46) cd(0)	ci(180)	g(single_mg) c1(gd_mg_34:1) c2(gd_mg_asst_34:1) b(single) 						cost(70) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite_ss)		period(late) year(44 45 46) cd(0)	ci(180)	g(single_mg) c1(gd_pzgren_mg:1) c2(gd_pzgren_mg_asst:1) b(single) 			cost(70) t())
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_rifle_ss)		period(late) year(44 45 46) cd(0)   ci(10)   g(single_1) c1(schutzen_rifle:1)					b(single) 						cost(10) t())
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_smg_ss)			period(late) year(44 45 46) cd(0)   ci(10)   g(single_2) c1(schutzen_smg_1:1)							b(single) 					cost(10) t())
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_sa_ss)			period(late) year(44 45 46) cd(0)   ci(25)   g(single_3) c1(schutzen_sa:1)						b(single) 					cost(15) t())
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_stg_ss)			period(late) year(44 45 46) cd(0)   ci(30)   g(single_4) c1(schutzen_stg:1)						b(single) 						cost(30) t())
+
+;new zb27 call in
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_zb26_ss)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg) c1(schutzen_mg:1) c2(schutzen_mg_asst:1)				b(single) 			cost(40) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_34_ss)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg) c1(schutzen_mg34:1) c2(schutzen_mg34_asst:1)				b(single) 			cost(50) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_ss)			period(late) year(44 45 46) cd(0)   ci(60)  g(single_mg) c1(schutzen_mg42:1) c2(schutzen_mg42_asst:1)				b(single) 					cost(60) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite_34_ss)	period(late) year(44 45 46) cd(0)	ci(180)	g(single_mg) c1(waffen_vet_pzgren_mg34:1) c2(waffen_vet_pzgren_mg_asst:1) b(single) 						cost(70) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite_ss)		period(late) year(44 45 46) cd(0)	ci(180)	g(single_mg) c1(waffen_vet_pzgren_mg:1) c2(waffen_vet_pzgren_mg_asst:1) b(single) 			cost(70) t())
+
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite2_fg_ss)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_fg:1) c2(fallsch_rifle:2) b(single) 				cost(80) t())
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite2_34_ss)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_vet_mg34:1) c2(fallsch_vet_mg34_asst:1) b(single) 	cost(90) t())
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_mg_elite2_ss)	period(late) year(44 45 46) cd(0)	ci(240)	g(single_mg) c1(fallsch_vet_mg:1) c2(fallsch_vet_mg_asst:1) b(single) 			cost(100) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_at_rifle_ger_ss)	period(late) year(44 45 46) cd(0)   ci(10)   g(single_1) c1(rifle_at:1) c2(rifle_at_asst:1)					b(single) 	cost(60) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_bazooker_ss)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_at) c1(antitank_1:1) c2(antitank_2:1)		b(single) 				cost(100) t())
-("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_riflegrenade_ss)	period(late) year(44 45 46) cd(0)   ci(0)  g(single_rifleg) c1(antitank_4:1) c2(antitank_5:1)	b(single) 				cost(20) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_at_rifle_ger_ss)	period(late) year(44 45 46) cd(0)   ci(10)   g(single_1) c1(rifle_at_ss:1) c2(rifle_at_asst_ss:1)					b(single) 	cost(40) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_bazooker_ss)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_at) c1(waffen_jager_at:1) c2(waffen_jager_at_asst:1)		b(single) 				cost(100) t())
+
+("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_riflegrenade_ss)	period(late) year(44 45 46) cd(0)   ci(0)  g(single_rifleg) c1(riflegrenade_ss:1) c2(riflegrenade_asst_ss:1)	b(single) 				cost(20) t())
+
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_ap_miner_ss)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_apmine) c1(miner-ap:4)					b(single) 					cost(50) t(engineer miner))
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_at_miner_ss)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine) c1(miner-at:4)					b(single) 					cost(50) t(engineer miner))
 ("squad_with2types_doc_man" side(ger) d("44-45_ger_ss") name(single_engineer_ss)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng) c1(engineer_1:1) c2(engineer_2:1)	b(single) 					cost(50) t(engineer builder))
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_flamer_ss)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer) c1(flamer:1) 						b(single) 					cost(60) t(flamer))
+
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_flamer_ss)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer) c1(waffen_pz_pio_flame:1) 						b(single) 		cost(60) t(flamer))
 ("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_medic_ss)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic) c1(medic:2)						b(single) 						cost(50) t(medic))
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_sniper_ss)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper) c1(sniper:1) 						b(single) 					cost(150) t(sniper))
-("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_officer_ss)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer) c1(officer:1)					b(single) 						cost(125) t(officer))
+
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_sniper_ss)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper) c1(sniper_ss:1) 						b(single) 					cost(150) t(sniper))
+
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_officer_ss)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer) c1(officer_ss:1)					b(single) 						cost(150) t(officer))
 
 
 ;Support crew
-("squad_with1types_man" side(ger) name(single_support_ger)		period(late) year(44 45 46) cd(90) ci(0) g(squad_1)		c1(artilleryman:5)					b(single) cost(50) t())
+
+("squad_with1types_doc_man" side(ger) d("44-45_ger_wehr") name(single_support_ger)		period(late) year(44 45 46) cd(90) ci(0) g(squad_1)		c1(artilleryman:5)					b(single) cost(50) t())
+("squad_with1types_doc_man" side(ger) d("44-45_ger_ss") name(single_support_ss)		period(late) year(44 45 46) cd(90) ci(0) g(squad_1)		c1(waffen_arty:5)					b(single) cost(50) t())
 
 ;Tank Crew
 ("squad_with2types_man" side(ger) name(single_tankman_ger)		period(late) year(44 45 46) cd(0)   ci(60)  g(squad_1) c1(tankman:4) c2(tank_commander:1)				b(single) cost(80) t())
@@ -989,7 +1006,7 @@
 
 ;SS only
 {"kfz70"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(rifleman_1:1) b(supply) cw(1) cp(0)
+	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(schutzen_rifle:1) b(supply) cw(1) cp(0)
 	cost(25))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1020,14 +1037,14 @@
 
 ;SS only
 {"sdkfz250a_1"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(rifleman_1:2) b(supply) cw(1) cp(0)
+	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(schutzen_rifle:2) b(supply) cw(1) cp(0)
 	cost(150))
 	{doctrine "44-45_ger_ss"}
 }
 
 ;SS only
 {"unic304f"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(rifleman_1:2) b(supply) cw(1) cp(0)
+	("vehicle"  period(late) year(44 45 46) cd(30) ci(0) g(wheel2) side(ger) t(vehicle) crew(schutzen_rifle:2) b(supply) cw(1) cp(0)
 	cost(150))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1042,7 +1059,7 @@
 
 ;SS only
 {"sdkfz6_ammo"
-	("vehicle" period(late) year(44 45 46) cd(30) ci(0) g(wheel21) side(ger) t(vehicle) crew(rifleman_1:1) b(supply) cw(2) cp(0)
+	("vehicle" period(late) year(44 45 46) cd(30) ci(0) g(wheel21) side(ger) t(vehicle) crew(schutzen_rifle:1) b(supply) cw(2) cp(0)
 	cost(225))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1128,7 +1145,7 @@
 }
 
 {"inf_crate_ger_44-45_ss"
-	("vehicle_ss"  period(late) year(44 45 46 44-45) cd(0) ci(0) t(supply cannon) side(ger) vehicle(inf_crate_ger) crew(rifleman_1:2) g(supplybox) b(single) cw(1) cp(0)
+	("vehicle_ss"  period(late) year(44 45 46 44-45) cd(0) ci(0) t(supply cannon) side(ger) vehicle(inf_crate_ger) crew(schutzen_rifle:2) g(supplybox) b(single) cw(1) cp(0)
 	cost(50))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1152,7 +1169,7 @@
 
 ;SS only
 {"20mm_flak30"
-	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon) side(ger) crew(artilleryman:2) g(empl2) b(support) cw(1) cp(8)
+	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon) side(ger) crew(waffen_arty:2) g(empl2) b(support) cw(1) cp(8)
 	cost(180))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1177,7 +1194,7 @@
 
 ;SS only
 {"50mm_flak41"
-	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(artilleryman:5) g(empl2) b(support) cw(1) cp(8)
+	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(waffen_arty:5) g(empl2) b(support) cw(1) cp(8)
 	cost(300))
 	{doctrine "44-45_ger_ss"}
 	
@@ -1187,7 +1204,7 @@
 
 ;SS only
 {"37mm_pak36_late"
-	("vehicle"  period(late) year(44 45 46) cd(30) ci(10) t(cannon) side(ger) crew(artilleryman:4) g(empl3) b(support) cw(1) cp(6)
+	("vehicle"  period(late) year(44 45 46) cd(30) ci(10) t(cannon) side(ger) crew(waffen_arty:4) g(empl3) b(support) cw(1) cp(6)
 	cost(180))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1201,7 +1218,7 @@
 
 ;SS only
 {"47mm_pakt"
-	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(artilleryman:3) g(empl37) b(support) cw(1) cp(10)
+	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon) side(ger) crew(waffen_arty:3) g(empl37) b(support) cw(1) cp(10)
 	cost(250))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1215,7 +1232,7 @@
 
 ;SS only
 {"76mm_pak36r"
-	("vehicle"  period(late) year(44 45 46) cd(320) ci(10)  t(vehicle) side(ger) crew(rifleman_1:4) g(wheel6) b(support) cw(2) cp(5)
+	("vehicle"  period(late) year(44 45 46) cd(320) ci(10)  t(vehicle) side(ger) crew(waffen_arty:4) g(wheel6) b(support) cw(2) cp(5)
 	cost(350))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1234,7 +1251,7 @@
 
 ;SS only
 {"75mm_pak9738_late"
-	("vehicle"  period(late) year(44 45 46) cd(400) ci(10) t(cannon mediumcan) side(ger) crew(artilleryman:4) g(empl4) b(support) cw(1) cp(16)
+	("vehicle"  period(late) year(44 45 46) cd(400) ci(10) t(cannon mediumcan) side(ger) crew(waffen_arty:4) g(empl4) b(support) cw(1) cp(16)
 	cost(350))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1247,7 +1264,7 @@
 
 ;SS only
 {"75mm_lg40"
-	("vehicle"  period(late) year(44 45 46) cd(400) ci(10) t(cannon mediumcan) side(ger) crew(artilleryman:2) g(empl4) b(support) cw(1) cp(16)
+	("vehicle"  period(late) year(44 45 46) cd(400) ci(10) t(cannon mediumcan) side(ger) crew(waffen_arty:2) g(empl4) b(support) cw(1) cp(16)
 	cost(350))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1262,14 +1279,14 @@
 
 ;SS only
 {"88mm_flak18"
-	("vehicle"  period(late) year(44 45 46) cd(720) ci(10) t(cannon heavycan) side(ger) crew(artilleryman:5) g(empl7) b(support) cw(1) cp(20)
+	("vehicle"  period(late) year(44 45 46) cd(720) ci(10) t(cannon heavycan) side(ger) crew(waffen_arty:5) g(empl7) b(support) cw(1) cp(20)
 	cost(650))
 	{doctrine "44-45_ger_ss"}
 }
 
 ;SS only
 {"88mm_pak4341"
-	("vehicle"  period(late) year(44 45 46) cd(1200) ci(10) t(cannon heavycan) side(ger) crew(artilleryman:4) g(empl5) b(support) cw(1) cp(22)
+	("vehicle"  period(late) year(44 45 46) cd(1200) ci(10) t(cannon heavycan) side(ger) crew(waffen_arty:4) g(empl5) b(support) cw(1) cp(22)
 	cost(850))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1299,7 +1316,7 @@
 
 ;SS only
 {"200mm_ldgw40"
-	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:2) g(empl18) b(art) cw(1) cp(18)
+	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(heavyart artillery) side(ger) crew(waffen_arty:2) g(empl18) b(art) cw(1) cp(18)
 	cost(800))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1324,7 +1341,7 @@
 
 ;SS only
 {"75mm_legebig18"
-	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon mediumcan) side(ger) crew(artilleryman:4) g(empl3) b(art) cw(1) cp(12)
+	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon mediumcan) side(ger) crew(waffen_arty:4) g(empl3) b(art) cw(1) cp(12)
 	cost(320))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1336,7 +1353,7 @@
 
 ;SS only
 {"100mm_nbw35"
-	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon mediumcan) side(ger) crew(artilleryman:4) g(empl3) b(art) cw(1) cp(12)
+	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) t(cannon mediumcan) side(ger) crew(waffen_arty:4) g(empl3) b(art) cw(1) cp(12)
 	cost(400))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1354,7 +1371,7 @@
 
 ;SS only
 {"105mm_lefh18_40"
-	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(artillery) side(ger) crew(artilleryman:4) g(empl9) b(art) cw(1) cp(26)
+	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(artillery) side(ger) crew(waffen_arty:4) g(empl9) b(art) cw(1) cp(26)
 	cost(575))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1373,7 +1390,7 @@
 
 ;SS only
 {"155mm_gpf_ger"
-	("vehicle"  period(late) year(44 45 46) cd(1200) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:5) g(empl8) b(art) cw(1) cp(30)
+	("vehicle"  period(late) year(44 45 46) cd(1200) ci(10) t(heavyart artillery) side(ger) crew(waffen_arty:5) g(empl8) b(art) cw(1) cp(30)
 	cost(900))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1385,7 +1402,7 @@
 
 ;SS only
 {"170mm_k18"
-	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:6) g(empl16) b(art) cw(1) cp(30)
+	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(heavyart artillery) side(ger) crew(waffen_arty:6) g(empl16) b(art) cw(1) cp(30)
 	cost(1200))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1478,7 +1495,7 @@
 
 ;SS only
 {"210mm_nebelwerfer42"
-	("vehicle"  period(late) year(44 45 46) cd(1080) ci(10) t(heavyart artillery) side(ger) crew(artilleryman:4) g(empl9) b(art) cw(1) cp(28)
+	("vehicle"  period(late) year(44 45 46) cd(1080) ci(10) t(heavyart artillery) side(ger) crew(waffen_arty:4) g(empl9) b(art) cw(1) cp(28)
 	cost(800))
 	{doctrine "44-45_ger_ss"}
 }
