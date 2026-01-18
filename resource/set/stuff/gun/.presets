@@ -175,7 +175,7 @@
 		range_he(%range_he)
 		range_heat(%range_heat)
 		falloff(0)
-		r0(1.4)					;// global accuracy indirect
+		r0(2)					;// global accuracy indirect
 		r01(0.3)					;// global accuracy direct
 		  ap50(1.50)   ap100(2.75)   ap140(3.75)   ap200(6.50)
 		heat50(1.50) heat100(3.00) heat140(4.25) heat200(8.00)
@@ -486,26 +486,31 @@
 		}
 	}
 	{parameters "he"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "he2"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "sm"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "wp"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "ic"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
@@ -543,7 +548,7 @@
 		range_hei(%range_hei)
 		range_heat(%range_heat)
 		falloff(0)
-		r0i(1.4)					;// global accuracy indirect
+		r0i(2)					;// global accuracy indirect
 		r0(0.3)						;// global accuracy direct
 		;he125(0.4)
 		 
@@ -679,6 +684,7 @@
 	;
 	;
 	{parameters "he"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0}
@@ -694,6 +700,7 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "he2"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable 
 				{0 0} 
@@ -709,6 +716,7 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "sm"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0} 
@@ -724,6 +732,7 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "wp"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0} 
@@ -739,6 +748,7 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "ic"
+		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0} 
@@ -846,7 +856,7 @@
 	{spreading {SpreadXYRatio 1.5}}
 	{parameters "he" {spreading {SpreadXYRatio 1.5}}}
 	{parameters "he2" {spreading {SpreadXYRatio 1.5}}}
-	{parameters "apds" {spreading {SpreadXYRatio 1}}}
+	{parameters "apds" {spreading {SpreadXYRatio 1.5}}}
 )
 (define "direct_settings_low"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
@@ -855,7 +865,13 @@
 (define "indirect_settings"
 	{SpreadTolerance 0.75}		;// Zeroing up to 75% needed before fire
 	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45 0.3}
-	{spreading {SpreadXYRatio 3}}
+	{spreading {SpreadXYRatio 2}}
+)
+
+(define "indirect_settings_noz"
+	{SpreadTolerance 0.8}		;// Zeroing up to 80% needed before fire
+	{ZeroingAccuracy 1.0}
+	{spreading {SpreadXYRatio 2}}
 )
 
 ;/*============================== RANGES AND SPECIFICS ==============================*/
@@ -902,7 +918,7 @@
 	{spreading
 		{BurstRecoveryTime 0.5}
 		{BurstAccuracy 100 98 95 90 85 80 75 70 65 60 55 50 45 40 35}
-		{SpreadXYRatio	1}
+		{SpreadXYRatio	1.5}
 	}
 	{burst
 		{short 2 0.75}			;// short burst shots on long distance, rand (+-)shots
@@ -1122,17 +1138,17 @@
 )
 
 (define "medium_artillery"
-	{spreading {SpreadXYRatio 3}}
+	{spreading {SpreadXYRatio 2}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.3 0.25 0.2}
@@ -1144,17 +1160,17 @@
 )
 
 (define "heavy_artillery"
-	{spreading {SpreadXYRatio 3}}
+	{spreading {SpreadXYRatio 2}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40 0.3 0.25 0.2}
@@ -1166,17 +1182,17 @@
 )
 
 (define "super_heavy_artillery"
-	{spreading {SpreadXYRatio 3}}
+	{spreading {SpreadXYRatio 2}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40 0.3 0.25 0.2}
