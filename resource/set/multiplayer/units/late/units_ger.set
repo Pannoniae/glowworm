@@ -1834,6 +1834,25 @@
 	{doctrine "44-45_ger_ss"}
 }
 
+{"panzer4j"
+	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(24)
+	cost(480)) ;// +35 for crew
+}
+
+;wermacht 3X panzer4j buy
+{"3x_panzer4j_wehr"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(1)
+	cost(1000)) ;// +35 for crew
+	{doctrine "44-45_ger_wehr"}
+}
+
+;SS 3X panzer4j buy
+{"3x_panzer4j_ss"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(1)
+	cost(1000)) ;// +35 for crew
+	{doctrine "44-45_ger_ss"}
+}
+
 ;Wehrmacht only
 {"panzer4h"
 	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium4) b(mt) cw(6) cp(24)
@@ -1841,10 +1860,7 @@
 	{doctrine "44-45_ger_wehr"}
 }
 
-{"panzer4j"
-	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(24)
-	cost(480)) ;// +35 for crew
-}
+
 
 ;Wehrmacht only
 {"panzer5d"

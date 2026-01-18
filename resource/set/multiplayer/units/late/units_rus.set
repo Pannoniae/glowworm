@@ -743,10 +743,19 @@
 	("vehicle"  period(late) year(44 45 46) cd(240) ci(0) g(wheel9) side(rus) t(vehicle) crew(rifleman_1:1) b(supply) cw(1) cp(2)
 	cost(25))
 }
+
+
 {"t20"
 	("vehicle"  period(late) year(44 45 46) cd(180) ci(10) g(wheel3) side(rus) t(vehicle) crew(tankman:2) b(supply) cw(2) cp(4)
 	cost(100))
 }
+
+;3X t20 buy
+{"3x_t20"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(180) ci(10) side(rus) vehicle(t20) crew1(tankman:1) crew2(tankman:1) vehicle(t20) crew1(tankman:1) crew2(tankman:1) vehicle(t20) crew1(tankman:1) crew2(tankman:1) b(supply) cw(2) cp(1)
+	cost(200)) ;// +35 for crew
+}
+
 {"universal_carrier_rus"
 	("vehicle2" period(late) year(44 45 46) cd(240) ci(10) g(wheel11) side(rus) t(vehicle) crew1(rifleman_1:2) crew2(tank_commander:1) b(supply) cw(2) cp(8)
 	cost(160))

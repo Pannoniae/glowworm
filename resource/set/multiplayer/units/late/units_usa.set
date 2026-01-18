@@ -868,10 +868,19 @@
 	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) g(wheel9) side(usa) t(vehicle) crew1(vehicle_crew_m3:3) crew2(vehicle_com_m3:1) b(lt) cw(2) cp(12)
 	cost(280))
 }
+
 {"m5a1_stuart"
 	("vehicle2" period(late) year(44 45 46) cd(450) ci(10) t(light) side(usa) crew1(tankman_m3:3) crew2(tank_com_m3:1) g(light2) b(lt) cw(4) cp(12)
 	cost(280)) ;// +25 for crew
 }
+
+;3x stuart buy
+{"3x_m5a1_stuart"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(450) ci(10) t(light) side(usa) vehicle(m5a1_stuart) crew1(tankman_m3:3) crew2(tank_com_m3:1) vehicle(m5a1_stuart) crew1(tankman_m3:3) crew2(tank_com_m3:1) vehicle(m5a1_stuart) crew1(tankman_m3:3) crew2(tank_com_m3:1) g(light2) b(lt) cw(4) cp(1)
+	cost(560)) ;// +35 for crew
+}
+
+
 {"m8_hmc"
 	("vehicle2" period(late) year(44 45 46) cd(440) ci(10) t(light) side(usa) crew1(tankman_m1:3) crew2(tank_commander:1) g(light4) b(lt) cw(4) cp(16)
 	cost(320)) ;// +25 for crew
