@@ -565,6 +565,7 @@
 )
 
 (define "curve_dual"	;// the code extrapolates where the accuracy point is for max range, knowing the accuracy for the cannon is defined for 200m
+	("indirect_settings_noz")
 	{parameters "ap"
 		("direct_settings_low")
 		("standard_firing_arc")
@@ -694,7 +695,7 @@
 				{ (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))}
 				{(+ %range_he 10) (* 1.5 (* %r1i %r0i))}
 				{(- %range_hei 0.01) (* %rmax %r0i)}
-				{(+ %range_hei 1) 60}
+				{(+ %range_hei 1) 120}
 			}
 		}
 		{range %range_hei %range_hei}
@@ -710,7 +711,7 @@
 				{ (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))}
 				{(+ %range_he 10) (* 1.5 (* %r1i %r0i))}
 				{(- %range_hei 0.01) (* %rmax %r0i)}
-				{(+ %range_hei 1) 60}
+				{(+ %range_hei 1) 120}
 			}
 		}
 		{range %range_hei %range_hei}
@@ -726,7 +727,7 @@
 				{ (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))}
 				{(+ %range_he 10) (* 1.5 (* %r1i %r0i))}
 				{(- %range_hei 0.01) (* %rmax %r0i)}
-				{(+ %range_hei 1) 60}
+				{(+ %range_hei 1) 120}
 			}
 		}
 		{range %range_hei %range_hei}
@@ -742,7 +743,7 @@
 				{ (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))}
 				{(+ %range_he 10) (* 1.5 (* %r1i %r0i))}
 				{(- %range_hei 0.01) (* %rmax %r0i)}
-				{(+ %range_hei 1) 60}
+				{(+ %range_hei 1) 120}
 			}
 		}
 		{range %range_hei %range_hei}
@@ -758,7 +759,7 @@
 				{ (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))}
 				{(+ %range_he 10) (* 1.5 (* %r1i %r0i))}
 				{(- %range_hei 0.01) (* %rmax %r0i)}
-				{(+ %range_hei 1) 60}
+				{(+ %range_hei 1) 120}
 			}
 		}
 		{range %range_hei %range_hei}
@@ -797,23 +798,23 @@
 ; make HE have more gravity/indirect settings
 (define "he_lowarc"
 	{parameters "he"
-		("indirect_settings")
+		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "he2"
-		("indirect_settings")
+		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "sm"
-		("indirect_settings")
+		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "wp"
-		("indirect_settings")
+		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "ic"
-		("indirect_settings")
+		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 )
@@ -852,25 +853,27 @@
 )
 (define "direct_settings"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
-	{spreading {SpreadXYRatio 1.5}}
-	{parameters "he" {spreading {SpreadXYRatio 1.5}}}
-	{parameters "he2" {spreading {SpreadXYRatio 1.5}}}
-	{parameters "apds" {spreading {SpreadXYRatio 1.5}}}
+	{ZeroingAccuracy 1.0}
+	{spreading {SpreadXYRatio 2}}
+	{parameters "he" {spreading {SpreadXYRatio 2}}}
+	{parameters "he2" {spreading {SpreadXYRatio 2}}}
+	{parameters "apds" {spreading {SpreadXYRatio 2}}}
 )
 (define "direct_settings_low"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45 0.3}
+	{ZeroingAccuracy 1.0}
 )
 (define "indirect_settings"
 	{SpreadTolerance 0.75}		;// Zeroing up to 75% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45 0.3}
+	{ZeroingAccuracy 1.0}
+	{parameters "he" {spreading {SpreadXYRatio 2}}}
+	{parameters "he2" {spreading {SpreadXYRatio 2}}}
 	{spreading {SpreadXYRatio 2}}
 )
 
 (define "indirect_settings_noz"
-	{SpreadTolerance 0.8}		;// Zeroing up to 80% needed before fire
 	{ZeroingAccuracy 1.0}
+	{SpreadTolerance 0.8}		;// Zeroing up to 80% needed before fire
 	{spreading {SpreadXYRatio 2}}
 )
 
@@ -1151,7 +1154,7 @@
 			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.3 0.25 0.2}
+	{ZeroingAccuracy 1.0}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	{DisableRicochet}
@@ -1173,7 +1176,7 @@
 			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40 0.3 0.25 0.2}
+	{ZeroingAccuracy 1.0}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	{DisableRicochet}
@@ -1195,7 +1198,7 @@
 			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 0.80 0.65 0.55 0.45 0.40 0.3 0.25 0.2}
+	{ZeroingAccuracy 1.0}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	{DisableRicochet}

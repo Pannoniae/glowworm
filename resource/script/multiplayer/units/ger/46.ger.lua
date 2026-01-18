@@ -143,9 +143,9 @@ Purchases["46.ger"] = {
 				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_pzgrenadiere_gd_late(ger)"},
 				--]]
 				
-				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_volkssturm(ger)"},
-				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_recon_late_ger(ger)"},
-				{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_volksgrenadiers(ger)"},
+				--{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_volkssturm(ger)"},
+				--{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_recon_late_ger(ger)"},
+				--{priority = 1.0, type = {"Class3", "Infantry", "Squad",}, unit = "squad_volksgrenadiers(ger)"},
 
 			-- Infantry Singles / Teams
 				---[[
