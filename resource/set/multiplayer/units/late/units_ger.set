@@ -812,8 +812,12 @@
 ;ADD IN UKRANIAN VOLUNTEERS (ROA)
 ;ADD IN ARMENIAN VOLUNTEERS (ROA)
 ;ADD IN GEORGIAN LEGION (ROA)
+;ADD IN TURKMENISTAN VOLUNTEERS (ROA)
 ;ADD IN DON COSSACKS (ROA)
 
+;italian ss squad (ROA)
+;prince eugen (ROA)
+;prince eugen recon (ROA)
 
 ;SS Schutzen Rifle Gruppe
 ;skill 4
@@ -1830,6 +1834,25 @@
 	{doctrine "44-45_ger_ss"}
 }
 
+{"panzer4j"
+	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(24)
+	cost(480)) ;// +35 for crew
+}
+
+;wermacht 3X panzer4j buy
+{"3x_panzer4j_wehr"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(1)
+	cost(1000)) ;// +35 for crew
+	{doctrine "44-45_ger_wehr"}
+}
+
+;SS 3X panzer4j buy
+{"3x_panzer4j_ss"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) vehicle(panzer4j) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(1)
+	cost(1000)) ;// +35 for crew
+	{doctrine "44-45_ger_ss"}
+}
+
 ;Wehrmacht only
 {"panzer4h"
 	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium4) b(mt) cw(6) cp(24)
@@ -1837,10 +1860,7 @@
 	{doctrine "44-45_ger_wehr"}
 }
 
-{"panzer4j"
-	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium5) b(mt) cw(6) cp(24)
-	cost(480)) ;// +35 for crew
-}
+
 
 ;Wehrmacht only
 {"panzer5d"
@@ -2029,12 +2049,29 @@
 	{doctrine "44-45_ger_wehr"}
 }
 
+;3X buy for stug3f (more armor, skirts, more machine guns?)
+;Wehrmacht only
+{"3x_stug3g_late"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) vehicle(stug3g_late) crew1(tankman_stug:3) crew2(tank_commander_stug:1) vehicle(stug3g_late) crew1(tankman_stug:3) crew2(tank_commander_stug:1) vehicle(stug3g_late) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(1)
+	cost(1200)) ;// +35 for crew
+	{doctrine "44-45_ger_wehr"}
+}
+
+
 ;SS only
 {"stug3f"
 	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(24)
-	cost(630)) ;// +30 for crew
+	cost(500)) ;// +30 for crew
 	{doctrine "44-45_ger_ss"}
 }
+
+;3X buy for stug3f (less armor, more shit)
+{"3x_stug3f"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) vehicle(stug3f) crew1(tankman_stug:3) crew2(tank_commander_stug:1) vehicle(stug3f) crew1(tankman_stug:3) crew2(tank_commander_stug:1) vehicle(stug3f) crew1(tankman_stug:3) crew2(tank_commander_stug:1) g(spg3) b(td) cw(6) cp(1)
+	cost(1100)) ;// +35 for crew
+	{doctrine "44-45_ger_ss"}
+}
+
 
 ;SS only
 {"panzer4_70_v"
@@ -2042,8 +2079,6 @@
 	cost(600)) ;// +30 for crew
 	{doctrine "44-45_ger_ss"}
 }
-
-
 
 
 ;{"stug4g"
@@ -2070,7 +2105,7 @@
 
 ;SS only
 {"sdkfz8_flak18"
-	("vehicle2" period(late) year(44 45 46) cd(960) ci(0) g(wheel15) side(ger) t(vehicle) crew1(tankman_stug:4) crew2(tank_commander_stug:1) b(td) cw(2) cp(20)
+	("vehicle2" period(late) year(44 45 46) cd(960) ci(0) g(wheel15) side(ger) t(vehicle) crew1(tankman_stug:3) crew2(tank_commander_stug:1) b(td) cw(2) cp(20)
 	cost(775))
 	{doctrine "44-45_ger_ss"}
 }

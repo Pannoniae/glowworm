@@ -868,10 +868,19 @@
 	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) g(wheel9) side(usa) t(vehicle) crew1(vehicle_crew_m3:3) crew2(vehicle_com_m3:1) b(lt) cw(2) cp(12)
 	cost(280))
 }
+
 {"m5a1_stuart"
 	("vehicle2" period(late) year(44 45 46) cd(450) ci(10) t(light) side(usa) crew1(tankman_m3:3) crew2(tank_com_m3:1) g(light2) b(lt) cw(4) cp(12)
 	cost(280)) ;// +25 for crew
 }
+
+;3x stuart buy
+{"3x_m5a1_stuart"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(450) ci(10) t(light) side(usa) vehicle(m5a1_stuart) crew1(tankman_m3:3) crew2(tank_com_m3:1) vehicle(m5a1_stuart) crew1(tankman_m3:3) crew2(tank_com_m3:1) vehicle(m5a1_stuart) crew1(tankman_m3:3) crew2(tank_com_m3:1) g(light2) b(lt) cw(4) cp(1)
+	cost(560)) ;// +35 for crew
+}
+
+
 {"m8_hmc"
 	("vehicle2" period(late) year(44 45 46) cd(440) ci(10) t(light) side(usa) crew1(tankman_m1:3) crew2(tank_commander:1) g(light4) b(lt) cw(4) cp(16)
 	cost(320)) ;// +25 for crew
@@ -891,17 +900,26 @@
 ;	cost(400)) ;// +30 for crew
 ;}
 {"m4a1_75_late"
-	("vehicle2" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium2) b(mt) cw(6) cp(20)
+	("vehicle2" period(late) year(44 45 46) cd(500) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium2) b(mt) cw(6) cp(20)
 	cost(400)) ;// +30 for crew
 }
+
 {"t1e3_m4a1_75"
 	("vehicle2" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium2) b(mt) cw(6) cp(20)
 	cost(450)) ;// +30 for crew
 }
+
 {"m4a3_75_late"
 	("vehicle2" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium3) b(mt) cw(6) cp(20)
 	cost(410)) ;// +30 for crew
 }
+
+;3X buy for m4a3 sherman
+{"3x_m4a3_75_late"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(usa) vehicle(m4a3_75_late) crew1(tankman_m3:4) crew2(tank_com_m3:1) vehicle(m4a3_75_late) crew1(tankman_m3:4) crew2(tank_com_m3:1) vehicle(m4a3_75_late) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium3) b(mt) cw(6) cp(1)
+	cost(800)) ;// +35 for crew
+}
+
 {"m4a3_75w"
 	("vehicle2" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium4) b(mt) cw(6) cp(20)
 	cost(440)) ;// +30 for crew
@@ -918,10 +936,18 @@
 ;	("vehicle2" period(late) year(44 45 46) cd(900) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium10) b(mt) cw(6) cp(24)
 ;	cost(600)) ;// +30 for crew
 ;}
+
 {"m4a3_76w_hvss"
 	("vehicle2" period(late) year(44 45 46) cd(900) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium11) b(mt) cw(6) cp(24)
 	cost(600)) ;// +30 for crew
 }
+
+;3X buy for m4a3
+{"3x_m4a3_76w_hvss"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(900) ci(10) t(medium) side(usa) vehicle(m4a3_76w_hvss) crew1(tankman_m3:4) crew2(tank_com_m3:1) vehicle(m4a3_76w_hvss) crew1(tankman_m3:4) crew2(tank_com_m3:1) vehicle(m4a3_76w_hvss) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium11) b(mt) cw(6) cp(1)
+	cost(1200)) ;// +35 for crew
+}
+
 ;{"m4a3_76w_field1"
 ;	("vehicle2" period(late) year(44 45 46) cd(960) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium13) b(mt) cw(6) cp(24)
 ;	cost(950)) ;// +30 for crew
@@ -930,14 +956,17 @@
 ;	("vehicle2" period(late) year(44 45 46) cd(960) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium14) b(mt) cw(6) cp(24)
 ;	cost(950)) ;// +30 for crew
 ;}
+
 {"m4a3_76w_field3"
 	("vehicle2" period(late) year(44 45 46) cd(960) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium15) b(mt) cw(6) cp(24)
-	cost(800)) ;// +30 for crew
+	cost(1600)) ;// +30 for crew
 }
+
 {"m4a3e2_75"
 	("vehicle2" period(late) year(44 45 46) cd(960) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium12) b(mt) cw(6) cp(26)
 	cost(800)) ;// +30 for crew
 }
+
 {"m4a3e2_76"
 	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium16) b(mt) cw(6) cp(30)
 	cost(1000)) ;// +30 for crew
