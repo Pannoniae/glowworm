@@ -214,6 +214,12 @@
 	{content "%vehicle ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 ) %vehicle ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 )"}
 )
 
+; 3 identical vehicles with 2 types of crew
+(define "3vehicle2_ss"
+	("generic_v_ss" cd(%cd) ci(%ci) t(%t %side %year) g(%g) b(%b) cw(%cw) cp(%cp) cost(%cost))
+	{content "%vehicle ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 ) %vehicle ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 %vehicle ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 )"}
+)
+
 ; squad setup for vehicle, 3 crew
 (define "vehicle3_ss"
 	("generic_v_ss" cd(%cd) ci(%ci) t(%t %side %year) g(%g) b(%b) cw(%cw) cp(%cp) cost(%cost)) ;//h
@@ -2584,6 +2590,24 @@
 		{squad_cost_factor 0}
 	}
 )
+
+(define "vehicle_3x"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%c1 mp/%side/%period/%c2 ) %vehicle2 ( mp/%side/%period/%c1 mp/%side/%period/%c2 ) %vehicle3 ( mp/%side/%period/%c1 mp/%side/%period/%c2 mp/%side/%period/%c3 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{cost %cost}
+		{round_multiple 1}
+		{squad_cost_factor 0}
+	}
+)
+
 (define "squad_usa_eng_recon_man"
 	{"%name(%side)"
 		{charge 

@@ -933,6 +933,13 @@
 	("vehicle2"  period(late) year(44 45 46) cd(90) ci(10) g(wheel3) side(eng) t(vehicle) crew1(driver:1) crew2(crew:1) b(supply) cw(2) cp(4)
 	cost(70))
 }
+
+;3X buy for universal carrier
+{"3x_universal_carrier_mk2"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(eng) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) g(medium3) b(supply) cw(4) cp(1)
+	cost(140)) ;// +35 for crew
+}
+
 {"universal_carrier_mk2_2mg"
 	("vehicle2" period(late) year(44 45 46) cd(90) ci(10) g(wheel4) side(eng) t(vehicle) crew1(driver:1) crew2(crew:2) b(supply) cw(2) cp(4)
 	cost(80))
@@ -1220,14 +1227,22 @@
 
 
 ;MEDIUM
-{"valentine_mk11"
-	("vehicle2" period(late) year(44 45 46) cd(480) ci(10) t(medium) side(eng) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(10)
-	cost(370))
-}
+
 {"valentine_mk10"
 	("vehicle2" period(late) year(44 45 46) cd(320) ci(10) t(medium) side(eng) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(10)
 	cost(370))
 }
+
+{"valentine_mk11"
+	("vehicle2" period(late) year(44 45 46) cd(480) ci(10) t(medium) side(eng) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(10)
+	cost(370))
+}
+
+{"3x_valentine_mk11"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(480) ci(10) t(medium) side(eng) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(4) cp(1)
+	cost(540)) ;// +35 for crew
+}
+
 ;{"kangaroo_ram"
 ;	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) t(medium) side(eng) crew1(tankman:4) crew2(tank_commander:1) g(medium3) b(mt) cw(6) cp(16)
 ;	cost(350))
