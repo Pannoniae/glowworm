@@ -1646,14 +1646,14 @@
 
 ;SS only
 {"panzer2j"
-	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) t(light) side(ger) crew1(tankman_scout:3) crew2(tank_commander_scout:1) g(light2) b(lt) cw(4) cp(14)
+	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) t(light) side(ger) crew1(tankman_scout:2) crew2(tank_commander_scout:1) g(light2) b(lt) cw(4) cp(14)
 	cost(300)) ;// +30 for crew
 	{doctrine "44-45_ger_ss"}
 }
 
 ;SS only
 {"pz38t_g"
-	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(light) side(ger) crew1(tankman:1) crew2(tank_commander:1) g(light1) b(lt) cw(4) cp(14)
+	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(light) side(ger) crew1(tankman:3) crew2(tank_commander:1) g(light1) b(lt) cw(4) cp(14)
 	cost(320)) ;// +20 for crew
 }
 
@@ -1689,7 +1689,7 @@
 
 ;SS only
 {"sdkfz222a"
-	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) g(wheel10) side(ger) t(vehicle) crew1(tankman_scout:3) crew2(tank_commander_scout:1) b(lt) cw(2) cp(8)
+	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) g(wheel10) side(ger) t(vehicle) crew1(tankman_scout:2) crew2(tank_commander_scout:1) b(lt) cw(2) cp(8)
 	cost(250))
 	{doctrine "44-45_ger_ss"}
 }
@@ -1813,13 +1813,6 @@
 	cost(450)) ;// +35 for crew
 }
 
-;SS only
-{"pz756r"
-	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(medium) side(ger) crew1(tankman:2) crew2(tank_commander:1) g(tanks) b(mt) cw(6) cp(20)
-	cost(500)) ;// +35 for crew
-	{doctrine "44-45_ger_ss"}
-}
-
 ;Wehrmacht only
 {"panzer4g"
 	("vehicle2" period(late) year(44 45 46) cd(660) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(medium3) b(mt) cw(6) cp(24)
@@ -1915,6 +1908,13 @@
 
 
 ;HEAVY
+
+;SS only
+{"pz756r"
+	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(heavy) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(tanks) b(ht) cw(6) cp(20)
+	cost(500)) ;// +35 for crew
+	{doctrine "44-45_ger_ss"}
+}
 
 {"tiger1e_ss"
 	("vehicle2_ss" period(late) year(44 45 46) cd(1200) ci(10) t(heavy) side(ger) vehicle(tiger1e) crew1(tankman:4) crew2(tank_commander:1) g(heavy2) b(ht) cw(8) cp(30)

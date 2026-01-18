@@ -862,15 +862,15 @@
 ("single_with1type_man" side(eng) name(single_at_miner)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_atmine)	c1(r_eng_mine_at:4)									b(single) cost(50) t(engineer miner))
 ("single_with1type_man" side(eng) name(single_engineer)		period(late) year(44 45 46) cd(0)   ci(0)  g(single_eng)		c1(r_eng_builder:2)								b(single) cost(50) t(engineer builder))
 ("squad_with1types_man" side(eng) name(single_flamer)		period(late) year(44 45 46) cd(0)   ci(60)  g(single_flamer)	c1(r_eng_flamer:1)								b(single) cost(60) t(flamer))
-("squad_with1types_man" side(eng) name(single_medic)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic)	c1(medic:1) 										b(single) cost(40) t(medic))
+("squad_with1types_man" side(eng) name(single_medic)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_medic)		c1(medic:2) 										b(single) cost(40) t(medic))
 ("squad_with1types_man" side(eng) name(single_sniper)		period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sniper:1) 									b(single) cost(150) t(sniper))
 ("squad_with1types_man" side(eng) name(single_sniper_sas)	period(late) year(44 45 46) cd(120) ci(180) g(single_sniper)	c1(sas_sniper:1) 								b(single) cost(175) t(sniper))
 ("squad_with1types_man" side(eng) name(single_officer)		period(late) year(44 45 46) cd(150) ci(150) g(single_officer)	c1(coy_com:1)									b(single) cost(150) t(officer))
 
-("squad_with1types_man" side(eng) name(radioman_88)			period(late) year(44 45 46) cd(420) ci(180) g(radioman)			c1(fo_radio_88:1)								b(single) cost(150) t(signaller))
-("squad_with1types_man" side(eng) name(radioman_114)		period(late) year(44 45 46) cd(750) ci(180) g(radioman)			c1(fo_radio_114:1)								b(single) cost(200) t(signaller))
-("squad_with1types_man" side(eng) name(radioman_140)		period(late) year(44 45 46) cd(820) ci(180) g(radioman)			c1(fo_radio_140:1)								b(single) cost(350) t(signaller))
-("squad_with1types_man" side(eng) name(radioman_183)		period(late) year(44 45 46) cd(900) ci(180) g(radioman)			c1(fo_radio_183:1)								b(single) cost(400) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_88)			period(late) year(44 45 46) cd(420) ci(180) g(radioman)			c1(fo_radio_88:1)								b(single) cost(250) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_114)		period(late) year(44 45 46) cd(750) ci(180) g(radioman)			c1(fo_radio_114:1)								b(single) cost(300) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_140)		period(late) year(44 45 46) cd(820) ci(180) g(radioman)			c1(fo_radio_140:1)								b(single) cost(400) t(signaller))
+("squad_with1types_man" side(eng) name(radioman_183)		period(late) year(44 45 46) cd(900) ci(180) g(radioman)			c1(fo_radio_183:1)								b(single) cost(550) t(signaller))
 
 ;Support crew
 ("squad_with1types_man" side(eng) name(squad_support_crew_eng) period(late) year(44 45 46) scf(1) cd(0) ci(0) g(squad_1) c1(crew:5) b(single) cost(50) t())
@@ -925,10 +925,17 @@
 	("vehicle"  period(late) year(44 45 46) cd(90) ci(10) g(wheel2) side(eng) t(vehicle) crew(driver:1) b(supply) cw(1) cp(2)
 	cost(20))
 }
+
 {"daimler_dingo"
 	("vehicle2"  period(late) year(44 45 46) cd(90) ci(10) g(wheel3) side(eng) t(vehicle) crew1(vehicle_crew:1) crew2(vehicle_com_cpl:1) b(supply) cw(2) cp(4)
 	cost(90))
 }
+
+{"3x_daimler_dingo"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(90) ci(10) t(medium) side(eng) vehicle(daimler_dingo) crew1(vehicle_crew:1) crew2(vehicle_com_cpl:1) vehicle(daimler_dingo) crew1(vehicle_crew:1) crew2(vehicle_com_cpl:1) vehicle(daimler_dingo) crew1(vehicle_crew:1) crew2(vehicle_com_cpl:1) b(supply) cw(4) cp(1)
+	cost(180)) ;// +35 for crew
+}
+
 {"universal_carrier_mk2"
 	("vehicle2"  period(late) year(44 45 46) cd(90) ci(10) g(wheel3) side(eng) t(vehicle) crew1(driver:1) crew2(crew:1) b(supply) cw(2) cp(4)
 	cost(70))
@@ -936,7 +943,7 @@
 
 ;3X buy for universal carrier
 {"3x_universal_carrier_mk2"
-	("3vehicle2_ss" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(eng) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) g(medium3) b(supply) cw(4) cp(1)
+	("3vehicle2_ss" period(late) year(44 45 46) cd(600) ci(10) t(medium) side(eng) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) vehicle(universal_carrier_mk2) crew1(driver:1) crew2(crew:1) b(supply) cw(4) cp(1)
 	cost(140)) ;// +35 for crew
 }
 
@@ -1061,7 +1068,7 @@
 }
 
 {"75mm_m1a1_eng"
-	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon mediumcan) side(eng) crew(101st_crew:4) g(empl9) b(art) cw(1) cp(12)
+	("vehicle"  period(late) year(44 45 46) cd(240) ci(10) t(cannon mediumcan) side(eng) crew(artilleryman:4) g(empl9) b(art) cw(1) cp(12)
 	cost(380))
 }
 {"94mm_qf_how"
@@ -1070,8 +1077,15 @@
 }
 {"88mm_qf25_mk2_late"
 	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(artillery) side(eng) crew(artilleryman:4) g(empl13) b(art) cw(1) cp(26)
-	cost(750))
+	cost(450))
 }
+
+;3X 25pdr. buy
+{"3x_88mm_qf25_mk2_late"
+	("3vehicle2_ss" period(late) year(44 45 46) cd(900) ci(10) t(artillery) side(eng) vehicle(88mm_qf25_mk2_late) crew1(artilleryman:3) crew2(artilleryman:1) vehicle(88mm_qf25_mk2_late) crew1(artilleryman:3) crew2(artilleryman:1) vehicle(88mm_qf25_mk2_late) crew1(artilleryman:3) crew2(artilleryman:1) b(art) cw(1) cp(1)
+	cost(900)) ;// +35 for crew
+}
+
 {"114mm_qf_how"
 	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(artillery) side(eng) crew(artilleryman:4) g(empl15) b(art) cw(1) cp(26)
 	cost(650))
@@ -1239,20 +1253,20 @@
 }
 
 ;3X crusader callin
-{"3x_crusader_mk3"
-	("3vehicle2_ss" period(late) year(44 45 46) cd(380) ci(10) t(medium) side(eng) vehicle(crusader_mk3) crew1(tankman:2) crew2(tank_commander:1) vehicle(crusader_mk3) crew1(tankman:2) crew2(tank_commander:1) vehicle(crusader_mk3) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(1)
-	cost(570)) ;// +35 for crew
-}
+;{"3x_crusader_mk3"
+;	("3vehicle2_ss" period(late) year(44 45 46) cd(380) ci(10) t(medium) side(eng) vehicle(crusader_mk3) crew1(tankman:2) crew2(tank_commander:1) vehicle(crusader_mk3) crew1(tankman:2) crew2(tank_commander:1) vehicle(crusader_mk3) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(1)
+;	cost(570)) ;// +35 for crew
+;}
 
 {"valentine_mk11"
 	("vehicle2" period(late) year(44 45 46) cd(480) ci(10) t(medium) side(eng) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(10)
 	cost(400))
 }
 
-{"3x_valentine_mk11"
-	("3vehicle2_ss" period(late) year(44 45 46) cd(480) ci(10) t(medium) side(eng) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(1)
-	cost(800)) ;// +35 for crew
-}
+;{"3x_valentine_mk11"
+;	("3vehicle2_ss" period(late) year(44 45 46) cd(480) ci(10) t(medium) side(eng) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) vehicle(valentine_mk11) crew1(tankman:2) crew2(tank_commander:1) g(medium2) b(mt) cw(6) cp(1)
+;	cost(800)) ;// +35 for crew
+;}
 
 ;{"kangaroo_ram"
 ;	("vehicle2" period(late) year(44 45 46) cd(420) ci(10) t(medium) side(eng) crew1(tankman:4) crew2(tank_commander:1) g(medium3) b(mt) cw(6) cp(16)
@@ -1264,10 +1278,10 @@
 	cost(380))
 }
 
-{"3x_cromwell4"
-	("3vehicle2_ss" period(late) year(44 45 46) cd(420) ci(10) t(medium) side(eng) vehicle(cromwell4) crew1(tankman:4) crew2(tank_commander:1) vehicle(cromwell4) crew1(tankman:4) crew2(tank_commander:1) vehicle(cromwell4) crew1(tankman:4) crew2(tank_commander:1) g(medium2) b(mt) cw(4) cp(1)
-	cost(760)) ;// +35 for crew
-}
+;{"3x_cromwell4"
+;	("3vehicle2_ss" period(late) year(44 45 46) cd(420) ci(10) t(medium) side(eng) vehicle(cromwell4) crew1(tankman:4) crew2(tank_commander:1) vehicle(cromwell4) crew1(tankman:4) crew2(tank_commander:1) vehicle(cromwell4) crew1(tankman:4) crew2(tank_commander:1) g(medium2) b(mt) cw(4) cp(1)
+;	cost(760)) ;// +35 for crew
+;}
 
 
 {"cromwell5"
