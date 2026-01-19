@@ -1,0 +1,99 @@
+;Exported by: Ervin
+;Date:        Thu Aug 31 19:58:31 2023
+;File:        B:\CTA\ppd38\Tutorial -Weapons\hunting_rifle128.max
+{Skeleton
+	{bone "body"
+		{parameters "CommonMesh;ID=rifle;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "body.ply"}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				2.00814	1.96272	0.0704229
+			}
+		}
+		{bone "foresight11"
+			{Position 9.2366	1.50608	0.0104481}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				3.10497	1.70628	0.431848
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 7.96024 13.7187 5.75847}
+	{Bone "body"}
+	{Matrix34
+		2.71816	-0.000709887	0
+		0.000212519	0.362133	-1.28654e-05
+		0	-0.000905234	0.416089
+		4.62026	0.608878	0.10827
+	}
+}
+{Volume "select"
+	{Box 7.96024 13.7187 5.75847}
+	{Bone "body"}
+	{Matrix34
+		3.19153	-0.000833442	0
+		0.000249603	0.425198	-1.5094e-05
+		0	-0.00106287	0.48855
+		4.62026	0.608427	0.0953777
+	}
+}
+{Extender "preview"
+	{"Stuff_Primary"
+		{camera
+			{origin 2.72872	0.604115	27.547}
+			{lookat 5.91565	-2.69907	-32.4273}
+			{fov 45}
+			{horizon -44.0574}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 1.11617	-10.3926	-3.65781}
+			}
+			{"1"
+				{type point}
+				{position 2.51566	11.7227	-4.9246}
+			}
+			{"2"
+				{type directional}
+				{direction 0.125191	-0.0366609	-0.482683}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 2.8668	0.604115	29.3032}
+			{lookat 6.05374	-2.69907	-30.6711}
+			{fov 45}
+			{horizon -44.0574}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 1.25426	-10.3926	-1.90157}
+			}
+			{"1"
+				{type point}
+				{position 2.65374	11.7227	-3.16836}
+			}
+			{"2"
+				{type directional}
+				{direction 0.125191	-0.0366609	-0.482683}
+			}
+		}
+	}
+}

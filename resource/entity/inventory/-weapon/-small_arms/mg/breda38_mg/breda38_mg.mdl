@@ -1,0 +1,89 @@
+;Exported by: dpostnikov
+;Date:        Fri Apr 01 10:49:33 2022
+;File:        C:\Users\dpostnikov\Documents\scenes\breda38_3a.max
+{Skeleton
+	{bone "breda38_mg"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "breda38_mg.ply"}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				0.559404	1.46347	-0.52374
+			}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-3.07242	-0.832498	-0.00693977
+			}
+		}
+		{bone "foresight14"
+			{Position 13.6608	1.64033	-0.00609899}
+		}
+	}
+}
+{Volume "body"
+	{Box 20 3 0.85}
+	{Bone "breda38_mg"}
+	{Position 5.76604	1.09201	0.00325781}
+}
+{Volume "select"
+	{Box 20 3 1}
+	{Bone "breda38_mg"}
+	{Position 5.83361	1.1325	-0.055014}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 5.02131	-7.32196	39.09}
+			{lookat 4.35632	-4.60952	22.5606}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.4028	-4.7879	14.5746}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -2.81083	-4.18165	13.0053}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 7.62075	-7.40029	39.6527}
+			{lookat 6.92916	-4.57935	22.4621}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.4028	-4.7879	14.5746}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -2.81083	-4.18165	13.0053}
+			}
+		}
+	}
+}

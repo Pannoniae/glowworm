@@ -1,0 +1,91 @@
+;Exported by: 13223
+;Date:        Mon Jan 13 12:30:26 2025
+;File:        D:\ctagohmod\weapons\????.max
+{Skeleton
+	{bone "weapon_ammo_mesh_002"
+		{parameters "ID=ammo;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "weapon_ammo_mesh_002.ply"}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.024861	-0.999348	0.0261921
+				0.0354054	0.0370048	0.998688
+				-0.999043	-0.0222447	0.0376675
+				4.44179	5.56023	0.963267
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 2.2917 2.09498 0.839504}
+	{Bone "weapon_ammo_mesh_002"}
+	{Matrix34
+		-0.00606957	-1.45781	0.0426088
+		0.0556619	0.0544343	1.39658
+		-1.33802	0.00949657	0.0548787
+		3.87858	0.0438519	-0.170059
+	}
+}
+{Volume "select"
+	{Box 4.44679 4.70243 2.07169}
+	{Bone "weapon_ammo_mesh_002"}
+	{Matrix34
+		-0.00161099	-0.646223	0.0187778
+		0.0246615	0.0240656	0.619077
+		-0.59312	0.00321534	0.024354
+		4.04383	0.0194933	-0.103785
+	}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin 23.8676	2.24414	3.76768}
+			{lookat 8.01292	0.0519509	-0.0482488}
+			{fov 8.03062}
+			{horizon 11.4921}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.491631	-0.0501151	-0.0760759}
+				{ambient 0x666666}
+			}
+			{"1"
+				{type point}
+				{position 11.6785	-3.06321	5.5334}
+			}
+			{"2"
+				{type point}
+				{position 9.50118	5.1305	5.96869}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 23.7178	0.63612	4.61602}
+			{lookat 2.27898	0.0563717	-0.630119}
+			{fov 10.1827}
+			{horizon 2.76838}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 9.47608	5.30312	6.09241}
+			}
+			{"1"
+				{type directional}
+				{direction -0.491631	-0.0501158	-0.0760763}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 11.5053	-2.92556	5.69593}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+;Exported by: Игорь
+;Date:        Fri Aug 04 20:20:29 2017
+;File:        C:\Users\Игорь\Documents\3dsmax\scenes\подсумки льюис.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				0.552919	0	0.833235
+				0	1	0
+				0.833235	0	-0.552919
+				3.47272	-0.371819	0.402972
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "basis"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		2.74359	-0.315155	2.62968
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 24.644	-1.8307	7.50775}
+			{lookat 2.08566	-1.98154	1.30605}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type spot}
+				{position 18.9722	-1.25718	9.46427}
+				{direction -0.459005	-0.0792107	-0.181769}
+				{theta 43}
+				{phi 45}
+			}
+		}
+	}
+}

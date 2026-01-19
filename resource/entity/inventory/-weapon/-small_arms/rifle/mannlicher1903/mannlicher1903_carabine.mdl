@@ -1,0 +1,88 @@
+;Exported by: admin
+;Date:        Mon Dec 14 20:32:07 2020
+;File:        F:\3d projects etc\human\grc\mannlichers1903_vtv.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0.874833	0.484425
+				1	0	0
+				0	0.484425	-0.874833
+				3.92713	1.31841	-0.00296211
+			}
+		}
+		{bone "foresight3"
+			{Position 15.045	1.26956	8.02111e-005}
+		}
+		{bone "mannlicher_carabine"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				3.15251	1.26788	-0.00594139
+			}
+			{VolumeView "mannlicher_carabine.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 17.03 2.75378 1.11279}
+	{Bone "basis"}
+	{Position 4.63759	0.0634041	-0.0111645}
+}
+{Volume "select"
+	{Box 20.0286 5.19283 1.44533}
+	{Bone "basis"}
+	{Position 4.68155	-0.253249	-0.00684512}
+}
+{Extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 5.66411	0.0931531	31.2344}
+			{lookat 5.68709	-0.144335	1.3304}
+			{fov 45}
+			{horizon 5.5274}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -1.51264	-0.52088	1.33739}
+			}
+			{"1"
+				{type point}
+				{position 11.0782	-1.2487	1.30826}
+			}
+			{"2"
+				{type directional}
+				{direction 0.00821002	-0.0186623	-0.499584}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 5.63605	0.0931531	31.2287}
+			{lookat 5.65904	-0.144335	1.3304}
+			{fov 45}
+			{horizon 5.5274}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 11.0782	-1.2487	1.30826}
+			}
+			{"1"
+				{type point}
+				{position -1.51264	-0.52088	1.33739}
+			}
+			{"2"
+				{type directional}
+				{direction 0.00821002	-0.0186623	-0.499584}
+			}
+		}
+	}
+}

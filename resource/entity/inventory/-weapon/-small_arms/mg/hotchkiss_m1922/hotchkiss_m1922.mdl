@@ -1,0 +1,98 @@
+;Exported by: admin
+;Date:        Sat Oct 31 15:23:37 2020
+;File:        F:\3d projects etc\hotchkiss_m1922\hotchkiss_m1922_fin.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "foresight14"
+			{Position 18.7696	2.18674	-0.029359}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	-1
+				1	0	0
+				0	-1	0
+				4.15206	2.5577	-0.356184
+			}
+		}
+		{bone "hotchkiss"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				3.72162	2.14238	-0.0103486
+			}
+			{VolumeView "hotchkiss.ply"}
+		}
+		{bone "belt"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				3.77193	2.23408	1.15279
+			}
+			{VolumeView "belt.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 23.9401 4.01425 1.44518}
+	{Bone "basis"}
+	{Position 6.38249	1.29417	-0.0504063}
+}
+{Volume "select"
+	{Box 28.9675 5.90095 1.9799}
+	{Bone "basis"}
+	{Position 5.99714	1.29417	-0.112636}
+}
+{Extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 5.66411	0.0931531	31.2344}
+			{lookat 5.68709	-0.144335	1.3304}
+			{fov 45}
+			{horizon 5.5274}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -1.51264	-0.52088	1.33739}
+			}
+			{"1"
+				{type point}
+				{position 11.0782	-1.2487	1.30826}
+			}
+			{"2"
+				{type directional}
+				{direction 0.00821002	-0.0186623	-0.499584}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 5.63605	0.0931531	31.2287}
+			{lookat 5.65904	-0.144335	1.3304}
+			{fov 45}
+			{horizon 5.5274}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 11.0782	-1.2487	1.30826}
+			}
+			{"1"
+				{type point}
+				{position -1.51264	-0.52088	1.33739}
+			}
+			{"2"
+				{type directional}
+				{direction 0.00821002	-0.0186623	-0.499584}
+			}
+		}
+	}
+}
+

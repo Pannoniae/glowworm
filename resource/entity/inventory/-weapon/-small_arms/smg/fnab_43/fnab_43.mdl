@@ -1,0 +1,107 @@
+;Exported by: nic21
+;Date:        Fri Oct  6 22:04:09 2023
+;File:        C:\Users\nic21\Desktop\raaar.max
+{Skeleton
+	{animation
+		{sequence "reload" {speed 0.36}}
+		{sequence "recoil" {speed 2}}
+	}
+	{bone "handle"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "mainpart"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				0.148681	-0.0981913	0
+			}
+			{VolumeView "mainpart.ply"}
+		}
+		{bone "magazine"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				3.19526	-1.18383	-0.0815998
+			}
+			{VolumeView "magazine.ply"}
+		}
+		{bone "bolt"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				2.09066	1.20051	0.2544
+			}
+			{VolumeView "bolt.ply"}
+		}
+		{bone "ammobox"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				3.0469	0.430029	-0.0816
+			}
+			{VolumeView "ammobox.ply"}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0.965926	0.258819
+				1	0	0
+				0	0.258819	-0.965926
+				2.90814	1.32259	-0.0345283
+			}
+		}
+		{bone "foresight11"
+			{Position 7.75419	1.22731	-0.0778218}
+		}
+	}
+}
+{Volume "body"
+	{Box 15.8804 6.70359 1.15363}
+	{Bone "handle"}
+	{Matrix34
+		0.945135	0	0
+		0	0.945135	0
+		0	0	0.945135
+		0.0619268	-0.305995	0
+	}
+}
+{Volume "magazine"
+	{Polyhedron "magazine.vol"}
+	{Bone "magazine"}
+	{Position -0.0412047	-2.92237	1.01379}
+}
+{Volume "select"
+	{Box 15.8804 6.70359 1.15363}
+	{Bone "handle"}
+	{Position 0.0619268	-0.305995	0}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 5.2003 0.1537 -69.963}
+			{lookat 0 0 0}
+			{fov 14}
+			{horizon 90}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 7.5546 	 -7.2503 	 6.4703}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0244 	 0.4672 	 0.1766}
+			}
+			{"2"
+				{type point}
+				{position -2.9735 	 13.723 	 -5.1394}
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+;Exported by: ?????
+;Date:        Tue Apr 26 21:06:38 2016
+;File:        C:\Users\?????\Documents\3DS MAX Scenes\OLD\new_weapon_3.max
+{Skeleton
+	{bone "double_barrel_gun"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{LODView
+			{VolumeView "double_barrel_gun.ply"}
+			{VolumeView "double_barrel_gun_lod.ply"}
+			{VolumeView "double_barrel_gun_lod_1.ply"}
+		}
+		{bone "foresight3"
+			{Matrix34
+				0.999982	0	0.00602814
+				0	-1	2.0893e-005
+				0.00602814	-2.09279e-005	-0.999982
+				15.6145	1.43286	-0.0120639
+			}
+		}
+	}
+}
+{Volume "select"
+	{Box 18.8499 2.33631 0.278487}
+	{Bone "double_barrel_gun"}
+	{Matrix34
+		0.996195	0.0871557	0
+		-0.0871557	0.996195	0
+		0	0	1
+		4.62404	0.519798	0.139244
+	}
+}
+{Volume "body"
+	{Box 18.8499 2.33631 0.278487}
+	{Bone "double_barrel_gun"}
+	{Matrix34
+		0.996195	0.0871557	0
+		-0.0871557	0.996195	0
+		0	0	1
+		4.62404	0.519798	0.139244
+	}
+}
+{Volume "handle"
+	{Box 2.60397 0.930227 0.589426}
+	{Bone "double_barrel_gun"}
+	{Position 5.22398	1.18515	0.294713}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 8.80223	-15.3702	25.9586}
+			{lookat 6.20755	-0.324915	-0.123015}
+			{fov 45}
+			{horizon -170.307}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 5.76904	4.25268	25.9709}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0101697	0.498574	-0.0363347}
+			}
+			{"2"
+				{type point}
+				{position 5.76904	29.8796	3.44789}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 7.39298	-5.74809	30.9363}
+			{lookat 6.69137	-2.88633	13.497}
+			{fov 45}
+			{horizon 177.956}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 5.79304	28.7239	7.59465}
+			}
+			{"1"
+				{type point}
+				{position 5.79304	1.97641	25.95}
+			}
+			{"2"
+				{type directional}
+				{direction -0.00503225	0.494215	-0.0756686}
+			}
+		}
+	}
+}

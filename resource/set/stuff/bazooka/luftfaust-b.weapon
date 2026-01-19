@@ -1,0 +1,24 @@
+
+{from "pattern rpg_weapon"
+        {desc "Luftfaust-B"}
+	{filling "ammo luftfaust" 9}
+	{fillingVisible "luftrocket"}
+	{entity "luftfaust"}
+	{fireSound "reactive/bazooka_fire/"}
+	{reloadsound "bazooka"}
+	{calibre 20}
+	{mass 8}
+
+	{rechargeTime 15}
+	{recoveryTime 1}
+
+	{range 130 130}
+
+	("velocity" mps(290))
+
+	{projectileDamageTable {110 50} {140 35}}
+	;("penetration" args 50)
+	("armor health" damage(300))
+	("human health" damage(300))
+}
+ ;{130 0}

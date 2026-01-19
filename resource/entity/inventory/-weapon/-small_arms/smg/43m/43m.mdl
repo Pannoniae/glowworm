@@ -1,0 +1,126 @@
+;Exported by: 13223
+;Date:        Sat Oct  5 18:53:05 2024
+;File:        D:\ctagohmod\weapons\?????.max
+{Skeleton
+	{bone "weapon_weaponmesh_2"
+		{parameters "ID=ammo;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "weapon_weaponmesh_2.ply"}
+		{bone "weapon_ammomesh_0"
+			{Matrix34
+				0.0230719	0	0.999734
+				0.999734	0	-0.0230719
+				0	1	0
+				1.28414	0.242459	-0.0769113
+			}
+			{VolumeView "weapon_ammomesh_0.ply"}
+		}
+		{bone "weapon_boltmesh_1"
+			{Matrix34
+				0.0230719	0	0.999734
+				0.999734	0	-0.0230719
+				0	1	0
+				1.28414	0.242459	-0.0769113
+			}
+			{VolumeView "weapon_boltmesh_1.ply"}
+		}
+		{bone "foresight11"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.999828	-7.72695e-05	-0.0185682
+				-0.00867126	0.998048	0.061842
+				0.0167972	-0.0602606	0.998041
+				11.7859	0.979694	-0.362192
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0.0252661	-0.0778104	0.996648
+				-0.00721442	0.996814	0.079436
+				-0.999635	0.000586216	0.0270131
+				3.31252	1.26425	-0.0114532
+			}
+		}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.997038	-0.000161606	0.0769085
+				-0.0148648	0.99774	0.0655218
+				-0.0783717	-0.0650696	0.994798
+				3.639298	0.0609358	-0.48143
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 19.6804 4.92078 1.7131}
+	{Bone "weapon_weaponmesh_2"}
+	{Matrix34
+		0.905671	-0.000110426	-0.0288811
+		-0.0067621	0.867311	0.0544301
+		0.0250227	-0.0507063	0.830107
+		3.42042	0.245081	0.0233646
+	}
+}
+{Volume "select"
+	{Box 43.2836 9.40486 3.98403}
+	{Bone "weapon_weaponmesh_2"}
+	{Matrix34
+		0.401444	-4.83048e-05	-0.0134761
+		-0.0029578	0.384461	0.0241339
+		0.0117096	-0.0224782	0.36795
+		3.30986	0.16317	-0.0733463
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 6.71424	-6.09587	36.0369}
+			{lookat 2.39999	0.19007	-7.14303}
+			{fov 34.645}
+			{horizon 143.461}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 1.5732	-4.36364	0.8492}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0805877	0.173732	-0.461869}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 10.0523	-4.41342	0.55285}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 9.69227	-2.9128	47.7873}
+			{lookat 7.92899	0.0188789	-1.93411}
+			{fov 26.5053}
+			{horizon 147.332}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0805874	0.173731	-0.461869}
+				{ambient 0x666666}
+			}
+			{"1"
+				{type point}
+				{position 10.2413	-4.40481	0.708935}
+			}
+			{"2"
+				{type point}
+				{position 1.75334	-4.36323	0.848738}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+;Exported by: Horten
+;Date:        Wed Apr 30 23:08:00 2025
+;File:        C:\Users\Professional\Desktop\mod\stationary_mg_131\mg131.max
+{Skeleton
+	{bone "mg131"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+			{VolumeView "mg131.ply"}
+			{bone "handle"
+				{Matrix34
+					1	0	0
+					0	0	-1
+					0	1	0
+					6.99661	1.54878	-0.190439
+				}
+			}
+			{bone "fxshell"
+				{Matrix34
+				0.1736 	 -0.9848 	 0
+				0 	 0 	 1
+				-0.9848 	 -0.1736 	 0
+					2.5064	0.873353	-0.190439
+				}
+			}
+			{bone "foresight14"
+				{matrix34
+					1 	 0 	 0
+					0 	 1 	 0
+					0 	 0 	 1
+					18.0911 	 1.54878     -0.190439
+				}			
+			}
+			{bone "belt"
+				{Position 2.53779	-0.707759	-1.31243}
+				{VolumeView "belt.ply"}
+			}
+	}
+}
+{Volume "body"
+	{Box 22.9389 2.66359 1.96518}
+	{Bone "mg131"}
+	{Position 6.15113	1.41137	-0.104875}
+}
+{Volume "select"
+	{Box 24.5446 4.87437 2.94777}
+	{Bone "mg131"}
+	{Position 6.15113	1.05951	-0.104436}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 14.436 	 -3.9835 	 -94.0973}
+			{lookat 5.8405 	 -0.3344 	 -8.4352}
+			{fov 15}
+			{horizon 61.8221}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 16.6656 	 -17.5975 	 -0.9224}
+			}
+			{"1"
+				{type directional}
+				{direction 0.1859 	 0.3386 	 0.3174}
+			}
+			{"2"
+				{type point}
+				{position -11.8777 	 17.8355 	 -0.9224}
+			}
+		}
+	}
+}

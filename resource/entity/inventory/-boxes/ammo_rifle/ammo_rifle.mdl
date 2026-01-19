@@ -1,0 +1,63 @@
+;Exported by: Ervin
+;Date:        Sat Feb 10 15:42:12 2024
+;File:        B:\sd2_3D\can\grenade_m24.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "patronenkasten34"
+			{Matrix34
+				1	0	0
+				0	-1	0
+				0	0	-1
+				0.899709	0.128538	-0.118353
+			}
+			{VolumeView "patronenkasten34.ply"}
+			{bone "handle"
+				{Matrix34
+					0	-1	0
+					-1	0	0
+					0	0	-1
+					0.0330877	2.004	0.454811
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "patronenkasten34"}
+	{Position 0.0186877	-0.377202	0.683428}
+}
+{Volume "select"
+	{Polyhedron "select.vol"}
+	{Bone "patronenkasten34"}
+	{Position 0	1.8158	0}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.804147	-1.81937	-12.1705}
+			{lookat 1.90829	0.396033	4.22329}
+			{fov 45}
+			{horizon 131.571}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 2.01557	9.16015	10.5957}
+			}
+			{"1"
+				{type directional}
+				{direction 0.197722	0.000479103	0.459245}
+			}
+			{"2"
+				{type point}
+				{position 2.62181	-8.50427	15.3039}
+			}
+		}
+	}
+}

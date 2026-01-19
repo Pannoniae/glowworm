@@ -1,0 +1,119 @@
+;Exported by: vlupa
+;Date:        Sat Apr  1 08:37:48 2023
+;File:        C:\Users\vlupa\Documente\3dsMax\scenes\g98.max
+{Skeleton
+	{animation
+		{sequence "open_bolt" {speed 1} {events {13 "eject"}}}
+		{sequence "close_bolt" {speed 1}}
+		{sequence "reload" {speed 0.5} {events {13 "eject"}}}
+		{sequence "recoil" {speed 1}}
+		{sequence "bolt_action" {speed 1} {events {13 "eject"}}}
+	}
+	{bone "g98"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{LODView
+			{VolumeView "g98.ply"}
+			{VolumeView "g98_lod1.ply"}
+			{VolumeView "g98_lod2.ply"}
+			{VolumeView "g98_lod3.ply"}
+		}
+		{bone "bolt"
+			{parameters "CommonMesh;"}
+			{Position 0.502573	1.51442	-0.0695338}
+			{LODView
+				{VolumeView "bolt.ply"}
+				{VolumeView "bolt_lod1.ply"}
+				{VolumeView "bolt_lod2.ply"}
+				{VolumeView "bolt_lod3.ply"}
+			}
+			{bone "bolt_move"
+				{parameters "CommonMesh;"}
+				{Position 1.67832	-0.097102	0.0722156}
+				{LODView
+					{VolumeView "bolt_move.ply"}
+					{VolumeView "bolt_move_lod1.ply"}
+					{VolumeView "bolt_move_lod2.ply"}
+					{VolumeView "bolt_move_lod3.ply"}
+				}
+			}
+			{bone "pin"
+				{parameters "CommonMesh;"}
+				{Position -0.0498171	-0.0774169	0.0705133}
+				{LODView
+					{VolumeView "pin.ply"}
+					{VolumeView "pin_lod1.ply"}
+					{VolumeView "pin_lod2.ply"}
+					{VolumeView "pin_lod3.ply"}
+				}
+			}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				4.24195	1.7057	0
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0.573577	0.819152
+				0	0.819152	-0.573577
+				-1	0	0
+				2.38988	1.57547	0.151392
+			}
+		}
+		{bone "foresight12"
+			{Position 18.285	1.38994	0}
+		}
+	}
+}
+{Volume "body"
+	{Box 30.7366 3.04033 0.985238}
+	{Bone "g98"}
+	{Matrix34
+		0.801771	0.0639619	0
+		-0.0795232	0.996833	0
+		0	0	1
+		6.02462	0.510859	0
+	}
+}
+{Volume "select"
+	{Box 31.2005 3.5527 0.985238}
+	{Bone "g98"}
+	{Matrix34
+		0.803472	0.0365005	0.00547341
+		-0.0453796	0.99897	-0.000309024
+		-0.00681204	0	0.999977
+		6.10432	0.390555	0
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 7.695 	 -0.619 	 -34.4253}
+			{lookat 7.5036 	 -0.6087 	 -8.6017}
+			{fov 45}
+			{horizon 86.7997}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 7.7111 	 -12.5028 	 -0.5496}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0294 	 0.2276 	 0.4442}
+			}
+			{"2"
+				{type point}
+				{position 15.3197 	 5.2792 	 -5.1717}
+			}
+		}
+	}
+}

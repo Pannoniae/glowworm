@@ -1,0 +1,88 @@
+;Exported by: Ger
+;Date:        Mon Mar 07 19:16:13 2011
+;File:        C:\Documents and Settings\Admin\Рабочий стол\ppshimosin\ppshimosin.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				7.23586	0.115373	0.0984572
+			}
+		}
+		{bone "foresight12"
+			{Position 12.6876	1.63752	0.0714975}
+		}
+		{bone "body"
+			{Matrix34
+				0.995203	-0.0150296	0.0966741
+				-0.0968834	-0.0138775	0.995199
+				0.013616	0.999791	0.0152671
+				0.146204	-1.09634	-0.586236
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "basis"}
+	{Position 3.06234	-0.682234	-0.370745}
+}
+{Volume "select"
+	{Polyhedron "select.vol"}
+	{Bone "basis"}
+	{Position 2.86406	-1.65378	-1.61769}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 6.7473	-4.34843	32.7442}
+			{lookat 6.25377	-1.54864	15.9177}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.8315	-2.33243	7.88835}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0660742	0.202516	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -3.62854	-0.494883	6.29081}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 6.75154	-4.46398	33.4171}
+			{lookat 6.23826	-1.55219	15.9176}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.8315	-2.33243	7.88835}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0660742	0.202516	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -3.62854	-0.494883	6.29081}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{game_entity
+	(include "/properties/stuff.ext")
+	{collider "stuff.construction"}
+	{props "-steel" "fence" "construction" "inventory_box" "spread_items" "ammo_box"}
+	{ObstacleID "stuff"}
+	{extender "inventory"
+		{box
+		{weight 0.399}
+			{size 3 2}           
+            			{clear}
+		}
+	}
+	
+	(include "/properties/ammo_small.inc")
+	("box_ammo_small")
+	
+	{Volume "body"
+		{thickness 5}
+		{able {touch}}
+	}
+	
+	{lodclass "decor_small"}
+	
+	{extender "stuff"
+		{item "ammo_box_weapon"}
+	}
+	{mass 0.03}
+	{Extension "ammo_rifle.mdl"}
+}

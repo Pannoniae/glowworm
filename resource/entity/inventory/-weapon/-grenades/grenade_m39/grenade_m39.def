@@ -1,0 +1,16 @@
+{actor
+	(include "/properties/stuff_grenade.ext")
+
+	{Extension "grenade_m39.mdl"}
+	{extender "stuff"
+		{item "grenade m39"}
+	}
+	{nogroupmesh 1}
+	;{props "grenade"}
+	{volume "body"
+		{able clear {bullet} {select} {contact} {contact_ground} {touch} {blast}}
+		{thickness 1}
+		;{material "wood"}
+		{tags "body"}
+	}
+}

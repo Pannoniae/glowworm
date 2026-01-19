@@ -1,0 +1,91 @@
+;Exported by: Kalinski
+;Date:        Sun Jul 16 02:50:56 2017
+;File:        C:\Users\Kalinski\Desktop\fra\berthier long exp.max
+{Skeleton
+	{bone "berthier"
+		{parameters "CommonMesh;ID=rifle;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "berthier.ply"}
+		{bone "foresight12"
+			{Position 17.4531	1.43088	0}
+		}
+		{bone "handle"
+			{Position 6.19677	1.43705	0}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				2.02761	1.44944	0.174039
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 22.1541 2.83207 1.17169}
+	{Bone "berthier"}
+	{Position 5.77203	0.622176	-0.00827003}
+}
+{Volume "select"
+	{Box 22.1747 4.62889 1.17169}
+	{Bone "berthier"}
+	{Matrix34
+		1.0774	0	0
+		0	1.0774	0
+		0	0	1.2924
+		5.76338	0.234466	-0.0614164
+	}
+}
+{Extender "preview"
+	{"stuff_primary"
+		{camera
+			{origin 5.51302	0.405124	28.7962}
+			{lookat 5.536	0.167636	1.3304}
+			{fov 45}
+			{horizon 5.5274}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -1.51264	-0.52088	1.33739}
+			}
+			{"1"
+				{type point}
+				{position 11.0782	-1.2487	1.30826}
+			}
+			{"2"
+				{type directional}
+				{direction 0.00821002	-0.0186623	-0.499584}
+				{ambient 0xffffff}
+			}
+		}
+	}
+	{"stuff"
+		{camera
+			{origin 5.64734	0.432568	28.8727}
+			{lookat 5.67032	0.19508	1.3304}
+			{fov 45}
+			{horizon 5.5274}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 11.0782	-1.2487	1.30826}
+			}
+			{"1"
+				{type point}
+				{position -1.51264	-0.52088	1.33739}
+			}
+			{"2"
+				{type directional}
+				{direction 0.00821002	-0.0186623	-0.499584}
+				{ambient 0xffffff}
+			}
+		}
+	}
+}

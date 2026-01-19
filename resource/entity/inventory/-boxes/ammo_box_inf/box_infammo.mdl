@@ -1,0 +1,72 @@
+;Exported by: Normand
+;Date:        Sat Jan 02 21:19:44 2016
+;File:        C:\Users\Normand\ammo_box.max
+{Skeleton
+	{animation
+		{sequence "land_on"}
+		{sequence "land_off"}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Position 0	0	0}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 5.85655 9.57932 3.17797}
+	{Bone "body"}
+	{Position -0.049773	0.00414665	-0.0308443}
+}
+{Volume "select"
+	{Box 5.70936 11.1691 2.58949}
+	{Bone "body"}
+	{Position 0.0276583	-0.386854	1.59155}
+}
+{Extender "preview"
+	{"stuff"
+		{camera
+			{origin -14.1756	-8.1895	6.07267}
+			{lookat -1.04279	-0.424781	-0.32281}
+			{fov 40}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction 0.366398	0.228809	-0.251792}
+				{diffuse 0xfffff1}
+			}
+			{"1"
+				{type point}
+				{position -4.94134	-7.4495	5.80399}
+				{diffuse 0xf1f5ff}
+			}
+		}
+	}
+	{"stuff_primary"
+		{camera
+			{origin -17.6117	-17.2878	6.69472}
+			{lookat -0.592611	-1.17027	-0.12281}
+			{fov 40}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -12.2868	-11.2085	6.01307}
+				{diffuse 0xf1f5ff}
+			}
+			{"1"
+				{type directional}
+				{direction 0.318294	0.294917	-0.24842}
+				{diffuse 0xfffff1}
+			}
+		}
+	}
+}
+
+

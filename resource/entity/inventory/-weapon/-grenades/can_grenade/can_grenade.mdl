@@ -1,0 +1,73 @@
+;Exported by: Ervin
+;Date:        Sat Jan 20 17:50:32 2024
+;File:        B:\CTA\can1.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "can"
+			{Matrix34
+				0.0516852	0.998663	0
+				0.998663	-0.0516852	0
+				0	0	-1
+				-0.980739	-0.281312	0.0441387
+			}
+			{VolumeView "can.ply"}
+			{bone "handle"
+				{Matrix34
+					0.998663	-0.0516861	0
+					-0.0516861	-0.998663	0
+					0	0	-1
+					-4.70002	-0.506981	0.0761226
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "can"}
+	{Matrix34
+		0.0516855	0.998663	0
+		0	0	-1
+		-0.998663	0.0516855	0
+		0.0548914	-0.0604166	-0.0163612
+	}
+}
+{Volume "select"
+	{Polyhedron "select.vol"}
+	{Bone "can"}
+	{Matrix34
+		0.0516855	0.998663	0
+		0	0	-1
+		-0.998663	0.0516855	0
+		0.0548914	-0.0604166	-0.0163612
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -2.71715	1.25073	-20.2176}
+			{lookat -1.50576	0.39269	-3.5198}
+			{fov 45}
+			{horizon 57.7518}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -4.15017	6.14605	4.40425}
+			}
+			{"1"
+				{type directional}
+				{direction 0.170125	-0.031963	0.46908}
+			}
+			{"2"
+				{type point}
+				{position 3.40184	-10.4848	5.37913}
+			}
+		}
+	}
+}

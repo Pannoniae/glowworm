@@ -1,0 +1,89 @@
+;Exported by: Normand
+;Date:        Tue Oct 29 19:17:40 2019
+;File:        C:\Users\Normand\mle31_3.max
+{Skeleton
+	{bone "mle31"
+		{parameters "CommonMesh;ID=mgun;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "mle31.ply"}
+		{bone "foresight14"
+			{Position 15.7652	1.88583	-0.024124}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.684064	0.483896	-0.0331144
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				0.889794	1.91943	0.626615
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 16.7323 3.36158 1.17113}
+	{Bone "mle31"}
+	{Position 5.63219	1.12731	-0.0777136}
+}
+{Volume "select"
+	{Box 19.9016 7.87402 3.14961}
+	{Bone "mle31"}
+	{Position 5.36981	-0.187141	-0.0131287}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 5.77018	-4.71599	25.3627}
+			{lookat 5.82988	-1.92383	8.83333}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 20.9348	-3.39014	1.12786}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0253998	0.211502	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position 3.49869	1.90949	-0.441479}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 5.9408	-3.9527	27.3413}
+			{lookat 6.0029	-1.04889	10.1507}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 21.1339	-3.44347	2.26322}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0253998	0.211502	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position 3.69774	1.85616	0.693879}
+			}
+		}
+	}
+}

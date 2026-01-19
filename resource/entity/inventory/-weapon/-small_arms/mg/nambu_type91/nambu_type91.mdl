@@ -1,0 +1,89 @@
+;Exported by: Normand
+;Date:        Mon Oct 28 13:31:50 2019
+;File:        C:\Users\Normand\type11.max
+{Skeleton
+	{bone "type_11"
+		{parameters "CommonMesh;ID=mgun;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "nambu_type91.ply"}
+		{bone "foresight14"
+			{Position 15.6268	1.58963	0.0656419}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-1.61513	-0.0509682	0.0136582
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				4.81911	1.84834	0.918666
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 16.7323 3.36158 1.17113}
+	{Bone "type_11"}
+	{Position 4.14228	0.820477	-0.030941}
+}
+{Volume "select"
+	{Box 19.9016 7.87402 3.14961}
+	{Bone "type_11"}
+	{Position 3.8799	-0.493974	0.0336439}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 4.73336	-5.6163	30.1103}
+			{lookat 4.06837	-2.90386	13.5809}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.1149	-3.08224	5.5949}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -3.09878	-2.47599	4.02556}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 7.3328	-5.69462	30.6729}
+			{lookat 6.6412	-2.87369	13.4824}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.1149	-3.08224	5.5949}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -3.09878	-2.47599	4.02556}
+			}
+		}
+	}
+}

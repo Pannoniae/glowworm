@@ -1,0 +1,28 @@
+{bullet
+	{tag "ammo smallitemin1hand dropboxed rifle_grenade grenade size1 fg"}
+	{detonationThickness 0.5}
+	{inventory
+		{weight 20}
+		{size 2 1}
+	}
+	{entity "42lp_ammo_he"}
+	{view "42lp_ammo_he"}
+	{mass 0.6}
+
+	;{damage blastwave
+	;	{energy 0.70}
+	;	{area 3 6}
+	;	{ground_interaction_radius 0.05} ;// value is multiplied by 2nd value of area to deterimine is blast is close enough to ground to trigger terrain fx
+	;}
+	{damage add blastwave
+		{energy 0.70}
+		{area 3 6}
+		{ground_interaction_radius 0} ;// value is multiplied by 2nd value of area to deterimine is blast is close enough to ground to trigger terrain fx
+	}
+	{special
+		{PrepareTime 4.75}
+		{PrepareCursor "grenade"}
+		{mode detonate}
+	}
+}
+

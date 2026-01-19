@@ -1,0 +1,158 @@
+;Exported by: nic21
+;Date:        Wed Oct 25 18:32:39 2023
+;File:        C:\Users\nic21\Desktop\raaar.max
+{Skeleton
+	{animation
+		{sequence "bipod_open"}
+		{sequence "reload" {speed 0.2}}
+	}
+	{bone "handle"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "foresight3"
+			{Position 17.7987	1.58949	-0.0540003}
+		}
+		{bone "fxshell"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				1.17755	1.5998	0.00442095
+			}
+		}
+		{bone "bipod_rot"
+			{Matrix34
+				0	0	1
+				0.0871556	0.996195	0
+				-0.996195	0.0871556	0
+				5.385	0.818498	0
+			}
+			{LODView
+				{VolumeView "bipod_rot.ply"}
+				{VolumeView "bipod_rot_lod1.ply"}
+	    		}
+			{bone "bipodr"
+				{Matrix34
+					0.939693	0.0298088	-0.340719
+					-0.0298089	0.999542	0.00523597
+					0.340719	0.00523623	0.940151
+					0	0.0129992	-0.568501
+				}
+				{LODView
+					{VolumeView "bipodr.ply"}
+					{VolumeView "bipodr_lod1.ply"}
+	    			}
+			}
+			{bone "bipodl"
+				{Matrix34
+					0.939693	-0.0298087	0.340719
+					0.0298086	0.999542	0.00523624
+					-0.340719	0.00523589	0.940151
+					0	0.0129991	-0.568501
+				}
+				{LODView
+					{VolumeView "bipodl.ply"}
+					{VolumeView "bipodl_lod1.ply"}
+	    			}
+			}
+		}
+		{bone "prop_bullet01"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				18.3225	1.58957	-0.0272057
+			}
+			{LODView
+				{VolumeView "prop_bullet01.ply"}
+				{VolumeView "prop_bullet01_lod1.ply"}
+	    		}
+		}
+		{bone "sight"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				2.14646	1.54935	-0.886
+			}
+			{LODView
+				{VolumeView "sight.ply"}
+				{VolumeView "sight_lod1.ply"}
+	    		}
+		}
+		{bone "mainpart"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				4.62756	1.17335	0.93
+			}
+			{VolumeView "mainpart.ply"}
+			{LODView
+				{VolumeView "mainpart.ply"}
+				{VolumeView "mainpart_lod1.ply"}
+	    		}
+		}
+		{bone "pistolgrip"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				1.55466	0.705714	0
+			}
+			{LODView
+				{VolumeView "pistolgrip.ply"}
+				{VolumeView "pistolgrip_lod1.ply"}
+	    		}
+			{bone "bolt"
+				{Position 0.0441412	-0.884938	1.03098}
+				{LODView
+					{VolumeView "bolt.ply"}
+					{VolumeView "bolt_lod1.ply"}
+	    			}
+			}
+		}
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 5.2003 0.1537 -69.963}
+			{lookat 5.5 0 0}
+			{fov 25}
+			{horizon -115}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 7.5546 	 -7.2503 	 6.4703}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0244 	 0.4672 	 0.1766}
+			}
+			{"2"
+				{type point}
+				{position -2.9735 	 13.723 	 -5.1394}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 34.754 5.96574 1.21521}
+	{Bone "handle"}
+	{Matrix34
+		0.911785	0	0
+		0	0.911785	0
+		0	0	0.911785
+		10.973	0.28613	0
+	}
+}
+{Volume "select"
+	{Box 34.754 5.96574 1.21521}
+	{Bone "handle"}
+	{Position 10.973	0.28613	0}
+}

@@ -1,0 +1,89 @@
+;Exported by: Normand
+;Date:        Tue Nov 09 22:46:27 2021
+;File:        C:\Users\Normand\breda37.max
+{Skeleton
+	{bone "breda37"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "breda37.ply"}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				1.04636	1.34858	-0.284725
+			}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				5.58283	1.26939	-0.00693977
+			}
+		}
+		{bone "foresight14"
+			{Position 18.9429	1.44314	-0.00609899}
+		}
+	}
+}
+{Volume "body"
+	{Box 25.25 2 0.85}
+	{Bone "breda37"}
+	{Position 6.32321	1.09201	0.00325781}
+}
+{Volume "select"
+	{Box 25.5 2 1}
+	{Bone "breda37"}
+	{Position 6.20622	1.1325	-0.055014}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin 7.62075	-7.40029	39.6527}
+			{lookat 6.92916	-4.57935	22.4621}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.4028	-4.7879	14.5746}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -2.81083	-4.18165	13.0053}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 5.02131	-7.32196	39.09}
+			{lookat 4.35632	-4.60952	22.5606}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.4028	-4.7879	14.5746}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -2.81083	-4.18165	13.0053}
+			}
+		}
+	}
+}

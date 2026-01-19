@@ -1,0 +1,144 @@
+;Exported by: 13223
+;Date:        Sat Oct  5 16:41:42 2024
+;File:        D:\ctagohmod\weapons\?????.max
+{Skeleton
+	{bone "weapon_orita_m1941_body_4"
+		{parameters "ID=smg;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "weapon_orita_m1941_body_4.ply"}
+		{bone "weapon_orita_m1941_ammo_0"
+			{Matrix34
+				0.0309618	0	0.999521
+				0.999521	0	-0.0309618
+				0	1	0
+				-2.78816	0	0.581857
+			}
+			{VolumeView "weapon_orita_m1941_ammo_0.ply"}
+		}
+		{bone "weapon_orita_m1941_lever_2"
+			{Matrix34
+				0.0309618	0	0.999521
+				0.999521	0	-0.0309618
+				0	1	0
+				-2.78816	0	0.581857
+			}
+			{VolumeView "weapon_orita_m1941_lever_2.ply"}
+		}
+		{bone "weapon_orita_m1941_bolt_3"
+			{Matrix34
+				0.0309618	0	0.999521
+				0.999521	0	-0.0309618
+				0	1	0
+				-2.78816	0	0.581857
+			}
+			{VolumeView "weapon_orita_m1941_bolt_3.ply"}
+		}
+		{bone "weapon_orita_m1941_trigger_5"
+			{Matrix34
+				0.0309622	0	0.999521
+				0.898776	0.437524	-0.0278415
+				-0.437314	0.899207	0.0135467
+				1.41099	0.38142	0.451771
+			}
+			{VolumeView "weapon_orita_m1941_trigger_5.ply"}
+		}
+		{bone "foresight11"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.999527	-7.7453e-05	-0.0307535
+				-0.00791671	0.998048	0.0619432
+				0.0289608	-0.0602606	0.997763
+				11.7143	0.85496	-0.342992
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0.0374126	-0.0778101	0.996266
+				-0.00624477	0.996814	0.0795177
+				-0.999231	0.000587211	0.0391959
+				5.1035	1.30156	0.162694
+			}
+		}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.997901	-0.000161587	0.0647505
+				-0.0140652	0.99774	0.0656981
+				-0.0662409	-0.0650696	0.99568
+				0.325752	0.385712	-0.243543
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 19.6804 4.92078 1.7131}
+	{Bone "weapon_orita_m1941_body_4"}
+	{Matrix34
+		0.905252	-0.000110441	-0.0399176
+		-0.00609813	0.867311	0.0545088
+		0.0351384	-0.0507065	0.82974
+		3.11281	0.569856	0.227316
+	}
+}
+{Volume "select"
+	{Box 43.2836 9.40486 3.98403}
+	{Bone "weapon_orita_m1941_body_4"}
+	{Matrix34
+		0.40125	-4.82976e-05	-0.018368
+		-0.00266343	0.38446	0.0241679
+		0.0161934	-0.0224779	0.36778
+		3.00108	0.487947	0.131963
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 6.84533	-6.42072	36.198}
+			{lookat 2.0051	-0.134793	-6.92618}
+			{fov 34.645}
+			{horizon 140.277}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 1.27578	-4.6885	1.07553}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0862114	0.173732	-0.460853}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 9.75068	-4.73827	0.675857}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 9.96644	-3.23767	47.9114}
+			{lookat 7.59725	-0.306001	-1.78488}
+			{fov 26.5053}
+			{horizon 139.394}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.086211	0.173731	-0.460853}
+				{ambient 0x666666}
+			}
+			{"1"
+				{type point}
+				{position 9.9416	-4.72969	0.829792}
+			}
+			{"2"
+				{type point}
+				{position 1.45597	-4.68811	1.07305}
+			}
+		}
+	}
+}

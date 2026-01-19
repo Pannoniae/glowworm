@@ -1,0 +1,89 @@
+;Exported by: Normand
+;Date:        Thu Aug 12 13:11:42 2021
+;File:        C:\Users\Normand\rsc17_2.max
+{Skeleton
+	{bone "rsc1917"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "rsc1917.ply"}
+		{bone "foresight12"
+			{Position 20.3793	1.77078	-0.00282243}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				1.09797	0.407373	0.381951
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				2.06752	1.81139	-0.00129054
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 20 2.9 0.85}
+	{Bone "rsc1917"}
+	{Position 3.74883	1.03053	0.00389451}
+}
+{Volume "select"
+	{Box 20.5 3.5 1}
+	{Bone "rsc1917"}
+	{Position 3.94141	0.851299	-0.0543784}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 6.01752	-3.9554	25.9027}
+			{lookat 5.88206	-3.40287	22.5356}
+			{fov 50}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0250696	0.117822	-0.485273}
+			}
+			{"1"
+				{type point}
+				{position 16.2331	0.539585	-2.72948}
+			}
+			{"2"
+				{type point}
+				{position -5.53134	1.80636	-2.75233}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 5.13397	-5.59907	26.5719}
+			{lookat 5.12831	-5.00745	23.0701}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0100493	0.119811	-0.485329}
+			}
+			{"1"
+				{type point}
+				{position 15.0015	-1.11301	-1.55517}
+			}
+			{"2"
+				{type point}
+				{position -5.34949	0.32554	-1.96938}
+			}
+		}
+	}
+}

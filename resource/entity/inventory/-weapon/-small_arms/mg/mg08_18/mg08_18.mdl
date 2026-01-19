@@ -1,0 +1,91 @@
+;Exported by: vlss
+;Date:        Thu Apr 29 22:33:27 2021
+;File:        mg08_18.obj
+{Skeleton
+	{bone "mg08_18"
+		{parameters "CommonMesh;"}
+		{Orientation
+			0.9	0	0
+			0	-0.9	0
+			0	0	0.9
+		}
+		{VolumeView "mg08_18.ply"}
+		{bone "fxshell"
+			{Matrix34
+				0	0.70711	-0.707103
+				-1	0	0
+				0	0.707103	0.70711
+				4.324041	2.423052	-0.5865543
+			}
+		}
+		{bone "handle"
+			{Matrix34
+				-1	0	0
+				0	0	1
+				0	1	0
+				8.0505	2.594655	-0.4622652
+			}
+		}
+		{bone "foresight14"
+			{Position 19.9755	1.814796	-0.0956754}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "mg08_18"}
+	{Position 7.63432	-0.288033	-0.649675}
+}
+{Volume "select"
+	{Polyhedron "select.vol"}
+	{Bone "mg08_18"}
+	{Position 7.62895	-0.398905	-1.88279}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 8.05674	-7.62177	37.7288}
+			{lookat 7.39174	-4.90933	21.1994}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.8504	-5.12236	13.3118}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position -2.36322	-4.51611	11.7425}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 8.09872	-7.73475	37.3837}
+			{lookat 7.40712	-4.91382	20.1931}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.8808	-5.12236	12.3057}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position -2.33287	-4.51611	10.7363}
+			}
+		}
+	}
+}

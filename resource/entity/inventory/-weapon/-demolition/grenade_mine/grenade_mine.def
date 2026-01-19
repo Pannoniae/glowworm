@@ -1,0 +1,18 @@
+{game_entity
+	(include "/properties/stuff_dynamite.ext")
+
+	{extension "grenade_mine.mdl"}
+
+	{extender "stuff"
+		{item "dynamite_ger_x7"}
+	}
+
+	{volume "body"
+		{thickness 4}
+		{able clear {bullet} {select} {contact} {contact_ground} {touch} {blast}}
+	}
+
+	{body
+		{proper body sensible}
+	}
+}

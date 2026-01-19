@@ -1,0 +1,135 @@
+;Exported by: 13223
+;Date:        Mon Oct  7 00:18:44 2024
+;File:        D:\ctagohmod\weapons\wz1928.max
+{Skeleton
+	{bone "weapon_weapon_mesh_3"
+		{parameters "ID=rifle;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "weapon_weapon_mesh_3.ply"}
+		{bone "weapon_ammo_mesh_0"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				0.402615	0.443184	0
+			}
+			{VolumeView "weapon_ammo_mesh_0.ply"}
+		}
+		{bone "weapon_bolt_1_mesh_002"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				0.402615	0.443184	0
+			}
+			{VolumeView "weapon_bolt_1_mesh_002.ply"}
+		}
+		{bone "weapon_bolt_mesh_2_2"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				0.402615	0.443184	0
+			}
+			{VolumeView "weapon_bolt_mesh_2_2.ply"}
+		}
+		{bone "foresight12"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				19.8095	1.48489	-0.0940858
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				3.22654	1.65996	0.350095
+			}
+		}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				1.25336	1.409	-0.0826631
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 26.6592 4.87254 1.71396}
+	{Bone "weapon_weapon_mesh_3"}
+	{Matrix34
+		0.868527	0	0
+		0	0.868527	0
+		0	0	0.868527
+		5.84463	0.518076	-0.311405
+	}
+}
+{Volume "select"
+	{Box 44.4715 11.9104 3.82647}
+	{Bone "weapon_weapon_mesh_3"}
+	{Matrix34
+		0.385	0	0
+		0	0.385	0
+		0	0	0.385
+		2.71583	0.543731	-0.106747
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 4.92422	-3.13462	39.6548}
+			{lookat 5.34793	-1.03491	3.83474}
+			{fov 34.645}
+			{horizon -168.555}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 9.32551	-3.47824	0.334124}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792751	0.197723	-0.452351}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 0.845847	-3.42844	0.61491}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 6.28885	-2.56448	35.2319}
+			{lookat 5.8614	-0.737723	4.09199}
+			{fov 40.7792}
+			{horizon 166.956}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 9.51427	-3.47824	0.490911}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792751	0.197723	-0.452351}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 1.02612	-3.42844	0.61491}
+			}
+		}
+	}
+}

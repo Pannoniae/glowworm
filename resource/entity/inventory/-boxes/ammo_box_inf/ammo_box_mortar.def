@@ -1,0 +1,29 @@
+{game_entity
+	(include "/properties/stuff.ext")
+	{collider "stuff.construction"}
+	{props "-steel" "wood" "fence" "construction" "inventory_box" "spread_items" "ammo_box"}
+	{ObstacleID "stuff"}
+	{extender "inventory"
+		{box
+			{weight 99}
+			{size 4 2}              
+            			{clear}
+		}
+	}
+	
+	(include "/properties/ammo_mortar.inc")
+	("mortar_box_ammo")
+	
+	{Volume "body"
+		{thickness 1}
+		{able {touch}}
+	}
+	
+	{lodclass "decor_small"}
+	
+	{extender "stuff"
+		{item "ammo_box_mortar"}
+	}
+	
+	{Extension "box_infammo.mdl"}
+}

@@ -1,0 +1,95 @@
+{Skeleton
+	{bone "basis"
+		{orientation
+			1 	 0 	 0
+			0 	 -1 	 0
+			0 	 0 	 1
+		}
+		{bone "ger_headwear"
+;			{Position 0 	0 	 0}
+			{LODView
+				{VolumeView "../../GER_headwear_source/ger_cap_sidecap_var1/ger_heer_sidecap_m42_var1.ply"}
+				{VolumeView "../../GER_headwear_source/ger_cap_sidecap_var1/ger_heer_sidecap_m42_var1_lod1.ply"}
+				{VolumeView "../../GER_headwear_source/ger_cap_sidecap_var1/ger_heer_sidecap_m42_var1_lod2.ply"}
+				{VolumeView "../../GER_headwear_source/ger_cap_sidecap_var1/ger_heer_sidecap_m42_var1_lod3.ply"}
+			}
+			{bone "cockade_m42_var1"
+				{Matrix34
+					0.848488	0	-0.529214
+					0	1	0
+					0.529213	0	0.848489
+					1.71259	-0.105022	3.87155
+				}
+			{LODView
+				{VolumeView "../../GER_headwear_source/roa_cockade/cockade_m42_var1.ply"}
+			}
+			}
+		}		
+	}
+}
+{Volume "body"
+	{Box 1.09129 28.3822 3.72588}
+	{Bone "ger_headwear"}
+	{Matrix34
+		0	7.23231e-005	4.83081
+		0.204388	0	0
+		-2.63051e-005	1.32468	-1.93338e-005
+		0.0244985	-0.0724921	2.42964
+	}
+}
+{Volume "select"
+	{Box 1.09129 28.3822 3.72588}
+	{Bone "ger_headwear"}
+	{Matrix34
+		0	7.23231e-005	4.83081
+		0.204388	0	0
+		-2.63051e-005	1.32468	-1.93338e-005
+		0.0244985	-0.0724921	2.42964
+	}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 6.3812 	 -1.2197 	 4.3}
+			{lookat 4.0241 	 -0.7675 	 4.0622}
+			{fov 45}
+			{horizon 0.307741}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 2.7088 	 -1.6845 	 4.5206}
+			}
+			{"1"
+				{type directional}
+				{direction -4.2983 	 0.7474 	 -1.711}
+			}
+			{"2"
+				{type point}
+				{position 2.9315 	 0.5548 	 3.1579}
+			}
+		}
+	}
+	{"stuff_preview"
+		{camera
+			{origin 6.3804 	 -1.2215 	 4.3046}
+			{lookat 4.0233 	 -0.7693 	 4.0668}
+			{fov 45}
+			{horizon 0.307741}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 2.9315 	 0.5548 	 3.1579}
+			}
+			{"1"
+				{type directional}
+				{direction -4.2983 	 0.7474 	 -1.711}
+			}
+			{"2"
+				{type point}
+				{position 2.7088 	 -1.6845 	 4.5206}
+			}
+		}
+	}
+}

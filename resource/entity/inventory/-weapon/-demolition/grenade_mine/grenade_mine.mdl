@@ -1,0 +1,58 @@
+;Exported by: Ervin
+;Date:        Sat Feb 10 14:27:13 2024
+;File:        B:\sd2_3D\can\mine.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "t_35"
+			{Position 1.34819	1.68356	1.43209}
+			{VolumeView "t_35.ply"}
+			{bone "handle"
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					0.168734	-3.90755	0.355721
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "t_35"}
+	{Position 0	0	0.882539}
+}
+{Volume "select"
+	{Polyhedron "select.vol"}
+	{Bone "t_35"}
+	{Position 0	0	1.81116}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 3.8617	-3.49213	17.3967}
+			{lookat 1.14924	-1.27673	1.00298}
+			{fov 45}
+			{horizon -48.4289}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -2.83548	7.91147	-4.67057}
+			}
+			{"1"
+				{type directional}
+				{direction -0.197722	0.000478931	-0.459245}
+			}
+			{"2"
+				{type point}
+				{position -3.44172	-9.75296	-9.37883}
+			}
+		}
+	}
+}

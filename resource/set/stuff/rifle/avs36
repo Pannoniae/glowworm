@@ -1,0 +1,18 @@
+{from "pattern rifle"
+	{tag "-rifle rifle_shell smg battlerifle"}
+	{filling "ammo rifle_rus" 15}
+	{entity "avs36"}
+	{fireSound "smallarms/s3/d1/RUS/SVT40/"}
+	{fireSoundClose "smallarms/s3/3p/RUS/SVT40/"}
+	{reloadSound "svt"}
+	{calibre 7.62}
+	{mass 3.95}
+
+	("fire rate" rpm(800))
+	("velocity" mps(840))
+	("assault_rifle")
+	{parameters "clip"
+		("reload time" seconds(10))	
+		{reloadSound "reload_clip_x2"}
+	}
+}

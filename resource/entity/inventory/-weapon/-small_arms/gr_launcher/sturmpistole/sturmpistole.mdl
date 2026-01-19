@@ -1,0 +1,92 @@
+;Exported by: nic21
+;Date:        Tue Oct  3 18:25:11 2023
+;File:        D:\Program Files (x86)\goh_modding\workspace\modern_mod\weapons\pistols\editu_rocket_pistol.max
+{Skeleton
+	{animation
+		{sequence "reload" {speed 0.24} {smooth 0.2}}
+	}
+	{bone "handle1"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "foresight3"
+			{animation
+				{sequence "reload"}
+			}
+			{Position 4.02517	1.49357	0}
+		}
+		{bone "bolt"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				1.80475	0.938566	0
+			}
+			{VolumeView "bolt.ply"}
+			{bone "prop_flare"
+				{Position 0	-0.54113	0.55804}
+				{VolumeView "prop_flare.ply"}
+			}
+			{bone "prop_rocket"
+				{Position 1.99676e-05	2.20806	0.5551}
+				{VolumeView "prop_rocket.ply"}
+			}
+		}
+		{bone "mainpart"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-2.90919	0.736946	0.00819952
+			}
+			{VolumeView "mainpart.ply"}
+		}
+	}
+}
+
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 5.2003 0.1537 -69.963}
+			{lookat 0 0 0}
+			{fov 20}
+			{horizon 91}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 7.5546 	 -7.2503 	 6.4703}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0244 	 0.4672 	 0.1766}
+			}
+			{"2"
+				{type point}
+				{position -2.9735 	 13.723 	 -5.1394}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 18.383 5.70633 1.96473}
+	{Bone "handle1"}
+	{Matrix34
+		0.885332	0	0
+		0	0.885332	0
+		0	0	0.490935
+		1.69664	-0.481938	0
+	}
+}
+{Volume "select"
+	{Box 18.383 5.70633 1.96473}
+	{Bone "handle1"}
+	{Matrix34
+		1	0	0
+		0	1	0
+		0	0	0.554521
+		1.69664	-0.481938	0
+	}
+}

@@ -1,0 +1,22 @@
+{bullet
+	{desc "Labora stick ammo"}
+	{tag "bullet small stackable pierce"}
+	{tag "bullet_fx size1"}
+	{inventory
+		{weight 2.75}
+		{block 36}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{entity "bergmann_stick_ammo"}
+	{mass 0.03}
+
+	{trace
+		{view "/texture/fx/tracers/trace_empty"
+			{ScaleY 0.1}
+			{ScaleX 1.5}
+			{Light 1}
+		}
+		{length 1.5}
+	}
+}

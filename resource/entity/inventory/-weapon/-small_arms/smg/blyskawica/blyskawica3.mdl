@@ -1,0 +1,100 @@
+;Exported by:	 guita
+;Date:			 17.06.2020 23:03:59
+;File:			 D:\Git\3D_Scenes\GoH_3D_human_export\3d_weapons\mp40\mp38_unfolded.max
+{skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{LODView
+			{VolumeView "drawcall_0004.ply"}
+		}
+
+		{bone "drawcall_0004"
+			{Matrix34
+				0.999635	-0.0270254	0
+				-0.0270254	-0.999635	0
+				0	0	1
+				5.20197	-0.991352	0.0830359
+			}
+		;{bone "foresight11"
+		;	{Position 11.2626 	 1.815 	 -0.0161}
+		;}
+		{bone "foresight3"
+			{Position 10.4672	1.31567	0.038174}
+		}
+		{bone "handle"
+			{matrix34
+				0.9482 	 -0.1843 	 -0.2588
+				-0.2541 	 0.0494 	 -0.9659
+				0.1908 	 0.9816 	 0
+				3.7113 	 2.6403 	 0.0294
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				5.89505	1.69708	0.13786
+			}
+		}
+		;{bone "magazine"
+			;{Position 5.5714 	 -0.7431 	 0}
+			;{LODView
+			;	{VolumeView "magazine.ply"}
+			;	{VolumeView "magazine_lod1.ply"}
+			;	{VolumeView "magazine_lod2.ply"}
+			;	{VolumeView "magazine_lod3.ply"}
+			;}
+		;}
+		;{bone "bolt"
+			;{Position 2.6422 	 1.8406 	 -0.2932}
+			;{LODView
+			;	{VolumeView "bolt.ply"}
+			;	{VolumeView "bolt_lod1.ply"}
+			;	{VolumeView "bolt_lod2.ply"}
+			;}
+		}
+	}
+}
+{volume "body"
+	{Box 12.1875 4.7896 1.11017}
+	{Bone "basis"}
+	{Position 5.25737	-0.0803957	0.0276109}
+}
+;{volume "magazine"
+	;{box 0.667905 4.48104 0.408733}
+	;{bone "magazine"}
+;}
+{volume "select"
+	{Box 12.4362 4.7896 1.11017}
+	{Bone "basis"}
+	{Position 5.16479	-0.293397	0.0276109}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 6.69912	-3.65578	24.0034}
+			{lookat 6.03413	-0.943346	7.47397}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.4928	-1.15638	-0.413628}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -3.72083	-0.550133	-1.98297}
+			}
+		}
+	}
+}

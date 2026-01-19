@@ -1,0 +1,153 @@
+;Exported by: 13223
+;Date:        Tue Oct 15 10:48:20 2024
+;File:        D:\ctagohmod\weapons\mg131.max
+{Skeleton
+	{bone "weapon_main_mesh_4"
+		{parameters "ID=mgun;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "weapon_main_mesh_4.ply"}
+		{bone "weapon_trigger_5"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.909908	-7.2348	0
+			}
+			{VolumeView "weapon_trigger_5.ply"}
+		}
+		{bone "weapon_cover_6"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.909908	-7.2348	0
+			}
+			{VolumeView "weapon_cover_6.ply"}
+		}
+		{bone "weapon_bolt_01_7"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.909908	-7.2348	0
+			}
+			{VolumeView "weapon_bolt_01_7.ply"}
+		}
+		{bone "weapon_bolt_03_8"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.909908	-7.2348	0
+			}
+			{VolumeView "weapon_bolt_03_8.ply"}
+		}
+		{bone "weapon_bolt_02_9"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.909908	-7.2348	0
+			}
+			{VolumeView "weapon_bolt_02_9.ply"}
+		}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.999453	-0.000165836	0.0330688
+				-0.01197	0.99774	0.0661121
+				-0.0346292	-0.0650702	0.99728
+				-1.04302	-0.13404	0.931109
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				-0.0346219	-0.0650765	0.997279
+				-0.0119672	0.99774	0.06612
+				-0.999453	0.000167807	-0.033062
+				3.76719	1.94748	-0.0538816
+			}
+		}
+		{bone "foresight14"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.999426	-0.000127342	0.0338652
+				-0.0118714	0.998011	0.0619081
+				-0.035542	-0.0608648	0.997513
+				19.0787	1.36275	0.144092
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 43.7963 6.00428 2.93212}
+	{Bone "weapon_main_mesh_4"}
+	{Matrix34
+		0.672045	-8.47214e-05	0.00370291
+		-0.00651822	0.643262	0.0401533
+		-0.0044678	-0.0376071	0.615933
+		6.16292	0.807794	-0.0597231
+	}
+}
+{Volume "select"
+	{Box 92.6009 11.0191 5.20464}
+	{Bone "weapon_main_mesh_4"}
+	{Matrix34
+		0.297902	-3.72793e-05	0.00197243
+		-0.00290944	0.285145	0.017797
+		-0.00228379	-0.0166715	0.273028
+		6.12976	0.291393	-0.0347319
+	}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin 8.28264	-12.7503	31.1278}
+			{lookat 8.60408	-2.4278	5.84322}
+			{fov 59.6037}
+			{horizon -178.804}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.064323	0.173731	-0.464414}
+				{ambient 0x666666}
+			}
+			{"1"
+				{type point}
+				{position 5.92299	-3.12638	1.7378}
+			}
+			{"2"
+				{type point}
+				{position -0.372071	-3.09553	1.62041}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 11.5446	-4.33092	31.591}
+			{lookat 9.88776	-0.581242	5.92156}
+			{fov 62.4173}
+			{horizon 154.688}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -0.505705	-3.09579	1.61597}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0643231	0.173732	-0.464414}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 5.78689	-3.1327	1.61709}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+;Exported by: Пользователь
+;Date:        Wed Aug 06 12:36:47 2014
+;File:        C:\Documents and Settings\Пользователь\Мои документы\3dsmax\scenes\оружие\ранец_рус.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				0.0968959	0.0193614	-0.995106
+				0.112354	-0.993633	-0.00839265
+				-0.988933	-0.110991	-0.0984538
+				7.7	3.1	-1.4
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "basis"}
+	{Matrix34
+		1	0	0
+		0	1	0
+		0	0	1
+		5.99345	2.11336	-1.22581
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 4.47055	-18.4846	18.9298}
+			{lookat 7.79718	-3.47908	1.29054}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type spot}
+				{position 31.7604	12.986	14.1584}
+				{direction -0.376296	-0.176866	-0.277704}
+				{theta 43}
+				{phi 45}
+			}
+		}
+	}
+}

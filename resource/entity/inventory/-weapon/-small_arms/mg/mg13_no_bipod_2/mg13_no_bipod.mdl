@@ -1,0 +1,113 @@
+;Exported by:	 Carlos
+;Date:			 05.01.2022 14:27:01
+;File:			 T:\GoH_3D_human_export\3d_weapons\MG 13\mg13_export.max
+{skeleton
+	{animation
+		{sequence "recoil" {speed 3}}
+	}
+	{bone "mg_13"
+		{orientation
+			0.85 	 0 	 0
+			0 	 -0.85 	 0
+			0 	 0 	 0.85
+		}
+			{Position 0.6 0 0}
+		{LODView
+			{VolumeView "mg_13.ply"}
+			{VolumeView "mg_13_lod1.ply"}
+			{VolumeView "mg_13_lod2.ply"}
+			{VolumeView "mg_13_lod3.ply"}
+		}
+		{bone "bolt"
+			{Position 1.6931 	 1.8171 	 0.0815}
+			{LODView
+				{VolumeView "bolt.ply"}
+				{VolumeView "bolt_lod1.ply"}
+				{VolumeView "bolt_lod2.ply"}
+			}
+		}
+		{bone "mg_13_magazine"
+			{Position 3.5367 	 1.8171 	 -1.9966}
+			{LODView
+				{VolumeView "mg_13_magazine.ply"}
+				{VolumeView "mg_13_magazine_lod1.ply"}
+				{VolumeView "mg_13_magazine_lod2.ply"}
+				{VolumeView "mg_13_magazine_lod3.ply"}
+			}
+		}
+		{bone "fxshell"
+			{matrix34
+				0.1736 	 0.2549 	 0.9513
+				0.9848 	 -0.0449 	 -0.1677
+				0 	 0.9659 	 -0.2588
+				3.3596 	 1.8392 	 0.6632
+			}
+			;{matrix34
+			;	0 	 0.766 	 0.6428
+			;	0 	 0.6428 	 -0.766
+			;	-1 	 0 	 0
+			;	4.2987 	 1.8039 	 0.3156
+			;}
+		}
+		{bone "foresight14"
+			{matrix34
+				1 	 0 	 0
+				0 	 1 	 0
+				0 	 0 	 1
+				20.4618 	 1.8046 	 0.0629
+			}
+		}
+		{bone "handle"
+			{matrix34
+				0.9482 	 -0.1843 	 -0.2588
+				-0.2541 	 0.0494 	 -0.9659
+				0.1908 	 0.9816 	 0
+				5.7311 	 2.6279 	 -0.0779
+			}
+		}
+	}
+}
+{volume "body"
+	{box 27.868 1.97818 0.984371}
+	{bone "mg_13"}
+	{Position 6.1149 	 1.7024 	 -0.006}
+}
+{volume "magazine"
+	{box 0.654571 3.68499 1.89389}
+	{bone "mg_13_magazine"}
+	{matrix34
+		0 	 -1 	 0
+		-0.2588 	 0 	 0.9659
+		-0.9659 	 0 	 -0.2588
+		-0.0253 	 -0.056 	 -0.4273
+	}
+}
+{volume "select"
+	{box 28.7685 4.37359 1.28419}
+	{bone "mg_13"}
+	{Position 5.7974 	 1.625 	 0.1029}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 5.8878 	 -5.7311 	 -35.6648}
+			{lookat 5.7023 	 -1.2967 	 -0.3812}
+			{fov 45}
+			{horizon 2.40444}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 8.7665 	 -11.0186 	 -13.4787}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0236 	 0.1955 	 0.4596}
+			}
+			{"2"
+				{type point}
+				{position -1.7617 	 11.9474 	 -4.7062}
+			}
+		}
+	}
+}

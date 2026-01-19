@@ -1,0 +1,96 @@
+;Exported by: Wibi
+;Date:        Fri May 08 06:45:22 2015
+;File:        C:\Program Files (x86)\3dmax plugin for GEM 2.0\samples\refixing.max
+{Skeleton
+	{bone "default"
+		{parameters "CommonMesh;ID=rifle;"}
+		{Orientation
+			1.2167	0	0
+			0	-1.2167	0
+			0	0	1.2167
+		}
+			{Position -1.1 0 0}
+			{Position 0.85000	-0.3	-0.2}
+		{VolumeView "default.ply"}
+		{bone "foresight12"
+			{Position 14.4871	0.918053	-0.113138}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				3.20828	0.797197	0.323923
+			}
+		}
+		{bone "handle"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.288972	0.0485372	-0.0301796
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 20.6888 7.77867 1.42014}
+	{Bone "default"}
+	{Position 5.14361	0.258574	0.0444205}
+}
+{Volume "select"
+	{Box 18.9127 5.5082 0.839132}
+	{Bone "default"}
+	{Matrix34
+		1	0	0
+		0	1	0
+		0	0	1.31546
+		5.07221	0.37987	0.0136359
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 8.13444	-4.98878	29.3648}
+			{lookat 7.63239	-2.94097	16.8856}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.0184	-3.10181	6.20501}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0792752	0.197722	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position 0.267706	-2.64411	5.61945}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 6.92579	-4.5239	31.1501}
+			{lookat 6.90483	-2.33121	18.1718}
+			{fov 45}
+			{horizon -177.044}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 13.0964	-3.9483	4.65429}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0319297	0.210615	-0.452351}
+			}
+			{"2"
+				{type point}
+				{position -0.184757	-0.356338	3.46949}
+			}
+		}
+	}
+}

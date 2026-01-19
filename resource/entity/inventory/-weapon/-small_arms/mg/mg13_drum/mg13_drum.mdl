@@ -1,0 +1,171 @@
+;Exported by: 13223
+;Date:        Mon Oct  7 00:41:21 2024
+;File:        D:\ctagohmod\weapons\mg13.max
+{Skeleton
+	{bone "weapon_weapon_mesh_3"
+		{parameters "ID=mgun;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "weapon_weapon_mesh_3.ply"}
+		{bone "weapon_ammo_mesh_0"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_ammo_mesh_0.ply"}
+		}
+		{bone "weapon_bolt_mesh_1"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_bolt_mesh_1.ply"}
+		}
+		{bone "weapon_bolt_01_mesh_2"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_bolt_01_mesh_2.ply"}
+		}
+		{bone "weapon_bip_base_mesh_4"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_bip_base_mesh_4.ply"}
+		}
+		{bone "weapon_bip_left_mesh_5"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_bip_left_mesh_5.ply"}
+		}
+		{bone "weapon_bip_right_mesh_6"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_bip_right_mesh_6.ply"}
+		}
+		{bone "weapon_door_mesh_7"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.9207	1.12878	0.074564
+			}
+			{VolumeView "weapon_door_mesh_7.ply"}
+		}
+		{bone "foresight14"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.999998	-6.15211e-05	0.00186811
+				-0.00994833	0.998072	0.0612713
+				-0.00360133	-0.05988	0.998199
+				25.7545	1.41176	0.00670024
+			}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0.00489363	-0.0778127	0.996956
+				-0.00883787	0.996814	0.0792743
+				-0.999978	0.00058461	0.00657903
+				3.80835	1.69896	0.337242
+			}
+		}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				0.995258	-0.000161766	0.0972673
+				-0.0162006	0.99774	0.0652042
+				-0.0986844	-0.0650694	0.992989
+				0.0020558	0.900899	-0.717827
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 26.6059 4.92078 1.71327}
+	{Bone "weapon_weapon_mesh_3"}
+	{Matrix34
+		1.38601	-0.000153775	-0.0158571
+		-0.0120636	1.32675	0.0825317
+		0.0123196	-0.0770853	1.27035
+		9.58419	1.18257	-0.291597
+	}
+}
+{Volume "select"
+	{Box 57.9299 9.40486 3.98403}
+	{Bone "weapon_weapon_mesh_3"}
+	{Matrix34
+		0.614376	-6.75092e-05	-0.00806002
+		-0.00528707	0.588117	0.036595
+		0.00640606	-0.0341718	0.563109
+		9.42178	1.05729	-0.443361
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 12.4286	-10.1431	61.019}
+			{lookat 7.1806	-0.502474	-5.1502}
+			{fov 34.645}
+			{horizon 151.176}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 1.38897	-7.47059	1.35158}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0711293	0.173908	-0.463354}
+				{ambient 0x666666}
+			}
+			{"2"
+				{type point}
+				{position 14.3659	-7.54685	1.16339}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 12.6784	-3.66824	58.5559}
+			{lookat 11.5361	0.845121	-17.5398}
+			{fov 26.5053}
+			{horizon 165.776}
+		}
+		{lights
+			{"0"
+				{type directional}
+				{direction -0.0711287	0.173908	-0.463354}
+				{ambient 0x666666}
+			}
+			{"1"
+				{type point}
+				{position 14.65	-7.53375	1.40724}
+			}
+			{"2"
+				{type point}
+				{position 1.66445	-7.46993	1.35572}
+			}
+		}
+	}
+}

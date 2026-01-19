@@ -1,0 +1,50 @@
+;Exported by: CCG
+;Date:        Sat Jul 30 14:49:35 2022
+;File:        I:\Favorite Files\????&??? - Combine Pack Updated on 23-8-2019\Combine Pack\Samples - Armors and Helmets\Armor and Helmet Samples - 3d Max\Head\slem_s4\slem_s4.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1.03	0	0
+			0	-1.03	0
+			0	0	1.02
+		}
+			{Position -0.3 0 -0.3}
+		{bone "body"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.092495	0.0875621	3.30165
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "body"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-0.0760298	-0.390846	0.148392
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 9.51876	-0.191776	2.12898}
+			{lookat -7.95892	-0.191777	2.14939}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type spot}
+				{position 15.1487	0.20048	1.66259}
+				{direction -0.494194	-0.00126559	-0.0759664}
+				{theta 43}
+				{phi 45}
+			}
+		}
+	}
+}

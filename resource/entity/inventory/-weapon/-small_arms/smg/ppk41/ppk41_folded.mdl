@@ -1,0 +1,93 @@
+;Exported by: admin
+;Date:        Fri Nov 13 02:18:16 2020
+;File:        F:\3d projects etc\ppk-41\ppk-41_vtv.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "foresight11"
+			{Position 11.7088	1.67549	0.0280551}
+		}
+		{bone "fxshell"
+			{Matrix34
+				0	1	0
+				0	0	-1
+				-1	0	0
+				5.62109	1.82417	0.184738
+			}
+		}
+		{bone "body"
+			{Position 2.99215	1.30058	0.0198848}
+			{VolumeView "body.ply"}
+			{bone "priklad1"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					-4.53389	-0.147264	1.23978e-005
+				}
+				{VolumeView "priklad1.ply"}
+				{bone "priklad2"
+					{Matrix34
+						0	-1	0
+						1	0	0
+						0	0	1
+						-4.49956	-0.00152993	0.000687957
+					}
+					{VolumeView "priklad2.ply"}
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 13.2111 3.69149 0.655213}
+	{Bone "basis"}
+	{Position 4.71035	0.242922	0}
+}
+{Volume "select"
+	{Box 14.9286 5.53724 0.936955}
+	{Bone "basis"}
+	{Position 4.7573	0.242922	0}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 0.287908	-1.06772	19.8778}
+			{lookat 1.82232	-0.0760469	-0.164708}
+			{fov 45}
+			{horizon -107.307}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 2.79674	18.658	17.0167}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0134243	0.39857	-0.301598}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 3.13785	-3.59212	21.1231}
+			{lookat 2.832	-2.34463	13.5209}
+			{fov 45}
+			{horizon 174.956}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 2.82074	18.3857	17.237}
+			}
+			{"1"
+				{type directional}
+				{direction -0.00690717	0.400464	-0.299301}
+			}
+		}
+	}
+}

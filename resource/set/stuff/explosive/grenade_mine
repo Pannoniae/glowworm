@@ -1,0 +1,24 @@
+{from "pattern explosive"
+	{entity "grenade_mine"}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "stuff"}
+	}
+	{mass 8}
+	{damage blastwave
+		{energy 15}
+		{area 1.1 2.2}
+		{ground_interaction_radius 0.15}
+	}
+	{damage add blastwave
+		{energy 3}
+		{area 6 10}
+		{ground_interaction_radius 0} ;// value is multiplied by 2nd value of area to deterimine is blast is close enough to ground to trigger terrain fx
+	}
+	{special
+		{PrepareTime 4.75}
+		{PrepareCursor "grenade"}
+		{mode detonate}
+	}
+}

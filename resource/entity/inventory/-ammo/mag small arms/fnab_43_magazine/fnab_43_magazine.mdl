@@ -1,0 +1,49 @@
+;Exported by: nic21
+;Date:        Fri Oct  6 22:06:01 2023
+;File:        C:\Users\nic21\Desktop\raaar.max
+{Skeleton
+	{bone "handle"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "magazine"
+			{Orientation
+				0	0	1
+				1	0	0
+				0	1	0
+			}
+			{VolumeView "magazine.ply"}
+		}
+	}
+}
+{Volume "magazine"
+	{Polyhedron "magazine.vol"}
+	{Bone "magazine"}
+	{Position -0.0412047	-2.92237	1.01379}
+}
+{extender "preview"
+	{"stuff"
+		{camera
+			{origin 5.2003 0.1537 -69.963}
+			{lookat 0 0 0}
+			{fov 2}
+			{horizon 90}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 7.5546 	 -7.2503 	 6.4703}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0244 	 0.4672 	 0.1766}
+			}
+			{"2"
+				{type point}
+				{position -2.9735 	 13.723 	 -5.1394}
+			}
+		}
+	}
+}
