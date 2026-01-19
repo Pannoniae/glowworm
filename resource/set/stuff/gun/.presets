@@ -839,12 +839,12 @@
 
 (define "light_aa"
 	{AimingTolerance 12}
-	{SpreadTolerance 0.1}
+	{SpreadTolerance 0.3}
 )
 
 (define "medium_aa"
 	{AimingTolerance 12}
-	{SpreadTolerance 0.1}
+	{SpreadTolerance 0.3}
 )
 
 (define "heavy_aa"
@@ -895,7 +895,7 @@
 	)
 	{automatic}
 	{aimingTolerance 10}
-	{SpreadTolerance 0}			;// Zeroing up to 0% needed before fire
+	{SpreadTolerance 0.2}			;// Zeroing up to 0% needed before fire
 	{spreading
 		{SpreadPower 1}
 		{BurstRecoveryTime 0.5}
@@ -917,7 +917,7 @@
 	{range 160 160}
 	{automatic}
 	{aimingTolerance 3}
-	{SpreadTolerance 0}			;// Zeroing up to 0% needed before fire
+	{SpreadTolerance 0.2}			;// Zeroing up to 0% needed before fire
 	{spreading
 		{BurstRecoveryTime 0.5}
 		{BurstAccuracy 100 98 95 90 85 80 75 70 65 60 55 50 45 40 35}
@@ -949,7 +949,7 @@
 	{range 170 170}
 	{automatic}
 	{aimingTolerance 3}
-	{SpreadTolerance 0}			;// Zeroing up to 0% needed before fire
+	{SpreadTolerance 0.2}			;// Zeroing up to 0% needed before fire
 	{spreading
 		{BurstRecoveryTime 0.5}
 		{BurstAccuracy 100 95 88 82 75 68 55 32}
