@@ -389,10 +389,18 @@
 (define "Explosion_S6_close"
 	{loudness "Explosion_S6_close"}
 	{signal explosion 20}
-				 
+	
+	
+	{tag effects}
+)	
+(define "Explosion_sturmblast_close"
+	{loudness "Explosion_sturmblast_close"}
+	{signal explosion 25}
+	
 	
 	{tag effects}
 )
+
 ;----------------------------------------------	MID -----------------------------------------------------
 (define "Explosion-Auto_mid"
 	{loudness "Explosion_Auto_mid"}
@@ -429,6 +437,11 @@
 	{volume 0.5}
 	{tag effects}
 )
+(define "Explosion_sturmblast_mid"
+	{loudness "Explosion_sturmblast_mid"}
+	{volume 0.6}
+	{tag effects}
+)
 ;----------------------------------------------	FAR -----------------------------------------------------
 (define "Explosion-Auto_far"
 	{loudness "Explosion_Auto_far"}
@@ -460,9 +473,15 @@
 	{volume 0.2}
 	{tag effects}
 )
+
 (define "Explosion_S6_far"
 	{loudness "Explosion_S6_far"}
-	{volume 0.2}
+	{volume 0.5}
+	{tag effects}
+
+(define "Explosion_sturmblast_far"
+	{loudness "Explosion_sturmblast_far"}
+	{volume 0.6}
 	{tag effects}
 )
 ;----------------------------------------------	IMPACT SIGNALS	--------------------------------------
