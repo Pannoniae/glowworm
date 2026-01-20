@@ -335,4 +335,12 @@
 	{link_sound		"action_recoil_Cannon"	"weapon/shot/cannon/s3/recoil/Shared/Cannon/"}
 	{link_sound		"Cannon_Mid"		"weapon/shot/cannon/s6/d2/Shared/Cannon_280mm+/"}
 	{link_sound		"Cannon_Far"		"weapon/shot/cannon/s6/d3/Shared/Cannon_280mm+/"}
+	
+)
+;----------------------------------------------- SIZE STURMTIGER -------------------------------------------------------------------//
+(define "Sturmblast"
+	{link_sound		"action_recoil_Cannon"	"weapon/shot/cannon/s3/recoil/Shared/Cannon/"}
+	{link_sound		"Cannon_Mid"		"weapon/shot/cannon/s6/d2/Shared/Cannon_280mm+/"}
+	{link_sound		"Cannon_Far"		"weapon/shot/cannon/s6/d3/Shared/Cannon_280mm+/"}
+	
 )

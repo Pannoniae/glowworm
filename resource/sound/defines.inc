@@ -1293,6 +1293,12 @@
 	{tag effects}
 )
 
+(define "sturm_off"
+	{signal shot 60}
+	{loudness "sturm_clunge"}
+	{tag effects}
+)
+
 (define "rocket_small"
 	{signal shot 20}
 	{loudness "rocket_small"}
