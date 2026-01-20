@@ -720,6 +720,12 @@
 		}
 	}
 }
+
+{"flakpanzer1a tank"
+	("pz1_sound")
+}
+
+
 {"panzer1b tank"
 	{on "add_weapon_sound" overload
 		("MG13")
