@@ -28,6 +28,14 @@
 	}
 )
 
+(define "burst_attenuated"	 ; a preset for improvised crude SMGs like mp3008		
+	{burst
+		{short 1 0.35}		; single-shot taps with occasional doubletaps for long range
+		{long 7 5}			; inconsistent bursting with great variation in output
+		{rangeKoef 0.35}
+	}
+)
+
 (define "stick_reload"
 	("reload time" seconds(3.25))
 )

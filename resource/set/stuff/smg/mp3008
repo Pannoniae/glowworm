@@ -10,8 +10,13 @@
 	("fire rate" rpm(450))
 	("velocity" mps(365))
 	("spreading_low")
-	("burst_short")
+	("burst_attenuated")
 	("recoil_smg_low")
-	{FiringTimeout 1 0.1}
 	("stick_reload")
+	
+	("human health" damage(55))
+	{range 70 70}
+	{FiringTimeout 2.2 0.7}
+	("penetration" args 3)
+	
 }
