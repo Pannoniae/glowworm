@@ -2059,6 +2059,13 @@
 		("DT")
 	}
 }
+{"bt7_dt tank"
+	("bt_sound")
+	{on "add_weapon_sound" overload
+		("Cannon_45to47mm")
+		("DT")
+	}
+}
 {"panzer742r tank"
 	("bt_sound")
 	{on "add_weapon_sound" overload
@@ -2073,6 +2080,7 @@
 		("DT")
 	}
 }
+
 {"kht26 tank"
 	("t26_sound")
 	{on "add_weapon_sound" overload
