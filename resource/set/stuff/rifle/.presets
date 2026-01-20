@@ -106,7 +106,6 @@
 		{long 1 3}			; burst shots on short distance, rand (+-)shots
 		{rangeKoef 0.5}	; rangeKoef * aimRange = max long burst distance
 	}
-
 	{Automatic}
 	("accuracy_rifle_auto")
 	{LockFireDistanceTime 0.5}
@@ -118,6 +117,38 @@
 		{0.49 1.0}	;77.9m, 1.75s //still fires bursts
 		{0.5 0.6}	;78m, 1.05s // switches to single/doubletap only
 		{0.8 0.7}	;96m, 1.225s
+	}
+	{curve "autorifle"}
+	("recoil_fg42")
+	("ap_7_62_slope_multiplier")
+	{AccuracyByMotionK 1.2}
+)
+
+)
+	
+(define "scoped_fg42"
+	{tag "autorifle_sup auto_eject rifle_shell"}
+	{range 130 130}
+	{spreading
+		{BurstAccuracy 100 80 70 60 50 40}
+	}
+	{burst
+		{short 1 0.2}			; burst shots on long distance, rand (+-)shots
+		{long 1 2.5}			; burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.25}	; rangeKoef * aimRange = max long burst distance
+	}
+
+	{Automatic}
+	("accuracy_rifle_auto")
+	{LockFireDistanceTime 0.5}
+	("human health" damage(125))
+	{SyncedProjectiles 0}		;// not for automatic weapons
+	{FiringTimeout 2.1 0.6}
+	{FiringTimeoutDistanceFactor
+		{0.2 0.65}	;
+		{0.49 1.0}	;still fires bursts
+		{0.5 0.6}	;switches to single/doubletap only
+		{0.8 1.5}	;
 	}
 	{curve "autorifle"}
 	("recoil_fg42")
