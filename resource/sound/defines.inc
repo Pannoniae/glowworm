@@ -478,6 +478,7 @@
 	{loudness "Explosion_S6_far"}
 	{volume 0.5}
 	{tag effects}
+)
 
 (define "Explosion_sturmblast_far"
 	{loudness "Explosion_sturmblast_far"}
