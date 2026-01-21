@@ -853,7 +853,7 @@
 )
 (define "direct_settings"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+	{ZeroingAccuracy 1.0}
 	{spreading {SpreadXYRatio 2}}
 	{parameters "he" {spreading {SpreadXYRatio 2}}}
 	{parameters "he2" {spreading {SpreadXYRatio 2}}}
@@ -861,18 +861,18 @@
 )
 (define "direct_settings_low"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+	{ZeroingAccuracy 1.0}
 )
 (define "indirect_settings"
 	{SpreadTolerance 0.75}		;// Zeroing up to 75% needed before fire
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+	{ZeroingAccuracy 1.0}
 	{parameters "he" {spreading {SpreadXYRatio 2}}}
 	{parameters "he2" {spreading {SpreadXYRatio 2}}}
 	{spreading {SpreadXYRatio 2}}
 )
 
 (define "indirect_settings_noz"
-	{ZeroingAccuracy 0.8 0.65 0.55 0.5 0.45}
+	{ZeroingAccuracy 1.0}
 	{SpreadTolerance 0.8}		;// Zeroing up to 80% needed before fire
 	{spreading {SpreadXYRatio 2}}
 )
