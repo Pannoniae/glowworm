@@ -1651,7 +1651,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.2) ro(0.9))
+		("burst_stop_custom" mgun(gun) to(1.05) ro(0.9))
 	}
 }
 
@@ -1732,7 +1732,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun1) to(1.2) ro(0.4))
+		("burst_stop_custom" mgun(mgun1) to(1.05) ro(0.4))
 	}
 }
 
@@ -1814,7 +1814,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.2) ro(0.7))
+		("burst_stop_custom" mgun(gun) to(1.05) ro(0.7))
 	}
 
 	{on "cut_parts" overload
@@ -1929,7 +1929,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(gun) to(1.05) ro(0.5))
 	}
 }
 
@@ -2002,7 +2002,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(gun) to(1.2) ro(0.25))
+		("burst_stop_custom" mgun(gun) to(1.05) ro(0.25))
 	}
 
 	{on "cut_parts" overload

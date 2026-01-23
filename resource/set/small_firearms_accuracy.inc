@@ -99,6 +99,18 @@
 			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 4.0} {150 5.0}}
 		}
 	)
+	(define "accuracy_mg_indirect"
+		; Indirect fire MG (e.g. Vickers) - direct fire 0-130m, indirect fire 130-250m
+		{spreading
+			{radiusTable {0 0} {20 0.60} {40 0.96} {75 1.80} {110 2.90} {130 4.0} {131 10.0} {180 14.0} {220 17.0} {250 20.0}}
+		}
+	)
+	(define "accuracy_mg_vickers"
+		; Indirect fire MG (e.g. Vickers) - direct fire 0-130m, indirect fire 130-250m
+		{spreading
+			{radiusTable {0 0} {20 0.54} {40 0.77} {75 1.65} {110 2.6} {130 3.3} {131 10.0} {180 14.0} {220 17.0} {250 20.0}}
+		}
+	)
 	(define "accuracy_mg_tank"
 		;("mg_range" r1(0.3) r2(1.0) r3(1.2) globalaccuracy(1.00))	;Robz r1(0.60) r2(0.96) r3(1.80) r4(2.90) r5(4.0) r6(5.0)) 
 		{spreading

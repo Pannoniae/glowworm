@@ -222,7 +222,7 @@ Purchases["46.eng"] = {
 				{priority = 1.0, type = {"Class3", "Tank", "Medium",}, unit = "sherman5_crab"},
 				{priority = 1.0, type = {"Class3", "Tank", "Medium",}, unit = "sherman5_late"},
 				{priority = 1.0, type = {"Class3", "Tank", "Medium",}, unit = "sherman2a"},
-				{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "sherman1c"},
+				--{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "sherman1c"},
 				{priority = 1.0, type = {"Class1", "Tank", "Medium",}, unit = "sherman5c"},
 
 				{priority = 1.0, type = {"Class2", "Tank", "Heavy",}, unit = "churchill_mk3_qf75"},

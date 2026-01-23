@@ -42,27 +42,27 @@
 	}
 	
 	{on "burst_stop_gun"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.6))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.6))
 	}
 	
 	{on "burst_stop_mgun"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.5))
 	}
 	
 	{on "burst_stop_mgun1"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.5))
 	}
 	
 	{on "burst_stop_mgun2"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.5))
 	}
 	
 	{on "burst_stop_mgun3"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.5))
 	}
 	
 	{on "burst_stop_mgun4"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.5))
 	}
 	
 	; BM

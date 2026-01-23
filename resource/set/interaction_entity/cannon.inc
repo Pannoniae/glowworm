@@ -1522,7 +1522,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun1) to(1.2) ro(0.75))
+		("burst_stop_custom" mgun(mgun1) to(1.05) ro(0.75))
 	}
 }
 
@@ -1582,7 +1582,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun1) to(1.2) ro(0.9))
+		("burst_stop_custom" mgun(mgun1) to(1.05) ro(0.9))
 	}
 }
 {"ds39_stand"
@@ -3163,7 +3163,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun1) to(1.3) ro(0.9))
+		("burst_stop_custom" mgun(mgun1) to(1.1) ro(0.9))
 	}
 }
 {"maxim_m32_33"
@@ -3196,7 +3196,7 @@
 	}
 	
 	{on "burst_stop_1"
-		("burst_stop_custom" mgun(mgun1) to(1.2) ro(1))
+		("burst_stop_custom" mgun(mgun1) to(1.05) ro(1))
 	}
 }
 {"20mm_l39"
