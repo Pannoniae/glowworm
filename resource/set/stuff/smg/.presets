@@ -1,5 +1,36 @@
 (include "\set\small_firearms_accuracy.inc")
 
+(define "assault_rifle" ;small size rifle calibers with full auto capability; stg44
+	{tag "autorifle_sup auto_eject"}
+	{range 90 90}
+	{spreading
+		{BurstAccuracy 100 95 90 85 80 75 70 60 50}
+	}
+
+	{Automatic}
+	("accuracy_assault_rifle")
+	{LockFireDistanceTime 0.5}
+	("human health" damage(80))
+	{SyncedProjectiles 0}		;// not for automatic weapons
+	{FiringTimeout 1.0 0.5}
+	{FiringTimeoutDistanceFactor
+		{0.2 0.5}	;20m, 0.5s
+		{0.499 1};49.9m, 1.425s //still fires bursts
+		{0.5 0.6}	;50m, 0.75s //switches to single fire only
+		{0.8 1.5}	;100m, 1.5s
+	}
+	{burst
+		{short 1}			; burst shots on long distance, rand (+-)shots
+		{long 3.5 0.5}		; burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+
+	{curve "assaultrifle"}
+	("recoil_stg")
+	("ap_7_62_slope_multiplier")
+	{AccuracyByMotionK 0.9}
+)
+
 (define "burst_short_slow"   ; not sure what this means but range coefficient is lower here so expected even shorter ranges
 	{burst
 		{short 3 2}

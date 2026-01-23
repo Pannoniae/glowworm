@@ -1,7 +1,14 @@
 {from "pattern rifle"
-	{tag " -shoot_walking -shoot_walking_ai shoot_walking_manual auto_eject rifle_shell"}
+	{tag "sniper -shoot_walking -shoot_walking_ai shoot_walking_manual auto_eject rifle_shell"}
 
-
+	{special
+		{mode aim}
+		{PrepareTime 0.8}        ; time it takes for the circle to go around and get the shot
+		{PrepareCursor "aimed_shot"}
+		{PrepareCursorScene "aimed_shot_scene"}
+		{accuracy 6}  ; permit the increase in accuracy to simulate zeroing and calculating
+		{damage 1}    ; 1 for no damage boosting, remove vanilla cringe
+	}
 
 	{cursor "ironsights/mg"}
 

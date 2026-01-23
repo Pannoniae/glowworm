@@ -3,7 +3,7 @@
 Validator script for Gates of Hell mod files.
 
 1. AI .lua files: Checks that unit references are valid and no "doctrine" tag in type arrays
-2. MP .set files: Checks for missing/duplicate macro arguments
+2. MP .set files: Checks for missing/duplicate macro arguments, extra arguments, and duplicate unit names
 """
 
 import re
@@ -14,6 +14,12 @@ from collections import defaultdict
 
 # Base path for the mod
 MOD_ROOT = Path(__file__).parent / "resource"
+
+# Settings files that contain macro definitions
+SETTINGS_FILES = [
+    "settings.set",
+    "settings_inf.set",
+]
 
 
 def parse_lua_units(lua_content: str) -> list[dict]:
@@ -146,31 +152,106 @@ def validate_ai_lua_file(lua_path: Path, valid_units: set[str]) -> list[str]:
     return errors
 
 
-def parse_macro_definitions(set_content: str) -> dict[str, list[str]]:
+def parse_macro_definitions(set_content: str) -> dict[str, dict]:
     """
-    Parse macro definitions from settings.set to extract required parameters.
-    Returns dict of macro_name -> list of required parameter names.
+    Parse macro definitions from settings.set to extract required parameters and parent macros.
+    Returns dict of macro_name -> {params: set of param names, parent: parent macro name or None, parent_args: dict of args passed to parent}
     """
     macros = {}
 
-    # Pattern: (define "macro_name" ... )
-    # We need to extract parameter names that appear as %param
-    define_pattern = r'\(define\s+"([^"]+)"([^)]*(?:\([^)]*\)[^)]*)*)\)'
+    # Remove comments
+    lines = []
+    for line in set_content.split('\n'):
+        stripped = line.strip()
+        if not stripped.startswith(';'):
+            if ';' in line:
+                line = line[:line.index(';')]
+            lines.append(line)
+    content = '\n'.join(lines)
 
-    for match in re.finditer(define_pattern, set_content, re.DOTALL):
+    # Pattern: (define "macro_name" ... )
+    # Need to handle nested parens properly
+    define_pattern = r'\(define\s+"([^"]+)"'
+
+    for match in re.finditer(define_pattern, content):
         macro_name = match.group(1)
-        macro_body = match.group(2)
+        start_pos = match.end()
+
+        # Find the matching closing paren by counting parens
+        paren_count = 1
+        pos = start_pos
+        while pos < len(content) and paren_count > 0:
+            if content[pos] == '(':
+                paren_count += 1
+            elif content[pos] == ')':
+                paren_count -= 1
+            pos += 1
+
+        macro_body = content[start_pos:pos-1]
 
         # Find all %param references in the macro body
         params = set(re.findall(r'%(\w+)', macro_body))
-        macros[macro_name] = list(params)
+
+        # Check for parent macro: ("parent_name" arg1(val) ...)
+        parent_match = re.search(r'\(\s*"([^"]+)"([^)]*)\)', macro_body)
+        parent = None
+        parent_args = {}
+        if parent_match:
+            parent = parent_match.group(1)
+            # Extract args passed to parent: argname(value) or argname(%param)
+            args_str = parent_match.group(2)
+            for arg_match in re.finditer(r'(\w+)\s*\(([^)]*)\)', args_str):
+                arg_name = arg_match.group(1)
+                arg_value = arg_match.group(2).strip()
+                parent_args[arg_name] = arg_value
+
+        macros[macro_name] = {
+            'params': params,
+            'parent': parent,
+            'parent_args': parent_args
+        }
 
     return macros
 
 
-def validate_macro_call(line: str, line_num: int, macro_defs: dict[str, list[str]]) -> list[str]:
+def resolve_macro_params(macro_name: str, macro_defs: dict[str, dict], resolved_cache: dict = None) -> set[str]:
     """
-    Validate a macro call for duplicate arguments.
+    Recursively resolve all parameters required by a macro, including inherited ones.
+    Returns set of all parameter names required.
+    """
+    if resolved_cache is None:
+        resolved_cache = {}
+
+    if macro_name in resolved_cache:
+        return resolved_cache[macro_name]
+
+    if macro_name not in macro_defs:
+        return set()
+
+    macro = macro_defs[macro_name]
+    params = set(macro['params'])
+
+    # If there's a parent macro, resolve its params too
+    if macro['parent'] and macro['parent'] in macro_defs:
+        parent_params = resolve_macro_params(macro['parent'], macro_defs, resolved_cache)
+        # Parent params that are NOT satisfied by hardcoded args need to be passed through
+        for p in parent_params:
+            # Check if this param is satisfied by an arg passed to parent
+            if p not in macro['parent_args']:
+                params.add(p)
+            else:
+                # Check if the arg value contains a %param reference
+                arg_value = macro['parent_args'][p]
+                param_refs = re.findall(r'%(\w+)', arg_value)
+                params.update(param_refs)
+
+    resolved_cache[macro_name] = params
+    return params
+
+
+def validate_macro_call(line: str, line_num: int, macro_defs: dict[str, dict], resolved_params_cache: dict) -> list[str]:
+    """
+    Validate a macro call for duplicate, missing, and extra arguments.
     Returns list of error messages.
     """
     errors = []
@@ -189,9 +270,12 @@ def validate_macro_call(line: str, line_num: int, macro_defs: dict[str, list[str
 
     # Group by argument name to check for duplicates
     arg_values = defaultdict(list)
+    provided_args = set()
     for arg_name, arg_value in found_args:
         arg_values[arg_name].append(arg_value.strip())
+        provided_args.add(arg_name)
 
+    # Check for duplicate arguments
     for arg_name, values in arg_values.items():
         if len(values) > 1:
             unique_values = set(values)
@@ -206,18 +290,86 @@ def validate_macro_call(line: str, line_num: int, macro_defs: dict[str, list[str
                     f"Line {line_num}: Duplicate argument '{arg_name}' ({len(values)}x same value: '{values[0]}')"
                 )
 
+    # Check for missing and extra arguments if macro is known
+    if macro_name in macro_defs:
+        required_params = resolve_macro_params(macro_name, macro_defs, resolved_params_cache)
+
+        # Check for missing arguments
+        missing = required_params - provided_args
+        if missing:
+            errors.append(
+                f"Line {line_num}: Missing arguments for macro '{macro_name}': {sorted(missing)}"
+            )
+
+        # Check for extra arguments
+        extra = provided_args - required_params
+        if extra:
+            errors.append(
+                f"Line {line_num}: Extra arguments for macro '{macro_name}': {sorted(extra)}"
+            )
+
     return errors
 
 
-def validate_set_file(set_path: Path, macro_defs: dict[str, list[str]]) -> list[str]:
+def extract_unit_definitions(set_content: str, file_path: Path) -> list[dict]:
+    """
+    Extract unit definitions from a .set file.
+    Returns list of dicts with 'name', 'faction', 'line_num'.
+    """
+    units = []
+    lines = set_content.split('\n')
+
+    for line_num, line in enumerate(lines, 1):
+        stripped = line.strip()
+
+        # Skip comments
+        if stripped.startswith(';'):
+            continue
+
+        # Pattern: {"unit_name" ...} or {"unit_name(faction)" ...}
+        # Match unit definitions that start a block
+        unit_match = re.match(r'\{\s*"([^"]+)"', stripped)
+        if unit_match:
+            full_name = unit_match.group(1)
+
+            # Extract faction from name - can be in format "name(faction)" or "mp/faction/period/name"
+            faction = None
+
+            # Check for (faction) suffix
+            faction_suffix = re.search(r'\(([^)]+)\)$', full_name)
+            if faction_suffix:
+                faction = faction_suffix.group(1)
+            else:
+                # Try to extract from path format: mp/faction/period/name
+                path_match = re.match(r'mp/(\w+)/', full_name)
+                if path_match:
+                    faction = path_match.group(1)
+
+            # Also check for side() argument in the macro call on the same or next line
+            side_match = re.search(r'side\s*\(\s*(\w+)\s*\)', stripped)
+            if side_match:
+                faction = side_match.group(1)
+
+            units.append({
+                'name': full_name,
+                'faction': faction,
+                'line_num': line_num
+            })
+
+    return units
+
+
+def validate_set_file(set_path: Path, macro_defs: dict[str, dict], resolved_params_cache: dict) -> tuple[list[str], list[dict]]:
     """
     Validate a .set file for macro argument issues.
-    Returns list of error messages.
+    Returns tuple of (list of error messages, list of unit definitions).
     """
     errors = []
 
     with open(set_path, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+        content = f.read()
+
+    lines = content.split('\n')
 
     for line_num, line in enumerate(lines, 1):
         stripped = line.strip()
@@ -229,9 +381,38 @@ def validate_set_file(set_path: Path, macro_defs: dict[str, list[str]]) -> list[
         # Skip lines inside block definitions that start with { - we want macro calls
         # Look for lines that start with ( and contain a quoted macro name
         if re.match(r'\s*\(\s*"', stripped):
-            line_errors = validate_macro_call(stripped, line_num, macro_defs)
+            line_errors = validate_macro_call(stripped, line_num, macro_defs, resolved_params_cache)
             for err in line_errors:
                 errors.append(f"{set_path.name}:{err}")
+
+    # Extract unit definitions for duplicate checking
+    units = extract_unit_definitions(content, set_path)
+
+    return errors, units
+
+
+def check_duplicate_units(all_units: list[tuple[Path, list[dict]]]) -> list[str]:
+    """
+    Check for duplicate unit names within the same faction.
+    Returns list of error messages.
+    """
+    errors = []
+
+    # Group units by (name, faction)
+    unit_locations = defaultdict(list)
+    for file_path, units in all_units:
+        for unit in units:
+            key = (unit['name'], unit['faction'])
+            unit_locations[key].append((file_path, unit['line_num']))
+
+    # Find duplicates
+    for (name, faction), locations in unit_locations.items():
+        if len(locations) > 1:
+            faction_str = faction if faction else "unknown"
+            loc_strs = [f"{p.name}:{ln}" for p, ln in locations]
+            errors.append(
+                f"Duplicate unit '{name}' (faction: {faction_str}) defined in: {', '.join(loc_strs)}"
+            )
 
     return errors
 
