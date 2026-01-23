@@ -79,38 +79,38 @@
 	}
 	{"particle.small"
 		{ColliderId		"particle"}
-		{CollideWith	"construction" "rock" "sandbag" "bush" "human" "vehicle" "tank.light" "tank.medium" "tank.heavy" "armored"}
+		{CollideWith	"construction" "rock" "sandbag" "bush" "human" "vehicle" "tank.light" "tank.medium" "tank.heavy" "armored" "ammo"}
 	}
 	{"particle.big"
 		{ColliderId		"particle.big"}
-		{CollideWith	"construction" "rock" "sandbag" "tree" "bush" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy"}
+		{CollideWith	"construction" "rock" "sandbag" "tree" "bush" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "ammo"}
 		{NoContactWith	"particle" "human" "bush" "stuff"}
 	}
 	{"particle.construction"
 		{ColliderId		"construction"}
-		{CollideWith	"construction" "rock" "sandbag" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy"}
+		{CollideWith	"construction" "rock" "sandbag" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "ammo"}
 	}
 	{"particle.fire"
 		{ColliderId		"flame"}
-		{CollideWith	"construction" "rock" "sandbag" "tree" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "particle.big"}
+		{CollideWith	"construction" "rock" "sandbag" "tree" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "particle.big" "ammo"}
 		{RejectColliderByVolume}
 		{PointCollider}
 	}
 	{"killzone"
 		{ColliderId		"killzone"}
-		{CollideWith	"human" "cannon" "cannon_small"}
+		{CollideWith	"human" "cannon" "cannon_small" "ammo"}
 	}
 	
 	;/*=========== Stuff ===========*/
 	{"stuff"
 		{ColliderId		"stuff"}
-		{collideWith	"cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "construction" "rock" "sandbag" "tree"}
+		{collideWith	"cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "construction" "rock" "sandbag" "tree" "ammo"}
 	}
 	{"stuff.construction" from "stuff"
 		{ColliderId		"construction"}
 	}
 	{"grenade" from "stuff"
-		{CollideWith	"human" "stuff" "particle"}
+		{CollideWith	"human" "stuff" "particle" "ammo"}
 		{RejectColliderByVolume}
 		{PointCollider}
 	}
@@ -118,8 +118,8 @@
 		{ColliderId		"mine.ap"}
 	}
 	{"ammo" from "particle.big"
-		{collideWith "human" "stuff" "particle" "ammo"}
-		{rejectColliderByVolume}
+		{collideWith "construction" "rock" "sandbag" "tree" "bush" "human" "cannon" "cannon_small" "moto" "car" "truck" "armored" "tank.light" "tank.medium" "tank.heavy" "human" "stuff" "particle" "ammo"}
+		;{rejectColliderByVolume} ;wtf....
 	}
 
 	;/*=========== Special ===========*/
