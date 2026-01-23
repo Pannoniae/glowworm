@@ -1,13 +1,13 @@
 {breed
 	{behaviour soldier}
-	{skin "sov_43_grd_inf_s_mg_rfl_5"}
+	{skin "sov_43_grd_inf_s_mg_efr_5"}
 	{portrait "rus_guards"}
-	{icon "rifle"}
+	{icon "mg"}
 	{icon_priority 0}
 	{tags "soldier"}
 	{nationality rus}
 	{armors
-		{head sov_helm_ssh39_var1_b}
+		{head sov_helm_ssh39_var1_tilt}
 	}
 	{perks
 		(include "ability.inc")
@@ -18,13 +18,17 @@
 		("veterancy_lvl_0")
 	}
 	{inventory
-		{item "mosin" filled}
-		{item "rifle_rus clip ammo" 60 5}
+		{item "dp_bipod" filling "mgun_rus dp ammo" 47}
+		{item "mgun_rus dp ammo" 282}
 
-		{item "f1 grenade" 2.5 0.5}
-		{item "rdg1_smoke grenade" 1.5 0.5}
+		{item "tt33" filled}
+		{item "tt33 ammo" 24 8}
 
-		{item "mgun_rus dp ammo" 423}
+		{item "f1 grenade" 0.5 0.5}
+		{item "rdg1_smoke grenade" 0.5 0.5}
+		
+		{item "sn40_body_armor"}
+
 		{item "bandage_rus" 5.5 0.5}
 		{item "shovel_rus"}
 		{item "sandbag_kit"}

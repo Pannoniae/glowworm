@@ -1,17 +1,17 @@
 {breed
 	{behaviour soldier}
-	{skin "sov_43_grd_cav_s_smgs_bag_efr"}
-	{portrait "rus_cav"}
+	{skin "sov_41_vvs_para_rec_smg_drum_nco_1"}
+	{portrait "rus_guards_para"}
 	{icon "smg"}
 	{icon_priority 0}
 	{tags "soldier"}
 	{nationality rus}
 	{armors
-		{head sov_cap_peaked_cav}
+		{head soviet_ssh40_helmet}
 	}
 	{perks
 		(include "ability.inc")
-        ("skill6")
+		("skill7")
 		
 	}
 	{veterancy
@@ -19,16 +19,17 @@
 		("veterancy_lvl_0")
 	}
 	{inventory
-		{item "pps43" filled}
-		{item "pps_stick ammo" 210}
+		{item "ppsh41_drum" filled}
+		{item "ppsh_drum ammo" 213}
+		
+		{item "tt33" filled}
+		{item "tt33 ammo" 16}
 
 		{item "rgd33 grenade" 2.75 0.5}
-		{item "rdg1_smoke grenade" 1.85 0.5}
-		{item "rpg43 grenade" 1.25 0.5}
+		{item "rdg1_smoke grenade" 2.75 0.5}
 
 		{item "bandage_rus" 5.5 0.5}
-		{item "shovel_rus"}
-		{item "sandbag_kit"}
+		{item "knife_rus"}
 
 		{in_hands 0}
 	}
