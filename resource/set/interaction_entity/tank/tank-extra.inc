@@ -348,7 +348,7 @@
 	}
 	
 	{on "burst_stop"
-		("burst_stop_custom" mgun(mgun) to(1.2) ro(0.5))
+		("burst_stop_custom" mgun(mgun) to(1.05) ro(0.5))
 	}
 }
 {"su57"

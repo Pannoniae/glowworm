@@ -486,31 +486,26 @@
 		}
 	}
 	{parameters "he"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "he2"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "sm"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "wp"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
 	}
 	{parameters "ic"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable {0 0} {50 (* %he50 (* %r1 %r0))} {100 (* %he100 (* %r1 %r0))} {140 (* %he140 (* %r1 %r0))} { (- %range_he 0.01) (* (+ (* (/ (- %range_he 140) (- 200 140)) (- %he200 %he140)) %he140) (* %r1 %r0))} {%range_he 20}}
 		}
@@ -565,7 +560,6 @@
 )
 
 (define "curve_dual"	;// the code extrapolates where the accuracy point is for max range, knowing the accuracy for the cannon is defined for 200m
-	("indirect_settings_noz")
 	{parameters "ap"
 		("direct_settings_low")
 		("standard_firing_arc")
@@ -685,7 +679,6 @@
 	;
 	;
 	{parameters "he"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0}
@@ -701,7 +694,6 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "he2"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable 
 				{0 0} 
@@ -717,7 +709,6 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "sm"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0} 
@@ -733,7 +724,6 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "wp"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0} 
@@ -749,7 +739,6 @@
 		{range %range_hei %range_hei}
 	}
 	{parameters "ic"
-		("indirect_settings_noz")
 		{spreading
 			{radiusTable
 				{0 0} 
@@ -798,23 +787,18 @@
 ; make HE have more gravity/indirect settings
 (define "he_lowarc"
 	{parameters "he"
-		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "he2"
-		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "sm"
-		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "wp"
-		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 	{parameters "ic"
-		("indirect_settings_noz")
 		("curved_firing_arc")
 	}
 )
@@ -853,28 +837,22 @@
 )
 (define "direct_settings"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 1.0}
-	{spreading {SpreadXYRatio 2}}
-	{parameters "he" {spreading {SpreadXYRatio 2}}}
-	{parameters "he2" {spreading {SpreadXYRatio 2}}}
-	{parameters "apds" {spreading {SpreadXYRatio 2}}}
+	{ZeroingAccuracy 0.9 0.8 0.75}
+	{spreading {SpreadXYRatio 3}}
+	{parameters "he" {spreading {SpreadXYRatio 3}}}
+	{parameters "he2" {spreading {SpreadXYRatio 3}}}
+	{parameters "apds" {spreading {SpreadXYRatio 3}}}
 )
 (define "direct_settings_low"
 	{SpreadTolerance 0.60}		;// Zeroing up to 60% needed before fire
-	{ZeroingAccuracy 1.0}
+	{ZeroingAccuracy 0.9 0.8 0.75}
 )
 (define "indirect_settings"
 	{SpreadTolerance 0.75}		;// Zeroing up to 75% needed before fire
-	{ZeroingAccuracy 1.0}
-	{parameters "he" {spreading {SpreadXYRatio 2}}}
-	{parameters "he2" {spreading {SpreadXYRatio 2}}}
-	{spreading {SpreadXYRatio 2}}
-)
-
-(define "indirect_settings_noz"
-	{ZeroingAccuracy 1.0}
-	{SpreadTolerance 0.8}		;// Zeroing up to 80% needed before fire
-	{spreading {SpreadXYRatio 2}}
+	{ZeroingAccuracy 0.9 0.8 0.75}
+	{parameters "he" {spreading {SpreadXYRatio 3}}}
+	{parameters "he2" {spreading {SpreadXYRatio 3}}}
+	{spreading {SpreadXYRatio 3}}
 )
 
 ;/*============================== RANGES AND SPECIFICS ==============================*/
@@ -1141,20 +1119,20 @@
 )
 
 (define "medium_artillery"
-	{spreading {SpreadXYRatio 2}}
+	{spreading {SpreadXYRatio 3}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 1.0}
+	{ZeroingAccuracy 0.9 0.8 0.75}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	;{DisableRicochet}
@@ -1163,20 +1141,20 @@
 )
 
 (define "heavy_artillery"
-	{spreading {SpreadXYRatio 2}}
+	{spreading {SpreadXYRatio 3}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 1.0}
+	{ZeroingAccuracy 0.9 0.8 0.75}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	;{DisableRicochet}
@@ -1185,20 +1163,20 @@
 )
 
 (define "super_heavy_artillery"
-	{spreading {SpreadXYRatio 2}}
+	{spreading {SpreadXYRatio 3}}
 	{parameters "he"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
 	{parameters "he2"
 		{spreading 1 
 			{SpreadPower 1.00}    ;// Shot has en equal chance of landing anywhere on the aiming circle, no center-bias
-			{SpreadXYRatio 2}  ;// Shots land more longitudinally than transversely.
+			{SpreadXYRatio 3}  ;// Shots land more longitudinally than transversely.
 		} 
 	}
-	{ZeroingAccuracy 1.0}
+	{ZeroingAccuracy 0.9 0.8 0.75}
 	("artillery_firing_arc")
 	{SpreadTolerance 0.85}		;// Zeroing up to 85% needed before fire
 	;{DisableRicochet}
@@ -2209,7 +2187,8 @@
 (define "heat_slope_multiplier"  ;for HEAT Projectiles & Bazooka Class Weapons
 	{overmatchSlope
 		{0  1}
-		{50 99}
+		{69  1}
+		{70 99}
 		{90 99}
 	}
 )

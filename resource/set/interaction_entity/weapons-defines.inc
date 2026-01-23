@@ -148,6 +148,9 @@
 	}
 
 	{on fire "%weapon" overload
+		{if not tagged "full_auto_mode"
+			{call "burst_stop"}
+		}
 		{delay 0.01
 			{play_sound "action_recoil"}
 		}
@@ -212,9 +215,6 @@
 		else ("fire_barrel_low" args 05)
 		else ("fire_barrel_low" args 06)
 		else ("fire_barrel_low" args 07)
-		}
-		{if not tagged "full_auto_mode"
-			{call "burst_stop_%0"}
 		}
 	}
 	{on "play_shoot_loop"
