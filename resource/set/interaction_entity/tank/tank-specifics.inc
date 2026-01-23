@@ -4476,6 +4476,13 @@
 		("Bren")
 	}
 }
+
+{"mortar_carrier_3_inch tank"
+	("universal_carrier_sound")
+	{on "add_weapon_sound" overload
+		("Bren")
+	}
+}
 {"bren_carrier tank"
 	("universal_carrier_sound")
 }

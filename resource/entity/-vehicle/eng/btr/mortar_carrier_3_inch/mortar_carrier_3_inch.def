@@ -1,0 +1,227 @@
+{game_entity
+	(include "/properties/tank.ext")
+	(include "/properties/selection/vehicle.inc" scale(1.2))
+	{props "mortar" "vehicle" "with_gun" "4in" "explosion_throw_crew" "vision_lev02" "tractor" "tractor_medium" "detect_artillery_small" "artillery_minimap_light" "armored_car" "tractor" "tank" "-turret" "opened" "explosion_throw_crew" "vision_vehicle_low"}
+	{patherId "universal"}
+	{collider "tank.light"}
+	{targetclass "armoredcar" "bullet"}
+	{targetSelector "cannon_howitzer"}
+	
+	{extender "enumerator"}
+	
+	{volume "sticky"
+		{tags "grenade_fg_target"}
+		{able clear {contact} {touch}}
+		{component "sticky_body"}
+	}
+
+	{volume "body1"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body2"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body3"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body4"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body5"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body6"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body7"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body8"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body9"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body10"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body11"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+	{volume "body12"
+		{component "body"}
+		{tags "body"}
+		{thickness 8}
+	}
+
+	{volume "inventory"
+        {thickness 2}
+	}
+
+	;("armor_medium" turret(0) body(12 8 8 8))
+	
+	; armor notes
+	; tracks and wheels 15mm
+
+	("armoredcar_tier1")
+
+	("shield" args "detail1" 15)
+	("shield" args "shield1" 4)
+	("shield" args "shield2" 4)
+
+	("fuel" args "fuel")
+	("transmission" args "transmission")
+	("tracks" repair(30) thickness(15))
+
+	{volume "body1"			; Front Hull
+		{thickness 10
+			{top 7}			; Glacis
+		}
+	}
+	{volume "body2"			; Front Superstructure
+		{thickness 10}
+		{able {holed}}
+	}
+	{volume "body3"			; Rear Superstructure
+		{thickness 10}
+		{able {holed}}
+	}
+	{volume "body4"			; Rear Hull
+		{thickness 10}
+	}
+	{volume "body5"			; Gunner Armor
+		{thickness 10}
+	}
+	{volume "engine"		; Inside Rear Hull and Superstructure
+		{thickness 10}
+	}
+	{volume "transmission"
+		{thickness 5}
+	}
+
+
+
+	{boarder
+		{anm "driver"
+			{forward	{begin	"board_tank_left"} {end "seat_driver_car"}}
+			{reverse 	{end	"emit_tank_1_hold"}}
+		}
+		{anm "commander"
+			{forward	{begin	"board_tank_left"} {end "seat_passenger"}}
+			{reverse 	{end	"emit_tank_1_hold"}}
+		}
+		{anm "crew"
+			{forward	{begin	"board_tank_right"} {end "seat_passenger"}}
+			{reverse 	{end	"emit_tank_1_hold"}}
+		}
+	}
+	("crew_human_visible_anm" place(driver)		door1(emit1) door2(emit1) anm_left(driver) anm_right(driver) visor(driver))
+	("crew_human_visible_anm" place(commander)	door1(emit3) door2(emit3) anm_left(commander) anm_right(commander) visor(main))
+	("crew_human_visible_anm" place(charger)	door1(emit4) door2(emit4) anm_left(commander) anm_right(crew) visor(driver))
+	("crew_human_visible_anm" place(gunner)	        door1(emit2) door2(emit2) anm_left(commander) anm_right(crew) visor(main))
+	("gunner_visible")
+	{placer 
+		{place "driver" {openForCrush 0}}
+	}	
+
+	(define "crew_human"
+		{placer
+			{place "%place" {group "crew"} {linkbone "%place"} {turnoff {sensor} {shadow}}}
+		}
+		{boarder
+			{door "%door1"}
+			{door "%door2"}
+			{link "%door1" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+			{link "%door2" "%place" {anm "%place"} {forward putoff} {reverse puton}}
+		}
+	)
+
+	{placer
+		{place "driver" {group "crew"} {visor "driver"}}
+	}
+
+	{boarder
+		{door "emit1"}
+		{door "emit2"}
+		{link "emit1" "driver" {anm "driver"} {forward putoff} {reverse puton}}
+	}
+
+	{sensor
+		{visor "main"
+			{vision "tank_main-l"}
+		}
+	}
+
+	{extender "inventory"
+		{box
+			{item "ammo mortareng_81 he" 44}
+			{item "ammo mortareng_81 wp" 12}
+			{item "bren_mag ammo" 1100}
+			{item "bren_mk2" filling "filled" 28 {user "mgun"}}
+		}
+	}
+	{Weaponry
+		{place "gun"
+			{Barrels 1}
+			{RestoreIKAfterAim}
+			{weapon "weapon 81mm_ml_3in" filling "ammo mortareng_81 he" 1}
+			{gunner "gunner"}
+			{charger "charger"}
+			{foresight "foresight1"}
+			;{StationaryFiring}
+			("abm_dymamic_mortar"
+				zeroing(2.5)	; // time it takes to aim until the reticle shrinks. Bigger values, more control.
+				dispersion(1)	; // time it takes to distort the reticle when you move the gun (how abrupt it loses zeroing). Bigger values, more control.
+			)
+		}
+		{place "mgun"
+			{basic}
+			{type "mgun_hull"}
+			{LinkBone "mgun"}
+			{LinkAnimation "off"}
+			{gunner "commander"}
+			{charger "commander"}
+			("abm_mgun")
+		}
+	}  	
+
+	{mass 24000}
+	{Chassis "track"
+		("tank_trace" fx("tracks_mid") step(0.32) len(0.5))
+		("mobility_tank"
+			speed(48) ;----------Max speed when fully accelerated on road, km/h.
+			reverse(20) ;--------Max speed in reverse on road, km/h.
+			traverse(35) ;-------Track traverse, per second, in degrees.
+			weight(3.75) ;-------Weight in Tonnes.
+			power(85) ;----------Engine Power, in hp.
+			track(5) ;-----------Track performance: (0,10], 10=ideal. Sluggish tanks and vehicles with narrow and non-gripping tracks have a lower performance.
+			fuel(91) ;-----------Fuel capacity in Litres.
+			type(fuel) ;---------Fuel type. (diesel OR fuel)
+			range(150) ;---------Range in km, off-road.
+		)
+	}
+
+	{Extension "gun_carrier.mdl"}
+}
