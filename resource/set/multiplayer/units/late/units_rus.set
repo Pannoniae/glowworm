@@ -972,19 +972,18 @@
 	cost(110))
 }
 
-;red army
+;both (used to be red army only)
 {"maxim"
 	("vehicle2" period(late) year(44 45 46) cd(30) ci(10) t(cannon) side(rus) crew1(mg_crew:1) crew2(mg_crew_asst:1) g(empl1) b(support) cw(2) cp(6)
 	cost(120))
-	{doctrine "44-45_rus_red"}
 }
 
-;guards
-{"maxim_stand"
-	("vehicle2" period(late) year(44 45 46) cd(30) ci(10) t(cannon) side(rus) crew1(mg_crew:1) crew2(mg_crew_asst:1) g(empl1) b(support) cw(2) cp(6)
-	cost(120))
-	{doctrine "44-45_rus_guards"}
-}
+;NONE, MODEL IS BUGGED CREWMAN BUG INTO GROUND
+;{"maxim_stand"
+;	("vehicle2" period(late) year(44 45 46) cd(30) ci(10) t(cannon) side(rus) crew1(mg_crew:1) crew2(mg_crew_asst:1) g(empl1) b(support) cw(2) cp(6)
+;	cost(120))
+;	{doctrine "44-45_rus_guards"}
+;}
 
 ;both
 {"sg43_stand"
@@ -1133,9 +1132,10 @@
 }
 
 ;guards only
+;APPEARS TO BE MISSING, SHOULD GET IT IN, OLD GUN THAT FIRES WILLY PETE SHELLS
 ;{"120mm_m1910"
 ;	("vehicle"  period(late) year(44 45 46) cd(900) ci(10) t(cannon mediumcan) side(rus) crew(artilleryman:4) g(empl15) b(art) cw(1) cp(26)
-;	cost(725))
+;	cost(600))
 ;	{doctrine "44-45_rus_guards"}
 ;}
 
@@ -1185,6 +1185,13 @@
 	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(cannon artillery heavyart) side(rus) crew(artilleryman:5) g(empl12) b(art) cw(1) cp(30)
 	cost(1350))
 	{doctrine "44-45_rus_red"}
+}
+
+;guards only (203mm_b4 self propelled gun on tank chasis)
+{"su14"
+	("vehicle"  period(late) year(44 45 46) cd(1500) ci(10) t(cannon artillery heavyart) side(rus) crew(artilleryman:6) g(empl12) b(art) cw(1) cp(30)
+	cost(1500))
+	{doctrine "44-45_rus_guards"}
 }
 
 ;red army only
@@ -1575,12 +1582,6 @@
 }
 
 ;both
-{"kv2_40"
-	("vehicle2" period(late) year(44 45 46) cd(660) ci(10) t(heavy) side(rus) crew1(tankman:5) crew2(tank_commander:1) g(heavy2) b(ht) cw(8) cp(30)
-	cost(700))
-}
-
-;both
 {"kv85"
 	("vehicle2" period(late) year(44 45 46) cd(900) ci(10) t(heavy) side(rus) crew1(tankman:3) crew2(tank_commander:1) g(heavy2) b(ht) cw(8) cp(26)
 	cost(850)) ;// +30 for crew
@@ -1650,10 +1651,23 @@
 	cost(320)) ;// +30 for crew
 }
 
+;guards only
+{"su26"
+	("vehicle2" period(late) year(44 45 46) cd(500) ci(10) t(light) side(rus) crew1(tankman:2) crew2(tank_commander:1) g(spg1) b(td) cw(4) cp(16)
+	cost(350)) ;// +30 for crew
+	{doctrine "44-45_rus_guards"}
+}
+
 ;both
 {"zis30"
-	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(light) side(rus) crew1(tankman:3) crew2(tank_commander:1) g(spg2) b(tanks) cw(4) cp(16)
+	("vehicle2" period(late) year(44 45 46) cd(540) ci(10) t(light) side(rus) crew1(tankman:3) crew2(tank_commander:1) g(spg2) b(td) cw(4) cp(16)
 	cost(380))
+}
+
+;both
+{"kv2_40"
+	("vehicle2" period(late) year(44 45 46) cd(660) ci(10) t(heavy) side(rus) crew1(tankman:5) crew2(tank_commander:1) g(heavy2) b(td) cw(8) cp(30)
+	cost(700))
 }
 
 ;red army only
@@ -1662,6 +1676,8 @@
 	cost(500)) ;// +30 for crew
 	{doctrine "44-45_rus_red"}
 }
+
+
 
 ;guards only
 {"su85m"
@@ -1694,10 +1710,18 @@
 	cost(1200)) ;// +35 for crew
 }
 
-;both
+;red army only
 {"su100"
 	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(medium) side(rus) crew1(tankman:3) crew2(tank_commander:1) g(spg3) b(td) cw(6) cp(30)
 	cost(1300)) ;// +30 for crew
+	{doctrine "44-45_rus_red"}
+}
+
+;guards only
+{"su100y"
+	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(medium) side(rus) crew1(tankman:5) crew2(tank_commander:1) g(spg3) b(td) cw(6) cp(30)
+	cost(1800)) ;// +30 for crew
+	{doctrine "44-45_rus_guards"}
 }
 
 
