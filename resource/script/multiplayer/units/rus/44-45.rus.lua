@@ -140,7 +140,7 @@ Purchases["44-45.rus"] = {
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_mountain_rus(rus)"},
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_vet_rifle_rus(rus)"},
 				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_vet_rifle_mot_rus(rus)"},
-				{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_spetsnaz(rus)"},
+				--{priority = 1.0, type = {"Class1", "Infantry", "Squad",}, unit = "squad_spetsnaz(rus)"},
 				
 
 			-- Infantry Singles / Teams

@@ -371,19 +371,41 @@ def validate_set_file(set_path: Path, macro_defs: dict[str, dict], resolved_para
 
     lines = content.split('\n')
 
+    # Track multi-line macro calls
+    macro_call_lines = []
+    macro_start_line = None
+    paren_depth = 0
+
     for line_num, line in enumerate(lines, 1):
+        # Remove comments from line
+        if ';' in line:
+            line = line[:line.index(';')]
         stripped = line.strip()
 
-        # Skip comments
-        if stripped.startswith(';'):
+        # Skip empty lines when not accumulating
+        if not stripped and not macro_call_lines:
             continue
 
-        # Skip lines inside block definitions that start with { - we want macro calls
-        # Look for lines that start with ( and contain a quoted macro name
-        if re.match(r'\s*\(\s*"', stripped):
-            line_errors = validate_macro_call(stripped, line_num, macro_defs, resolved_params_cache)
+        # Check if this starts a new macro call: ("macro_name" ...)
+        if not macro_call_lines and re.match(r'\(\s*"', stripped):
+            macro_call_lines = [stripped]
+            macro_start_line = line_num
+            paren_depth = stripped.count('(') - stripped.count(')')
+        elif macro_call_lines:
+            # Continue accumulating the macro call
+            macro_call_lines.append(stripped)
+            paren_depth += stripped.count('(') - stripped.count(')')
+
+        # Check if macro call is complete (balanced parentheses)
+        if macro_call_lines and paren_depth <= 0:
+            full_macro_call = ' '.join(macro_call_lines)
+            line_errors = validate_macro_call(full_macro_call, macro_start_line, macro_defs, resolved_params_cache)
             for err in line_errors:
                 errors.append(f"{set_path.name}:{err}")
+            # Reset for next macro call
+            macro_call_lines = []
+            macro_start_line = None
+            paren_depth = 0
 
     # Extract unit definitions for duplicate checking
     units = extract_unit_definitions(content, set_path)
@@ -501,11 +523,12 @@ def main():
     print("-" * 60)
 
     set_dir = MOD_ROOT / "set" / "multiplayer" / "units" / "late"
+    resolved_params_cache = {}
     if set_dir.exists():
         for set_file in set_dir.rglob("*.set"):
             if set_file.name == "settings.set":
                 continue
-            errors = validate_set_file(set_file, macro_defs)
+            errors, units = validate_set_file(set_file, macro_defs, resolved_params_cache)
             if errors:
                 print(f"\n{set_file.relative_to(MOD_ROOT)}:")
                 for err in errors:
