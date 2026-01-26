@@ -64,6 +64,10 @@
 			{item "mk2 grenade" 10}			;22 handgrenades
 			{item "m15_wp grenade" 15}
 			{item "anm8_smoke grenade" 20}
+			
+			{item "bazooka_m1a1" filling "bazooka ammo heatb" 1}
+			{item "bazooka ammo heatb" 4}
+			{item "bazooka ammo wp" 1}
 		}
 	}
 
