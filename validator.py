@@ -193,17 +193,42 @@ def parse_macro_definitions(set_content: str) -> dict[str, dict]:
         params = set(re.findall(r'%(\w+)', macro_body))
 
         # Check for parent macro: ("parent_name" arg1(val) ...)
-        parent_match = re.search(r'\(\s*"([^"]+)"([^)]*)\)', macro_body)
+        # Need to handle nested parentheses properly
+        parent_match = re.search(r'\(\s*"([^"]+)"', macro_body)
         parent = None
         parent_args = {}
         if parent_match:
             parent = parent_match.group(1)
-            # Extract args passed to parent: argname(value) or argname(%param)
-            args_str = parent_match.group(2)
-            for arg_match in re.finditer(r'(\w+)\s*\(([^)]*)\)', args_str):
-                arg_name = arg_match.group(1)
-                arg_value = arg_match.group(2).strip()
-                parent_args[arg_name] = arg_value
+            # Find the full parent call by counting parentheses from the opening paren
+            start = macro_body.find('(')
+            if start != -1:
+                paren_count = 1
+                pos = start + 1
+                while pos < len(macro_body) and paren_count > 0:
+                    if macro_body[pos] == '(':
+                        paren_count += 1
+                    elif macro_body[pos] == ')':
+                        paren_count -= 1
+                    pos += 1
+                args_str = macro_body[start+1:pos-1]  # Content inside the parent call parens
+                # Extract args passed to parent: argname(value) - need to handle nested parens
+                arg_pattern = r'(\w+)\s*\('
+                for arg_match in re.finditer(arg_pattern, args_str):
+                    arg_name = arg_match.group(1)
+                    if arg_name == parent:  # Skip the macro name itself
+                        continue
+                    # Find the value by counting parens from this position
+                    arg_start = arg_match.end()
+                    paren_count = 1
+                    pos = arg_start
+                    while pos < len(args_str) and paren_count > 0:
+                        if args_str[pos] == '(':
+                            paren_count += 1
+                        elif args_str[pos] == ')':
+                            paren_count -= 1
+                        pos += 1
+                    arg_value = args_str[arg_start:pos-1].strip()
+                    parent_args[arg_name] = arg_value
 
         macros[macro_name] = {
             'params': params,

@@ -724,7 +724,7 @@
 ;Wehrmacht ------------------------------------------------------
 ;Volkssturm
 ;skill2
-("squad_with4types_doc_man" side(ger) d("44-45_ger_wehr") name(squad_volkssturm) period(late) year(44 45 46) scf(0) cd(600) ci(60) g(squad_1) c1(volkssturm_pol:1) c2(volkssturm_rifle:4) c3(volkssturm_pzf:3) c4(volkssturm_smg:1) b(squad) cost(80) t())
+("squad_with4types_doc_man" side(ger) d("44-45_ger_wehr") name(squad_volkssturm) period(late) year(44 45 46) cd(600) ci(60) g(squad_1) c1(volkssturm_pol:1) c2(volkssturm_rifle:4) c3(volkssturm_pzf:3) c4(volkssturm_smg:1) b(squad) cost(80) t())
 
 ;German Recon Unit
 ;skill 4
@@ -1153,17 +1153,17 @@
 }
 
 {"fi156_recon_late"
-	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(450) ci(10) vehicle(fi156) crew(pilot:3) g(airstrike) b(supply) cost(150))
+	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(450) ci(10) vehicle(fi156) crew(pilot:3) g(airstrike) t() cp(0) cw(0) b(supply) cost(150))
 	{action "airstrike:reconnaissance_50"} 
 	;{tags "limit3"}
 }
 {"bf109_250_late"
-	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(600) ci(10) vehicle(bf109_f4) crew(pilot:1) g(airstrike) b(supply) cost(300))
+	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(600) ci(10) vehicle(bf109_f4) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(300))
 	{action "airstrike:sc_50"}
 	{tags "limit3"}
 }
 {"bf110_500_late"
-	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(900) ci(10) vehicle(bf110_e2) crew(pilot:2) g(airstrike) b(supply) cost(600))
+	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(900) ci(10) vehicle(bf110_e2) crew(pilot:2) g(airstrike) t() cp(0) cw(0) b(supply) cost(600))
 	{action "airstrike:sc_250_mp"}
 	{tags "limit3"}
 	{doctrine "44-45_ger_wehr"}
@@ -1518,20 +1518,15 @@
 	{doctrine "44-45_ger_wehr"}
 }
 
-{"sturmtiger"
-	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(medium) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
+{"sturmtiger_ss"
+	("vehicle2_ss" period(late) year(44 45 46) cd(1500) ci(10) t(heavy) side(ger) vehicle(sturmtiger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
 	cost(1700)) ;// +35 for crew
 }
 
-;{"sturmtiger_ss"
-;	("vehicle2_ss" period(late) year(44 45 46) cd(1500) ci(10) t(heavy) side(ger) vehicle(sturmtiger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
-;	cost(1700)) ;// +35 for crew
-;}
-
-;{"sturmtiger"
-;	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
-;	cost(1600)) ;// +35 for crew
-;}
+{"sturmtiger"
+	("vehicle2" period(late) year(44 45 46) cd(1500) ci(10) t(heavy doctrineonly) side(ger) crew1(tankman:4) crew2(tank_commander:1) g(spg7) b(art) cw(8) cp(40)
+	cost(1700)) ;// +35 for crew
+}
 
 ;Wehrmacht only
 {"600mm_thor"
@@ -1571,13 +1566,13 @@
 ;	{doctrine "44-45_ger_ss"}
 ;}
 
-;{"sdkfz251d_1_stuka_ss"
-;	("vehicle2 " period(late) year(44 45 46) cd(1620) ci(10) g(wheel11) side(ger) vehicle(sdkfz251d_1_stuka) t(vehicle) crew1(tankman:2) crew2(tank_commander:1) b(art) cw(2) cp(54)
-;	cost(1500))
-;}
+{"sdkfz251d_1_stuka_ss"
+	("vehicle2 " period(late) year(44 45 46) cd(1620) ci(10) g(wheel11) side(ger) vehicle(sdkfz251d_1_stuka) t(vehicle) crew1(tankman:2) crew2(tank_commander:1) b(art) cw(2) cp(54)
+	cost(1500))
+}
 
 {"sdkfz251d_1_stuka"
-	("vehicle2" period(late) year(44 45 46) cd(1620) ci(10) g(wheel11) side(ger) t(vehicle) crew1(tankman:2) crew2(tank_commander:1) b(art) cw(2) cp(54)
+	("vehicle2" period(late) year(44 45 46) cd(1620) ci(10) g(wheel11) side(ger) t(vehicle doctrineonly) crew1(tankman:2) crew2(tank_commander:1) b(art) cw(2) cp(54)
 	cost(1500))
 }
 

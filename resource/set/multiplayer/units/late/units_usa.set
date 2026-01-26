@@ -562,13 +562,13 @@
 ("squad_with1types_man" side(usa) name(radioman_240) period(late) year(44 45 46) cd(900) ci(180) 	g(radioman) c1(late_fo_radio_240:1) cost(800)		b(single) t(signaller))
 
 ;Support Crew
-("squad_with1types_man" side(usa) name(squad_support_crew_usa) period(late) year(44 45 46) scf(0) cd(0) ci(0) g(squad_1) c1(artilleryman:5) b(single) cost(50) t())
+("squad_with1types_man" side(usa) name(squad_support_crew_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_1) c1(artilleryman:5) b(single) cost(50) t())
 
 ;Tank Crew
-("squad_with2types_man" side(usa) name(squad_tank_crew_usa) period(late) year(44 45 46) scf(0) cd(0) ci(0) g(squad_1) c1(tank_commander:1) c2(tankman:4) b(single) cost(80) t())
+("squad_with2types_man" side(usa) name(squad_tank_crew_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_1) c1(tank_commander:1) c2(tankman:4) b(single) cost(80) t())
 
 ;Veteran Tank Crew
-("squad_with2types_man" side(usa) name(squad_tank_crew_vet_usa) period(late) year(44 45 46) scf(0) cd(0) ci(0) g(squad_1) c1(tank_commander_vet:1) c2(tankman_m1_vet:4) b(single) cost(130) t())
+("squad_with2types_man" side(usa) name(squad_tank_crew_vet_usa) period(late) year(44 45 46) cd(0) ci(0) g(squad_1) c1(tank_commander_vet:1) c2(tankman_m1_vet:4) b(single) cost(130) t())
 
 ;_________________________________________________
 ;|               Wheeled vehicles                 |
@@ -652,7 +652,7 @@
 }
 
 {"p47_recon_late"
-	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(450) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) b(supply) cost(100))
+	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(450) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(100))
 	{action "airstrike:reconnaissance_50"} 
 	;{tags "limit3"}
 }
@@ -660,14 +660,14 @@
 
 
 {"p47_250_late"
-	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(600) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) b(supply) cost(250))
+	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(600) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(250))
 	;("doctrine_t2" cool(360) d(late_usa_irregular) cost(10))
 	{action "airstrike:sc_50"}
 	{tags "limit4"}
 }
 
 {"p47_500_late"
-	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(900) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) b(supply) cost(500))
+	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(900) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(500))
 	;("doctrine_t3" cool(360) d(late_usa_irregular) cost(30))
 	{action "airstrike:sc_250_mp"}
 	{tags "limit4"}
@@ -862,7 +862,7 @@
 	cost(220))
 }
 {"m15a1_cgmc"
-	("vehicle3" period(late) year(44 45 46) cd(400) ci(10) g(wheel15) side(usa) t(vehicle) crew1(vehicle_crew_m1:4) crew2(vehicle_com_m1a1:1) b(lt) cw(2) cp(12)
+	("vehicle2" period(late) year(44 45 46) cd(400) ci(10) g(wheel15) side(usa) t(vehicle) crew1(vehicle_crew_m1:4) crew2(vehicle_com_m1a1:1) b(lt) cw(2) cp(12)
 	cost(300))
 }
 {"m8_greyhound"
