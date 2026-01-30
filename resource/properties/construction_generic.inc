@@ -248,7 +248,7 @@
 	("armor_light")
 )
 (define "armor_house_wood_heavy"
-	("armor_heavy")
+	("armor_light")
 )
 (define "armor_house_concrete_light"
 	("armor_medium")
@@ -262,7 +262,7 @@
 )
 
 (define "armor_house_wood_heavy"
-	("armor_heavy")
+	("armor_light")
 )
 
 (define "armor_hedgehog_big"
