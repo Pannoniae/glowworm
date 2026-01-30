@@ -659,20 +659,6 @@
 
 
 
-{"p47_250_late"
-	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(600) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(250))
-	;("doctrine_t2" cool(360) d(late_usa_irregular) cost(10))
-	{action "airstrike:sc_50"}
-	{tags "limit4"}
-}
-
-{"p47_500_late"
-	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(900) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(500))
-	;("doctrine_t3" cool(360) d(late_usa_irregular) cost(30))
-	{action "airstrike:sc_250_mp"}
-	{tags "limit4"}
-}
-
 ;_________________________________________________
 ;|                  Emplacements                  |
 ;|________________________________________________|
@@ -1096,9 +1082,18 @@
 ;M7 Priest Battery [13 SP]
 ("squad_vehicle2_with3types_man" side(usa) name(priest_battery) period(late) year(44 45 46) cd(900) ci(0) g(priest_battery) vehicle1(m7b1_hmc) vehicle2(m7b1_hmc) crew1(tankman_m3:1) crew2(tankman_m3:3) crew3(tank_com_m3:1) b(sp) cost(13) t())
 
-
 ;Veteran M12 GMC
 {"m12_gmc_sp"
 	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m1_vet:5) crew2(tank_com_m1_vet:1) g(m12_gmc_sp) b(sp) cw(6) cp(40)
 	cost(15)) ;// +30 for crew
+}
+
+{"p47_250_late"
+	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(600) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(sp) cost(2) cp(0))
+	{action "airstrike:sc_50"}
+}
+
+{"p47_500_late"
+	("vehicle_ss" side(usa) period(late) year(44 45 46) cd(900) ci(10) vehicle(p47_d22) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(sp) cost(3) cp(0))
+	{action "airstrike:sc_250_mp"}
 }
