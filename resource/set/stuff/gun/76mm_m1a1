@@ -19,9 +19,9 @@
 	("armor health custom" shell(apcbche) damage(200) velocity(792) filler(62))
 	("76_slope_multipliers")
 
-	("penetration_medium" shell(ap) range(200) a(154) b(131) c(107) d(88) e(72))		; M79 AP
-	("penetration_medium" shell(apcbche) range(200) a(125) b(116) c(105) d(95) e(86))	; M62 APC
-	("penetration_medium" shell(hvap) range(200) a(239) b(208) c(175) d(147) e(124))	; T-4/M93
+	("penetration_medium" shell(ap) range(210) a(154) b(131) c(107) d(88) e(72))		; M79 AP
+	("penetration_medium" shell(apcbche) range(210) a(125) b(116) c(105) d(95) e(86))	; M62 APC
+	("penetration_medium" shell(hvap) range(210) a(239) b(208) c(175) d(147) e(124))	; T-4/M93
 
 	{parameters "sm"
 		("velocity" mps(270))
@@ -35,7 +35,7 @@
 		r1(0.80) 				; // Accuracy radius for direct-fire munitions
 		r1i(6) 					; // Accuracy radius for indirect fire
 		rmax(26) 				; // Accuracy radius for indirect fire at maximum range
-		range_ap(200) 			; // Range after which accuracy drops to prevent farshooting.
+		range_ap(210) 			; // Range after which accuracy drops to prevent farshooting.
 		range_heat(200) 		; // Range after which accuracy drops to prevent farshooting.
 		range_he(200)			; // Range after which direct-fire accuracy drops to prevent farshooting.
 		range_hei(340)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
