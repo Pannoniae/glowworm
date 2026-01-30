@@ -11,7 +11,7 @@
 	("range_170")
 	{calibre 45}
 
-	("reload time" seconds(5))
+	("reload time" seconds(4.7))
 
 	("velocity m/s" ap(760) apcr(985) he(343) heat(1))
 	("armor health" damage(120))
@@ -20,17 +20,18 @@
 	("45_rus_slope_multipliers")
 
 	;BR-240
-	("penetration_medium" shell(aphebc) range(170) a(56) b(54) c(45) d(38) e(32))  ;RHA
+	("penetration_medium" shell(aphebc) range(180) a(56) b(54) c(45) d(38) e(32))  ;RHA
  ;//("penetration_medium" shell(aphebc) range(170) a(55) b(46) c(38) d(31) e(25))  ;FHA
 
 	;BR-240P	; was available starting April 1942
-		("penetration_medium" shell(apcr) range(180) a(106) b(88) c(65) d(47) e(35))
+	("penetration_medium" shell(apcr) range(180) a(106) b(88) c(65) d(47) e(35))
 
 	;45 psa - Vj4	; was available starting June 1942 (probably earlier)
-	("penetration_medium" shell(apcbc) range(160) a(67) b(58) c(48) d(40) e(33))
+	("penetration_medium" shell(apcbc) range(180) a(67) b(58) c(48) d(40) e(33))
 
-	("accuracy_direct_arrowhead" r1(1.10) range_ap(170) range_he(160) range_heat(160))
+	("accuracy_direct_arrowhead" r1(1.10) range_ap(180) range_he(170) range_heat(160))
 	
 	{parameters "he"
-		{range 160 160}
-	}}
+		{range 170 170}
+	}
+}
