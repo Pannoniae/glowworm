@@ -11,15 +11,15 @@
 	("he_lowarc")
 	("velocity m/s lowarc" ap(662) apcr(955) he(680) heat(325))
 
-	("reload time" seconds(5.0))
+	("reload time" seconds(4.8))
 	;("accuracy_direct_arrowhead" r1(0.85) range_ap(190) range_he(190) range_heat(170))
 	("accuracy_dual" ; // Applies logic for accuracy of dual direct-indirect weapons
 		r1(0.8) 				; // Accuracy radius for direct-fire munitions
 		r1i(8) 					; // Accuracy radius for indirect fire
 		rmax(27) 				; // Accuracy radius for indirect fire at maximum range
-		range_ap(190) 			; // Range after which accuracy drops to prevent farshooting.
+		range_ap(200) 			; // Range after which accuracy drops to prevent farshooting.
 		range_heat(170) 		; // Range after which accuracy drops to prevent farshooting.
-		range_he(190)			; // Range after which direct-fire accuracy drops to prevent farshooting.
+		range_he(200)			; // Range after which direct-fire accuracy drops to prevent farshooting.
 		range_hei(410)			; // Range after which indirect-fire accuracy drops to prevent farshooting.
 	)
 }
