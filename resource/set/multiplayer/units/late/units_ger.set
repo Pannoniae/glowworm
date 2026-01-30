@@ -2137,12 +2137,6 @@
 ;}
 
 
-;Wehrmacht only
-{"jagdpanzer4_l48_early"
-	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_pzjag:3) crew2(tank_commander_pzjag:1) g(spg2) b(td) cw(6) cp(24)
-	cost(500)) ;// +30 for crew
-	{doctrine "44-45_ger_wehr"}
-}
 
 {"jagdpanzer4_l48"
 	("vehicle2" period(late) year(44 45 46) cd(780) ci(10) t(medium) side(ger) crew1(tankman_pzjag:3) crew2(tank_commander_pzjag:1) g(spg2) b(td) cw(6) cp(24)
@@ -2265,4 +2259,14 @@
 {"fi156"
 	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:2) g(spg8) b(supply) cw(0) cp(11)
 	cost(100))
+}
+
+
+
+
+;Wehrmacht only
+{"jagdpanzer4_l48_early"
+	("vehicle2" period(late) year(44 45 46) cd(750) ci(10) t(medium) side(ger) crew1(tankman_pzjag:3) crew2(tank_commander_pzjag:1) g(spg2) b(sp) cw(6) cp(24)
+	cost(5)) ;// +30 for crew
+	{doctrine "44-45_ger_wehr"}
 }

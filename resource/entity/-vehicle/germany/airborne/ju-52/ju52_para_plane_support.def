@@ -1,0 +1,109 @@
+{game_entity
+	(include "/properties/airborne.ext")
+	(include "/properties/selection/airborne.inc" scale(2.25))
+	{props "wheeled" "-3_engine" "ju-52" "vision_lev02_air" "para_plane_support" "para_plane"}
+	{PatherID "bf110"}
+
+	{extender "enumerator"
+		{digit_folder "c47"}
+	}
+	{sensor
+		{Visor "rear"
+			{vision "airborne_main"}
+			{bone "foresight6"}
+		}
+	}
+
+	("fighter_tier2")
+
+	{boarder
+		{anm "driver"
+			{forward {begin "board_plane_left"} {end "seat_driver_car"} {base "open"}}
+			{reverse {end "emit_plane_parachute" -1}}
+		}
+		{anm "gunner"
+			{forward {begin "board_plane_left"} {end "seat_driver_car"} {base "open"}}
+			{reverse {end "emit_plane_parachute" -1.5} {base "open1" -1}}
+		}
+		{anm "passenger"
+			{forward {begin "board_plane_left"} {end "seat_driver_car"} {base "open"}}
+			{reverse {end "emit_plane_parachute" -1.5} {base "open1" -1}}
+		}
+	}
+
+	("crew_human" place(driver) bone(driver) door(emit1) animation(driver) group(crew))
+	("crew_human" place(gunner1) bone(gunner1) door(emit1) animation(gunner) group(crew))
+	("crew_human" place(gunner2) bone(gunner2) door(emit1) animation(gunner) group(crew))
+	
+	("passenger_human" place(seat1)		bone(seat01)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat2)		bone(seat02)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat3)		bone(seat03)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat4)		bone(seat04)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat5)		bone(seat05)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat6)		bone(seat06)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat7)		bone(seat07)	door(emit1)	animation(passenger) group(passenger))
+	("passenger_human" place(seat8)		bone(seat08)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat9)		bone(seat09)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat10)	bone(seat10)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat11)	bone(seat11)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat12)	bone(seat12)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat13)	bone(seat13)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat14)	bone(seat14)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat15)	bone(seat15)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat16)	bone(seat16)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat17)	bone(seat17)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat18)	bone(seat18)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat19)	bone(seat19)	door(emit1) animation(passenger) group(passenger))
+	("passenger_human" place(seat20)	bone(seat20)	door(emit1) animation(passenger) group(passenger))
+
+	{Placer
+		{place "driver" {visor "main"} {turnOff {targetable}}}
+		{place "commander" {visor "around"} {turnOff {targetable}}}
+	}
+
+	("double_engine")
+	("wheel" args "wheelr")
+	("wheel" args "wheell")
+	("wheel" args "wheelback")
+
+	{Chassis "wheel"
+		("car_trace" fx("tracewheel05") step(0.07) wheell("wlf") wheelr("wrf") bonel("FXtraceL1") boner("FXtraceR1"))
+	}
+
+	{Chassis "airborne"
+		("flight_model"
+			speed(290)  ;//---------Max speed (at sea level), km/h.
+			climb_speed(11) ;//-----Climb rate at sea level, in m/s
+			turn(250) ;//-----------Turn-and-burn radius in meters, tightest sustained turn
+			turnMP(41) ;//----------Turn-and-burn radius in meters, tightest sustained turn in Multiplayer
+			aerodynamics(1.55) ;//--Aerodynamic efficiency rating (0-3)
+			weight(7600) ;//--------Weight in kg.
+			power(2200) ;//---------Horse Power.
+			fuel(1300) ;//----------Fuel capacity in Liters.
+			range(1500) ;//---------Distance can travel with full fuel tank, in km.
+			roll_rate(40) ;//-------Roll rate, in degrees per second.
+			roll_angle(65) ;//------Maximum roll angle, in degrees.
+		)
+	}
+	{Weaponry
+		{place "bomb1"
+			{weapon "bomb_paradrop_trigger" filled}
+			{barrels 2}
+			{gunner "driver"}
+			{shooter "shooter_bb"}
+			{charger "driver"}
+			{basic}
+		}
+	} 
+
+	{mass 7600}
+
+	{extender "inventory"
+		{box
+			{item "bullet_20_auto aphe" 240}			; 4 drums (60 rounds each)
+			{item "ammo mgun_ger doubledrum" 300}		; 5 drums (75 rounds each)
+		}
+	}
+
+	{extension "ju-52.mdl"}
+}

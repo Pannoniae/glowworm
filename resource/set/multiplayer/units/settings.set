@@ -3083,6 +3083,40 @@
 	}
 )
 
+(define "squad_with8types_vehicle_crew_man"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{cost %cost}
+		{squad_cost_factor 0}
+	}
+)
+
+(define "squad_with8types_paradrop"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{cost %cost}
+		{squad_cost_factor 0}
+		;{action "airstrike:paradrop"}
+		{tags "limit2"}
+	}
+)
+
 (define "squad_with7types_vehicle_crew_doc"
 	{"%name(%side)"
 		{charge 
@@ -3307,6 +3341,39 @@
 			{interval %ci}
 		}
 		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 ) %vehicle2 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{cost %cost}
+		{level 1}
+		{squad_cost_factor 0}
+	}
+)
+
+
+(define "squad_vehicle4_with8types_man"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 ) %vehicle2 ( mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 ) %vehicle3 ( mp/%side/%period/%crew5 ) %vehicle4 ( mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{cost %cost}
+		{level 1}
+		{squad_cost_factor 0}
+	}
+)
+
+(define "squad_vehicle3_with11types_man"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 ) %vehicle2 ( mp/%side/%period/%crew3 mp/%side/%period/%crew4 ) %vehicle3 ( mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 mp/%side/%period/%crew9 mp/%side/%period/%crew10 mp/%side/%period/%crew11 ) "}
 		{tags "all infantry %side %t %year"}
 		{group "%g"}
 		{button "%b"}

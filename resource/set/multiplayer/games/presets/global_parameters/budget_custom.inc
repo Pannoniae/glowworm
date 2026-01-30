@@ -4,23 +4,23 @@
 		{resource
 			{start		%s}
 			{finish		%f}
-			{growTime	2400}		; in seconds
-			{growTable	"0.80 0.80 0.80 0.80 0.80 0.80 0.80 0.80 0.80 0.82 0.84 0.86 0.88 0.9 0.9 0.9 0.9 1.0 1.0 1.0"}
+			{growTime	3600}		; in seconds
+			{growTable 	"0.65 0.65 0.65 0.70 0.70 0.70 0.75 0.75 0.75 0.80 0.80 0.80 0.80 0.80 0.80 0.85 0.85 0.85 0.90 0.90 0.90 0.90 0.90 0.90 1.00"}
 			{payback
 				{cp			"0		120		180		220		250		400	"} ; source code only supports 6 values
-				{restore	"3.00	3.0		2.5		2		1.5		1.0"}
+				{restore	"1.5	1.25	0.75	0.50	0.40	0.30"}
 			}
 			{limitmin	10}
 			{limitmax	500000}
-			{speedset	"3000 4000 6000 8000 10000 12000 16000 20000 24000"}
+			{speedset	"3000 4000 6000 8000 10000 15000 17500 20000 24000"}
 		}
 		{buttons "squad single supply support art lt mt ht td"}
 	}
 	{hero
 		{resource
-			{start %d}
+			{start 20}
 		}
-		{buttons "d"}
+		{buttons "sp"}
 		{tag "special"}
 	}
 }

@@ -12,6 +12,9 @@
 		{"fortifications" "barricade_sq"}
 		{"fortifications" "barricade"}
 		{"fortifications" "medic_rally"}
+		
+		{"fortifications" "barbwire"}
+		{"fortifications" "hedgehog"}
 	}
 	{"resources" "10%"}
 )

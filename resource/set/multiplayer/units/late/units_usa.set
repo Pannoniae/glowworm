@@ -949,10 +949,6 @@
 	cost(1200)) ;// +35 for crew
 }
 
-;{"m4a3_76w_field1"
-;	("vehicle2" period(late) year(44 45 46) cd(960) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium13) b(mt) cw(6) cp(24)
-;	cost(950)) ;// +30 for crew
-;}
 ;{"m4a3_76w_field2"
 ;	("vehicle2" period(late) year(44 45 46) cd(960) ci(10) t(medium) side(usa) crew1(tankman_m3:4) crew2(tank_com_m3:1) g(medium14) b(mt) cw(6) cp(24)
 ;	cost(950)) ;// +30 for crew
@@ -1005,10 +1001,14 @@
 	("vehicle2" period(late) year(44 45 46) cd(720) ci(10) t(light) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg1) b(td) cw(4) cp(20)
 	cost(500)) ;// +30 for crew
 }
+
+
+;slugger
 {"m36_gmc_late"
 	("vehicle2" period(late) year(44 45 46) cd(1020) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg3) b(td) cw(6) cp(26)
-	cost(900)) ;// +30 for crew
+	cost(800)) ;// +30 for crew
 }
+
 ;{"m36b1_gmc_late"
 ;	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg4) b(td) cw(6) cp(26)
 ;	cost(925)) ;// +30 for crew
@@ -1017,21 +1017,16 @@
 ;	("vehicle2" period(late) year(44 45 46) cd(1320) ci(10) t(medium) side(usa) crew1(tankman_m1:3) crew2(tank_com_m1:1) g(spg5) b(td) cw(6) cp(26)
 ;	cost(900)) ;// +30 for crew
 ;}
+
+;Jackson
 {"m36b1_gmc_t33"
 	("vehicle2" period(late) year(44 45 46) cd(1080) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg5) b(td) cw(6) cp(26)
-	cost(950)) ;// +30 for crew
+	cost(900)) ;// +30 for crew
 }
-{"m36_gmc_late_vet"
-	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg3) b(td) cw(6) cp(26)
-	cost(1300)) ;// +30 for crew
-}
+
 {"m18_superhellcat"
 	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m1:4) crew2(tank_com_m1:1) g(spg3) b(td) cw(6) cp(26)
 	cost(1000)) ;// +30 for crew
-}
-{"m18_superhellcat_vet"
-	("vehicle2" period(late) year(44 45 46) cd(1380) ci(10) t(medium) side(usa) crew1(tankman_m1_vet:4) crew2(tank_com_m1_vet:1) g(spg3) b(td) cw(6) cp(26)
-	cost(1300)) ;// +30 for crew
 }
 
 ;Plane
@@ -1044,3 +1039,66 @@
 
 
 
+;SP SECTION------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+;Veteran Sniper [1 SP]
+("squad_with2types_man" side(usa) name(82nd_veteran_sniper) period(late) year(44 45 46) cd(0) ci(0) g(82nd_veteran_sniper) c1(82nd_recon_rifle:2) c2(82nd_sniper:1) b(sp) cost(1) t())
+
+;Paradropped M8 Howitzer [2 SP]
+;need to implement paradrop
+
+;Paradropped 37mm M3A1 Anti-Tank Gun [3 SP]
+;need to implement paradrop
+
+;Mechanised 3rd Armored Rifle Squad (skill 4) [3SP]
+("squad_with7types_vehicle_crew_man" side(usa) name(squad_3arm_mechanized) period(late) year(44 45 46) cd(0) ci(0) g(squad_3arm_mechanized) vehicle1(m3a1_halftrack) crew1(ar3_late_crew:2W) crew2(ar3_late_sl_carbine:1) crew3(ar3_late_sl_asst_carbine:1) crew4(ar3_late_rifle_gren:1) crew5(ar3_late_rifle_band2:3) crew6(ar3_late_rifle_bar:2) crew7(ar3_late_rifle_bar_asst:2) b(sp) cost(3) t())
+
+;Paradropped 101st Airborne Squad [4 SP] {2 times use}
+;skill7, squad unchanged from ground squad, numbers of individual soldiers increased to fit 20 passengers in plane
+;("squad_with8types_paradrop" side(usa) name(101st_paradrop) period(late) year(44 45 46) cd(0) ci(0) g(101st_paradrop) vehicle1(c47_d_para_plane_player) crew1(pilot:2) crew2(101st_late_sl:1) crew3(101st_late_sl_asst:1) crew4(101st_rifle:10) crew5(101st_late_demo:3) crew6(101st_late_mg:2) crew7(101st_late_mg_asst:2) crew8(101st_late_sniper:1) b(sp) cost(5) t())
+
+;Paradropped 57mm M1 Anti-Tank Gun [4 SP]
+;need to implement paradrop
+
+;Mechanised 2nd Heavy Army Rangers [5 SP]
+("squad_with8types_vehicle_crew_man" side(usa) name(squad_2nd_ranger_mechanized) period(late) year(44 45 46) cd(0) ci(0) g(squad_3arm_mechanized) vehicle1(m3a1_halftrack) crew1(2ranger_crew:2) crew2(2ranger_sl:1) crew3(2ranger_sl_asst:1) crew4(2ranger_gren:1) crew5(2ranger_rifle:2) crew6(2ranger_bar:2) crew7(2ranger_bar_asst:2) crew8(2ranger_at:1) b(sp) cost(6) t())
+
+;Heavy AT Support Detachment [6 SP] {temp name}
+("squad_vehicle4_with8types_man" side(usa) name(squad_heavy_at_support) period(late) year(44 45 46) cd(0) ci(0) g(squad_heavy_at_support) vehicle1(76mm_m5_m6) crew1(artilleryman:4) vehicle2(m3a1_halftrack_inf) crew2(cav_driver:1) crew3(cav_gunner:2) crew4(cav_tl:1) vehicle3(76mm_m5_m6) crew5(artilleryman:4) vehicle4(m3a1_halftrack_inf) crew6(cav_driver:1) crew7(cav_gunner:2) crew8(cav_tl:1) b(sp) cost(6) t())
+
+;2nd Armored Platoon [8 SP]
+("squad_vehicle3_with11types_man" side(usa) name(squad_2nd_armored_platoon) period(late) year(44 45 46) cd(0) ci(0) g(squad_2nd_armored_platoon) vehicle1(m4a3_75_late) crew1(tankman_m3:4) crew2(tank_com_m3:1) vehicle2(m4a3_76w) crew3(tankman_m3:4) crew4(tank_com_m3:1) vehicle3(m3a1_halftrack_inf) crew5(arm_rifle:2) crew6(arm_sl:1) crew7(arm_sl_asst:1) crew8(arm_gren:1) crew9(arm_rifle:4) crew10(arm_bar:2) crew11(arm_bar_asst:2) b(sp) cost(8) t())
+
+;Elite M4A3 (76) “Fury” [9 SP] {+20 Range}
+{"m4a3_76w_field1"
+	("vehicle2" period(late) year(44 45 46) cd(620) ci(300) t(medium) side(usa) crew1(tankman_m1_vet:4) crew2(tank_commander_vet:1) g(fury) b(sp) cw(6) cp(24)
+	cost(9)) ;// +30 for crew
+}
+
+;Veteran 90mm M36 Slugger [10SP]
+{"m36_gmc_late_vet"
+	("vehicle2" period(late) year(44 45 46) cd(1200) ci(300) t(medium) side(usa) crew1(tankman_m1_vet:4) crew2(tank_com_m1_vet:1) g(vet_slugger) b(sp) cw(6) cp(26)
+	cost(10)) ;// +30 for crew
+}
+
+;Veteran 90mm M18 Super Hellcat [10 SP]
+{"m18_superhellcat_vet"
+	("vehicle2" period(late) year(44 45 46) cd(1380) ci(10) t(medium) side(usa) crew1(tankman_m1_vet:4) crew2(tank_com_m1_vet:1) g(vet_super_hellcat) b(sp) cw(6) cp(26)
+	cost(10)) ;// +30 for crew
+}
+
+;Veteran 76mm Jumbo M4A3E2 [11 SP] {+10 range}
+{"m4a3e2_76_vet"
+	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m1_vet:4) crew2(tank_com_m1_vet:1) g(vet_jumbo) b(sp) cw(6) cp(30)
+	cost(11)) ;// +30 for crew
+}
+
+;M7 Priest Battery [13 SP]
+("squad_vehicle2_with3types_man" side(usa) name(priest_battery) period(late) year(44 45 46) cd(900) ci(0) g(priest_battery) vehicle1(m7b1_hmc) vehicle2(m7b1_hmc) crew1(tankman_m3:1) crew2(tankman_m3:3) crew3(tank_com_m3:1) b(sp) cost(13) t())
+
+
+;Veteran M12 GMC
+{"m12_gmc_sp"
+	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m1_vet:5) crew2(tank_com_m1_vet:1) g(m12_gmc_sp) b(sp) cw(6) cp(40)
+	cost(15)) ;// +30 for crew
+}
