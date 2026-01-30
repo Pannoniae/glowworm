@@ -57,46 +57,37 @@
 		{thickness 100	;// 25 cast + 75
 			{top 65}	;// 25 cast + 40
 		}
-		{CastSteel 0.76} ;// effective armor reduction compared to solid 100mm plate ~89mm effective thickness
 		{tags "body"}
 		{component "body"}
 	}
 	{volume "hull_armor2" ; lower plate armor
-		{thickness 100}	;// 25 + 75
-		{CastSteel 0.8} ;// effective armor reduction compared to solid 100mm plate ~93mm effective thickness		
+		{thickness 100}	;// 25 + 75		
 		{tags "body"}
 		{component "body"}
 	}
 	{volume "hull_armor3" ; upper plate armor
 		{thickness 105}	;// 30 + 75
-		{CastSteel 0.8} ;// effective armor reduction compared to solid 100mm plate ~97mm effective thickness		
 		{tags "body"}
 		{component "body"}
 		{able {holed}}
 	}
 	{volume "armor4"
 		{thickness 25}
-		{CastSteel 0.6} ;// effective armor reduction compared to solid plate
 	}
 	{volume "armor5"
 		{thickness 25}
-		{CastSteel 0.6} ;// effective armor reduction compared to solid plate
 	}
 	{volume "armor6"
 		{thickness 25}
-		{CastSteel 0.6} ;// effective armor reduction compared to solid plate
 	}
 	{volume "armor7"
 		{thickness 25}
-		{CastSteel 0.6} ;// effective armor reduction compared to solid plate
 	}
 	{volume "armor8"
 		{thickness 30}
-		{CastSteel 0.6} ;// effective armor reduction compared to solid plate
 	}
 	{volume "armor9"		; top of mantlet armor
-		{thickness 105}
-		{CastSteel 0.8063}
+		{thickness 20}
 	}
 	{volume "turret1"		; main turret
 		{thickness 105
@@ -123,7 +114,9 @@
 		{CastSteel 0.8063}
 	}
 	{volume "turret6"		; center "mantlet"
-		{thickness 50}
+		{thickness 30
+			{front 50}
+		}
 		{CastSteel 0.8063}
 	}
 	{volume "cupola"
