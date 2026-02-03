@@ -491,6 +491,10 @@
 ;skill 4
 ("squad_with7types_man" side(usa) name(squad_1st) period(late) year(44 45 46) cd(0) ci(0) g() c1(1st_sl:1) c2(1st_sl_asst:1) c3(1st_rifle:2) c4(1st_at:1) c5(1st_at_asst:1) c6(1st_bar:1) c7(1st_bar_asst:2) b(squad) cost(200) t())
 
+;45th Infantry Assault Squad "Thunderbird" 
+;skill4
+("squad_with6types_man" side(usa) name(squad_45th_usa) period(late) year(44 45 46) cd(0) ci(0) g() c1(45th_sl_smg:1) c2(45th_sl_asst_gren:1) c3(45th_rifle_band:2) c4(45th_smg:5) c5(45th_rifle_bar:1) c6(:45th_rifle_bar_asst:1) b(squad) cost(210) t())
+
 ;291st Engineer Combat Battalion
 ;skill 4
 ("squad_with8types_man" side(usa) name(squad_291st) period(late) year(44 45 46) cd(0) ci(0) g() c1(291_sl:1) c2(291_sl_asst:1) c3(291_rifle:1) c4(291_shotgun:2) c5(291_builder:2) c6(291_flamer:1) c7(291_ap_miner:1) c8(291_at_miner:1) b(squad) cost(220) t())
@@ -536,6 +540,7 @@
 ("squad_with1types_man" side(usa) name(single_rifle)		period(late) year(44 45 46) cd(0)   ci(0)   g(single_1) c1(rifle:1)							b(single) cost(10) t())
 ("squad_with1types_man" side(usa) name(single_sa)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_2) c1(rifle_sa:1)							b(single) cost(10) t())
 ("squad_with1types_man" side(usa) name(single_smg)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_3) c1(smg:1)								b(single) cost(10) t())
+("squad_with1types_man" side(usa) name(single_shotgun)			period(late) year(44 45 46) cd(0)   ci(0)   g(single_4) c1(shotgun:2)								b(single) cost(30) t())
 ("squad_with3types_man" side(usa) name(single_bar)			period(late) year(44 45 46) cd(0)   ci(45)  g(single_bar) c1(rifle_bar:1) c2(rifle_bar_asst:1) c3(rifle_bar_ammo:1) b(single) cost(40) t())
 ("squad_with3types_man" side(usa) name(single_mg)			period(late) year(44 45 46) cd(0)   ci(60)  g(single_bar) c1(rifle_mg:1) c2(rifle_mg_asst:1) c3(rifle_mg_ammo:1) b(single) cost(60) t())
 ("squad_with3types_man" side(usa) name(single_mg_101)		period(late) year(44 45 46) cd(180) ci(180)  g(single_bar) c1(101st_late_mg:1) c2(101st_late_mg_asst:1) c3(101st_late_mg_ammo:1) b(single) cost(100) t())
@@ -1015,11 +1020,7 @@
 	cost(1000)) ;// +30 for crew
 }
 
-;Plane
-{"p47_d22"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(usa) crew(pilot:1) g(spg7) b(supply) cw(0) cp(23)
-	cost(1000))
-}
+
 
 
 
@@ -1041,7 +1042,7 @@
 
 ;Paradropped 101st Airborne Squad [4 SP] {2 times use}
 ;skill7, squad unchanged from ground squad, numbers of individual soldiers increased to fit 20 passengers in plane
-("squad_with8types_paradrop" side(usa) name(101st_paradrop) period(late) year(44 45 46) cd(0) ci(0) g() vehicle1(c47_d) crew1(pilot:2) crew2(101st_late_sl:1) crew3(101st_late_sl_asst:1) crew4(101st_rifle:10) crew5(101st_late_demo:3) crew6(101st_late_mg:2) crew7(101st_late_mg_asst:2) crew8(101st_late_sniper:1) b(sp) cost(5) t())
+;("squad_with8types_paradrop" side(usa) name(101st_paradrop) period(late) year(44 45 46) cd(0) ci(0) g() vehicle1(c47_d) crew1(pilot:2) crew2(101st_late_sl:1) crew3(101st_late_sl_asst:1) crew4(101st_rifle:10) crew5(101st_late_demo:3) crew6(101st_late_mg:2) crew7(101st_late_mg_asst:2) crew8(101st_late_sniper:1) b(sp) cost(5) t())
 
 ;Paradropped 57mm M1 Anti-Tank Gun [4 SP]
 ;need to implement paradrop
@@ -1086,6 +1087,12 @@
 {"m12_gmc_sp"
 	("vehicle2" period(late) year(44 45 46) cd(1200) ci(10) t(medium) side(usa) crew1(tankman_m1_vet:5) crew2(tank_com_m1_vet:1) g() b(sp) cw(6) cp(40)
 	cost(15)) ;// +30 for crew
+}
+
+;Plane
+{"p47_d22"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(usa) crew(pilot:1) g(spg7) b(supply) cw(0) cp(0)
+	cost(1000))
 }
 
 {"p47_250_late"

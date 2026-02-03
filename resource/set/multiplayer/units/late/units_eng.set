@@ -827,6 +827,10 @@
 ;("squad_with4types_man" side(eng) name(squad_fra_rifle) period(late) year(44 45 46) scf(1) cd(0) ci(0) g() c1(fra_sl:1) c2(fra_mg:1) c3(fra_mg_asst:1) c4(fra_rifle:7) b(squad) t())
 ("squad_with8types_vehicle_crew_man" side(eng) name(squad_fra_rifle_mech) period(late) year(44 45 46) scf(0.75) cd(0) ci(0) g() vehicle1(m5a1_halftrack) crew1(fra_rifle:2) crew2(fra_sl:1) crew3(fra_subcom:1) crew4(fra_mg1:1) crew5(fra_mg_assist1:1) crew6(fra_mg2:1) crew7(fra_mg_assist2:1) crew8(fra_rifle:6) b(squad) cost(260) t())
 
+;Motorised 1st Polish Armoured Section (polish)
+;skill 6
+("squad_with9types_vehicle_crew_man" side(eng) name(squad_polish_mot) period(late) year(44 45 46) scf(0.75) cd(0) ci(0) g() vehicle1(bedford_oyd) crew1(1st_ad_driver_smg:1) crew2(1st_ad_crew:1) crew3(1st_ad_sec_com:1) crew4(1st_ad_sec_2ic:1) crew5(1st_ad_rifle_band:3) crew6(1st_ad_at_piat:1) crew7(1st_ad_at_piat_asst:1) crew8(1st_ad_mg:2) crew9(1st_ad_mg_asst:1)  b(squad) cost(170) t())
+
 ;Paratroopers (2INCH MORTAR DOESNT WORK, DOESNT APPEAR TO BE IN GAME FILES)
 ;skill 6
 ("squad_with10types_man" side(eng) name(squad_eng_para) period(late) year(44 45 46) cd(0) ci(0) g() c1(1st_air_para_sec_com:1) c2(1st_air_para_sec_com_cpl:1) c3(1st_air_para_smg:3) c4(1st_air_para_rifle:1) c5(1st_air_para_piat:1) c6(1st_air_para_piat_asst:1) c7(1st_air_para_rec_mg_vgo:1) c8(1st_air_para_rec_mg_vgo_asst:1) c9(1st_air_para_mortar:1) c10(1st_air_para_mortar_asst:1) b(squad) cost(330) t())
@@ -835,6 +839,11 @@
 ;skill 6
 ("squad_with5types_man" side(eng) name(squad_rm_commandos) period(late) year(44 45 46) cd(0) ci(60) g() c1(rm_sec_com:1) c2(rm_sec_subcom:1) c3(rm_rifle:3) c4(rm_mg:2) c5(rm_mg_asst:2) b(squad) cost(190) t())
 
+;1st Canadian Paras Section
+;skill7
+("squad_with6types_man" side(eng) name(squad_can_para) period(late) year(44 45 46) cd(0) ci(0) g() c1(can_para_sec_com:1) c2(can_para_sec_2ic:1) c3(can_para_rifle:3) c4(can_para_smg_band:2) c5(can_para_mg:1) c6(can_para_mg_asst:2) b(squad) cost(220) t())
+
+;skill7
 ;SOE commandos with beanie hats
 ;skill7
 ("squad_with5types_man" side(eng) name(squad_soe_commandos) period(late) year(44 45 46) cd(0) ci(60) g() c1(soe_com:1) c2(soe_xo:1) c3(soe_delisle:2) c4(soe_radio_op:1) c5(soe_sten6:3) b(squad) cost(350) t())
@@ -982,26 +991,6 @@
 {"doctrine_typhoon_mk1b_recon"
 	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(450) ci(10) vehicle(typhoon_mk1b_recon) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(100))
 	{action "airstrike:reconnaissance_50"} 
-}
-{"doctrine_typhoon_mk1b_light"
-	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(600) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(250))
-	{action "airstrike:250lb_gp_mk4"}
-	{tags "limit3"}
-}
-{"doctrine_typhoon_mk1b_heavy"
-	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(900) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(supply) cost(500))
-	{action "airstrike:500lb_mc"}
-	{tags "limit3"}
-}
-
-;Plane
-{"typhoon_mk1b_recon"
-	("vehicle" period(late) year(44 45 46) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(-2)
-	cost(100))
-}
-{"typhoon_mk1b"
-	("vehicle" period(late) year(44 45 46) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(-2)
-	cost(300))
 }
 
 
@@ -1492,3 +1481,24 @@
 ;Churchill Platoon [14 SP]
 ("squad_vehicle3_with6types_man" side(eng)  name(squad_churchill_platoon) period(late) year(44 45 46) cd(0) ci(0) g() vehicle1(churchill_mk5) crew1(tankman:4) crew2(tank_commander:1) vehicle2(churchill_mk4_l50_late) crew3(tankman:4) crew4(tank_commander:1) vehicle3(churchill_mk4_qf75) crew5(tankman:4) crew6(tank_commander:1) b(sp) cost(14) t())
 
+;Plane
+{"typhoon_mk1b_recon"
+	("vehicle" period(late) year(44 45 46) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(0)
+	cost(100))
+}
+{"typhoon_mk1b"
+	("vehicle" period(late) year(44 45 46) cd(0) ci(0) t(doctrineonly) side(eng) crew(pilot:1) g(spg7) b(vehicles) cw(0) cp(0)
+	cost(300))
+}
+
+
+{"doctrine_typhoon_mk1b_light"
+	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(600) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(sp) cost(2))
+	{action "airstrike:250lb_gp_mk4"}
+	;{tags "limit3"}
+}
+{"doctrine_typhoon_mk1b_heavy"
+	("vehicle_ss" side(eng) period(late) year(44 45 46) cd(900) ci(10) vehicle(typhoon_mk1b) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(sp) cost(3))
+	{action "airstrike:500lb_mc"}
+	;{tags "limit3"}
+}

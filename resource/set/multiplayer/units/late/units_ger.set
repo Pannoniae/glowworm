@@ -2234,28 +2234,6 @@
 	cost(1800)) ;// +35 for crew
 }
 
-;Plane
-{"bf109_f4"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:1) g(spg7) b(supply) cw(0) cp(23)
-	cost(1000))
-}
-{"ju-52"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(0) t(doctrineonly doc_only ita hun fin) side(ger) crew(pilot:4) g(spg8) b(supply) cw(0) cp(11)
-	cost(120))
-}
-;{"me_262a2a"
-;	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:1) g(spg7) b(supply) cw(0) cp(25)
-;	cost(1000))
-;}
-{"bf110_e2"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:2) g(spg7) b(supply) cw(0) cp(21)
-	cost(1000))
-}
-{"fi156"
-	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:2) g(spg8) b(supply) cw(0) cp(11)
-	cost(100))
-}
-
 
 ;SP SECTION-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2386,15 +2364,43 @@
 ;Stuka [15 SP]
 ("squad_vehicle1_with2types_doc_man" side(ger) d("44-45_ger_ss") name(squad_stuka_ss_sp) period(late) year(44 45 46) cd(0) ci(0) g() vehicle1(sdkfz251d_1_stuka) crew1(tankman:2) crew2(tank_commander:1) b(sp) cost(15) t())
 
+
+
+;Plane
+{"bf109_f4"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:1) g(spg7) b(supply) cw(0) cp(0)
+	cost(1000))
+}
+{"ju-52"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(0) t(doctrineonly doc_only ita hun fin) side(ger) crew(pilot:4) g(spg8) b(supply) cw(0) cp(0)
+	cost(120))
+}
+;{"me_262a2a"
+;	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:1) g(spg7) b(supply) cw(0) cp(0)
+;	cost(1000))
+;}
+{"bf110_e2"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:2) g(spg7) b(supply) cw(0) cp(0)
+	cost(1000))
+}
+{"fi156"
+	("vehicle"  period(late) year(44 45 46) cd(0) ci(10) t(doctrineonly) side(ger) crew(pilot:2) g(spg8) b(supply) cw(0) cp(0)
+	cost(100))
+}
+
+
+
+
+
 {"bf109_250_late"
 	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(600) ci(10) vehicle(bf109_f4) crew(pilot:1) g(airstrike) t() cp(0) cw(0) b(sp) cost(2))
 	{action "airstrike:sc_50"}
-	{tags "limit3"}
+	;{tags "limit3"}
 }
 
 {"bf110_500_late"
 	("vehicle_ss" side(ger) period(late) year(44 45 46) cd(900) ci(10) vehicle(bf110_e2) crew(pilot:2) g(airstrike) t() cp(0) cw(0) b(sp) cost(3))
 	{action "airstrike:sc_250_mp"}
-	{tags "limit3"}
+	;{tags "limit3"}
 	{doctrine "44-45_ger_wehr"}
 }

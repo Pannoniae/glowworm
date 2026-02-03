@@ -3151,6 +3151,22 @@
 	}
 )
 
+(define "squad_with9types_vehicle_crew_man"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "%vehicle1 ( mp/%side/%period/%crew1 mp/%side/%period/%crew2 mp/%side/%period/%crew3 mp/%side/%period/%crew4 mp/%side/%period/%crew5 mp/%side/%period/%crew6 mp/%side/%period/%crew7 mp/%side/%period/%crew8 mp/%side/%period/%crew9 )"}
+		{tags "all infantry %side %t %year"}
+		{group "%g"}
+		{button "%b"}
+		{level 1}
+		{cost %cost}
+		{squad_cost_factor 0}
+	}
+)
+
 (define "squad_with8types_paradrop"
 	{"%name(%side)"
 		{charge 
