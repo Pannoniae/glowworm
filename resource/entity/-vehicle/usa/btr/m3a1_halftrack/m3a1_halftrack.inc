@@ -1,7 +1,7 @@
 
 	(include "/properties/armoredcar.ext")
 	(include "/properties/selection/vehicle.inc" scale(1.0))
-	{props "m3a1_halftrack" "tank" "halftrack" "wheeled" "multi_board" "explosion_throw_crew" "vision_lev02" "tractor" "tractor_heavy" "detect_tank_mg" "open_death_fx" "muzzle_hmg_m2hb"}
+	{props "m3a1_halftrack" "tank" "halftrack" "wheeled" "multi_board" "explosion_throw_crew" "vision_lev02" "tractor" "tractor_medium" "detect_tank_mg" "open_death_fx" "muzzle_hmg_m2hb"}
 	{able "emit_passangers_on_enemy"}
 	{extension "m3a1_halftrack.mdl"}
 	(include "m3a1_halftrack.ext")
