@@ -2214,6 +2214,11 @@
 	("animation_sound" args "open_left")
 	("animation_sound" args "open_right")
 }
+{"morris_c8_engineer"
+	("morris_car_sound")
+	("animation_sound" args "open_left")
+	("animation_sound" args "open_right")
+}
 {"morris_c9_aa"
 	{on "add_weapon_sound" overload
 		("Autocannon_s2")

@@ -4458,6 +4458,13 @@
 		("ZB37")
 	}
 }
+{"comet1_a34_vet tank"
+	("cromwell_sound")
+	{on "add_weapon_sound" overload
+		("Cannon_75to76mm_HV")
+		("ZB37")
+	}
+}
 {"challenger_a30 tank"
 	("challenger_sound")
 	{on "add_weapon_sound" overload
@@ -5341,6 +5348,22 @@
 	}
 }
 {"sherman5c tank"
+	("m4a4_sherman_sound")
+	{on "add_weapon_sound" overload
+		("Cannon_75to76mm_HV")
+		("M1919A4")
+	}
+	{on spawn
+		{link_sound "move"				"vehicle/tracks/M4_Sherman/steel/"}
+	}
+	{on "commander_hatch_open" overload
+		{ani_wind "open_right" end}
+	}
+	{on "commander_hatch_close" overload
+		{ani_play "open_right" -1.0 resume}
+	}
+}
+{"sherman5c_vet tank"
 	("m4a4_sherman_sound")
 	{on "add_weapon_sound" overload
 		("Cannon_75to76mm_HV")
